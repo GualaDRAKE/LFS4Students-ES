@@ -27,8 +27,6 @@
 
 &nbsp;
 
----
-
 
 ### Linux From Scratch: Versión 12.3: Publicado el 5 de marzo de 2025
 
@@ -45,8 +43,8 @@
    Se pueden extraer instrucciones del libro bajo la Licencia MIT.
 
    Linux® es una marca registrada de Linus Torvalds.
-  
 
+---
 &nbsp;
 
 &nbsp;
@@ -55,20 +53,6 @@
 
 &nbsp;
  
-
----
-
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-
-
 ### Prefacio
 
 ### Prólogo
