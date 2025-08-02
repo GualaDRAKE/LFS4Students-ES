@@ -954,7 +954,8 @@ distribución para incluir estas herramientas.
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
 
-El capítulo 2 de este libro describe cómo crear una nueva partición y un sistema
+El capítulo 2](#capitulo-2-preparación-del-sistema-host)
+ de este libro describe cómo crear una nueva partición y un sistema
 de archivos nativos de Linux, donde se compilará e instalará el nuevo sistema LFS.
 
 El capítulo 3 explica qué paquetes y parches deben descargarse para compilar un
@@ -1670,7 +1671,7 @@ probabilidades de obtener la ayuda que necesita.
 
 # Parte II. Preparación para la construcción
 
-## Capítulo 2. Preparación del Sistema Host
+## Capítulo 2 - Preparación del Sistema Host
 
 ## 2.1. Introducción
 
