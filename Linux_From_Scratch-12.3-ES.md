@@ -113,7 +113,6 @@ Gerard Beekmans
 
 ---
 &nbsp;
-
 &nbsp;
 
 ## Audiencia
@@ -209,6 +208,10 @@ Pero ese es un tema avanzado.
 
    <https://www.linuxfromscratch.org/~thomas/multilib/index.html>
 
+---
+&nbsp;
+&nbsp;
+
 ## Prerrequisitos
 
 Construir un sistema LFS no es tarea sencilla. Requiere cierto nivel de
@@ -282,7 +285,6 @@ encontrar en BLFS.
 
 ### Paquetes proporcionados por LFS necesarios para cumplir con los requisitos de LSB:
 
-
 |LSB Core:   |Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, GCC, Gettext,<br> Glibc, Grep, Gzip, M4, Man-DB, Procps, Psmisc, Sed,Shadow, SysVinit, Tar,<br> Util-linux, Zlib|
 |:------------:|:----------------------------------------------------------:|
 |LSB Desktop:|Ninguno|
@@ -291,7 +293,6 @@ encontrar en BLFS.
 |LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|Ninguno|
 
 ### Paquetes proporcionados por BLFS necesarios para cumplir con los requisitos de LSB
-
 
 |LSB Core:|At, Batch (parte de At), archivos de inicio de BLFS Bash, Cpio, Ed, Fcrontab,<br> LSB-Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail (o Postfix o Exim), Time|
 |:------------:|:----------------------------------------------------------:|
@@ -758,7 +759,6 @@ Para facilitar la comprensión, se utilizan algunas convenciones
 tipográficas a lo largo de este libro. Esta sección contiene algunos
 ejemplos del formato tipográfico presente en Linux From Scratch.
 
-
   |**./configure \--prefix=/usr**|
   |:------------------------------:|
 
@@ -770,8 +770,9 @@ comando se hace referencia.
 En algunos casos, una línea de comandos se extiende a dos o más líneas
 físicas gracias a una barra invertida al final de la línea.
 
-> **CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\**
-> **\--prefix=/tools \--disable-nls \--disable-werror**
+|**CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\**|
+|:------------------------------------------------------:|
+|**\--prefix=/tools \--disable-nls \--disable-werror**|
 
 Tenga en cuenta que la barra invertida debe ir seguida inmediatamente de
 un **ENTER** y nada más. Otros caracteres, como los espacios en blanco o
@@ -791,6 +792,10 @@ formato también se utiliza para mostrar nombres de archivos, como
 > buena fuente monoespaciada \"font-size=\"9ptd\", con la que podrá
 > distinguir claramente los glifos de Il1 u O0.
 
+---
+&nbsp;
+&nbsp;
+
 ## Énfasis
 
 Este formato de texto se utiliza para varios propósitos en el libro. Su
@@ -802,11 +807,12 @@ Este formato se utiliza para hipervínculos tanto dentro de la comunidad
 LFS como a páginas externas. Incluye tutoriales, ubicaciones de descarga
 y sitios web.
 
-> **cat \> \$LFS/etc/group \<\< \"EOF\"**
-> root:x:0:
-> bin:x:1:
-> \...\...
-> **EOF**
+|**cat \> \$LFS/etc/group \<\< \"EOF\"**|
+|:-------------------------------------:|
+|root:x:0:|
+|bin:x:1:|
+|\...\...|
+|**EOF**|
 
 Este formato se utiliza al crear archivos de configuración. El primer
 comando indica al sistema que cree el archivo *\$LFS/etc/group* a partir
@@ -842,6 +848,10 @@ referencias a páginas de manual también son hipervínculos, por lo que al
 hacer clic en dicha referencia se abrirá la página de manual
 representada en HTML desde las [páginas del manual de Arch
 Linux](https://man.archlinux.org/).
+
+---
+&nbsp;
+&nbsp;
 
 ## Estructura
 
@@ -992,6 +1002,10 @@ información detallada sobre cada paso. Los aspectos que ahora parecen
 complicados se aclararán y todo encajará a medida que comience su
 aventura con LFS.
 
+---
+&nbsp;
+&nbsp;
+
 ## 1.2. Novedades desde la última versión
 
 Aquí tienes una lista de los paquetes actualizados desde la última
@@ -1100,6 +1114,10 @@ Añadido:
 Eliminado:
 
 •
+
+---
+&nbsp;
+&nbsp;
 
 ## 1.3. Registro de cambios
 
@@ -1464,6 +1482,10 @@ n.° 5006.
 
 • \[bdubbs\] - Publicación de LFS-12.2.
 
+---
+&nbsp;
+&nbsp;
+
 ## 1.4. Recursos
 
 ### 1.4.1. Preguntas frecuentes - FAQ
@@ -1508,6 +1530,10 @@ lista de los sitios espejo actuales.
 
 Dirija todas sus preguntas y comentarios a una de las listas de correo
 de LFS (ver arriba).
+
+---
+&nbsp;
+&nbsp;
 
 ## 1.5. Ayuda
 
@@ -1601,33 +1627,30 @@ pero sí toda la información relevante. A continuación, se muestra un
 ejemplo del tipo de información que se debe incluir en la salida en
 pantalla de **make**.
 
-> +---------------------------------------------------------------------+
-> ---
-> gcc -D ALIASPATH=\\\"/mnt/lfs/usr/share/locale:.\\\"
-> -D LOCALEDIR=\\\"/mnt/lfs/usr/share/locale\\\"
-> -D LIBDIR=\\\"/mnt/lfs/usr/lib\\\"
-> -D INCLUDEDIR=\\\"/mnt/lfs/usr/include\\\" -D HAVE_CONFIG_H -I. -I.
-> -g -O2 -c getopt1.c
-> gcc -g -O2 -static -o make ar.o arscan.o commands.o dir.o
-> expand.o file.o function.o getopt.o implicit.o job.o main.o
-> misc.o read.o remake.o rule.o signame.o variable.o vpath.o
-> default.o remote-stub.o version.o opt1.o
-> -lutil job.o: En la función \`load_too_high\':
-> /lfs/tmp/make-3.79.1/job.c:1565: referencia indefinida
-> a \`getloadavg\'
-> collect2: ld devolvió 1 estado de salida
-> make\[2\]: \*\*\* \[make\] Error 1
-> make\[2\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'
-> make\[1\]: \*\*\* \[all-recursive\] Error 1
-> make\[1\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'
-> make: \*\*\* \[all-recursive-am\] Error 2
-> +---------------------------------------------------------------------+
+|gcc -D ALIASPATH=\\\"/mnt/lfs/usr/share/locale:.\\\"|
+|:---------------------------------------------------------------------:|
+|-D LOCALEDIR=\\\"/mnt/lfs/usr/share/locale\\\"|
+|-D LIBDIR=\\\"/mnt/lfs/usr/lib\\\"|
+|-D INCLUDEDIR=\\\"/mnt/lfs/usr/include\\\" -D HAVE_CONFIG_H -I. -I.|
+|-g -O2 -c getopt1.c|
+|gcc -g -O2 -static -o make ar.o arscan.o commands.o dir.o|
+|expand.o file.o function.o getopt.o implicit.o job.o main.o|
+|misc.o read.o remake.o rule.o signame.o variable.o vpath.o|
+|default.o remote-stub.o version.o opt1.o|
+|-lutil job.o: En la función \`load_too_high\':|
+|/lfs/tmp/make-3.79.1/job.c:1565: referencia indefinida|
+|a \`getloadavg\'|
+|collect2: ld devolvió 1 estado de salida|
+|make\[2\]: \*\*\* \[make\] Error 1|
+|make\[2\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'|
+|make\[1\]: \*\*\* \[all-recursive\] Error 1|
+|make\[1\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'|
+|make: \*\*\* \[all-recursive-am\] Error 2|
 
 En este caso, muchos usuarios solo incluirían la sección inferior:
 
-  -------------------------------------
-  make \[2\]: \*\*\* \[make\] Error 1
-  -------------------------------------
+|make \[2\]: \*\*\* \[make\] Error 1|
+|:---------------------------------:|
 
 Esta información no es suficiente para diagnosticar el problema, ya que
 solo indica que algo salió mal, no qué salió mal. La sección completa,
@@ -1643,17 +1666,12 @@ en:
 Lea este documento y siga las sugerencias. Esto aumentará las
 probabilidades de obtener la ayuda que necesita.
 
-# 
+---
 
-# 
+&nbsp;
+&nbsp;
 
-# 
-
-# 
-
-# 
-
-# 
+---
 
 # Parte II. Preparación para la construcción
 
