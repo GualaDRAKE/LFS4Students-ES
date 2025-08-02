@@ -4,7 +4,6 @@
 
    Publicado el 5 de marzo de 2025
 
----
 &nbsp;
 
 &nbsp;
@@ -13,8 +12,9 @@
 
    Editor jefe: Bruce Dubbs
 
----
 &nbsp;
+
+---
 
 &nbsp;
 
@@ -34,8 +34,9 @@
 
    Linux® es una marca registrada de Linus Torvalds.
 
----
 &nbsp;
+
+---
 
 &nbsp;
 
@@ -108,7 +109,7 @@ sistema verdaderamente tuyo.
 
 Gerard Beekmans
 
-<gerard@linuxfromscratch.org>Dubbs
+<gerard@linuxfromscratch.org>
 
 ---
 &nbsp;
