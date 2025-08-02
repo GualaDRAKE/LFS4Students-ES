@@ -245,6 +245,7 @@ El LFS intenta cumplir con las especificaciones del LSB para las
 arquitecturas IA32 (x86 de 32 bits) o AMD64 (x86_64) descritas en la
 sección anterior.
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Mucha gente no está de acuerdo con estos requisitos. El objetivo
@@ -253,7 +254,7 @@ sección anterior.
 > basa en el código fuente, el usuario tiene control total sobre los
 > paquetes que desea; puede optar por no instalar algunos paquetes
 > especificados por el LSB.
-> ---
+> +----------------------------------------------------------------------+
 
 Si bien es posible crear un sistema completo que supere las pruebas de
 certificación LSB desde cero, esto no es posible sin muchos paquetes
@@ -775,10 +776,11 @@ comando se hace referencia.
 En algunos casos, una línea de comandos se extiende a dos o más líneas
 físicas gracias a una barra invertida al final de la línea.
 
+> +------------------------------------------------------+
 > ---
 > CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\
 > \--prefix=/tools \--disable-nls \--disable-werror
-> ---
+> +------------------------------------------------------+
 
 Tenga en cuenta que la barra invertida debe ir seguida inmediatamente de
 un **ENTER** y nada más. Otros caracteres, como los espacios en blanco o
@@ -793,12 +795,13 @@ pantalla, generalmente como resultado de los comandos ejecutados. Este
 formato también se utiliza para mostrar nombres de archivos, como
 /etc/ld.so.conf.
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Configure su navegador para mostrar texto de ancho fijo con una
 > buena fuente monoespaciada \"font-size=\"9ptd\", con la que podrá
 > distinguir claramente los glifos de Il1 u O0.
-> ---
+> +----------------------------------------------------------------------+
 
 Énfasis
 
@@ -811,13 +814,14 @@ Este formato se utiliza para hipervínculos tanto dentro de la comunidad
 LFS como a páginas externas. Incluye tutoriales, ubicaciones de descarga
 y sitios web.
 
+> +-------------------------------------+
 > ---
 > cat \> \$LFS/etc/group \<\< \"EOF\"
 > root:x:0:
 > bin:x:1:
 > \...\...
 > EOF
-> ---
+> +-------------------------------------+
 
 Este formato se utiliza al crear archivos de configuración. El primer
 comando indica al sistema que cree el archivo *\$LFS/etc/group* a partir
@@ -942,6 +946,7 @@ enlazador y un intérprete de comandos, para construir el nuevo sistema.
 Seleccione la opción \"desarrollo\" durante la instalación de la
 distribución para incluir estas herramientas.
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Existen muchas maneras de *instalar* una distribución de Linux y las
@@ -951,7 +956,7 @@ distribución para incluir estas herramientas.
 > [*https://www.linuxfromscratc
 > h.org/hints/downloads/files/partitioning-for-lfs.txt*](https://www.l
 > inuxfromscratch.org/hints/downloads/files/partitioning-for-lfs.txt).
-> ---
+> +----------------------------------------------------------------------+
 
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
@@ -1532,6 +1537,7 @@ de LFS (ver arriba).
 
 ## 1.5. Ayuda
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > En caso de que haya encontrado un problema al compilar un paquete
@@ -1549,7 +1555,7 @@ de LFS (ver arriba).
 > soporte separados del sistema de seguimiento de errores. Los
 > informes de errores para hacer preguntas se consideran inválidos y
 > pueden molestar a los desarrolladores de estos proyectos.
-> ---
+> +----------------------------------------------------------------------+
 
 Si encuentra algún problema o pregunta mientras trabaja con este libro,
 consulte la página de preguntas frecuentes en* --
@@ -1593,6 +1599,7 @@ sistema](#Script version-check.sh|outline)
 
 • Indique si se ha desviado del libro
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Desviarse del libro no significa que no le ayudaremos. Al fin y al
@@ -1600,7 +1607,7 @@ sistema](#Script version-check.sh|outline)
 > Ser transparentes sobre cualquier cambio en el procedimiento
 > establecido nos ayuda a evaluar y determinar las posibles causas de
 > su problema.
-> ---
+> +----------------------------------------------------------------------+
 
 ### 1.5.2. Problemas con el script de configuración
 
@@ -1620,6 +1627,7 @@ pero sí toda la información relevante. A continuación, se muestra un
 ejemplo del tipo de información que se debe incluir en la salida en
 pantalla de **make**.
 
+> +---------------------------------------------------------------------+
 > ---
 > gcc -D ALIASPATH=\\\"/mnt/lfs/usr/share/locale:.\\\"
 > -D LOCALEDIR=\\\"/mnt/lfs/usr/share/locale\\\"
@@ -1639,7 +1647,7 @@ pantalla de **make**.
 > make\[1\]: \*\*\* \[all-recursive\] Error 1
 > make\[1\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'
 > make: \*\*\* \[all-recursive-am\] Error 2
-> ---
+> +---------------------------------------------------------------------+
 
 En este caso, muchos usuarios solo incluirían la sección inferior:
 
@@ -1779,6 +1787,7 @@ kernel.
 
 • Xz-5.0.0
 
+> +----------------------------------------------------------------------+
 > ---
 > Importante
 > Tenga en cuenta que los enlaces simbólicos mencionados anteriormente
@@ -1788,7 +1797,7 @@ kernel.
 > equipo de desarrollo de LFS no los ha probado ni soportado, y
 > podrían requerir modificaciones de las instrucciones o parches
 > adicionales para algunos paquetes.
-> ---
+> +----------------------------------------------------------------------+
 
 Para comprobar si su Sistema Host tiene todas las versiones adecuadas y
 la capacidad de compilar programas, cree el script version-check.sh, el
@@ -1796,6 +1805,7 @@ cual ejecutará una serie de comandos de verificación:
 
 #### Script version-check.sh
 
+> +----------------------------------------------------------------------+
 > ---
 > cat \> version-check.sh \<\< \"EOF\"
 > #!/bin/bash
@@ -1892,7 +1902,7 @@ cual ejecutará una serie de comandos de verificación:
 > fi
 > EOF
 > \$ **bash version-check.sh**
-> ---
+> +----------------------------------------------------------------------+
 
 ## 2.3. Compilación de LFS por etapas
 
@@ -1985,6 +1995,7 @@ una partición de intercambio (swap), si es necesario. Consulte
 [*fdisk(8)*](https://man.archlinux.org/man/fdisk.8) si aún no sabe cómo
 usar estos programas.
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Para usuarios experimentados, existen *otros* esquemas de
@@ -1993,7 +2004,7 @@ usar estos programas.
 > estas opciones requieren un archivo *initramfs*, que es un tema
 > avanzado. Estas metodologías de particionado no se recomiendan para
 > usuarios nuevos de LFS.
-> --- 
+> +----------------------------------------------------------------------+
 
 Recuerde la designación de la nueva partición (p. ej., sda5). En este
 libro, la llamaremos partición LFS. Recuerde también la designación de
@@ -2059,6 +2070,7 @@ para que GRUB la utilice durante la instalación del gestor de arranque.
 Esta partición normalmente se etiquetará como \'BIOS Boot\' si se usa
 fdisk o tendrá el código EF02 si se usa el comando gdisk.
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > La partición Grub Bios debe estar en la unidad que la BIOS utiliza
@@ -2067,7 +2079,7 @@ fdisk o tendrá el código EF02 si se usa el comando gdisk.
 > diferentes tipos de tablas de particiones. La nec esidad de la
 > partición Grub Bios depende únicamente del tipo de tabla de
 > particiones del disco de arranque.
-> ---
+> +----------------------------------------------------------------------+
 
 ### 2.4.1.4. Particiones de conveniencia
 
@@ -2229,6 +2241,7 @@ seguridad en el sistema LFS, y una configuración predeterminada
 demasiado restrictiva puede causar problemas extraños al crear o usar el
 sistema LFS.
 
+> +----------------------------------------------------------------------+
 > ---
 > Precaución
 > No olvide comprobar que LFS esté configurado y que la máscara de
@@ -2236,25 +2249,26 @@ sistema LFS.
 > en el entorno de trabajo actual (por ejemplo, al ejecutar un comando
 > su como root u otro usuario). Compruebe que la variable LFS esté
 > configurada correctamente con:
-> ----------------------------------------------------------------------
+> +----------------------------------------------------------------------+
 > echo \$LFS
-> ----------------------------------------------------------------------
+> +----------------------------------------------------------------------+
 > Asegúrese de que la salida muestre la ruta a la ubicación de
 > compilación de su sistema LFS, que es /mnt/lfs si se siguió el
 > ejemplo proporcionado.
 > Compruebe que la máscara de usuario (umask) esté configurada
 > correctamente con:
-> ----------------------------------------------------------------------
+> +----------------------------------------------------------------------+
 > umask
-> ----------------------------------------------------------------------
+> +----------------------------------------------------------------------+
 > La salida puede ser 0022 o 022 (el número de ceros a la izquierda
 > depende de la distribución del host).
 > Si alguno de los resultados de estos dos comandos es incorrecto,
 > utilice el comando indicado anteriormente en esta página para
 > configurar \$LFS con el nombre de directorio correcto y establecer
 > umask en 022.
-> ---
-> 
+> +----------------------------------------------------------------------+
+
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Una forma de garantizar que la variable LFS y umask siempre estén
@@ -2274,7 +2288,7 @@ sistema LFS.
 > instrucciones .bashrc restantes para una invocación bash no
 > interactiva. Asegúrese de colocar los comandos antes de la prueba
 > para uso no interactivo.
-> 
+> +----------------------------------------------------------------------+
 
 ## 2.7. Montaje de la nueva partición
 
@@ -2290,22 +2304,24 @@ se habla de la partición y el sistema de archivos asociado como si
 fueran uno solo. Cree el punto de montaje y monte el sistema de archivos
 LFS con estos comandos:
 
+> +-------------------------------------+
 > ---
 > mkdir -pv \$LFS
 > mount -v -t ext4 /dev/\<xxx\> \$LFS
-> 
+> +-------------------------------------+
 
 Reemplace \<xxx\> con el nombre de la partición LFS.
 
 Si utiliza varias particiones para LFS (por ejemplo, una para / y otra
 para /home), móntelas así:
 
+> +------------------------------------------+
 > ---
 > mkdir -pv \$LFS
 > mount -v -t ext4 /dev/\<xxx\> \$LFS
 > mkdir -v \$LFS/home
 > mount -v -t ext4 /dev/\<yyy\> \$LFS/home
->
+> +------------------------------------------+
 
 Reemplace \<xxx\> y \<yyy\> con los nombres de partición
 correspondientes.
@@ -2316,10 +2332,11 @@ sistema LFS) como root y 755 en caso de que la distribución del host se
 haya configurado para usar una configuración predeterminada diferente
 para **mkfs**:
 
+> +-----------------------+
 > ---
 > chown root:root \$LFS
 > chmod 755 \$LFS
->
+> +-----------------------+
 
 Asegúrese de que esta nueva partición no se monte con permisos demasiado
 restrictivos (como las opciones nosuid o nodev). Ejecute el comando
@@ -2329,6 +2346,7 @@ la partición LFS montada.
 Si nosuid o nodev están configurados, la partición debe volver a
 montarse.
 
+> +----------------------------------------------------------------------+
 > ---
 > Advertencia
 > Las instrucciones anteriores presuponen que no reiniciará el equipo
@@ -2337,12 +2355,12 @@ montarse.
 > modificar el archivo /etc/fstab del sistema host para que se vuelva
 > a montar automáticamente al reiniciar. Por ejemplo, puede agregar
 > esta línea a su archivo /etc/fstab:
-> ----------------------------------------------------------------------
+> +----------------------------------------------------------------------+
 > /dev/**\<xxx\>** /mnt/lfs *ext4* defaults 1 1
-> ----------------------------------------------------------------------
+> +----------------------------------------------------------------------+
 > Si utiliza particiones opcionales adicionales, asegúrese de
 > agregarlas también.
-> 
+> +----------------------------------------------------------------------+
 
 Si utiliza una partición de intercambio (swap), asegúrese de que esté
 habilitada con el comando **swapon**:
@@ -2444,11 +2462,12 @@ Además, a partir de LFS-7.0, existe un archivo independiente,
 que permite verificar la disponibilidad de todos los paquetes correctos
 antes de continuar. Coloque ese archivo en \$LFS/sources y ejecute:
 
+> +--------------------------------------+
 > ---
 > pushd \$LFS/sources
 > md5sum -c md5sums
 > popdchown root:root \$LFS/sources/\*
->
+> +--------------------------------------+
 
 Esta comprobación puede realizarse después de recuperar los archivos
 necesarios con cualquiera de los métodos mencionados anteriormente.
@@ -2467,6 +2486,7 @@ root para evitar este problema:
 
 ## 3.2. Todos los paquetes
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Lea los avisos de seguridad antes de descargar paquetes para
@@ -2481,7 +2501,7 @@ root para evitar este problema:
 > posible descargar una versión anterior desde un servidor espejo
 > incluso si esta se ha eliminado debido a una vulnerabilidad, no es
 > recomendable usar una versión vulnerable al compilar el sistema.
-> 
+> +----------------------------------------------------------------------+
 
 Descargue u obtenga los siguientes paquetes:
 
@@ -2700,6 +2720,7 @@ Descargar: https://ftp.gnu.org/gnu/glibc/glibc-2.41.tar.xz
 
 Suma MD5: 19862601af60f73ac69e067d3e9267d4
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > Los desarrolladores de Glibc mantienen una rama de Git con parches
@@ -2709,7 +2730,7 @@ Suma MD5: 19862601af60f73ac69e067d3e9267d4
 > seguridad a la rama, pero no se tomarán medidas para otros parches
 > nuevos. Puede revisar los parches usted mismo e incorporar algunos
 > si los considera importantes.
-> 
+> +----------------------------------------------------------------------+
 
 • GMP (6.3.0) - 2046 KB:
 
@@ -2887,6 +2908,7 @@ https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.13.4.tar.xz
 
 Suma MD5: 13b9e6c29105a34db4647190a43d1810
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > El kernel de Linux se actualiza con frecuencia, muchas veces debido
@@ -2898,7 +2920,7 @@ Suma MD5: 13b9e6c29105a34db4647190a43d1810
 > separado una versión base del paquete y los parches. Esto puede
 > ahorrar tiempo o dinero para una posterior actualización de parches
 > dentro de una versión menor.
-> 
+> +----------------------------------------------------------------------+
 
 **• Lz4 (1.10.0) - 379 KB:**
 
@@ -3123,12 +3145,13 @@ https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-257.3.tar.xz
 
 Suma MD5: 9b77c3b066723d490cb10aed4fb05696
 
+> +----------------------------------------------------------------------+
 > ---
 > Nota
 > El equipo de Linux From Scratch genera su propio archivo tar de las
 > páginas de manual utilizando el código fuente de systemd. Esto se
 > hace para evitar dependencias innecesarias.
->
+> +----------------------------------------------------------------------+
 
 • SysVinit (3.14) - 236 KB:
 
