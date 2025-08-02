@@ -1978,16 +1978,14 @@ una partición de intercambio (swap), si es necesario. Consulte
 [*fdisk(8)*](https://man.archlinux.org/man/fdisk.8) si aún no sabe cómo
 usar estos programas.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Para usuarios experimentados, existen *otros* esquemas de
 > particionado. El nuevo sistema LFS puede estar en una matriz RAID
 > por software o en un volumen lógico LVM. Sin embargo, algunas de
 > estas opciones requieren un archivo *initramfs*, que es un tema
 > avanzado. Estas metodologías de particionado no se recomiendan para
 > usuarios nuevos de LFS.
-> +----------------------------------------------------------------------+
 
 Recuerde la designación de la nueva partición (p. ej., sda5). En este
 libro, la llamaremos partición LFS. Recuerde también la designación de
@@ -2053,16 +2051,14 @@ para que GRUB la utilice durante la instalación del gestor de arranque.
 Esta partición normalmente se etiquetará como \'BIOS Boot\' si se usa
 fdisk o tendrá el código EF02 si se usa el comando gdisk.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > La partición Grub Bios debe estar en la unidad que la BIOS utiliza
 > para arrancar el sistema. Esta no es necesariamente la unidad que
 > contiene la partición raíz LFS. Los discos de un sistema pueden usar
 > diferentes tipos de tablas de particiones. La nec esidad de la
 > partición Grub Bios depende únicamente del tipo de tabla de
 > particiones del disco de arranque.
-> +----------------------------------------------------------------------+
 
 ### 2.4.1.4. Particiones de conveniencia
 
@@ -2209,9 +2205,8 @@ Ahora configure la máscara de creación de modo de archivo (umask) en 022
 en caso de que la distribución del host use un valor predeterminado
 diferente:
 
-  -------------
-  umask *022*
-  -------------
+|umask *022*|
+|:---------:|
 
 Configurar la umask en 022 garantiza que los archivos y directorios
 recién creados solo puedan ser escritos por su propietario, pero que
@@ -2224,36 +2219,29 @@ seguridad en el sistema LFS, y una configuración predeterminada
 demasiado restrictiva puede causar problemas extraños al crear o usar el
 sistema LFS.
 
-> +----------------------------------------------------------------------+
-> ---
-> Precaución
-> No olvide comprobar que LFS esté configurado y que la máscara de
-> usuario (umask) esté configurada en 022 al salir y volver a entrar
-> en el entorno de trabajo actual (por ejemplo, al ejecutar un comando
-> su como root u otro usuario). Compruebe que la variable LFS esté
-> configurada correctamente con:
-> +----------------------------------------------------------------------+
-> echo \$LFS
-> +----------------------------------------------------------------------+
-> Asegúrese de que la salida muestre la ruta a la ubicación de
-> compilación de su sistema LFS, que es /mnt/lfs si se siguió el
-> ejemplo proporcionado.
-> Compruebe que la máscara de usuario (umask) esté configurada
-> correctamente con:
-> +----------------------------------------------------------------------+
-> umask
-> +----------------------------------------------------------------------+
-> La salida puede ser 0022 o 022 (el número de ceros a la izquierda
-> depende de la distribución del host).
-> Si alguno de los resultados de estos dos comandos es incorrecto,
-> utilice el comando indicado anteriormente en esta página para
-> configurar \$LFS con el nombre de directorio correcto y establecer
-> umask en 022.
-> +----------------------------------------------------------------------+
+|**Precaución**|
+|| 
+|No olvide comprobar que LFS esté configurado y que la máscara de|
+|usuario (umask) esté configurada en 022 al salir y volver a entrar|
+|en el entorno de trabajo actual (por ejemplo, al ejecutar un comando|
+|su como root u otro usuario). Compruebe que la variable LFS esté|
+|configurada correctamente con:|
+|**echo \$LFS**|
+|Asegúrese de que la salida muestre la ruta a la ubicación de|
+compilación de su sistema LFS, que es /mnt/lfs si se siguió el|
+|ejemplo proporcionado.|
+|Compruebe que la máscara de usuario (umask) esté configurada|
+|correctamente con:|
+|**umask**|
+|La salida puede ser 0022 o 022 (el número de ceros a la izquierda|
+|depende de la distribución del host).|
+|Si alguno de los resultados de estos dos comandos es incorrecto,|
+|utilice el comando indicado anteriormente en esta página para|
+|configurar \$LFS con el nombre de directorio correcto y establecer|
+|**umask en 022**|
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> ** Nota**
+> 
 > Una forma de garantizar que la variable LFS y umask siempre estén
 > configuradas correctamente es editar el archivo .bash_profile, tanto
 > en su directorio personal como en /root/.bash_profile, e introducir
@@ -2271,7 +2259,6 @@ sistema LFS.
 > instrucciones .bashrc restantes para una invocación bash no
 > interactiva. Asegúrese de colocar los comandos antes de la prueba
 > para uso no interactivo.
-> +----------------------------------------------------------------------+
 
 ## 2.7. Montaje de la nueva partición
 
