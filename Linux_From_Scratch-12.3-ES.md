@@ -115,12 +115,6 @@ Gerard Beekmans
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-
-
 ## Audiencia
 
 Hay muchas razones por las que querrías leer este libro. Una de las
