@@ -283,12 +283,12 @@ encontrar en BLFS.
 ### Paquetes proporcionados por LFS necesarios para cumplir con los requisitos de LSB:
 
 
-|LSB Core:   |Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils,<br> Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps,<br> Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib|
+|LSB Core:   |Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, GCC, Gettext, Glibc,<br> Grep, Gzip, M4, Man-DB, Procps, Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib|
 |:------------:|:----------------------------------------------------------:|
-|LSB Desktop:|Ninguno                                                    |
-|LSB Languages:|Perl                                                       |
-|LSB Imaging:|Ninguno                                                    |
-|LSB Gtk3<br> y<br> LSB Graphics (uso de prueba)<br>:|Ninguno              |
+|LSB Desktop:|Ninguno|
+|LSB Languages:|Perl|
+|LSB Imaging:|Ninguno|
+|LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|Ninguno|
 
 ### Paquetes proporcionados por BLFS necesarios para cumplir con los requisitos de LSB
 
