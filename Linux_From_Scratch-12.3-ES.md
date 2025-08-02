@@ -247,11 +247,11 @@ sección anterior.
 > | Nota                                                                |
 > |Mucha gente no está de acuerdo con estos requisitos. El objetivo     |
 > |principal del LSB es garantizar que el software propietario pueda    |
+> |instalarse y ejecutarse en un sistema compatible. Dado que el LFS se |
+> |basa en el código fuente, el usuario tiene control total sobre los   |
+> |paquetes que desea; puede optar por no instalar algunos paquetes     |
+> |especificados por el LSB.                                            |
 > |---------------------------------------------------------------------|
-> instalarse y ejecutarse en un sistema compatible. Dado que el LFS se
-> basa en el código fuente, el usuario tiene control total sobre los
-> paquetes que desea; puede optar por no instalar algunos paquetes
-> especificados por el LSB.
 
 Si bien es posible crear un sistema completo que supere las pruebas de
 certificación LSB desde cero, esto no es posible sin muchos paquetes
