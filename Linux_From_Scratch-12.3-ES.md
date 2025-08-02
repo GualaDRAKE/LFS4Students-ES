@@ -2224,7 +2224,7 @@ sistema LFS.
 > configurada correctamente con:
 >
 > ```bash
-> echo \$LFS
+> echo $LFS
 > ```
 > Asegúrese de que la salida muestre la ruta a la ubicación de
 > ompilación de su sistema LFS, que es /mnt/lfs si se siguió el
