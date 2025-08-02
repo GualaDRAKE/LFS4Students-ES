@@ -760,7 +760,7 @@ tipográficas a lo largo de este libro. Esta sección contiene algunos
 ejemplos del formato tipográfico presente en Linux From Scratch.
 
   |**./configure \--prefix=/usr**|
-  |:------------------------------:|
+  |------------------------------|
 
 Este formato de texto está diseñado para escribirse exactamente como se
 ve, a menos que se indique lo contrario en el texto circundante. También
@@ -771,7 +771,7 @@ En algunos casos, una línea de comandos se extiende a dos o más líneas
 físicas gracias a una barra invertida al final de la línea.
 
 |**CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\**|
-|:------------------------------------------------------:|
+|--------------------------------------------------------|
 |**\--prefix=/tools \--disable-nls \--disable-werror**|
 
 Tenga en cuenta que la barra invertida debe ir seguida inmediatamente de
@@ -779,7 +779,7 @@ un **ENTER** y nada más. Otros caracteres, como los espacios en blanco o
 los tabuladores, generarán resultados incorrectos.
 
 |**install-info: unknown option \'\--dir-file=/mnt/lfs/usr/info/dir\'**|
-|:--------------------------------------------------------------------:|
+|----------------------------------------------------------------------|
 
 Este formato de texto (texto de ancho fijo) muestra la salida en
 pantalla, generalmente como resultado de los comandos ejecutados. Este
@@ -808,7 +808,7 @@ LFS como a páginas externas. Incluye tutoriales, ubicaciones de descarga
 y sitios web.
 
 |**cat \> \$LFS/etc/group \<\< \"EOF\"**|
-|:-------------------------------------:|
+|---------------------------------------|
 |root:x:0:|
 |bin:x:1:|
 |\...\...|
@@ -1537,9 +1537,8 @@ de LFS (ver arriba).
 
 ## 1.5. Ayuda
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > En caso de que haya encontrado un problema al compilar un paquete
 > con la instrucción LFS, le recomendamos encarecidamente que no
 > publique el problema directamente en el canal de soporte original
@@ -1555,7 +1554,6 @@ de LFS (ver arriba).
 > soporte separados del sistema de seguimiento de errores. Los
 > informes de errores para hacer preguntas se consideran inválidos y
 > pueden molestar a los desarrolladores de estos proyectos.
-> +----------------------------------------------------------------------+
 
 Si encuentra algún problema o pregunta mientras trabaja con este libro,
 consulte la página de preguntas frecuentes en* --
@@ -1599,15 +1597,12 @@ sistema](#Script version-check.sh|outline)
 
 • Indique si se ha desviado del libro
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
 > Desviarse del libro no significa que no le ayudaremos. Al fin y al
 > cabo, LFS se basa en preferencias personales.
 > Ser transparentes sobre cualquier cambio en el procedimiento
 > establecido nos ayuda a evaluar y determinar las posibles causas de
 > su problema.
-> +----------------------------------------------------------------------+
 
 ### 1.5.2. Problemas con el script de configuración
 
@@ -1628,7 +1623,7 @@ ejemplo del tipo de información que se debe incluir en la salida en
 pantalla de **make**.
 
 |gcc -D ALIASPATH=\\\"/mnt/lfs/usr/share/locale:.\\\"|
-|:---------------------------------------------------------------------:|
+|---------------------------------------------------------------------|
 |-D LOCALEDIR=\\\"/mnt/lfs/usr/share/locale\\\"|
 |-D LIBDIR=\\\"/mnt/lfs/usr/lib\\\"|
 |-D INCLUDEDIR=\\\"/mnt/lfs/usr/include\\\" -D HAVE_CONFIG_H -I. -I.|
@@ -1650,7 +1645,7 @@ pantalla de **make**.
 En este caso, muchos usuarios solo incluirían la sección inferior:
 
 |make \[2\]: \*\*\* \[make\] Error 1|
-|:---------------------------------:|
+|---------------------------------|
 
 Esta información no es suficiente para diagnosticar el problema, ya que
 solo indica que algo salió mal, no qué salió mal. La sección completa,
@@ -1683,6 +1678,10 @@ En este capítulo, se comprueban las herramientas del host necesarias
 para compilar LFS y, si es necesario, se instalan. A continuación, se
 prepara una partición que alojará el sistema LFS. Crearemos la
 partición, crearemos un sistema de archivos en ella y la montaremos.
+
+---
+&nbsp;
+&nbsp;
 
 ## 2.2. Requisitos del Sistema Host
 
@@ -1779,9 +1778,8 @@ kernel.
 
 • Xz-5.0.0
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Tenga en cuenta que los enlaces simbólicos mencionados anteriormente
 > son necesarios para construir un sistema LFS siguiendo las
 > instrucciones de este libro. Los enlaces simbólicos que apuntan a
@@ -1789,7 +1787,6 @@ kernel.
 > equipo de desarrollo de LFS no los ha probado ni soportado, y
 > podrían requerir modificaciones de las instrucciones o parches
 > adicionales para algunos paquetes.
-> +----------------------------------------------------------------------+
 
 Para comprobar si su Sistema Host tiene todas las versiones adecuadas y
 la capacidad de compilar programas, cree el script version-check.sh, el
@@ -1797,104 +1794,96 @@ cual ejecutará una serie de comandos de verificación:
 
 #### Script version-check.sh
 
-> +----------------------------------------------------------------------+
-> ---
-> cat \> version-check.sh \<\< \"EOF\"
-> #!/bin/bash
-> \# Un script para listar los números de versión de herramientas de
-> desarrollo críticas
-> \# Si tiene herramientas instaladas en otros directorios, ajuste
-> PATH aquí Y
-> \# también en \~lfs/.bashrc (sección 4.4).
-> LC_ALL=C
-> PATH=/usr/bin:/bin
-> bail() { echo \"FATAL: \$1\"; exit 1; }
-> grep \--version \> /dev/null 2\> /dev/null \ | \ | bail \"grep no
-> funciona\"
-> sed \'\' /dev/null \ | \ | bail \"sed no funciona\"
-> sort /dev/null \ | \ | bail \"sort no funciona\"
-> ver_check()
-> {
-> if ! type -p \$2 &\>/dev/null
-> then
-> echo \"ERROR: No se puede encontrar \$2 (\$1)\"; return 1;
-> fi
-> v=\$(\$2 \--version 2\>&1 \ | grep -E -o
-> \'\[0-9\]+\\.\[0-9\\.\]+\[a-z\]\*\' \ | head -n1)
-> if printf \'%s\\n\' \$3 \$v \ | sort \--version-sort \--check
-> &\>/dev/null
-> then
-> printf \"OK: %-9s %-6s \>= \$3\\n\" \"\$1\" \"\$v\"; return 0;
-> else
-> printf \"ERROR: %-9s es DEMASIADO ANTIGUO (\$3 o posterior
-> requerido)\\n\" \"\$1\";
-> return 1;
-> fi
-> }
-> ver_kernel()
-> {
-> kver=\$(uname -r \ | grep -E -o \'\^\[0-9\\.\]+\')
-> if printf \'%s\\n\' \$1 \$kver \ | sort \--version-sort \--check
-> &\>/dev/null
-> then
-> printf \"OK: Linux Kernel \$kver \>= \$1\\n\"; return 0;
-> else
-> printf \"ERROR: Linux Kernel (\$kver) es DEMASIADO ANTIGUO (\$1 o
-> posterior requerido)\\n\" \"\$kver\";
-> return 1;
-> fi
-> }
-> \# Coreutils primero porque \--version-sort necesita Coreutils \>=
-> 7.0
-> ver_check Coreutils sort 8.1 \ | \ | bail \"Coreutils demasiado
-> antiguo, detente\"
-> ver_check Bash bash 3.2
-> ver_check Binutils ld 2.13.1
-> ver_check Bison bison 2.7
-> ver_check Diffutils diff 2.8.1
-> ver_check Findutils find 4.2.31
-> ver_check Gawk gawk 4.0.1
-> ver_check GCC gcc 5.2
-> ver_check \"GCC (C++)\" g++ 5.2
-> ver_check Grep grep 2.5.1a
-> ver_check Gzip gzip 1.3.12
-> ver_check M4 m4 1.4.10
-> ver_check Make make 4.0
-> ver_check Patch patch 2.5.4
-> ver_check Perl perl 5.8.8
-> ver_check Python python3 3.4
-> ver_check Sed sed 4.1.5
-> ver_check Tar tar 1.22
-> ver_check Texinfo texi2any 5.0
-> ver_check Xz xz 5.0.0
-> ver_kernel 5.4
-> if mount \ | grep -q \'devpts on /dev/pts\' && \[ -e /dev/ptmx \]
-> then echo \"OK: El kernel de Linux es compatible con UNIX 98 PTY\";
-> else echo \"ERROR: El kernel de Linux NO es compatible con UNIX 98
-> PTY\"; fi
-> alias_check() {
-> if \$1 \--version 2\>&1 \ | grep -qi \$2
-> then printf \"OK: %-4s es \$2\\n\" \"\$1\";
-> else printf \"ERROR: %-4s NO es \$2\\n\" \"\$1\"; fi
-> }
-> echo \"Alias:\"
-> alias_check awk GNU
-> alias_check yacc Bison
-> alias_check sh Bash
-> echo \"Comprobación del *compilador*:\"
-> if printf \"int main(){}\" \ | g++ -x c++ -
-> then echo \"OK: g++ funciona\";
-> else echo \"ERROR: g++ NO funciona\"; fi
-> rm -f a.out
-> if \[ \"\$(nproc)\" = \"\" \]; then
-> echo \"ERROR: nproc no está disponible o produce una salida vacía\"
-> else
-> echo \"OK: nproc informa que \$(nproc) núcleos lógicos están
-> disponibles\"
-> fi
-> EOF
-> \$ **bash version-check.sh**
-> +----------------------------------------------------------------------+
+|**cat \> version-check.sh \<\< \"EOF\"**|
+|----------------------------------------|
+|#!/bin/bash|
+|\# Un script para listar los números de versión de herramientas de|
+|desarrollo críticas|
+|\# Si tiene herramientas instaladas en otros directorios, ajuste|
+|PATH aquí Y \# también en \~lfs/.bashrc (sección 4.4)|
+|LC_ALL=C|
+|PATH=/usr/bin:/bin|
+|bail() { echo \"FATAL: \$1\"; exit 1; }|
+|grep \--version \> /dev/null 2\> /dev/null \ | \ | bail \"grep no funciona\"|
+|sed \'\' /dev/null \ | \ | bail \"sed no funciona\"|
+|sort /dev/null \ | \ | bail \"sort no funciona\"|
+|ver_check()|
+|{|
+|if ! type -p \$2 &\>/dev/null|
+|then|
+|echo \"ERROR: No se puede encontrar \$2 (\$1)\"; return 1;|
+|fi|
+|v=\$(\$2 \--version 2\>&1 \ | grep -E -o \'\[0-9\]+\\.\[0-9\\.\]+\[a-z\]\*\' \ | head -n1)|
+|if printf \'%s\\n\' \$3 \$v \ | sort \--version-sort \--check &\>/dev/null|
+|then|
+|printf \"OK: %-9s %-6s \>= \$3\\n\" \"\$1\" \"\$v\"; return 0;|
+|else|
+|printf \"ERROR: %-9s es DEMASIADO ANTIGUO (\$3 o posterior| requerido)\\n\" \"\$1\";|
+|return 1;|
+|fi|
+|}|
+|ver_kernel()|
+|{|
+|kver=\$(uname -r \ | grep -E -o \'\^\[0-9\\.\]+\')|
+|if printf \'%s\\n\' \$1 \$kver \ | sort \--version-sort \--check &\>/dev/null|
+|then|
+|printf \"OK: Linux Kernel \$kver \>= \$1\\n\"; return 0;|
+|else|
+|printf \"ERROR: Linux Kernel (\$kver) es DEMASIADO ANTIGUO (\$1 o posterior requerido)\\n\" \"\$kver\";|
+|return 1;|
+|fi|
+|}|
+|\# Coreutils primero porque \--version-sort necesita Coreutils \>= 7.0|
+|ver_check Coreutils sort 8.1 \ | \ | bail \"Coreutils demasiado antiguo, detente\"|
+|ver_check Bash bash 3.2|
+|ver_check Binutils ld 2.13.1|
+|ver_check Bison bison 2.7|
+|ver_check Diffutils diff 2.8.1|
+|ver_check Findutils find 4.2.31|
+|ver_check Gawk gawk 4.0.1|
+|ver_check GCC gcc 5.2|
+|ver_check \"GCC (C++)\" g++ 5.2|
+|ver_check Grep grep 2.5.1a|
+|ver_check Gzip gzip 1.3.12|
+|ver_check M4 m4 1.4.10|
+|ver_check Make make 4.0|
+|ver_check Patch patch 2.5.4|
+|ver_check Perl perl 5.8.8|
+|ver_check Python python3 3.4|
+|ver_check Sed sed 4.1.5|
+|ver_check Tar tar 1.22|
+|ver_check Texinfo texi2any 5.0|
+|ver_check Xz xz 5.0.0|
+|ver_kernel 5.4|
+|if mount \ | grep -q \'devpts on /dev/pts\' && \[ -e /dev/ptmx \]|
+|then echo \"OK: El kernel de Linux es compatible con UNIX 98 PTY\";|
+|else echo \"ERROR: El kernel de Linux NO es compatible con UNIX 98 PTY\"; fi|
+|alias_check() {
+|if \$1 \--version 2\>&1 \ | grep -qi \$2|
+|then printf \"OK: %-4s es \$2\\n\" \"\$1\";|
+|else printf \"ERROR: %-4s NO es \$2\\n\" \"\$1\"; fi|
+|}|
+|echo \"Alias:\"|
+|alias_check awk GNU|
+|alias_check yacc Bison|
+|alias_check sh Bash|
+|echo \"Comprobación del *compilador*:\"|
+|if printf \"int main(){}\" \ | g++ -x c++ -|
+|then echo \"OK: g++ funciona\";|
+|else echo \"ERROR: g++ NO funciona\"; fi|
+|rm -f a.out
+|if \[ \"\$(nproc)\" = \"\" \]; then|
+|echo \"ERROR: nproc no está disponible o produce una salida vacía\"|
+|else|
+|echo \"OK: nproc informa que \$(nproc) núcleos lógicos están|
+|disponibles\"|
+|fi|
+|**EOF**|
+|\$ **bash version-check.sh**|
+
+---
+&nbsp;
+&nbsp;
 
 ## 2.3. Compilación de LFS por etapas
 
