@@ -106,9 +106,7 @@ Linux Desde Cero y que disfrutes de los numerosos beneficios de tener un
 sistema verdaderamente tuyo.
 
 \--
-
 Gerard Beekmans
-
 <gerard@linuxfromscratch.org>
 
 ---
@@ -231,8 +229,7 @@ LFS).
 
 Antes de crear un sistema LFS, le recomendamos leer estos artículos:
 
-• Manual de desarrollo de
-software
+• Manual de desarrollo de software
 
    <https://tldp.org/HOWTO/Software-Building-HOWTO.html>
 
@@ -240,8 +237,7 @@ Esta es una guía completa para crear e instalar paquetes de software
 genéricos de Unix en Linux. Aunque se escribió hace tiempo, ofrece un
 buen resumen de las técnicas básicas para crear e instalar software.
 
-• Guía para principiantes sobre la instalación desde el código
-fuente
+• Guía para principiantes sobre la instalación desde el código fuente
 
    <https://moi.vonos.net/linux/beginners-installing-from-source/>
 
@@ -770,16 +766,18 @@ comando se hace referencia.
 En algunos casos, una línea de comandos se extiende a dos o más líneas
 físicas gracias a una barra invertida al final de la línea.
 
-|**CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\**|
-|--------------------------------------------------------|
-|**\--prefix=/tools \--disable-nls \--disable-werror**|
+> ```bash
+> CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \
+> --prefix=/tools \--disable-nls \--disable-werror
+> ```
 
 Tenga en cuenta que la barra invertida debe ir seguida inmediatamente de
 un **ENTER** y nada más. Otros caracteres, como los espacios en blanco o
 los tabuladores, generarán resultados incorrectos.
 
-|**install-info: unknown option \'\--dir-file=/mnt/lfs/usr/info/dir\'**|
-|----------------------------------------------------------------------|
+> ```bash
+> install-info: unknown option '--dir-file=/mnt/lfs/usr/info/dir'
+> ```
 
 Este formato de texto (texto de ancho fijo) muestra la salida en
 pantalla, generalmente como resultado de los comandos ejecutados. Este
@@ -807,12 +805,13 @@ Este formato se utiliza para hipervínculos tanto dentro de la comunidad
 LFS como a páginas externas. Incluye tutoriales, ubicaciones de descarga
 y sitios web.
 
-|**cat \> \$LFS/etc/group \<\< \"EOF\"**|
-|---------------------------------------|
-|root:x:0:|
-|bin:x:1:|
-|\...\...|
-|**EOF**|
+> ```bash
+> cat > $LFS/etc/group << "EOF"
+> root:x:0:
+> bin:x:1:
+> ......
+> EOF
+> ```
 
 Este formato se utiliza al crear archivos de configuración. El primer
 comando indica al sistema que cree el archivo *\$LFS/etc/group* a partir
@@ -1624,30 +1623,31 @@ pero sí toda la información relevante. A continuación, se muestra un
 ejemplo del tipo de información que se debe incluir en la salida en
 pantalla de **make**.
 
-|gcc -D ALIASPATH=\\\"/mnt/lfs/usr/share/locale:.\\\"|
-|---------------------------------------------------------------------|
-|-D LOCALEDIR=\\\"/mnt/lfs/usr/share/locale\\\"|
-|-D LIBDIR=\\\"/mnt/lfs/usr/lib\\\"|
-|-D INCLUDEDIR=\\\"/mnt/lfs/usr/include\\\" -D HAVE_CONFIG_H -I. -I.|
-|-g -O2 -c getopt1.c|
-|gcc -g -O2 -static -o make ar.o arscan.o commands.o dir.o|
-|expand.o file.o function.o getopt.o implicit.o job.o main.o|
-|misc.o read.o remake.o rule.o signame.o variable.o vpath.o|
-|default.o remote-stub.o version.o opt1.o|
-|-lutil job.o: En la función \`load_too_high\':|
-|/lfs/tmp/make-3.79.1/job.c:1565: referencia indefinida|
-|a \`getloadavg\'|
-|collect2: ld devolvió 1 estado de salida|
-|make\[2\]: \*\*\* \[make\] Error 1|
-|make\[2\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'|
-|make\[1\]: \*\*\* \[all-recursive\] Error 1|
-|make\[1\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'|
-|make: \*\*\* \[all-recursive-am\] Error 2|
+> ```bash
+> gcc -D ALIASPATH=\"/mnt/lfs/usr/share/locale:.\"
+> -D LOCALEDIR=\"/mnt/lfs/usr/share/locale\"
+> -D LIBDIR=\"/mnt/lfs/usr/lib\"
+> -D INCLUDEDIR=\"/mnt/lfs/usr/include\" -D HAVE_CONFIG_H -I. -I.
+> -g -O2 -c getopt1.c
+> gcc -g -O2 -static -o make ar.o arscan.o commands.o dir.o
+> expand.o file.o function.o getopt.o implicit.o job.o main.o
+> misc.o read.o remake.o rule.o signame.o variable.o vpath.o
+> default.o remote-stub.o version.o opt1.o
+> -lutil job.o: En la función \`load_too_high\':
+> /lfs/tmp/make-3.79.1/job.c:1565: undefined reference
+> to `getloadavg'
+> collect2: ld returned 1 exit status
+> make[2]: *** [make] Error 1
+> make[2]: Leaving directory `/lfs/tmp/make-3.79.1'
+> make[1]: *** [all-recursive] Error 1
+> make[1]: Leaving directory `/lfs/tmp/make-3.79.1'
+> make: *** [all-recursive-am] Error 2
 
 En este caso, muchos usuarios solo incluirían la sección inferior:
 
-|make \[2\]: \*\*\* \[make\] Error 1|
-|---------------------------------|
+> ```bash
+> make [2]: *** [make] Error 1
+> ```
 
 Esta información no es suficiente para diagnosticar el problema, ya que
 solo indica que algo salió mal, no qué salió mal. La sección completa,
@@ -1657,7 +1657,6 @@ el comando ejecutado y todos los mensajes de error asociados.
 Hay un excelente artículo sobre cómo pedir ayuda en internet disponible
 en:
 
-*
 *[*http://catb.org/\~esr/faqs/smart-questions.html*](http://catb.org/~esr/faqs/smart-questions.html)
 
 Lea este documento y siga las sugerencias. Esto aumentará las
@@ -1668,7 +1667,6 @@ probabilidades de obtener la ayuda que necesita.
 &nbsp;
 &nbsp;
 
----
 
 # Parte II. Preparación para la construcción
 
@@ -1949,6 +1947,10 @@ de la [Sección 7.3.1, "Montaje y preparación de
 "Montaje de sistemas de archivos virtuales del
 kernel"](#7.3.2. Montaje de sistemas de archivos virtuales del kernel|outline).
 
+---
+&nbsp;
+&nbsp;
+
 ## 2.4. Creación de una nueva partición
 
 Como la mayoría de los sistemas operativos, LFS suele instalarse en una
@@ -2123,6 +2125,10 @@ al iniciar el sistema debe especificarse en el archivo /etc/fstab. Los
 detalles sobre cómo especificar particiones se tratarán en la Sección
 10.2, "Creación del archivo /etc/fstab".
 
+---
+&nbsp;
+&nbsp;
+
 ## 2.5. Creación de un sistema de archivos en la partición
 
 Una partición es simplemente un conjunto de sectores en una unidad de
@@ -2145,19 +2151,15 @@ características de los archivos y del tamaño de la partición. Por
 ejemplo:
 
 ext2
-
 es adecuado para particiones pequeñas que se actualizan con poca
 frecuencia, como /boot.
 
 ext3
-
 es una actualización de ext2 que incluye un diario para ayudar a
 recuperar el estado de la partición en caso de un apagado incorrecto.
-
 Se utiliza comúnmente como sistema de archivos de propósito general.
 
 ext4
-
 es la última versión de la familia de sistemas de archivos ext. Ofrece
 varias funciones nuevas, como marcas de tiempo de nanosegundos, creación
 y uso de archivos muy grandes (hasta 16 TB) y mejoras de velocidad.
@@ -2172,21 +2174,26 @@ LFS asume que el sistema de archivos raíz (/) es de tipo ext4. Para
 crear un sistema de archivos ext4 en la partición LFS, ejecute el
 siguiente comando:
 
-|**mkfs -v -t ext4 /dev/\<xxx\>**|
-|------------------------------|
-
+> ```bash
+> mkfs -v -t ext4 /dev/\<xxx\>
+> ```
 Reemplace \<xxx\> con el nombre de la partición LFS.
 
 Si utiliza una partición de intercambio existente, no es necesario
 formatearla. Si se creó una nueva partición de intercambio, deberá
 inicializarse con este comando:
 
- |**mkswap /dev/\<yyy\>**|
- |---------------------|
+> ```bash
+> mkswap /dev/\<yyy\>
+> ```
 
 Reemplace \<yyy\> con el nombre de la partición de intercambio.
 
-## 2.6. Configuración de la variable \$LFS y Umask
+---
+&nbsp;
+&nbsp;
+
+## 2.6. Configuración de la variable $LFS y Umask
 
 A lo largo de este libro, la variable de entorno LFS se utilizará varias
 veces. Debe asegurarse de que esta variable esté siempre definida
@@ -2197,8 +2204,9 @@ compila LFS en una partición separada, este directorio será el punto de
 montaje de la partición. Seleccione una ubicación de directorio y
 configure la variable con el siguiente comando:
 
-|**export LFS=/mnt/*lfs***|
-|-----------------------|
+> ```bash
+> export LFS=/mnt/lfs
+> ```
 
 Tener esta variable configurada es beneficioso, ya que comandos como
 **mkdir -v \$LFS/tools **se pueden escribir literalmente. El shell
@@ -2209,8 +2217,10 @@ Ahora configure la máscara de creación de modo de archivo (umask) en 022
 en caso de que la distribución del host use un valor predeterminado
 diferente:
 
-|**umask \*022\***|
-|---------------|
+> ```bash
+> umask 022
+> ```
+
 
 Configurar la umask en 022 garantiza que los archivos y directorios
 recién creados solo puedan ser escritos por su propietario, pero que
@@ -2245,7 +2255,10 @@ sistema LFS.
 > Si alguno de los resultados de estos dos comandos es incorrecto,
 > utilice el comando indicado anteriormente en esta página para
 > configurar \$LFS con el nombre de directorio correcto y establecer
-> **umask en 022**
+> 
+> ```bash
+> umask en 022
+> ```
 
 > **Nota**
 > 
@@ -2267,6 +2280,10 @@ sistema LFS.
 > interactiva. Asegúrese de colocar los comandos antes de la prueba
 > para uso no interactivo.
 
+---
+&nbsp;
+&nbsp;
+
 ## 2.7. Montaje de la nueva partición
 
 Una vez creado el sistema de archivos, la partición debe montarse para
@@ -2281,24 +2298,20 @@ se habla de la partición y el sistema de archivos asociado como si
 fueran uno solo. Cree el punto de montaje y monte el sistema de archivos
 LFS con estos comandos:
 
-> +-------------------------------------+
-> ---
-> mkdir -pv \$LFS
-> mount -v -t ext4 /dev/\<xxx\> \$LFS
-> +-------------------------------------+
-
+> ```bash
+> mkdir -pv $LFS
+> mount -v -t ext4 /dev/<xxx> $LFS
+> ```
 Reemplace \<xxx\> con el nombre de la partición LFS.
 
 Si utiliza varias particiones para LFS (por ejemplo, una para / y otra
 para /home), móntelas así:
 
-> +------------------------------------------+
-> ---
-> mkdir -pv \$LFS
-> mount -v -t ext4 /dev/\<xxx\> \$LFS
-> mkdir -v \$LFS/home
-> mount -v -t ext4 /dev/\<yyy\> \$LFS/home
-> +------------------------------------------+
+> ```bash
+> mkdir -pv \$LFS*
+> mount -v -t ext4 /dev/<xxx> $LFS
+> mkdir -v $LFS/home
+> mount -v -t ext4 /dev/<yyy> $LFS/home
 
 Reemplace \<xxx\> y \<yyy\> con los nombres de partición
 correspondientes.
@@ -2309,11 +2322,9 @@ sistema LFS) como root y 755 en caso de que la distribución del host se
 haya configurado para usar una configuración predeterminada diferente
 para **mkfs**:
 
-> +-----------------------+
-> ---
-> chown root:root \$LFS
-> chmod 755 \$LFS
-> +-----------------------+
+|**chown root:root \$LFS**|
+|-----------------------|
+|**chmod 755 \$LFS**|
 
 Asegúrese de que esta nueva partición no se monte con permisos demasiado
 restrictivos (como las opciones nosuid o nodev). Ejecute el comando
@@ -2323,28 +2334,25 @@ la partición LFS montada.
 Si nosuid o nodev están configurados, la partición debe volver a
 montarse.
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> **Advertencia**
+> 
 > Las instrucciones anteriores presuponen que no reiniciará el equipo
 > durante el proceso LFS. Si apaga el sistema, deberá volver a montar
 > la partición LFS cada vez que reinicie el proceso de compilación o
 > modificar el archivo /etc/fstab del sistema host para que se vuelva
 > a montar automáticamente al reiniciar. Por ejemplo, puede agregar
 > esta línea a su archivo /etc/fstab:
-> +----------------------------------------------------------------------+
+> ```bash
 > /dev/**\<xxx\>** /mnt/lfs *ext4* defaults 1 1
-> +----------------------------------------------------------------------+
+> ```
 > Si utiliza particiones opcionales adicionales, asegúrese de
 > agregarlas también.
-> +----------------------------------------------------------------------+
 
 Si utiliza una partición de intercambio (swap), asegúrese de que esté
 habilitada con el comando **swapon**:
 
-  ------------------------------
-  /sbin/swapon -v /dev/\<zzz\>
-  ------------------------------
+|**/sbin/swapon -v /dev/\<zzz\>**|
+|------------------------------|
 
 Reemplace \<zzz\> con el nombre de la partición de intercambio.
 
@@ -2352,6 +2360,10 @@ Ahora que la nueva partición LFS está lista para su uso, es hora de
 descargar los paquetes.
 
 ## Capítulo 3 - Paquetes y parches <a name="capitulo-3"></a>
+
+---
+&nbsp;
+&nbsp;
 
 ## 3.1. Introducción
 
@@ -2384,7 +2396,6 @@ libro, Google ([*https://www.google.com/*](https://www.google.com/))
 ofrece un buscador útil para la mayoría de los paquetes. Si la búsqueda
 no funciona, pruebe con otro método de descarga:
 
-*
 *[*https://www.linuxfromscratch.org/lfs/mirrors.html#files*](https://www.linuxfromscratch.org/lfs/mirrors.html#files).
 
 Los paquetes y parches descargados deberán almacenarse en un lugar
@@ -2398,9 +2409,8 @@ disponibles durante todas las etapas del proceso de compilación.
 Para crear este directorio, ejecute el siguiente comando como usuario
 root antes de iniciar la descarga:
 
-  ------------------------
-  mkdir -v \$LFS/sources
-  ------------------------
+|**mkdir -v \$LFS/sources**|
+|------------------------|
 
 Configure este directorio como permanente y con permisos de escritura.
 \"Permanente\" significa que, incluso si varios usuarios tienen permiso
@@ -2408,9 +2418,8 @@ de escritura en un directorio, solo el propietario de un archivo puede
 eliminarlo dentro de un directorio permanente. El siguiente comando
 habilitará los modos de escritura y permanente:
 
-  -----------------------------
-  chmod -v a+wt \$LFS/sources
-  -----------------------------
+|**chmod -v a+wt \$LFS/sources**|
+|------------------------|
 
 Hay varias maneras de obtener todos los paquetes y parches necesarios
 para compilar LFS:
@@ -2430,21 +2439,18 @@ usando
 [*wget-list*](https://mirror.download.it/lfs/pub/lfs/lfs-packages/12.3/wget-list)
 como entrada del comando **wget**, utilice:
 
-  ----------------------------------------------------------------------------
-  wget \--input-file=wget-list \--continue \--directory-prefix=\$LFS/sources
-  ----------------------------------------------------------------------------
+|**wget \--input-file=wget-list \--continue \--directory-prefix=\$LFS/sources**|
+|----------------------------------------------------------------------------|
 
 Además, a partir de LFS-7.0, existe un archivo independiente,
 [md5sums](https://mirror.download.it/lfs/pub/lfs/lfs-packages/12.3/md5sums),
 que permite verificar la disponibilidad de todos los paquetes correctos
 antes de continuar. Coloque ese archivo en \$LFS/sources y ejecute:
 
-> +--------------------------------------+
-> ---
-> pushd \$LFS/sources
-> md5sum -c md5sums
-> popdchown root:root \$LFS/sources/\*
-> +--------------------------------------+
+|**pushd \$LFS/sources**|
+|-----------------------|
+|**md5sum -c md5sums**|
+|**popdchown root:root $LFS/sources/*\**|
 
 Esta comprobación puede realizarse después de recuperar los archivos
 necesarios con cualquiera de los métodos mencionados anteriormente.
@@ -2457,15 +2463,17 @@ un UID sin nombre en el sistema LFS final. Si no asigna el mismo UID a
 su usuario en el sistema LFS, cambie la propiedad de estos archivos a
 root para evitar este problema:
 
-  ----------------------------------
-  chown root:root \$LFS/sources/\*
-  ----------------------------------
+|**chown root:root $LFS/sources/*\**|
+|**----------------------------------**|
+
+---
+&nbsp;
+&nbsp;
 
 ## 3.2. Todos los paquetes
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Lea los avisos de seguridad antes de descargar paquetes para
 > determinar si debe usar una versión más reciente de algún paquete y
 > así evitar vulnerabilidades de seguridad.
@@ -2478,7 +2486,6 @@ root para evitar este problema:
 > posible descargar una versión anterior desde un servidor espejo
 > incluso si esta se ha eliminado debido a una vulnerabilidad, no es
 > recomendable usar una versión vulnerable al compilar el sistema.
-> +----------------------------------------------------------------------+
 
 Descargue u obtenga los siguientes paquetes:
 
@@ -2697,9 +2704,8 @@ Descargar: https://ftp.gnu.org/gnu/glibc/glibc-2.41.tar.xz
 
 Suma MD5: 19862601af60f73ac69e067d3e9267d4
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Los desarrolladores de Glibc mantienen una rama de Git con parches
 > considerados útiles para Glibc-2.41, pero que, lamentablemente, se
 > desarrollaron después de su lanzamiento. Los editores de LFS
@@ -2707,7 +2713,6 @@ Suma MD5: 19862601af60f73ac69e067d3e9267d4
 > seguridad a la rama, pero no se tomarán medidas para otros parches
 > nuevos. Puede revisar los parches usted mismo e incorporar algunos
 > si los considera importantes.
-> +----------------------------------------------------------------------+
 
 • GMP (6.3.0) - 2046 KB:
 
@@ -2885,9 +2890,8 @@ https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.13.4.tar.xz
 
 Suma MD5: 13b9e6c29105a34db4647190a43d1810
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El kernel de Linux se actualiza con frecuencia, muchas veces debido
 > al descubrimiento de vulnerabilidades de seguridad. Se puede usar la
 > última versión estable del kernel disponible, a menos que la página
@@ -2897,7 +2901,6 @@ Suma MD5: 13b9e6c29105a34db4647190a43d1810
 > separado una versión base del paquete y los parches. Esto puede
 > ahorrar tiempo o dinero para una posterior actualización de parches
 > dentro de una versión menor.
-> +----------------------------------------------------------------------+
 
 **• Lz4 (1.10.0) - 379 KB:**
 
@@ -3122,13 +3125,11 @@ https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-257.3.tar.xz
 
 Suma MD5: 9b77c3b066723d490cb10aed4fb05696
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El equipo de Linux From Scratch genera su propio archivo tar de las
 > páginas de manual utilizando el código fuente de systemd. Esto se
 > hace para evitar dependencias innecesarias.
-> +----------------------------------------------------------------------+
 
 • SysVinit (3.14) - 236 KB:
 
@@ -3204,12 +3205,10 @@ https://github.com/vim/vim/archive/v9.1.1166/vim-9.1.1166.tar.gz
 
 Suma MD5: 718d43ce957ab7c81071793de176c2eb
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > La versión de Vim cambia a diario. Para obtener la versión más
 > reciente, visite https://github.com/vim/vim/tags.
-> +----------------------------------------------------------------------+
 
 • Wheel (0.45.1) - 106 KB:
 
@@ -3255,6 +3254,10 @@ https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
 Suma MD5: 780fc1896922b1bc52a4e90980cdda48
 
 Tamaño total de estos paquetes: aproximadamente 527 MB
+
+---
+&nbsp;
+&nbsp;
 
 ## 3.3. Parches necesarios
 
@@ -3315,6 +3318,10 @@ defecto. Puede consultar la base de datos de parches en
 *https://www.linuxfromscratch.org/patches/downloads/* y adquirir parches
 adicionales que se ajusten a las necesidades de su sistema.
 
+---
+&nbsp;
+&nbsp;
+
 ## Capítulo 4 - Preparativos Finales <a name="capitulo-4"></a>
 
 ## 4.1. Introducción
@@ -3343,8 +3350,7 @@ finales en el Capítulo 8.
 Cree la distribución de directorios necesaria ejecutando los siguientes
 comandos como root:
 
-> +----------------------------------------------------+
-> ---
+> ```bash
 > mkdir -pv \$LFS/{etc,var} \$LFS/usr/{bin,lib,sbin}
 > for i in bin lib sbin; do
 > ln -sv usr/\$i \$LFS/\$i
@@ -3352,7 +3358,7 @@ comandos como root:
 > case \$(uname -m) in
 > x86_64) mkdir -pv \$LFS/lib64 ;;
 > esac
-> +----------------------------------------------------+
+> ```
 
 Los programas del Capítulo 6 se compilarán con un compilador cruzado
 (más detalles en la sección \"Notas técnicas de la cadena de
@@ -3360,13 +3366,11 @@ herramientas\"). Este compilador cruzado se instalará en un directorio
 especial para separarlo de los demás programas. Aún como root, cree ese
 directorio con este comando:
 
-  -----------------------
-  mkdir -pv \$LFS/tools
-  -----------------------
+|**mkdir -pv \$LFS/tools**|
+|-----------------------|
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Los editores de LFS han decidido deliberadamente no usar el
 > directorio /usr/lib64. Se toman varias medidas para garantizar que
 > las herramientas no lo usen. Si por alguna razón aparece este
@@ -3374,7 +3378,10 @@ directorio con este comando:
 > instaló un paquete binario que lo creó después de finalizar LFS),
 > podría dañar su sistema. Asegúrese siempre de que este directorio no
 > exista.
-> +----------------------------------------------------------------------+
+
+---
+&nbsp;
+&nbsp;
 
 ## 4.3. Añadiendo el usuario de LFS
 
@@ -3387,11 +3394,10 @@ grupo (también llamado lfs) y ejecutaremos comandos como lfs durante el
 proceso de instalación. Como root, ejecute los siguientes comandos para
 agregar el nuevo usuario:
 
-> +-------------------------------------------------+
-> ---
+> ```bash
 > groupadd lfs
 > useradd -s /bin/bash -g lfs -m -k /dev/null lfs
-> +-------------------------------------------------+
+> ```
 
 Esto significan las opciones de la línea de comandos:
 
@@ -3424,42 +3430,43 @@ como root, lo cual no requiere que el usuario lfs tenga una contraseña),
 debe establecer una contraseña para lfs. Ejecute el siguiente comando
 como usuario root para establecer la contraseña:
 
-  ------------
-  passwd lfs
-  ------------
+>```bash
+>passwd lfs
+>```
 
 Conceda a lfs acceso completo a todos los directorios bajo \$LFS,
 convirtiéndolo en el propietario:
 
-> +----------------------------------------------+
-> ---
+> ```bash
 > chown -v lfs \$LFS/{usr{,/\*},var,etc,tools}
 > case \$(uname -m) in
 > x86_64) chown -v lfs \$LFS/lib64 ;;
 > esac
-> +----------------------------------------------+
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > En algunos sistemas host, el siguiente comando su no se completa
 > correctamente y suspende el inicio de sesión del usuario lfs en
 > segundo plano. Si el indicador \"lfs:\~\$\" no aparece
 > inmediatamente, el problema se solucionará con el comando fg.
-> +----------------------------------------------------------------------+
 
 A continuación, inicie un shell con el usuario lfs. Esto se puede hacer
 iniciando sesión como lfs en una consola virtual o con el siguiente
 comando de sustitución/cambio de usuario:
 
-  ----------
-  su - lfs
-  ----------
+> ```bash
+> su - lfs
+> ```
 
 El símbolo \"-\" indica a su que inicie un shell con inicio de sesión en
 lugar de uno sin inicio de sesión. La diferencia entre estos dos tipos
 de shells se describe en detalle en
 [bash(1)](https://man.archlinux.org/man/bash.1) e info bash.
+
+---
+&nbsp;
+&nbsp;
 
 ## 4.4. Configuración del entorno
 
