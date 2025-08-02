@@ -2357,7 +2357,7 @@ Reemplace \<zzz\> con el nombre de la partición de intercambio.
 Ahora que la nueva partición LFS está lista para su uso, es hora de
 descargar los paquetes.
 
-## Capítulo 3. Paquetes y parches <a name="capitulo-3"></a>
+## Capítulo 3 - Paquetes y parches <a name="capitulo-3"></a>
 
 ## 3.1. Introducción
 
@@ -3321,7 +3321,7 @@ defecto. Puede consultar la base de datos de parches en
 *https://www.linuxfromscratch.org/patches/downloads/* y adquirir parches
 adicionales que se ajusten a las necesidades de su sistema.
 
-## Capítulo 4. Preparativos Finales <a name="capitulo-4"></a>
+## Capítulo 4 - Preparativos Finales <a name="capitulo-4"></a>
 
 ## 4.1. Introducción
 
@@ -4235,7 +4235,7 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > indique lo contrario.
 > +----------------------------------------------------------------------+
 
-## Capítulo 5. Compilación de una cadena de herramientas cruzadas <a name="capitulo-5"></a>
+## Capítulo 5 - Compilación de una cadena de herramientas cruzadas <a name="capitulo-5"></a>
 
 ## 5.1. Introducción
 
@@ -4947,7 +4947,7 @@ compilación cruzada:
 Los detalles de este paquete se encuentran en la Sección 8.29.2,
 "Contenido de GCC".
 
-## Capítulo 6. Herramientas temporales para compilación cruzada <a name="capitulo-6"></a>
+## Capítulo 6 - Herramientas temporales para compilación cruzada <a name="capitulo-6"></a>
 
 ## 6.1. Introducción
 
@@ -5908,7 +5908,7 @@ compilador de C instalar:
 Los detalles sobre este paquete se encuentran en la Sección 8.29.2,
 "Contenido de GCC".
 
-## Capítulo 7. Entrada al entorno chroot y creación de herramientas temporales adicionales <a name="capitulo-7"></a>
+## Capítulo 7 - Entrada al entorno chroot y creación de herramientas temporales adicionales <a name="capitulo-7"></a>
 
 ## 7.1. Introducción
 
