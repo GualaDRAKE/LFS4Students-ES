@@ -2189,7 +2189,7 @@ compila LFS en una partición separada, este directorio será el punto de
 montaje de la partición. Seleccione una ubicación de directorio y
 configure la variable con el siguiente comando:
 
-|**export LFS=/mnt/*lfs/***|
+|**export LFS=/mnt/*lfs***|
 |-----------------------|
 
 Tener esta variable configurada es beneficioso, ya que comandos como
@@ -2201,8 +2201,8 @@ Ahora configure la máscara de creación de modo de archivo (umask) en 022
 en caso de que la distribución del host use un valor predeterminado
 diferente:
 
-|**umask /*022/***|
-|---------|
+|**umask *022***|
+|---------------|
 
 Configurar la umask en 022 garantiza que los archivos y directorios
 recién creados solo puedan ser escritos por su propietario, pero que
