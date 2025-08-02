@@ -307,7 +307,7 @@ encontrar en BLFS.
 |LSB Desktop:|libgdk-x11-2.0.so (pero libgdk-3.so lo proporciona el paquete BLFS GTK+-3), libgtk-x11-2.0.so<br> (pero libgtk- 3.so y libgtk-4.so lo proporcionan los paquetes BLFS GTK+-3 y GTK-4), libpng12.so (pero libpng16.so lo proporciona<br> el paquete BLFS Libpng). libQt\*.so.4 (pero libQt6\*.so.6 lo proporciona el paquete Qt6 de BLFS), libtiff.so.4 (pero libtiff.so.6 lo proporciona el paquete Libtiff de BLFS)|
 |Lenguajes LSB:|/usr/bin/python (LSB requiere Python 2, pero LFS y BLFS solo ofrecen Python 3)|
 |Imágenes LSB:|Ninguna|
-|Gráficos LSB GTK3<br> y<br> LSB (uso de prueba):<br>|libpng15.so (pero libpng16.so lo proporciona el paquete Libpng de BLFS).
+|LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|libpng15.so (pero libpng16.so lo proporciona el paquete Libpng de BLFS)|
 
 ## Justificación de los paquetes del libro
 
