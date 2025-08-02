@@ -253,7 +253,7 @@ sección anterior.
 > basa en el código fuente, el usuario tiene control total sobre los
 > paquetes que desea; puede optar por no instalar algunos paquetes
 > especificados por el LSB.
-> 
+> ---
 
 Si bien es posible crear un sistema completo que supere las pruebas de
 certificación LSB desde cero, esto no es posible sin muchos paquetes
@@ -778,7 +778,7 @@ físicas gracias a una barra invertida al final de la línea.
 > ---
 > CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\
 > \--prefix=/tools \--disable-nls \--disable-werror
-> 
+> ---
 
 Tenga en cuenta que la barra invertida debe ir seguida inmediatamente de
 un **ENTER** y nada más. Otros caracteres, como los espacios en blanco o
@@ -798,7 +798,7 @@ formato también se utiliza para mostrar nombres de archivos, como
 > Configure su navegador para mostrar texto de ancho fijo con una
 > buena fuente monoespaciada \"font-size=\"9ptd\", con la que podrá
 > distinguir claramente los glifos de Il1 u O0.
->
+> ---
 
 Énfasis
 
@@ -817,7 +817,7 @@ y sitios web.
 > bin:x:1:
 > \...\...
 > EOF
->
+> ---
 
 Este formato se utiliza al crear archivos de configuración. El primer
 comando indica al sistema que cree el archivo *\$LFS/etc/group* a partir
@@ -951,7 +951,7 @@ distribución para incluir estas herramientas.
 > [*https://www.linuxfromscratc
 > h.org/hints/downloads/files/partitioning-for-lfs.txt*](https://www.l
 > inuxfromscratch.org/hints/downloads/files/partitioning-for-lfs.txt).
-> 
+> ---
 
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
@@ -1549,7 +1549,7 @@ de LFS (ver arriba).
 > soporte separados del sistema de seguimiento de errores. Los
 > informes de errores para hacer preguntas se consideran inválidos y
 > pueden molestar a los desarrolladores de estos proyectos.
->
+> ---
 
 Si encuentra algún problema o pregunta mientras trabaja con este libro,
 consulte la página de preguntas frecuentes en* --
@@ -1600,7 +1600,7 @@ sistema](#Script version-check.sh|outline)
 > Ser transparentes sobre cualquier cambio en el procedimiento
 > establecido nos ayuda a evaluar y determinar las posibles causas de
 > su problema.
->
+> ---
 
 ### 1.5.2. Problemas con el script de configuración
 
@@ -1639,7 +1639,7 @@ pantalla de **make**.
 > make\[1\]: \*\*\* \[all-recursive\] Error 1
 > make\[1\]: Saliendo del directorio \`/lfs/tmp/make-3.79.1\'
 > make: \*\*\* \[all-recursive-am\] Error 2
->
+> ---
 
 En este caso, muchos usuarios solo incluirían la sección inferior:
 
@@ -1788,7 +1788,7 @@ kernel.
 > equipo de desarrollo de LFS no los ha probado ni soportado, y
 > podrían requerir modificaciones de las instrucciones o parches
 > adicionales para algunos paquetes.
-> 
+> ---
 
 Para comprobar si su Sistema Host tiene todas las versiones adecuadas y
 la capacidad de compilar programas, cree el script version-check.sh, el
@@ -1892,7 +1892,7 @@ cual ejecutará una serie de comandos de verificación:
 > fi
 > EOF
 > \$ **bash version-check.sh**
->
+> ---
 
 ## 2.3. Compilación de LFS por etapas
 
@@ -1993,7 +1993,7 @@ usar estos programas.
 > estas opciones requieren un archivo *initramfs*, que es un tema
 > avanzado. Estas metodologías de particionado no se recomiendan para
 > usuarios nuevos de LFS.
-> 
+> --- 
 
 Recuerde la designación de la nueva partición (p. ej., sda5). En este
 libro, la llamaremos partición LFS. Recuerde también la designación de
@@ -2067,7 +2067,7 @@ fdisk o tendrá el código EF02 si se usa el comando gdisk.
 > diferentes tipos de tablas de particiones. La nec esidad de la
 > partición Grub Bios depende únicamente del tipo de tabla de
 > particiones del disco de arranque.
->
+> ---
 
 ### 2.4.1.4. Particiones de conveniencia
 
@@ -2253,6 +2253,7 @@ sistema LFS.
 > utilice el comando indicado anteriormente en esta página para
 > configurar \$LFS con el nombre de directorio correcto y establecer
 > umask en 022.
+> ---
 > 
 > ---
 > Nota
