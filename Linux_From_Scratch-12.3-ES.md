@@ -285,22 +285,17 @@ encontrar en BLFS.
 
 |   LSB Core   | Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils,<br> Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps,<br> Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib|
 |:------------:|:----------------------------------------------------------:|
-| LSB Desktop  |Ninguno                                                     |
-|LSB Languages |Perl                                                        |
-| LSB Imaging  |Ninguno                                                     |
-|LSB Gtk3<br> y<br> LSB Graphics<br> (uso de prueba) |Ninguno              |
+|LSB Desktop:   |Ninguno                                                    |
+|LSB Languages: |Perl                                                       |
+|LSB Imaging:   |Ninguno                                                    |
+|LSB Gtk3<br> y<br> LSB Graphics<br> (uso de prueba): |Ninguno              |
 
 ### Paquetes proporcionados por BLFS necesarios para cumplir con los requisitos de LSB
 
-LSB Core: At, Batch (parte de At), archivos de inicio de BLFS Bash,
-Cpio, Ed, Fcrontab, LSB-Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail (o
-Postfix o Exim), Time.
-
-LSB Desktop: Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig,
-Gdk-pixbuf, Glib2, GLU, Icon-naming-utils, Libjpeg-t urbo, Libxml2,
-Mesa, Pango, Xdg-utils, Xorg.
-
-LSB Languages: Libxml2, Libxslt.
+|:------------:|:----------------------------------------------------------:|
+|LSB Core:     |At, Batch (parte de At), archivos de inicio de BLFS Bash,Cpio, Ed,<br> Fcrontab, LSB-Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail (o Postfix o Exim), Time.|
+|LSB Desktop:  |Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig,Gdk-pixbuf, Glib2,<br> GLU, Icon-naming-utils, Libjpeg-t urbo, Libxml2, Mesa, Pango, Xdg-utils, Xorg|
+|LSB Languages:|Libxml2, Libxslt|
 
 LSB Imaging: CUPS, Cups-filters, Ghostscript, SANE.
 
