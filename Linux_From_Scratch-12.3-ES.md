@@ -2215,8 +2215,8 @@ seguridad en el sistema LFS, y una configuración predeterminada
 demasiado restrictiva puede causar problemas extraños al crear o usar el
 sistema LFS.
 
-|**Precaución**|
-|--------------| 
+|**Precaución**|  |
+|--------------|--|
 |No olvide comprobar que LFS esté configurado y que la máscara de|
 |usuario (umask) esté configurada en 022 al salir y volver a entrar|
 |en el entorno de trabajo actual (por ejemplo, al ejecutar un comando|
@@ -2234,7 +2234,7 @@ compilación de su sistema LFS, que es /mnt/lfs si se siguió el|
 |Si alguno de los resultados de estos dos comandos es incorrecto,|
 |utilice el comando indicado anteriormente en esta página para|
 |configurar \$LFS con el nombre de directorio correcto y establecer|
-|**umask en 022**|
+|**umask en 022**|  |
 
 > **Nota**
 > 
