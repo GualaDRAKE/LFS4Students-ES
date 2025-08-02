@@ -759,8 +759,8 @@ tipográficas a lo largo de este libro. Esta sección contiene algunos
 ejemplos del formato tipográfico presente en Linux From Scratch.
 
 
-  |  ./configure \--prefix=/usr  |
-  |------------------------------|
+  |**./configure \--prefix=/usr**|
+  |:------------------------------:|
 
 Este formato de texto está diseñado para escribirse exactamente como se
 ve, a menos que se indique lo contrario en el texto circundante. También
@@ -770,34 +770,28 @@ comando se hace referencia.
 En algunos casos, una línea de comandos se extiende a dos o más líneas
 físicas gracias a una barra invertida al final de la línea.
 
-> +------------------------------------------------------+
-> ---
-> CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\
-> \--prefix=/tools \--disable-nls \--disable-werror
-> +------------------------------------------------------+
+> **CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \\**
+> **\--prefix=/tools \--disable-nls \--disable-werror**
 
 Tenga en cuenta que la barra invertida debe ir seguida inmediatamente de
 un **ENTER** y nada más. Otros caracteres, como los espacios en blanco o
 los tabuladores, generarán resultados incorrectos.
 
-  --------------------------------------------------------------------
-  install-info: unknown option \'\--dir-file=/mnt/lfs/usr/info/dir\'
-  --------------------------------------------------------------------
+|**install-info: unknown option \'\--dir-file=/mnt/lfs/usr/info/dir\'**|
+|:--------------------------------------------------------------------:|
 
 Este formato de texto (texto de ancho fijo) muestra la salida en
 pantalla, generalmente como resultado de los comandos ejecutados. Este
 formato también se utiliza para mostrar nombres de archivos, como
 /etc/ld.so.conf.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Configure su navegador para mostrar texto de ancho fijo con una
 > buena fuente monoespaciada \"font-size=\"9ptd\", con la que podrá
 > distinguir claramente los glifos de Il1 u O0.
-> +----------------------------------------------------------------------+
 
-Énfasis
+## Énfasis
 
 Este formato de texto se utiliza para varios propósitos en el libro. Su
 propósito principal es enfatizar puntos o elementos importantes.
@@ -808,14 +802,11 @@ Este formato se utiliza para hipervínculos tanto dentro de la comunidad
 LFS como a páginas externas. Incluye tutoriales, ubicaciones de descarga
 y sitios web.
 
-> +-------------------------------------+
-> ---
-> cat \> \$LFS/etc/group \<\< \"EOF\"
+> **cat \> \$LFS/etc/group \<\< \"EOF\"**
 > root:x:0:
 > bin:x:1:
 > \...\...
-> EOF
-> +-------------------------------------+
+> **EOF**
 
 Este formato se utiliza al crear archivos de configuración. El primer
 comando indica al sistema que cree el archivo *\$LFS/etc/group* a partir
@@ -894,6 +885,10 @@ y términos, agradecimientos, dependencias de los paquetes, una lista de
 scripts de arranque de LFS, licencias para la distribución del libro y
 un índice completo de paquetes, programas, bibliotecas y scripts.
 
+---
+&nbsp;
+&nbsp;
+
 ## Erratas y avisos de seguridad
 
 El software utilizado para crear un sistema LFS se actualiza y mejora
@@ -918,17 +913,9 @@ sistema de escritorio o servidor real, debe seguir consultando los
 avisos y corregir cualquier vulnerabilidad de seguridad, incluso cuando
 el sistema LFS esté completamente compilado.
 
-# 
-
-# 
-
-# 
-
-# 
-
-# 
-
-# 
+---
+&nbsp;
+&nbsp;
 
 # Parte I. Introducción
 
@@ -944,9 +931,8 @@ enlazador y un intérprete de comandos, para construir el nuevo sistema.
 Seleccione la opción \"desarrollo\" durante la instalación de la
 distribución para incluir estas herramientas.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Existen muchas maneras de *instalar* una distribución de Linux y las
 > opciones predeterminadas no suelen ser las óptimas para construir un
 > sistema LFS. Para obtener sugerencias sobre cómo configurar una
@@ -954,39 +940,29 @@ distribución para incluir estas herramientas.
 > [*https://www.linuxfromscratc
 > h.org/hints/downloads/files/partitioning-for-lfs.txt*](https://www.l
 > inuxfromscratch.org/hints/downloads/files/partitioning-for-lfs.txt).
-> +----------------------------------------------------------------------+
 
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
 
-[El capítulo 2](#Capítulo 2. Preparación del sistema host|outline) de
-este libro describe cómo crear una nueva partición y un sistema de
-archivos nativos de Linux, donde se compilará e instalará el nuevo
-sistema LFS.
+El capítulo 2 de este libro describe cómo crear una nueva partición y un sistema
+de archivos nativos de Linux, donde se compilará e instalará el nuevo sistema LFS.
 
-[El capítulo 3](#Capítulo 3. Paquetes y parches|outline) explica qué
-paquetes y parches deben descargarse para compilar un sistema LFS y cómo
-almacenarlos en el nuevo sistema de archivos.
+El capítulo 3 explica qué paquetes y parches deben descargarse para compilar un
+sistema LFS y cómo almacenarlos en el nuevo sistema de archivos.
 
-[El capítulo 4](#Capítulo 4. Preparativos Finales|outline) describe la
+El capítulo 4 describe la
 configuración de un entorno de trabajo adecuado. Lea atentamente el
 capítulo 4, ya que explica varios aspectos importantes que debe tener en
 cuenta antes de comenzar a trabajar con el capítulo 5 y posteriores.
 
-[El capítulo
-5](#Capítulo 5. Compilación de una cadena de herramientas cruzadas|outline)
-explica la instalación de la cadena de herramientas inicial (binutils,
-gcc y glibc) mediante técnicas de compilación cruzada para aislar las
+El capítulo 5 explica la instalación de la cadena de herramientas inicial
+(binutils, gcc y glibc) mediante técnicas de compilación cruzada para aislar las
 nuevas herramientas del sistema host.
 
-[El capítulo
-6](#Capítulo 6. Herramientas temporales para compilación cruzada|outline)
-muestra cómo realizar la compilación cruzada de utilidades básicas
+El capítulo 6 muestra cómo realizar la compilación cruzada de utilidades básicas
 utilizando la cadena de herramientas cruzada recién compilada.
 
-[El capítulo
-7](#Capítulo 7. Entrada al entorno chroot y creación de herramientas temporales adicionales|outline)
-se centra en un entorno \"chroot\", donde utilizamos las nuevas
+El capítulo 7 se centra en un entorno \"chroot\", donde utilizamos las nuevas
 herramientas para compilar el resto de las herramientas necesarias para
 crear el sistema LFS.
 
