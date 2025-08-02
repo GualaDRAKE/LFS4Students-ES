@@ -929,7 +929,7 @@ el sistema LFS esté completamente compilado.
 
 # Parte I. Introducción
 
-## Capítulo 1. Introducción
+## Capítulo 1 - Introducción
 
 ## 1.1. Cómo construir un sistema LFS
 
