@@ -3,7 +3,6 @@
    Versión 12.3
 
    Publicado el 5 de marzo de 2025
-
 ---
 
 
