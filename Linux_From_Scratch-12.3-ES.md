@@ -1877,10 +1877,10 @@ cual ejecutará una serie de comandos de verificación:
 |if \[ \"\$(nproc)\" = \"\" \]; then|
 |echo \"ERROR: nproc no está disponible o produce una salida vacía\"|
 |else|
-|echo \"OK: nproc informa que \$(nproc) núcleos lógicos están|
-|disponibles\"|
+|echo \"OK: nproc informa que \$(nproc) núcleos lógicos están disponibles\"|
 |fi|
 |**EOF**|
+||
 |\$ **bash version-check.sh**|
 
 ---
@@ -2220,7 +2220,7 @@ demasiado restrictiva puede causar problemas extraños al crear o usar el
 sistema LFS.
 
 |**Precaución**|
-|| 
+|--------------| 
 |No olvide comprobar que LFS esté configurado y que la máscara de|
 |usuario (umask) esté configurada en 022 al salir y volver a entrar|
 |en el entorno de trabajo actual (por ejemplo, al ejecutar un comando|
