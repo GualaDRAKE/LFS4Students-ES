@@ -954,27 +954,27 @@ distribución para incluir estas herramientas.
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
 
-El [capítulo 2](#capitulo-2-preparación-del-sistema-host)
- de este libro describe cómo crear una nueva partición y un sistema
-de archivos nativos de Linux, donde se compilará e instalará el nuevo sistema LFS.
+El [capítulo 2](#capitulo-2---preparación-del-sistema-host) de este libro describe
+cómo crear una nueva partición y un sistema de archivos nativos de Linux, donde
+se compilará e instalará el nuevo sistema LFS.
 
-El [capítulo 3](#capitulo-3-paquetes-y-parches) explica qué paquetes y parches deben descargarse para compilar un
+El [capítulo 3](#capitulo-3---paquetes-y-parches) explica qué paquetes y parches deben descargarse para compilar un
 sistema LFS y cómo almacenarlos en el nuevo sistema de archivos.
 
-El [capítulo 4](#capitulo-4-preparativos-finales) describe la
+El [capítulo 4](#capitulo-4---preparativos-finales) describe la
 configuración de un entorno de trabajo adecuado. Lea atentamente el
 capítulo 4, ya que explica varios aspectos importantes que debe tener en
 cuenta antes de comenzar a trabajar con el capítulo 5 y posteriores.
 
-El [capítulo 5](#capitulo-5-compilación-de-una-cadena-de-herramientas-cruzadas)
+El [capítulo 5](#capitulo-5---compilación-de-una-cadena-de-herramientas-cruzadas)
 explica la instalación de la cadena de herramientas inicial (binutils, gcc y glibc) mediante
 técnicas de compilación cruzada para aislar las nuevas herramientas del sistema host.
 
-El [capítulo 6](#capitulo-6-herramientas-temporales-para-compilación-cruzada) muestra cómo
+El [capítulo 6](#capitulo-6---herramientas-temporales-para-compilación-cruzada) muestra cómo
 realizar la compilación cruzada de utilidades básicas utilizando la cadena de herramientas
 cruzada recién compilada.
 
-El [capítulo 7](#capitulo-7-entrada-al-entorno-chroot-y-creación-de-herramientas-temporales-adicionales)
+El [capítulo 7](#capitulo-7---entrada-al-entorno-chroot-y-creación-de-herramientas-temporales-adicionales)
 se centra en un entorno \"chroot\", donde utilizamos las nuevas herramientas para compilar el resto de
 las herramientas necesarias para crear el sistema LFS.
 
