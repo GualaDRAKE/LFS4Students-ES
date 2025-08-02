@@ -1795,7 +1795,7 @@ la capacidad de compilar programas, cree el script version-check.sh, el
 cual ejecutará una serie de comandos de verificación:
 
 #### Script version-check.sh
-```bash
+> ```bash
 > **cat \> version-check.sh \<\< \"EOF\"**
 > #!/bin/bash
 > \# Un script para listar los números de versión de herramientas de
@@ -1881,7 +1881,7 @@ cual ejecutará una serie de comandos de verificación:
 > fi
 > **EOF**
 > 
-> \$ **bash version-check.sh**
+> $ **bash version-check.sh**
 > ```
 
 ---
