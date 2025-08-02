@@ -2215,26 +2215,29 @@ seguridad en el sistema LFS, y una configuración predeterminada
 demasiado restrictiva puede causar problemas extraños al crear o usar el
 sistema LFS.
 
-|**Precaución**|  |
-|--------------|--|
-|No olvide comprobar que LFS esté configurado y que la máscara de|
-|usuario (umask) esté configurada en 022 al salir y volver a entrar|
-|en el entorno de trabajo actual (por ejemplo, al ejecutar un comando|
-|su como root u otro usuario). Compruebe que la variable LFS esté|
-|configurada correctamente con:|
-|**echo \$LFS**|
-|Asegúrese de que la salida muestre la ruta a la ubicación de|
-compilación de su sistema LFS, que es /mnt/lfs si se siguió el|
-|ejemplo proporcionado.|
-|Compruebe que la máscara de usuario (umask) esté configurada|
-|correctamente con:|
-|**umask**|
-|La salida puede ser 0022 o 022 (el número de ceros a la izquierda|
-|depende de la distribución del host).|
-|Si alguno de los resultados de estos dos comandos es incorrecto,|
-|utilice el comando indicado anteriormente en esta página para|
-|configurar \$LFS con el nombre de directorio correcto y establecer|
-|**umask en 022**|  |
+> **Precaución**
+> 
+> No olvide comprobar que LFS esté configurado y que la máscara de
+> usuario (umask) esté configurada en 022 al salir y volver a entrar
+> en el entorno de trabajo actual (por ejemplo, al ejecutar un comando
+> su como root u otro usuario). Compruebe que la variable LFS esté
+> configurada correctamente con:
+>
+> ```bash
+> echo \$LFS
+> ```
+> Asegúrese de que la salida muestre la ruta a la ubicación de
+> ompilación de su sistema LFS, que es /mnt/lfs si se siguió el
+> ejemplo proporcionado.
+> Compruebe que la máscara de usuario (umask) esté configurada
+> correctamente con:
+> **umask**
+> La salida puede ser 0022 o 022 (el número de ceros a la izquierda
+> depende de la distribución del host).
+> Si alguno de los resultados de estos dos comandos es incorrecto,
+> utilice el comando indicado anteriormente en esta página para
+> configurar \$LFS con el nombre de directorio correcto y establecer
+> **umask en 022**
 
 > **Nota**
 > 
