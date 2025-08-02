@@ -244,9 +244,9 @@ El LFS intenta cumplir con las especificaciones del LSB para las
 arquitecturas IA32 (x86 de 32 bits) o AMD64 (x86_64) descritas en la
 sección anterior.
 
-> Nota
-> Mucha gente no está de acuerdo con estos requisitos. El objetivo
-> principal del LSB es garantizar que el software propietario pueda
+> | Nota                                                                |
+> |Mucha gente no está de acuerdo con estos requisitos. El objetivo     |
+> |principal del LSB es garantizar que el software propietario pueda    |
 > instalarse y ejecutarse en un sistema compatible. Dado que el LFS se
 > basa en el código fuente, el usuario tiene control total sobre los
 > paquetes que desea; puede optar por no instalar algunos paquetes
@@ -761,8 +761,8 @@ tipográficas a lo largo de este libro. Esta sección contiene algunos
 ejemplos del formato tipográfico presente en Linux From Scratch.
 
 
-  |./configure \--prefix=/usr  |
-  |----------------------------|
+  |  ./configure \--prefix=/usr  |
+  |------------------------------|
 
 Este formato de texto está diseñado para escribirse exactamente como se
 ve, a menos que se indique lo contrario en el texto circundante. También
