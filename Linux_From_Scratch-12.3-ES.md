@@ -9,11 +9,6 @@
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-   
-
    Creado por Gerard Beekmans
 
    Editor jefe: Bruce Dubbs
@@ -22,11 +17,6 @@
 &nbsp;
 
 &nbsp;
-
-&nbsp;
-
-&nbsp;
-
 
 ### Linux From Scratch: Versión 12.3: Publicado el 5 de marzo de 2025
 
@@ -49,10 +39,6 @@
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
- 
 ## Prefacio
 
 ### Prólogo
@@ -896,6 +882,10 @@ Linux](https://man.archlinux.org/).
 ## Estructura
 
 Este libro se divide en las siguientes partes.
+
+---
+&nbsp;
+&nbsp;
 
 ### Parte I - Introducción
 
