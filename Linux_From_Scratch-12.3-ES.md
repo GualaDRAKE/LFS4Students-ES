@@ -282,11 +282,11 @@ encontrar en BLFS.
 
 
 |   LSB Core   | Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils,<br> Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps,<br> Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib|
-|--------------|------------------------------------------------------------|
+|:------------:|:----------------------------------------------------------:|
 | LSB Desktop  |Ninguno                                                     |
 |LSB Languages |Perl                                                        |
 | LSB Imaging  |Ninguno                                                     |
-|LSB Gtk3<br> y<br> LSB Graphics,<br> (uso de prueba) |Ninguno              |
+|LSB Gtk3<br> y<br> LSB Graphics<br> (uso de prueba) |Ninguno              |
 
 ### Paquetes proporcionados por BLFS necesarios para cumplir con los requisitos de LSB
 
