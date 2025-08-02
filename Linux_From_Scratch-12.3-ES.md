@@ -2236,7 +2236,7 @@ compilación de su sistema LFS, que es /mnt/lfs si se siguió el|
 |configurar \$LFS con el nombre de directorio correcto y establecer|
 |**umask en 022**|
 
-> ** Nota**
+> **Nota**
 > 
 > Una forma de garantizar que la variable LFS y umask siempre estén
 > configuradas correctamente es editar el archivo .bash_profile, tanto
