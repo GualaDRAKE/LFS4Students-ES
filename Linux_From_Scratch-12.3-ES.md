@@ -1796,46 +1796,44 @@ cual ejecutará una serie de comandos de verificación:
 
 #### Script version-check.sh
 > ```bash
-> **cat \> version-check.sh \<\< \"EOF\"**
+> cat > version-check.sh << "EOF"
 > #!/bin/bash
-> \# Un script para listar los números de versión de herramientas de
-> desarrollo críticas
-> \# Si tiene herramientas instaladas en otros directorios, ajuste
-> PATH aquí Y \# también en \~lfs/.bashrc (sección 4.4)
+> # Un script para listar los números de versión de herramientas de desarrollo críticas
+> # Si tiene herramientas instaladas en otros directorios, ajuste PATH aquí Y también en ~lfs/.bashrc (sección 4.4)
 > LC_ALL=C
 > PATH=/usr/bin:/bin
-> bail() { echo \"FATAL: \$1\"; exit 1; }
-> grep \--version \> /dev/null 2\> /dev/null \ | \ | bail \"grep no funciona\"
-> sed \'\' /dev/null \ | \ | bail \"sed no funciona\"
-> sort /dev/null \ | \ | bail \"sort no funciona\"
+> bail() { echo "FATAL: $1"; exit 1; }
+> grep --version > /dev/null 2> /dev/null || bail "grep no funciona"
+> sed '' /dev/null || bail "sed no funciona"
+> sort dev/null || bail "sort no funciona"
 > ver_check()
 > {
-> if ! type -p \$2 &\>/dev/null
+> if ! type -p $2 &>/dev/null
 > then
-> echo \"ERROR: No se puede encontrar \$2 (\$1)\"; return 1;
+> echo "ERROR: No se puede encontrar $2 ($1)"; return 1;
 > fi
-> v=\$(\$2 \--version 2\>&1 \ | grep -E -o \'\[0-9\]+\\.\[0-9\\.\]+\[a-z\]\*\' \ | head -n1)
-> if printf \'%s\\n\' \$3 \$v \ | sort \--version-sort \--check &\>/dev/null
+> v=$($2 --version 2>&1 | grep -E -o '[0-9]+\.[0-9\.]+[a-z]*' | head -n1)
+> if printf '%s\n' $3 $v | sort --version-sort --check &>/dev/null
 > then
-> printf \"OK: %-9s %-6s \>= \$3\\n\" \"\$1\" \"\$v\"; return 0;
+> printf "OK: %-9s %-6s >= $3\n" "$1" "$v"; return 0;
 > else
-> printf \"ERROR: %-9s es DEMASIADO ANTIGUO (\$3 o posterior| requerido)\\n\" \"\$1\";
+> printf "ERROR: %-9s es DEMASIADO ANTIGUO ($3 o posterior | requerido)\n" "$1";
 > return 1;
 > fi
 > }
 > ver_kernel()
 > {
-> kver=\$(uname -r \ | grep -E -o \'\^\[0-9\\.\]+\')
-> if printf \'%s\\n\' \$1 \$kver \ | sort \--version-sort \--check &\>/dev/null
+> kver=$(uname -r | grep -E -o '^[0-9\.]+')
+> if printf '%s\n' $1 $kver | sort --version-sort --check &>/dev/null
 > then
-> printf \"OK: Linux Kernel \$kver \>= \$1\\n\"; return 0;
+> printf "OK: Linux Kernel $kver >= $1\n"; return 0;
 > else
-> printf \"ERROR: Linux Kernel (\$kver) es DEMASIADO ANTIGUO (\$1 o posterior requerido)\\n\" \"\$kver\";
+> printf "ERROR: Linux Kernel ($kver) es DEMASIADO ANTIGUO ($1 o posterior requerido)\n" "$kver";
 > return 1;
 > fi
 > }
-> \# Coreutils primero porque \--version-sort necesita Coreutils \>= 7.0
-> ver_check Coreutils sort 8.1 \ | \ | bail \"Coreutils demasiado antiguo, detente\"
+> # Coreutils primero porque --version-sort necesita Coreutils >= 7.0
+> ver_check Coreutils sort 8.1 || bail "Coreutils demasiado antiguo, detente"
 > ver_check Bash bash 3.2
 > ver_check Binutils ld 2.13.1
 > ver_check Bison bison 2.7
@@ -1843,7 +1841,7 @@ cual ejecutará una serie de comandos de verificación:
 > ver_check Findutils find 4.2.31
 > ver_check Gawk gawk 4.0.1
 > ver_check GCC gcc 5.2
-> ver_check \"GCC (C++)\" g++ 5.2
+> ver_check "GCC (C++)" g++ 5.2
 > ver_check Grep grep 2.5.1a
 > ver_check Gzip gzip 1.3.12
 > ver_check M4 m4 1.4.10
@@ -1856,32 +1854,32 @@ cual ejecutará una serie de comandos de verificación:
 > ver_check Texinfo texi2any 5.0
 > ver_check Xz xz 5.0.0
 > ver_kernel 5.4
-> if mount \ | grep -q \'devpts on /dev/pts\' && \[ -e /dev/ptmx \]
-> then echo \"OK: El kernel de Linux es compatible con UNIX 98 PTY\";
-> else echo \"ERROR: El kernel de Linux NO es compatible con UNIX 98 PTY\"; fi
+> if mount | grep -q 'devpts on /dev/pts' && [ -e /dev/ptmx ]
+> then echo "OK: El kernel de Linux es compatible con UNIX 98 PTY";
+> else echo "ERROR: El kernel de Linux NO es compatible con UNIX 98 PTY"; fi
 > alias_check()
 > {
-> if \$1 \--version 2\>&1 \ | grep -qi \$2
-> then printf \"OK: %-4s es \$2\\n\" \"\$1\";
-> else printf \"ERROR: %-4s NO es \$2\\n\" \"\$1\"; fi
+> if $1 --version 2>&1 | grep -qi $2
+> then printf "OK: %-4s es $2\n" "$1";
+> else printf "ERROR: %-4s NO es $2\n" "$1"; fi
 > }
-> echo \"Alias:\"
+> echo "Alias:"
 > alias_check awk GNU
 > alias_check yacc Bison
 > alias_check sh Bash
-> echo \"Comprobación del *compilador*:\"
-> if printf \"int main(){}\" \ | g++ -x c++ -
-> then echo \"OK: g++ funciona\";
-> else echo \"ERROR: g++ NO funciona\"; fi
+> echo "Comprobación del *compilador*:"
+> if printf "int main(){}" | g++ -x c++ -
+> then echo "OK: g++ Funciona";
+> else echo "ERROR: g++ NO Funciona"; fi
 > rm -f a.out
-> if \[ \"\$(nproc)\" = \"\" \]; then
-> echo \"ERROR: nproc no está disponible o produce una salida vacía\"
+> if [ "$(nproc)" = "" ]; then
+> echo "ERROR: nproc no está disponible o produce una salida vacía"
 > else
-> echo \"OK: nproc informa que \$(nproc) núcleos lógicos están disponibles\"
+> echo "OK: nproc informa que $(nproc) núcleos lógicos están disponibles"
 > fi
-> **EOF**
+> EOF
 > 
-> $ **bash version-check.sh**
+> $ bash version-check.sh
 > ```
 
 ---
