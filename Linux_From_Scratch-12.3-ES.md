@@ -2158,7 +2158,6 @@ Otros sistemas de archivos, como FAT32, NTFS, JFS y XFS, son útiles para
 fines especializados. Puede encontrar más información sobre estos
 sistemas de archivos y muchos otros en:
 
-*
 *[https://en.wikipedia.org/wiki/Comparison_of_file_systems](https://en.wikipedia.org/wiki/Comparison_of_file_systems).
 
 LFS asume que el sistema de archivos raíz (/) es de tipo ext4. Para
