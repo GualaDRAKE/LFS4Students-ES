@@ -161,11 +161,10 @@ de 32 bits, es mínima. Por ejemplo, en una compilación de prueba de
 LFS-9.1 en un sistema con CPU Core i7-4790 y 4 núcleos, se midieron las
 siguientes estadísticas:
 
----------------   -----------------------  -----------------------
-  Arquitectura     Tiempo de compilación    Tamaño de compilación
-  32 bits           239,9 minutos            3,6 GB
-  64 bits           233,2 minutos            4,4 GB
----------------   -----------------------  -----------------------
+| Arquitectura | Tiempo de compilación | Tamaño de compilación |
+|--------------|-----------------------|-----------------------|
+| 32 bits      | 239,9 minutos         | 3,6 GB                |
+| 64 bits      | 233,2 minutos         | 4,4 GB                |
 
 Como puede observar, en el mismo hardware, la compilación de 64 bits es
 solo un 3 % más rápida (y un 22 % más grande) que la de 32 bits. Si
