@@ -1799,7 +1799,8 @@ cual ejecutará una serie de comandos de verificación:
 > cat > version-check.sh << "EOF"
 > #!/bin/bash
 > # Un script para listar los números de versión de herramientas de desarrollo críticas
-> # Si tiene herramientas instaladas en otros directorios, ajuste PATH aquí Y también en ~lfs/.bashrc (sección 4.4)
+> # Si tiene herramientas instaladas en otros directorios, ajuste PATH aquí
+> # Y también en ~lfs/.bashrc (sección 4.4)
 > LC_ALL=C
 > PATH=/usr/bin:/bin
 > bail() { echo "FATAL: $1"; exit 1; }
