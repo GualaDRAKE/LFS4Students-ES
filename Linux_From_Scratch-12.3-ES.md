@@ -1,4 +1,4 @@
-|           Linux From Scratch           |
+           **Linux From Scratch**           
 
 Versión 12.3
 
