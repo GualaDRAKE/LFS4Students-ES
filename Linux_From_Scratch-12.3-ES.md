@@ -204,8 +204,9 @@ educativo de proporcionar las instrucciones mínimas necesarias para un
 sistema Linux básico. Algunos editores de LFS/BLFS mantienen una
 bifurcación multibiblioteca de LFS, accesible en Su *Version
 r12.3-943-multilib*.
-Pero ese es un tema avanzado
-(<https://www.linuxfromscratch.org/~thomas/multilib/index.html>).
+
+Pero ese es un tema avanzado.
+<https://www.linuxfromscratch.org/~thomas/multilib/index.html>
 
 ## Prerrequisitos
 
