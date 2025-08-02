@@ -760,9 +760,9 @@ Para facilitar la comprensión, se utilizan algunas convenciones
 tipográficas a lo largo de este libro. Esta sección contiene algunos
 ejemplos del formato tipográfico presente en Linux From Scratch.
 
-  ----------------------------
+  |----------------------------|
   ./configure \--prefix=/usr
-  ----------------------------
+  |----------------------------|
 
 Este formato de texto está diseñado para escribirse exactamente como se
 ve, a menos que se indique lo contrario en el texto circundante. También
