@@ -954,7 +954,7 @@ distribución para incluir estas herramientas.
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
 
-El [capítulo 2](#capitulo-2---preparación-del-sistema-host) de este libro describe
+El [capítulo 2](#capitulo-2---preparacion-del-sistema-host) de este libro describe
 cómo crear una nueva partición y un sistema de archivos nativos de Linux, donde
 se compilará e instalará el nuevo sistema LFS.
 
