@@ -298,7 +298,7 @@ encontrar en BLFS.
 |LSB Desktop:|Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig,Gdk-pixbuf, Glib2,<br> GLU, Icon-naming-utils, Libjpeg-t urbo, Libxml2, Mesa, Pango, Xdg-utils, Xorg|
 |LSB Languages:|Libxml2, Libxslt|
 |LSB Imaging:|CUPS, Cups-filters, Ghostscript, SANE|
-||LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|GTK+3|
+|LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|GTK+3|
 
 ### Componentes no proporcionados o proporcionados opcionalmente por LFS o BLFS necesarios para cumplir con los requisitos Requisitos de LSB
 
