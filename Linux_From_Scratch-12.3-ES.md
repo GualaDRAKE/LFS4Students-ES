@@ -304,7 +304,7 @@ encontrar en BLFS.
 
 |LSB Core:|install_initd, libcrypt.so.1 (puede proporcionarse con instrucciones opcionales<br> para el paquete LFS Libxcrypt), libncurses.so.5 (puede proporcionarse con<br> instrucciones opcionales para el paquete LFS Ncurses), libncursesw.so.5<br> (pero libncursesw.so.6 lo proporciona el paquete LFS Ncurses)|
 |:------------:|:----------------------------------------------------------:|
-|LSB Desktop:|libgdk-x11-2.0.so (pero libgdk-3.so lo proporciona el paquete BLFS GTK+-3),<br> libgtk-x11-2.0.so (pero libgtk- 3.so y libgtk-4.so lo proporcionan<br> los paquetes BLFS GTK+-3 y GTK-4), libpng12.so (pero libpng16.so lo proporciona<br> el paquete BLFS Libpng). libQt\*.so.4 (pero libQt6\*.so.6 lo proporciona el paquete Qt6 de BLFS),<br> libtiff.so.4 (pero libtiff.so.6 lo proporciona el paquete Libtiff de BLFS)|
+|LSB Desktop:|libgdk-x11-2.0.so (pero libgdk-3.so lo proporciona el paquete BLFS GTK+-3),<br> libgtk-x11-2.0.so (pero libgtk- 3.so y libgtk-4.so lo proporcionan<br> los paquetes BLFS GTK+-3 y GTK-4), libpng12.so (pero libpng16.so lo proporciona<br> el paquete BLFS Libpng). libQt\*.so.4 (pero libQt6\*.so.6 lo proporciona<br> el paquete Qt6 de BLFS), libtiff.so.4 (pero libtiff.so.6 lo proporciona el paquete Libtiff de BLFS)|
 |Lenguajes LSB:|/usr/bin/python (LSB requiere Python 2, pero LFS y BLFS solo ofrecen Python 3)|
 |Imágenes LSB:|Ninguna|
 |LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|libpng15.so (pero libpng16.so lo proporciona el paquete Libpng de BLFS)|
