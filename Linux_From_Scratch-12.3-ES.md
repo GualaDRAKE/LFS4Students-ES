@@ -954,29 +954,29 @@ distribución para incluir estas herramientas.
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
 
-El [capítulo 2](#capitulo-2) de este libro describe
+El [capítulo 2](#capitulo-2) Preparación del Sistema Host de este libro describe
 cómo crear una nueva partición y un sistema de archivos nativos de Linux, donde
 se compilará e instalará el nuevo sistema LFS.
 
-El [capítulo 3](#capitulo-3---paquetes-y-parches) explica qué paquetes y parches deben descargarse para compilar un
-sistema LFS y cómo almacenarlos en el nuevo sistema de archivos.
+El [capítulo 3](#capitulo-3) Paquetes y parches explica qué
+paquetes y parches deben descargarse para compilar un sistema LFS y cómo
+almacenarlos en el nuevo sistema de archivos.
 
-El [capítulo 4](#capitulo-4---preparativos-finales) describe la
-configuración de un entorno de trabajo adecuado. Lea atentamente el
-capítulo 4, ya que explica varios aspectos importantes que debe tener en
-cuenta antes de comenzar a trabajar con el capítulo 5 y posteriores.
+El [capítulo 4](#capitulo-4) Preparativos Finales describe la configuración de un entorno
+de trabajo adecuado. Lea atentamente el capítulo 4, ya que explica varios aspectos
+importantes que debe tener en cuenta antes de comenzar a trabajar con el capítulo 5 y posteriores.
 
-El [capítulo 5](#capitulo-5---compilación-de-una-cadena-de-herramientas-cruzadas)
-explica la instalación de la cadena de herramientas inicial (binutils, gcc y glibc) mediante
-técnicas de compilación cruzada para aislar las nuevas herramientas del sistema host.
+El [capítulo 5](#capitulo-5) Compilación de una cadena de herramientas cruzadas explica la
+instalación de la cadena de herramientas inicial (binutils, gcc y glibc) mediante técnicas
+de compilación cruzada para aislar las nuevas herramientas del sistema host.
 
-El [capítulo 6](#capitulo-6---herramientas-temporales-para-compilación-cruzada) muestra cómo
+El [capítulo 6](#capitulo-6) Herramientas temporales para compilación cruzada muestra cómo
 realizar la compilación cruzada de utilidades básicas utilizando la cadena de herramientas
 cruzada recién compilada.
 
-El [capítulo 7](#capitulo-7---entrada-al-entorno-chroot-y-creación-de-herramientas-temporales-adicionales)
-se centra en un entorno \"chroot\", donde utilizamos las nuevas herramientas para compilar el resto de
-las herramientas necesarias para crear el sistema LFS.
+El [capítulo 7](#capitulo-7) Entrada al entorno chroot y creación de herramientas temporales
+adicionales se centra en un entorno \"chroot\", donde utilizamos las nuevas herramientas para
+compilar el resto de las herramientas necesarias para crear el sistema LFS.
 
 Este esfuerzo por aislar el nuevo sistema de la distribución host puede
 parecer excesivo. En las [Notas técnicas de la cadena de compilación o
@@ -2357,7 +2357,7 @@ Reemplace \<zzz\> con el nombre de la partición de intercambio.
 Ahora que la nueva partición LFS está lista para su uso, es hora de
 descargar los paquetes.
 
-## Capítulo 3. Paquetes y parches
+## Capítulo 3. Paquetes y parches <a name="capitulo-3"></a>
 
 ## 3.1. Introducción
 
@@ -3321,7 +3321,7 @@ defecto. Puede consultar la base de datos de parches en
 *https://www.linuxfromscratch.org/patches/downloads/* y adquirir parches
 adicionales que se ajusten a las necesidades de su sistema.
 
-## Capítulo 4. Preparativos Finales
+## Capítulo 4. Preparativos Finales <a name="capitulo-4"></a>
 
 ## 4.1. Introducción
 
@@ -3339,14 +3339,12 @@ conjuntos de pruebas de paquetes.
 En esta sección, comenzamos a poblar el sistema de archivos LFS con los
 componentes que conformarán el sistema Linux final.
 
-El primer paso es crear una jerarquía de directorios limitada para que
-los programas compilados en el [Capítulo 6
-](#Capítulo 6. Herramientas temporales para compilación cruzada|outline)(así
-como glibc y libstdc++ en el [Capítulo
-5](#Capítulo 5. Compilación de una cadena de herramientas cruzadas|outline))
-puedan instalarse en su ubicación final. Hacemos esto para que esos
-programas temporales se sobrescriban al compilar las versiones finales
-en el Capítulo 8.
+El primer paso es crear una jerarquía de directorios limitada para quelos programas
+compilados en el [Capítulo 6](#capitulo-6) Herramientas temporales para compilación
+cruzada|outline)(así como glibc y libstdc++ en el [Capítulo 5](#capitulo-5)) Compilación
+de una cadena de herramientas cruzadas|outline puedan instalarse en su ubicación final.
+Hacemos esto para que esos programas temporales se sobrescriban al compilar las versiones
+finales en el Capítulo 8.
 
 Cree la distribución de directorios necesaria ejecutando los siguientes
 comandos como root:
@@ -4237,7 +4235,7 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > indique lo contrario.
 > +----------------------------------------------------------------------+
 
-## Capítulo 5. Compilación de una cadena de herramientas cruzadas
+## Capítulo 5. Compilación de una cadena de herramientas cruzadas <a name="capitulo-5"></a>
 
 ## 5.1. Introducción
 
@@ -4949,7 +4947,7 @@ compilación cruzada:
 Los detalles de este paquete se encuentran en la Sección 8.29.2,
 "Contenido de GCC".
 
-## Capítulo 6. Herramientas temporales para compilación cruzada
+## Capítulo 6. Herramientas temporales para compilación cruzada <a name="capitulo-6"></a>
 
 ## 6.1. Introducción
 
@@ -5910,7 +5908,7 @@ compilador de C instalar:
 Los detalles sobre este paquete se encuentran en la Sección 8.29.2,
 "Contenido de GCC".
 
-## Capítulo 7. Entrada al entorno chroot y creación de herramientas temporales adicionales
+## Capítulo 7. Entrada al entorno chroot y creación de herramientas temporales adicionales <a name="capitulo-7"></a>
 
 ## 7.1. Introducción
 
