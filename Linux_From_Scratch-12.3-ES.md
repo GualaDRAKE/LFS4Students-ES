@@ -202,8 +202,8 @@ veces: una para un sistema de 32 bits y otra para uno de 64 bits. Esto
 no se admite directamente en LFS porque interferiría con el objetivo
 educativo de proporcionar las instrucciones mínimas necesarias para un
 sistema Linux básico. Algunos editores de LFS/BLFS mantienen una
-bifurcación multibiblioteca de LFS, accesible en [Su *Version
-r12.3-943-multilib*](https://www.linuxfromscratch.org/~thomas/multilib/index.html).
+bifurcación multibiblioteca de LFS, accesible en Su *Version
+r12.3-943-multilib*.
 Pero ese es un tema avanzado
 (<https://www.linuxfromscratch.org/~thomas/multilib/index.html>).
 
@@ -226,19 +226,19 @@ LFS).
 
 Antes de crear un sistema LFS, le recomendamos leer estos artículos:
 
-• [Manual de desarrollo de
-software](https://tldp.org/HOWTO/Software-Building-HOWTO.html)
+• Manual de desarrollo de
+software
 
-<https://tldp.org/HOWTO/Software-Building-HOWTO.html>
+   <https://tldp.org/HOWTO/Software-Building-HOWTO.html>
 
 Esta es una guía completa para crear e instalar paquetes de software
 genéricos de Unix en Linux. Aunque se escribió hace tiempo, ofrece un
 buen resumen de las técnicas básicas para crear e instalar software.
 
-• [Guía para principiantes sobre la instalación desde el código
-fuente](https://moi.vonos.net/linux/beginners-installing-from-source/)
+• Guía para principiantes sobre la instalación desde el código
+fuente
 
-<https://moi.vonos.net/linux/beginners-installing-from-source/>
+   <https://moi.vonos.net/linux/beginners-installing-from-source/>
 
 Esta guía proporciona un buen resumen de las habilidades y técnicas
 básicas necesarias para crear software a partir del código fuente.
@@ -280,10 +280,10 @@ encontrar en BLFS.
 
 ### Paquetes proporcionados por LFS necesarios para cumplir con los requisitos de LSB:
 
-LSB Core: Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils,
-Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps, Psmisc, Sed,
-Shadow, SysVinit, Tar, Util-linux, Zlib
-
+|LSB Core: | Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, |
+           | Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps, |
+           | Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib        |
+|-----------------------------------------------------------------------|
 LSB Desktop: Ninguno
 
 LSB Languages: Perl
