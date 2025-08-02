@@ -280,7 +280,7 @@ encontrar en BLFS.
 
 ### Paquetes proporcionados por LFS necesarios para cumplir con los requisitos de LSB:
 
-|   LSB Core   || Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps, Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib|
+|   LSB Core   || Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils,<br> Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps,<br> Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib|
 |--------------|------------------------------------------------------------|
 
 |   LSB Core   |                                                            |
