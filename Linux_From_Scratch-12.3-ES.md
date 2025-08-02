@@ -286,10 +286,10 @@ encontrar en BLFS.
 |          | Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps, |
 |          | Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib        |
 
-| Arquitectura | Tiempo de compilación | Tamaño de compilación |
-|--------------|-----------------------|-----------------------|
-| 32 bits      | 239,9 minutos         | 3,6 GB                |
-| 64 bits      | 233,2 minutos         | 4,4 GB                |
+| LSB Core | Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, | 
+|          | Gawk, GCC, Gettext, Glibc, Grep, Gzip, M4, Man-DB, Procps, |
+|          | Psmisc, Sed,Shadow, SysVinit, Tar, Util-linux, Zlib        |
+|----------|------------------------------------------------------------|
 
 LSB Desktop: Ninguno
 
