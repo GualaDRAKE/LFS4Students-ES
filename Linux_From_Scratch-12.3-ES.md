@@ -1,8 +1,10 @@
-**Linux From Scratch**           
+# **Linux From Scratch**           
 
-Versión 12.3
+    Versión 12.3
 
-Publicado el 5 de marzo de 2025
+    Publicado el 5 de marzo de 2025
+
+\--
 
 Creado por Gerard Beekmans
 
