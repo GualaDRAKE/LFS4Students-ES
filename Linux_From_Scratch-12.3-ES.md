@@ -4,7 +4,7 @@
 
     Publicado el 5 de marzo de 2025
 
-\---
+---
 
 Creado por Gerard Beekmans
 
