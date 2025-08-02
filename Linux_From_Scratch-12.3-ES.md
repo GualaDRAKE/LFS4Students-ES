@@ -2159,15 +2159,14 @@ fines especializados. Puede encontrar más información sobre estos
 sistemas de archivos y muchos otros en:
 
 *
-*[*https://en.wikipedia.org/wiki/Comparison_of_file_systems*](https://en.wikipedia.org/wiki/Comparison_of_file_systems).
+*[https://en.wikipedia.org/wiki/Comparison_of_file_systems](https://en.wikipedia.org/wiki/Comparison_of_file_systems).
 
 LFS asume que el sistema de archivos raíz (/) es de tipo ext4. Para
 crear un sistema de archivos ext4 en la partición LFS, ejecute el
 siguiente comando:
 
-  ------------------------------
-  mkfs -v -t ext4 /dev/\<xxx\>
-  ------------------------------
+|**mkfs -v -t ext4 /dev/\<xxx\>**|
+|------------------------------|
 
 Reemplace \<xxx\> con el nombre de la partición LFS.
 
@@ -2175,9 +2174,8 @@ Si utiliza una partición de intercambio existente, no es necesario
 formatearla. Si se creó una nueva partición de intercambio, deberá
 inicializarse con este comando:
 
-  ---------------------
-  mkswap /dev/\<yyy\>
-  ---------------------
+ |**mkswap /dev/\<yyy\>**|
+ |---------------------|
 
 Reemplace \<yyy\> con el nombre de la partición de intercambio.
 
@@ -2192,9 +2190,8 @@ compila LFS en una partición separada, este directorio será el punto de
 montaje de la partición. Seleccione una ubicación de directorio y
 configure la variable con el siguiente comando:
 
-  -----------------------
-  export LFS=/mnt/*lfs*
-  -----------------------
+|**export LFS=/mnt/*lfs/***|
+|-----------------------|
 
 Tener esta variable configurada es beneficioso, ya que comandos como
 **mkdir -v \$LFS/tools **se pueden escribir literalmente. El shell
@@ -2205,8 +2202,8 @@ Ahora configure la máscara de creación de modo de archivo (umask) en 022
 en caso de que la distribución del host use un valor predeterminado
 diferente:
 
-|umask *022*|
-|:---------:|
+|**umask /*022/***|
+|---------|
 
 Configurar la umask en 022 garantiza que los archivos y directorios
 recién creados solo puedan ser escritos por su propietario, pero que
