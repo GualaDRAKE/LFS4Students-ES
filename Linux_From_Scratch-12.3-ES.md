@@ -292,14 +292,15 @@ encontrar en BLFS.
 
 ### Paquetes proporcionados por BLFS necesarios para cumplir con los requisitos de LSB
 
+
+|LSB Core:     |Ninguno                                                    |
 |:------------:|:----------------------------------------------------------:|
-|LSB Core:     |At, Batch (parte de At), archivos de inicio de BLFS Bash,Cpio, Ed,<br> Fcrontab, LSB-Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail (o Postfix o Exim), Time.|
-|LSB Desktop:  |Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig,Gdk-pixbuf, Glib2,<br> GLU, Icon-naming-utils, Libjpeg-t urbo, Libxml2, Mesa, Pango, Xdg-utils, Xorg|
-|LSB Languages:|Libxml2, Libxslt|
-
-LSB Imaging: CUPS, Cups-filters, Ghostscript, SANE.
-
-LSB Gtk3 y LSB Graphics (uso de prueba): GTK+3.
+|LSB Desktop: |Alsa, ATK, Cairo, Desktop-file-utils, Freetype, Fontconfig,Gdk-pixbuf, Glib2,<br> GLU, Icon-naming-utils, Libjpeg-t urbo, Libxml2, Mesa, Pango, Xdg-utils, Xorg                                                      |
+|LSB Languages:   |Libxml2, Libxslt                                         |
+|LSB Gtk3<br> y<br> LSB Graphics<br> (uso de prueba): |Ninguno              |
+|LSB Imaging:  |CUPS, Cups-filters, Ghostscript, SANE                       |                                                  
+|     |.|
+|LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>| GTK+3|
 
 ### Componentes no proporcionados o proporcionados opcionalmente por LFS o BLFS necesarios para cumplir con los requisitos Requisitos de LSB
 
