@@ -206,7 +206,8 @@ bifurcación multibiblioteca de LFS, accesible en Su *Version
 r12.3-943-multilib*.
 
 Pero ese es un tema avanzado.
-<https://www.linuxfromscratch.org/~thomas/multilib/index.html>
+
+   <https://www.linuxfromscratch.org/~thomas/multilib/index.html>
 
 ## Prerrequisitos
 
