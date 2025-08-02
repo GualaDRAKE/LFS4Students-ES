@@ -53,7 +53,7 @@
 
 &nbsp;
  
-### Prefacio
+## Prefacio
 
 ### Prólogo
 
@@ -122,7 +122,18 @@ sistema verdaderamente tuyo.
 
 Gerard Beekmans
 
-<gerard@linuxfromscratch.org>
+<gerard@linuxfromscratch.org>Dubbs
+
+---
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+
 
 ## Audiencia
 
