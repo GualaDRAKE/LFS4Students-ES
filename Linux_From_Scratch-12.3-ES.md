@@ -761,7 +761,7 @@ tipográficas a lo largo de este libro. Esta sección contiene algunos
 ejemplos del formato tipográfico presente en Linux From Scratch.
 
   |----------------------------|
-  ./configure \--prefix=/usr
+  |./configure \--prefix=/usr  |
   |----------------------------|
 
 Este formato de texto está diseñado para escribirse exactamente como se
