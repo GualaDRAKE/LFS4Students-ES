@@ -1,4 +1,4 @@
-    # **Linux From Scratch**           
+   # **Linux From Scratch**           
 
     Versión 12.3
 
@@ -26,9 +26,9 @@ Se pueden extraer instrucciones del libro bajo la Licencia MIT.
 
 Linux® es una marca registrada de Linus Torvalds.
 
-Prefacio
+### Prefacio
 
-Prólogo
+### Prólogo
 
 Mi camino para aprender y comprender mejor Linux comenzó en 1998.
 Acababa de instalar mi primera distribución de Linux y enseguida me
