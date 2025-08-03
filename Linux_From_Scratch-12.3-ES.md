@@ -107,6 +107,7 @@ sistema verdaderamente tuyo.
 
 \--
 Gerard Beekmans
+
 <gerard@linuxfromscratch.org>
 
 ---
