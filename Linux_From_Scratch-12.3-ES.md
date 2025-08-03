@@ -1659,7 +1659,7 @@ el comando ejecutado y todos los mensajes de error asociados.
 Hay un excelente artículo sobre cómo pedir ayuda en internet disponible
 en:
 
-*[*http://catb.org/\~esr/faqs/smart-questions.html*](http://catb.org/~esr/faqs/smart-questions.html)
+   [*http://catb.org/\~esr/faqs/smart-questions.html*](http://catb.org/~esr/faqs/smart-questions.html)
 
 Lea este documento y siga las sugerencias. Esto aumentará las
 probabilidades de obtener la ayuda que necesita.
