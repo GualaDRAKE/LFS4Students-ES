@@ -13278,76 +13278,76 @@ groffer, grog, grolbp, grolj4, gropdf, grops, grotty, hpftodit, indxbib,
 lkbib, lookbib, mmroff, neqn, nroff, pdfmom, pdfroff, pfbtops, pic,
 pic2graph, post-grohtml, preconv, pre-grohtml, refer, roff2dvi,
 roff2html, roff2pdf, roff2ps, roff2text, roff2x, soelim, tbl, tfmtodit y
-troff****
+troff
 
 **Directorios instalados**: /usr/lib/groff y
-/usr/share/doc/groff-1.23.0, /usr/share/groff****
+/usr/share/doc/groff-1.23.0, /usr/share/groff
 
 ### **Descripciones breves**
 
 **addftinfo** Lee un archivo de fuente troff y añade información
 adicional sobre la métrica de la fuente, utilizada por el sistema
-**groff**.****
+**groff**
 
 **afmtodit** Crea un archivo de fuente para usar con **groff** y
-**grops**.****
+**grops**
 
 **chem** Preprocesador de Groff para generar diagramas de estructura
-química.****
+química
 
 **eqn** Compila descripciones de ecuaciones integradas en archivos de
 entrada de troff en comandos que **troff** entiende.****
 
 **eqn2graph** Convierte una ecuación de troff en una imagen
-recortada.****
+recortada
 
 **gdiffmk** Marca las diferencias entre archivos groff/nroff/troff.****
 
 **glilypond** Transforma partituras escritas en el lenguaje lilypond al
-lenguaje groff.****
+lenguaje groff
 
 **gperl** Preprocesador para groff, que permite la inserción de código
-Perl en archivos groff.****
+Perl en archivos groff
 
 **gpinyin** Preprocesador para groff, que permite la inserción de Pinyin
-(chino mandarín escrito con el alfabeto romano) en archivos groff.****
+(chino mandarín escrito con el alfabeto romano) en archivos groff
 
 **grap2graph **Convierte un archivo de programa grap en una imagen de
 mapa de bits recortada (grap es un antiguo lenguaje de programación Unix
-para crear diagramas).****
+para crear diagramas)
 
-**grn** ** **Un preprocesador de **groff** para archivos gremlin.****
+**grn** ** **Un preprocesador de **groff** para archivos gremlin
 
 **grodvi** Un controlador para **groff** que produce archivos de salida
-en formato TeX dvi.****
+en formato TeX dvi
 
 **groff** Una interfaz para el sistema de formato de documentos groff.
 Normalmente, ejecuta el programa **troff** y un postprocesador adecuado
-para el dispositivo seleccionado.****
+para el dispositivo seleccionado
 
 **groffer** Muestra archivos y páginas de manual de **groff** en
-terminales X y tty.****
+terminales X y tty
 
 **grog** Lee archivos y determina cuáles de las opciones de **groff**
 -e, -man, -me, -mm, -ms, -p, -s y -t son necesarias para imprimir
 archivos, e informa del comando **groff**, incluyendo dichas
-opciones.****
+opciones
 
 **grolbp** Es un controlador de **groff** para impresoras Canon CAPSL
-(impresoras láser de las series LBP-4 y LBP-8).****
+(impresoras láser de las series LBP-4 y LBP-8)
 
 **grolj4** Es un controlador para **groff** que produce resultados en
-formato PCL5, compatible con impresoras HP LaserJet 4.****
+formato PCL5, compatible con impresoras HP LaserJet 4
 
-**gropdf** Traduce los resultados de GNU **troff** a PDF.****
+**gropdf** Traduce los resultados de GNU **troff** a PDF
 
-**grops** Traduce los resultados de GNU **troff** a PostScript.****
+**grops** Traduce los resultados de GNU **troff** a PostScript
 
 **grotty** Traduce los resultados de GNU **troff** a un formato
-compatible con dispositivos tipo máquina de escribir.****
+compatible con dispositivos tipo máquina de escribir
 
 **hpftodit** Crea un archivo de fuentes para usar con **groff -Tlj4** a
-partir de un archivo de métricas de fuentes con etiquetas HP.****
+partir de un archivo de métricas de fuentes con etiquetas HP
 
 **indxbib** Crea un índice invertido para las bases de datos
 bibliográficas con un archivo específico para usar con **refer**,
@@ -13355,163 +13355,153 @@ bibliográficas con un archivo específico para usar con **refer**,
 
 **lkbib** Busca en bases de datos bibliográficas referencias que
 contengan claves específicas e informa de las referencias
-encontradas.****
+encontradas
 
 **lookbib** Imprime un mensaje en el error estándar (a menos que la
 entrada estándar no sea una terminal), lee una línea con un conjunto de
 palabras clave de la entrada estándar, busca en las bases de datos
 bibliográficas de un archivo especificado referencias que contengan esas
 palabras clave, imprime las referencias encontradas en la salida
-estándar y repite este proceso hasta el final de la entrada.****
+estándar y repite este proceso hasta el final de la entrada
 
 **mmroff** Un preprocesador simple para **groff**
 
 **neqn** Formatea ecuaciones para la salida ASCII (Código Estándar
-Americano para el Intercambio de Información).****
+Americano para el Intercambio de Información)
 
-**nroff** Un script que emula el comando **nroff** usando **groff**.****
+**nroff** Un script que emula el comando **nroff** usando **groff**
 
 **pdfmom** Es un contenedor de groff que facilita la producción de
-documentos PDF a partir de archivos formateados con las macros mom.****
+documentos PDF a partir de archivos formateados con las macros mom
 
-**pdfroff** Crea documentos PDF con groff.****
+**pdfroff** Crea documentos PDF con groff
 
-**pfbtops** Traduce una fuente PostScript en formato .pfb a ASCII.****
+**pfbtops** Traduce una fuente PostScript en formato .pfb a ASCII
 
 **pic** Compila descripciones de imágenes incrustadas en archivos de
-entrada de troff o TeX en comandos que TeX o **troff** entiende.****
+entrada de troff o TeX en comandos que TeX o **troff** entiende
 
-**pic2graph** Convierte un diagrama PIC en una imagen recortada.****
+**pic2graph** Convierte un diagrama PIC en una imagen recortada
 
-**post-grohtml** Traduce la salida de GNU **troff** a HTML.****
+**post-grohtml** Traduce la salida de GNU **troff** a HTML
 
 **preconv** Convierte la codificación de los archivos de entrada a un
-formato que GNU **troff** entiende.****
+formato que GNU **troff** entiende
 
-**pre-grohtml** Traduce la salida de GNU **troff** a HTML.****
+**pre-grohtml** Traduce la salida de GNU **troff** a HTML
 
 **refer** Copia el contenido de un archivo a la salida estándar, excepto
 que las líneas entre .\[ y .\] se interpretan como citas, y las líneas
 entre .R1 y .R2 se interpretan como comandos que indican cómo deben
-procesarse las citas.****
+procesarse las citas
 
-**roff2dvi** Transforma archivos roff al formato DVI****
+**roff2dvi** Transforma archivos roff al formato DVI
 
-**roff2html** Transforma archivos roff al formato HTML****
+**roff2html** Transforma archivos roff al formato HTML
 
-**roff2pdf** Transforma archivos roff a PDF****
+**roff2pdf** Transforma archivos roff a PDF
 
-**roff2ps** Transforma archivos roff a archivos ps****
+**roff2ps** Transforma archivos roff a archivos ps
 
-**roff2text** Transforma archivos roff a archivos de texto****
+**roff2text** Transforma archivos roff a archivos de texto
 
-**roff2x** Transforma archivos roff a otros formatos****
+**roff2x** Transforma archivos roff a otros formatos
 
 **soelim** Lee archivos y reemplaza líneas del formato .so por el
-contenido del archivo mencionado****
+contenido del archivo mencionado
 
 **tbl** Compila descripciones de tablas incrustadas en archivos de
-entrada troff en comandos que **troff** entiende****
+entrada troff en comandos que **troff** entiende
 
 **tfmtodit** Crea un archivo de fuentes para usar con **groff -Tdvi**
 
 **troff** Es altamente compatible con **troff** de Unix; normalmente se
 debe invocar con el comando **groff**, que también ejecutará
 preprocesadores y posprocesadores en el orden y con las opciones
-adecuadas****
+adecuadas
 
-## **8.64. GRUB-2.12**
+## 8.64. GRUB-2.12
 
-****El paquete GRUB contiene el cargador de arranque unificado
-GRand.****
+El paquete GRUB contiene el cargador de arranque unificado
+GRand.
 
-****Tiempo aproximado de compilación: ****0.3 SBU****
+Tiempo aproximado de compilación: 0.3 SBU
 
-****Espacio en disco necesario: ****166 MB****
+Espacio en disco necesario: 166 MB
 
-### **8.64.1. Instalación de GRUB**
+### 8.64.1. Instalación de GRUB
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
-> ****Si su sistema es compatible con UEFI y desea arrancar LFS con
+> 
+> Si su sistema es compatible con UEFI y desea arrancar LFS con
 > UEFI, debe instalar GRUB con soporte UEFI (y sus dependencias)
 > siguiendo las instrucciones de la *****página de BLFS*****. Puede
 > omitir este paquete o instalarlo junto con el paquete GRUB para UEFI
 > de BLFS sin conflicto (la página de BLFS proporciona instrucciones
-> para ambos casos).****
-> +----------------------------------------------------------------------+
-
-> +----------------------------------------------------------------------+
-> ---
+> para ambos casos).
+> 
 > **Advertencia**
-> ****Desactive cualquier variable de entorno que pueda afectar la
-> compilación:****
+> 
+> Desactive cualquier variable de entorno que pueda afectar la
+> compilación:
 > +----------------------------------------------------------------------+
-> **unset {C,CPP,CXX,LD}FLAGS**
+> unset {C,CPP,CXX,LD}FLAGS
 > +----------------------------------------------------------------------+
-> ****No intente ajustar este *****paquete***** con indicadores de
+> No intente ajustar este *****paquete***** con indicadores de
 > compilación personalizados. Este paquete es un cargador de arranque.
 > Las operaciones de bajo nivel del código fuente podrían verse
-> afectadas por una optimización excesiva.****
-> +----------------------------------------------------------------------+
+> afectadas por una optimización excesiva.
 
-****Agregar un archivo que falta en el archivo tarball de la
-versión:****
+Agregar un archivo que falta en el archivo tarball de la
+versión:
 
   -------------------------------------------------------------------------
-  **echo **depends *****bli***** part_gpt \>** grub-core/extra_deps.lst**
+  echo depends bli part_gpt > grub-core/extra_deps.lst
   -------------------------------------------------------------------------
 
-****Preparar GRUB para la compilación:****
+Preparar GRUB para la compilación:
 
-> +---------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--***sysconfdir***=/etc \\**
-> ** \--disable-efiemu \\**
-> ** \--disable-werror**
-> +---------------------------------------------+
+> ./configure --prefix=/usr \
+> --sysconfdir=/etc \
+> --disable-efiemu \
+> --disable-werror
 
-**Significado de las nuevas opciones de configuración:**
+**Significado de las nuevas opciones de configuración**:
 
-***** \--disable-werror*****
+\--disable-werror
 
-**** Esto permite que la compilación se complete con las advertencias
-introducidas por las versiones más recientes de Flex.****
+Esto permite que la compilación se complete con las advertencias
+introducidas por las versiones más recientes de Flex.
 
-***** \--disable-efiemu*****
+\--disable-efiemu
 
-**** Esta opción minimiza la compilación al deshabilitar una función y
-eliminar algunos programas de prueba innecesarios para LFS.****
+Esta opción minimiza la compilación al deshabilitar una función y
+eliminar algunos programas de prueba innecesarios para LFS.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****No se recomienda el conjunto de pruebas para estos paquetes. La
+No se recomienda el conjunto de pruebas para estos paquetes. La
 mayoría de las pruebas dependen de paquetes que no están disponibles en
 el entorno LFS limitado. Para ejecutar las pruebas de todos modos,
-ejecute **make check**.****
+ejecute **make check**.
 
-****Instale el paquete y mueva el archivo de soporte de compleción de
+Instale el paquete y mueva el archivo de soporte de compleción de
 Bash a la ubicación recomendada por los responsables de la compleción de
-Bash:****
+Bash:
 
-> +----------------------------------------------------------------------+
-> ---
-> **make install**
-> **mv -v /etc/***bash_completion.d***/grub
-> /usr/share/bash-completion/completions**
-> +----------------------------------------------------------------------+
+> make install
+> mv -v /etc/bash_completion.d/grub
+> /usr/share/bash-completion/completions
 
-****Cómo hacer que su sistema LFS sea arrancable con GRUB se explicará
+Cómo hacer que su sistema LFS sea arrancable con GRUB se explicará
 en la Sección 10.4, "Uso de GRUB para configurar el proceso de
-arranque".****
+arranque".
 
-### **8.64.2. Contenido de GRUB**
+### 8.64.2. Contenido de GRUB
 
 **Programas instalados**: grub-bios-setup, grub-editenv, grub-file,
 grub-fstest, grub-glue-efi, grub- install, grub-kbdcomp, grub-macbless,
@@ -13519,367 +13509,361 @@ grub-menulst2cfg, grub-mkconfig, grub-mkimage, grub-mklayout,
 grub-mknetdir, grub-mkpasswd-pbkdf2, grub-mkrelpath, grub-mkrescue,
 grub-mkstandalone, grub-ofpathname, grub-probe, grub-reboot,
 grub-render-label, grub-script-check, grub-set- default,
-grub-sparc64-setup, and grub-syslinux2cfg****
+grub-sparc64-setup, and grub-syslinux2cfg
 
 **Directorios instalados**: /usr/lib/grub, /etc/grub.d, /usr/share/grub,
-and /boot/grub (when grub- install is first run)****
+and /boot/grub (when grub- install is first run)
 
-### **Descripciones breves**
+### Descripciones breves
 
-**grub-bios-setup** Es un programa auxiliar para **grub-install**.****
+**grub-bios-setup** Es un programa auxiliar para **grub-install**.
 
 **grub-editenv** Es una herramienta para editar el bloque de
-entorno.****
+entorno.
 
-**grub-file** Comprueba si el archivo dado es del tipo especificado.****
+**grub-file** Comprueba si el archivo dado es del tipo especificado.
 
 **grub-fstest** Es una herramienta para depurar el controlador del
-sistema de archivos.****
+sistema de archivos.
 
 **grub-glue-efi** Une binarios de 32 y 64 bits en un solo archivo (para
-equipos Apple).****
+equipos Apple).
 
-**grub-install** Instala GRUB en la unidad.****
+**grub-install** Instala GRUB en la unidad.
 
 **grub-kbdcomp** Es un script que convierte una distribución xkb en una
-reconocida por GRUB.****
+reconocida por GRUB.
 
 **grub-macbless** Es el bless de estilo Mac para sistemas de archivos
 HFS o HFS+ (**bless** es exclusivo de los equipos Apple; permite que un
-dispositivo sea arrancable).****
+dispositivo sea arrancable).
 
 **grub-menulst2cfg** Convierte un GRUB Legacy menu.lst en un grub.cfg
-para su uso con GRUB 2.****
+para su uso con GRUB 2.
 
-**grub-mkconfig** Genera un archivo grub.cfg.****
+**grub-mkconfig** Genera un archivo grub.cfg.
 
-**grub-mkimage** Crea una imagen de arranque de GRUB.****
+**grub-mkimage** Crea una imagen de arranque de GRUB.
 
 **grub-mklayout** Genera un archivo de distribución de teclado de
-GRUB.****
+GRUB.
 
-**grub-mknetdir** Prepara un directorio de arranque de red de GRUB.****
+**grub-mknetdir** Prepara un directorio de arranque de red de GRUB.
 
 **grub-mkpasswd-pbkdf2** Genera una contraseña PBKDF2 cifrada para su
-uso en el menú de arranque.****
+uso en el menú de arranque.
 
 **grub-mkrelpath** Convierte una ruta del sistema en una ruta relativa a
-su directorio raíz.****
+su directorio raíz.
 
 **grub-mkrescue** Crea una imagen de arranque de GRUB adecuada para un
-disquete, CDROM/DVD o una unidad USB.****
+disquete, CDROM/DVD o una unidad USB.
 
-**grub-mkstandalone** Genera una imagen independiente.****
+**grub-mkstandalone** Genera una imagen independiente.
 
 **grub-ofpathname** Es un programa auxiliar que imprime la ruta de un
-dispositivo GRUB.****
+dispositivo GRUB.
 
 **grub-probe** Sondea la información del dispositivo para una ruta o
-dispositivo determinado.****
+dispositivo determinado.
 
 **grub-reboot** Establece la entrada de arranque predeterminada de GRUB
-solo para el siguiente arranque.****
+solo para el siguiente arranque.
 
 **grub-render-label** Representa el archivo .disk_label de Apple para
-Macs.****
+Macs.
 
 **grub-script-check** Comprueba el script de configuración de GRUB en
-busca de errores de sintaxis.****
+busca de errores de sintaxis.
 
 **grub-set-default** Establece la entrada de arranque predeterminada de
-GRUB.****
+GRUB.
 
 **grub-sparc64-setup** Es un programa auxiliar para grub-setup.****
 
 **grub-syslinux2cfg** Transforma un archivo de configuración de syslinux
-al formato grub.cfg.****
+al formato grub.cfg.
 
-## **8.65. Gzip-1.13**
+## 8.65. Gzip-1.13
 
-****El paquete Gzip contiene programas para comprimir y descomprimir
-archivos.****
+El paquete Gzip contiene programas para comprimir y descomprimir
+archivos.
 
-****Tiempo aproximado de compilación: ****0.3 SBU****
+Tiempo aproximado de compilación: 0.3 SBU
 
-****Espacio en disco requerido: ****21 MB****
+Espacio en disco requerido: 21 MB
 
-### **8.65.1. Instalación de Gzip**
+### 8.65.1. Instalación de Gzip
 
-****Preparar Gzip para la compilación:****
+Preparar Gzip para la compilación:
 
   -------------------------------------
-  **./configure --prefix=/***usr*****
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.65.2. Contenido de Gzip**
+### 8.65.2. Contenido de Gzip
 
 **Programas instalados**: gunzip, gzexe, gzip, uncompress (enlace duro
 con gunzip), zcat, zcmp, zdiff, zegrep, zfgrep, zforce, zgrep, zless,
-zmore y znew****
+zmore y znew
 
-### **Descripciones breves**
+### Descripciones breves
 
-**gunzip** Descomprime archivos comprimidos****
+**gunzip** Descomprime archivos comprimidos
 
-**gzexe** Crea archivos ejecutables autodescomprimibles****
+**gzexe** Crea archivos ejecutables autodescomprimibles
 
 **gzip** Comprime los archivos proporcionados mediante codificación
-Lempel-Ziv (LZ77)****
+Lempel-Ziv (LZ77
 
-**uncompress** Descomprime archivos comprimidos****
+**uncompress** Descomprime archivos comprimidos
 
-**zcat** Descomprime los archivos comprimidos a la salida estándar****
+**zcat** Descomprime los archivos comprimidos a la salida estándar
 
-**zcmp** Ejecuta **cmp** en archivos comprimidos****
+**zcmp** Ejecuta **cmp** en archivos comprimidos
 
-**zdiff** Ejecuta **diff** en archivos comprimidos****
+**zdiff** Ejecuta **diff** en archivos comprimidos
 
-**zegrep** Ejecuta **egrep** en archivos comprimidos****
+**zegrep** Ejecuta **egrep** en archivos comprimidos
 
-**zfgrep** Ejecuta **fgrep** en archivos comprimidos****
+**zfgrep** Ejecuta **fgrep** en archivos comprimidos
 
-**zforce** Fuerza la extensión *****.gz***** en todos los archivos
+**zforce** Fuerza la extensión **.gz** en todos los archivos
 comprimidos con **gzip**, para que gzip no los vuelva a comprimir; esto
 puede ser útil cuando los nombres de archivo se truncaron durante una
-transferencia.****
+transferencia.
 
-**zgrep** Ejecuta **grep** en archivos comprimidos con gzip.****
+**zgrep** Ejecuta **grep** en archivos comprimidos con gzip.
 
-**zless** Se ejecuta **less** en archivos comprimidos con gzip.****
+**zless** Se ejecuta **less** en archivos comprimidos con gzip.
 
-**zmore** Se ejecuta ****more**** en archivos comprimidos con gzip.****
+**zmore** Se ejecuta **more** en archivos comprimidos con gzip.
 
 **znew** **Recomprime** archivos del formato comprimido al formato
-**gzip** (de .****z**** a .gz).****
+**gzip** (de .****z**** a .gz).
 
-## **8.66. IPRoute2-6.13.0**
+## 8.66. IPRoute2-6.13.0
 
-****El paquete IPRoute2 contiene programas para redes básicas y
-avanzadas basadas en IPV4.****
+El paquete IPRoute2 contiene programas para redes básicas y
+avanzadas basadas en IPV4.
 
-****Tiempo de compilación aproximado: ****0.1 SBU****
+Tiempo de compilación aproximado: 0.1 SBU
 
-****Espacio en disco requerido: ****17 MB****
+Espacio en disco requerido: 17 MB
 
-### **8.66.1. Instalación de IPRoute2**
+### 8.66.1. Instalación de IPRoute2
 
-****El programa arpd incluido en este paquete no se compilará, ya que
+El programa arpd incluido en este paquete no se compilará, ya que
 depende de la base de datos Berkeley, que no está instalada en LFS. Sin
 embargo, se instalarán un directorio y una página de manual para arpd.
-Para evitarlo, ejecute los comandos que se muestran a continuación:****
+Para evitarlo, ejecute los comandos que se muestran a continuación:
 
-> +-----------------------------+
-> ---
-> **sed -i /ARPD/d Makefile**
-> **rm -fv man/man8/arpd.8**
-> +-----------------------------+
+> sed -i /ARPD/d Makefile
+> rm -fv man/man8/arpd.8
 
-****Compilar el paquete:****
+
+Compilar el paquete:
 
   -----------------------------------------
-  **make ***NETNS_RUN_DIR***=/run/netns**
+  make NETNS_RUN_DIR=/run/netns
   -----------------------------------------
 
-****Este paquete no cuenta con un conjunto de pruebas funcional.
-Instalar el paquete:****
+Este paquete no cuenta con un conjunto de pruebas funcional.
+Instalar el paquete:
 
   ------------------------------------
-  **make SBINDIR=/usr/sbin install**
+  make SBINDIR=/usr/sbin install
   ------------------------------------
 
-****Si lo desea, instale la documentación:****
+Si lo desea, instale la documentación:
 
   ------------------------------------------------------------------------------
-  **install -vDm644 ***COPYING*** README\* -t /usr/share/doc/iproute2-6.13.0**
+  install -vDm644 COPYING README\* -t /usr/share/doc/iproute2-6.13.0
   ------------------------------------------------------------------------------
 
-### **8.66.2. Contenido de IPRoute2**
+### 8.66.2. Contenido de IPRoute2
 
 **Programas instalados**: bridge, ctstat (enlace a lnstat), genl,
 ifstat, ip, lnstat, nstat, routel, rtacct, rtmon, rtpr, rtstat (enlace a
 lnstat), ss y tc****
 
 **Directorios instalados**: /etc/iproute2, /usr/lib/tc y
-/usr/share/doc/iproute2-6.13.0****
+/usr/share/doc/iproute2-6.13.0
 
-### **Descripciones breves**
+### Descripciones breves
 
-****b****ridge**** Configura puentes de red****
+**bridge** Configura puentes de red
 
-**ctstat** Utilidad de estado de conexión****
+**ctstat** Utilidad de estado de conexión
 
-**genl** Interfaz genérica de la utilidad netlink****
+**genl** Interfaz genérica de la utilidad netlink
 
 **ifstat** Muestra estadísticas de interfaz, incluyendo el número de
-paquetes transmitidos y recibidos, por interfaz****
+paquetes transmitidos y recibidos, por interfaz
 
 **ip** El ejecutable principal. Tiene varias funciones, incluyendo las
-siguientes:****
+siguientes:
 
-**** **ip link *\<device\>*** permite a los usuarios ver el estado de
-los dispositivos y realizar cambios****
+**ip link** \<device\> permite a los usuarios ver el estado de
+los dispositivos y realizar cambios
 
-**** i**p addr** permite a los usuarios ver direcciones y sus
-propiedades, añadir nuevas direcciones y eliminar las antiguas****
+**ip addr** permite a los usuarios ver direcciones y sus
+propiedades, añadir nuevas direcciones y eliminar las antiguas
 
-**** **ip neighbor** permite a los usuarios ver enlaces de vecinos y sus
+**ip neighbor** permite a los usuarios ver enlaces de vecinos y sus
 propiedades, añadir nuevas entradas de vecinos y eliminar las
-antiguas****
+antiguas
 
-**** **ip rule** permite a los usuarios ver las políticas de
-enrutamiento y modificarlas****
+**ip rule** permite a los usuarios ver las políticas de
+enrutamiento y modificarlas
 
-**** **ip route** permite a los usuarios ver la tabla de enrutamiento y
-modificar sus reglas****
+**ip route** permite a los usuarios ver la tabla de enrutamiento y
+modificar sus reglas
 
-**** **ip tunnel** permite a los usuarios ver los túneles IP y sus
-propiedades y modificarlas****
+**ip tunnel** permite a los usuarios ver los túneles IP y sus
+propiedades y modificarlas
 
-**** **ip maddr** permite a los usuarios ver las direcciones multicast y
-sus propiedades y modificarlas****
+**ip maddr** permite a los usuarios ver las direcciones multicast y
+sus propiedades y modificarlas
 
-**** **ip mroute** permite a los usuarios configurar, cambiar o eliminar
-el enrutamiento multicast****
+**ip mroute** permite a los usuarios configurar, cambiar o eliminar
+el enrutamiento multicast
 
-**** **ip monitor** permite a los usuarios supervisar continuamente el
-estado de dispositivos, direcciones y rutas****
+**ip monitor** permite a los usuarios supervisar continuamente el
+estado de dispositivos, direcciones y rutas
 
 **lnstat** Proporciona estadísticas de red de Linux; es un reemplazo
-generalizado y con más funciones del antiguo programa **rtstat**.****
+generalizado y con más funciones del antiguo programa **rtstat**
 
-**nstat** Muestra estadísticas de red.****
+**nstat** Muestra estadísticas de red
 
 **routel** Un componente de **ip route** para listar las tablas de
-enrutamiento.****
+enrutamiento
 
-**rtacct** Muestra el contenido de *****/proc/net/rt_acct*****.****
+**rtacct** Muestra el contenido de **/proc/net/rt_acct**
 
-**rtmon** Utilidad de monitorización de rutas.****
+**rtmon** Utilidad de monitorización de rutas
 
-**rtpr** Convierte la salida de **ip -o** a un formato legible.****
+**rtpr** Convierte la salida de **ip -o** a un formato legible
 
-**rtstat** Utilidad de estado de ruta.****
+**rtstat** Utilidad de estado de ruta
 
 **ss** Similar al comando **netstat**; muestra las conexiones
-activas.****
+activas
 
 **tc** Control de tráfico para implementaciones de calidad de servicio
-(QoS) y clase de servicio (CoS).****
+(QoS) y clase de servicio (CoS)
 
 **** **tc qdisc** permite a los usuarios configurar la disciplina de
 colas.****
 
-**** **tc class** permite a los usuarios configurar clases según la
-programación de la disciplina de colas.****
+**tc class** permite a los usuarios configurar clases según la
+programación de la disciplina de colas
 
-**** **tc filter** permite a los usuarios configurar el filtrado de
-paquetes QoS/CoS.****
+**tc filter** permite a los usuarios configurar el filtrado de
+paquetes QoS/CoS
 
-**** **tc monitor** permite visualizar los cambios realizados en el
-control de tráfico del kernel.****
+**tc monitor** permite visualizar los cambios realizados en el
+control de tráfico del kernel
 
-## **8.67. Kbd-2.7.1**
+## 8.67. Kbd-2.7.1
 
-****El paquete Kbd contiene archivos de tabla de teclas, fuentes de
-consola y utilidades de teclado.****
+El paquete Kbd contiene archivos de tabla de teclas, fuentes de
+consola y utilidades de teclado.
 
-****Tiempo de compilación aproximado: ****0.1 SBU****
+Tiempo de compilación aproximado: 0.1 SBU
 
-****Espacio en disco necesario: ****34 MB****
+Espacio en disco necesario: 34 MB
 
-### **8.67.1. Instalación de Kbd**
+### 8.67.1. Instalación de Kbd
 
-****El comportamiento de las teclas de retroceso y suprimir no es
+El comportamiento de las teclas de retroceso y suprimir no es
 uniforme en los mapas de teclas del paquete Kbd. El siguiente parche
-corrige este problema para los mapas de teclas i386:****
+corrige este problema para los mapas de teclas i386:
 
   --------------------------------------------------
-  **patch -Np1 -i ../kbd-2.7.1-backspace-1.patch**
+  patch -Np1 -i ../kbd-2.7.1-backspace-1.patch
   --------------------------------------------------
 
-****Tras la aplicación del parche, la tecla de retroceso genera el
+Tras la aplicación del parche, la tecla de retroceso genera el
 carácter con el código 127, y la tecla suprimir genera una secuencia de
-escape conocida.****
+escape conocida.
 
-****Elimine el programa redundante **resizecons** (requiere la extinta
+Elimine el programa redundante **resizecons** (requiere la extinta
 \`svgalib\` para proporcionar los archivos de modo de vídeo; para un uso
 normal, \`**setfont**\` ajusta el tamaño de la consola correctamente)
-junto con su página de manual.****
+junto con su página de manual.
 
-> +-------------------------------------------------------------+
-> ---
-> **sed -i \'/***RESIZECONS_PROGS***=/s/yes/no/\' configure**
-> **sed -i \'s/resizecons.8 //\' docs/man/man8/Makefile.in**
-> +-------------------------------------------------------------+
+> sed -i 'RESIZECONS_PROGS*=/s/yes/no/' configure
+> sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in
 
-****Preparar Kbd para la compilación:****
+Preparar Kbd para la compilación:
 
   ------------------------------------------------------
-  **./configure \--***prefix***=/usr --disable-vlock**
+ ./configure \--prefix=/usr --disable-vlock
   ------------------------------------------------------
 
-****Significado de la opción configure:****
+**Significado de la opción configure**:
 
-** ***\--disable-vlock*****
+\--disable-vlock
 
-**** Esta opción impide la compilación de la utilidad vlock porque
+Esta opción impide la compilación de la utilidad vlock porque
 requiere la biblioteca PAM, que no está disponible en el entorno
-chroot.****
+chroot.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
 ****Para comprobar los resultados, ejecute:****
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------------
-  **make ***install*****
+  make install
   ------------------------
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
-> ****Para algunos idiomas (p. ej., bielorruso), el paquete Kbd no
+> 
+> Para algunos idiomas (p. ej., bielorruso), el paquete Kbd no
 > proporciona una configuración de teclado útil, ya que la
 > configuración estándar \"by\" asume la codificación ISO-8859-5 y
 > normalmente se utiliza la configuración CP1251. Los usuarios de
 > estos idiomas deben descargar las configuraciones de teclado
-> funcionales por separado.****
+> funcionales por separado.
 > +----------------------------------------------------------------------+
 
-****Si lo desea, instale la documentación:****
+Si lo desea, instale la documentación:
 
   ---------------------------------------------------------
-  **cp -R -v ***docs***/doc -T /usr/share/doc/kbd-2.7.1**
+  cp -R -v docs/doc -T /usr/share/doc/kbd-2.7.1
   ---------------------------------------------------------
 
-### **8.67.2. Contenido de Kbd**
+### 8.67.2. Contenido de Kbd
 
 **Programas instalados**: chvt, deallocvt, dumpkeys, fgconsole,
 getkeycodes, kbdinfo, kbd_mode, kbdrate, loadkeys, loadunimap, mapscrn,
