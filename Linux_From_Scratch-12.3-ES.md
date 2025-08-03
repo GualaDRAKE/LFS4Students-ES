@@ -4302,7 +4302,9 @@ programas de Binutils en el directorio \$LFS/tools.
 
 Para la compilación cruzada, esto indica al sistema de compilación que
 busque en \$LFS las bibliotecas del sistema de destino según sea
-necesario. \--target=\$LFS_TGT
+necesario.
+
+\--target=\$LFS_TGT
 
 Dado que la descripción de la máquina en la variable LFS_TGT es
 ligeramente diferente del valor devuelto por el script config.guess,
