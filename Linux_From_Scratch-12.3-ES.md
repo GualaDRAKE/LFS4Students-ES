@@ -5059,7 +5059,7 @@ Instalar el paquete:
 >     -i $LFS/usr/include/curses.h
 > ```
 
-Significado de las opciones de instalación:
+**Significado de las opciones de instalación**:
 
 TIC_PATH=\$(pwd)/build/progs/tic
 
@@ -5110,7 +5110,7 @@ Preparar Bash para la compilación:
 >             --without-bash-malloc
 > ```
 > 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 \--without-bash-malloc
 
@@ -5162,7 +5162,7 @@ Preparar Coreutils para la compilación:
 >             --enable-no-install-program=kill,uptime
 > ```
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 \--enable-install-program=hostname
 
@@ -5985,7 +5985,7 @@ Ahora monte los sistemas de archivos virtuales del kernel restantes:
 > mount -vt tmpfs tmpfs \$LFS/run
 > +----------------------------------------------------------+
 
-Significado de las opciones de montaje para devpts:
+**Significado de las opciones de montaje para devpts**:
 
 gid=5
 
@@ -6422,7 +6422,7 @@ Preparar Perl para la compilación:
 > -D vendorarch=/usr/lib/perl5/5.40/vendor_perl
 > +--------------------------------------------------------------+
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 \-**des**
 
@@ -6602,7 +6602,7 @@ Prepare Util-linux para la compilación:
 > \--docdir=/usr/share/doc/util-linux-2.40.4
 > +--------------------------------------------------------+
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 ADJTIME_PATH=/var/lib/hwclock/adjtime
 
@@ -7351,7 +7351,7 @@ Prepare Glibc para la compilación:
 > libc_cv_slibdir=/usr/lib
 > +--------------------------------------------------+
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 *\--disable-werror *
 
@@ -8489,7 +8489,7 @@ Preparar Bc para la compilación:
   CC=gcc ./configure \--*prefix*=/usr -G -O3 -r
   -----------------------------------------------
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 CC=gcc
 
@@ -8797,7 +8797,7 @@ Preparar Expect para la compilación:
 > \--with-tclinclude=/usr/include
 > +---------------------------------------------+
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 *\--with-tcl=/usr/lib*
 
@@ -11394,7 +11394,7 @@ Prepare Inetutils para la compilación:
 > \--disable-servers
 > +---------------------------------------+
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 ***** \--disable-logger*****
 
@@ -11448,76 +11448,76 @@ Mueva un programa a la ubicación correcta:
   mv -v /usr/{,s}bin/*ifconfig*
   -------------------------------
 
-## **8.42. Less-668**
+## 8.42. Less-668
 
-****El paquete Less contiene un visor de archivos de texto.****
+El paquete Less contiene un visor de archivos de texto.
 
-****Tiempo de compilación aproximado: ****Menos de 0,1 SBU****
+Tiempo de compilación aproximado: Menos de 0,1 SBU
 
-****Espacio en disco necesario: ****14 MB****
+Espacio en disco necesario: 14 MB
 
-### **8.42.1. Instalación de Less**
+### 8.42.1. Instalación de Less
 
-****Preparar Less para la compilación:****
+Preparar Less para la compilación:
 
-****./configure \--prefix=/usr --sysconfdir=/etc****
+./configure \--prefix=/usr --sysconfdir=/etc
 
-****Significado de las opciones de configuración:****
+**Significado de las opciones de configuración**:
 
-***** \--sysconfdir=/etc*****
+\--sysconfdir=/etc
 
-**** Esta opción indica a los programas creados por el paquete que
-busquen los archivos de configuración en *****/etc*****.****
+Esta opción indica a los programas creados por el paquete que
+busquen los archivos de configuración en /etc 
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
   **make install**
   ------------------
 
-### **8.42.2. Contenido de Less**
+### 8.42.2. Contenido de Less
 
-**Programas instalados**: less, lessecho y lesskey****
+Programas instalados: less, lessecho y lesskey
 
-### **Descripciones breves**
+### Descripciones breves
 
 **less** Un visor o paginador de archivos; Muestra el contenido del
 archivo dado, permitiendo al usuario desplazarse, encontrar cadenas y
-acceder a las marcas.****
+acceder a las marcas.
 
 **lessecho** Necesario para expandir metacaracteres, como \* y ?, en
-nombres de archivo en sistemas Unix.****
+nombres de archivo en sistemas Unix.
 
 **lesskey** Se utiliza para especificar las combinaciones de teclas para
-**less**.****
+**less**.
 
 ## **8.43. Perl-5.40.1**
 
-****El paquete Perl contiene el Lenguaje Práctico de Extracción e
-Informes.****
+El paquete Perl contiene el Lenguaje Práctico de Extracción e
+Informes.
 
-****Tiempo aproximado de compilación: ****1.3 SBU****
+Tiempo aproximado de compilación: 1.3 SBU
 
-****Espacio en disco necesario: ****245 MB****
+Espacio en disco necesario: 245 MB
 
-### **8.43.1. Instalación de Perl**
+### 8.43.1. Instalación de Perl
 
-****Esta versión de Perl compila los módulos Compress::Raw::Zlib y
+Esta versión de Perl compila los módulos Compress::Raw::Zlib y
 Compress::Raw::BZip2. Por defecto, Perl utilizará una copia interna del
 código fuente para la compilación. Ejecute el siguiente comando para que
-Perl utilice las bibliotecas instaladas en el sistema:****
+Perl utilice las bibliotecas instaladas en el sistema:
 
 > +-----------------------------+
 > ---
@@ -11525,11 +11525,11 @@ Perl utilice las bibliotecas instaladas en el sistema:****
 > **export BUILD_BZIP2=0**
 > +-----------------------------+
 
-****Para tener control total sobre la configuración de Perl, puede
+Para tener control total sobre la configuración de Perl, puede
 eliminar las opciones \"-des\" del siguiente comando y configurar
 manualmente la compilación de este paquete. Como alternativa, use el
 comando exactamente como se muestra a continuación para usar los valores
-predeterminados que Perl detecta automáticamente:****
+predeterminados que Perl detecta automáticamente:
 
 > +------------------------------------------------------------------------+
 > ---
@@ -11549,32 +11549,32 @@ predeterminados que Perl detecta automáticamente:****
 > ** -D usethreads**
 > +------------------------------------------------------------------------+
 
-**Significado de las nuevas opciones de Configure:**
+**Significado de las nuevas opciones de Configure**:
 
-***** -D pager=\"/usr/bin/less -isR\"*****
+-D pager=\"/usr/bin/less -isR\"
 
-**** Esto garantiza que se use **less** en lugar de **more**.****
+Esto garantiza que se use **less** en lugar de **more**.
 
-***** -D man1dir=/usr/share/man/man1 -D man3dir=/usr/share/man/man3*****
+-D man1dir=/usr/share/man/man1 -D man3dir=/usr/share/man/man3
 
-**** Dado que Groff aún no está instalado, **Configure** no creará
+Dado que Groff aún no está instalado, **Configure** no creará
 páginas de manual para Perl. Estos parámetros anulan este
-comportamiento.****
+comportamiento.
 
-***** -D usethreads*****
+-D usethreads
 
-**** Compile Perl con soporte para hilos.****
+Compile Perl con soporte para hilos.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
-  -------------------------------------------
-  **TEST_JOBS=\$(nproc) make test_harness**
+  ------------------------------------------
+  TEST_JOBS=\$(nproc) make test_harness
   -------------------------------------------
 
 ****Instalar el paquete y limpiarlo:****
@@ -11585,163 +11585,163 @@ comportamiento.****
 > **unset BUILD_ZLIB BUILD_BZIP2**
 > +----------------------------------+
 
-### **8.43.2. Contenido de Perl**
+### 8.43.2. Contenido de Perl
 
-**Programas instalados**: corelist, cpan, enc2xs, encguess, h2ph, h2xs,
+Programas instalados**: corelist, cpan, enc2xs, encguess, h2ph, h2xs,
 instmodsh, json_pp, libnetcfg, perl, perl5.40.1 (enlace directo a perl),
 perlbug, perldoc, perlivp, perlthanks (enlace directo a perlbug),
 piconv, pl2pm, pod2html, pod2man, pod2text, pod2usage, podchecker,
 podselect, prove, ptar, ptardiff, ptargrep, shasum, splain, xsubpp y
-zipdetails****
+zipdetails
 
 **Bibliotecas instaladas**: Muchas de las cuales no se pueden enumerar
-todas aquí****
+todas aquí
 
-**Directorio de instalación**: /usr/lib/perl5****
+**Directorio de instalación**: /usr/lib/perl5
 
-### **Descripciones breves**
+### Descripciones breves
 
-**corelist **Una interfaz de línea de comandos para Module::CoreList****
+**corelist** Una interfaz de línea de comandos para Module::CoreList.
 
-**cpan **Interactúa con la Red Integral de Archivos de Perl (CPAN) desde
-la línea de comandos****
+**cpan** Interactúa con la Red Integral de Archivos de Perl (CPAN) desde
+la línea de comandos.
 
-**enc2xs **Crea una extensión de Perl para el módulo Encode a partir de
-asignaciones de caracteres Unicode o archivos de codificación Tcl****
+**enc2xs** Crea una extensión de Perl para el módulo Encode a partir de
+asignaciones de caracteres Unicode o archivos de codificación Tcl.
 
-**encguess **Adivina el tipo de codificación de uno o varios
-archivos****
+**encguess** Adivina el tipo de codificación de uno o varios
+archivos.
 
-**h2ph **Convierte archivos de encabezado .h de C a archivos de
-encabezado .ph de Perl****
+**h2ph** Convierte archivos de encabezado .h de C a archivos de
+encabezado .ph de Perl.
 
-**h2xs **Convierte archivos de encabezado .h de C a extensiones de
-Perl****
+**h2xs** Convierte archivos de encabezado .h de C a extensiones de
+Perl.
 
-**instmodsh **Script de shell Para examinar los módulos Perl instalados;
-puede crear un archivo tar a partir de un módulo instalado.****
+**instmodsh** Script de shell Para examinar los módulos Perl instalados;
+puede crear un archivo tar a partir de un módulo instalado.
 
-**json_pp **Convierte datos entre ciertos formatos de entrada y
-salida.****
+**json_pp** Convierte datos entre ciertos formatos de entrada y
+salida.
 
-**libnetcfg **Puede usarse para configurar el módulo Perl libnet.****
+**libnetcfg** Puede usarse para configurar el módulo Perl libnet.
 
-**perl **Combina algunas de las mejores características de C, sed, awk y
-sh en un único lenguaje de programación.****
+**perl** Combina algunas de las mejores características de C, sed, awk y
+sh en un único lenguaje de programación.
 
-**perl5.40.1 **Un enlace directo a Perl.****
+**perl5.40.1 **Un enlace directo a Perl.
 
-**perlbug **Se usa para generar informes de errores sobre Perl o los
-módulos que lo acompañan y enviarlos por correo.****
+**perlbug** Se usa para generar informes de errores sobre Perl o los
+módulos que lo acompañan y enviarlos por correo.
 
-**perldoc **Muestra documentación en formato pod, incrustada en el árbol
-de instalación de Perl o en un script de Perl.****
+**perldoc** Muestra documentación en formato pod, incrustada en el árbol
+de instalación de Perl o en un script de Perl.
 
-**perlivp **El procedimiento de verificación de la instalación de Perl.
+**perlivp** El procedimiento de verificación de la instalación de Perl.
 Se puede usar para verificar que Perl y sus bibliotecas se hayan
-instalado correctamente.****
+instalado correctamente.
 
-**perlthanks **Se usa para generar mensajes de agradecimiento para los
-desarrolladores de Perl.****
+**perlthanks** Se usa para generar mensajes de agradecimiento para los
+desarrolladores de Perl.
 
-**piconv **Una versión en Perl del convertidor de codificación de
-caracteres iconv.****
+**piconv** Una versión en Perl del convertidor de codificación de
+caracteres iconv.
 
-**pl2pm **Una herramienta básica para convertir archivos .pl de Perl4 a
-módulos .pm de Perl5.****
+**pl2pm** Una herramienta básica para convertir archivos .pl de Perl4 a
+módulos .pm de Perl5.
 
-**pod2html **Convierte archivos de formato pod a formato HTML.****
+**pod2html** Convierte archivos de formato pod a formato HTML.
 
-**pod2man **Convierte datos de pod a entrada \*roff formateada.****
+**pod2man** Convierte datos de pod a entrada \*roff formateada.
 
-**pod2text **Convierte datos de pod a texto ASCII formateado.****
+**pod2text** Convierte datos de pod a texto ASCII formateado.
 
-**pod2usage **Imprime mensajes de uso de la documentación de pod
-incrustada en archivos.****
+**pod2usage** Imprime mensajes de uso de la documentación de pod
+incrustada en archivos.
 
-**podchecker **Comprueba la sintaxis de los archivos de documentación en
-formato pod.****
+**podchecker** Comprueba la sintaxis de los archivos de documentación en
+formato pod.
 
-**podselect **Muestra secciones seleccionadas de la documentación de
-pod.****
+**podselect** Muestra secciones seleccionadas de la documentación de
+pod.
 
-**prove **Herramienta de línea de comandos para ejecutar pruebas con el
-módulo Test::Harness.****
+**prove** Herramienta de línea de comandos para ejecutar pruebas con el
+módulo Test::Harness.
 
-**ptar **Un programa similar a tar escrito en Perl.****
+**ptar** Un programa similar a tar escrito en Perl.
 
-**ptardiff **Un programa en Perl que compara un archivo extraído con uno
-sin extraer.****
+**ptardiff** Un programa en Perl que compara un archivo extraído con uno
+sin extraer.
 
-**ptargrep **Un programa en Perl que aplica la coincidencia de patrones
-al contenido de los archivos en un archivo tar.****
+**ptargrep** Un programa en Perl que aplica la coincidencia de patrones
+al contenido de los archivos en un archivo tar.
 
-**shasum **Imprime o comprueba sumas de comprobación SHA.****
+**shasum** Imprime o comprueba sumas de comprobación SHA.
 
-**splain **Se usa para forzar diagnósticos de advertencia detallados en
-Perl.****
+**splain** Se usa para forzar diagnósticos de advertencia detallados en
+Perl.
 
-**xsubpp **Convierte el código Perl XS en código C****
+**xsubpp** Convierte el código Perl XS en código C.
 
-**zipdetails **Muestra detalles sobre la estructura interna de un
-archivo Zip****
+**zipdetails** Muestra detalles sobre la estructura interna de un
+archivo Zip.
 
-## **8.44. XML::Parser-2.47**
+## 8.44. XML::Parser-2.47
 
-****El módulo XML::Parser es una interfaz de Perl para el analizador XML
-Expat de James Clark.****
+El módulo XML::Parser es una interfaz de Perl para el analizador XML
+Expat de James Clark.
 
-****Tiempo de compilación aproximado: ****Menos de 0,1 SBU****
+Tiempo de compilación aproximado: Menos de 0,1 SBU
 
-****Espacio en disco necesario: ****2,4 MB****
+Espacio en disco necesario: 2,4 MB
 
-### **8.44.1. Instalación de XML::Parser**
+### 8.44.1. Instalación de XML::Parser
 
-****Preparar XML::Parser para la compilación:****
+Preparar XML::Parser para la compilación:
 
   ----------------------
-  **perl Makefile.PL**
+  perl Makefile.PL
   ----------------------
 
 ****Compilar el paquete:****
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ---------------
-  **make test**
+make test
   ---------------
 
-****Instalar el paquete:****
+Instalar el paquete.
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.44.2. Contenido de XML::Parser**
+### 8.44.2. Contenido de XML::Parser
 
-**Módulo instalado**: ****E****xpat.so****
+Módulo instalado**:  Expat.so
 
-### **Descripciones breves**
+### Descripciones breves
 
-*****E******xpat***** proporciona la interfaz Perl Expat****
+Expat proporciona la interfaz Perl Expat
 
-## **8.45. Intltool-0.51.0**
+## 8.45. Intltool-0.51.0
 
-****Intltool es una herramienta de internacionalización que se utiliza
-para extraer cadenas traducibles de archivos fuente.****
+Intltool es una herramienta de internacionalización que se utiliza
+para extraer cadenas traducibles de archivos fuente.
 
-****Tiempo de compilación aproximado: ****menos de 0,1 SBU****
+Tiempo de compilación aproximado: menos de 0,1 SBU
 
-****Espacio en disco requerido: ****1,5 MB****
+Espacio en disco requerido: 1,5 MB
 
-### **8.45.1. Instalación de Intltool**
+### 8.45.1. Instalación de Intltool
 
-****Primero, corrija una advertencia causada por Perl-5.22 y versiones
-posteriores:****
+Primero, corrija una advertencia causada por Perl-5.22 y versiones
+posteriores:
 
   --------------------------------------------------------------
   **sed -i \'s:\\\\\\\${:\\\\\\\$\\\\{:\' intltool-update.in**
@@ -11756,25 +11756,25 @@ posteriores:****
 > \'\\\$\\{\'.****
 > +----------------------------------------------------------------------+
 
-****Preparar Intltool para la compilación:****
+Preparar Intltool para la compilación:
 
   -------------------------------------
-  **./configure --prefix=/***usr*****
+  ./configure --prefix=/***usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
 > +----------------------------------------------------------------------+
 > ---
@@ -11783,189 +11783,189 @@ posteriores:****
 > /usr/share/doc/intltool-0.51.0/I18N-HOWTO**
 > +----------------------------------------------------------------------+
 
-### **8.45.2. Contenido de Intltool**
+### 8.45.2. Contenido de Intltool
 
 **Programas instalados**: intltool-extract, intltool-merge,
 intltool-prepare, intltool-update e intltoolize****
 
 **Directorios instalados**: /usr/share/doc/intltool-0.51.0 y
-/usr/share/intltool****
+/usr/share/intltool
 
-### **Descripciones breves**
+### Descripciones breves
 
-**Intltoolize** Prepara un paquete para usar intltool****
+**Intltoolize** Prepara un paquete para usar intltool
 
 **intltool-extract** Genera archivos de encabezado que gettext puede
-leer****
+leer
 
-****i**ntltool-merge** Fusiona cadenas traducidas en varios tipos de
-archivo****
+**intltool-merge** Fusiona cadenas traducidas en varios tipos de
+archivo
 
 **intltool-prepare** Actualiza los archivos pot y los fusiona con los
-archivos de traducción****
+archivos de traducción
 
-**intltool-update **Actualiza los archivos de plantilla po y los fusiona
-con las traducciones****
+**intltool-update** Actualiza los archivos de plantilla po y los fusiona
+con las traducciones
 
-## **8.46. Autoconf-2.72**
+## 8.46. Autoconf-2.72
 
-****El paquete Autoconf contiene programas para generar scripts de shell
-que configuran automáticamente el código fuente.****
+El paquete Autoconf contiene programas para generar scripts de shell
+que configuran automáticamente el código fuente.
 
-****Tiempo de compilación aproximado: ****Menos de 0,1 SBU
-(aproximadamente 0,4 SBU con pruebas)****
+Tiempo de compilación aproximado: Menos de 0,1 SBU
+(aproximadamente 0,4 SBU con pruebas)
 
-****Espacio en disco necesario: ****25 MB****
+Espacio en disco necesario: 25 MB
 
-### **8.46.1. Instalación de Autoconf**
+### 8.46.1. Instalación de Autoconf
 
-****Preparar Autoconf para la compilación:****
+Preparar Autoconf para la compilación:
 
   -------------------------------
-  **./configure --prefix=/usr**
+  ./configure --prefix=/usr
   -------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.46.2. Contenido de Autoconf**
+### 8.46.2. Contenido de Autoconf
 
-****Programas instalados: ****autoconf, autoheader, autom4te,
-autoreconf, autoscan, autoupdate e ifnames****
+Programas instalados: autoconf, autoheader, autom4te,
+autoreconf, autoscan, autoupdate e ifnames
 
-****Directorio de instalación: **** /usr/share/autoconf****
+Directorio de instalación:  /usr/share/autoconf
 
-### **Descripciones breves**
+### Descripciones breves
 
 **autoconf** Genera scripts de shell que configuran automáticamente los
 paquetes de código fuente de software para adaptarse a diversos tipos de
 sistemas tipo Unix. Los scripts de configuración que produce son
-independientes; su ejecución no requiere el programa autoconf.****
+independientes; su ejecución no requiere el programa autoconf.
 
 **autoheader** Una herramienta para crear archivos de plantilla de
-sentencias C#define para que configure los use.****
+sentencias C#define para que configure los use.
 
-**autom4te** Un contenedor para el procesador de macros M4.****
+**autom4te** Un contenedor para el procesador de macros M4.
 
 **autoreconf** Ejecuta automáticamente **autoconf**, **autoheader**,
 **aclocal**, **automake**, **gettextize** y **libtoolize** en el orden
 correcto para ahorrar tiempo al realizar cambios en los archivos de
-plantilla de **autoconf** y **automake**.****
+plantilla de **autoconf** y **automake**.
 
 **autoscan** Ayuda a crear un archivo configure.in para un paquete de
 software. Examina los archivos fuente en un árbol de directorios,
-buscando problemas comunes de portabilidad, **** y crea un archivo
-*****configure.scan***** que sirve como archivo *****configure.in*****
-preliminar para el paquete.****
+buscando problemas comunes de portabilidad, y crea un archivo
+configure.scan que sirve como archivo configure.in
+preliminar para el paquete.
 
-**autoupdate** Modifica un archivo *****configure.in***** que aún llama
+**autoupdate** Modifica un archivo configure.in que aún llama
 a las macros de **autoconf** por sus nombres antiguos para usar los
-nombres de macro actuales.****
+nombres de macro actuales.
 
-**ifnames** Ayuda al escribir archivos *****configure.in***** para un
+**ifnames** Ayuda al escribir archivos configure.in para un
 paquete de software; imprime los identificadores que el paquete usa en
 los condicionales del preprocesador de C. \[Si un paquete ya se ha
 configurado para tener cierta portabilidad, este programa puede ayudar a
 determinar qué debe revisar **configure**. También puede completar las
-lagunas en un archivo *****configure.in***** generado por
-**autoescaneo**\].****
+lagunas en un archivo configure.in generado por
+**autoescaneo**\].
 
-## **8.47. Automake-1.17**
+## 8.47. Automake-1.17
 
-****El paquete Automake contiene programas para generar archivos
-Makefile para usar con Autoconf.****
+El paquete Automake contiene programas para generar archivos
+Makefile para usar con Autoconf.
 
-****Tiempo de compilación aproximado: ****menos de 0.1 SBU
-(aproximadamente 1.1 SBU con pruebas)****
+Tiempo de compilación aproximado: menos de 0.1 SBU
+(aproximadamente 1.1 SBU con pruebas)
 
-****Espacio en disco requerido: ****121 MB****
+Espacio en disco requerido: 121 MB
 
-### **8.47.1. Instalación de Automake**
+### 8.47.1. Instalación de Automake
 
-****Preparar Automake para la compilación:****
+Preparar Automake para la compilación:
 
   ----------------------------------------------------------------------------
-  **./configure \--prefix=/usr --docdir=/***usr***/share/doc/automake-1.17**
+  ./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.17
   ----------------------------------------------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Usar cuatro trabajos en paralelo acelera las pruebas, incluso en
+Usar cuatro trabajos en paralelo acelera las pruebas, incluso en
 sistemas con menos núcleos lógicos, debido a retrasos internos en las
-pruebas individuales. Para comprobar los resultados, ejecute:****
+pruebas individuales. Para comprobar los resultados, ejecute:
 
   -------------------------------------------------
-  **make -j\$((\$(nproc)\>4?\$(nproc):4)) check**
+  make -j$(($(nproc)\>4?$(nproc):4)) check
   -------------------------------------------------
 
-****Reemplace \$((\...)) con el número de núcleos lógicos que desea usar
-si no desea usarlos todos.****
+Reemplace $((...)) con el número de núcleos lógicos que desea usar
+si no desea usarlos todos.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.47.2. Contenido de Automake**
+### 8.47.2. Contenido de Automake
 
 **Programas instalados**: aclocal, aclocal-1.17 (vinculado directamente
 con aclocal), automake y automake-1.17 (vinculado directamente con
-automake)****
+automake)
 
 **Directorios instalados**: /usr/share/aclocal-1.17,
-/usr/share/automake-1.17 y /usr/share/doc/automake-1.17****
+/usr/share/automake-1.17 y /usr/share/doc/automake-1.17
 
-### **Descripciones breves**
+### Descripciones breves
 
-**aclocal** Genera archivos *****aclocal.m4***** basándose en el
-contenido de los archivos *****configure.in*****.****
+**aclocal** Genera archivos aclocal.m4 basándose en el
+contenido de los archivos **configure.in**.
 
-**aclocal-1.17** Un enlace directo a **aclocal**.****
+**aclocal-1.17** Un enlace directo a **aclocal**.
 
 **automake** Una herramienta para generar automáticamente archivos
-*****Makefile.in***** a partir de archivos *****Makefile.am*****. \[Para
+**Makefile.in** a partir de archivos **Makefile.am**. \[Para
 crear todos los archivos Makefile.in de un paquete, ejecute este
 programa en el directorio de nivel superior. Al escanear el archivo
-*****configure.in*****, encuentra automáticamente cada archivo
-Makefile.am apropiado y genera el archivo *****Makefile.in*****
-correspondiente.\]****
+**configure.in**, encuentra automáticamente cada archivo
+Makefile.am apropiado y genera el archivo **Makefile.in**
+correspondiente.\]
 
-**automake-1.17** ****Un enlace directo a **automake**
+**automake-1.17** Un enlace directo a **automake**
 
-## **8.48. OpenSSL-3.4.1**
+## 8.48. OpenSSL-3.4.1
 
-****El paquete OpenSSL contiene herramientas de gestión y bibliotecas
+El paquete OpenSSL contiene herramientas de gestión y bibliotecas
 relacionadas con la criptografía. Estas son útiles para proporcionar
 funciones criptográficas a otros paquetes, como OpenSSH, aplicaciones de
-correo electrónico y navegadores web (para acceder a sitios HTTPS).****
+correo electrónico y navegadores web (para acceder a sitios HTTPS).
 
-****Tiempo de compilación aproximado: ****1.8 SBU****
+Tiempo de compilación aproximado: 1.8 SBU
 
-****Espacio en disco necesario: ****920 MB****
+Espacio en disco necesario: 920 MB
 
-### **8.48.1. Instalación de OpenSSL**
+### 8.48.1. Instalación de OpenSSL
 
-****Preparar OpenSSL para la compilación:****
+Preparar OpenSSL para la compilación:
 
 > +----------------------------------------------+
 > ---
@@ -11976,66 +11976,66 @@ correo electrónico y navegadores web (para acceder a sitios HTTPS).****
 > ** zlib-dynamic**
 > +----------------------------------------------+
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   --------------------------------------
-  **HARNESS_JOBS=\$(nproc) make test**
+  HARNESS_JOBS=\$(nproc) make test
   --------------------------------------
 
-****Se sabe que una prueba, 30-test_afalg.t, falla si el kernel del host
-no tiene habilitado *****CONFIG_CRYPTO_USER_API_SKCIPHER***** o no tiene
+Se sabe que una prueba, 30-test_afalg.t, falla si el kernel del host
+no tiene habilitado **CONFIG_CRYPTO_USER_API_SKCIPHER** o no tiene
 habilitada ninguna opción que proporcione un AES con implementación CBC
-(por ejemplo, la combinación de *****CONFIG_CRYPTO_AES***** y
-*****CONFIG_CRYPTO_CBC*****, o *****CONFIG_CRYPTO_AES_NI_INTEL***** si
-la CPU admite AES-NI). Si falla, se puede ignorar sin problemas.****
+(por ejemplo, la combinación de **CONFIG_CRYPTO_AES** y
+**CONFIG_CRYPTO_CBC**, o **CONFIG_CRYPTO_AES_NI_INTEL** si
+la CPU admite AES-NI). Si falla, se puede ignorar sin problemas.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
 > +----------------------------------------------------------------------+
 > ---
-> **sed -i \'/INSTALL_LIBS/s/***libcrypto.a*** libssl.a//\' Makefile**
-> **make MANSUFFIX=ssl install**
+> sed -i \'/INSTALL_LIBS/s/*libcrypto.a* libssl.a//\' Makefile
+> make MANSUFFIX=ssl install
 > +----------------------------------------------------------------------+
 
-****Añadir la versión al nombre del directorio de documentación para
-mantener la coherencia con otros paquetes:****
+Añadir la versión al nombre del directorio de documentación para
+mantener la coherencia con otros paquetes:
 
   ---------------------------------------------------------------
-  **mv -v /usr/share/doc/openssl /usr/share/doc/openssl-3.4.1**
+  mv -v /usr/share/doc/openssl /usr/share/doc/openssl-3.4.1
   ---------------------------------------------------------------
 
-****Si se desea, instalar documentación adicional:****
+Si se desea, instalar documentación adicional:
 
   -------------------------------------------------------
-  **cp -vfr doc/\* /usr/***share***/doc/openssl-3.4.1**
+  cp -vfr doc/\* /usr/***share***/doc/openssl-3.4.1
   -------------------------------------------------------
 
 > +----------------------------------------------------------------------+
 > ---
 > **Nota**
-> ****Debe actualizar OpenSSL cuando se anuncie una nueva versión que
+> Debe actualizar OpenSSL cuando se anuncie una nueva versión que
 > corrija vulnerabilidades. Desde OpenSSL 3.0.0, el esquema de
 > versiones de OpenSSL sigue el formato MAJOR.MINOR.PATCH. La
 > compatibilidad con API/ABI está garantizada para el mismo número de
 > versión MAJOR. Dado que LFS solo instala las bibliotecas
 > compartidas, no es necesario recompilar los paquetes que
-> *****enlazan***** con libcrypto.so o libssl.so al actualizar a una
+> enlazan con libcrypto.so o libssl.so al actualizar a una
 > versión con el mismo número de versión PRINCIPAL. Sin embargo,
 > cualquier programa en ejecución vinculado a esas bibliotecas debe
 > detenerse y reiniciarse. Para más información, consulte las entradas
 > relacionadas en la Sección 8.2.1, \"Problemas de
-> actualización\".****
+> actualización\".
 > +----------------------------------------------------------------------+
 
 ### 8.48.2. Contenido de OpenSSL
 
-**Programas instalados: **c_rehash y openssl
+**Programas instalados**: c_rehash y openssl
 
 **Bibliotecas instaladas**: libcrypto.so y libssl.so
 
@@ -12193,21 +12193,21 @@ Instalar el paquete:
 
 *libffi* Contiene las funciones API de la interfaz de funciones externas
 
-## **8.51. Python-3.13.2**
+## 8.51. Python-3.13.2
 
-****El paquete Python 3 contiene el entorno de desarrollo de Python. Es
+El paquete Python 3 contiene el entorno de desarrollo de Python. Es
 útil para la programación orientada a objetos, la escritura de scripts,
 la creación de prototipos de programas grandes y el desarrollo de
 aplicaciones completas. Python es un lenguaje de programación
-interpretado.****
+interpretado.
 
-****Tiempo de compilación aproximado: ****2.1 SBU****
+Tiempo de compilación aproximado: 2.1 SBU
 
-****Espacio en disco requerido: ****501 MB****
+Espacio en disco requerido: 501 MB
 
-### **8.51.1. Instalación de Python 3**
+### 8.51.1. Instalación de Python 3
 
-****Preparar Python para la compilación:****
+Preparar Python para la compilación:*
 
 > +------------------------------------------+
 > ---
@@ -12217,22 +12217,22 @@ interpretado.****
 > ** \--enable-optimizations**
 > +------------------------------------------+
 
-**Significado de las opciones de configuración:**
+**Significado de las opciones de configuración**:
 
-***** \--with-system-expat*****
+\--with-system-expat
 
-**** Esta opción permite la vinculación con la versión del sistema de
-Expat.****
+Esta opción permite la vinculación con la versión del sistema de
+Expat.
 
-***** \--enable-optimizations*****
+\--enable-optimizations
 
-**** Esta opción permite pasos de optimización extensos, pero que
+Esta opción permite pasos de optimización extensos, pero que
 requieren mucho tiempo. El intérprete se compila dos veces; las pruebas
 realizadas en la primera compilación se utilizan para mejorar la versión
-final optimizada. Compilar el paquete:****
+final optimizada. Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
 ****Se sabe que algunas pruebas se bloquean indefinidamente. Para
@@ -12240,42 +12240,42 @@ comprobar los resultados, ejecute el conjunto de pruebas, pero
 establezca un límite de tiempo de 2 minutos para cada caso:****
 
   -------------------------------------------------
-  **make test TESTOPTS=\"\--***timeout*** 120\"**
+  make test TESTOPTS="--timeout 120"
   -------------------------------------------------
 
-****Para un sistema relativamente lento, podría ser necesario aumentar
+Para un sistema relativamente lento, podría ser necesario aumentar
 el límite de tiempo; 1 SBU (medido al compilar Binutils pass 1 con un
 núcleo de CPU) debería ser suficiente. Algunas pruebas son inestables,
 por lo que el conjunto de pruebas volverá a ejecutar automáticamente las
 pruebas fallidas. Si una prueba falló, pero luego pasó al volver a
 ejecutarse, debe considerarse como aprobada. Se sabe que una prueba,
-test_ssl, falla en el entorno chroot.****
+test_ssl, falla en el entorno chroot.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****En varios lugares de este libro, utilizamos el comando **pip3** para
+En varios lugares de este libro, utilizamos el comando **pip3** para
 instalar programas y módulos de Python 3 para todos los usuarios como
-*****root*****. Esto contradice la recomendación de los desarrolladores
+**root**. Esto contradice la recomendación de los desarrolladores
 de Python: instalar los paquetes en un entorno virtual o en el
-directorio personal de un usuario normal ****(ejecutando **pip3** como
+directorio personal de un usuario normal **(ejecutando **pip3** como
 este usuario). Se activa una advertencia de varias líneas cada vez que
-el usuario *****root***** ejecuta **pip3**.****
+el usuario **root** ejecuta **pip3**.
 
-****La razón principal de esta recomendación es evitar conflictos con el
-gestor de paquetes del sistema (por ejemplo, **dpkg**).****
+La razón principal de esta recomendación es evitar conflictos con el
+gestor de paquetes del sistema (por ejemplo, **dpkg**).
 
-****LFS no cuenta con un gestor de paquetes para todo el sistema, por lo
+LFS no cuenta con un gestor de paquetes para todo el sistema, por lo
 que esto no supone un problema. Además, pip3 buscará una nueva versión
 de sí mismo cada vez que se ejecute. Dado que la resolución de nombres
 de dominio aún no está configurada en el entorno chroot de LFS, **pip3**
 no puede buscar una nueva versión de sí mismo y generará una
-advertencia.****
+advertencia.
 
-****Tras iniciar el sistema LFS y configurar una conexión de red, se
+Tras iniciar el sistema LFS y configurar una conexión de red, se
 emitirá una advertencia diferente que indica al usuario que actualice
 **pip3** desde un wheel precompilado en PyPI (cuando haya una nueva
 versión disponible). Sin embargo, LFS considera pip3 como parte de
@@ -12285,100 +12285,100 @@ objetivo: compilar un sistema Linux a partir del código fuente. Por lo
 tanto, la advertencia sobre una nueva versión de **pip3** también debe
 ignorarse. Si lo desea, puede suprimir todas estas advertencias
 ejecutando el siguiente comando, que crea un archivo de
-configuración:****
+configuración:
 
 > +------------------------------------------+
 > ---
-> **cat \> /etc/pip.conf \<\< EOF**
-> ****\[global\]****
-> ****root-user-action = ignore****
-> ****disable-pip-version-check = true****
-> **EOF**
+> cat > /etc/pip.conf << EOF
+> [global]
+> root-user-action = ignore
+> disable-pip-version-check = true
+> EOF
 > +------------------------------------------+
 
 > +----------------------------------------------------------------------+
 > ---
 > **Importante**
-> ****En LFS y BLFS, normalmente compilamos e instalamos módulos de
+> En LFS y BLFS, normalmente compilamos e instalamos módulos de
 > Python con el comando pip3. Asegúrese de que los comandos pip3
 > install de ambos libros se ejecuten como usuario root (a menos que
 > se trate de un entorno virtual de Python).****
 > ****Ejecutar pip3 install como usuario no root puede parecer eficaz,
 > pero provocará que el módulo instalado sea inaccesible para otros
-> usuarios.****
-> ****pip3 install no reinstalará automáticamente un módulo ya
+> usuarios.
+> pip3 install no reinstalará automáticamente un módulo ya
 > instalado. Al usar el comando pip3 install para actualizar un módulo
 > (por ejemplo, de meson-0.61.3 a meson-0.62.0), inserte la opción
-> \--upgrade****
-> ****en la línea de comandos. Si es realmente necesario degradar un
+> \--upgrade
+> en la línea de comandos. Si es realmente necesario degradar un
 > módulo o reinstalar la misma versión por algún motivo, inserte
-> \--force-reinstall \--no-deps en la línea de comandos.****
+> \--force-reinstall \--no-deps en la línea de comandos.
 > +----------------------------------------------------------------------+
 
 **Si lo desea, instale la documentación preformateada:**
 
 > +---------------------------------------------------------+
 > ---
-> **install -v -dm755 /usr/share/doc/python-3.13.2/html**
-> **tar \--strip-***components***=1 \\**
-> ** \--no-same-owner \\**
-> ** \--no-same-permissions \\**
-> ** -C /usr/share/doc/python-3.13.2/html \\**
-> ** -xvf ../python-3.13.2-docs-html.tar.bz2**
+> install -v -dm755 /usr/share/doc/python-3.13.2/html
+> tar --strip-components=1  \
+> --no-same-owner \
+> --no-same-permissions \
+> -C /usr/share/doc/python-3.13.2/html \
+> -xvf ../python-3.13.2-docs-html.tar.bz2
 > +---------------------------------------------------------+
 
-**Significado de los comandos de instalación de la documentación:**
+**Significado de los comandos de instalación de la documentación**:
 
-***** \--no-same-owner y \--no-same-permissions*****
+\--no-same-owner y \--no-same-permissions
 
-**** Asegúrese de que los archivos instalados tengan la propiedad y los
+Asegúrese de que los archivos instalados tengan la propiedad y los
 permisos correctos. Sin estas opciones, tar instalará los archivos del
-paquete con los valores del creador original.****
+paquete con los valores del creador original.
 
-### **8.51.2. Contenido de Python 3**
+### 8.51.2. Contenido de Python 3
 
 **Programas instalados**: 2to3, idle3, pip3, pydoc3, python3 y
-python3-config****
+python3-config
 
-**Biblioteca instalada**: libpython3.13.so y libpython3.so****
+**Biblioteca instalada**: libpython3.13.so y libpython3.so
 
 **Directorios instalados**: /usr/include/python3.13, /usr/lib/python3 y
-/usr/share/doc/python-3.13.2****
+/usr/share/doc/python-3.13.2
 
-### **Descripciones breves**
+### Descripciones breves
 
-**2to3 **es un programa de Python que lee el código fuente de Python 2.x
+**2to3** es un programa de Python que lee el código fuente de Python 2.x
 y aplica una serie de correcciones para transformarlo en código válido
-de Python 3.x.****
+de Python 3.x.
 
-**idle3 **es un script contenedor que abre un editor gráfico compatible
+**idle3** es un script contenedor que abre un editor gráfico compatible
 con Python. Para que este script se ejecute, debe haber instalado Tk
 antes de Python para que se compile el módulo de Python Tkinter.****
 
-**pip3 **El instalador de paquetes para Python. Puedes usar pip para
+**pip3* *El instalador de paquetes para Python. Puedes usar pip para
 instalar paquetes desde el índice de paquetes de Python y otros
-índices.****
+índices.
 
-**pydoc3 **es la herramienta de documentación de Python.****
+**pydoc3** es la herramienta de documentación de Python.
 
-**python3 **es el intérprete de Python, un lenguaje de programación
-interpretado, interactivo y orientado a objetos.****
+**python3** es el intérprete de Python, un lenguaje de programación
+interpretado, interactivo y orientado a objetos.
 
-## **8.52. Flit-Core-3.11.0**
+## 8.52. Flit-Core-3.11.0
 
-****Flit-core es la parte de Flit (una herramienta de empaquetado para
-módulos Python simples) que permite compilar distribuciones.****
+Flit-core es la parte de Flit (una herramienta de empaquetado para
+módulos Python simples) que permite compilar distribuciones.
 
-****Tiempo aproximado de compilación: ****menos de 0.1 SBU****
+Tiempo aproximado de compilación: menos de 0.1 SBU
 
-****Espacio en disco requerido: ****1.0 MB****
+Espacio en disco requerido: 1.0 MB
 
-### **8.52.1. Instalación de Flit-Core**
+### 8.52.1. Instalación de Flit-Core
 
-****Compilación del paquete:****
+Compilación del paquete:
 
   -------------------------------------------------------------------------------
-  **pip3 wheel -w dist \--no-cache-dir \--no-build-isolation \--no-deps \$PWD**
+  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
   -------------------------------------------------------------------------------
 
 ****Instalación del paquete:****
@@ -12387,347 +12387,348 @@ módulos Python simples) que permite compilar distribuciones.****
   **pip3 install \--no-***index*** \--find-links dist flit_core**
   -----------------------------------------------------------------
 
-**Significado de las opciones y comandos de configuración de pip3:**
+**Significado de las opciones y comandos de configuración de pip3**:
 
-** wheel**
+wheel
 
-**** Este comando compila el archivo wheel para este paquete.****
+Este comando compila el archivo wheel para este paquete.****
 
-***** -w dist*****
+\-w dist
 
-**** Instruye a pip a colocar la rueda creada en el directorio dist.****
+Instruye a pip a colocar la rueda creada en el directorio dist.
 
-***** \--no-cache-dir*****
+\--no-cache-dir
 
-**** Evita que pip copie la rueda creada en el directorio
-/root/.cache/pip.****
+Evita que pip copie la rueda creada en el directorio
+/root/.cache/pip.
 
-** install**
+install
 
-**** Este comando instala el paquete.****
+Este comando instala el paquete.
 
-***** \--no-build-isolation, \--no-deps y \--no-index*****
+\--no-build-isolation, \--no-deps y \--no-index
 
-**** Estas opciones impiden la obtención de archivos del repositorio de
+Estas opciones impiden la obtención de archivos del repositorio de
 paquetes en línea (PyPI). Si los paquetes se instalan en el orden
 correcto, pip no necesitará obtener ningún archivo; estas opciones
-ofrecen mayor seguridad en caso de error del usuario.****
+ofrecen mayor seguridad en caso de error del usuario.
 
-***** \--find-links dist*****
+\--find-links dist
 
-**** Instruye a pip a buscar archivos wheel en el directorio dist.****
+Instruye a pip a buscar archivos wheel en el directorio dist.
 
-### **8.52.2. Contenido de Flit-Core**
+### 8.52.2. Contenido de Flit-Core
 
 **Directorio de instalación**:
 /usr/lib/python3.13/site-packages/flit_core y /usr/lib/python3.13/site-
-packages/flit_core-3.11.0.dist-info****
+packages/flit_core-3.11.0.dist-info
 
-## **8.53. Wheel-0.45.1**
+## 8.53. Wheel-0.45.1
 
-****Wheel es una biblioteca de Python que constituye la implementación
-de referencia del estándar de empaquetado Wheel de Python.****
+Wheel es una biblioteca de Python que constituye la implementación
+de referencia del estándar de empaquetado Wheel de Python.
 
-**Tiempo de compilación aproxim**ado: ****Menos de 0,1 SBU****
+**Tiempo de compilación aproximado**: Menos de 0,1 SBU
 
-****Espacio en disco requerido: ****1,6 MB****
+**Espacio en disco requerido**: 1,6 MB
 
-### **8.53.1. Instalación de Wheel**
+### 8.53.1. Instalación de Wheel
 
-****Compile Wheel con el siguiente comando:****
+Compile Wheel con el siguiente comando:
 
   -------------------------------------------------------------------------------
-  **pip3 wheel -w dist \--no-cache-dir \--no-build-isolation \--no-deps \$PWD**
+  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
   -------------------------------------------------------------------------------
 
-****Instale Wheel con el siguiente comando:****
+Instale Wheel con el siguiente comando:
 
   -------------------------------------------------------
-  **pip3 install \--no-index \--find-links dist wheel**
+  pip3 install --no-index --find-links dist wheel
   -------------------------------------------------------
 
-### **8.53.2. Contenido de Wheel**
+### 8.53.2. Contenido de Wheel
 
-**Programa instalado**: wheel****
+**Programa instalado**: wheel
 
 **Directorios de instalación**: /usr/lib/python3.13/site-packages/wheel
-y /usr/lib/python3.13/site- packages/wheel-0.45.1.dist-info****
+y /usr/lib/python3.13/site- packages/wheel-0.45.1.dist-info
 
-### **Descripciones breves**
+### Descripciones breves
 
 **wheel** es una utilidad para descomprimir, empaquetar o convertir
-archivos de wheel.****
+archivos de wheel.
 
-## **8.54. Setuptools-75.8.1**
+## 8.54. Setuptools-75.8.1
 
-****Setuptools es una herramienta que se utiliza para descargar,
-compilar, instalar, actualizar y desinstalar paquetes de Python.****
+Setuptools es una herramienta que se utiliza para descargar,
+compilar, instalar, actualizar y desinstalar paquetes de Python.
 
-****Tiempo de compilación aproximado: ****Menos de 0,1 SBU****
+**Tiempo de compilación aproximado**: Menos de 0,1 SBU
 
-****Espacio en disco necesario: ****26 MB****
+**Espacio en disco necesario**: 26 MB
 
-### **8.54.1. Instalación de Setuptools**
+### 8.54.1. Instalación de Setuptools
 
-****Compilación del paquete:****
+Compilación del paquete:
 
   -------------------------------------------------------------------------------------
-  **pip3 wheel -w dist \--no-***cache***-dir \--no-build-isolation \--no-deps \$PWD**
+  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
   -------------------------------------------------------------------------------------
 
-****Instalación del paquete:****
+Instalación del paquete:
 
   ------------------------------------------------------------
-  **pip3 install \--no-index \--find-links dist setuptools**
+  pip3 install --no-index --find-links dist setuptools
   ------------------------------------------------------------
 
-### **8.54.2. Contenido de Setuptools**
+### 8.54.2. Contenido de 
 
 **Directorio de instalación**:
 /usr/lib/python3.13/site-packages/\_distutils_hack,
 /usr/lib/python3.13/site-packages/pkg_resources,
 /usr/lib/python3.13/site- packages/setuptools y
-/usr/lib/python3.13/site-packages/setuptools- 75.8.1.dist-info****
+/usr/lib/python3.13/site-packages/setuptools- 75.8.1.dist-info
 
-## **8.55. Ninja-1.12.1**
+## 8.55. Ninja-1.12.1
 
-****Ninja es un sistema de compilación pequeño enfocado en la
-velocidad.****
+Ninja es un sistema de compilación pequeño enfocado en la
+velocidad.
 
-****Tiempo de compilación aproximado: ****0.2 SBU****
+Tiempo de compilación aproximado: 0.2 SBU
 
-****Espacio en disco requerido: ****37 MB****
+Espacio en disco requerido: 37 MB
 
-### **8.55.1. Instalación de Ninja**
+### 8.55.1. Instalación de Ninja
 
-****Al ejecutarse, **ninja** normalmente utiliza el mayor número posible
+Al ejecutarse, **ninja** normalmente utiliza el mayor número posible
 de procesos en paralelo. Por defecto, este es el número de núcleos del
 sistema, más dos. Esto puede sobrecalentar la CPU o provocar que el
 sistema se quede sin memoria. Al invocar **ninja** desde la línea de
 comandos, el parámetro -jN limitará el número de procesos en paralelo.
 Algunos paquetes integran la ejecución de **ninja** y no le pasan el
-parámetro -j.****
+parámetro -j.
 
-****El siguiente procedimiento opcional permite al usuario limitar el
+El siguiente procedimiento opcional permite al usuario limitar el
 número de procesos en paralelo mediante una variable de entorno,
-NINJAJOBS. **Por ejemplo**, al establecer:****
+NINJAJOBS. **Por ejemplo**, al establecer:
 
   ----------------------------
-  ****export NINJAJOBS=4****
+  export NINJAJOBS=4
   ----------------------------
 
-****se limitará ****n**inja** a cuatro procesos en paralelo. Si lo
-desea, haga que ****ninja**** reconozca la variable de entorno NINJAJOBS
-ejecutando el editor de flujo:****
+se limitará **ninja** a cuatro procesos en paralelo. Si lo
+desea, haga que **ninja** reconozca la variable de entorno NINJAJOBS
+ejecutando el editor de flujo:
 
 > +------------------------------------------------+
 > ---
-> **sed -i \'/int Guess/a \\**
-> ** int j = 0;\\**
-> ** char\* jobs = getenv( \"NINJAJOBS\" );\\**
-> ** if ( jobs != NULL ) j = atoi( jobs );\\**
-> ** if ( j \> 0 ) return j;\\**
-> **\' src/ninja.cc**
+> sed -i '/int Guess/a \
+> int j = 0;\
+> char * jobs = getenv( "NINJAJOBS" );\
+> if ( jobs != NULL ) j = atoi( jobs );\
+> if ( j > 0 ) return j;\
+> ' src/ninja.cc
 > +------------------------------------------------+
 
-****Construya Ninja con:****
+Construya Ninja con:
 
   -------------------------------------------------------
-  **python3 configure.py \--***bootstrap*** --verbose**
+  python3 configure.py --bootstrap --verbose*
   -------------------------------------------------------
 
-****Significado de la opción de compilación:****
+Significado de la opción de compilación:
 
-***** \--bootstrap*****
+\--bootstrap
 
-**** Este parámetro obliga a Ninja a reconstruirse para el sistema
-actual.****
+Este parámetro obliga a Ninja a reconstruirse para el sistema
+actual.
 
-***** \--verbose*****
+\--verbose
 
-**** Este parámetro hace que **configure.py** muestre el progreso de la
-compilación de Ninja.****
+Este parámetro hace que **configure.py** muestre el progreso de la
+compilación de Ninja.
 
-****Las pruebas del paquete no se pueden ejecutar en el entorno chroot.
-Requieren *****cmake*****. Sin embargo, la función básica de este
+Las pruebas del paquete no se pueden ejecutar en el entorno chroot.
+Requieren **cmake**. Sin embargo, la función básica de este
 paquete ya se ha probado reconstruyéndose (con la opción
-*****\--bootstrap*****). Instalar el paquete:****
+**--bootstrap**). Instalar el paquete:
 
 > +----------------------------------------------------------------------+
 > ---
-> **install -vm755 ninja /usr/bin/**
-> **install -vDm644 misc/bash-completion
-> /usr/share/bash-completion/completions/ninja**
-> **install -vDm644 misc/zsh-completion
-> /usr/share/zsh/site-functions/\_ninja**
+> install -vm755 ninja /usr/bin/
+> install -vDm644 misc/bash-completion
+> /usr/share/bash-completion/completions/ninja
+> install -vDm644 misc/zsh-completion
+> /usr/share/zsh/site-functions/\_ninja
 > +----------------------------------------------------------------------+
 
-### **8.55.2. Contenido de Ninja**
+### 8.55.2. Contenido de Ninja
 
-**Programas instalados**: ninja****
+**Programas instalados**: ninja
 
-### **Descripciones breves**
+### Descripciones breves
 
-**ninja** es el sistema de compilación de Ninja****
+**ninja** es el sistema de compilación de Ninja
 
-## **8.56. Meson-1.7.0**
+## 8.56. Meson-1.7.0
 
-****Meson es un sistema de compilación de código abierto diseñado para
-ser extremadamente rápido y lo más intuitivo posible.****
+Meson es un sistema de compilación de código abierto diseñado para
+ser extremadamente rápido y lo más intuitivo posible.
 
-****Tiempo de compilación aproximado: ****menos de 0,1 SBU****
+Tiempo de compilación aproximado: menos de 0,1 SBU
 
-****Espacio en disco requerido: ****44 MB****
+Espacio en disco requerido: 44 MB
 
-### **8.56.1. Instalación de Meson**
+### 8.56.1. Instalación de Meson
 
-****Compile Meson con el siguiente comando:****
+Compile Meson con el siguiente comando:
 
   -------------------------------------------------------------------------------------
-  **pip3 wheel -w dist \--no-cache-dir \--no-***build***-isolation \--no-deps \$PWD**
+  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
   -------------------------------------------------------------------------------------
 
-****El conjunto de pruebas requiere algunos paquetes fuera del alcance
-de LFS. Instalar el paquete:****
+El conjunto de pruebas requiere algunos paquetes fuera del alcance
+de LFS. Instalar el paquete:
 
 > +----------------------------------------------------------------------+
 > ---
-> ****pip3 install \--no-index \--find-links dist meson****
-> ****install -vDm644 data/shell-*****completions*****/bash/meson
-> /usr/share/bash-completion/completions/meson****
-> ****install -vDm644 data/shell-completions/zsh/\_meson
-> /usr/share/zsh/site-functions/\_meson****
+> pip3 install --no-index --find-links dist meson
+> install -vDm644 data/shell-completions/bash/meson
+> /usr/share/bash-completion/completions/meson
+> install -vDm644 data/shell-completions/zsh/\_meson
+> /usr/share/zsh/site-functions/\_meson
 > +----------------------------------------------------------------------+
 
-**Significado de los parámetros de instalación:**
+**Significado de los parámetros de instalación**:
 
-***** -w dist*****
+\-w dist
 
-**** Coloca las ruedas creadas en el directorio dist.****
+Coloca las ruedas creadas en el directorio dist.
 
-***** \--find-links dist*****
+\--find-links dist
 
-**** Instala las ruedas desde el directorio dist.****
+Instala las ruedas desde el directorio dist.
 
-### **8.56.2. Contenido de Meson**
+### 8.56.2. Contenido de Meson
 
-**Programas instalados**: meson****
+**Programas instalados**: meson
 
 **Directorio de instalación**:
 /usr/lib/python3.13/site-packages/meson-1.7.0.dist-info y
-/usr/lib/python3.13/site-packages/mesonbuild****
+/usr/lib/python3.13/site-packages/mesonbuild
 
-### **Descripciones breves**
+### Descripciones breves
 
-**meson** Un sistema de compilación de alta productividad****
+**meson** Un sistema de compilación de alta productividad
 
 ## **8.57. Kmod-34**
 
-****El paquete Kmod contiene bibliotecas y utilidades para cargar
-módulos del kernel.****
+El paquete Kmod contiene bibliotecas y utilidades para cargar
+módulos del kernel.
 
-****Tiempo de compilación aproximado: ****menos de 0,1 SBU****
+Tiempo de compilación aproximado: menos de 0,1 SBU
 
-****Espacio en disco necesario: ****11 MB****
+Espacio en disco necesario: 11 MB
 
-### **8.57.1. Instalación de Kmod**
+### 8.57.1. Instalación de Kmod
 
-****Preparar Kmod para la compilación:****
+Preparar Kmod para la compilación:
 
 > +-----------------------------------------+
 > ---
-> **mkdir -p build**
-> **cd build**
-> **meson setup \--prefix=/usr .. \\**
-> ** \--sbindir=/usr/sbin \\**
-> ** \--buildtype=release \\**
-> ** -D manpages=false**
+> mkdir -p build
+> cd build
+> meson setup --prefix=/usr .. \
+> --sbindir=/usr/sbin \
+> --buildtype=release \
+> -D manpages=false
 > +-----------------------------------------+
 
 ****Significado de las opciones de configuración:****
 
-***** -D manpages=false*****
+-D manpages=false
 
-**** Esta opción deshabilita la generación de páginas de manual, lo que
-requiere un programa externo.****
+Esta opción deshabilita la generación de páginas de manual, lo que
+requiere un programa externo.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   -----------
-  **ninja**
+  ninja
   -----------
 
-****El conjunto de pruebas de este paquete requiere encabezados de
+El conjunto de pruebas de este paquete requiere encabezados de
 kernel sin procesar (no los encabezados de kernel \"saneados\"
-instalados anteriormente), que están fuera del alcance de LFS.****
+instalados anteriormente), que están fuera del alcance de LFS.
 
-****Ahora instale el paquete:****
+Ahora instale el paquete:
 
   -------------------
-  **ninja install**
+  ninja install
   -------------------
 
-### **8.57.2. Contenido de Kmod**
+### 8.57.2. Contenido de Kmod
 
 **Programas instalados**: depmod (enlace a kmod), insmod (enlace a
 kmod), kmod, lsmod (enlace a kmod), modinfo (enlace a kmod), modprobe
-(enlace a kmod) y rmmod (enlace a kmod)****
+(enlace a kmod) y rmmod (enlace a kmod)
 
-**Biblioteca instalada**: libkmod.so****
+**Biblioteca instalada**: libkmod.so
 
-### **Descripciones breves**
+### Descripciones breves
 
 **depmod** Crea un archivo de dependencias basado en los símbolos que
 encuentra en el conjunto de módulos existente. Este archivo de
 dependencia lo utiliza **modprobe** para cargar automáticamente los
-módulos necesarios.****
+módulos necesarios.
 
-**insmod** Instala un módulo cargable en el kernel en ejecución.****
+**insmod** Instala un módulo cargable en el kernel en ejecución.
 
-**kmod** Carga y descarga módulos del kernel.****
+**kmod** Carga y descarga módulos del kernel.
 
-**lsmod** Enumera los módulos cargados actualmente.****
+**lsmod** Enumera los módulos cargados actualmente.
 
 **modinfo** Examina un archivo de objeto asociado a un módulo del kernel
-y muestra cualquier nformación que pueda obtener.****
+y muestra cualquier nformación que pueda obtener.
 
 **modprobe** Utiliza un archivo de dependencia, creado por **depmod**,
-para cargar automáticamente los módulos relevantes.****
+para cargar automáticamente los módulos relevantes.
 
-**rmmod** Descarga módulos del kernel en ejecución.****
+**rmmod** Descarga módulos del kernel en ejecución.
 
-*****libkmod***** Esta biblioteca la utilizan otros programas para
-cargar y descargar módulos del kernel.****
+**libkmod** Esta biblioteca la utilizan otros programas para
+cargar y descargar módulos del kernel.
 
-## **8.58. Coreutils-9.6**
+## 8.58. Coreutils-9.6
 
-****El paquete Coreutils contiene las utilidades básicas necesarias para
-cualquier sistema operativo.****
+El paquete Coreutils contiene las utilidades básicas necesarias para
+cualquier sistema operativo.
 
-**Tiempo de compilación aproximado**: 1.2 SBU****
+**Tiempo de compilación aproximado**: 1.2 SBU
 
-**Espacio en disco necesario**: 182 MB****
+**Espacio en disco necesario**: 182 MB
 
-### **8.58.1. Instalación de Coreutils**
+### 8.58.1. Instalación de Coreutils
 
-****POSIX requiere que los programas de Coreutils reconozcan
+POSIX requiere que los programas de Coreutils reconozcan
 correctamente los límites de caracteres, incluso en configuraciones
 regionales multibyte. El siguiente parche corrige este incumplimiento y
-otros errores relacionados con la internacionalización.****
+otros errores relacionados con la internacionalización.
 
   -------------------------------------------------------
-  **patch -Np1 -i ../coreutils-9.6-***i18n***-1.patch**
+  patch -Np1 -i ../coreutils-9.6-i18n-1.patch
   -------------------------------------------------------
 
 > +----------------------------------------------------------------------+
 > ---
 > **Nota**
-> ****Se han **encontrado** muchos errores en este parche. Al informar
+> 
+> Se han **encontrado** muchos errores en este parche. Al informar
 > de nuevos errores a los responsables de Coreutils, compruebe primero
-> si se pueden reproducir sin este parche.****
+> si se pueden reproducir sin este parche.
 > +----------------------------------------------------------------------+
 
-****Ahora prepare Coreutils para la compilación:****
+Ahora prepare Coreutils para la compilación:
 
 > +----------------------------------------------------------+
 > ---
@@ -12738,103 +12739,101 @@ otros errores relacionados con la internacionalización.****
 > ** \--enable-no-install-program=kill,uptime**
 > +----------------------------------------------------------+
 
-**Significado de los comandos y opciones de configuración:**
+**Significado de los comandos y opciones de configuración**:
 
-** autoreconf -fv**
+autoreconf -fv
 
-**** El parche de internacionalización ha modificado el sistema de
+El parche de internacionalización ha modificado el sistema de
 compilación, por lo que es necesario regenerar los archivos de
-configuración.****
+configuración.
 
-**** Normalmente, usaríamos la opción *****-i***** para actualizar los
+Normalmente, usaríamos la opción **-i** para actualizar los
 archivos auxiliares estándar, pero para este paquete no funciona porque
-*****configure.ac***** especificó una versión antigua de gettext.****
+**configure.ac** especificó una versión antigua de gettext.
 
-** automake -af**
+automake -af
 
-**** Autoreconf no actualizó los archivos auxiliares de automake debido
-a la falta de la opción *****-i*****. Este comando los actualiza para
-evitar un fallo de compilación.****
+Autoreconf no actualizó los archivos auxiliares de automake debido
+a la falta de la opción **-i**. Este comando los actualiza para
+evitar un fallo de compilación.
 
-***** FORCE_UNSAFE_CONFIGURE=1*****
+FORCE_UNSAFE_CONFIGURE=1
 
-**** Esta variable de entorno permite que el usuario root compile el
-paquete.****
+Esta variable de entorno permite que el usuario root compile el
+paquete.
 
-***** \--enable-no-install-program=kill,uptime*****
+\--enable-no-install-program=kill,uptime
 
-**** El propósito de esta opción es evitar que Coreutils instale
-programas que serán instalados por o tros paquetes.****
+El propósito de esta opción es evitar que Coreutils instale
+programas que serán instalados por o tros paquetes.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Si no se está ejecutando el conjunto de pruebas, vaya a \"Instalar
-el paquete\".****
+Si no se está ejecutando el conjunto de pruebas, vaya a \"Instalar
+el paquete\".
 
-****Ahora el conjunto de pruebas está listo para ejecutarse. Primero,
+Ahora el conjunto de pruebas está listo para ejecutarse. Primero,
 ejecute las pruebas que deben ejecutarse como usuario
-*****root*****:****
+**root**:
 
   ----------------------------------------------------
-  **make ***NON_ROOT_USERNAME***=tester check-root**
+  make NON_ROOT_USERNAME=tester check-root
   ----------------------------------------------------
 
-****Ejecutaremos el resto de las pruebas como el usuario tester. Algunas
+Ejecutaremos el resto de las pruebas como el usuario tester. Algunas
 pruebas requieren que el usuario pertenezca a más de un grupo. Para
 evitar que estas pruebas se omitan, agregue un grupo temporal e
-incorpore al usuario *****tester*****:****
+incorpore al usuario **tester**:
 
   -------------------------------------
-  **groupadd -g 102 dummy -U tester**
+  groupadd -g 102 dummy -U tester
   -------------------------------------
 
-****Corrija algunos de los permisos para que el usuario no root pueda
-compilar y ejecutar las pruebas:****
+Corrija algunos de los permisos para que el usuario no root pueda
+compilar y ejecutar las pruebas:
 
   -----------------------------
-  **chown -R ***tester*** .**
+  chown -R tester .
   -----------------------------
 
-****Ahora ejecute las pruebas (usando *****/dev/null***** como entrada
+Ahora ejecute las pruebas (usando **/dev/null** como entrada
 estándar; de lo contrario, dos pruebas podrían fallar si se compila LFS
 en una terminal gráfica o en una sesión en SSH o GNU Screen, ya que la
 entrada estándar está conectada a un PTY de la distribución del host y
 no se puede acceder al nodo del dispositivo para dicho PTY desde el
-entorno chroot de LFS):****
+entorno chroot de LFS):
 
 > +----------------------------------------------------------------------+
 > ---
-> **su tester -c \"PATH=\$PATH make -k RUN_EXPENSIVE_TESTS=yes check\"
-> \\**
-> ** \< /dev/null**
+> su tester -c "PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check" < /dev/null
 > +----------------------------------------------------------------------+
 
-****Elimine el grupo temporal:****
+Elimine el grupo temporal:
 
   --------------------
-  **groupdel dummy**
+  groupdel dummy
   --------------------
 
-****Instale el paquete:****
+Instale el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****Mueva los programas a las ubicaciones especificadas por el FHS:****
+Mueva los programas a las ubicaciones especificadas por el FHS:
 
 > +---------------------------------------------------------------------+
 > ---
-> **mv -v /usr/bin/chroot /usr/sbin**
-> **mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8**
-> **sed -i \'s/\"1\"/\"8\"/\' /usr/share/man/man8/chroot.8**
+> mv -v /usr/bin/chroot /usr/sbin
+> mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8
+> sed -i 's/"1"/"8"/' /usr/share/man/man8/chroot.8
 > +---------------------------------------------------------------------+
 
-### **8.58.2. Contenido de Coreutils**
+### 8.58.2. Contenido de Coreutils
 
 **Programas instalados**: \[, b2sum, base32, base64, basename, basenc,
 cat, chcon, chgrp, chmod, chown, chroot, cksum, comm, cp, csplit, cut,
@@ -12846,7 +12845,7 @@ printf, ptx, pwd, readlink, realpath, rm, rmdir, runcon, seq, sha1sum,
 sha224sum, sha256sum, sha384sum, sha512sum, shred, shuf, sleep, sort,
 split, stat, stdbuf, stty, sum, sync, tac, tail, tee, test, timeout,
 touch, tr, true, truncate, tsort, tty, uname, unexpand, uniq, unlink,
-users, vdir, wc, who, whoami, and yes****
+users, vdir, wc, who, whoami, and yes
 
 **Biblioteca instalada**: libstdbuf.so (en /usr/libexec/coreutils)****
 
