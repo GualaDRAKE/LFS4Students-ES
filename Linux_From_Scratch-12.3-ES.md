@@ -1928,7 +1928,7 @@ paquete, asegúrese de que se haya eliminado el archivo tar previamente
 expandido, vuelva a extraer el paquete y complete todas las
 instrucciones de esa sección.
 
-### 2.3.3. Capítulos 7--10
+### 2.3.3. Capítulos 7-10
 
 • La partición /mnt/lfs debe estar montada.
 
