@@ -2177,7 +2177,7 @@ crear un sistema de archivos ext4 en la partición LFS, ejecute el
 siguiente comando:
 
 > ```bash
-> mkfs -v -t ext4 /dev/\<xxx\>
+> mkfs -v -t ext4 /dev/<xxx>
 > ```
 Reemplace \<xxx\> con el nombre de la partición LFS.
 
@@ -2186,7 +2186,7 @@ formatearla. Si se creó una nueva partición de intercambio, deberá
 inicializarse con este comando:
 
 > ```bash
-> mkswap /dev/\<yyy\>
+> mkswap /dev/<yyy>
 > ```
 
 Reemplace \<yyy\> con el nombre de la partición de intercambio.
