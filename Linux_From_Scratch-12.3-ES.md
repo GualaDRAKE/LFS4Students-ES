@@ -4061,7 +4061,7 @@ El siguiente paquete que se instala es gcc. Un ejemplo de lo que se
 puede ver durante la ejecución de **configure** es:
 
 |checking what assembler to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/as|
-|:--------------------------------------------------------------------------:|
+|--------------------------------------------------------------------------|
 |checking what linker to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld|
 
 Esto es importante por las razones mencionadas anteriormente. También
@@ -4129,9 +4129,8 @@ funcional.
 
 ## Instrucciones generales de compilación
 
-> +----------------------------------------------------------------------+
-> ---
-> Precaución
+> **Precaución**
+> 
 > Durante el ciclo de desarrollo de LFS, las instrucciones del libro
 > suelen modificarse para adaptarse a una actualización de paquete o
 > aprovechar las nuevas características de los paquetes actualizados.
@@ -4142,7 +4141,6 @@ funcional.
 > cualquier motivo reutiliza scripts de una versión anterior de LFS,
 > deberá tener mucho cuidado de actualizarlos para que coincidan con
 > la versión actual del libro de LFS.
-> +----------------------------------------------------------------------+
 
 A continuación, se indican algunos aspectos que debe saber sobre la
 compilación de cada paquete:
@@ -4169,18 +4167,17 @@ advertencias.
 • Compruebe una última vez que la variable de entorno LFS esté
 configurada correctamente:
 
-  ------------
-  echo \$LFS
-  ------------
+> ```bash
+> echo $LFS
+> ```
 
 Asegúrese de que la salida muestre la ruta al punto de montaje de la
 partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 
 • Finalmente, es importante destacar dos puntos importantes:
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Las instrucciones de compilación asumen que los requisitos del
 > sistema host, incluidos los enlaces simbólicos, se han configurado
 > correctamente:
@@ -4189,11 +4186,11 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > simbólico a gawk.
 > • /usr/bin/yacc es un enlace simbólico a bison o a un pequeño script
 > que lo ejecuta.
-> +----------------------------------------------------------------------+
-
-> +----------------------------------------------------------------------+
+> 
 > ---
-> Importante
+> 
+> **Importante**
+> 
 > A continuación, se presenta una sinopsis del proceso de compilación.
 > 1\. Coloque todas las fuentes y parches en un directorio accesible
 > desde el entorno chroot, como /mnt/lfs/sources/.
@@ -4213,7 +4210,6 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > compilación.
 > e\. Elimine el directorio de fuentes extraído a menos que se le
 > indique lo contrario.
-> +----------------------------------------------------------------------+
 
 ## Capítulo 5 - Compilación de una cadena de herramientas cruzadas <a name="capitulo-5"></a>
 
