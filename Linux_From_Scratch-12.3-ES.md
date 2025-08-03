@@ -755,8 +755,9 @@ Para facilitar la comprensión, se utilizan algunas convenciones
 tipográficas a lo largo de este libro. Esta sección contiene algunos
 ejemplos del formato tipográfico presente en Linux From Scratch.
 
-  |**./configure \--prefix=/usr**|
-  |------------------------------|
+> ```bash
+>./configure --prefix=/usr
+> ```
 
 Este formato de texto está diseñado para escribirse exactamente como se
 ve, a menos que se indique lo contrario en el texto circundante. También
@@ -767,8 +768,8 @@ En algunos casos, una línea de comandos se extiende a dos o más líneas
 físicas gracias a una barra invertida al final de la línea.
 
 > ```bash
-> CC=\"gcc -B/usr/bin/\" ../binutils-2.18/configure \
-> --prefix=/tools \--disable-nls \--disable-werror
+> CC="gcc -B/usr/bin/" ../binutils-2.18/configure \
+>   --prefix=/tools --disable-nls --disable-werror
 > ```
 
 Tenga en cuenta que la barra invertida debe ir seguida inmediatamente de
@@ -946,54 +947,49 @@ distribución para incluir estas herramientas.
 > opciones predeterminadas no suelen ser las óptimas para construir un
 > sistema LFS. Para obtener sugerencias sobre cómo configurar una
 > distribución comercial, consulte:
-> [*https://www.linuxfromscratc
-> h.org/hints/downloads/files/partitioning-for-lfs.txt*](https://www.l
-> inuxfromscratch.org/hints/downloads/files/partitioning-for-lfs.txt).
+> [*https://www.linuxfromscratch.org/hints/downloads/files/partitioning-for-lfs.txt*](https://www.linuxfromscratch.org/hints/downloads/files/partitioning-for-lfs.txt).
 
 Como alternativa a instalar una distribución independiente en su equipo,
 puede utilizar un LiveCD de una distribución comercial.
 
-El [capítulo 2](#capitulo-2) Preparación del Sistema Host de este libro describe
-cómo crear una nueva partición y un sistema de archivos nativos de Linux, donde
-se compilará e instalará el nuevo sistema LFS.
+El [Capítulo 2](#capitulo-2) Preparación del Sistema Host, describe cómo crear una nueva partición
+y un sistema de archivos nativos de Linux, donde se compilará e instalará el nuevo sistema LFS.
 
-El [capítulo 3](#capitulo-3) Paquetes y parches explica qué
-paquetes y parches deben descargarse para compilar un sistema LFS y cómo
-almacenarlos en el nuevo sistema de archivos.
+El [Capítulo 3](#capitulo-3) Paquetes y parches, explica qué paquetes y parches deben descargarse
+para compilar un sistema LFS y cómo almacenarlos en el nuevo sistema de archivos.
 
-El [capítulo 4](#capitulo-4) Preparativos Finales describe la configuración de un entorno
+El [Capítulo 4](#capitulo-4) Preparativos Finales, describe la configuración de un entorno
 de trabajo adecuado. Lea atentamente el capítulo 4, ya que explica varios aspectos
 importantes que debe tener en cuenta antes de comenzar a trabajar con el capítulo 5 y posteriores.
 
-El [capítulo 5](#capitulo-5) Compilación de una cadena de herramientas cruzadas explica la
+El [Capítulo 5](#capitulo-5) Compilación de una cadena de herramientas cruzadas, explica la
 instalación de la cadena de herramientas inicial (binutils, gcc y glibc) mediante técnicas
 de compilación cruzada para aislar las nuevas herramientas del sistema host.
 
-El [capítulo 6](#capitulo-6) Herramientas temporales para compilación cruzada muestra cómo
+El [Capítulo 6](#capitulo-6) Herramientas temporales para compilación cruzada, muestra cómo
 realizar la compilación cruzada de utilidades básicas utilizando la cadena de herramientas
 cruzada recién compilada.
 
-El [capítulo 7](#capitulo-7) Entrada al entorno chroot y creación de herramientas temporales
-adicionales se centra en un entorno \"chroot\", donde utilizamos las nuevas herramientas para
+El [Capítulo 7](#capitulo-7) Entrada al entorno chroot y creación de herramientas temporales adicionales,
+se centra en un entorno \"chroot\", donde utilizamos las nuevas herramientas para
 compilar el resto de las herramientas necesarias para crear el sistema LFS.
-
 Este esfuerzo por aislar el nuevo sistema de la distribución host puede
 parecer excesivo. En las [Notas técnicas de la cadena de compilación o
 Toolchain](#Notas técnicas de la cadena de compilación o Toolchain|outline)
 se ofrece una explicación técnica completa de por qué se hace esto.
 
-El Capítulo 8 se dedica a construir el sistema LFS completo. Otra
+El [Capítulo 8](#capitulo-8) Instalación del software básico del sistema, se dedica a construir el sistema LFS completo. Otra
 ventaja del entorno chroot es que permite seguir usando el sistema host
 mientras se construye LFS. Mientras espera a que se completen las
 compilaciones de paquetes, puede seguir usando su ordenador con
 normalidad.
 
-El Capítulo 9, ya para comenzar a finalizar la instalación, trata la
+El [Capítulo 9](#capitulo-9), Configuración del sistema, para comenzar a finalizar la instalación, trata la
 configuración básica del sistema.
 
-El Capítulo 10 crea el kernel y configura el gestor de arranque.
+El [Capítulo 10](#capitulo-10) Haciendo que el sistema LFS sea arrancable crea el kernel y configura el gestor de arranque.
 
-El Capítulo 11 contiene información sobre cómo continuar con la
+El [Capítulo 11](#capitulo-11) Fin, contiene información sobre cómo continuar con la
 experiencia LFS más allá de este libro. Una vez implementados los pasos
 de este capítulo, el ordenador está listo para arrancar en el nuevo
 sistema LFS.
@@ -1942,10 +1938,10 @@ de ingresar al entorno chroot.
 • Los sistemas de archivos virtuales deben estar montados. Esto puede
 hacerse antes o después de ingresar al entorno chroot, cambiando a una
 terminal virtual del host y, como usuario root, ejecutando los comandos
-de la [Sección 7.3.1, "Montaje y preparación de
-/dev"](#7.3.1. Montaje y llenado de /dev|outline) y la [Sección 7.3.2,
-"Montaje de sistemas de archivos virtuales del
-kernel"](#7.3.2. Montaje de sistemas de archivos virtuales del kernel|outline).
+de la [Sección 7.3.1, "Montaje y preparación de /dev"](#7.3.1. Montaje y
+llenado de /dev|outline) y la [Sección 7.3.2,
+"Montaje de sistemas de archivos virtuales del kernel"](#7.3.2. Montaje
+de sistemas de archivos virtuales del kernel|outline).
 
 ---
 &nbsp;
@@ -2322,9 +2318,10 @@ sistema LFS) como root y 755 en caso de que la distribución del host se
 haya configurado para usar una configuración predeterminada diferente
 para **mkfs**:
 
-|**chown root:root \$LFS**|
-|-----------------------|
-|**chmod 755 \$LFS**|
+> ```bash
+> chown root:root $LFS
+> chmod 755 $LFS
+> ```
 
 Asegúrese de que esta nueva partición no se monte con permisos demasiado
 restrictivos (como las opciones nosuid o nodev). Ejecute el comando
@@ -2351,8 +2348,9 @@ montarse.
 Si utiliza una partición de intercambio (swap), asegúrese de que esté
 habilitada con el comando **swapon**:
 
-|**/sbin/swapon -v /dev/\<zzz\>**|
-|------------------------------|
+> ```bash
+> /sbin/swapon -v /dev/<zzz>
+> ```
 
 Reemplace \<zzz\> con el nombre de la partición de intercambio.
 
@@ -2409,8 +2407,9 @@ disponibles durante todas las etapas del proceso de compilación.
 Para crear este directorio, ejecute el siguiente comando como usuario
 root antes de iniciar la descarga:
 
-|**mkdir -v \$LFS/sources**|
-|------------------------|
+> ```bash
+> mkdir -v $LFS/sources
+> ```
 
 Configure este directorio como permanente y con permisos de escritura.
 \"Permanente\" significa que, incluso si varios usuarios tienen permiso
@@ -2418,8 +2417,9 @@ de escritura en un directorio, solo el propietario de un archivo puede
 eliminarlo dentro de un directorio permanente. El siguiente comando
 habilitará los modos de escritura y permanente:
 
-|**chmod -v a+wt \$LFS/sources**|
-|------------------------|
+> ```bash
+> chmod -v a+wt $LFS/sources
+> ```
 
 Hay varias maneras de obtener todos los paquetes y parches necesarios
 para compilar LFS:
@@ -2447,10 +2447,11 @@ Además, a partir de LFS-7.0, existe un archivo independiente,
 que permite verificar la disponibilidad de todos los paquetes correctos
 antes de continuar. Coloque ese archivo en \$LFS/sources y ejecute:
 
-|**pushd \$LFS/sources**|
-|-----------------------|
-|**md5sum -c md5sums**|
-|**popdchown root:root $LFS/sources/*\**|
+> ```bash
+> pushd $LFS/sources
+> md5sum -c md5sums
+> popdchown root:root $LFS/sources/
+> ```
 
 Esta comprobación puede realizarse después de recuperar los archivos
 necesarios con cualquiera de los métodos mencionados anteriormente.
@@ -2463,8 +2464,9 @@ un UID sin nombre en el sistema LFS final. Si no asigna el mismo UID a
 su usuario en el sistema LFS, cambie la propiedad de estos archivos a
 root para evitar este problema:
 
-|**chown root:root $LFS/sources/*\**|
-|**----------------------------------**|
+> ```bash
+> chown root:root $LFS/sources/*
+> ```
 
 ---
 &nbsp;
@@ -3366,8 +3368,9 @@ herramientas\"). Este compilador cruzado se instalará en un directorio
 especial para separarlo de los demás programas. Aún como root, cree ese
 directorio con este comando:
 
-|**mkdir -pv \$LFS/tools**|
-|-----------------------|
+> ```bash
+> mkdir -pv $LFS/tools
+> ```
 
 > **Nota**
 > 
@@ -3474,12 +3477,11 @@ Configure un buen entorno de trabajo creando dos nuevos archivos de
 inicio para el shell **bash**. Con la sesión iniciada como usuario lfs,
 ejecute el siguiente comando para crear un nuevo archivo .bash_profile:
 
-> +----------------------------------------------------------------------+
-> ---
-> cat \> \~/.bash_profile \<\< \"EOF\"
-> exec env -i HOME=\$HOME TERM=\$*TERM* PS1=\'\\u:\\w\\\$ \' /bin/bash
+> ```bash
+> cat > ~/.bash_profile << "EOF"
+> exec env -i HOME=$HOME TERM=$*TERM* PS1='\u:\w\$ ' /bin/bash
 > EOF
-> +----------------------------------------------------------------------+
+> ```
 
 Al iniciar sesión como usuario lfs, o al cambiar al usuario lfs mediante
 el comando su con la opción \"-\", el shell inicial es un shell de
@@ -3497,21 +3499,20 @@ lee ni ejecuta el contenido de los archivos /etc/profile ni
 .bash_profile, sino que lee y ejecuta el archivo .bashrc. Cree el
 archivo .bashrc ahora:
 
-> +-----------------------------------------------+
-> ---
+> ```bash
 > cat \> \~/.bashrc \<\< \"EOF\"
 > set +h
 > umask 022
 > LFS=/mnt/lfs
 > LC_ALL=POSIX
-> LFS_TGT=\$(uname -m)-lfs-linux-gnu
+> LFS_TGT=$(uname -m)-lfs-linux-gnu
 > PATH=/usr/bin
-> if \[ ! -L /bin \]; then PATH=/bin:\$PATH; fi
-> PATH=\$LFS/tools/bin:\$PATH
-> CONFIG_SITE=\$LFS/usr/share/config.site
+> if [ ! -L /bin ]; then PATH=/bin:$PATH; fi
+> PATH=$LFS/tools/bin:$PATH
+> CONFIG_SITE=$LFS/usr/share/config.site
 > export LFS LC_ALL LFS_TGT PATH CONFIG_SITE
 > EOF
-> +-----------------------------------------------+
+> ```
 
 Significado de la configuración en .bashrc
 
@@ -3584,9 +3585,8 @@ export \...
 Aunque los comandos anteriores han configurado algunas variables, para
 que sean visibles en cualquier subshell, las exportamos.
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Varias distribuciones comerciales añaden una *instancia* no
 > documentada de /etc/bash.bashrc a la inicialización de bash. Este
 > archivo puede modificar el entorno del usuario lfs de forma que
@@ -3594,18 +3594,16 @@ que sean visibles en cualquier subshell, las exportamos.
 > asegurarse de que el entorno del usuario lfs esté limpio, compruebe
 > la presencia de /etc/bash.bashrc y, si está presente, elimínelo.
 > Como usuario root, ejecute:
-> +----------------------------------------------------------------------+
-> \[ ! -e /etc/*bash.bashrc* \] \ | \ | mv -v /etc/bash.bashrc
-> /etc/bash.bashrc.NOUSE
-> +----------------------------------------------------------------------+
-> Cuando el usuario lfs ya no sea necesario (al principio del Capítulo
-> 7), puede restaurar /etc/bash.
+> ```bash
+> [ ! -e /etc/*bash.bashrc* ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE
+> ```
+> Cuando el usuario lfs ya no sea necesario (al principio del Capítulo 7),
+> puede restaurar /etc/bash.
 > bashrc de forma segura (si lo desea).
 > Tenga en cuenta que el paquete LFS Bash que crearemos en la Sección
 > 8.36, "Bash-5.2.37" no está configurado para cargar ni ejecutar
 > /etc/bash.bashrc, por lo que este archivo es inútil en un sistema
 > LFS completo.
-> +----------------------------------------------------------------------+
 
 En muchos sistemas modernos con varios procesadores (o núcleos), el
 tiempo de compilación de un paquete se puede reducir realizando una
@@ -3620,36 +3618,33 @@ todos estos núcleos lógicos es permitir que **make** genere hasta 32
 trabajos de compilación. Esto se puede hacer pasando la opción -j32 a
 **make**:
 
-  -----------
-  make -j32
-  -----------
+> ```bash
+> make -j32
+> ```
 
 O bien, configurando la variable de entorno MAKEFLAGS, cuyo contenido
 será utilizado automáticamente por **make** como opción de línea de
 comandos:
 
-  -----------------------
-  export MAKEFLAGS=-j32
-  -----------------------
+> ```bash
+> export MAKEFLAGS=-j32
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Nunca pase una opción -j sin un número para **make** ni configure
 > dicha opción en MAKEFLAGS. Hacerlo permitiría que **make** genere
 > trabajos de compilación infinitos y causara problemas de estabilidad
 > del sistema.
-> +----------------------------------------------------------------------+
 
 Para usar todos los núcleos lógicos disponibles para compilar paquetes
 en los capítulos 5 y 6, configure MAKEFLAGS ahora en .bashrc:
 
-> +----------------------------------+
-> ---
-> cat \>\> \~/.bashrc \<\< \"EOF\"
-> export MAKEFLAGS=-j\$(*nproc*)
+> ```bash
+> cat >> ~/.bashrc << "EOF"
+> export MAKEFLAGS=-j$(*nproc*)
 > EOF
-> +----------------------------------+
+> ```
 
 Reemplace \$(nproc) con el número de núcleos lógicos que desea usar si
 no desea usarlos todos.
@@ -3658,9 +3653,9 @@ Finalmente, para asegurar que el entorno esté completamente preparado
 para compilar las herramientas temporales, fuerce la shell bash a leer
 el nuevo perfil de usuario:
 
-  -------------------------
-  source \~/.bash_profile
-  -------------------------
+> ```bash
+> source ~/.bash_profile
+> ```
 
 ## 4.5. Acerca de las Standard Build Unit o SBU
 
@@ -3719,9 +3714,8 @@ rendimiento. Algunas distribuciones proporcionan el comando
 **tuned-adm profile throughput-performance** para seleccionar el perfil
 de rendimiento (throughput-performance).
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Cuando se utilizan varios procesadores de esta manera, las unidades
 > SBU del libro variarán aún más de lo normal. En algunos casos, el
 > paso de creación simplemente fallará. Analizar la salida del proceso
@@ -3734,7 +3728,6 @@ de rendimiento (throughput-performance).
 > cuatro núcleos (-j4). Los tiempos del Capítulo 8 también incluyen el
 > tiempo necesario para ejecutar las pruebas de regresión del paquete,
 > a menos que se especifique lo contrario.
-> +----------------------------------------------------------------------+
 
 ### 
 
@@ -3755,46 +3748,34 @@ fundamental en el correcto funcionamiento del sistema. Las suites de
 pruebas para GCC y glibc pueden tardar mucho tiempo en completarse,
 especialmente en hardware lento, pero se recomiendan encarecidamente.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Ejecutar las suites de pruebas de los capítulos 5 y 6 no tiene
 > sentido; dado que los programas de prueba se compilan con un
 > compilador cruzado, probablemente no puedan ejecutarse en el host de
 > compilación.
-> +----------------------------------------------------------------------+
 
 Un problema común al ejecutar las suites de pruebas para binutils y GCC
 es quedarse sin pseudoterminales (PTY). Esto puede provocar un gran
 número de pruebas fallidas. Esto puede ocurrir por varias razones, pero
 la causa más probable es que el sistema host no tenga configurado
 correctamente el sistema de archivos devpts. Este problema se describe
-con más detalle en *https://www.
-linuxfromscratch.org/lfs/faq.html#no-ptys*.
+con más detalle en
+
+´[https://www.linuxfromscratch.org/lfs/faq.html#no-ptys](www.linuxfromscratch.org/lfs/faq.html#no-ptys).
 
 En ocasiones, las suites de pruebas de paquetes fallan por razones que
 los desarrolladores conocen y que no consideran críticas.
 
-Consulte los registros en
-*https://www.linuxfromscratch.org/lfs/build-logs/12.3/* para verificar
-si estos fallos son previsibles. Este sitio es válido para todas las
+Consulte los registros en [https://www.linuxfromscratch.org/lfs/build-logs/12.3/](www.linuxfromscratch.org/lfs/faq.html#no-ptys)
+para verificar si estos fallos son previsibles. Este sitio es válido para todas las
 suites de pruebas de este libro.
 
-## 
 
-## 
+---
+&nbsp;
+&nbsp;
 
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
 
 ## Parte III. Creación de la cadena de herramientas cruzadas de LFS y herramientas temporales
 
@@ -3809,9 +3790,8 @@ aíslen de la distribución del host; y tercero, entrar en el entorno
 chroot (que mejora aún más el aislamiento del host) y construir las
 herramientas restantes necesarias para construir el sistema final.
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Aquí es donde comienza el verdadero trabajo de construir un nuevo
 > sistema. Asegúrese de seguir las instrucciones exactamente como se
 > muestran en el libro. Debe intentar comprender la función de cada
@@ -3821,7 +3801,6 @@ herramientas restantes necesarias para construir el sistema final.
 > de los comandos, utilizando la utilidad tee para enviar la salida de
 > la terminal a un archivo. Esto facilita la depuración si algo sale
 > mal.
-> +----------------------------------------------------------------------+
 
 La siguiente sección es una introducción técnica al proceso de
 compilación, mientras que la siguiente presenta instrucciones generales
@@ -3855,15 +3834,13 @@ depender del entorno del host.
 
 ## Acerca de la compilación-cruzada
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El libro de LFS no es (ni contiene) un tutorial general para
 > construir una cadena de herramientas cruzada (o nativa). No utilice
 > los comandos del libro para una cadena de herramientas cruzada con
 > ningún otro propósito que no sea la compilación de LFS, a menos que
 > realmente comprenda lo que está haciendo.
-> +----------------------------------------------------------------------+
 
 La compilación cruzada implica algunos conceptos que merecen una sección
 aparte. Aunque esta sección puede omitirse en una primera lectura,
@@ -3871,18 +3848,18 @@ volver a ella más adelante le ayudará a comprender mejor el proceso.
 
 Primero, definamos algunos términos utilizados en este contexto.
 
-La compilación
+### La compilación
 
 es la máquina donde compilamos los programas. Tenga en cuenta que esta
 máquina también se denomina \"host\".
 
-El host
+### El host
 
 es la máquina/sistema donde se ejecutarán los programas compilados.
 Tenga en cuenta que este uso de \"host\" no es el mismo que en otras
 secciones.
 
-El objetivo
+### El objetivo
 
 solo se usa para compiladores. Es la máquina para la que el compilador
 produce código. Puede ser diferente tanto de la compilación como del
@@ -6867,7 +6844,7 @@ continúe compilando el resto del sistema.
 
 ## Parte IV. Compilación del sistema LFS
 
-## Capítulo 8. Instalación del software básico del sistema
+## Capítulo 8. Instalación del software básico del sistema <a name="capitulo-8"></a>
 
 ## 8.1. Introducción
 
@@ -16212,9 +16189,9 @@ al principio del capítulo anterior.****
   **userdel -r tester**
   -----------------------
 
-## **Capítulo 9. Configuración del sistema**
+## Capítulo 9. Configuración del sistema <a name="capitulo-9"></a>
 
-## **9.1. Introducción**
+## 9.1. Introducción
 
 ****Arrancar un sistema Linux implica varias tareas. El proceso debe
 montar sistemas de archivos virtuales y reales, inicializar
@@ -17946,7 +17923,7 @@ este archivo.
 > EOF
 > +---------------------------------+
 
-## Capítulo 10. Haciendo que el sistema LFS sea arrancable
+## Capítulo 10. Haciendo que el sistema LFS sea arrancable <a name="capitulo-10"></a>
 
 ## 10.1. Introducción
 
@@ -18754,7 +18731,7 @@ fuera del alcance de esta introducción.
 > grub.cfg.
 > +----------------------------------------------------------------------+
 
-## Capítulo 11. Fin
+## Capítulo 11. Fin <a name="capitulo-11"></a>
 
 ## 11.1. Fin
 
