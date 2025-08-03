@@ -4589,13 +4589,10 @@ ubicación necesaria. crear encabezados
 
 #### Descripciones breves
 
-/usr/include/asm/\*.h Cabeceras ASM de la API de Linux.
-
-/usr/include/asm-generic/\*.h Cabeceras genéricas ASM de la API de
-Linux.
-
-|/usr/include/drm/\*.h | Cabeceras DRM de la API de Linux.|
+|/usr/include/asm/\*.hv| Cabeceras ASM de la API de Linux.|
 |------|------|
+|/usr/include/asm-generic/\*.h | Cabeceras genéricas ASM de la API de Linux.|
+|/usr/include/drm/\*.h | Cabeceras DRM de la API de Linux.|
 |/usr/include/linux/\*.h | Cabeceras Linux de la API de Linux.|
 |/usr/include/misc/\*.h | Cabeceras misceláneas de la API de Linux.|
 |/usr/include/mtd/\*.h | Cabeceras MTD de la API de Linux.|
