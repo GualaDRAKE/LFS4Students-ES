@@ -1598,6 +1598,7 @@ sistema](#Script version-check.sh|outline)
 • Indique si se ha desviado del libro
 
 > **Nota**
+> 
 > Desviarse del libro no significa que no le ayudaremos. Al fin y al
 > cabo, LFS se basa en preferencias personales.
 > Ser transparentes sobre cualquier cambio en el procedimiento
@@ -1641,6 +1642,7 @@ pantalla de **make**.
 > make[1]: *** [all-recursive] Error 1
 > make[1]: Leaving directory `/lfs/tmp/make-3.79.1'
 > make: *** [all-recursive-am] Error 2
+> ```
 
 En este caso, muchos usuarios solo incluirían la sección inferior:
 
