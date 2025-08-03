@@ -4242,9 +4242,9 @@ compilar.
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-Tiempo de compilación aproximado: 1 SBU
-
-Espacio en disco requerido: 677 MB
+|Tiempo de compilación aproximado:|1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|677 GB|
 
 ### 5.2.1. Instalación de Cross Binutils
 
@@ -4368,8 +4368,8 @@ Los detalles de este paquete se encuentran en la Sección 8.20.2,
 El paquete GCC contiene la colección de compiladores GNU, que incluye
 los compiladores de C y C++.
 
-|Tiempo de compilación aproximado:|3,2 SBU
-|---------------------------------|:--------:|
+|Tiempo de compilación aproximado:|3,2 SBU|
+|---------------------------------|-------|
 |Espacio en disco requerido:|4,8 GB|
 
 ### 5.3.1. Instalación de Cross GCC
