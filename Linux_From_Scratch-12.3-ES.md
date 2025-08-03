@@ -9930,57 +9930,55 @@ sesión.
 logoutd Es un demonio que se utiliza para imponer restricciones en el
 tiempo y los puertos de inicio de sesión.
 
-newgidmap ****Se usa para establecer el mapeo de GID de un espacio de
-nombres de usuario****
+newgidmap Se usa para establecer el mapeo de GID de un espacio de
+nombres de usuario
 
-newgrp ****Se usa para cambiar el GID actual durante una sesión de
-inicio de sesión****
+newgrp Se usa para cambiar el GID actual durante una sesión de
+inicio de sesión
 
-newuidmap ****Se usa para establecer el mapeo de UID de un espacio de
-nombres de usuario****
+newuidmap Se usa para establecer el mapeo de UID de un espacio de
+nombres de usuario
 
-newusers ****Se usa para crear o actualizar toda una serie de cuentas de
-usuario****
+newusers Se usa para crear o actualizar toda una serie de cuentas de
+usuario
 
-nologin ****Muestra un mensaje diciendo que una cuenta no está
+nologin Muestra un mensaje diciendo que una cuenta no está
 disponible; está diseñado para usarse como shell por defecto para
-cuentas deshabilitadas****
+cuentas deshabilitadas
 
-passwd ****Se usa para cambiar la contraseña de una cuenta de usuario o
-grupo****
+passwd Se usa para cambiar la contraseña de una cuenta de usuario o
+grupo
 
-pwck ****Verifica la integridad de los archivos de contraseñas
-/etc/passwd y /etc/shadow****
+pwck Verifica la integridad de los archivos de contraseñas
+/etc/passwd y /etc/shadow
 
-pwconv ****Crea o actualiza el archivo de contraseñas shadow a partir
-del archivo de contraseñas normal****
+pwconv Crea o actualiza el archivo de contraseñas shadow a partir
+del archivo de contraseñas normal
 
-pwunconv ****Actualiza /etc/passwd desde /etc/shadow y luego elimina
-este último****
+pwunconv Actualiza /etc/passwd desde /etc/shadow y luego elimina
+este último
 
-sg ****Ejecuta un comando dado mientras el GID del usuario está
-establecido al del grupo dado****
+sg Ejecuta un comando dado mientras el GID del usuario está
+establecido al del grupo dado
 
-**su **Ejecuta un shell con IDs de usuario y grupo sustitutos****
+**su** Ejecuta un shell con IDs de usuario y grupo sustitutos****
 
 useradd ****Crea un nuevo usuario con el nombre dado, o actualiza la
-información predeterminada de nuevos usuarios****
+información predeterminada de nuevos usuarios
 
-userdel ****Elimina la cuenta de usuario especificada****
+userdel Elimina la cuenta de usuario especificada
 
-usermod ****Se usa para modificar el nombre de inicio de sesión, UID,
-shell, grupo inicial, directorio personal, etc. del usuario dado****
+usermod Se usa para modificar el nombre de inicio de sesión, UID,
+shell, grupo inicial, directorio personal, etc. del usuario dado
 
-vigr ****Edita los archivos *****/etc/group***** o
-*****/etc/gshadow*****
+vigr Edita los archivos /etc/group o /etc/gshadow
 
-vipw ****Edita los archivos *****/etc/passwd***** o
-*****/etc/shadow*****
+vipw Edita los archivos /etc/passwd o /etc/shadow
 
-*libsubid ******Biblioteca para manejar rangos de ID subordinados para
-usuarios y grupos*****
+libsubid Biblioteca para manejar rangos de ID subordinados para
+usuarios y grupos
 
-## **8.29. GCC-14.2.0**
+## 8.29. GCC-14.2.0
 
 ****El paquete GCC contiene la colección de compiladores GNU, que
 incluye los compiladores de C y C++.****
