@@ -4380,74 +4380,68 @@ Descomprima cada paquete en el directorio de origen de GCC y renombre
 los directorios resultantes para que los procedimientos de compilación
 de GCC los utilicen automáticamente:
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Este capítulo suele dar lugar a malentendidos. Los procedimientos
 > son los mismos que en los demás capítulos, como se explicó
 > anteriormente (Instrucciones de compilación de paquetes). Primero,
 > extraiga el archivo tar gcc-14.2.0 del directorio de *origen* y
 > luego acceda al directorio creado. Solo entonces debe continuar con
 > las instrucciones a continuación.
-> +----------------------------------------------------------------------+
 
-> +------------------------------+
-> ---
+> ```bash
 > tar -xf ../mpfr-4.2.1.tar.xz
 > mv -v mpfr-4.2.1 mpfr
 > tar -xf ../gmp-6.3.0.tar.xz
 > mv -v gmp-6.3.0 gmp
 > tar -xf ../mpc-1.3.1.tar.gz
 > mv -v mpc-1.3.1 mpc
-> +------------------------------+
+> ```
 
 En hosts x86_64, configure el nombre de directorio predeterminado para
 las bibliotecas de 64 bits como "lib":
 
-> +-------------------------------------------+
-> ---
-> case \$(uname -m) in
-> x86_64)
-> sed -e \'/m64=/s/lib64/*lib*/\' \\
-> -i.orig gcc/config/i386/t-linux64
+> ```bash
+> case $(uname -m) in
+>   x86_64)
+>     sed -e '/m64=/s/lib64/*lib*\' \
+>         -i.orig gcc/config/i386/t-linux64
 > ;;
 > esac
-> +-------------------------------------------+
+> ```
 
 La documentación de GCC recomienda compilar GCC en un directorio de
 compilación dedicado:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
 Preparar GCC para la compilación:
 
-> +-----------------------------------+
-> ---
-> ../configure \\
-> \--target=\$LFS_TGT \\
-> \--prefix=\$LFS/tools \\
-> \--with-glibc-version=2.41 \\
-> \--with-sysroot=\$LFS \\
-> \--with-newlib \\
-> \--without-headers \\
-> \--enable-default-pie \\
-> \--enable-default-ssp \\
-> \--disable-nls \\
-> \--disable-shared \\
-> \--disable-multilib \\
-> \--disable-threads \\
-> \--disable-libatomic \\
-> \--disable-libgomp \\
-> \--disable-libquadmath \\
-> \--disable-libssp \\
-> \--disable-libvtv \\
-> \--disable-libstdcxx \\
-> \--enable-languages=c,c++
-> +-----------------------------------+
+> ```bash
+> ../configure                   \
+>     --target=\$LFS_TGT         \
+>     --prefix=\$LFS/tools       \
+>     --with-glibc-version=2.41  \
+>     --with-sysroot=\$LFS       \
+>     --with-newlib              \
+>     --without-headers          \
+>     --enable-default-pie       \
+>     --enable-default-ssp       \
+>     --disable-nls              \
+>     --disable-shared           \
+>     --disable-multilib         \
+>     --disable-threads          \
+>     --disable-libatomic        \
+>     --disable-libgomp          \
+>     --disable-libquadmath      \
+>     --disable-libssp           \
+>     --disable-libvtv           \
+>     --disable-libstdcxx        \
+>     --enable-languages=c,c++
+> ```
 
 El significado de las opciones de configuración:
 
