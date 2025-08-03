@@ -4533,13 +4533,11 @@ compilación GCC realiza en circunstancias normales:
 > \$(). Podría reescribirse con el mismo método para ambas
 > sustituciones, pero se muestra así para demostrar cómo combinarlas.
 > Generalmente, se prefiere el método \$().
-> 
-> ---
-> 
-> cd ..
+>
 > ```bash
+> cd ..
 > cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
-> `dirname $(\$LFS_TGT-gcc -print-*libgcc*-file-name)`/include/limits.h
+>   `dirname $(\$LFS_TGT-gcc -print-*libgcc*-file-name)`/include/limits.h
 > ```
 
 Los detalles de este paquete se encuentran en la Sección 8.29.2,
