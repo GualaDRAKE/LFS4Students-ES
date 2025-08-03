@@ -4528,10 +4528,8 @@ compilación GCC realiza en circunstancias normales:
 
 > **Nota**
 > 
-> El siguiente comando muestra un ejemplo de sustitución de comandos
-> anidada con dos métodos: comillas invertidas y una construcción
-> \$\(\). Podría reescribirse con el mismo método para ambas
-> sustituciones, pero se muestra así para demostrar cómo combinarlas.
+> El siguiente comando muestra un ejemplo de sustitución de comandos anidada con dos métodos: comillas invertidas y una construcción
+> \$\(\). Podría reescribirse con el mismo método para ambas sustituciones, pero se muestra así para demostrar cómo combinarlas.
 > Generalmente, se prefiere el método \$\(\).
 >
 > ```bash
