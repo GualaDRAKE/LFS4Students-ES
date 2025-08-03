@@ -4422,10 +4422,10 @@ Preparar GCC para la compilación:
 
 > ```bash
 > ../configure                   \
->     --target=\$LFS_TGT         \
->     --prefix=\$LFS/tools       \
+>     --target=$LFS_TGT         \
+>     --prefix=$LFS/tools       \
 >     --with-glibc-version=2.41  \
->     --with-sysroot=\$LFS       \
+>     --with-sysroot=$LFS       \
 >     --with-newlib              \
 >     --without-headers          \
 >     --enable-default-pie       \
