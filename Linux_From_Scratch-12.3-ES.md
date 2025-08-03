@@ -2259,7 +2259,7 @@ sistema LFS.
 > configurar \$LFS con el nombre de directorio correcto y establecer
 > 
 > ```bash
-> umask en 022
+> umask
 > ```
 
 > **Nota**
