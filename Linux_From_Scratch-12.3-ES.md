@@ -4218,6 +4218,10 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > e\. Elimine el directorio de fuentes extraído a menos que se le
 > indique lo contrario.
 
+---
+&nbsp;
+&nbsp;
+
 ## Capítulo 5 - Compilación de una cadena de herramientas cruzadas <a name="capitulo-5"></a>
 
 ## 5.1. Introducción
@@ -4244,13 +4248,11 @@ Espacio en disco requerido: 677 MB
 
 ### 5.2.1. Instalación de Cross Binutils
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Revise las notas en la sección titulada Instrucciones generales de
 > compilación. Comprender las notas marcadas como importantes puede
 > ahorrarle muchos problemas más adelante.
-> +----------------------------------------------------------------------+
 
 Es importante que Binutils sea el primer paquete compilado, ya que tanto
 Glibc como GCC realizan varias pruebas en el enlazador y ensamblador
@@ -4259,36 +4261,32 @@ disponibles para determinar cuáles de sus propias funciones habilitar.
 La documentación de Binutils recomienda compilarlo en un directorio de
 compilación dedicado:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Para que los valores de SBU que se indican en el resto del libro
 > sean útiles, mida el tiempo que tarda en compilarse este paquete
 > desde la configuración hasta la primera instalación, incluyendo
 > esta. Para lograr esto fácilmente, encierre los comandos en un
-> comando de tiempo como este: time { ../configure \... && make &&
-> make install; }.
-> +----------------------------------------------------------------------+
+> comando de tiempo como este: **time { ../configure \... && make &&
+> make install; }**.
 
 Ahora prepare Binutils para la compilación:
 
-> +-----------------------------------------------+
-> ---
-> ../configure \--prefix=\$LFS/tools \\
-> \--with-sysroot=\$LFS \\
-> \--target=\$LFS_TGT \\
-> \--disable-nls \\
-> \--enable-gprofng=no \\
-> \--disable-werror \\
-> \--enable-new-dtags \\
-> \--enable-default-hash-style=gnu
-> +-----------------------------------------------+
+> ```bash
+> ../configure --prefix=$LFS/tools \
+>               --with-sysroot=$LFS \
+>               --target=$LFS_TGT   \
+>               --disable-nls        \
+>               --enable-gprofng=no  \
+>               --disable-werror     \
+>               --enable-new-dtags   \
+>               --enable-default-hash-style=gnu
+> ```
 
 Significado de las opciones de configuración:
 
@@ -4348,27 +4346,31 @@ almacenarla.
 
 Continúe compilando el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.20.2,
 "Contenido de Binutils".
+
+---
+&nbsp;
+&nbsp;
 
 ## 5.3. GCC-14.2.0 - Paso 1
 
 El paquete GCC contiene la colección de compiladores GNU, que incluye
 los compiladores de C y C++.
 
-Tiempo de compilación aproximado: 3,2 SBU
-
-Espacio en disco requerido: 4,8 GB
+|Tiempo de compilación aproximado:|3,2 SBU
+|---------------------------------|:--------:|
+|Espacio en disco requerido:|4,8 GB|
 
 ### 5.3.1. Instalación de Cross GCC
 
