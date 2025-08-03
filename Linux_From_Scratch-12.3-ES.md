@@ -503,7 +503,9 @@ de archivos fuente.
 
 Este paquete contiene programas para redes IPv4 e IPv6 básicas y
 avanzadas. Fue elegido en l ugar del otro paquete de herramientas de red
-común (net-tools) por sus capacidades IPv6. • Kbd
+común (net-tools) por sus capacidades IPv6.
+
+• Kbd
 
 Este paquete produce archivos de tablas de teclas, utilidades de teclado
 para teclados no estadounidenses y diversas fuentes de consola.
