@@ -3884,7 +3884,7 @@ y queremos producir código para una tercera máquina lenta (C).
 Construiremos un compilador para la máquina C en tres etapas.
 
 | Etapa | Compilación | Host | Objetivo | Acción |
-|-------|-------------|------|----------|--------|
+|:-------:|:-------------:|:------:|:----------:|:--------:|
 |1      |   A         |  A   |    B     |Construir el compilador cruzado cc1 usando ccA en la máquina A|
 |2      |   A         |  B   |    C     |Construir el compilador cruzado cc2 usando cc1 en la máquina A|
 |3      |   B         |  C   |    C     |Construir el compilador cruzado ccC usando cc2 en la máquina B|
@@ -3898,10 +3898,9 @@ ejecutándose. Por
 ejemplo, para ejecutar un conjunto de pruebas en ccC, podríamos añadir
 una cuarta etapa:
 
-  ------- ------------- ------ ---------- ------------------------------------------------------
-  Etapa   Compilación   Host   Objetivo   Acción
-  4       C             C      C          Reconstruir y probar ccC usando ccC en la máquina C.
-  ------- ------------- ------ ---------- ------------------------------------------------------
+| Etapa | Compilación | Host | Objetivo | Acción |
+|-------|-------------|------|----------|--------|
+|   4   |      C      |   C  |    C     |Reconstruir y probar ccC usando ccC en la máquina C|
 
 En el ejemplo anterior, solo cc1 y cc2 son compiladores cruzados; es
 decir, producen código para una máquina diferente de aquella en la que
@@ -3911,9 +3910,8 @@ compiladores nativos.
 
 Implementación de la compilación cruzada para LFS
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Todos los paquetes compilados cruzados de este libro utilizan un
 > sistema de compilación basado en autoconf. Este sistema acepta tipos
 > de sistema con la forma cpu-vendor-kernel-os, conocido como el
@@ -3957,7 +3955,6 @@ Implementación de la compilación cruzada para LFS
 > **readelf -l \<nombre del binario\> \ | grep interpreter** y anotando
 > la salida. La referencia autorizada que cubre todas las plataformas
 > se encuentra en una página wiki de Glibc.
-> +----------------------------------------------------------------------+
 
 Para simular una compilación cruzada en LFS, el nombre del triplete del
 host se ajusta ligeramente cambiando el campo \"vendor\" en la variable
@@ -3968,12 +3965,12 @@ garantiza que ninguno de los otros programas compilados en el Capítulo 6
 pueda enlazar con las bibliotecas en el equipo de compilación. Solo son
 obligatorias dos etapas, más una adicional para pruebas.
 
-  ------- ------------- ------ ---------- -----------------------------------------------------------
-  Etapa   Compilación   Host   Objetivo   Acción
-  1       pc            pc     lfs        Construir el compilador cruzado cc1 usando cc-pc en pc.
-  2       pc            lfs    lfs        Construir el compilador cruzado cc-lfs usando cc-1 en pc.
-  3       lfs           lfs    lfs        Reconstruir y probar cc-lfs usando cc-lfs en lfs.
-  ------- ------------- ------ ---------- -----------------------------------------------------------
+
+| Etapa | Compilación | Host | Objetivo | Acción |
+|-------|-------------|------|----------|--------|
+|   1   |      pc     |  pc  |   lfs    |Construir el compilador cruzado cc1 usando cc-pc en pc|
+|   2   |      pc     | lfs  |   lfs    |Construir el compilador cruzado cc-lfs usando cc-1 en pc|
+|   3   |     lfs     | lfs  |   lfs    |Reconstruir y probar cc-lfs usando cc-lfs en lfs|
 
 En la tabla anterior, \"en PC\" significa que los comandos se ejecutan
 en una máquina con la distribución ya instalada. \"En LFS\" significa
