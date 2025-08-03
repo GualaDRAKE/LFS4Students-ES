@@ -4840,7 +4840,7 @@ Prepare Libstdc++ para la compilación:
 > ```bash
 > ../libstdc++-v3/configure           \
 >     --host=$LFS_TGT                 \
->     --build=$(../config.guess)   \
+>     --build=$(../config.guess)      \
 >     --prefix=/usr                   \
 >     --disable-multilib              \
 >     --disable-nls                   \
