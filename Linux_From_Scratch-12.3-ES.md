@@ -4281,7 +4281,7 @@ compilación dedicado:
 Ahora prepare Binutils para la compilación:
 
 > ```bash
-> ../configure --prefix=$LFS/tools  \
+> ../configure --prefix=$LFS/tools   \
 >               --with-sysroot=$LFS  \
 >               --target=$LFS_TGT    \
 >               --disable-nls        \
