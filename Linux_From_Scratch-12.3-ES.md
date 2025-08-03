@@ -13081,83 +13081,77 @@ interactiva
 
 ## 8.61. Gawk-5.3.1
 
-****El paquete Gawk contiene programas para manipular archivos de
-texto.****
+El paquete Gawk contiene programas para manipular archivos de
+texto.
 
-****Tiempo aproximado de compilación: ****0.2 SBU****
+Tiempo aproximado de compilación: 0.2 SBU
 
-****Espacio en disco necesario: ****43 MB****
+Espacio en disco necesario: 43 MB
 
-### **8.61.1. Instalación de Gawk**
+### 8.61.1. Instalación de Gawk
 
-****Primero, asegúrese de que no se instalen archivos innecesarios:****
+Primero, asegúrese de que no se instalen archivos innecesarios:
 
   ---------------------------------------------
-  **sed -i \'s/extras//\' ***Makefile.in*****
+  sed -i 's/extras//' Makefile.in
   ---------------------------------------------
 
-****Prepare Gawk para la compilación:****
+Prepare Gawk para la compilación:
 
   -------------------------------------
-  **./configure --***prefix***=/usr**
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
-> +---------------------------------------------+
-> ---
-> **chown -R ***tester*** .**
-> **su tester -c \"PATH=\$PATH make check\"**
-> +---------------------------------------------+
+> chown -R tester .
+> su tester -c "PATH=$PATH make check"
 
-****Instalar el paquete:****
+Instalar el paquete:
 
-> +-------------------------------+
-> ---
-> **rm -f /usr/bin/gawk-5.3.1**
-> **make install**
-> +-------------------------------+
+> rm -f /usr/bin/gawk-5.3.1
+> make install
 
-**Significado del comando:**
+**Significado del comando**:
 
-** rm -f /usr/bin/gawk-5.3.1**
+rm -f /usr/bin/gawk-5.3.1
 
-**** ****El sistema de compilación no recreará el enlace físico
+El sistema de compilación no recreará el enlace físico
 gawk-5.3.1 si ya existe. Elimínelo para garantizar que el enlace físico
 anterior instalado en la Sección 6.9, "Gawk-5.3.1" se actualice
-aquí.****
+aquí.*
 
-****El proceso de instalación ya creó **awk** como enlace simbólico a
-**gawk**; cree también su página de manual como enlace simbólico:****
+El proceso de instalación ya creó **awk** como enlace simbólico a
+**gawk**; cree también su página de manual como enlace simbólico:
 
   ---------------------------------------------
-  **ln -sv gawk.1 /usr/share/man/man1/awk.1**
+  ln -sv gawk.1 /usr/share/man/man1/awk.1
   ---------------------------------------------
 
-****Si lo desea, instale la documentación:****
+Si lo desea, instale la documentación:
 
   --------------------------------------------------------------------------------------------
-  **install -***vDm644*** doc/{awkforai.txt,\*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-5.3.1**
+  install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-5.3.1
   --------------------------------------------------------------------------------------------
 
-### **8.61.2. Contenido de Gawk**
+### 8.61.2. Contenido de Gawk
 
-**Programas instalados**: awk (enlace a gawk), gawk y gawk-5.3.1****
+**Programas instalados**: awk (enlace a gawk), gawk y gawk-5.3.1
 
 **Bibliotecas instaladas**: filefuncs.so, fnmatch.so, fork.so,
 inplace.so, intdiv.so, ordchr.so, readdir.so, readfile.so, revoutput.so,
 revtwoway.so, rwarray.so y time.so (todas en /usr/lib/gawk)****
 
 **Directorios instalados**: /usr/lib/gawk, /usr/libexec/awk,
-/usr/share/awk y /usr/share/doc/gawk- 5.3.1****
+/usr/share/awk y /usr/share/doc/gawk- 5.3.1
 
-### **Descripciones breves**
+### Descripciones breves
 
 **awk** Enlace a **gawk**
 
@@ -13166,120 +13160,117 @@ implementación GNU de **awk**
 
 **gawk-5.3.1** Enlace físico a **gawk**
 
-## **8.62. Findutils-4.10.0**
+## 8.62. Findutils-4.10.0
 
-****El paquete Findutils contiene programas para buscar archivos. Se
+El paquete Findutils contiene programas para buscar archivos. Se
 proporcionan programas para buscar en todos los archivos de un árbol de
 directorios y para crear, mantener y buscar en una base de datos (a
 menudo más rápido que la búsqueda recursiva, pero poco fiable a menos
 que la base de datos se haya actualizado recientemente). Findutils
 también incluye el programa **xargs**, que permite ejecutar un comando
-específico en cada archivo seleccionado en una búsqueda.****
+específico en cada archivo seleccionado en una búsqueda.
 
-****Tiempo de compilación aproximado: ****0.7 SBU****
+Tiempo de compilación aproximado: 0.7 SBU
 
-****Espacio en disco necesario: ****63 MB****
+Espacio en disco necesario: 63 MB
 
-### **8.62.1. Instalación de Findutils**
+### 8.62.1. Instalación de Findutils
 
 ****Preparar Findutils para la compilación:****
 
   ----------------------------------------------------------------------
-  **./configure \--***prefix***=/usr --localstatedir=/var/lib/locate**
+ ./configure --prefix=/usr --localstatedir=/var/lib/locate
   ----------------------------------------------------------------------
 
-****Significado de las opciones de configuración:****
+Significado de las opciones de configuración:
 
-***** \--localstatedir*****
+\--localstatedir
 
-**** Esta opción mueve la base de datos de localización a
-*****/var/lib/locate*****, que es la ubicación compatible con FHS.****
+Esta opción mueve la base de datos de localización a
+**/var/lib/locate**, que es la ubicación compatible con FHS.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
-> +---------------------------------------------+
-> ---
-> **chown -R tester .**
-> **su tester -c \"PATH=\$PATH make check\"**
-> +---------------------------------------------+
+> chown -R tester .
+> su tester -c "PATH=$PATH make check"
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.62.2. Contenido de Findutils**
+### 8.62.2. Contenido de Findutils
 
-****Programas instalados: ****find, locate, updatedb y xargs****
+**Programas instalados**: find, locate, updatedb y xargs
 
-****Directorio de instalación: ****/var/lib/locate****
+**Directorio de instalación**: /var/lib/locate
 
-### **Descripciones breves**
+### Descripciones breves
 
 **find** Busca archivos que coincidan con los criterios especificados en
-los árboles de directorios****
+los árboles de directorios
 
 **locate** Busca en una base de datos de nombres de archivo e informa de
-los nombres que contienen una cadena o coinciden con un patrón****
+los nombres que contienen una cadena o coinciden con un patrón
 
 **updatedb** Actualiza la base de datos **locate**; escanea todo el
 sistema de archivos (incluidos otros sistemas de archivos montados, a
 menos que se indique lo contrario) y guarda todos los nombres de archivo
-que encuentra en la base de datos****
+que encuentra en la base de datos
 
 **xargs** Se puede usar para aplicar un comando a una lista de
-archivos****
+archivos
 
-## **8.63. Groff-1.23.0**
+## 8.63. Groff-1.23.0
 
-****El paquete Groff contiene programas para procesar y formatear texto
-e imágenes.****
+El paquete Groff contiene programas para procesar y formatear texto
+e imágenes
 
-****Tiempo aproximado de compilación: ****0.2 SBU****
+Tiempo aproximado de compilación: 0.2 SBU
 
-****Espacio en disco requerido: ****108 MB****
+Espacio en disco requerido: 108 MB
 
-### **8.63.1. Instalación de Groff**
+### 8.63.1. Instalación de Groff
 
-****Groff espera que la variable de entorno PAGE contenga el tamaño de
+Groff espera que la variable de entorno PAGE contenga el tamaño de
 papel predeterminado. Para usuarios en Estados Unidos, PAGE=letter es
 adecuado. En otros lugares, PAGE=A4 puede ser más adecuado. Aunque el
 tamaño de papel predeterminado se configura durante la compilación, se
 puede sobrescribir posteriormente indicando \"A4\" o \"letter\" en el
-archivo /etc/papersize.****
+archivo /etc/papersize.
 
-****Preparar Groff para la compilación:****
+Preparar Groff para la compilación:
 
   ---------------------------------------------------------
-  **PAGE=\<paper_size\> ./***configure*** --prefix=/usr**
+  PAGE=<paper_size> ./configure --prefix=/usr
   ---------------------------------------------------------
 
-****Compilación del paquete:****
+Compilación del paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.63.2. Contenido de Groff**
+### 8.63.2. Contenido de Groff
 
 **Programas instalados**: addftinfo, afmtodit, chem, eqn, eqn2graph,
 gdiffmk, glilypond, gperl, gpinyin, grap2graph, grn, grodvi, groff,
