@@ -861,7 +861,6 @@ Linux](https://man.archlinux.org/).
 
 Este libro se divide en las siguientes partes.
 
----
 &nbsp;
 &nbsp;
 
