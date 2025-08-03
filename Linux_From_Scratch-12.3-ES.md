@@ -4584,10 +4584,8 @@ ubicación necesaria. crear encabezados
 |**Cabeceras instaladas**:| /usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h,<br> /usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h,<br> /usr/include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h,<br> /usr/include/video/*.h y /usr/include/xen/*.h|
 |------|------|
 
-**Directorios instalados**: /usr/include/asm, /usr/include/asm-generic,
-/usr/include/drm, /usr/include/linux, /usr/include/misc
-/usr/include/mtd, /usr/include/rdma, /usr/include/scsi,
-/usr/include/sound, /usr/include/video y /usr/include/xen.
+|**Directorios instalados**:| /usr/include/asm, /usr/include/asm-generic, /usr/include/drm,<br>  /usr/include/linux, /usr/include/misc, /usr/include/mtd,<br>  /usr/include/rdma, /usr/include/scsi, /usr/include/sound,<br>  /usr/include/video y /usr/include/xen|
+|------|------|
 
 #### Descripciones breves
 
@@ -4596,23 +4594,20 @@ ubicación necesaria. crear encabezados
 /usr/include/asm-generic/\*.h Cabeceras genéricas ASM de la API de
 Linux.
 
-/usr/include/drm/\*.h Cabeceras DRM de la API de Linux.
+|/usr/include/drm/\*.h | Cabeceras DRM de la API de Linux.|
+|------|------|
+|/usr/include/linux/\*.h | Cabeceras Linux de la API de Linux.|
+|/usr/include/misc/\*.h | Cabeceras misceláneas de la API de Linux.|
+|/usr/include/mtd/\*.h | Cabeceras MTD de la API de Linux.|
+|/usr/include/rdma/\*.h | Cabeceras RDMA de la API de Linux.|
+|/usr/include/scsi/\*.h | Cabeceras SCSI de la API de Linux Encabezados.|
+|/usr/include/sound/\*.h | Cabeceras de sonido de la API de Linux.|
+|/usr/include/video/\*.h | Cabeceras de vídeo de la API de Linux.|
+|/usr/include/xen/\*.h | Cabeceras de Xen de la API de Linux.|
 
-/usr/include/linux/\*.h Cabeceras Linux de la API de Linux.
-
-/usr/include/misc/\*.h Cabeceras misceláneas de la API de Linux.
-
-/usr/include/mtd/\*.h Cabeceras MTD de la API de Linux.
-
-/usr/include/rdma/\*.h Cabeceras RDMA de la API de Linux.
-
-/usr/include/scsi/\*.h Cabeceras SCSI de la API de Linux Encabezados.
-
-/usr/include/sound/\*.h Cabeceras de sonido de la API de Linux.
-
-/usr/include/video/\*.h Cabeceras de vídeo de la API de Linux.
-
-/usr/include/xen/\*.h Cabeceras de Xen de la API de Linux.
+---
+&nbsp;
+&nbsp;
 
 ## 5.5. Glibc-2.41
 
