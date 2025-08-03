@@ -3884,10 +3884,10 @@ y queremos producir código para una tercera máquina lenta (C).
 Construiremos un compilador para la máquina C en tres etapas.
 
 | Etapa | Compilación | Host | Objetivo | Acción |
-|:-----:|:-----------:|----------------:|:------:|
-|1   |   A      |      A   |   B     |     Construir el compilador cruzado cc1 usando ccA en la máquina A|
-|2   |   A      |      B   |   C     |     Construir el compilador cruzado cc2 usando cc1 en la máquina A|
-|3   |   B      |      C   |   C     |     Construir el compilador cruzado ccC usando cc2 en la máquina B|
+|:-----:|:-----------:|:---------------:|:------:|
+|1      |   A         |  A   |    B     |Construir el compilador cruzado cc1 usando ccA en la máquina A|
+|2      |   A         |  B   |    C     |Construir el compilador cruzado cc2 usando cc1 en la máquina A|
+|3      |   B         |  C   |    C     |Construir el compilador cruzado ccC usando cc2 en la máquina B|
 
 Entonces, todos los programas que necesita la máquina C se pueden
 compilar usando cc2 en la máquina rápida B. Tenga en cuenta que, a menos
