@@ -1558,16 +1558,14 @@ de LFS (ver arriba).
 > pueden molestar a los desarrolladores de estos proyectos.
 
 Si encuentra algún problema o pregunta mientras trabaja con este libro,
-consulte la página de preguntas frecuentes en* --
-*[*FAQ*](https://www.linuxfromscratch.org/mirrors.html)* -*. Las
+consulte la página de preguntas frecuentes en [*FAQ*](https://www.linuxfromscratch.org/mirrors.html). Las
 preguntas suelen estar ya respondidas allí. Si su pregunta no se
 responde en esa página, intente encontrar el origen del problema. La
 siguiente sugerencia le servirá de guía para la resolución de problemas:
 [*https://www.linuxfromscratch.org/hints/downloads/files/errors.txt*](https://www.linuxfromscratch.org/hints/downloads/files/errors.txt).
 
 Si no encuentra su problema en las preguntas frecuentes, busque en las
-listas de correo en
-[*https://www.linuxfromscratch.org/search.html*](https://www.linuxfromscratch.org/search.html).
+listas de correo en [*https://www.linuxfromscratch.org/search.html*](https://www.linuxfromscratch.org/search.html).
 También contamos con una maravillosa comunidad de LFS dispuesta a
 ofrecer asistencia a través de las listas de correo e IRC (consulte la
 Sección 1.4, \"[Recursos](#1.4. Recursos|outline)\" de este libro). Sin
