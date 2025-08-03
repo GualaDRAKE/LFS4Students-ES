@@ -4624,64 +4624,57 @@ Además, para x86_64, cree un enlace simbólico de compatibilidad
 necesario para el correcto funcionamiento del cargador dinámico de
 bibliotecas:
 
-> +----------------------------------------------------------------------+
-> ---
-> case \$(uname -m) in
-> i?86) ln -sfv ld-linux.so.2 \$LFS/lib/ld-lsb.so.3
-> ;;
-> x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 \$LFS/lib64
-> ln -sfv ../lib/ld-linux-x86-64.so.2 \$LFS/lib64/ld-lsb-x86-64.so.3
-> ;;
+> ```bash
+> case $(uname -m) in
+>     i?86) ln -sfv ld-linux.so.2 $LFS/lib/ld-lsb.so.3
+>     ;;
+>     x86_64) ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64
+>             ln -sfv ../lib/ld-linux-x86-64.so.2 $LFS/lib64/ld-lsb-x86-64.so.3
+>     ;;
 > esac
-> +----------------------------------------------------------------------+
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El comando anterior es correcto. El comando ln tiene varias
 > versiones sintácticas, así que asegúrese de consultar la información
 > de coreutils ln y ln(1) antes de informar de lo que podría parecer
 > un error.
-> +----------------------------------------------------------------------+
 
 Algunos de los programas Glibc utilizan el directorio /var/db no
 compatible con FHS para almacenar sus datos de tiempo de ejecución.
 Aplique el siguiente parche para que dichos programas almacenen sus
 datos de ejecución en ubicaciones compatibles con FHS:
 
-  -----------------------------------------
-  patch -Np1 -i ../glibc-2.41-fhs-1.patch
-  -----------------------------------------
+> ```bash
+> patch -Np1 -i ../glibc-2.41-fhs-1.patch
+> ```
 
-La documentación de Glibc recomienda compilar Glibc en un directorio de
-compilación dedicado:
+La documentación de Glibc recomienda compilar Glibc en un directorio de compilación dedicado:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
-Asegúrese de que las utilidades ldconfig y sln estén instaladas en
-/usr/sbin:
+Asegúrese de que las utilidades ldconfig y sln estén instaladas en /usr/sbin:
 
-  -----------------------------------------------
-  echo \"rootsbindir=/usr/sbin\" \> configparms
-  -----------------------------------------------
+> ```bash
+> echo "rootsbindir=/usr/sbin" > configparms
+> ```
 
 A continuación, prepare Glibc para la compilación:
 
-> +-----------------------------------------------+
-> ---
-> ../configure \\
-> \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(../scripts/config.guess) \\
-> \--enable-kernel=5.4 \\
-> \--with-headers=\$LFS/usr/include \\
-> \--disable-nscd \\
-> libc_cv_slibdir=/usr/lib
-> +-----------------------------------------------+
+> ```bash
+> ../configure                               \
+>       --prefix=/usr                        \
+>       --host=$LFS_TGT                     \
+>       --build=$(../scripts/config.guess)  \
+>       --enable-kernel=5.4                  \
+>       --with-headers=$LFS/usr/include     \
+>       --disable-nscd                       \
+>       libc_cv_slibdir=/usr/lib
+> ```
 
 El significado de Opciones de configuración:
 
@@ -4716,49 +4709,44 @@ utiliza.
 
 Durante esta etapa, podría aparecer la siguiente advertencia:
 
-> +------------------------------------------------------+
-> ---
+> ```bash
 > configure: WARNING:
-> \*\*\* These auxiliary programs are missing or
-> \*\*\* incompatible versions: msgfmt**
-> \*\*\* some features will be disabled.
-> \*\*\* Check the INSTALL file for required versions.
-> +------------------------------------------------------+
+> *** These auxiliary programs are missing or
+> *** incompatible versions: msgfmt**
+> *** some features will be disabled.
+> *** Check the INSTALL file for required versions.
+> ```
 
 El programa msgfmt faltante o incompatible generalmente es inofensivo.
 Este programa msgfmt forma parte del paquete Gettext, que la
 distribución del host debería proporcionar.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Se han reportado errores al compilar este paquete como \"make
 > paralelo\". Si esto ocurre, vuelva a ejecutar el comando make con la
 > opción -j1.
-> +----------------------------------------------------------------------+
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> **Advertencia**
+> 
 > Si LFS no está configurado correctamente y, a pesar de las
 > recomendaciones, compila como root, el siguiente comando instalará
 > la Glibc recién compilada en su sistema host, lo que casi con
 > *seguridad* la dejará inutilizable. Por lo tanto, verifique que el
 > entorno esté configurado correctamente y que no sea root antes de
 > ejecutar el siguiente comando.
-> +----------------------------------------------------------------------+
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=\$LFS install
+> ```
 
 Significado de la opción make install:
 
@@ -4772,27 +4760,25 @@ el directorio raíz en la Sección 7.4, "Ingreso al entorno Chroot".
 
 Corrija una ruta fija al cargador de ejecutables en el script **ldd**:
 
-  -----------------------------------------------------
-  sed \'/RTLDLIST=/s@/usr@@g\' -i \$LFS/*usr*/bin/ldd
-  -----------------------------------------------------
+> ```bash
+> sed '/RTLDLIST=/s@/usr@@g' -i $LFS/*usr*/bin/ldd
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Precaución
+> **Precaución**
+> 
 > En este punto, es fundamental detener el proceso y asegurarse de que
 > las funciones básicas (compilación y enlazado) de la nueva cadena de
 > herramientas funcionen correctamente. Para realizar una comprobación
 > de seguridad, ejecute los siguientes comandos:
-> +----------------------------------------------------------------------+
-> echo \'int main(){}\' \ | \$LFS_TGT-gcc -xc -
-> readelf -l a.out \ | grep ld-linux
-> +----------------------------------------------------------------------+
+> ```bash
+> echo 'int main(){}' | $LFS_TGT-gcc -xc -
+> readelf -l a.out | grep ld-linux
+> ```
 > Si todo funciona correctamente, no debería haber errores y la salida
 > del último comando tendrá el siguiente formato:
-> +----------------------------------------------------------------------+
-> \[Requesting program ***interpreter***:
-> /lib64/ld-linux-x86-64.so.2\]
-> +----------------------------------------------------------------------+
+> ```bash
+> [Requesting program interpreter: /lib64/ld-linux-x86-64.so.2]
+> ```
 > Tenga en cuenta que para máquinas de 32 bits, el nombre del
 > intérprete será /lib/ld-linux.so.2.
 > Si la salida no es la mostrada arriba, o no hay salida alguna, algo
@@ -4800,22 +4786,23 @@ Corrija una ruta fija al cargador de ejecutables en el script **ldd**:
 > problema y corregirlo. Este problema debe resolverse antes de
 > continuar.
 > Una vez que todo esté correcto, limpie el archivo de prueba:
-> +----------------------------------------------------------------------+
+> ```bash
 > rm -v a.out
-> +----------------------------------------------------------------------+
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > La compilación de los paquetes en el siguiente capítulo servirá como
 > comprobación adicional de que la cadena de herramientas se ha
 > compilado correctamente. Si algún paquete, especialmente
 > Binutils-pass2 o GCC-pass2, no se compila, es señal de que algo ha
 > fallado con las instalaciones anteriores de Binutils, GCC o Glibc.
-> +----------------------------------------------------------------------+
 
-Los detalles de este paquete se encuentran en la Sección 8.5.3,
-"Contenido de Glibc".
+Los detalles de este paquete se encuentran en la Sección 8.5.3, "Contenido de Glibc".
+
+---
+&nbsp;
+&nbsp;
 
 ## 5.6. Libstdc++ desde GCC-14.2.0
 
@@ -4824,42 +4811,38 @@ código C++ (parte de GCC está escrita en C++), pero tuvimos que posponer
 su instalación al compilar gcc-pass1 porque Libstdc++ depende de Glibc,
 que aún no estaba disponible en el directorio de destino.
 
-**Tiempo de compilación aproximado:** 0,2 SBU
-
-**Espacio en disco necesario: ** 850 MB
+|**Tiempo de compilación aproximado**:|0,2 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|850 MB|
 
 ### 5.6.1. Instalación de Libstdc++ de destino
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Libstdc++ forma parte del código fuente de GCC. Primero debe
 > descomprimir el archivo tar de GCC y acceder al directorio
 > gcc-14.2.0.
-> +----------------------------------------------------------------------+
 
 Cree un directorio de compilación independiente para Libstdc++ e
 introdúzcalo:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
 Prepare Libstdc++ para la compilación:
 
-> +-----------------------------------------------------------------+
-> ---
-> ../libstdc++-v3/configure \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(../*config.guess*) \\
-> \--prefix=/usr \\
-> \--disable-multilib \\
-> \--disable-nls \\
-> \--disable-libstdcxx-pch \\
-> \--with-gxx-include-dir=/tools/\$LFS_TGT/include/c++/14.2.0
-> +-----------------------------------------------------------------+
+> ```bash
+> ../libstdc++-v3/configure           \
+>     --host=$LFS_TGT                 \
+>     --build=\$(../*config.guess*)   \
+>     --prefix=/usr                   \
+>     --disable-multilib              \
+>     --disable-nls                   \
+>     --disable-libstdcxx-pch         \
+>     --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/14.2.0
+> ```
 
 Significado de las opciones de configuración:
 
@@ -4891,25 +4874,28 @@ opción hace que las cabeceras se instalen allí.
 
 Compila Libstdc++ ejecutando:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instala la biblioteca:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Elimina los archivos de libtool, ya que son perjudiciales para la
 compilación cruzada:
 
-  ----------------------------------------------------
-  rm -v \$LFS/usr/lib/lib{stdc++{,exp,fs},supc++}.la
-  ----------------------------------------------------
+> ```bash
+> rm -v $LFS/usr/lib/lib{stdc++{,exp,fs},supc++}.la
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.29.2,
-"Contenido de GCC".
+Los detalles de este paquete se encuentran en la Sección 8.29.2, "Contenido de GCC".
+
+---
+&nbsp;
+&nbsp;
 
 ## Capítulo 6 - Herramientas temporales para compilación cruzada <a name="capitulo-6"></a>
 
@@ -4931,39 +4917,45 @@ compilación como root, puede inutilizar el equipo.
 Todo este capítulo debe completarse con el usuario lfs, con el entorno
 descrito en la Sección 4.4, \"Configuración del entorno\".
 
+---
+&nbsp;
+&nbsp;
+
 ## 6.2. M4-1.4.19
 
 El paquete M4 contiene un procesador de macros.
 
-**Tiempo de compilación aproximado: **0,1 SBU
-
-**Espacio en disco requerido: **32 MB
+|**Tiempo de compilación aproximado**:|0,1 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|32 MB|
 
 ### 6.2.1. Instalación de M4
 
 Preparar M4 para la compilación:
 
-> +-------------------------------------------------+
-> ---
+> ```bash
 > ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess)
-> +-------------------------------------------------+
+> --host=\$LFS_TGT \\
+> --build=\$(build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.13.2,
-"Contenido de M4".
+Los detalles de este paquete se encuentran en la Sección 8.13.2, "Contenido de M4".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.3. Ncurses-6.5
 
@@ -4979,33 +4971,31 @@ caracteres independiente de la terminal.
 Primero, ejecute los siguientes comandos para compilar el programa
 \"tic\" en el host de compilación:
 
-> +-------------------------+
-> ---
+> ```bash
 > mkdir build
 > pushd build
-> ../configure AWK=gawk
-> make -C include
-> make -C progs tic
+>   ../configure AWK=gawk
+>   make -C include
+>   make -C progs tic
 > popd
-> +-------------------------+
+> ```
 
 Preparar Ncurses para la compilación:
 
-> +----------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(./config.guess) \\
-> \--mandir=/usr/share/man \\
-> \--with-manpage-format=normal \\
-> \--with-shared \\
-> \--without-normal \\
-> \--with-cxx-shared \\
-> \--without-debug \\
-> \--without-ada \\
-> \--disable-stripping \\
-> AWK=gawk
-> +----------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr                \
+>             --host=$LFS_TGT             \
+>             --build=$(./config.guess)   \
+>             --mandir=/usr/share/man      \
+>             --with-manpage-format=normal \
+>             --with-shared                \
+>             --without-normal             \
+>             --with-cxx-shared            \
+>             --without-debug              \
+>             --without-ada                \
+>             --disable-stripping          \
+>             AWK=gawk
+> ```
 
 El significado de las nuevas opciones de configuración:
 
@@ -5040,7 +5030,7 @@ una vez que entremos en el entorno **chroot**.
 \--disable-stripping
 
 Este modificador evita que el sistema de construcción utilice el
-programa ****strip**** del sistema anfitrión. Usar herramientas del
+programa **strip** del sistema anfitrión. Usar herramientas del
 anfitrión en programas compilados de forma cruzada puede provocar
 fallos.
 
@@ -5052,19 +5042,18 @@ este paquete no se compile.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-> +-------------------------------------------------------------+
-> ---
-> make DESTDIR=\$LFS TIC_PATH=\$(pwd)/build/progs/tic install
-> ln -sv libncursesw.so \$LFS/usr/lib/libncurses.so
-> sed -e \'s/\^#if.\*XOPEN.\*\$/#if 1/\' \\
-> -i \$LFS/usr/include/curses.h
-> +-------------------------------------------------------------+
+> ```bash
+> make DESTDIR=$LFS TIC_PATH=$(pwd)/build/progs/tic install
+> ln -sv libncursesw.so $LFS/usr/lib/libncurses.so
+> sed -e 's/^#if.*XOPEN.*$/#if 1/' \
+>     -i $LFS/usr/include/curses.h
+> ```
 
 Significado de las opciones de instalación:
 
@@ -5092,29 +5081,31 @@ reemplazo de libncurses.so, edite el archivo de encabezado para que
 siempre use la definición de estructura de datos de caracteres anchos
 compatible con libncursesw.so.
 
-Los detalles de este paquete se encuentran en la Sección 8.30.2,
-"Contenido de Ncurses".
+Los detalles de este paquete se encuentran en la Sección 8.30.2, "Contenido de Ncurses".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.4. Bash-5.2.37
 
 El paquete Bash contiene Bourne-Again Shell.
 
-**Tiempo de compilación aproximado: **0.2 SBU
-
-**Espacio en disco requerido: **68 MB
+|**Tiempo de compilación aproximado**:|0.2 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|68 MB|
 
 ### 6.4.1. Instalación de Bash
 
 Preparar Bash para la compilación:
 
-> +-------------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--build=\$(sh *support*/config.guess) \\
-> \--host=\$LFS_TGT \\
-> \--without-bash-malloc
-> +-------------------------------------------------------+
-
+> ```bash
+> ./configure --prefix=/usr \
+>             --build=$(sh *support*/config.guess) \
+>             --host=$LFS_TGT \
+>             --without-bash-malloc
+> ```
+> 
 Significado de las opciones de configuración:
 
 \--without-bash-malloc
@@ -5124,46 +5115,48 @@ Bash (malloc), que se sabe que causa fallos de segmentación. Al
 desactivar esta opción, Bash utilizará las funciones malloc de Glibc,
 que son más estables. Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Crear un enlace para los programas que usan sh como shell:
 
-  --------------------------
-  ln -sv bash \$LFS/bin/sh
-  --------------------------
+> ```bash
+> ln -sv bash $LFS/bin/sh
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.36.2,
-"Contenido de Bash".
+Los detalles de este paquete se encuentran en la Sección 8.36.2, "Contenido de Bash".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.5. Coreutils-9.6
 
 El paquete Coreutils contiene las utilidades básicas que necesita
 cualquier sistema operativo.
 
-**Tiempo de compilación aproximado: **0.3 SBU
-
-**Espacio en disco requerido: **181 MB
+|**Tiempo de compilación aproximado**:|0.3 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|181 MB|
 
 ### 6.5.1. Instalación de Coreutils
 
 Preparar Coreutils para la compilación:
 
-> +------------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess) \\
-> \--enable-install-program=hostname \\
-> \--enable-no-install-program=kill,uptime
-> +------------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr                     \
+>             --host=$LFS_TGT                   \
+>             --build=$(build-aux/config.guess) \
+>             --enable-install-program=hostname \
+>             --enable-no-install-program=kill,uptime
+> ```
 
 Significado de las opciones de configuración:
 
@@ -5174,75 +5167,78 @@ por defecto, pero es requerido por el conjunto de pruebas de Perl.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Mueva los programas a sus ubicaciones finales previstas. Aunque esto no
 es necesario en este entorno temporal, debemos hacerlo porque algunos
 programas codifican las ubicaciones de los ejecutables:
 
-> +----------------------------------------------------------------------+
-> ---
-> mv -v \$LFS/usr/bin/chroot \$LFS/usr/sbin
-> mkdir -pv \$LFS/usr/share/man/man8
-> mv -v \$LFS/usr/share/man/man1/chroot.1
-> \$LFS/usr/share/man/man8/chroot.8
-> sed -i \'s/\"1\"/\"8\"/\' \$LFS/usr/share/man/man8/chroot.8
-> +----------------------------------------------------------------------+
+> ```bash
+> mv -v $LFS/usr/bin/chroot              $LFS/usr/sbin
+> mkdir -pv $LFS/usr/share/man/man8
+> mv -v $LFS/usr/share/man/man1/chroot.1 $LFS/usr/share/man/man8/chroot.8
+> sed -i 's/"1"/"8"/'                    $LFS/usr/share/man/man8/chroot.8
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.58.2,
-"Contenido de Coreutils".
+Los detalles de este paquete se encuentran en la Sección 8.58.2, "Contenido de Coreutils".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.6. Diffutils-3.11
 
 El paquete Diffutils contiene programas que muestran las diferencias
 entre archivos o directorios.
 
-**Tiempo de compilación aproximado: **0,1 SBU
-
-**Espacio en disco requerido: **35 MB
+|**Tiempo de compilación aproximado**:|0,1 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|35 MB|
 
 ### 6.6.1. Instalación de Diffutils
 
 Preparar Diffutils para la compilación:
 
-> +-------------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> **\--build=\$(./build-aux/config.guess)**
-> +-------------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --host=$LFS_TGT  \
+>             --build=$(./build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ------------------------------
-  make DESTDIR=\$LFS *install*
-  ------------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.60.2,
-"Contenido de Diffutils".
+Los detalles de este paquete se encuentran en la Sección 8.60.2, "Contenido de Diffutils".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.7. File-5.46
 
 El paquete File contiene una utilidad para determinar el tipo de uno o
 más archivos.
 
-**Tiempo de compilación aproximado: **0.1 SBU
-
-**Espacio en disco necesario: **42 MB
+|**Tiempo de compilación aproximado**:|0.1 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|42 MB|
 
 ### 6.7.1. Instalación de File
 
@@ -5250,17 +5246,16 @@ El comando file en el host de compilación debe tener la misma versión
 que la que estamos compilando para crear el archivo de firma. Ejecute
 los siguientes comandos para crear una copia temporal del archivo:
 
-> +-----------------------------------------+
-> ---
+> ```bash
 > mkdir build
 > pushd build
-> ../configure \--disable-bzlib \\
-> \--disable-libseccomp \\
-> \--disable-xzlib \\
-> \--disable-zlib
-> make
+>   ../configure --disable-bzlib      \
+>                --disable-libseccomp \
+>                --disable-xzlib      \
+>                --disable-zlib
+>   make
 > popd
-> +-----------------------------------------+
+> ```
 
 Significado de la nueva opción de configuración:
 
@@ -5271,33 +5266,38 @@ distribución del host si existen los archivos de biblioteca
 correspondientes. Puede causar un error de compilación si existe un
 archivo de biblioteca, pero no los archivos de encabezado
 correspondientes. Estas opciones impiden el uso de estas funciones
-innecesarias del host. Preparar el archivo para la compilación:
+innecesarias del host.
 
-  ---------------------------------------------------------------------------
-  ./configure \--*prefix*=/usr \--host=\$LFS_TGT --build=\$(./config.guess)
-  ---------------------------------------------------------------------------
+Preparar el archivo para la compilación:
+
+> ```bash
+> ./configure --prefix=/usr --host=$LFS_TGT --build=$(./config.guess)
+> ```
 
 Compilar el paquete:
 
-  --------------------------------------------
-  make FILE_COMPILE=\$(pwd)/*build*/src/file
-  --------------------------------------------
+> ```bash
+> make FILE_COMPILE=$(pwd)/build/src/file
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Eliminar el archivo libtool, ya que puede ser perjudicial para la
 compilación cruzada:
 
-  -----------------------------------
-  rm -v \$LFS/usr/lib/*libmagic.la*
-  -----------------------------------
+> ```bash
+> rm -v $LFS/usr/lib/libmagic.la
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.11.2,
-"Contenido del archivo".
+Los detalles de este paquete se encuentran en la Sección 8.11.2, "Contenido del archivo".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.8. Findutils-4.10.0
 
@@ -5309,111 +5309,113 @@ que la base de datos se haya actualizado recientemente). Findutils
 también incluye el programa xargs, que permite ejecutar un comando
 específico en cada archivo seleccionado en una búsqueda.
 
-**Tiempo de compilación aproximado: **0,2 SBU
-
-**Espacio en disco necesario: **48 MB
+|*Tiempo de compilación aproximado*:|0,2 SBU|
+|---------------------------------|-------|
+|*Espacio en disco requerido*:|48 MB|
 
 ### 6.8.1. Instalación de Findutils
 
 Preparar Findutils para la compilación:
 
-> +--------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--localstatedir=/var/lib/locate \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess)
-> +--------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr                   \
+>             --localstatedir=/var/lib/locate \
+>             --host=$LFS_TGT                 \
+>             --build=$(build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.62.2,
-"Contenido de Findutils".
+Los detalles de este paquete se encuentran en la Sección 8.62.2, "Contenido de Findutils".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.9. Gawk-5.3.1
 
 El paquete Gawk contiene programas para manipular archivos de texto.
 
-**Tiempo de compilación aproximado: **0,1 SBU
-
-**Espacio en disco requerido: **47 MB
+|**Tiempo de compilación aproximado**:|0,1 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|47 MB|
 
 ### 6.9.1. Instalación de Gawk
 
 Primero, asegúrese de que no se instalen archivos innecesarios:
 
-  -------------------------------------
-  sed -i \'s/extras//\' *Makefile.in*
-  -------------------------------------
+> ```bash
+> sed -i 's/extras//' Makefile.in
+> ```
 
 Prepare Gawk para la compilación:
 
-> +-------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess)
-> +-------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --host=$LFS_TGT \
+>             --build=$(build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.61.2,
-"Contenido de Gawk".
+Los detalles de este paquete se encuentran en la Sección 8.61.2, "Contenido de Gawk".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.10. Grep-3.11
 
 El paquete Grep contiene programas para buscar en el contenido de los
 archivos.
 
-Tiempo de compilación aproximado: 0,1 SBU
-
-Espacio en disco necesario: 27 MB
+|**Tiempo de compilación aproximado**:|0,1 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|27 MB|
 
 ### 6.10.1. Instalación de Grep
 
 Preparar Grep para la compilación:
 
-> +---------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(./build-aux/config.guess)
-> +---------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr   \
+>             --host=$LFS_TGT \
+>             --build=$(./build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
-Los detalles de este paquete se encuentran en la Sección 8.35.2,
-"Contenido de Grep".
+Los detalles de este paquete se encuentran en la Sección 8.35.2, "Contenido de Grep".
 
 ## 6.11. Gzip-1.13
 
