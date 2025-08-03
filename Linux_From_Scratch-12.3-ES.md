@@ -4588,19 +4588,19 @@ ubicación necesaria. crear encabezados
 |------|------|
 
 #### Descripciones breves
-
-|/usr/include/asm/\*.hv| Cabeceras ASM de la API de Linux.|
+>
+|/usr/include/asm/\*.h|Cabeceras ASM de la API de Linux|
 |------|------|
-|/usr/include/asm-generic/\*.h | Cabeceras genéricas ASM de la API de Linux.|
-|/usr/include/drm/\*.h | Cabeceras DRM de la API de Linux.|
-|/usr/include/linux/\*.h | Cabeceras Linux de la API de Linux.|
-|/usr/include/misc/\*.h | Cabeceras misceláneas de la API de Linux.|
-|/usr/include/mtd/\*.h | Cabeceras MTD de la API de Linux.|
+|/usr/include/asm-generic/\*.h | Cabeceras genéricas ASM de la API de Linux|
+|/usr/include/drm/\*.h | Cabeceras DRM de la API de Linux|
+|/usr/include/linux/\*.h | Cabeceras Linux de la API de Linux|
+|/usr/include/misc/\*.h | Cabeceras misceláneas de la API de Linux|
+|/usr/include/mtd/\*.h | Cabeceras MTD de la API de Linux|
 |/usr/include/rdma/\*.h | Cabeceras RDMA de la API de Linux.|
-|/usr/include/scsi/\*.h | Cabeceras SCSI de la API de Linux Encabezados.|
-|/usr/include/sound/\*.h | Cabeceras de sonido de la API de Linux.|
-|/usr/include/video/\*.h | Cabeceras de vídeo de la API de Linux.|
-|/usr/include/xen/\*.h | Cabeceras de Xen de la API de Linux.|
+|/usr/include/scsi/\*.h | Cabeceras SCSI de la API de Linux Encabezados|
+|/usr/include/sound/\*.h | Cabeceras de sonido de la API de Linux|
+|/usr/include/video/\*.h | Cabeceras de vídeo de la API de Linux|
+|/usr/include/xen/\*.h | Cabeceras de Xen de la API de Linux|
 
 ---
 &nbsp;
