@@ -4581,7 +4581,7 @@ ubicación necesaria. crear encabezados
 
 ### 5.4.2. Contenido de las cabeceras de la API de Linux
 
-|**Cabeceras instaladas**| /usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h,<br> /usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h,<br> /usr/include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h,<br> /usr/include/video/*.h y /usr/include/xen/*.h|
+|**Cabeceras instaladas**:| /usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h,<br> /usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h,<br> /usr/include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h,<br> /usr/include/video/*.h y /usr/include/xen/*.h|
 |------|------|
 
 **Directorios instalados**: /usr/include/asm, /usr/include/asm-generic,
