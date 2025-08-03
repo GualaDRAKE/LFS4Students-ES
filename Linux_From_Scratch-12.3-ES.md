@@ -1562,7 +1562,8 @@ consulte la página de preguntas frecuentes en [*FAQ*](https://www.linuxfromscra
 preguntas suelen estar ya respondidas allí. Si su pregunta no se
 responde en esa página, intente encontrar el origen del problema. La
 siguiente sugerencia le servirá de guía para la resolución de problemas:
-[*https://www.linuxfromscratch.org/hints/downloads/files/errors.txt*](https://www.linuxfromscratch.org/hints/downloads/files/errors.txt).
+
+   [*https://www.linuxfromscratch.org/hints/downloads/files/errors.txt*](https://www.linuxfromscratch.org/hints/downloads/files/errors.txt).
 
 Si no encuentra su problema en las preguntas frecuentes, busque en las
 listas de correo en [*https://www.linuxfromscratch.org/search.html*](https://www.linuxfromscratch.org/search.html).
