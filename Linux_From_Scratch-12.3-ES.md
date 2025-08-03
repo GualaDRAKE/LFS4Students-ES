@@ -4988,8 +4988,8 @@ Preparar Ncurses para la compilación:
 
 > ```bash
 > ./configure --prefix=/usr                \
->             --host=$LFS_TGT             \
->             --build=$(./config.guess)   \
+>             --host=$LFS_TGT              \
+>             --build=$(./config.guess)    \
 >             --mandir=/usr/share/man      \
 >             --with-manpage-format=normal \
 >             --with-shared                \
