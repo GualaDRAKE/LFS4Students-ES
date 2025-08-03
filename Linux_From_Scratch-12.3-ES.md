@@ -2310,13 +2310,11 @@ Si utiliza varias particiones para LFS (por ejemplo, una para / y otra
 para /home), móntelas así:
 
 > ```bash
-> mkdir -pv \$LFS*
+> mkdir -pv $LFS
 > mount -v -t ext4 /dev/<xxx> $LFS
 > mkdir -v $LFS/home
 > mount -v -t ext4 /dev/<yyy> $LFS/home
-
-Reemplace \<xxx\> y \<yyy\> con los nombres de partición
-correspondientes.
+Reemplace \<xxx\> y \<yyy\> con los nombres de partición correspondientes.
 
 Configure el propietario y el modo de permisos del directorio \$LFS (es
 decir, el directorio raíz del sistema de archivos recién creado para el
@@ -2334,8 +2332,7 @@ restrictivos (como las opciones nosuid o nodev). Ejecute el comando
 **mount** sin parámetros para ver qué opciones están configuradas para
 la partición LFS montada.
 
-Si nosuid o nodev están configurados, la partición debe volver a
-montarse.
+Si nosuid o nodev están configurados, la partición debe volver a montarse.
 
 > **Advertencia**
 > 
@@ -2346,7 +2343,7 @@ montarse.
 > a montar automáticamente al reiniciar. Por ejemplo, puede agregar
 > esta línea a su archivo /etc/fstab:
 > ```bash
-> /dev/**\<xxx\>** /mnt/lfs *ext4* defaults 1 1
+> /dev/<xxx> /mnt/lfs ext4 defaults 1 1
 > ```
 > Si utiliza particiones opcionales adicionales, asegúrese de
 > agregarlas también.
@@ -2357,17 +2354,16 @@ habilitada con el comando **swapon**:
 > ```bash
 > /sbin/swapon -v /dev/<zzz>
 > ```
-
 Reemplace \<zzz\> con el nombre de la partición de intercambio.
 
 Ahora que la nueva partición LFS está lista para su uso, es hora de
 descargar los paquetes.
 
-## Capítulo 3 - Paquetes y parches <a name="capitulo-3"></a>
-
 ---
 &nbsp;
 &nbsp;
+
+## Capítulo 3 - Paquetes y parches <a name="capitulo-3"></a>
 
 ## 3.1. Introducción
 
@@ -2400,7 +2396,7 @@ libro, Google ([*https://www.google.com/*](https://www.google.com/))
 ofrece un buscador útil para la mayoría de los paquetes. Si la búsqueda
 no funciona, pruebe con otro método de descarga:
 
-*[*https://www.linuxfromscratch.org/lfs/mirrors.html#files*](https://www.linuxfromscratch.org/lfs/mirrors.html#files).
+   [*https://www.linuxfromscratch.org/lfs/mirrors.html#files*](https://www.linuxfromscratch.org/lfs/mirrors.html#files).
 
 Los paquetes y parches descargados deberán almacenarse en un lugar
 accesible durante toda la compilación. También se requiere un directorio
@@ -2437,16 +2433,16 @@ las dos secciones siguientes.
 comprimido con todos los archivos necesarios desde uno de los sitios
 espejo listados en:
 
-[*https://www.linuxfromscratch.org/mirrors.html#files*](https://www.linuxfromscratch.org/mirrors.html#files).
+   [*https://www.linuxfromscratch.org/mirrors.html#files*](https://www.linuxfromscratch.org/mirrors.html#files).
 
 • Los archivos se pueden descargar usando wget y una lista wget como se
 describe a continuación. Para descargar todos los paquetes y parches
-usando
-[*wget-list*](https://mirror.download.it/lfs/pub/lfs/lfs-packages/12.3/wget-list)
+usando [*wget-list*](https://mirror.download.it/lfs/pub/lfs/lfs-packages/12.3/wget-list)
 como entrada del comando **wget**, utilice:
 
-|**wget \--input-file=wget-list \--continue \--directory-prefix=\$LFS/sources**|
-|----------------------------------------------------------------------------|
+> ```bash
+> wget --input-file=wget-list --continue --directory-prefix=$LFS/sources
+> ```
 
 Además, a partir de LFS-7.0, existe un archivo independiente,
 [md5sums](https://mirror.download.it/lfs/pub/lfs/lfs-packages/12.3/md5sums),
@@ -2455,7 +2451,7 @@ antes de continuar. Coloque ese archivo en \$LFS/sources y ejecute:
 
 > ```bash
 > pushd $LFS/sources
-> md5sum -c md5sums
+>   md5sum -c md5sums
 > popdchown root:root $LFS/sources/
 > ```
 
@@ -3359,12 +3355,14 @@ Cree la distribución de directorios necesaria ejecutando los siguientes
 comandos como root:
 
 > ```bash
-> mkdir -pv \$LFS/{etc,var} \$LFS/usr/{bin,lib,sbin}
+> mkdir -pv $LFS/{etc,var} $LFS/usr/{bin,lib,sbin}
+> 
 > for i in bin lib sbin; do
-> ln -sv usr/\$i \$LFS/\$i
+>   ln -sv usr/$i $LFS/$i
 > done
-> case \$(uname -m) in
-> x86_64) mkdir -pv \$LFS/lib64 ;;
+> 
+> case $(uname -m) in
+>   x86_64) mkdir -pv $LFS/lib64 ;;
 > esac
 > ```
 
@@ -3506,7 +3504,7 @@ lee ni ejecuta el contenido de los archivos /etc/profile ni
 archivo .bashrc ahora:
 
 > ```bash
-> cat \> \~/.bashrc \<\< \"EOF\"
+> cat > ~/.bashrc << "EOF"
 > set +h
 > umask 022
 > LFS=/mnt/lfs
@@ -3601,7 +3599,7 @@ que sean visibles en cualquier subshell, las exportamos.
 > la presencia de /etc/bash.bashrc y, si está presente, elimínelo.
 > Como usuario root, ejecute:
 > ```bash
-> [ ! -e /etc/*bash.bashrc* ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE
+> [ ! -e /etc/bash.bashrc ] || mv -v /etc/bash.bashrc /etc/bash.bashrc.NOUSE
 > ```
 > Cuando el usuario lfs ya no sea necesario (al principio del Capítulo 7),
 > puede restaurar /etc/bash.
@@ -4238,6 +4236,10 @@ en los capítulos siguientes. Las bibliotecas, por otro lado, se instalan
 en su ubicación final, ya que pertenecen al sistema que queremos
 compilar.
 
+---
+&nbsp;
+&nbsp;
+
 ## 5.2. Binutils-2.44 - Paso 1
 
 El paquete Binutils contiene un enlazador, un ensamblador y otras
@@ -4535,7 +4537,7 @@ compilación GCC realiza en circunstancias normales:
 > ```bash
 > cd ..
 > cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
->   `dirname $(\$LFS_TGT-gcc -print-*libgcc*-file-name)`/include/limits.h
+>   `dirname $($LFS_TGT-gcc -print-*libgcc*-file-name)`/include/limits.h
 > ```
 
 Los detalles de este paquete se encuentran en la Sección 8.29.2,
@@ -4669,10 +4671,10 @@ A continuación, prepare Glibc para la compilación:
 > ```bash
 > ../configure                               \
 >       --prefix=/usr                        \
->       --host=$LFS_TGT                     \
->       --build=$(../scripts/config.guess)  \
+>       --host=$LFS_TGT                      \
+>       --build=$(../scripts/config.guess)   \
 >       --enable-kernel=5.4                  \
->       --with-headers=$LFS/usr/include     \
+>       --with-headers=$LFS/usr/include      \
 >       --disable-nscd                       \
 >       libc_cv_slibdir=/usr/lib
 > ```
@@ -4746,7 +4748,7 @@ Instalar el paquete:
 > ejecutar el siguiente comando.
 
 > ```bash
-> make DESTDIR=\$LFS install
+> make DESTDIR=$LFS install
 > ```
 
 Significado de la opción make install:
@@ -4762,7 +4764,7 @@ el directorio raíz en la Sección 7.4, "Ingreso al entorno Chroot".
 Corrija una ruta fija al cargador de ejecutables en el script **ldd**:
 
 > ```bash
-> sed '/RTLDLIST=/s@/usr@@g' -i $LFS/*usr*/bin/ldd
+> sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd
 > ```
 
 > **Precaución**
@@ -4837,7 +4839,7 @@ Prepare Libstdc++ para la compilación:
 > ```bash
 > ../libstdc++-v3/configure           \
 >     --host=$LFS_TGT                 \
->     --build=\$(../*config.guess*)   \
+>     --build=$(../*config.guess*)   \
 >     --prefix=/usr                   \
 >     --disable-multilib              \
 >     --disable-nls                   \
@@ -4935,9 +4937,9 @@ El paquete M4 contiene un procesador de macros.
 Preparar M4 para la compilación:
 
 > ```bash
-> ./configure \--prefix=/usr \\
-> --host=\$LFS_TGT \\
-> --build=\$(build-aux/config.guess)
+> ./configure --prefix=/usr    \
+>             --host=\$LFS_TGT \
+>             --build=\$(build-aux/config.guess)
 > ```
 
 Compilar el paquete:
@@ -4963,9 +4965,9 @@ Los detalles de este paquete se encuentran en la Sección 8.13.2, "Contenido de 
 El paquete Ncurses contiene bibliotecas para la gestión de pantallas de
 caracteres independiente de la terminal.
 
-**Tiempo de compilación aproximado: **0,4 SBU
-
-**Espacio en disco requerido: **53 MB
+|**Tiempo de compilación aproximado**:|0,4 SBU|
+|---------------------------------|-------|
+|**Espacio en disco requerido**:|53 MB|
 
 ### 6.3.1. Instalación de Ncurses
 
@@ -5234,8 +5236,7 @@ Los detalles de este paquete se encuentran en la Sección 8.60.2, "Contenido de 
 
 ## 6.7. File-5.46
 
-El paquete File contiene una utilidad para determinar el tipo de uno o
-más archivos.
+El paquete File contiene una utilidad para determinar el tipo de uno o más archivos.
 
 |**Tiempo de compilación aproximado**:|0.1 SBU|
 |---------------------------------|-------|
@@ -5363,7 +5364,7 @@ Prepare Gawk para la compilación:
 
 > ```bash
 > ./configure --prefix=/usr    \
->             --host=$LFS_TGT \
+>             --host=$LFS_TGT  \
 >             --build=$(build-aux/config.guess)
 > ```
 
