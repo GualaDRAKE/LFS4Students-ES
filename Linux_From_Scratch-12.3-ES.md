@@ -4192,10 +4192,14 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > **Importante**
 > 
 > A continuación, se presenta una sinopsis del proceso de compilación.
+> 
 > 1\. Coloque todas las fuentes y parches en un directorio accesible
 > desde el entorno chroot, como /mnt/lfs/sources/.
+> 
 > 2\. Vaya al directorio /mnt/lfs/sources/.
+> 
 > 3\. Para cada paquete:
+> 
 > a\. Extraiga el paquete que se va a compilar con el programa tar. En
 > los capítulos 5 y 6, asegúrese de ser el usuario lfs al extraer el
 > paquete.
@@ -4204,8 +4208,11 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > el árbol de código fuente en otro lugar puede destruir las marcas de
 > tiempo del árbol de código fuente y provocar un fallo en la
 > compilación.
+> 
 > b\. Vaya al directorio creado al extraer el paquete.
+> 
 > c\. Siga las instrucciones para compilar el paquete.
+> 
 > d\. Vuelva al directorio de fuentes una vez completada la
 > compilación.
 > e\. Elimine el directorio de fuentes extraído a menos que se le
