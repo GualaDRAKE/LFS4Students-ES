@@ -4060,13 +4060,9 @@ reemplace **\$LFS_TGT-ld** por **ld**).
 El siguiente paquete que se instala es gcc. Un ejemplo de lo que se
 puede ver durante la ejecución de **configure** es:
 
-> +----------------------------------------------------------------------+
-> ---
-> checking what assembler to *use*\...
-> /mnt/lfs/tools/i686-lfs-linux-gnu/bin/as
-> checking what linker to use\...
-> /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld
-> +----------------------------------------------------------------------+
+|checking what assembler to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/as|
+|:--------------------------------------------------------------------------:|
+|checking what linker to use... /mnt/lfs/tools/i686-lfs-linux-gnu/bin/ld|
 
 Esto es importante por las razones mencionadas anteriormente. También
 demuestra que el script de configuración de gcc no busca en los
