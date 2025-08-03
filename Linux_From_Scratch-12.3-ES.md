@@ -4278,9 +4278,9 @@ compilación dedicado:
 Ahora prepare Binutils para la compilación:
 
 > ```bash
-> ../configure --prefix=$LFS/tools \
->               --with-sysroot=$LFS \
->               --target=$LFS_TGT   \
+> ../configure --prefix=$LFS/tools  \
+>               --with-sysroot=$LFS  \
+>               --target=$LFS_TGT    \
 >               --disable-nls        \
 >               --enable-gprofng=no  \
 >               --disable-werror     \
@@ -4422,10 +4422,10 @@ Preparar GCC para la compilación:
 
 > ```bash
 > ../configure                   \
->     --target=$LFS_TGT         \
->     --prefix=$LFS/tools       \
+>     --target=$LFS_TGT          \
+>     --prefix=$LFS/tools        \
 >     --with-glibc-version=2.41  \
->     --with-sysroot=$LFS       \
+>     --with-sysroot=$LFS        \
 >     --with-newlib              \
 >     --without-headers          \
 >     --enable-default-pie       \
@@ -4504,15 +4504,15 @@ Estos son los únicos lenguajes necesarios ahora.
 
 Compile GCC ejecutando:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instale el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Esta compilación de GCC ha instalado un par de encabezados de sistema
 internos. Normalmente, uno de ellos, limits.h, incluiría a su vez el
@@ -4526,35 +4526,37 @@ interno completo se necesitará más adelante. Cree una versión completa
 del encabezado interno con un comando idéntico a lo que el sistema de
 compilación GCC realiza en circunstancias normales:
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El siguiente comando muestra un ejemplo de sustitución de comandos
 > anidada con dos métodos: comillas invertidas y una construcción
 > \$(). Podría reescribirse con el mismo método para ambas
 > sustituciones, pero se muestra así para demostrar cómo combinarlas.
 > Generalmente, se prefiere el método \$().
-> +----------------------------------------------------------------------+
-
-> +----------------------------------------------------------------------+
+> 
 > ---
+> 
 > cd ..
-> cat gcc/limitx.h gcc/glimits.h gcc/limity.h \> \\
-> \`dirname \$(\$LFS_TGT-gcc
-> -print-*libgcc*-file-name)\`/include/limits.h
-> +----------------------------------------------------------------------+
+> ```bash
+> cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
+> `dirname $(\$LFS_TGT-gcc -print-*libgcc*-file-name)`/include/limits.h
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.29.2,
 "Contenido de GCC".
+
+---
+&nbsp;
+&nbsp;
 
 ## 5.4. Cabeceras de la API de Linux-6.13.4
 
 Las cabeceras de la API de Linux (en linux-6.13.4.tar.xz) exponen la API
 del kernel para que Glibc los use.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-
-Espacio en disco requerido: 1,6 GB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|1,61 GB|
 
 ### 5.4.1. Instalación de las cabeceras de la API de Linux
 
@@ -4566,9 +4568,9 @@ Linux.
 
 Asegúrese de que no haya archivos obsoletos incrustados en el paquete:
 
-  ---------------
-  make mrproper
-  ---------------
+> ```bash
+> make mrproper
+> ```
 
 Ahora extraiga los encabezados del kernel visibles para el usuario del
 código fuente. El destino de creación recomendado \"headers_install\" no
@@ -4576,22 +4578,18 @@ se puede usar porque requiere rsync, que podría no estar disponible. Los
 encabezados se colocan primero en ./usr y luego se copian en la
 ubicación necesaria. crear encabezados
 
-> +---------------------------------------------------+
-> ---
+> ```bash
 > make headers
-> find usr/include -type f ! -name \'\*.h\' -delete
-> cp -rv usr/include \$LFS/usr
-> +---------------------------------------------------+
+> find usr/include -type f ! -name '*.h' -delete
+> cp -rv usr/include $LFS/usr
+> ```
 
 ### 5.4.2. Contenido de las cabeceras de la API de Linux
 
-**Cabeceras instaladas**: /usr/include/asm/\*.h,
-/usr/include/asm-generic/\*.h, /usr/include/drm/\*.h,
-/usr/include/linux/\*.h, /usr/include/misc/\*.h, /usr/include/mtd/\*.h,
-/usr/include/rdma/\*.h, /usr/include/scsi/\*.h, /usr/include/sound/\*.h,
-/usr/include/video/\*.h y /usr/include/xen/\*.h.
+|**Cabeceras instaladas**: | /usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h,<br> /usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h,<br> /usr/include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h,<br> /usr/include/video/*.h y /usr/include/xen/*.h|
+|------|
 
-**Directorios instalados:** /usr/include/asm, /usr/include/asm-generic,
+**Directorios instalados**: /usr/include/asm, /usr/include/asm-generic,
 /usr/include/drm, /usr/include/linux, /usr/include/misc
 /usr/include/mtd, /usr/include/rdma, /usr/include/scsi,
 /usr/include/sound, /usr/include/video y /usr/include/xen.
