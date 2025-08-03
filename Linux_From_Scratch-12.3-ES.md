@@ -104,7 +104,8 @@ camino.
 Espero sinceramente que lo pases genial trabajando en tu propio sistema
 Linux Desde Cero y que disfrutes de los numerosos beneficios de tener un
 sistema verdaderamente tuyo.
-
+&nbsp;
+&nbsp;
 
 \--
 Gerard Beekmans
