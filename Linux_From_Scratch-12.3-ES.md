@@ -9961,9 +9961,9 @@ este último
 sg Ejecuta un comando dado mientras el GID del usuario está
 establecido al del grupo dado
 
-**su** Ejecuta un shell con IDs de usuario y grupo sustitutos****
+**su** Ejecuta un shell con IDs de usuario y grupo sustitutos
 
-useradd ****Crea un nuevo usuario con el nombre dado, o actualiza la
+useradd Crea un nuevo usuario con el nombre dado, o actualiza la
 información predeterminada de nuevos usuarios
 
 userdel Elimina la cuenta de usuario especificada
@@ -9980,122 +9980,114 @@ usuarios y grupos
 
 ## 8.29. GCC-14.2.0
 
-****El paquete GCC contiene la colección de compiladores GNU, que
-incluye los compiladores de C y C++.****
+El paquete GCC contiene la colección de compiladores GNU, que
+incluye los compiladores de C y C++.
 
-**Tiempo de compilación aproximado: **46 SBU (con pruebas)****
+**Tiempo de compilación aproximado**: 46 SBU (con pruebas)
 
-**Espacio en disco necesario: **6,3 GB****
+**Espacio en disco necesario**: 6,3 GB
 
-### **8.29.1. Instalación de GCC**
+### 8.29.1. Instalación de GCC
 
-****Si se compila en x86_64, cambie el nombre del directorio
-predeterminado para las bibliotecas de 64 bits a \"lib\":****
+Si se compila en x86_64, cambie el nombre del directorio
+predeterminado para las bibliotecas de 64 bits a \"lib\":
 
 > +-----------------------------------------------+
 > ---
-> **case \$(uname -m) in**
-> ** x86_64)**
-> ** sed -e \'/m64=/s/lib64/lib/\' \\**
-> ** -i.orig gcc/config/i386/t-linux64**
-> ** ;;**
-> **esac**
+> case \$(uname -m) in
+>    x86_64)
+>    sed -e '/m64=/s/lib64/lib/' \
+>    -i.orig gcc/config/i386/t-linux64
+>    ;;
+> esac
 > +-----------------------------------------------+
 
-****La documentación de GCC recomienda compilar GCC en un directorio de
-compilación dedicado:****
+La documentación de GCC recomienda compilar GCC en un directorio de
+compilación dedicado:
 
 > +--------------------+
 > ---
-> **mkdir -v build**
-> **cd**
-> **build**
+> mkdir -v build
+> cd
+> build
 > +--------------------+
 
-****Preparar GCC para la compilación:****
+Preparar GCC para la compilación:
 
-> +-----------------------------------------------------+
-> ---
-> **../configure \--prefix=/usr\\**
-> ** LD=ld\\**
-> ** \--enable-languages=c,c++ \\**
-> ** \--enable-default-pie \\**
-> ** \--enable-default-ssp \\**
-> ** \--enable-host-pie \\**
-> ** \--disable-multilib \\**
-> ** \--***disable***-bootstrap \\**
-> ** \--disable-fixincludes \\**
-> ** \--with-system-zlib**
-> +-----------------------------------------------------+
+> ../configure --prefix=/usr \
+>  LD=ld\\
+> --enable-languages=c,c++ \
+> --enable-default-pie \
+> --enable-default-ssp \
+> --enable-host-pie \
+> --disable-multilib \
+> --disable-bootstrap \
+> --disable-fixincludes \
+> --with-system-zlib
 
-****GCC admite siete lenguajes de programación diferentes, pero los
-requisitos previos para la mayoría de ellos aún no se han instalado.****
+GCC admite siete lenguajes de programación diferentes, pero los
+requisitos previos para la mayoría de ellos aún no se han instalado.
 
-****Consulte la página del libro BLFS de GCC para obtener instrucciones
-sobre cómo compilar todos los lenguajes compatibles con GCC.****
+Consulte la página del libro BLFS de GCC para obtener instrucciones
+sobre cómo compilar todos los lenguajes compatibles con GCC.
 
-**Significado de los nuevos parámetros de configuración:**
+**Significado de los nuevos parámetros de configuración**:
 
-***** LD=ld*****
+LD=ld
 
-**** Este parámetro hace que el script de configuración utilice el
+Este parámetro hace que el script de configuración utilice el
 programa ld instalado por el paquete Binutils compilado anteriormente en
 este capítulo, en lugar de la versión de compilación cruzada que se
-usaría de otro modo.****
+usaría de otro modo.
 
-***** \--disable-fixincludes*****
+\--disable-fixincludes
 
-**** De forma predeterminada, durante la instalación de GCC, algunos
+De forma predeterminada, durante la instalación de GCC, algunos
 encabezados del sistema se \"corregirían\" para su uso con GCC. Esto no
 es necesario en un sistema Linux moderno y podría ser perjudicial si se
-reinstala un paquete después de instalar GCC.****
+reinstala un paquete después de instalar GCC.
 
-**** Esta opción impide que GCC \"corrija\" los encabezados.****
+Esta opción impide que GCC \"corrija\" los encabezados.
 
-***** \--with-system-zlib*****
+\--with-system-zlib
 
-**** Esta opción indica a GCC que enlace con la copia de la biblioteca
+Esta opción indica a GCC que enlace con la copia de la biblioteca
 Zlib instalada en el sistema, en lugar de con su propia copia
-interna.****
+interna.
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
-> ****Los ejecutables independientes de la posición (PIE) son
+> Los ejecutables independientes de la posición (PIE) son
 > programas binarios que se pueden cargar en cualquier lugar de la
 > memoria. Sin PIE, la función de seguridad ASLR (Aleatorización del
 > Diseño del Espacio de Direcciones) se puede aplicar a las
 > bibliotecas compartidas, pero no a los ejecutables. Habilitar PIE
 > permite ASLR para los ejecutables, además de las bibliotecas
 > compartidas, y mitiga algunos ataques basados en direcciones fijas
-> de código o datos sensibles en los ejecutables.****
-> ****SSP (Protección contra Destrución de Pila) es una técnica para
+> de código o datos sensibles en los ejecutables.
+> SSP (Protección contra Destrución de Pila) es una técnica para
 > garantizar que la pila de parámetros no se corrompa. La corrupción
 > de la pila puede, por ejemplo, alterar la dirección de retorno de
 > una subrutina, transfiriendo así el control a código peligroso
 > (existente en el programa o en las bibliotecas compartidas, o
-> inyectado por el atacante de alguna manera).****
-> +----------------------------------------------------------------------+
+> inyectado por el atacante de alguna manera).
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-> +----------------------------------------------------------------------+
-> ---
 > **Importante**
-> ****En esta sección, el **conjunto** de pruebas para GCC se
+> 
+> En esta sección, el **conjunto** de pruebas para GCC se
 > considera importante, pero requiere mucho tiempo. Se recomienda a
 > quienes desarrollan por primera vez que ejecuten el conjunto de
 > pruebas. El tiempo para ejecutar las pruebas se puede reducir
 > significativamente agregando -jx al comando make -k check a
 > continuación, donde x es la cantidad de núcleos de CPU en su
-> sistema.****
-> +----------------------------------------------------------------------+
+> sistema.
 
-****GCC podría necesitar más espacio de pila para compilar patrones de
+GCC podría necesitar más espacio de pila para compilar patrones de
 código extremadamente complejos. Como precaución para las distribuciones
 de host con un límite de pila ajustado, establezca explícitamente el
 límite máximo del tamaño de pila en infinito. En la mayoría de las
@@ -10103,848 +10095,784 @@ distribuciones de host (y en el sistema LFS final), el límite máximo es
 infinito por defecto, pero no hay problema en establecerlo
 explícitamente. No es necesario cambiar el límite flexible del tamaño de
 la pila, ya que GCC lo establecerá automáticamente en un valor
-apropiado, siempre que no exceda el límite rígido:****
+apropiado, siempre que no exceda el límite rígido:
 
   ----------------------------
-  **ulimit -s -H unlimited**
+  ulimit -s -H unlimited
   ----------------------------
 
-****Ahora elimine/corrija varios fallos de prueba conocidos:****
+****Ahora elimine/corrija varios fallos de prueba conocidos:
 
-> +-----------------------------------------------------------------+
-> ---
-> ****sed -e \'/cpython/d\'****
-> ****-i ../gcc/testsuite/gcc.dg/plugin/plugin.exp****
-> ****sed -e \'s/no-pic /&-no-pie /\'****
-> ****-i ../gcc/testsuite/gcc.target/i386/pr113689-1.c****
-> ****sed -e \'s/300000/(1\ | 300000)/\'****
-> ****-i ../libgomp/testsuite/libgomp.c-c++-common/pr109062.c****
-> ****sed -e \'s/{ target nonpic } //\' ****
-> **** -e \'/GOTPCREL/d\'****
-> ****-i ../gcc/testsuite/gcc.target/i386/fentryname3.c****
-> +-----------------------------------------------------------------+
+> sed -e '/cpython/d'
+>-i ../gcc/testsuite/gcc.dg/plugin/plugin.exp
+> sed -e 's/no-pic /&-no-pie /'
+>-i ../gcc/testsuite/gcc.target/i386/pr113689-1.c
+> sed -e 's/300000/(1 | 300000)/'
+> -i ../libgomp/testsuite/libgomp.c-c++-common/pr109062.c
+> sed -e 's/{ target nonpic } /' 
+> -e '/GOTPCREL/d\'
+> -i ../gcc/testsuite/gcc.target/i386/fentryname3.c
 
-****Pruebe los resultados como un usuario sin privilegios, pero no se
-detenga en los errores:****
+Pruebe los resultados como un usuario sin privilegios, pero no se
+detenga en los errores:
 
-> +------------------------------------------------+
-> ---
-> **chown -R tester .**
-> **su tester -c \"PATH=\$PATH make -k check\"**
-> +------------------------------------------------+
+>chown -R tester 
+>su tester -c \"PATH=\$PATH make -k check\"
 
-****Para extraer un resumen de los resultados del conjunto de pruebas,
-ejecute:****
+Para extraer un resumen de los resultados del conjunto de pruebas,
+ejecute:
 
   -----------------------------------
-  **../contrib/***test_summary*****
+  ../contrib/test_summary
   -----------------------------------
 
-****Para filtrar solo los resúmenes, envíe la salida mediante **grep -A7
-Summ**.****
+Para filtrar solo los resúmenes, envíe la salida mediante **grep -A7
+Summ**.
 
-****Los resultados se pueden comparar con los que se encuentran en****
+Los resultados se pueden comparar con los que se encuentran en:
 
-****
-****[****https://www.linuxfromscratch.org/lfs/build-logs/12.3/****](https://www.linuxfromscratch.org/lfs/build-logs/12.3/)
+[*https://www.linuxfromscratch.org/lfs/build-logs/12.3/*](https://www.linuxfromscratch.org/lfs/build-logs/12.3/)
 
-**** y ****
+ y 
 
-****
-****[****https://gcc.gnu.org/ml/gcc-testresults/****](https://gcc.gnu.org/ml/gcc-testresults/)
+[*https://gcc.gnu.org/ml/gcc-testresults/*](https://gcc.gnu.org/ml/gcc-testresults/)
 
-****Se sabe que las pruebas tsan fallan en algunas distribuciones.****
+Se sabe que las pruebas tsan fallan en algunas distribuciones.
 
-****Algunos fallos inesperados no siempre se pueden evitar. En algunos
+Algunos fallos inesperados no siempre se pueden evitar. En algunos
 casos, los fallos de las pruebas dependen del hardware específico del
 sistema. A menos que los resultados de la prueba sean muy diferentes a
-los de la URL anterior, es seguro continuar.****
+los de la URL anterior, es seguro continuar.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****El directorio de compilación de GCC ahora pertenece a tester, y la
+El directorio de compilación de GCC ahora pertenece a tester, y la
 propiedad del directorio de encabezado instalado (y su contenido) es
-incorrecta. Cambie la propiedad al usuario y grupo root:****
+incorrecta. Cambie la propiedad al usuario y grupo root:
 
-> +-------------------------------------------------------------------+
-> ---
-> **chown -v -R root:root \\**
-> ** /usr/lib/gcc/\$(gcc -dumpmachine)/14.2.0/include{,-fixed}**
-> +-------------------------------------------------------------------+
+> chown -v -R root:root \
+> /usr/lib/gcc/$(gcc -dumpmachine)/14.2.0/include{,-fixed}
 
-****Cree un enlace simbólico requerido por el FHS por razones
-históricas.****
+Cree un enlace simbólico requerido por el FHS por razones
+históricas.
 
   -----------------------------------
-  **ln -svr /usr/bin/cpp /usr/lib**
+  ln -svr /usr/bin/cpp /usr/lib
   -----------------------------------
 
-****Muchos paquetes usan el nombre cc para llamar al compilador de C. Ya
+Muchos paquetes usan el nombre cc para llamar al compilador de C. Ya
 hemos creado cc como enlace simbólico en gcc-pass2; crea también su
-página de manual como enlace simbólico:****
+página de manual como enlace simbólico:
 
   -------------------------------------------------
-  **ln -sv gcc.1 /usr/***share***/man/man1/cc.1**
+  ln -sv gcc.1 /usr/share/man/man1/cc.1
   -------------------------------------------------
 
-****Añade un enlace simbólico de compatibilidad para habilitar la
+Añade un enlace simbólico de compatibilidad para habilitar la
 compilación de programas con Optimización del Tiempo de Enlace
-(LTO):****
+(LTO):
 
-> +----------------------------------------------------------------------+
-> ---
-> **ln -sfv ../../libexec/gcc/\$(gcc
-> -dumpmachine)/14.2.0/liblto_plugin.so \\**
-> ** /usr/lib/bfd-***plugins***/**
-> +----------------------------------------------------------------------+
+> ln -sfv ../../libexec/gcc/$(gcc-dumpmachine)/14.2.0/liblto_plugin.so \
+> /usr/lib/bfd-plugins/
 
-****Ahora que nuestra cadena de herramientas final está lista, es
+Ahora que nuestra cadena de herramientas final está lista, es
 importante asegurar de nuevo que la compilación y el enlace funcionen
 correctamente. Para ello, realizamos algunas comprobaciones de
-seguridad:****
+seguridad:
 
-> +------------------------------------------------+
-> ---
-> **echo \'int main(){}\' \> dummy.c**
-> **cc dummy.c -v -Wl,\--verbose &\> dummy.log**
-> **readelf -l a.out \ | grep \': /lib\'**
-> +------------------------------------------------+
+> echo 'int main(){}' > dummy.c
+> cc dummy.c -v -Wl,--verbose &> dummy.log
+> readelf -l a.out | grep ': /lib'
 
-****No debería haber errores y la salida del último comando será
+No debería haber errores y la salida del último comando será
 (teniendo en cuenta las diferencias específicas de la plataforma en el
-nombre del enlazador dinámico):****
+nombre del enlazador dinámico):
 
   --------------------------------------------------------------------------------------------
-  *****\[Intérprete del programa ******solicitante******: /lib64/ld-linux-x86-64.so.2\]*****
+  [Intérprete del programa solicitante: /lib64/ld-linux-x86-64.so.2]
   --------------------------------------------------------------------------------------------
 
-****Ahora asegúrese de que estamos configurados para usar los archivos
-de inicio correctos:****
+Ahora asegúrese de que estamos configurados para usar los archivos
+de inicio correctos:
 
   -----------------------------------------------------------------------
-  ****grep** -E -o \'/usr/lib.\*/S?crt\[1in\].\*succeeded\' dummy.log**
+  grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log
   -----------------------------------------------------------------------
 
-****La salida del último comando debería ser:****
+La salida del último comando debería ser:
 
-> +----------------------------------------------------------------------+
-> ---
-> **/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/Scrt1.o
-> succeeded**
-> **
-> /usr/lib/gcc/***x86_64***-pc-linux-gnu/14.2.0/../../../../lib/crti.o
-> succeeded**
-> **/usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/crtn.o
-> succeeded**
-> +----------------------------------------------------------------------+
+> /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/Scrt1.o succeeded
+> /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/crti.o succeeded
+> /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/crtn.o succeeded
 
-****Dependiendo de la arquitectura de su equipo, lo anterior puede
+Dependiendo de la arquitectura de su equipo, lo anterior puede
 variar ligeramente. La diferencia radica en el nombre del directorio
-después de *****/usr/lib/gcc*****. Es importante verificar que gcc haya
-encontrado los tres archivos *****crt\*.o***** en el directorio
-*****/usr/lib*****. Verifique que el compilador esté buscando los
-archivos de encabezado correctos:****
+después de **/usr/lib/gcc**. Es importante verificar que gcc haya
+encontrado los tres archivos **crt\*.o** en el directorio
+**/usr/lib**. Verifique que el compilador esté buscando los
+archivos de encabezado correctos:
 
   --------------------------------------------------
-  **grep -B4 \'\^ /usr/include\' ***dummy.log*****
+  grep -B4 '^ /usr/include' dummy.log
   --------------------------------------------------
 
-****Este comando debería devolver el siguiente resultado:****
+Este comando debería devolver el siguiente resultado:
 
-> +------------------------------------------------------------+
-> ---
-> **#include \<\...\> search starts here:**
-> ** /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include**
-> ** /usr/local/include**
-> ** /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed**
-> ** /usr/include**
-> +------------------------------------------------------------+
+> #include <...> search starts here:
+> /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include
+> /usr/local/include
+> /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed
+> /usr/include
 
-****Nuevamente, el directorio nombrado según el triplete de destino
+Nuevamente, el directorio nombrado según el triplete de destino
 puede ser diferente al anterior, dependiendo de la arquitectura de su
-sistema.****
+sistema.
 
-****A continuación, verifique que el nuevo enlazador se esté utilizando
-con las rutas de búsqueda correctas:****
+A continuación, verifique que el nuevo enlazador se esté utilizando
+con las rutas de búsqueda correctas:
 
   ------------------------------------------------------------------------
-  **grep \'SEARCH.\*/***usr***/lib\' dummy.log \|sed \'s\|; \|\\n\|g\'**
+  grep 'SEARCH.usr/lib' dummy.log | sed 's|;|\n|g'
   ------------------------------------------------------------------------
 
-****Las referencias a rutas que tengan componentes con \'-linux-gnu\'
+Las referencias a rutas que tengan componentes con \'-linux-gnu\'
 deben ignorarse; de lo contrario, la salida del último comando debería
-ser:****
+ser:
 
-> +--------------------------------------------------------+
-> ---
-> ****SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib64\")****
-> ****SEARCH_DIR(\"/usr/local/*****lib64*****\")****
-> ****SEARCH_DIR(\"/lib64\")****
-> ****SEARCH_DIR(\"/usr/lib64\")****
-> ****SEARCH_DIR(\"/usr/x86_64-pc-linux-gnu/lib\")****
-> ****SEARCH_DIR(\"/usr/local/lib\")****
-> ****SEARCH_DIR(\"/lib\")****
-> ****SEARCH_DIR(\"/usr/lib\");****
-> +--------------------------------------------------------+
+> SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib64")
+> SEARCH_DIR("/usr/local/lib64")
+> SEARCH_DIR("/lib64")
+> SEARCH_DIR("/usr/lib64")
+> SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib")
+> SEARCH_DIR("/usr/local/lib")
+> SEARCH_DIR("/lib")
+> SEARCH_DIR("/usr/lib");
 
-****Un sistema de 32 bits puede usar algunos otros directorios. Por
-ejemplo, aquí está la salida de una máquina i686:****
+Un sistema de 32 bits puede usar algunos otros directorios. Por
+ejemplo, aquí está la salida de una máquina i686:
 
-> +--------------------------------------------------------+
-> ---
-> *****SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib32\")*****
-> *****SEARCH_DIR(\"/usr/local/lib32\")*****
-> *****SEARCH_DIR(\"/lib32\")*****
-> *****SEARCH_DIR(\"/usr/lib32\")*****
-> *****SEARCH_DIR(\"/usr/i686-pc-linux-gnu/lib\")*****
-> *****SEARCH_DIR(\"/usr/local/lib\")*****
-> *****SEARCH_DIR(\"/lib\")*****
-> *****SEARCH_DIR(\"/usr/lib\"); *****
-> +--------------------------------------------------------+
+> SEARCH_DIR("/usr/i686-pc-linux-gnu/lib32")
+> SEARCH_DIR("/usr/local/lib32")
+> SEARCH_DIR("/lib32")
+> SEARCH_DIR("/usr/lib32")
+> SEARCH_DIR("/usr/i686-pc-linux-gnu/lib")
+> SEARCH_DIR("/usr/local/lib")
+> SEARCH_DIR("/lib")
+> SEARCH_DIR("/usr/lib"); 
 
-****A continuación, asegúrese de usar la libc correcta:****
+A continuación, asegúrese de usar la libc correcta:
 
   -------------------------------------------
-  **grep \"/lib.\*/libc.so.6 \" dummy.log**
+  grep "/lib.*/libc.so.6" dummy.log
   -------------------------------------------
 
-****El resultado del último comando debería ser:****
+El resultado del último comando debería ser:
 
   --------------------------------------------------------
-  *****attempt to open /usr/lib/libc.so.6 succeeded*****
+  attempt to open /usr/lib/libc.so.6 succeeded
   --------------------------------------------------------
 
-****Asegúrese de que GCC esté usando el enlazador dinámico correcto:****
+Asegúrese de que GCC esté usando el enlazador dinámico correcto:
 
   --------------------------------
-  **grep found ***dummy.log*****
+  grep found dummy.log
   --------------------------------
 
-****El resultado del último comando debería ser (teniendo en cuenta las
+El resultado del último comando debería ser (teniendo en cuenta las
 diferencias específicas de la plataforma en el nombre del enlazador
-dinámico):****
+dinámico):
 
   -----------------------------------------------------------------------
-  *****found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2*****
+  found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2
   -----------------------------------------------------------------------
 
-****Si el resultado no se muestra como se muestra arriba o no se recibe,
+Si el resultado no se muestra como se muestra arriba o no se recibe,
 entonces algo está muy mal. Investigue y vuelva a seguir los pasos para
 encontrar el problema y corregirlo. Cualquier problema debe resolverse
 antes de continuar con el proceso. Una vez que todo funcione
-correctamente, limpie los archivos de prueba:****
+correctamente, limpie los archivos de prueba:
 
   -----------------------------------------
-  **rm -v dummy.c a.out ***dummy.log*****
+  rm -v dummy.c a.out dummy.log
   -----------------------------------------
 
-****Finalmente, mueva un archivo extraviado:****
+Finalmente, mueva un archivo extraviado:
 
-> +------------------------------------------------------------------+
-> ---
-> **mkdir -pv /usr/share/gdb/auto-load/usr/lib**
-> **mv -v /usr/lib/\*gdb.py /usr/**share**/gdb/auto-load/usr/lib**
-> +------------------------------------------------------------------+
+> mkdir -pv /usr/share/gdb/auto-load/usr/lib
+> mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
 
-### **8.29.2. Contenido de GCC**
+### 8.29.2. Contenido de GCC
 
 **Programas instalados**: c++, cc (enlace a gcc), cpp, g++, gcc, gcc-ar,
-gcc-nm, gcc-ranlib, gcov, gcov-dump, gcov-tool y lto-dump****
+gcc-nm, gcc-ranlib, gcov, gcov-dump, gcov-tool y lto-dump
 
-**Bibliotecas instalad**as****: libasan.{a,so}, libatomic.{a,so},
+**Bibliotecas instaladas**: libasan.{a,so}, libatomic.{a,so},
 libcc1.so, libgcc.a, libgcc_eh.a, libgcc_s.so, libgcov.a,
 libgomp.{a,so}, libhwasan.{a,so}, libitm.{a,so}, liblsan.{a,so},
 liblto_plugin.so, libquadmath.{a,so}, libssp.{a,so}, libssp_nonshared.a,
 libstdc++.{a,so}, libstdc++exp.a, libstdc++fs.a, libsupc++.a,
-libtsan.{a,so} y libubsan.{a,so}****
+libtsan.{a,so} y libubsan.{a,so}
 
 **Directorio instalados**: /usr/include/c++, /usr/lib/gcc,
-/usr/libexec/gcc y /usr/share/gcc-14.2.0****
+/usr/libexec/gcc y /usr/share/gcc-14.2.0
 
-### **Descripciones breves**
+### Descripciones breves
 
-****c++ ****El compilador de C++****
+c++ El compilador de C++
 
-**cc** ****El compilador de C****
+cc El compilador de C
 
-**cpp** ****El preprocesador de C; El compilador lo utiliza para
+cpp El preprocesador de C; El compilador lo utiliza para
 expandir las directivas #include, #define y similares en los archivos
-fuente****
+fuente
 
-**g++** ****El compilador de C++****
+g++ El compilador de C++
 
-**gcc** ****El compilador de C****
+gcc El compilador de C
 
-**gcc-ar** ****Un contenedor de ar que añade un complemento a la línea
+**gcc-ar** Un contenedor de ar que añade un complemento a la línea
 de comandos. Este programa solo se utiliza para añadir \"optimización
 del tiempo de enlace\" y no es útil con las opciones de compilación
-predeterminadas****
+predeterminadas
 
-**gcc-nm** ****Un contenedor de nm que añade un complemento a la línea
+**gcc-nm** Un contenedor de nm que añade un complemento a la línea
 de comandos. Este programa solo se utiliza para añadir \"optimización
 del tiempo de enlace\" y no es útil con las opciones de compilación
-predeterminadas.****
+predeterminadas
 
-**gcc-ranlib** ****Un contenedor de ranlib que añade un complemento a la
+**gcc-ranlib** Un contenedor de ranlib que añade un complemento a la
 línea de comandos Este programa solo se utiliza para añadir
 \"optimización del tiempo de enlace\" y no es útil con las opciones de
-compilación predeterminadas****
+compilación predeterminadas
 
-**gcov** ****Una herramienta de pruebas de cobertura. Se utiliza para
+**gcov** Una herramienta de pruebas de cobertura. Se utiliza para
 analizar programas y determinar dónde las optimizaciones tendrán el
-mayor efecto****
+mayor efecto
 
-**gcov-dump** ****Herramienta de volcado de perfiles gcda y gcno sin
-conexión****
+**gcov-dump** Herramienta de volcado de perfiles gcda y gcno sin
+conexión
 
-**gcov-tool **Herramienta de procesamiento de perfiles gcda sin
-conexión.****
+**gcov-tool** Herramienta de procesamiento de perfiles gcda sin
+conexión
 
-**lto-dump **Herramienta para volcar archivos objeto generados por GCC
-con LTO habilitado****
+**lto-dump** Herramienta para volcar archivos objeto generados por GCC
+con LTO habilitado
 
-****libasan Biblioteca de ejecución Address Sanitizer.****
+libasan Biblioteca de ejecución Address Sanitizer.
 
-****libatomic Biblioteca de ejecución atómica integrada de GCC.****
+libatomic Biblioteca de ejecución atómica integrada de GCC.
 
-****libcc1 Una biblioteca que permite a GDB utilizar GCC.****
+libcc1 Una biblioteca que permite a GDB utilizar GCC.
 
-****libgcc Contiene soporte en tiempo de ejecución para gcc.****
+libgcc Contiene soporte en tiempo de ejecución para gcc.
 
-****libgcov Esta biblioteca se vincula a un programa cuando se le indica
-a GCC que habilite la generación de perfiles.****
+libgcov Esta biblioteca se vincula a un programa cuando se le indica
+a GCC que habilite la generación de perfiles.
 
-****libgomp Implementación GNU de la API OpenMP para programación
-paralela multiplataforma de memoria compartida en C/C++ y Fortran.****
+libgomp Implementación GNU de la API OpenMP para programación
+paralela multiplataforma de memoria compartida en C/C++ y Fortran.
 
-****libhwasan Biblioteca de ejecución Address Sanitizer asistida por
-hardware****
+libhwasan Biblioteca de ejecución Address Sanitizer asistida por
+hardware
 
-****libitm Biblioteca de memoria transaccional de GNU****
+libitm Biblioteca de memoria transaccional de GNU
 
-****liblsan Biblioteca de ejecución Leak Sanitizer****
+liblsan Biblioteca de ejecución Leak Sanitizer
 
-****liblto_plugin El complemento LTO de GCC permite a Binutils procesar
+liblto_plugin El complemento LTO de GCC permite a Binutils procesar
 archivos objeto generados por GCC con LTO habilitado****
 
-****libquadmath API de la biblioteca matemática de precisión cuádruple
-de GCC****
+libquadmath API de la biblioteca matemática de precisión cuádruple
+de GCC
 
-****libssp Contiene rutinas que soportan la función de protección contra
+libssp Contiene rutinas que soportan la función de protección contra
 la destrucción de pila de GCC. Normalmente no se utiliza, ya que Glibc
-también proporciona dichas rutinas****
+también proporciona dichas rutinas
 
-****libstdc++ La biblioteca estándar de C++****
+libstdc++ La biblioteca estándar de C++
 
-****libstdc++exp La biblioteca experimental de contratos de C++****
+libstdc++exp La biblioteca experimental de contratos de C++
 
-****libstdc++fs La biblioteca del sistema de archivos ISO/IEC TS
-18822:2015****
+libstdc++fs La biblioteca del sistema de archivos ISO/IEC TS
+18822:2015
 
-****libsupc++ Proporciona rutinas de soporte para el lenguaje de
+libsupc++ Proporciona rutinas de soporte para el lenguaje de
 programación C++****
 
-****libtsan La biblioteca de ejecución Thread Sanitizer****
+libtsan La biblioteca de ejecución Thread Sanitizer****
 
-****libubsan La biblioteca de ejecución Undefined Behavior Sanitizer****
+libubsan La biblioteca de ejecución Undefined Behavior Sanitizer****
 
-## **8.30. Ncurses-6.5**
+## 8.30. Ncurses-6.5
 
-****El paquete Ncurses contiene bibliotecas para la gestión de pantallas
-de caracteres independiente de la terminal.****
+El paquete Ncurses contiene bibliotecas para la gestión de pantallas
+de caracteres independiente de la terminal
 
-**Tiempo de compilación aproximado**: 0.2 SBU****
+**Tiempo de compilación aproximado**: 0.2 SBU
 
-**Espacio en disco necesario**: 46 MB****
+**Espacio en disco necesario**: 46 MB
 
-### **8.30.1. Instalación de Ncurses**
+### 8.30.1. Instalación de Ncurses
 
-****Preparar Ncurses para la compilación:****
+Preparar Ncurses para la compilación:
 
-> +--------------------------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--mandir=/usr/share/man \\**
-> ** \--with-***shared*** \\**
-> ** \--without-debug \\**
-> ** \--without-normal \\**
-> ** \--with-cxx-shared \\**
-> ** \--enable-pc-files \\**
-> ** \--with-pkg-config-libdir=/usr/lib/pkgconfig**
-> +--------------------------------------------------------------+
+> ./configure --prefix=/usr \
+> --mandir=/usr/share/man \
+> --with-shared \
+> --without-debug \
+> --without-normal \
+> --with-cxx-shared \
+> --enable-pc-files \
+> --with-pkg-config-libdir=/usr/lib/pkgconfig
 
-**El significado de las nuevas opciones de configuración:**
+**El significado de las nuevas opciones de configuración**:
 
-**** *****\--with-shared*****
+\--with-shared
 
-**** Esto hace que Ncurses compile e instale bibliotecas de C
-compartidas.****
+Esto hace que Ncurses compile e instale bibliotecas de C
+compartidas.
 
-**** *****\--without-normal*****
+\--without-normal
 
-**** Esto impide que Ncurses compile e instale bibliotecas de C
-estáticas.****
+Esto impide que Ncurses compile e instale bibliotecas de C
+estáticas.
 
-**** *****\--without-debug*****
+\--without-debug
 
-**** Esto impide que Ncurses compile e instale bibliotecas de
-depuración.****
+Esto impide que Ncurses compile e instale bibliotecas de
+depuración.
 
-**** *****\--with-cxx-shared*****
+\--with-cxx-shared
 
-**** Esto hace que Ncurses compile e instale enlaces compartidos de C++.
-También impide que compile e instale enlaces estáticos de C++.****
+Esto hace que Ncurses compile e instale enlaces compartidos de C++.
+También impide que compile e instale enlaces estáticos de C++.
 
-**** *****\--enable-pc-files*****
+\--enable-pc-files
 
-**** Esta opción genera e instala archivos .pc para pkg-config.****
+Esta opción genera e instala archivos .pc para pkg-config.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Este paquete incluye un conjunto de pruebas, pero solo se puede
+Este paquete incluye un conjunto de pruebas, pero solo se puede
 ejecutar después de instalarlo. Las pruebas se encuentran en el
 directorio test/. Consulte el archivo README de ese directorio para
-obtener más información.****
+obtener más información.
 
-****La instalación de este paquete sobrescribirá
-*****libncursesw.so.6.5***** localmente. Esto podría bloquear el proceso
-del shell que utiliza el código y los datos del archivo de la
-biblioteca. Instale el paquete con *****DESTDIR***** y reemplace el
-archivo de la biblioteca correctamente con el comando **install** (el
-encabezado *****curses.h***** también se edita para garantizar que se
+La instalación de este paquete sobrescribirá libncursesw.so.6.5
+localmente. Esto podría bloquear el proceso del shell que utiliza el
+código y los datos del archivo de la biblioteca. Instale el paquete
+con DESTDIR y reemplace el archivo de la biblioteca correctamente con
+el comando **install** (el encabezado **curses.h** también se edita para garantizar que se
 use la ABI de caracteres anchos, como se hizo en la Sección 6.3,
-"Ncurses-6.5"):****
+"Ncurses-6.5"):
 
-> +-------------------------------------------------------------+
-> ---
-> **make DESTDIR=\$PWD/dest install**
-> **install -vm755 dest/usr/lib/libncursesw.so.6.5 /usr/lib**
-> **rm -v dest/usr/lib/libncursesw.so.6.5**
-> **sed -e \'s/\^#if.\*XOPEN.\*\$/#if 1/\' \\**
-> **-i dest/usr/include/curses.h**
-> **cp -av dest/\* /**
-> +-------------------------------------------------------------+
+> make DESTDIR=\$PWD/dest install
+> install -vm755 dest/usr/lib/libncursesw.so.6.5 /usr/lib
+> rm -v dest/usr/lib/libncursesw.so.6.5
+> sed -e 's/^#if.*XOPEN.*$/#if 1/' \
+> -i dest/usr/include/curses.h**
+> cp -av dest/* 
 
-****Muchas aplicaciones aún esperan que el enlazador pueda encontrar
+Muchas aplicaciones aún esperan que el enlazador pueda encontrar
 bibliotecas de Ncurses que no sean de caracteres anchos. Engañe a estas
 aplicaciones para que enlacen con bibliotecas de caracteres anchos
 mediante enlaces simbólicos (tenga en cuenta que los enlaces .so solo
 son seguros con curses.h). Editado para usar siempre la ABI de
-caracteres anchos:****
+caracteres anchos:
 
-> +-------------------------------------------------------------------+
-> ---
-> **for lib in ncurses form panel menu ; do**
-> ** ln -sfv lib\${lib}w.so /usr/lib/lib\${lib}.so**
-> ** ln -sfv \${lib}***w.pc*** /usr/lib/pkgconfig/\${lib}.pc**
-> **done**
-> +-------------------------------------------------------------------+
+> for lib in ncurses form panel menu ; do**
+> ln -sfv lib\${lib}w.so /usr/lib/lib\${lib}.so**
+> ln -sfv \${lib}***w.pc*** /usr/lib/pkgconfig/\${lib}.pc**
+> done
 
-****Finalmente, asegúrese de que las aplicaciones antiguas que buscan
-\"-lcurses\" en tiempo de compilación aún se puedan compilar:****
+Finalmente, asegúrese de que las aplicaciones antiguas que buscan
+\"-lcurses\" en tiempo de compilación aún se puedan compilar:
 
   --------------------------------------------------
-  **ln -sfv libncursesw.so /usr/lib/libcurses.so**
+  ln -sfv libncursesw.so /usr/lib/libcurses.so
   --------------------------------------------------
 
-****Si lo desea, instale la documentación de Ncurses:****
+Si lo desea, instale la documentación de Ncurses:
 
   ------------------------------------------------------
-  **cp -v -R doc -T /***usr***/share/doc/ncurses-6.5**
+  cp -v -R doc -T /usr/share/doc/ncurses-6.5
   ------------------------------------------------------
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
-> ****Las instrucciones anteriores no crean bibliotecas de Ncurses que
+> 
+> Las instrucciones anteriores no crean bibliotecas de Ncurses que
 > no sean de caracteres anchos, ya que ningún paquete instalado al
 > compilar desde el código fuente las enlazaría en tiempo de
 > ejecución. Sin embargo, las únicas aplicaciones **conocidas** de
 > solo binario que enlazan con bibliotecas Ncurses de caracteres no
 > anchos requieren la versión 5. Si necesita tener dichas bibliotecas
 > debido a alguna aplicación de solo **binario** o para cumplir con
-> LSB, vuelva a compilar el paquete con los siguientes comandos:****
-> +----------------------------------------------------------------------+
-> **make distclean**
-> **./configure \--prefix=/usr \\**
-> ** \--with-shared \\**
-> ** \--without-normal*** ***\\**
-> ** \--without-debug \\**
-> ** \--without-cxx-binding \\**
-> ** \--with-abi-version=5**
-> **make sources libs**
-> **cp -av lib/lib\*.so.5\* /usr/lib**
-> +----------------------------------------------------------------------+
+> LSB, vuelva a compilar el paquete con los siguientes comandos:
+> 
+> make distclean
+> ./configure --prefix=/usr \
+> --with-shared \
+> --without-normal \
+> --without-debug \
+> --without-cxx-binding \
+> --with-abi-version=5
+> make sources libs
+> cp -av lib/lib*.so.5* /usr/lib
 
-### **8.30.2. Contenido de Ncurses**
+### 8.30.2. Contenido de Ncurses
 
 **Programas instalados**: captoinfo (enlace a tic), clear, infocmp,
 infotocap (enlace a tic), ncursesw6-config, reset (enlace a tset), tabs,
-tic, toe, tput y tset****
+tic, toe, tput y tset
 
-**Bibliotecas instalad**a**s**: libcurses.so (enlace simbólico),
+**Bibliotecas instaladas**: libcurses.so (enlace simbólico),
 libform.so (enlace simbólico), libformw.so, libmenu.so (enlace
 simbólico), libmenuw.so, libncurses.so (enlace simbólico),
 libncursesw.so, libncurses++w.so, libpanel.so (enlace simbólico) y
-libpanelw.so,****
+libpanelw.so
 
 **Directorios instalados**: /usr/share/tabset, /usr/share/terminfo y
-/usr/share/doc/ncurses-6.5****
+/usr/share/doc/ncurses-6.5
 
-### **Descripciones breves**
+### Descripciones breves
 
-**captoinfo **Convierte una descripción de termcap en una descripción de
-terminfo****
+**captoinfo** Convierte una descripción de termcap en una descripción de
+terminfo
 
-**clear **Limpia la pantalla, si es posible****
+**clear** Limpia la pantalla, si es posible
 
-**infocmp **Compara o imprime descripciones de terminfo****
+**infocmp** Compara o imprime descripciones de terminfo
 
-**infotocap **Convierte una descripción de terminfo en una descripción
-de termcap****
+**infotocap** Convierte una descripción de terminfo en una descripción
+de termcap
 
-**ncursesw6-config **Proporciona información de configuración para
-ncurses****
+**ncursesw6-config** Proporciona información de configuración para
+ncurses
 
-**reset **Reinicializa una terminal a sus valores predeterminados****
+**reset** Reinicializa una terminal a sus valores predeterminados
 
-**tabs **Limpia y establece tabulaciones en una terminal****
+**tabs** Limpia y establece tabulaciones en una terminal
 
-**tic **El compilador de descripción de entrada de terminfo que traduce
+**tic** El compilador de descripción de entrada de terminfo que traduce
 un archivo terminfo del formato fuente al formato binario necesario para
 las rutinas de la biblioteca ncurses \[Un archivo terminfo contiene
-información sobre las capacidades de una terminal específica\]****
+información sobre las capacidades de una terminal específica\]
 
-**toe **Enumera todos los tipos de terminal disponibles, indicando el
-nombre principal y la descripción de cada uno****
+**toe** Enumera todos los tipos de terminal disponibles, indicando el
+nombre principal y la descripción de cada uno
 
-**tput **Pone a disposición del shell los valores de las capacidades
+**tput** Pone a disposición del shell los valores de las capacidades
 dependientes de la terminal. También se puede usar para reiniciar o
-inicializar una terminal o informar su nombre completo****
+inicializar una terminal o informar su nombre completo
 
-**tset **Se puede usar para inicializar terminales****
+**tset** Se puede usar para inicializar terminales
 
-*****libncursesw *****Contiene funciones para mostrar texto de muchas
+**libncursesw** Contiene funciones para mostrar texto de muchas
 formas complejas en una pantalla de terminal; un buen ejemplo del uso de
 estas funciones es el menú que se muestra durante el **make menuconfig**
-del kernel.****
+del kernel.
 
-*****libncurses++w Contiene enlaces de C++ para otras bibliotecas de
-este paquete*****
+**libncurses++w** Contiene enlaces de C++ para otras bibliotecas de
+este paquete
 
-*****libformw Contiene funciones para implementar formularios*****
+**libformw** Contiene funciones para implementar formularios
 
-*****libmenuw Contiene funciones para implementar menús*****
+**libmenuw** Contiene funciones para implementar menús
 
-*****libpanelw Contiene funciones para implementar paneles*****
+**libpanelw** Contiene funciones para implementar paneles
 
-## **8.31. Sed-4.9**
+## 8.31. Sed-4.9
 
-****El paquete Sed contiene un editor de flujos.****
+El paquete Sed contiene un editor de flujos.
 
-****Tiempo aproximado de compilación: ****0.3 SBU****
+Tiempo aproximado de compilación: 0.3 SBU
 
-****Espacio en disco requerido: ****30 MB****
+Espacio en disco requerido: 30 MB
 
-### **8.31.1. Instalación de Sed**
+### 8.31.1. Instalación de Sed
 
-****Preparar Sed para la compilación:****
-
-  -------------------------------------
-  **./configure --***prefix***=/usr**
-  -------------------------------------
-
-****Compilar el paquete y generar la documentación HTML:****
-
-> +---------------+
-> ---
-> **make**
-> **make html**
-> +---------------+
-
-****Para probar los resultados, ejecute:****
-
-> +---------------------------------------------+
-> ---
-> **chown -R tester .**
-> **su tester -c \"PATH=\$PATH make check\"**
-> +---------------------------------------------+
-
-****Instalar el paquete y su documentación:****
-
-> +-------------------------------------------------------+
-> ---
-> **make install**
-> **install -d -m755 /usr/share/doc/sed-4.9**
-> **install -m644 doc/sed.html /usr/share/doc/sed-4.9**
-> +-------------------------------------------------------+
-
-### **8.31.2. Contenido de Sed**
-
-****Programa instalado: sed****
-
-****Directorio de instalación:**** /usr/share/doc/sed-4.9****
-
-### **Descripciones breves**
-
-**sed** Filtra y transforma archivos de texto en una sola pasada****
-
-## **8.32. Psmisc-23.7**
-
-****El paquete Psmisc contiene programas para mostrar información sobre
-los procesos en ejecución.****
-
-****Tiempo de compilación aproximado: ****menos de 0,1 SBU****
-
-****Espacio en disco necesario:**** 6,7 MB****
-
-### **8.32.1. Instalación de Psmisc**
-
-****Preparar Psmisc para la compilación:****
+Preparar Sed para la compilación:
 
   -------------------------------------
-  **./configure --***prefix***=/usr**
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete y generar la documentación HTML:
+
+> make
+> make html
+
+Para probar los resultados, ejecute:
+
+> chown -R tester .
+> su tester -c "PATH=\$PATH make check"
+
+Instalar el paquete y su documentación:
+
+> make install
+> install -d -m755 /usr/share/doc/sed-4.9
+> install -m644 doc/sed.html /usr/share/doc/sed-4.9
+
+### 8.31.2. Contenido de Sed
+
+**Programa instalado**: sed
+
+**Directorio de instalación**: /usr/share/doc/sed-4.9
+
+### Descripciones breves
+
+**sed** Filtra y transforma archivos de texto en una sola pasada
+
+## 8.32. Psmisc-23.7
+
+El paquete Psmisc contiene programas para mostrar información sobre
+los procesos en ejecución.
+
+Tiempo de compilación aproximado: menos de 0,1 SBU
+
+Espacio en disco necesario: 6,7 MB
+
+### 8.32.1. Instalación de Psmisc
+
+Preparar Psmisc para la compilación:
+
+  -------------------------------------
+  ./configure --prefix=/usr
+  -------------------------------------
+
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para ejecutar el conjunto de pruebas, ejecute:****
+Para ejecutar el conjunto de pruebas, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.32.2. Contenido de Psmisc**
+### 8.32.2. Contenido de Psmisc
 
-****Programas instalados: fuser, killall, peekfd, prtstat, pslog, pstree
-y pstree.x11 (enlace a pstree)****
+Programas instalados: fuser, killall, peekfd, prtstat, pslog, pstree
+y pstree.x11 (enlace a pstree)
 
-### **Descripciones breves**
+### Descripciones breves
 
 **fuser** Informa de los identificadores de proceso (PID) de los
 procesos que utilizan los archivos o sistemas de archivos
-especificados.****
+especificados.
 
 **killall** Detiene los procesos por nombre. Envía una señal a todos los
-procesos que ejecutan cualquiera de los comandos dados.****
+procesos que ejecutan cualquiera de los comandos dados.
 
 **peekfd** Examina los descriptores de archivo de un proceso en
-ejecución, dado su PID.****
+ejecución, dado su PID.
 
-**prtstat** Imprime información sobre un proceso.****
+**prtstat** Imprime información sobre un proceso.
 
 **pslog** Informa sobre la ruta actual de los registros de un
-proceso.****
+proceso.
 
-**pstree** Muestra los procesos en ejecución como un árbol.****
+**pstree** Muestra los procesos en ejecución como un árbol.
 
 **pstree.x11** Igual que **pstree**, excepto que espera confirmación
-antes de salir.****
+antes de salir.
 
-## **8.33. Gettext-0.24**
+## 8.33. Gettext-0.24
 
-****El paquete Gettext contiene utilidades para la internacionalización
+El paquete Gettext contiene utilidades para la internacionalización
 y localización. Estas permiten compilar programas con NLS (Soporte de
 Lenguaje Nativo), lo que les permite mostrar mensajes en el idioma
-nativo del usuario.****
+nativo del usuario.
 
-**Tiempo de compilación aproximado: **1.7 SBU****
+Tiempo de compilación aproximado: 1.7 SBU
 
-**Espacio en disco requerido: **290 MB****
+Espacio en disco requerido: 290 MB
 
-### **8.33.1. Instalación de Gettext**
+### 8.33.1. Instalación de Gettext
 
-****Preparar Gettext para la compilación:****
+Preparar Gettext para la compilación:
 
-> +-------------------------------------------+
-> ---
-> **./***configure*** \--prefix=/usr\\**
-> **\--disable-static \\**
-> **\--docdir=/usr/share/doc/gettext-0.24**
-> +-------------------------------------------+
+> ./configure --prefix=/usr \
+> --disable-static \
+> --docdir=/usr/share/doc/gettext-0.24
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
-> +---------------------------------------------------+
-> ---
-> **make install**
-> **chmod -v 0755 /usr/lib/preloadable_libintl.so**
-> +---------------------------------------------------+
+> make install
+> chmod -v 0755 /usr/lib/preloadable_libintl.so
 
-### **8.33.2. Contenido de Gettext**
+### 8.33.2. Contenido de Gettext
 
 **Programas instalados**: autopoint, envsubst, gettext, gettext.sh,
 gettextize, msgattrib, msgcat, msgcmp, msgcomm, msgconv, msgen, msgexec,
 msgfilter, msgfmt, msggrep, msginit, msgmerge, msgunfmt, msguniq,
-ngettext, recode-sr- latin y xgettext****
+ngettext, recode-sr- latin y xgettext
 
-**Bibliotecas instalad**a**s**: libasprintf.so, libgettextlib.so,
+**Bibliotecas instaladas**: libasprintf.so, libgettextlib.so,
 libgettextpo.so, libgettextsrc.so, libtextstyle.so y
-preloadable_libintl.so****
+preloadable_libintl.so
 
 **Directorios instalados**: /usr/lib/gettext,
 /usr/share/doc/gettext-0.24, /usr/share/gettext y
-/usr/share/gettext-0.24****
+/usr/share/gettext-0.24
 
-### **Descripciones **breves****
+### Descripciones breves
 
-****autopoint**** Copia los archivos estándar de la infraestructura
-Gettext en un paquete fuente.****
+**autopoint** Copia los archivos estándar de la infraestructura
+Gettext en un paquete fuente.
 
-****envsubst**** Sustituye las variables de entorno en cadenas de
-formato de shell.****
+**envsubst** Sustituye las variables de entorno en cadenas de
+formato de shell.
 
-****g****ettext**** Traduce un mensaje en lenguaje natural al idioma del
-usuario consultando la traducción en un catálogo de mensajes.****
+**gettext** Traduce un mensaje en lenguaje natural al idioma del
+usuario consultando la traducción en un catálogo de mensajes.
 
-****gettext.sh ****Sirve principalmente como biblioteca de funciones de
-shell para gettext.****
+**gettext.sh** Sirve principalmente como biblioteca de funciones de
+shell para gettext.
 
-****gettextize ****Copia todos los archivos estándar Gettext en el
+**gettextize** Copia todos los archivos estándar Gettext en el
 directorio de nivel superior de un paquete para comenzar a
-internacionalizarlo.****
+internacionalizarlo.
 
-****msgattrib ****Filtra los mensajes de un catálogo de traducción según
-sus atributos y los manipula.****
+**msgattrib** Filtra los mensajes de un catálogo de traducción según
+sus atributos y los manipula.
 
-****msgcat ****Concatena y fusiona los archivos .po.****
+**msgcat** Concatena y fusiona los archivos .po.
 
-****msgcmp ****Compara dos archivos .po para comprobar que ambos
-contienen el mismo conjunto de cadenas msgid.****
+****msgcmp** Compara dos archivos .po para comprobar que ambos
+contienen el mismo conjunto de cadenas msgid.
 
 **msgcomm** Busca los mensajes comunes a los archivos .po
-especificados.****
+especificados.
 
 **msgconv** Convierte un catálogo de traducción a una codificación de
-caracteres diferente.****
+caracteres diferente.
 
-**msgen** Crea un catálogo de traducción al inglés.****
+**msgen** Crea un catálogo de traducción al inglés.
 
 **msgexec** Aplica un comando a todas las traducciones de un catálogo de
-traducción.****
+traducción.
 
 **msgfilter** Aplica un filtro a todas las traducciones de un catálogo
-de traducción.****
+de traducción.
 
 **msgfmt** Genera un catálogo de mensajes binarios a partir de un
-catálogo de traducción.****
+catálogo de traducción.
 
 **msggrep** Extrae todos los mensajes de un catálogo de traducción que
 coinciden con un patrón determinado o pertenecen a algunos archivos
-fuente.****
+fuente.
 
 **msginit** Crea un nuevo archivo .po, inicializando la metainformación
-con valores del entorno del usuario.****
+con valores del entorno del usuario.
 
 **msgmerge** Combina. Dos traducciones sin procesar en un solo
-archivo****
+archivo
 
 **msgunfmt** Descompila un catálogo de mensajes binarios en texto de
-traducción sin procesar****
+traducción sin procesar
 
 **msguniq** Unifica traducciones duplicadas en un catálogo de
-traducción****
+traducción
 
 **ngettext** Muestra traducciones al idioma nativo de un mensaje de
-texto cuya forma gramatical depende de un número****
+texto cuya forma gramatical depende de un número
 
-****recode-sr-latin**** ****Recodifica texto serbio del alfabeto
-cirílico al latino****
+**recode-sr-latin** Recodifica texto serbio del alfabeto
+cirílico al latino
 
 **xgettext** Extrae las líneas de mensaje traducibles de los archivos
-fuente dados para crear la primera plantilla de traducción****
+fuente dados para crear la primera plantilla de traducción
 
-****libasprintf Define la clase autosprintf, que permite usar rutinas de
+**libasprintf** Define la clase autosprintf, que permite usar rutinas de
 salida con formato C en programas C++, para su uso con las cadenas
-\<string\> y los flujos \<iostream\>****
+\<string\> y los flujos \<iostream\>.
 
-****libgettextlib Contiene rutinas comunes utilizadas por los diversos
-programas Gettext; estas no están diseñadas para uso general****
+**libgettextlib** Contiene rutinas comunes utilizadas por los diversos
+programas Gettext; estas no están diseñadas para uso general.
 
-****libgettextpo Se utiliza para escribir programas especializados que
+**libgettextpo** Se utiliza para escribir programas especializados que
 procesan archivos .po; esta biblioteca se utiliza cuando las
 aplicaciones estándar incluidas con Gettext (como msgcomm, msgcmp,
-msgattrib y msgen) no son suficientes****
+msgattrib y msgen) no son suficientes.
 
-****libgettextsrc Proporciona rutinas comunes utilizadas por los
-diversos programas Gettext; Estos no están destinados a uso general.****
+**libgettextsrc** Proporciona rutinas comunes utilizadas por los
+diversos programas Gettext; Estos no están destinados a uso general.
 
-****libtextstyle Biblioteca de estilos de texto.****
+**libtextstyle** Biblioteca de estilos de texto.
 
-****preloadable_libintl ****Una biblioteca, diseñada para ser utilizada
+**preloadable_libintl** Una biblioteca, diseñada para ser utilizada
 por LD_PRELOAD, que ayuda a libintl a registrar mensajes no
-traducidos.****
+traducidos.
 
-## **8.34. Bison-3.8.2**
+## 8.34. Bison-3.8.2
 
-****El paquete Bison contiene un generador de analizadores
-sintácticos.****
+El paquete Bison contiene un generador de analizadores
+sintácticos.
 
-****Tiempo de compilación aproximado: ****2.1 SBU****
+Tiempo de compilación aproximado: 2.1 SBU
 
-****Espacio en disco necesario: ****62 MB****
+Espacio en disco necesario: 62 MB
 
-### **8.34.1. Instalación de Bison**
+### 8.34.1. Instalación de Bison
 
-****Preparar Bison para la compilación:****
+Preparar Bison para la compilación:
 
   --------------------------------------------------------------------
-  **./configure \--prefix=/usr --docdir=/usr/share/doc/bison-3.8.2**
+  ./configure --prefix=/usr --docdir=/usr/share/doc/bison-3.8.2
   --------------------------------------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+make
   ----------
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.34.2. Contenido de Bison**
+### 8.34.2. Contenido de Bison
 
-**Programas instalados**: bison y yacc****
+**Programas instalados**: bison y yacc
 
-**Biblioteca instalada**: liby.a****
+**Biblioteca instalada**: liby.a
 
 **Directorio de instalación**: /usr/share/bison****
 
@@ -10952,308 +10880,298 @@ sintácticos.****
 
 **bison** Genera, a partir de una serie de reglas, un programa para
 analizar la estructura de archivos de texto. Bison es un reemplazo de
-Yacc (Yet Another Compiler Compiler).****
+Yacc (Yet Another Compiler Compiler).
 
 **yacc** Un contenedor para bison, pensado para programas que aún llaman
-a yacc en lugar de bison; llama a bison con la opción -y.****
+a yacc en lugar de bison; llama a bison con la opción -y.
 
 **liby** La biblioteca de Yacc que contiene implementaciones de las
 funciones yyerror y main compatibles con Yacc. Esta biblioteca no suele
-ser muy útil, pero POSIX la requiere.****
+ser muy útil, pero POSIX la requiere.
 
-## **8.35. Grep-3.11**
+## 8.35. Grep-3.11
 
-****El paquete Grep contiene programas para buscar en el contenido de
-los archivos.****
+El paquete Grep contiene programas para buscar en el contenido de
+los archivos.
 
-****Tiempo de compilación aproximado: ****0.4 SBU****
+Tiempo de compilación aproximado: 0.4 SBU
 
-****Espacio en disco necesario: ****39 MB****
+Espacio en disco necesario: 39 MB
 
-### **8.35.1. Instalación de Grep**
+### 8.35.1. Instalación de Grep
 
-****Primero, elimine una advertencia sobre el uso de egrep y fgrep que
-provoca el fallo de las pruebas en algunos paquetes:****
+Primero, elimine una advertencia sobre el uso de egrep y fgrep que
+provoca el fallo de las pruebas en algunos paquetes:
 
   -------------------------------------------
-  **sed -i \"s/echo/#echo/\" src/egrep.sh**
+sed -i "s/echo/#echo/" src/egrep.sh
   -------------------------------------------
 
-****Prepare Grep para la compilación:****
+Prepare Grep para la compilación:
 
-  -------------------------------
-  **./configure --prefix=/usr**
+  ------------------------------
+./configure --prefix=/usr
   -------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.35.2. Contenido de Grep**
+### 8.35.2. Contenido de Grep
 
-**Programas instalados**: egrep, fgrep y grep****
+**Programas instalados**: egrep, fgrep y grep
 
-### **Descripciones breves**
+### Descripciones breves
 
 **egrep** Imprime las líneas que coinciden con una expresión regular
-extendida. Está obsoleto, use grep -E en su lugar.****
+extendida. Está obsoleto, use grep -E en su lugar.
 
 **fgrep** Imprime líneas que coinciden con una lista de cadenas fijas.
-Está obsoleto, use grep -F en su lugar.****
+Está obsoleto, use grep -F en su lugar.
 
 **grep** Imprime líneas que coinciden con una expresión regular
-básica.****
+básica.
 
-## **8.36. Bash-5.2.37**
+## 8.36. Bash-5.2.37
 
-****El paquete Bash contiene Bourne-Again Shell.****
+El paquete Bash contiene Bourne-Again Shell.
 
-****Tiempo de compilación aproximado: ****1.4 SBU****
+Tiempo de compilación aproximado: 1.4 SBU
 
-****Espacio en disco requerido: ****53 MB****
+Espacio en disco requerido: 53 MB
 
-### **8.36.1. Instalación de Bash**
+### 8.36.1. Instalación de Bash
 
-****Preparar Bash para la compilación:****
+Preparar Bash para la compilación:
 
-> +------------------------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--without-bash-malloc \\**
-> ** \--with-***installed***-readline \\**
-> ** \--docdir=/usr/share/doc/bash-5.2.37**
-> +------------------------------------------------------------+
+> ./configure \--prefix=/usr \
+> --without-bash-malloc \
+> --with-***installed***-readline \
+> --docdir=/usr/share/doc/bash-5.2.37
 
-****Significado de la nueva opción de configuración:****
+**Significado de la nueva opción de configuración**:
 
-***** \--with-installed-readline*****
+\--with-installed-readline
 
-**** Esta opción indica a Bash que use la biblioteca readline ya
+Esta opción indica a Bash que use la biblioteca readline ya
 instalada en el sistema en lugar de usar su propia versión de
-readline.****
+readline.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Vaya a \"Instalar el paquete\" si no está ejecutando el conjunto de
-pruebas.****
+Vaya a \"Instalar el paquete\" si no está ejecutando el conjunto de
+pruebas.
 
-****Para preparar las pruebas, asegúrese de que el usuario
-*****tester***** pueda escribir en el árbol de fuentes:****
+Para preparar las pruebas, asegúrese de que el usuario
+**tester** pueda escribir en el árbol de fuentes:
 
   -----------------------
-  **chown -R tester .**
+  chown -R tester .
   -----------------------
 
-****El conjunto de pruebas de este paquete está diseñado para ejecutarse
-como un usuario no-*****root*****, propietario de la terminal conectada
+El conjunto de pruebas de este paquete está diseñado para ejecutarse
+como un usuario no-**root**, propietario de la terminal conectada
 a la entrada estándar. Para cumplir con este requisito, cree una nueva
 pseudoterminal con Expect y ejecute las pruebas como el usuario
-*****tester*****:****
+**tester**:
 
-> +-----------------------------------------------+
-> ---
-> **su -s /usr/bin/expect tester \<\< \"EOF\"**
-> **set timeout -1**
-> **spawn make tests**
-> **expect eof**
-> **lassign \[wait\] \_ \_ \_ value**
-> **exit \$value**
-> **EOF**
-> +-----------------------------------------------+
+> su -s /usr/bin/expect tester << "EOF"
+> set timeout -1
+> spawn make tests
+> expect eof
+> lassign [wait] _ _ _ value
+> exit $value
+> EOF
 
-****El conjunto de pruebas utiliza **diff** para detectar la diferencia
+El conjunto de pruebas utiliza **diff** para detectar la diferencia
 entre la salida del script de prueba y la salida esperada. Cualquier
 salida de **diff** (con los prefijos \< y \>) indica un fallo en la
 prueba, a menos que aparezca un mensaje indicando que la diferencia
-puede ignorarse. Se sabe que una prueba llamada *****run-builtins*****
+puede ignorarse. Se sabe que una prueba llamada **run-builtins**
 falla en algunas distribuciones de host con una diferencia en la primera
-línea de la salida.****
+línea de la salida.
 
-****Instale el paquete:****
+Instale el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****Ejecute el programa bash recién compilado (reemplazando el que se
-está ejecutando):****
+Ejecute el programa bash recién compilado (reemplazando el que se
+está ejecutando):
 
   --------------------------------------
-  **exec /usr/bin/bash --***login*****
+  exec /usr/bin/bash --login
   --------------------------------------
 
-### **8.36.2. Contenido de Bash**
+### 8.36.2. Contenido de Bash
 
-**Programas instalados**: bash, bashbug y sh (enlace a bash)****
+**Programas instalados**: bash, bashbug y sh (enlace a bash)
 
 **Directorio de instalación**: /usr/include/bash, /usr/lib/bash y
-/usr/share/doc/bash-5.2.37****
+/usr/share/doc/bash-5.2.37
 
-### **Descripciones breves**
+### Descripciones breves
 
 **bash** Un intérprete de comandos ampliamente utilizado; realiza
 diversos tipos de expansiones y sustituciones en una línea de comandos
 antes de ejecutarla, lo que lo convierte en una herramienta
-poderosa.****
+poderosa.
 
 **bashbug** Un script de shell que ayuda al usuario a redactar y enviar
 por correo informes de errores con formato estándar relacionados con
-bash.****
+bash.
 
 **sh** Un enlace simbólico al programa bash; cuando se invoca como sh,
 bash intenta imitar el comportamiento de inicio de versiones anteriores
 de sh con la mayor fidelidad posible, a la vez que cumple con el
-estándar POSIX.****
+estándar POSIX.
 
-## **8.37. Libtool-2.5.4**
+## 8.37. Libtool-2.5.4
 
-****El paquete Libtool contiene el script de soporte para bibliotecas
+El paquete Libtool contiene el script de soporte para bibliotecas
 genéricas de GNU. Simplifica el uso de bibliotecas compartidas con una
-interfaz consistente y portátil.****
+interfaz consistente y portátil.
 
-****Tiempo de compilación aproximado: ****0.6 SBU****
+Tiempo de compilación aproximado: 0.6 SBU
 
-****Espacio en disco necesario: ****44 MB****
+Espacio en disco necesario: 44 MB
 
-### **8.37.1. Instalación de Libtool**
+### 8.37.1. Instalación de Libtool
 
-****Preparar Libtool para la compilación:****
+Preparar Libtool para la compilación:
 
   -------------------------------
-  **./configure --prefix=/usr**
+  ./configure --prefix=/usr
   -------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****Eliminar una biblioteca estática inútil:****
+Eliminar una biblioteca estática inútil:
 
   -------------------------------
-  **rm -fv /usr/lib/libltdl.a**
+  rm -fv /usr/lib/libltdl.a
   -------------------------------
 
-### **8.37.2. Contenido de Libtool**
+### 8.37.2. Contenido de Libtool
 
-****Programas instalados: ****libtool y libtoolize****
+**Programas instalados**: libtool y libtoolize
 
-****Bibliotecas instaladas: ****libltdl.so****
+**Bibliotecas instaladas**: libltdl.so
 
-****Directorios instalados: ****/usr/include/libltdl y
-/usr/share/libtool****
+**Directorios instalados**: /usr/include/libltdl y /usr/share/libtool
 
-### **Descripciones breves**
+### Descripciones breves
 
 **libtool** Proporciona servicios generalizados de soporte para la
-creación de bibliotecas.****
+creación de bibliotecas.
 
 **libtoolize** Proporciona una forma estándar de añadir soporte para
-**libtool** a un paquete.****
+**libtool** a un paquete.
 
-*****libltdl***** Oculta las diversas dificultades al abrir bibliotecas
-cargadas dinámicamente.****
+**libltdl** Oculta las diversas dificultades al abrir bibliotecas
+cargadas dinámicamente.
 
-## **8.38. GDBM-1.24**
+## 8.38. GDBM-1.24
 
-****El paquete GDBM contiene el Gestor de Bases de Datos GNU. Es una
+El paquete GDBM contiene el Gestor de Bases de Datos GNU. Es una
 biblioteca de funciones de base de datos que utiliza hash extensible y
 funciona como el dbm estándar de UNIX. La biblioteca proporciona
 primitivas para almacenar pares clave/datos, buscar y recuperar datos
-por su clave, y eliminar una clave junto con sus datos.****
+por su clave, y eliminar una clave junto con sus datos.
 
-**Tiempo de compilación aproximado: **menos de 0,1 SBU****
+Tiempo de compilación aproximado: menos de 0,1 SBU
 
-**Espacio en disco requerido: **13 MB****
+Espacio en disco requerido: 13 MB
 
-### **8.38.1. Instalación de GDBM**
+### 8.38.1. Instalación de GDBM
 
-****Preparar GDBM para la compilación:****
+Preparar GDBM para la compilación:
 
-> +------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--disable-static \\**
-> ** \--enable-libgdbm-compat**
-> +------------------------------------------+
+> ./configure --prefix=/usr \
+> --disable-static \
+> --enable-libgdbm-compat
 
-****Significado de la opción de configuración:****
+**Significado de la opción de configuración**:
 
-***** \--enable-libgdbm-compat*****
+\--enable-libgdbm-compat
 
-**** Esta opción permite compilar la biblioteca de compatibilidad
+Esta opción permite compilar la biblioteca de compatibilidad
 libgdbm. Algunos paquetes fuera de LFS pueden requerir las rutinas DBM
-más antiguas que proporciona.****
+más antiguas que proporciona.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.38.2. Contenido de GDBM**
+### 8.38.2. Contenido de GDBM
 
-****Programas instalados****: gdbm_dump, gdbm_load y gdbmtool****
+**Programas instalados**: gdbm_dump, gdbm_load y gdbmtool
 
-**Bibliotecas instaladas**: libgdbm.so y libgdbm_compat.so****
+**Bibliotecas instaladas**: libgdbm.so y libgdbm_compat.so
 
-### **Descripciones breves**
+### Descripciones breves
 
-**gdbm_dump** Vuelca una base de datos de GDBM a un archivo****
+**gdbm_dump** Vuelca una base de datos de GDBM a un archivo
 
 **gdbm_load** Recrea una base de datos de GDBM a partir de un archivo de
-volcado****
+volcado
 
-**gdbmtool** Prueba y modifica una base de datos de GDBM****
+**gdbmtool** Prueba y modifica una base de datos de GDBM
 
-*****libgdbm***** Contiene funciones para manipular una base de datos
-con hash****
+**libgdbm** Contiene funciones para manipular una base de datos
+con hash
 
-*****libgdbm_compat***** Biblioteca de compatibilidad con funciones de
-DBM antiguas****
+**libgdbm_compat** Biblioteca de compatibilidad con funciones de
+DBM antiguas
 
 ## 8.39. Gperf-3.1
 
@@ -11269,7 +11187,7 @@ claves.
 Preparar Gperf para la compilación:
 
   --------------------------------------------------------------
-  ./configure \--prefix=/usr --docdir=/usr/share/doc/gperf-3.1
+  ./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.1
   --------------------------------------------------------------
 
 Compilar el paquete:
@@ -11314,12 +11232,9 @@ analizar XML.
 
 Preparar Expat para la compilación:
 
-> +--------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--disable-static \\
-> \--docdir=/usr/share/doc/expat-2.6.4
-> +--------------------------------------------------+
+> ./configure --prefix=/usr \
+> --disable-static \
+> --docdir=/usr/share/doc/expat-2.6.4
 
 Compilar el paquete:
 
@@ -11342,16 +11257,16 @@ Instalar el paquete:
 Si lo desea, instale la documentación:
 
   ---------------------------------------------------------------
-  install -v -m644 doc/\*.{html,css} /usr/share/doc/expat-2.6.4
+  install -v -m644 doc/*.{html,css} /usr/share/doc/expat-2.6.4
   ---------------------------------------------------------------
 
 ### 8.40.2. Contenido de Expat
 
 **Programa instalado**: xmlwf
 
-Bibliotecas instaladas: libexpat.so
+**Bibliotecas instaladas**: libexpat.so
 
-Directorio de instalación: /usr/share/doc/expat-2.6.4
+**Directorio de instalación**: /usr/share/doc/expat-2.6.4
 
 ### Descripciones breves
 
@@ -11373,48 +11288,46 @@ El paquete Inetutils contiene programas para redes básicas.
 Primero, compile el paquete con gcc-14.1 o posterior:
 
   -------------------------------------------------------------
-  sed -i \'s/def *HAVE_TERMCAP_TGETENT*/ 1/\' telnet/telnet.c
+  sed -i 's/def *HAVE_TERMCAP_TGETENT*/ 1/' telnet/telnet.c
   -------------------------------------------------------------
 
 Prepare Inetutils para la compilación:
 
-> +---------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--bindir=/usr/bin \\
-> \--localstatedir=/var \\
-> \--disable-*logger* \\
-> \--disable-whois \\
-> \--disable-rcp \\
-> \--disable-rexec \\
-> \--disable-rlogin \\
-> \--disable-rsh \\
-> \--disable-servers
+> ./configure --prefix=/usr \
+> --bindir=/usr/bin \
+> --localstatedir=/var \
+> --disable-logger \
+> --disable-whois \
+> --disable-rcp \
+> --disable-rexec \
+> --disable-rlogin \
+> --disable-rsh \
+> --disable-servers
 > +---------------------------------------+
 
 **Significado de las opciones de configuración**:
 
-***** \--disable-logger*****
+\--disable-logger
 
 Esta opción impide que Inetutils instale el programa de **registro**,
 que los scripts utilizan para enviar mensajes al demonio de registro del
 sistema. No lo instale, ya que Util-linux instala una versión más
 reciente.
 
-***** \--disable-whois*****
+\--disable-whois
 
 Esta opción deshabilita la creación del cliente **whois** de Inetutils,
 que está desactualizado. Las instrucciones para un mejor cliente
 **whois** se encuentran en el manual de BLFS.
 
-***** \--disable-r\******
+\--disable-r
 
 Estos parámetros deshabilitan la creación de programas obsoletos que no
 deben usarse debido a problemas de seguridad. Las funciones
 proporcionadas por estos programas pueden proporcionarse mediante el
 paquete openssh del manual de BLFS.
 
-***** \--disable-servers*****
+\--disable-servers
 
 Esto deshabilita la instalación de los diversos servidores de red
 incluidos en el paquete Inetutils. Estos servidores no se consideran
@@ -11482,7 +11395,7 @@ Para comprobar los resultados, ejecute:
 Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
 ### 8.42.2. Contenido de Less
@@ -11501,7 +11414,7 @@ nombres de archivo en sistemas Unix.
 **lesskey** Se utiliza para especificar las combinaciones de teclas para
 **less**.
 
-## **8.43. Perl-5.40.1**
+## 8.43. Perl-5.40.1
 
 El paquete Perl contiene el Lenguaje Práctico de Extracción e
 Informes.
@@ -11517,11 +11430,8 @@ Compress::Raw::BZip2. Por defecto, Perl utilizará una copia interna del
 código fuente para la compilación. Ejecute el siguiente comando para que
 Perl utilice las bibliotecas instaladas en el sistema:
 
-> +-----------------------------+
-> ---
-> **export BUILD_ZLIB=False**
-> **export BUILD_BZIP2=0**
-> +-----------------------------+
+> export BUILD_ZLIB=False
+> export BUILD_BZIP2=0
 
 Para tener control total sobre la configuración de Perl, puede
 eliminar las opciones \"-des\" del siguiente comando y configurar
@@ -11529,23 +11439,20 @@ manualmente la compilación de este paquete. Como alternativa, use el
 comando exactamente como se muestra a continuación para usar los valores
 predeterminados que Perl detecta automáticamente:
 
-> +------------------------------------------------------------------------+
-> ---
-> **sh Configure -des \\**
-> ** -D prefix=/usr \\**
-> ** -D vendorprefix=/usr \\**
-> ** -D privlib=/usr/lib/***perl5***/5.40/core_perl \\**
-> ** -D archlib=/usr/lib/perl5/5.40/core_perl \\**
-> ** -D sitelib=/usr/lib/perl5/5.40/site_perl \\**
-> ** -D sitearch=/usr/lib/perl5/5.40/site_perl \\**
-> ** -D vendorlib=/usr/lib/perl5/5.40/vendor_perl \\**
-> ** -D vendorarch=/usr/lib/perl5/5.40/vendor_perl \\**
-> ** -D man1dir=/usr/share/man/man1 \\**
-> ** -D man3dir=/usr/share/man/man3 \\**
-> ** -D pager=\"/usr/bin/less -isR\" \\**
-> ** -D useshrplib \\**
-> ** -D usethreads**
-> +------------------------------------------------------------------------+
+> sh Configure -des \
+> -D prefix=/usr \
+>  -D vendorprefix=/usr \
+>  -D privlib=/usr/lib/perl5/5.40/core_perl \
+>  -D archlib=/usr/lib/perl5/5.40/core_perl \
+>  -D sitelib=/usr/lib/perl5/5.40/site_perl \
+>  -D sitearch=/usr/lib/perl5/5.40/site_perl \
+>  -D vendorlib=/usr/lib/perl5/5.40/vendor_perl \
+>  -D vendorarch=/usr/lib/perl5/5.40/vendor_perl \
+>  -D man1dir=/usr/share/man/man1 \
+>  -D man3dir=/usr/share/man/man3 \
+>  -D pager="/usr/bin/less -isR" \
+>  -D useshrplib \
+>  -D usethreads
 
 **Significado de las nuevas opciones de Configure**:
 
@@ -11575,13 +11482,10 @@ Para probar los resultados, ejecute:
   TEST_JOBS=\$(nproc) make test_harness
   -------------------------------------------
 
-****Instalar el paquete y limpiarlo:****
+Instalar el paquete y limpiarlo:
 
-> +----------------------------------+
-> ---
-> **make install**
-> **unset BUILD_ZLIB BUILD_BZIP2**
-> +----------------------------------+
+> make install
+> unset BUILD_ZLIB BUILD_BZIP2
 
 ### 8.43.2. Contenido de Perl
 
@@ -11627,7 +11531,7 @@ salida.
 **perl** Combina algunas de las mejores características de C, sed, awk y
 sh en un único lenguaje de programación.
 
-**perl5.40.1 **Un enlace directo a Perl.
+**perl5.40.1* *Un enlace directo a Perl.
 
 **perlbug** Se usa para generar informes de errores sobre Perl o los
 módulos que lo acompañan y enviarlos por correo.
@@ -11742,22 +11646,20 @@ Primero, corrija una advertencia causada por Perl-5.22 y versiones
 posteriores:
 
   --------------------------------------------------------------
-  **sed -i \'s:\\\\\\\${:\\\\\\\$\\\\{:\' intltool-update.in**
+  sed -i 's:\\\${:\\\$\\{:' intltool-update.in
   --------------------------------------------------------------
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
-> ****La expresión regular anterior parece inusual debido a las barras
+> 
+> La expresión regular anterior parece inusual debido a las barras
 > invertidas. Lo que hace es agregar una barra **invertida** antes de
 > la llave derecha en la secuencia \'\\\${\', lo que resulta en
-> \'\\\$\\{\'.****
-> +----------------------------------------------------------------------+
+> \'\\\$\\{\'.
 
 Preparar Intltool para la compilación:
 
   -------------------------------------
-  ./configure --prefix=/***usr
+  ./configure --prefix=/usr
   -------------------------------------
 
 Compilar el paquete:
@@ -11774,12 +11676,9 @@ Para comprobar los resultados, ejecute:
 
 Instalar el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
-> **make install**
-> **install -v -Dm644 doc/I18N-HOWTO
-> /usr/share/doc/intltool-0.51.0/I18N-HOWTO**
-> +----------------------------------------------------------------------+
+> make install
+> install -v -Dm644 doc/I18N-HOWTO
+> /usr/share/doc/intltool-0.51.0/I18N-HOWTO
 
 ### 8.45.2. Contenido de Intltool
 
@@ -11965,14 +11864,11 @@ Espacio en disco necesario: 920 MB
 
 Preparar OpenSSL para la compilación:
 
-> +----------------------------------------------+
-> ---
-> **./config \--prefix=/usr \\**
-> ** \--***openssldir***=/etc/ssl \\**
-> ** \--libdir=lib \\**
-> ** shared \\**
-> ** zlib-dynamic**
-> +----------------------------------------------+
+> ./config --prefix=/usr \
+> --***openssldir***=/etc/ssl \
+> --libdir=lib \
+>  shared \
+>  zlib-dynamic
 
 Compilar el paquete:
 
@@ -11983,7 +11879,7 @@ Compilar el paquete:
 Para probar los resultados, ejecute:
 
   --------------------------------------
-  HARNESS_JOBS=\$(nproc) make test
+  HARNESS_JOBS=$(nproc) make test
   --------------------------------------
 
 Se sabe que una prueba, 30-test_afalg.t, falla si el kernel del host
@@ -11995,11 +11891,8 @@ la CPU admite AES-NI). Si falla, se puede ignorar sin problemas.
 
 Instalar el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
-> sed -i \'/INSTALL_LIBS/s/*libcrypto.a* libssl.a//\' Makefile
+> sed -i '/INSTALL_LIBS/s/*libcrypto.a* libssl.a//' Makefile
 > make MANSUFFIX=ssl install
-> +----------------------------------------------------------------------+
 
 Añadir la versión al nombre del directorio de documentación para
 mantener la coherencia con otros paquetes:
@@ -12011,12 +11904,11 @@ mantener la coherencia con otros paquetes:
 Si se desea, instalar documentación adicional:
 
   -------------------------------------------------------
-  cp -vfr doc/\* /usr/***share***/doc/openssl-3.4.1
+  cp -vfr doc/* /usr/share/doc/openssl-3.4.1
   -------------------------------------------------------
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
+> 
 > Debe actualizar OpenSSL cuando se anuncie una nueva versión que
 > corrija vulnerabilidades. Desde OpenSSL 3.0.0, el esquema de
 > versiones de OpenSSL sigue el formato MAJOR.MINOR.PATCH. La
@@ -12029,7 +11921,6 @@ Si se desea, instalar documentación adicional:
 > detenerse y reiniciarse. Para más información, consulte las entradas
 > relacionadas en la Sección 8.2.1, \"Problemas de
 > actualización\".
-> +----------------------------------------------------------------------+
 
 ### 8.48.2. Contenido de OpenSSL
 
@@ -12077,12 +11968,9 @@ Libelf forma parte del paquete elfutils-0.192. Utilice el archivo
 elfutils-0.192.tar.bz2 como archivo tar de origen. Preparar Libelf para
 la compilación:
 
-> +-------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--disable-debuginfod \\
-> \--enable-libdebuginfod=dummy
-> +-------------------------------------------+
+> ./configure --prefix=/usr \
+> --disable-debuginfod \
+> --enable-libdebuginfod=dummy
 
 Compilar el paquete:
 
@@ -12098,12 +11986,9 @@ Para comprobar los resultados, ejecute:
 
 Instalar solo Libelf:
 
-> +------------------------------------------------------+
-> ---
 > make -C libelf install
 > install -vm644 config/*libelf.pc* /usr/lib/pkgconfig
 > rm /usr/lib/libelf.a
-> +------------------------------------------------------+
 
 ### 8.49.2. Contenido de Libelf
 
@@ -12134,8 +12019,6 @@ Perl o Python y subrutinas de biblioteca compartida escritas en C o C++.
 
 ### 8.50.1. Instalación de Libffi
 
-> +----------------------------------------------------------------------+
-> ---
 > Nota
 > Al igual que GMP, Libffi se compila con optimizaciones específicas
 > para el procesador en uso. Si se compila para otro sistema, cambie
@@ -12143,16 +12026,12 @@ Perl o Python y subrutinas de biblioteca compartida escritas en C o C++.
 > un nombre de arquitectura completamente implementado por la CPU de
 > ese sistema. Si no se hace esto, todas las aplicaciones que enlazan
 > con libffi generarán errores de operación ilegal.
-> +----------------------------------------------------------------------+
 
 Prepare Libffi para la compilación:
 
-> +-------------------------------------+
-> ---
-> ./configure \--prefix=/usr* *\\
-> \--disable-static \\
-> \--with-gcc-arch=native
-> +-------------------------------------+
+> ./configure --prefix=/usr \
+> --disable-static \
+> --with-gcc-arch=native
 
 Significado de la opción de configuración:
 
@@ -12205,15 +12084,12 @@ Espacio en disco requerido: 501 MB
 
 ### 8.51.1. Instalación de Python 3
 
-Preparar Python para la compilación:*
+Preparar Python para la compilación:
 
-> +------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--enable-*shared* \\**
-> ** \--with-system-expat \\**
-> ** \--enable-optimizations**
-> +------------------------------------------+
+> ./configure \--prefix=/usr \
+> --enable-*shared* \
+> --with-system-expat \
+> --enable-optimizations
 
 **Significado de las opciones de configuración**:
 
@@ -12285,23 +12161,19 @@ ignorarse. Si lo desea, puede suprimir todas estas advertencias
 ejecutando el siguiente comando, que crea un archivo de
 configuración:
 
-> +------------------------------------------+
-> ---
 > cat > /etc/pip.conf << EOF
 > [global]
 > root-user-action = ignore
 > disable-pip-version-check = true
 > EOF
-> +------------------------------------------+
 
-> +----------------------------------------------------------------------+
-> ---
 > **Importante**
+> 
 > En LFS y BLFS, normalmente compilamos e instalamos módulos de
 > Python con el comando pip3. Asegúrese de que los comandos pip3
 > install de ambos libros se ejecuten como usuario root (a menos que
 > se trate de un entorno virtual de Python).****
-> ****Ejecutar pip3 install como usuario no root puede parecer eficaz,
+> Ejecutar pip3 install como usuario no root puede parecer eficaz,
 > pero provocará que el módulo instalado sea inaccesible para otros
 > usuarios.
 > pip3 install no reinstalará automáticamente un módulo ya
@@ -12311,19 +12183,15 @@ configuración:
 > en la línea de comandos. Si es realmente necesario degradar un
 > módulo o reinstalar la misma versión por algún motivo, inserte
 > \--force-reinstall \--no-deps en la línea de comandos.
-> +----------------------------------------------------------------------+
 
 **Si lo desea, instale la documentación preformateada:**
 
-> +---------------------------------------------------------+
-> ---
 > install -v -dm755 /usr/share/doc/python-3.13.2/html
 > tar --strip-components=1  \
 > --no-same-owner \
 > --no-same-permissions \
 > -C /usr/share/doc/python-3.13.2/html \
 > -xvf ../python-3.13.2-docs-html.tar.bz2
-> +---------------------------------------------------------+
 
 **Significado de los comandos de instalación de la documentación**:
 
@@ -12518,15 +12386,12 @@ se limitará **ninja** a cuatro procesos en paralelo. Si lo
 desea, haga que **ninja** reconozca la variable de entorno NINJAJOBS
 ejecutando el editor de flujo:
 
-> +------------------------------------------------+
-> ---
 > sed -i '/int Guess/a \
 > int j = 0;\
 > char * jobs = getenv( "NINJAJOBS" );\
 > if ( jobs != NULL ) j = atoi( jobs );\
 > if ( j > 0 ) return j;\
 > ' src/ninja.cc
-> +------------------------------------------------+
 
 Construya Ninja con:
 
@@ -12551,14 +12416,11 @@ Requieren **cmake**. Sin embargo, la función básica de este
 paquete ya se ha probado reconstruyéndose (con la opción
 **--bootstrap**). Instalar el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
 > install -vm755 ninja /usr/bin/
 > install -vDm644 misc/bash-completion
 > /usr/share/bash-completion/completions/ninja
 > install -vDm644 misc/zsh-completion
 > /usr/share/zsh/site-functions/\_ninja
-> +----------------------------------------------------------------------+
 
 ### 8.55.2. Contenido de Ninja
 
@@ -12588,14 +12450,11 @@ Compile Meson con el siguiente comando:
 El conjunto de pruebas requiere algunos paquetes fuera del alcance
 de LFS. Instalar el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
 > pip3 install --no-index --find-links dist meson
 > install -vDm644 data/shell-completions/bash/meson
 > /usr/share/bash-completion/completions/meson
 > install -vDm644 data/shell-completions/zsh/\_meson
 > /usr/share/zsh/site-functions/\_meson
-> +----------------------------------------------------------------------+
 
 **Significado de los parámetros de instalación**:
 
@@ -12632,17 +12491,14 @@ Espacio en disco necesario: 11 MB
 
 Preparar Kmod para la compilación:
 
-> +-----------------------------------------+
-> ---
 > mkdir -p build
 > cd build
 > meson setup --prefix=/usr .. \
 > --sbindir=/usr/sbin \
 > --buildtype=release \
 > -D manpages=false
-> +-----------------------------------------+
 
-****Significado de las opciones de configuración:****
+**Significado de las opciones de configuración**:
 
 -D manpages=false
 
@@ -12717,25 +12573,19 @@ otros errores relacionados con la internacionalización.
   patch -Np1 -i ../coreutils-9.6-i18n-1.patch
   -------------------------------------------------------
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
 > 
 > Se han **encontrado** muchos errores en este parche. Al informar
 > de nuevos errores a los responsables de Coreutils, compruebe primero
 > si se pueden reproducir sin este parche.
-> +----------------------------------------------------------------------+
 
 Ahora prepare Coreutils para la compilación:
 
-> +----------------------------------------------------------+
-> ---
-> **autoreconf -fv**
-> **automake -af**
-> **FORCE_UNSAFE_CONFIGURE=1 ./configure \\**
-> ***** ***\--prefix=/usr \\**
-> ** \--enable-no-install-program=kill,uptime**
-> +----------------------------------------------------------+
+> autoreconf -fv
+> automake -af
+> FORCE_UNSAFE_CONFIGURE=1 ./configure \
+> --prefix=/usr \
+> --enable-no-install-program=kill,uptime
 
 **Significado de los comandos y opciones de configuración**:
 
@@ -12805,10 +12655,7 @@ entrada estándar está conectada a un PTY de la distribución del host y
 no se puede acceder al nodo del dispositivo para dicho PTY desde el
 entorno chroot de LFS):
 
-> +----------------------------------------------------------------------+
-> ---
 > su tester -c "PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check" < /dev/null
-> +----------------------------------------------------------------------+
 
 Elimine el grupo temporal:
 
@@ -12824,12 +12671,9 @@ Instale el paquete:
 
 Mueva los programas a las ubicaciones especificadas por el FHS:
 
-> +---------------------------------------------------------------------+
-> ---
 > mv -v /usr/bin/chroot /usr/sbin
 > mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8
 > sed -i 's/"1"/"8"/' /usr/share/man/man8/chroot.8
-> +---------------------------------------------------------------------+
 
 ### 8.58.2. Contenido de Coreutils
 
@@ -12845,398 +12689,397 @@ split, stat, stdbuf, stty, sum, sync, tac, tail, tee, test, timeout,
 touch, tr, true, truncate, tsort, tty, uname, unexpand, uniq, unlink,
 users, vdir, wc, who, whoami, and yes
 
-**Biblioteca instalada**: libstdbuf.so (en /usr/libexec/coreutils)****
+**Biblioteca instalada**: libstdbuf.so (en /usr/libexec/coreutils)
 
-****Directorios instalados****: /usr/libexec/coreutils****
+**Directorios instalados**: /usr/libexec/coreutils
 
-### **Descripciones breves**
+### Descripciones breves
 
 **\[** Es un comando real, /usr/bin/\[; es sinónimo del comando de
-prueba.****
+prueba.
 
 **Base32** Codifica y decodifica datos según la especificación base32
-(RFC 4648).****
+(RFC 4648).
 
 **base64** Codifica y decodifica datos según la especificación base64
-(RFC 4648).****
+(RFC 4648).
 
 **b2sum** Imprime o comprueba sumas de comprobación de BLAKE2 (512
-bits).****
+bits).
 
-****b**asename** Elimina cualquier ruta y un sufijo dado de un nombre de
-archivo.****
+**basename** Elimina cualquier ruta y un sufijo dado de un nombre de
+archivo.
 
-****b**asenc** Codifica o decodifica datos mediante varios
-algoritmos.****
+**basenc** Codifica o decodifica datos mediante varios
+algoritmos.
 
-****cat**** Concatena archivos a la salida estándar.****
+**cat** Concatena archivos a la salida estándar.****
 
-****chcon**** Cambia el contexto de seguridad de archivos y
-directorios.****
+**chcon** Cambia el contexto de seguridad de archivos y
+directorios.
 
-****chgrp**** Cambia la propiedad del grupo de archivos y
-directorios.****
+**chgrp** Cambia la propiedad del grupo de archivos y
+directorios.
 
-****chmod**** Cambia los permisos de cada archivo al modo especificado;
+**chmod** Cambia los permisos de cada archivo al modo especificado;
 el modo puede ser una representación simbólica de los cambios a realizar
-o un número octal que representa los nuevos permisos.****
+o un número octal que representa los nuevos permisos.
 
-**chown **Cambia la propiedad del usuario o grupo de archivos y
-directorios.****
+**chown** Cambia la propiedad del usuario o grupo de archivos y
+directorios.
 
-**chroot **Ejecuta un comando con el directorio especificado como el
-directorio /.****
+**chroot** Ejecuta un comando con el directorio especificado como el
+directorio /.
 
-**cksum **Imprime la suma de comprobación de redundancia cíclica (CRC) y
+**cksum** Imprime la suma de comprobación de redundancia cíclica (CRC) y
 el recuento de bytes de cada archivo especificado.****
 
-**comm **Compara dos archivos ordenados, mostrando en tres columnas las
-líneas únicas y comunes.****
+**comm** Compara dos archivos ordenados, mostrando en tres columnas las
+líneas únicas y comunes.
 
-**cp **Copia archivos.****
+**cp** Copia archivos.
 
-**csplit **Divide un archivo en varios archivos nuevos, separándolos
+**csplit** Divide un archivo en varios archivos nuevos, separándolos
 según patrones o números de línea dados, y muestra el recuento de bytes
-de cada archivo.****
+de cada archivo.*
 
-**cut **Imprime secciones de líneas, seleccionando las partes según los
-campos o posiciones dados.****
+**cut** Imprime secciones de líneas, seleccionando las partes según los
+campos o posiciones dados.
 
-**date **Muestra la fecha y hora actuales en el formato dado o establece
-la fecha y hora del sistema.****
+**date** Muestra la fecha y hora actuales en el formato dado o establece
+la fecha y hora del sistema.
 
-**dd **Copia un archivo utilizando el tamaño y el recuento de bloques
-dados, y opcionalmente realiza conversiones.****
+**dd** Copia un archivo utilizando el tamaño y el recuento de bloques
+dados, y opcionalmente realiza conversiones.
 
-**df **Informa la cantidad de espacio en disco disponible (y utilizado)
+**df** Informa la cantidad de espacio en disco disponible (y utilizado)
 en todos los sistemas de archivos montados, o solo en los sistemas de
-archivos que contienen los archivos seleccionados.****
+archivos que contienen los archivos seleccionados.
 
-**dir **Enumera el contenido de cada directorio dado (igual que el
-comando ls).****
+**dir** Enumera el contenido de cada directorio dado (igual que el
+comando ls).
 
 **dircolors **Emite comandos para establecer LS_COLOR. Variable de
-entorno para cambiar el esquema de colores utilizado por ls.****
+entorno para cambiar el esquema de colores utilizado por ls.
 
 **dirname **Extrae las porciones de directorio del nombre
-especificado.****
+especificado.
 
-**du **Informa la cantidad de espacio en disco utilizado por el
+**du** Informa la cantidad de espacio en disco utilizado por el
 directorio actual, por cada uno de los directorios especificados
 (incluidos todos los subdirectorios) o por cada uno de los archivos
-especificados.****
+especificados.
 
-**echo **Muestra las cadenas especificadas.****
+**echo** Muestra las cadenas especificadas.
 
-**env **Ejecuta un comando en un entorno modificado.****
+**env** Ejecuta un comando en un entorno modificado.
 
-**expand **Convierte tabulaciones en espacios.****
+**expand** Convierte tabulaciones en espacios.
 
-**expr **Evalúa expresiones.****
+**expr** Evalúa expresiones.
 
-**factor **Imprime los factores primos de los enteros especificados.****
+**factor** Imprime los factores primos de los enteros especificados.
 
-**false **No realiza ninguna acción, sin éxito. Siempre finaliza con un
-código de estado que indica un fallo.****
+**false** No realiza ninguna acción, sin éxito. Siempre finaliza con un
+código de estado que indica un fallo.
 
-**fmt **Reformatea los párrafos en los archivos indicados.****
+**fmt** Reformatea los párrafos en los archivos indicados.
 
-**fold **Ajusta las líneas en los archivos indicados.****
+**fold** Ajusta las líneas en los archivos indicados.
 
-**groups **Informa sobre la pertenencia a grupos de un usuario.****
+**groups** Informa sobre la pertenencia a grupos de un usuario.
 
-**head **Imprime las primeras diez líneas (o el número indicado) de cada
-archivo.****
+**head** Imprime las primeras diez líneas (o el número indicado) de cada
+archivo.
 
-**hostid **Informa sobre el identificador numérico (en hexadecimal) del
-host.****
+**hostid** Informa sobre el identificador numérico (en hexadecimal) del
+host.
 
-**id **Informa sobre el ID de usuario efectivo, el ID de grupo y la
-pertenencia a grupos del usuario actual o del usuario especificado.****
+**id** Informa sobre el ID de usuario efectivo, el ID de grupo y la
+pertenencia a grupos del usuario actual o del usuario especificado.
 
-**install **Copia archivos configurando sus modos de permisos y, si es
-posible, su propietario y grupo.****
+**install** Copia archivos configurando sus modos de permisos y, si es
+posible, su propietario y grupo.
 
-**join **Une las líneas con campos de unión idénticos de dos archivos
-separados.****
+**join** Une las líneas con campos de unión idénticos de dos archivos
+separados.
 
-**link **Crea un enlace físico (con el nombre indicado) a un
-archivo.****
+**link** Crea un enlace físico (con el nombre indicado) a un
+archivo.
 
-**ln **Crea enlaces físicos o enlaces simbólicos entre archivos.****
+**ln* *Crea enlaces físicos o enlaces simbólicos entre archivos.****
 
-**logname **Informa sobre el nombre de inicio de sesión del usuario
-actual.****
+**logname** Informa sobre el nombre de inicio de sesión del usuario
+actual.
 
 **ls **Enumera el contenido de cada directorio.****
 
 **md5sum** Informa o comprueba las sumas de comprobación del Message
-Digest 5 (MD5).****
+Digest 5 (MD5).
 
-**mkdir **Crea directorios con los nombres dados.****
+**mkdir** Crea directorios con los nombres dados.
 
-**mkfifo **Crea FIFO (First-In, First-Out), \"tuberías con nombre\" en
-el lenguaje UNIX, con los nombres dados.****
+**mkfifo** Crea FIFO (First-In, First-Out), \"tuberías con nombre\" en
+el lenguaje UNIX, con los nombres dados.
 
-**mknod **Crea nodos de dispositivo con los nombres dados; un nodo de
+**mknod** Crea nodos de dispositivo con los nombres dados; un nodo de
 dispositivo es un archivo especial de caracteres, un archivo especial de
-bloques o un FIFO.****
+bloques o un FIFO.
 
-**mktemp **Crea archivos temporales de forma segura; se utiliza en
-scripts.****
+**mktemp** Crea archivos temporales de forma segura; se utiliza en
+scripts.
 
-**mv **Mueve o renombra archivos o directorios.****
+**mv** Mueve o renombra archivos o directorios.
 
-**nice **Ejecuta un programa con prioridad de programación
-modificada.****
+**nice** Ejecuta un programa con prioridad de programación
+modificada.
 
-**nl **Numera las líneas de los archivos dados.****
+**nl** Numera las líneas de los archivos dados.
 
-**nohup **Ejecuta un comando inmune a bloqueos, con su salida redirigida
-a un archivo de registro.****
+**nohup** Ejecuta un comando inmune a bloqueos, con su salida redirigida
+a un archivo de registro.
 
-**nproc **Imprime el número de unidades de procesamiento disponibles
-para un proceso.****
+**nproc** Imprime el número de unidades de procesamiento disponibles
+para un proceso.
 
-**numfmt **Convierte números a o desde cadenas legibles.****
+**numfmt** Convierte números a o desde cadenas legibles.
 
-**od **Voltea archivos en octal y otros formatos.****
+**od** Voltea archivos en octal y otros formatos.
 
-**paste **Fusiona los archivos dados, uniendo secuencialmente las líneas
-correspondientes, una junto a la otra, separadas por tabulaciones.****
+**paste** Fusiona los archivos dados, uniendo secuencialmente las líneas
+correspondientes, una junto a la otra, separadas por tabulaciones.
 
-**pathchk **Comprueba si los nombres de archivo son válidos o
-portables.****
+**pathchk** Comprueba si los nombres de archivo son válidos o
+portables.
 
-**pinky **Es un cliente ligero de finger. Reporta información sobre los
-usuarios.****
+**pinky** Es un cliente ligero de finger. Reporta información sobre los
+usuarios.
 
-**pr **Pagina y organiza en columnas los archivos para su impresión.****
+**pr** Pagina y organiza en columnas los archivos para su impresión.
 
-**printenv **Imprime el entorno.****
+**printenv** Imprime el entorno.
 
-**printf **Imprime los argumentos según el formato indicado, similar a
-la función printf de C.****
+**printf** Imprime los argumentos según el formato indicado, similar a
+la función printf de C.
 
-**ptx **Genera un índice permutado a partir del contenido de los
-archivos, con cada palabra clave en su contexto.****
+**ptx** Genera un índice permutado a partir del contenido de los
+archivos, con cada palabra clave en su contexto.
 
-**pwd **Reporta el nombre del directorio de trabajo actual.****
+**pwd** Reporta el nombre del directorio de trabajo actual.
 
-**readlink **Reporta el valor del enlace simbólico.****
+**readlink** Reporta el valor del enlace simbólico.
 
-**realpath **Imprime la ruta resuelta.****
+**realpath** Imprime la ruta resuelta.
 
-**rm **Elimina archivos o directorios.****
+**rm** Elimina archivos o directorios.
 
-**rmdir **Elimina directorios si están vacíos.****
+**rmdir** Elimina directorios si están vacíos.
 
-**runcon **Ejecuta un comando con el contexto de seguridad
-especificado.****
+**runcon** Ejecuta un comando con el contexto de seguridad
+especificado.
 
-**seq **Imprime una secuencia de números dentro de un rango y con un
-incremento dados.****
+**seq** Imprime una secuencia de números dentro de un rango y con un
+incremento dados.
 
-**sha1sum **Imprime o verifica sumas de comprobación del algoritmo hash
-seguro 1 (SHA1) de 160 bits.****
+**sha1sum** Imprime o verifica sumas de comprobación del algoritmo hash
+seguro 1 (SHA1) de 160 bits.
 
-**sha224sum **Imprime o verifica sumas de comprobación del algoritmo
-hash seguro de 224 bits.****
+**sha224sum** Imprime o verifica sumas de comprobación del algoritmo
+hash seguro de 224 bits.
 
-**sha256sum **Imprime o verifica sumas de comprobación del algoritmo
-hash seguro de 256 bits.****
+**sha256sum** Imprime o verifica sumas de comprobación del algoritmo
+hash seguro de 256 bits.
 
-**sha384sum **Imprime o verifica sumas de comprobación del algoritmo
-hash seguro de 384 bits.****
+**sha384sum** Imprime o verifica sumas de comprobación del algoritmo
+hash seguro de 384 bits.
 
-**sha512sum **Imprime o verifica sumas de comprobación del algoritmo
-hash seguro de 512 bits. Sumas de comprobación de algoritmos****
+**sha512sum** Imprime o verifica sumas de comprobación del algoritmo
+hash seguro de 512 bits. Sumas de comprobación de algoritmos
 
-**shred **Sobrescribe repetidamente los archivos con patrones complejos,
-lo que dificulta la recuperación de datos****
+**shred** Sobrescribe repetidamente los archivos con patrones complejos,
+lo que dificulta la recuperación de datos
 
-**shuf **Reordena las líneas de texto****
+**shuf** Reordena las líneas de texto
 
-**sleep **Hace una pausa durante el tiempo especificado****
+**sleep** Hace una pausa durante el tiempo especificado
 
-**sort **Ordena las líneas de los archivos****
+**sort** Ordena las líneas de los archivos
 
-**split **Divide el archivo en fragmentos, por tamaño o por número de
-líneas****
+**split** Divide el archivo en fragmentos, por tamaño o por número de
+líneas
 
-**stat **Muestra el estado del archivo o del sistema de archivos.****
+**stat** Muestra el estado del archivo o del sistema de archivos.
 
-**stdbuf **Ejecuta comandos con operaciones de almacenamiento en búfer
-modificadas para sus flujos estándar.****
+**stdbuf** Ejecuta comandos con operaciones de almacenamiento en búfer
+modificadas para sus flujos estándar.
 
-**stty **Establece o informa la configuración de la línea terminal.****
+**stty** Establece o informa la configuración de la línea terminal.
 
-**sum **Imprime la suma de comprobación y el recuento de bloques de cada
-archivo.****
+**sum** Imprime la suma de comprobación y el recuento de bloques de cada
+archivo.
 
-**sync **Limpia los búferes del sistema de archivos; fuerza la
+**sync** Limpia los búferes del sistema de archivos; fuerza la
 transferencia de los bloques modificados al disco y actualiza el
-superbloque.****
+superbloque.
 
-**tac **Concatena los archivos en orden inverso.****
+**tac** Concatena los archivos en orden inverso.
 
-**tail **Imprime las últimas diez líneas (o el número especificado) de
-cada archivo.****
+**tail** Imprime las últimas diez líneas (o el número especificado) de
+cada archivo.
 
-**tee **Lee desde la entrada estándar mientras escribe tanto en la
-salida estándar como en los archivos.****
+**tee** Lee desde la entrada estándar mientras escribe tanto en la
+salida estándar como en los archivos.
 
-**test **Compara valores y comprueba los tipos de archivo.****
+**test** Compara valores y comprueba los tipos de archivo.
 
-**timeout **Ejecuta un comando con un límite de tiempo.****
+**timeout** Ejecuta un comando con un límite de tiempo.
 
-**touch **Cambia las marcas de tiempo de los archivos, estableciendo las
+**touch** Cambia las marcas de tiempo de los archivos, estableciendo las
 horas de acceso y modificación de los archivos a la hora actual; Los
-archivos inexistentes se crean con longitud cero.****
+archivos inexistentes se crean con longitud cero.
 
-**tr **Traduce, comprime y elimina los caracteres de la entrada
-estándar.****
+**tr** Traduce, comprime y elimina los caracteres de la entrada
+estándar.
 
-**true **No realiza ninguna acción correctamente; siempre termina con un
-código de estado que indica éxito.****
+**true** No realiza ninguna acción correctamente; siempre termina con un
+código de estado que indica éxito.
 
-**truncate **Comprime o expande un archivo al tamaño especificado.****
+**truncate** Comprime o expande un archivo al tamaño especificado.
 
-**tsort **Realiza una ordenación topológica. Escribe una lista
-completamente ordenada según el orden parcial de un archivo dado.****
+**tsort** Realiza una ordenación topológica. Escribe una lista
+completamente ordenada según el orden parcial de un archivo dado.
 
-**tty **Informa del nombre de archivo del terminal conectado a la
-entrada estándar.****
+**tty** Informa del nombre de archivo del terminal conectado a la
+entrada estándar.
 
-**uname **Informa de la información del sistema.****
+**uname** Informa de la información del sistema.
 
-**unexpand **Convierte espacios en tabulaciones.****
+**unexpand** Convierte espacios en tabulaciones.
 
-**uniq **Descarta todas las líneas idénticas sucesivas excepto una.****
+**uniq** Descarta todas las líneas idénticas sucesivas excepto una.
 
-**unlink **Elimina el archivo dado.****
+**unlink** Elimina el archivo dado.
 
-**users **Informa de los nombres de los usuarios conectados.****
+**users** Informa de los nombres de los usuarios conectados.
 
-**vdir **Es lo mismo que \`ls -l\`.****
+**vdir** Es lo mismo que \`ls -l\`.
 
-**wc **Informa del número de líneas, palabras y bytes de cada archivo
+**wc** Informa del número de líneas, palabras y bytes de cada archivo
 dado, así como los totales generales cuando se proporciona más de un
-archivo.****
+archivo.
 
-**who **Informa de quién ha iniciado sesión.****
+**who** Informa de quién ha iniciado sesión.
 
-**whoami **Informa del nombre de usuario asociado con el ID de usuario
-efectivo actual.****
+**whoami** Informa del nombre de usuario asociado con el ID de usuario
+efectivo actual.
 
-**yes **Emite repetidamente \`y\` o una cadena dada, hasta que se
-elimina.****
+**yes** Emite repetidamente \`y\` o una cadena dada, hasta que se
+elimina.
 
-*****libstdbuf *****Biblioteca utilizada por \`stdbuf\`.****
+**libstdbuf** Biblioteca utilizada por \`stdbuf\`.
 
-## **8.59. Check-0.15.2**
+## 8.59. Check-0.15.2
 
-****Check es un framework de pruebas unitarias para C.****
+Check es un framework de pruebas unitarias para C
 
-****Tiempo de compilación aproximado: ****0.1 SBU (aproximadamente 2.1
-SBU con pruebas)****
+Tiempo de compilación aproximado: 0.1 SBU (aproximadamente 2.1 SBU con pruebas)
 
-****Espacio en disco requerido: ****11 MB****
+Espacio en disco requerido: 11 MB
 
-### **8.59.1. Instalación de Check**
+### 8.59.1. Instalación de Check
 
-****Preparar Check para la compilación:****
+Preparar Check para la compilación:
 
   -------------------------------------------------
-  **./configure \--prefix=/usr --disable-static**
+ ./configure --prefix=/usr --disable-static
   -------------------------------------------------
 
-****Compilación del paquete:****
+Compilación del paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****La compilación ha finalizado. Para ejecutar el conjunto de pruebas
-de Check, ejecute el siguiente comando:****
+La compilación ha finalizado. Para ejecutar el conjunto de pruebas
+de Check, ejecute el siguiente comando:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   -----------------------------------------------------------
-  **make ***docdir***=/usr/share/doc/check-0.15.2 install**
+  make docdir=/usr/share/doc/check-0.15.2 install
   -----------------------------------------------------------
 
-### **8.59.2. Contenido de Check**
+### 8.59.2. Contenido de Check
 
-****Programa instalado: ****checkmk****
+**Programa instalado**: checkmk
 
-****Biblioteca instalada: ****libcheck.so****
+**Biblioteca instalada**: libcheck.so
 
-### **Descripciones breves**
+### Descripciones breves
 
 **checkmk** Script de AWK para generar pruebas unitarias de C para usar
-con el framework de pruebas unitarias Check****
+con el framework de pruebas unitarias Check
 
-*****libcheck.so *****Contiene funciones que permiten llamar a Check
-desde un programa de prueba****
+**libcheck.so** Contiene funciones que permiten llamar a Check
+desde un programa de prueba
 
-## **8.60. Diffutils-3.11**
+## 8.60. Diffutils-3.11
 
-****El paquete Diffutils contiene programas que muestran las diferencias
-entre archivos o directorios.****
+El paquete Diffutils contiene programas que muestran las diferencias
+entre archivos o directorios.
 
-****Tiempo de compilación aproximado: ****0.4 SBU****
+Tiempo de compilación aproximado: 0.4 SBU
 
-****Espacio en disco necesario: ****50 MB****
+Espacio en disco necesario: 50 MB
 
-### **8.60.1. Instalación de Diffutils**
+### 8.60.1. Instalación de Diffutils
 
-****Preparar Diffutils para la compilación:****
+Preparar Diffutils para la compilación:
 
   -------------------------------------
-  **./configure --***prefix***=/usr**
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.60.2. Contenido de Diffutils**
+### 8.60.2. Contenido de Diffutils
 
-**Programas instalados**: cmp, diff, diff3 y sdiff****
+**Programas instalados**: cmp, diff, diff3 y sdiff
 
-### **Descripciones breves**
+### Descripciones breves
 
-**cmp **Compara dos archivos e informa de las diferencias byte a
-byte****
+**cmp** Compara dos archivos e informa de las diferencias byte a
+byte
 
-**diff **Compara dos archivos o directorios e informa de las líneas que
-difieren****
+**diff** Compara dos archivos o directorios e informa de las líneas que
+difieren
 
-**diff3 **Compara tres archivos línea a línea****
+**diff3** Compara tres archivos línea a línea
 
-**sdiff **Combina dos archivos y muestra los resultados de forma
-interactiva****
+**sdiff** Combina dos archivos y muestra los resultados de forma
+interactiva
 
-## **8.61. Gawk-5.3.1**
+## 8.61. Gawk-5.3.1
 
 ****El paquete Gawk contiene programas para manipular archivos de
 texto.****
