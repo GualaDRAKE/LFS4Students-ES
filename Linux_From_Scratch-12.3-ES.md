@@ -3899,7 +3899,7 @@ ejemplo, para ejecutar un conjunto de pruebas en ccC, podríamos añadir
 una cuarta etapa:
 
 | Etapa | Compilación | Host | Objetivo | Acción |
-|-------|-------------|------|----------|--------|
+|:-------:|:-------------:|:------:|:----------:|:--------:|
 |   4   |      C      |   C  |    C     |Reconstruir y probar ccC usando ccC en la máquina C|
 
 En el ejemplo anterior, solo cc1 y cc2 son compiladores cruzados; es
@@ -3967,7 +3967,7 @@ obligatorias dos etapas, más una adicional para pruebas.
 
 
 | Etapa | Compilación | Host | Objetivo | Acción |
-|-------|-------------|------|----------|--------|
+|:-------:|:-------------:|:------:|:----------:|:--------:|
 |   1   |      pc     |  pc  |   lfs    |Construir el compilador cruzado cc1 usando cc-pc en pc|
 |   2   |      pc     | lfs  |   lfs    |Construir el compilador cruzado cc-lfs usando cc-1 en pc|
 |   3   |     lfs     | lfs  |   lfs    |Reconstruir y probar cc-lfs usando cc-lfs en lfs|
