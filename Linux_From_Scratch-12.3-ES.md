@@ -3446,9 +3446,9 @@ Conceda a lfs acceso completo a todos los directorios bajo \$LFS,
 convirtiéndolo en el propietario:
 
 > ```bash
-> chown -v lfs \$LFS/{usr{,/\*},var,etc,tools}
-> case \$(uname -m) in
-> x86_64) chown -v lfs \$LFS/lib64 ;;
+> chown -v lfs $LFS/{usr{,/*},var,etc,tools}
+> case $(uname -m) in
+>   x86_64) chown -v lfs \$LFS/lib64 ;;
 > esac
 > ```
 
@@ -3662,6 +3662,10 @@ el nuevo perfil de usuario:
 > source ~/.bash_profile
 > ```
 
+---
+&nbsp;
+&nbsp;
+
 ## 4.5. Acerca de las Standard Build Unit o SBU
 
 Muchas personas desean saber de antemano cuánto tiempo se tarda
@@ -3734,7 +3738,9 @@ de rendimiento (throughput-performance).
 > tiempo necesario para ejecutar las pruebas de regresión del paquete,
 > a menos que se especifique lo contrario.
 
-### 
+---
+&nbsp;
+&nbsp;
 
 ## 4.6. Acerca de los conjuntos de pruebas
 
@@ -3775,7 +3781,6 @@ los desarrolladores conocen y que no consideran críticas.
 Consulte los registros en [https://www.linuxfromscratch.org/lfs/build-logs/12.3/](www.linuxfromscratch.org/lfs/faq.html#no-ptys)
 para verificar si estos fallos son previsibles. Este sitio es válido para todas las
 suites de pruebas de este libro.
-
 
 ---
 &nbsp;
@@ -3878,12 +3883,11 @@ También tenemos una máquina rápida (B), pero no hay compilador para (B),
 y queremos producir código para una tercera máquina lenta (C).
 Construiremos un compilador para la máquina C en tres etapas.
 
-  ------- ------------- ------ ---------- -----------------------------------------------------------------
-  Etapa   Compilación   Host   Objetivo   Acción
-  1       A             A      B          Construir el compilador cruzado cc1 usando ccA en la máquina A.
-  2       A             B      C          Construir el compilador cruzado cc2 usando cc1 en la máquina A.
-  3       B             C      C          Construir el compilador cruzado ccC usando cc2 en la máquina B.
-  ------- ------------- ------ ---------- -----------------------------------------------------------------
+| Etapa | Compilación | Host | Objetivo | Acción |
+|:-----:|------------:|----------------:|:------:|
+|1   |   A      |      A   |   B     |     Construir el compilador cruzado cc1 usando ccA en la máquina A|
+|2   |   A      |      B   |   C     |     Construir el compilador cruzado cc2 usando cc1 en la máquina A|
+|3   |   B      |      C   |   C     |     Construir el compilador cruzado ccC usando cc2 en la máquina B|
 
 Entonces, todos los programas que necesita la máquina C se pueden
 compilar usando cc2 en la máquina rápida B. Tenga en cuenta que, a menos
