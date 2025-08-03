@@ -4407,7 +4407,7 @@ las bibliotecas de 64 bits como "lib":
 > ```bash
 > case $(uname -m) in
 >   x86_64)
->     sed -e '/m64=/s/lib64/*lib*\' \
+>     sed -e '/m64=/s/lib64/lib/' \
 >         -i.orig gcc/config/i386/t-linux64
 > ;;
 > esac
@@ -4537,7 +4537,7 @@ compilación GCC realiza en circunstancias normales:
 > ```bash
 > cd ..
 > cat gcc/limitx.h gcc/glimits.h gcc/limity.h > \
->   `dirname $($LFS_TGT-gcc -print-*libgcc*-file-name)`/include/limits.h
+>   `dirname $($LFS_TGT-gcc -print-libgcc-file-name)`/include/limits.h
 > ```
 
 Los detalles de este paquete se encuentran en la Sección 8.29.2,
@@ -4839,7 +4839,7 @@ Prepare Libstdc++ para la compilación:
 > ```bash
 > ../libstdc++-v3/configure           \
 >     --host=$LFS_TGT                 \
->     --build=$(../*config.guess*)   \
+>     --build=$(../config.guess)   \
 >     --prefix=/usr                   \
 >     --disable-multilib              \
 >     --disable-nls                   \
@@ -4938,8 +4938,8 @@ Preparar M4 para la compilación:
 
 > ```bash
 > ./configure --prefix=/usr    \
->             --host=\$LFS_TGT \
->             --build=\$(build-aux/config.guess)
+>             --host=$LFS_TGT  \
+>             --build=$(build-aux/config.guess)
 > ```
 
 Compilar el paquete:
@@ -5103,9 +5103,9 @@ El paquete Bash contiene Bourne-Again Shell.
 Preparar Bash para la compilación:
 
 > ```bash
-> ./configure --prefix=/usr \
->             --build=$(sh *support*/config.guess) \
->             --host=$LFS_TGT \
+> ./configure --prefix=/usr                      \
+>             --build=$(sh support/config.guess) \
+>             --host=$LFS_TGT                    \
 >             --without-bash-malloc
 > ```
 > 
@@ -5421,8 +5421,7 @@ Los detalles de este paquete se encuentran en la Sección 8.35.2, "Contenido de 
 
 ## 6.11. Gzip-1.13
 
-El paquete Gzip contiene programas para comprimir y descomprimir
-archivos.
+El paquete Gzip contiene programas para comprimir y descomprimir archivos.
 
 Tiempo de compilación aproximado: 0,1 SBU
 
