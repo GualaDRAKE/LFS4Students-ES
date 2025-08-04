@@ -1,4 +1,4 @@
-  # **Linux From Scratch**        
+  #000000 **Linux From Scratch**        
 
    Versión 12.3
 
