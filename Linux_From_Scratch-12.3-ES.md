@@ -13870,489 +13870,466 @@ getkeycodes, kbdinfo, kbd_mode, kbdrate, loadkeys, loadunimap, mapscrn,
 openvt, psfaddtable (enlace a psfxtable), psfgettable (enlace a
 psfxtable), psfstriptable (enlace a psfxtable), psfxtable, setfont,
 setkeycodes, setleds, setmetamode, setvtrgb, showconsolefont, showkey,
-unicode_start y unicode_stop****
+unicode_start y unicode_stop
 
 **Directorios instalados**: /usr/share/consolefonts,
 /usr/share/consoletrans, /usr/share/keymaps, /usr/share/doc/kbd-2.7.1 y
-/usr/share/unimaps****
+/usr/share/unimaps
 
 ### **Descripciones breves**
 
-**chvt **Cambia la terminal virtual en primer plano.****
+**chvt** Cambia la terminal virtual en primer plano
 
-**deallocvt **Desasigna las terminales virtuales no utilizadas.****
+**deallocvt** Desasigna las terminales virtuales no utilizadas
 
-**dumpkeys **Voltea las tablas de traducción del teclado.****
+**dumpkeys** Voltea las tablas de traducción del teclado
 
-**fgconsole **Imprime el número de la terminal virtual activa.****
+**fgconsole** Imprime el número de la terminal virtual activa
 
-**getkeycodes **Imprime la tabla de mapeo de código de escaneo a código
-de tecla del kernel.****
+**getkeycodes** Imprime la tabla de mapeo de código de escaneo a código
+de tecla del kernel
 
-**kbdinfo **Obtiene información sobre el estado de una consola.****
+**kbdinfo** Obtiene información sobre el estado de una consola
 
-**kbd_mode **Informa o establece el modo del teclado.****
+**kbd_mode** Informa o establece el modo del teclado
 
-**kbdrate **Establece las tasas de repetición y retardo del teclado.****
+**kbdrate** Establece las tasas de repetición y retardo del teclado
 
-**loadkeys **Carga las tablas de traducción del teclado.****
+**loadkeys** Carga las tablas de traducción del teclado
 
-**loadunimap **Carga la tabla de mapeo de Unicode a fuente del
-kernel.****
+**loadunimap** Carga la tabla de mapeo de Unicode a fuente del
+kernel
 
-**mapscrn **Un programa obsoleto solía cargar una tabla de mapeo de
+**mapscrn** Un programa obsoleto solía cargar una tabla de mapeo de
 caracteres de salida definida por el usuario en el controlador de la
-consola; esto ahora lo realiza **setfont**.****
+consola; esto ahora lo realiza **setfont**
 
-**openvt **Inicia un programa en una nueva terminal virtual (VT).****
+**openvt** Inicia un programa en una nueva terminal virtual (VT
 
-**psfaddtable **Agrega una tabla de caracteres Unicode a una fuente de
-consola.****
+**psfaddtable** Agrega una tabla de caracteres Unicode a una fuente de
+consola
 
-**psfgettable **Extrae la tabla de caracteres Unicode incrustada de una
-fuente de consola.****
+**psfgettable** Extrae la tabla de caracteres Unicode incrustada de una
+fuente de consola
 
-**psfstriptable **Elimina la tabla de caracteres Unicode incrustada de
-una fuente de consola.****
+**psfstriptable**Elimina la tabla de caracteres Unicode incrustada de
+una fuente de consola
 
-**psfxtable **Administra las tablas de caracteres Unicode para fuentes
-de consola.****
+**psfxtable** Administra las tablas de caracteres Unicode para fuentes
+de consola
 
-**setfont **Modifica las fuentes Enhanced Graphic Adapter (EGA) y Video
-Graphics Array (VGA) en la consola.****
+**setfont** Modifica las fuentes Enhanced Graphic Adapter (EGA) y Video
+Graphics Array (VGA) en la consola
 
-**setkeycodes **Carga las entradas de la tabla de mapeo de código de
+**setkeycodes** Carga las entradas de la tabla de mapeo de código de
 escaneo a código de tecla del kernel. Esto es útil si hay teclas
-inusuales en el teclado.****
+inusuales en el teclado
 
-**setleds **Establece las banderas del teclado y los diodos emisores de
-luz (LED).****
+**setleds** Establece las banderas del teclado y los diodos emisores de
+luz (LED)
 
-**setmetamode **Define el manejo de metateclas del teclado.****
+**setmetamode** Define el manejo de metateclas del teclado
 
-**setvtrgb **Establece el mapa de colores de la consola en todas las
-terminales virtuales.****
+**setvtrgb** Establece el mapa de colores de la consola en todas las
+terminales virtuales
 
-**showconsolefont **Muestra la fuente actual de la pantalla de la
-consola EGA/VGA.****
+**showconsolefont** Muestra la fuente actual de la pantalla de la
+consola EGA/VGA
 
-**showkey **Informa los códigos de escaneo, los códigos de tecla y los
-códigos ASCII de las teclas pulsadas.****
+**showkey** Informa los códigos de escaneo, los códigos de tecla y los
+códigos ASCII de las teclas pulsadas
 
-**unicode_start **Pone el teclado y la consola en modo UNICODE. \[No
+**unicode_start** Pone el teclado y la consola en modo UNICODE. \[No
 utilice este programa a menos que su archivo de mapa de teclas tenga la
 codificación ISO-8859-1. Para otras codificaciones, esta utilidad
-produce resultados incorrectos\].****
+produce resultados incorrectos\]
 
-**unicode_stop **Revierte el teclado y la consola del modo UNICODE.****
+**unicode_stop** Revierte el teclado y la consola del modo UNICODE
 
-## **8.68. Libpipeline-1.5.8**
+## 8.68. Libpipeline-1.5.8
 
-****El paquete Libpipeline contiene una biblioteca para manipular
-pipelines de subprocesos de forma flexible y práctica.****
+El paquete Libpipeline contiene una biblioteca para manipular
+pipelines de subprocesos de forma flexible y práctica
 
-****Tiempo de compilación aproximado: ****0.1 SBU****
+Tiempo de compilación aproximado: 0.1 SBU
 
-****Espacio en disco necesario: ****11 MB****
+Espacio en disco necesario: 11 MB
 
-### **8.68.1. Instalación de Libpipeline**
+### 8.68.1. Instalación de Libpipeline
 
-****Preparar Libpipeline para la compilación:****
+Preparar Libpipeline para la compilación:
 
   -------------------------------------
-  **./configure --***prefix***=/usr**
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.68.2. Contenido de Libpipeline**
+### 8.68.2. Contenido de Libpipeline
 
-**Biblioteca instalada**: libpipeline.so****
+**Biblioteca instalada**: libpipeline.so
 
-### **Descripciones breves**
+### Descripciones breves
 
-*****libpipeline***** Esta biblioteca se utiliza para construir
-pipelines entre subprocesos de forma segura****
+**libpipeline** Esta biblioteca se utiliza para construir
+pipelines entre subprocesos de forma segura
 
-## **8.69. Make-4.4.1**
+## 8.69. Make-4.4.1
 
-****El paquete Make contiene un programa para controlar la generación de
+El paquete Make contiene un programa para controlar la generación de
 ejecutables y otros archivos no fuente de un paquete a partir de los
-archivos fuente.****
+archivos fuente.
 
-****Tiempo de compilación aproximado: ****0.7 SBU****
+Tiempo de compilación aproximado: 0.7 SBU
 
-****Espacio en disco necesario: ****13 MB****
+Espacio en disco necesario: 13 MB
 
-## **8.69.1. Instalación de Make**
+## 8.69.1. Instalación de Make
 
-****Preparar Make para la compilación:****
+Preparar Make para la compilación:
 
   -------------------------------------
-  **./configure --***prefix***=/usr**
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para probar los resultados, ejecute:****
+Para probar los resultados, ejecute:
 
-> +---------------------------------------------------+
-> ---
-> **chown -R tester .**
-> **su tester -c \"***PATH***=\$PATH make check\"**
-> +---------------------------------------------------+
+> chown -R tester .
+> su tester -c \"PATH=\$PATH make check\
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.69.2. Contenido de Make**
+### 8.69.2. Contenido de Make
 
-**Programa instalado**: make****
+**Programa instalado**: make
 
-### **Descripciones breves**
+### Descripciones breves
 
 **make** Determina automáticamente qué partes de un paquete deben
-(re)compilarse y luego ejecuta los comandos correspondientes.****
+(re)compilarse y luego ejecuta los comandos correspondientes.
 
-## **8.70. Parche-2.7.6**
+## 8.70. Parche-2.7.6
 
-****El paquete de parches contiene un programa para modificar o crear
+El paquete de parches contiene un programa para modificar o crear
 archivos mediante la aplicación de un archivo de parche, generalmente
-creado por el programa **diff**.****
+creado por el programa **diff**.
 
-****Tiempo de compilación aproximado: ****0.2 SBU****
+Tiempo de compilación aproximado: 0.2 SBU
 
-****Espacio en disco necesario: ****12 MB****
+Espacio en disco necesario: 12 MB
 
 ### **8.70.1. Instalación del parche**
 
-****Preparar el parche para la compilación:****
+Preparar el parche para la compilación:
 
   -------------------------------------
-  **./configure --***prefix***=/usr**
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.70.2. Contenido del parche**
+### 8.70.2. Contenido del parche
 
-**Programa instalado**: patch****
+**Programa instalado**: patch
 
-### **Descripciones breves**
+### Descripciones breves
 
 **patch** Modifica los archivos según un archivo de parche (un archivo
 de parche suele ser una lista de diferencias creada con el programa
 **diff**. Al aplicar estas diferencias a los archivos originales,
-**patch** crea las versiones parcheadas).****
+**patch** crea las versiones parcheadas).
 
-## **8.71. Tar-1.35**
+## 8.71. Tar-1.35
 
-****El paquete Tar permite crear archivos tar, así como realizar otras
+El paquete Tar permite crear archivos tar, así como realizar otras
 manipulaciones de archivos. Tar se puede usar en archivos previamente
 creados para extraer archivos, almacenar archivos adicionales,
-actualizar o listar archivos ya almacenados.****
+actualizar o listar archivos ya almacenados.
 
-****Tiempo de compilación aproximado: ****0.6 SBU****
+Tiempo de compilación aproximado: 0.6 SBU
 
-****Espacio en disco requerido: ****43 MB****
+Espacio en disco requerido: 43 MB
 
-### **8.71.1. Instalación de Tar**
+### 8.71.1. Instalación de Tar
 
-****Preparar Tar para la compilación:****
+Preparar Tar para la compilación:
 
-> +---------------------------------+
-> ---
-> **FORCE_UNSAFE_CONFIGURE=1 \\**
-> **./configure --prefix=/usr**
-> +---------------------------------+
+> FORCE_UNSAFE_CONFIGURE=1 \
+> ./configure --prefix=/usr
 
-****Significado de la opción de configuración:****
+Significado de la opción de configuración:
 
-***** FORCE_UNSAFE_CONFIGURE=1*****
+FORCE_UNSAFE_CONFIGURE=1
 
-**** Esto obliga a que la prueba de *****mknod***** se ejecute como
-*****root*****. Generalmente se considera peligroso ejecutar esta prueba
-como *****root*****, pero como se ejecuta en un sistema que solo se ha
-compilado parcialmente, no hay problema en sobrescribirla.****
+Esto obliga a que la prueba de **mknod** se ejecute como
+**root**. Generalmente se considera peligroso ejecutar esta prueba
+como **root**, pero como se ejecuta en un sistema que solo se ha
+compilado parcialmente, no hay problema en sobrescribirla.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Se sabe que una prueba, \"capacidades: almacenamiento/restauración
+***Se sabe que una prueba, \"capacidades: almacenamiento/restauración
 de binarios\", falla si se ejecuta porque LFS no es compatible con
 SELinux, pero se omitirá si el kernel del host no admite atributos
 extendidos ni etiquetas de seguridad en el sistema de archivos utilizado
-para compilar LFS.****
+para compilar LFS.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
-> +-------------------------------------------------------------------+
-> ---
-> **make install**
-> **make -C doc install-***html*** docdir=/usr/share/doc/tar-1.35**
-> +-------------------------------------------------------------------+
+> make install
+> make -C doc install-html docdir=/usr/share/doc/tar-1.35
 
-### **8.71.2. Contenido de Tar**
+### 8.71.2. Contenido de Tar
 
-**Programas instalados**: tar****
+**Programas instalados**: tar
 
-**Directorio de instalación**: /usr/share/doc/tar-1.35****
+**Directorio de instalación**: /usr/share/doc/tar-1.35
 
-### **Descripciones breves**
+### Descripciones breves
 
 **tar** Crea, extrae archivos y lista su contenido en archivos
-comprimidos, también conocidos como tarballs.****
+comprimidos, también conocidos como tarballs.
 
-## **8.72. Texinfo-7.2**
+## 8.72. Texinfo-7.2
 
-****El paquete Texinfo contiene programas para leer, escribir y
-convertir páginas de información.****
+El paquete Texinfo contiene programas para leer, escribir y
+convertir páginas de información.
 
-****Tiempo aproximado de compilación: ****0.3 SBU****
+Tiempo aproximado de compilación: 0.3 SBU
 
-****Espacio en disco requerido: ****160 MB****
+Espacio en disco requerido: 160 MB
 
-### **8.72.1. Instalación de Texinfo**
+### 8.72.1. Instalación de Texinfo
 
-****Preparar Texinfo para la compilación:****
+Preparar Texinfo para la compilación:
 
   -------------------------------
-  **./configure --prefix=/usr**
+  ./configure --prefix=/usr
   -------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****Opcionalmente, instale los componentes de una instalación de
-TeX:****
+Opcionalmente, instale los componentes de una instalación de
+TeX:
 
   ---------------------------------------------------
-  **make TEXMF=/usr/***share***/texmf install-tex**
+  make TEXMF=/usr/share/texmf install-tex
   ---------------------------------------------------
 
 ****Significado del parámetro make:****
 
-***** TEXMF=/usr/share/texmf*****
+TEXMF=/usr/share/texmf
 
-**** La variable makefile de TEXMF contiene la ubicación de la raíz del
+La variable makefile de TEXMF contiene la ubicación de la raíz del
 árbol de TeX si, por ejemplo, se instalará un paquete de TeX
-posteriormente.****
+posteriormente.
 
-****El sistema de documentación de Info utiliza un archivo de texto
+El sistema de documentación de Info utiliza un archivo de texto
 plano para guardar su lista de entradas de menú. El archivo se encuentra
 en /usr/share/info/dir. Desafortunadamente, debido a problemas
 ocasionales con los Makefiles de varios paquetes, a veces puede
 desincronizarse con las páginas de información instaladas en el sistema.
 Si alguna vez es necesario recrear el archivo /usr/share/info/dir, los
-siguientes comandos opcionales lo harán:****
+siguientes comandos opcionales lo harán:
 
-> +----------------------------------------------+
-> ---
-> **pushd /usr/share/info**
-> ** rm -v dir**
-> ** for f in \***
-> ** do install-info \$f dir 2\>/dev/null**
-> ** done**
-> **popd**
-> +----------------------------------------------+
+> pushd /usr/share/info
+> rm -v dir
+> for f in \
+> do install-info \$f dir 2\>/dev/null
+> done
+> popd
 
-### **8.72.2. Contenido de Texinfo**
+### 8.72.2. Contenido de Texinfo
 
 **Programas instalados**: info, install-info, makeinfo (enlace a
 texi2any), pdftexi2dvi, pod2texi, texi2any, texi2dvi, texi2pdf y
-texindex****
+texindex
 
 **Bibliotecas instaladas**: MiscXS.so, Parsetexi.so y XSParagraph.so
-(todas en /usr/lib/texinfo)****
+(todas en /usr/lib/texinfo)
 
-**Directorios instalados**:**** ****/usr/share/texinfo y
-/usr/lib/texinfo****
+**Directorios instalados**: /usr/share/texinfo y /usr/lib/texinfo
 
-### **Descripciones breves**
+### Descripciones breves
 
 **info** Se utiliza para leer páginas de información similares a las
 páginas de manual, pero que a menudo profundizan mucho más que
 simplemente explicar todas las opciones disponibles de la línea de
-comandos \[Por ejemplo, compare man bison e info bison\].****
+comandos \[Por ejemplo, compare man bison e info bison\].
 
 **install-info** Se utiliza para instalar páginas de información;
-actualiza las entradas en el archivo de índice de información.****
+actualiza las entradas en el archivo de índice de información.
 
 **makeinfo** Traduce los documentos fuente de Texinfo a páginas de
-información, texto plano o HTML.****
+información, texto plano o HTML.
 
 **pdftexi2dvi** Se utiliza para formatear el documento de Texinfo a un
-archivo PDF (Portable Document Format).****
+archivo PDF (Portable Document Format).
 
-**pod2texi** Convierte Pod a formato Texinfo****
+**pod2texi** Convierte Pod a formato Texinfo.
 
 **texi2any** Traduce la documentación fuente de Texinfo a otros
-formatos.****
+formatos.
 
 **texi2dvi** Se utiliza para formatear el documento Texinfo en un
-archivo independiente del dispositivo que se pueda imprimir.****
+archivo independiente del dispositivo que se pueda imprimir.
 
 **texi2pdf** Se utiliza para formatear el documento Texinfo en un
-archivo PDF ( Portable Document Format).****
+archivo PDF ( Portable Document Format).
 
 **texindex** Se utiliza para ordenar los archivos de índice de
-Texinfo.****
+Texinfo.
 
-## **8.73. Vim-9.1.1166**
+## 8.73. Vim-9.1.1166
 
-****El paquete Vim contiene un potente editor de texto.****
+El paquete Vim contiene un potente editor de texto.
 
-****Tiempo de compilación aproximado: ****3.4 SBU****
+Tiempo de compilación aproximado: 3.4 SBU
 
-****Espacio en disco necesario: ****251 MB****
+Espacio en disco necesario: 251 MB
 
-****Alternativas a Vim****
+Alternativas a Vim****
 
-****Si prefiere otro editor, como Emacs, Joe o Nano, consulte****
+Si prefiere otro editor, como Emacs, Joe o Nano, consulte****
 
-****
-****[****https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html****](https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html)
+[*https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html*](https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html)
 
-****para obtener instrucciones de instalación sugeridas.****
+para obtener instrucciones de instalación sugeridas.
 
-### **8.73.1. Instalación de Vim**
+### 8.73.1. Instalación de Vim
 
-****Primero, cambie la ubicación predeterminada del archivo de
-configuración de vimrc a /etc:****
+Primero, cambie la ubicación predeterminada del archivo de
+configuración de vimrc a /etc:
 
   -----------------------------------------------------------------------------
-  **echo \'#define ***SYS_VIMRC_FILE*** \"/etc/vimrc\"\' \>\> src/feature.h**
+  echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
   -----------------------------------------------------------------------------
 
-****Prepare Vim para la compilación:****
+Prepare Vim para la compilación:
 
   -------------------------------------
-  **./configure --***prefix***=/usr**
+  ./configure --prefix=/usr
   -------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para preparar las pruebas, asegúrese de que el usuario tester pueda
+Para preparar las pruebas, asegúrese de que el usuario tester pueda
 escribir en el árbol de código fuente y excluya un archivo que contenga
-pruebas que requieran **curl** o **wget**:****
+pruebas que requieran **curl** o **wget**:
 
-> +-------------------------------------------------------------+
-> ---
-> **chown -R tester .**
-> **sed \'/test_plugin_glvs/d\' -i src/testdir/Make_all.mak**
-> +-------------------------------------------------------------+
+> chown -R tester .
+> sed '/test_plugin_glvs/d' -i src/testdir/Make_all.mak
 
-****Ahora ejecute las pruebas como usuario tester:****
+Ahora ejecute las pruebas como usuario tester:
 
-> +----------------------------------------------------------------------+
-> ---
-> **su tester -c \"TERM=***xterm***-256color LANG=en_US.UTF-8 make -j1
-> test\" \\**
-> ** &\> vim-test.log**
-> +----------------------------------------------------------------------+
+> su tester -c "TERM=***xterm***-256color LANG=en_US.UTF-8 make -j1
+> test" \
+> &> vim-test.log
 
-****El conjunto de pruebas muestra una gran cantidad de datos binarios
+El conjunto de pruebas muestra una gran cantidad de datos binarios
 en la pantalla. Esto puede causar problemas con la configuración de la
 terminal actual (especialmente al sobrescribir la variable TERM para
 cumplir con algunas suposiciones del conjunto de pruebas). El problema
 se puede evitar redirigiendo la salida a un archivo de registro, como se
 muestra arriba. Una prueba exitosa mostrará el mensaje \"ALL DONE\" en
-el archivo de registro al finalizar.****
+el archivo de registro al finalizar.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****Muchos usuarios escriben \"**vi**\" en lugar de \"**vim**\" de forma
+Muchos usuarios escriben \"**vi**\" en lugar de \"**vim**\" de forma
 automática. Para permitir la ejecución de **vim** cuando los usuarios
 escriben **vi** habitualmente, cree un enlace simbólico tanto para el
 binario como para la página del manual en los idiomas
-proporcionados:****
+proporcionados:
 
-> +--------------------------------------------------+
-> ---
-> **ln -sv vim /usr/bin/vi**
-> **for L in /usr/share/man/{,\*/}man1/vim.1; do**
-> ** ln -sv vim.1 \$(dirname \$L)/vi.1**
-> **done**
-> +--------------------------------------------------+
+> ln -sv vim /usr/bin/vi
+> for L in /usr/share/man/{,*/}man1/vim.1; do
+> ln -sv vim.1 $(dirname $L)/vi.1
+> done
 
-****Por defecto, la documentación de Vim se instala en /usr/share/vim.
+Por defecto, la documentación de Vim se instala en /usr/share/vim.
 El siguiente enlace simbólico permite acceder a la documentación a
 través de /usr/share/doc/vim-9.1.1166, lo que la hace coherente con la
-ubicación de la documentación de otros paquetes:****
+ubicación de la documentación de otros paquetes:
 
   ---------------------------------------------------------------
-  **ln -sv ../vim/***vim91***/doc /usr/share/doc/vim-9.1.1166**
+  ln -sv ../vim/vim91doc /usr/share/doc/vim-9.1.1166
   ---------------------------------------------------------------
 
 Si se va a instalar un sistema X Window en el sistema LFS, puede que sea
@@ -14360,8 +14337,7 @@ necesario recompilar Vim después de instalar X. Vim incluye una versión
 GUI del editor que requiere la instalación de X y algunas bibliotecas
 adicionales. Para obtener más información sobre este proceso, consulte
 la documentación de Vim y la página de instalación de Vim en el libro de
-BLFS en
-<https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/vim.html>.
+BLFS en <https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/vim.html>.
 
 ### 8.73.2. Configuración de Vim
 
@@ -14375,24 +14351,21 @@ modifica otras opciones, y las modificaciones deben realizarse después
 de esta. Cree un archivo de configuración de **vim** predeterminado
 ejecutando lo siguiente:
 
-> +----------------------------------------------------------------------+
-> ---
-> cat \> /etc/vimrc \<\< \"EOF\"
-> \" Begin /etc/vimrc
-> \" Asegúrese de que los valores predeterminados se configuren antes
+> cat > /etc/vimrc << "EOF"
+> " Begin /etc/vimrc
+> " Asegúrese de que los valores predeterminados se configuren antes
 > de personalizar la configuración, no después.
-> source \$VIMRUNTIME/defaults.vim
+> source $VIMRUNTIME/defaults.vim
 > let skip_defaults_vim=1
 > set nocompatible
 > set backspace=2
 > set mouse=
 > syntax on
-> if (&term == \"xterm\") \ | \ | (&term == \"putty\")
+> if (&term == "xterm") || (&term == "putty")
 > set background=dark
 > endif
-> \" Fin de /etc/vimrc
+> " Fin de /etc/vimrc
 > EOF
-> +----------------------------------------------------------------------+
 
 La opción \"*set nocompatible*\" hace que **vim** se comporte de forma
 más útil (por defecto) que con la compatibilidad con Vi.
@@ -14415,9 +14388,8 @@ el siguiente comando:
   vim -c \':options\'
   ---------------------
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Por defecto, vim solo instala archivos de corrección ortográfica
 > para El idioma inglés. Para instalar los archivos de corrección
 > ortográfica de su idioma preferido, copie el archivo *.spl* y,
@@ -14426,104 +14398,103 @@ el siguiente comando:
 > */usr/share/vim/vim91/spell/*.
 > Para usar estos archivos de corrección ortográfica, se requiere
 > cierta configuración en */etc/vimrc*, por ejemplo:
-> +----------------------------------------------------------------------+
+> 
 > set spelllang=en,ru
 > set spell
-> +----------------------------------------------------------------------+
+> 
 > Para más información, consulte *runtime/spell/README.txt*.
-> +----------------------------------------------------------------------+
 
-### **8.73.3. Contenido de Vim**
+### 8.73.3. Contenido de Vim
 
 **Programas instalados**: ex (enlace a vim), rview (enlace a vim), rvim
 (enlace a vim), vi (enlace a vim), view (enlace a vim), vim, vimdiff
-(enlace a vim), vimtutor y xxd****
+(enlace a vim), vimtutor y xxd
 
-**Directorio de instalación**: /usr/share/vim****
+**Directorio de instalación**: /usr/share/vim
 
-### **Descripciones breves**
+### Descripciones breves
 
-**ex** Inicia ****v****im**** en modo ex****
+**ex** Inicia **vim** en modo ex
 
 **rview** Es una versión restringida de view; no se pueden iniciar
-comandos de shell ni suspender view.****
+comandos de shell ni suspender view.
 
 ****r****vim**** Es una versión restringida de vim; No se pueden iniciar
-comandos de shell y ****v****im**** no se puede suspender.****
+comandos de shell y ****v****im**** no se puede suspender.
 
-**vi** Enlace a ****v****im****
+**vi** Enlace a **vim**
 
-**view** Inicia ****v****im**** en modo de solo lectura.****
+**view** Inicia **vim** en modo de solo lectura.
 
-**vim** Es el editor.****
+**vim** Es el editor.
 
-**vimdiff** Edita dos o tres versiones de un archivo con ****v****im****
-y muestra las diferencias.****
+**vimdiff** Edita dos o tres versiones de un archivo con **vim**
+y muestra las diferencias.
 
 **vimtutor** Enseña las teclas y comandos básicos de
-****v****im****.****
+**vim**.
 
 **xxd** Crea un volcado hexadecimal del archivo dado; también puede
 realizar la operación inversa, por lo que puede usarse para parches
-binarios.****
+binarios.
 
-## **8.74. MarkupSafe-3.0.2**
+## 8.74. MarkupSafe-3.0.2
 
-****MarkupSafe es un módulo de Python que implementa una cadena segura
-de marcado XML/HTML/XHTML.****
+MarkupSafe es un módulo de Python que implementa una cadena segura
+de marcado XML/HTML/XHTML.
 
-****Tiempo de compilación aproximado: ****Menos de 0,1 SBU****
+Tiempo de compilación aproximado: Menos de 0,1 SBU
 
-****Espacio en disco necesario: ****500 KB****
+Espacio en disco necesario: 500 KB
 
-### **8.74.1. Instalación de MarkupSafe**
+### 8.74.1. Instalación de MarkupSafe
 
-****Compile MarkupSafe con el siguiente comando:****
+Compile MarkupSafe con el siguiente comando:
 
   -------------------------------------------------------------------------------
-  **pip3 wheel -w dist \--no-cache-dir \--no-build-isolation \--no-deps \$PWD**
+  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
   -------------------------------------------------------------------------------
 
-****Este paquete no incluye un conjunto de pruebas.****
+Este paquete no incluye un conjunto de pruebas.
 
-****Instale el paquete:****
+Instale el paquete:
 
   ------------------------------------------------------------------
-  **pip3 install \--no-***index*** \--find-links dist Markupsafe**
+  pip3 install --no-index --find-links dist Markupsafe
   ------------------------------------------------------------------
 
-### **8.74.2. Contenido de MarkupSafe**
+### 8.74.2. Contenido de MarkupSafe
 
 **Directorio de instalación**:
-/usr/lib/python3.13/site-packages/MarkupSafe-3.0.2.dist-info****
+/usr/lib/python3.13/site-packages/MarkupSafe-3.0.2.dist-info
 
-## **8.75. Jinja2-3.1.5**
+## 8.75. Jinja2-3.1.5
 
-****Jinja2 es un módulo de Python que implementa un lenguaje de
-plantillas Python simple.****
+***Jinja2 es un módulo de Python que implementa un lenguaje de
+plantillas Python simple.
 
-****Tiempo de compilación aproximado: ****Menos de 0.1 SBU****
+Tiempo de compilación aproximado: Menos de 0.1 SBU
 
-****Espacio en disco requerido: ****2.5 MB****
+Espacio en disco requerido: 2.5 MB
 
-### **8.75.1. Instalación de Jinja2**
+### 8.75.1. Instalación de Jinja2
 
-****Compilación del paquete:****
+Compilación del paquete:
 
   -------------------------------------------------------------------------------
-  **pip3 wheel -w dist \--no-cache-dir \--no-build-isolation \--no-deps \$PWD**
+  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
   -------------------------------------------------------------------------------
 
-****Instalación del paquete:****
+Instalación del paquete:
 
   --------------------------------------------------------
-  **pip3 install \--no-index \--find-links dist Jinja2**
+  pip3 install --no-index --find-links dist Jinja2
   --------------------------------------------------------
 
-### **8.75.2. Contenido de Jinja2**
+### 8.75.2. Contenido de Jinja2
 
 **Directorio de instalación**:
-/usr/lib/python3.13/site-packages/Jinja2-3.1.5.dist-info****
+/usr/lib/python3.13/site-packages/Jinja2-3.1.5.dist-info
 
 ## 8.76. Udev desde Systemd-257.3
 
@@ -14540,44 +14511,35 @@ Udev forma parte del paquete systemd-257.3. Utilice el archivo
 systemd-257.3.tar.xz como archivo tar de origen. Elimine dos grupos
 innecesarios, *render* y *sgx*, de las reglas predeterminadas de Udev:
 
-> +-------------------------------------------------------------+
-> ---
-> sed -e \'s/GROUP=\"*****render*****\"/GROUP=\"video\"/\' \\
-> -e \'s/GROUP=\"sgx\", //\' \\
+> sed -e 's/GROUP="render"/GROUP="video"' \
+> -e 's/GROUP="sgx", //' \
 > -i rules.d/50-udev-default.rules.in
-> +-------------------------------------------------------------+
 
 Elimine una regla de Udev que requiere una instalación completa de
 Systemd:
 
   ----------------------------------------------------------------
-  sed -i \'/systemd-sysctl/s/\^/#/\' rules.d/99-systemd.rules.in
+  sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in
   ----------------------------------------------------------------
 
 Ajuste las rutas predefinidas de los archivos de configuración de red
 para la instalación independiente de Udev:
 
-> +-------------------------------------------------+
-> ---
-> sed -e \'/NETWORK_DIRS/s/systemd/udev/\' \\
+> sed -e '/NETWORK_DIRS/s/systemd/udev/' \
 > -i src/libsystemd/sd-network/network-util.h
-> +-------------------------------------------------+
 
 Prepare Udev para la compilación:
 
-> +-------------------------------------+
-> ---
 > mkdir -p build
 > cd build
-> meson setup .. \\
-> \--prefix=/usr \\
-> \--buildtype=release \\
-> -D mode=release* *\\
-> -D dev-kvm-mode=0660 \\
-> -D link-udev-shared=false \\
-> -D logind=false \\
+> meson setup .. \
+> --prefix=/usr \
+> --buildtype=release \
+> -D mode=release* \
+> -D dev-kvm-mode=0660 \
+> -D link-udev-shared=false \
+> -D logind=false \
 > -D vconsole=false
-> +-------------------------------------+
 
 Significado de las opciones de meson:
 
@@ -14609,248 +14571,225 @@ para una instalación exclusiva de udev.
 Estas opciones evitan la generación de varios archivos de reglas de udev
 pertenecientes a otros componentes de Systemd que no instalaremos.
 
-****Obtenga la lista de los ayudantes de udev incluidos y guárdela en
+Obtenga la lista de los ayudantes de udev incluidos y guárdela en
 una variable de entorno (exportarla no es estrictamente necesario, pero
 facilita la compilación como usuario normal o con un gestor de
-paquetes):****
+paquetes):
 
-> +----------------------------------------------------------------------+
-> ---
-> **export udev_helpers=\$(grep \"\'*name*\' :\"
-> ../src/udev/meson.build \ | \\**
-> ** awk \'{print \$3}\' \ | tr -d \",\'\" \ | grep -v \'udevadm\')**
-> +----------------------------------------------------------------------+
+> export udev_helpers=\$(grep "'*name*' :"
+> ../src/udev/meson.build | \
+> awk '{print $3}' | tr -d ",'" | grep -v 'udevadm')
 
-****Compile solo los componentes necesarios para udev:****
+Compile solo los componentes necesarios para udev:
 
-> +----------------------------------------------------------------------+
-> ---
-> **ninja udevadm systemd-***hwdb*** \\**
-> ** \$(ninja -n \ | grep -Eo \'(src/(lib)?udev\ | rules.d\ | hwdb.d)/\[\^
-> \]\*\') \\**
-> ** \$(realpath libudev.so \--relative-to .) \\**
-> ** \$udev_helpers**
-> +----------------------------------------------------------------------+
+> ninja udevadm systemd-hwdb \
+> $(ninja -n | grep -Eo '(src/(lib)?udev| rules.d | hwdb.d)/[^]*') \
+> $(realpath libudev.so --relative-to .) \
+> $udev_helpers
 
-****Instalar el paquete:****
+Instalar el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
-> **install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}**
-> **install -vm755 -d /***usr***/{lib,share}/pkgconfig**
-> **install -vm755 udevadm /usr/bin/**
-> **install -vm755 systemd-hwdb /usr/bin/udev-hwdb**
-> **ln -svfn ../bin/udevadm /usr/sbin/udevd**
-> **cp -av libudev.so{,\*\[0-9\]} /usr/lib/**
-> **install -vm644 ../src/libudev/libudev.h /usr/include/**
-> **install -vm644 src/libudev/\*.pc /usr/lib/pkgconfig/**
-> **install -vm644 src/udev/\*.pc /usr/share/pkgconfig/**
-> **install -vm644 ../src/udev/udev.conf /etc/udev/**
-> **install -vm644 rules.d/\* ../rules.d/README
-> /usr/lib/udev/rules.d/**
-> **install -vm644 \$(find ../rules.d/\*.rules \\**
-> ** -not -name \'\*power-switch\*\') /usr/lib/udev/rules.d/**
-> **install -vm644 hwdb.d/\* ../hwdb.d/{\*.hwdb,README}
-> /usr/lib/udev/hwdb.d/**
-> **install -vm755 \$udev_helpers /usr/lib/udev**
-> **install -vm644 ../network/99-default.link /usr/lib/udev/network**
-> +----------------------------------------------------------------------+
+> install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}
+> install -vm755 -d /usr/{lib,share}/pkgconfig
+> install -vm755 udevadm /usr/bin/
+> install -vm755 systemd-hwdb /usr/bin/udev-hwdb
+> ln -svfn ../bin/udevadm /usr/sbin/udevd
+> cp -av libudev.so{,*[0-9]} /usr/lib/
+> install -vm644 ../src/libudev/libudev.h /usr/include/
+> install -vm644 src/libudev/*.pc /usr/lib/pkgconfig/
+> install -vm644 src/udev/*.pc /usr/share/pkgconfig/
+> install -vm644 ../src/udev/udev.conf /etc/udev/
+> install -vm644 rules.d/* ../rules.d/README
+> /usr/lib/udev/rules.d/
+> install -vm644 $(find ../rules.d/*.rules \
+> -not -name '*power-switch*') /usr/lib/udev/rules.d/
+> install -vm644 hwdb.d/* ../hwdb.d/{*.hwdb,README}
+> /usr/lib/udev/hwdb.d/
+> install -vm755 $udev_helpers /usr/lib/udev
+> install -vm644 ../network/99-default.link /usr/lib/udev/network
 
-****Instala algunas reglas personalizadas y archivos de soporte útiles
-en un entorno LFS:****
+Instala algunas reglas personalizadas y archivos de soporte útiles
+en un entorno LFS:
 
-> +----------------------------------------------------+
-> ---
-> **tar -xvf ../../udev-lfs-20230818.tar.xz**
-> **make -f udev-lfs-20230818/Makefile.lfs install**
-> +----------------------------------------------------+
+> tar -xvf ../../udev-lfs-20230818.tar.xz
+> make -f udev-lfs-20230818/Makefile.lfs install
 
-****Instala las páginas del manual:****
+Instala las páginas del manual:
 
-> +----------------------------------------------------------------------+
-> ---
-> **tar -xf ../../systemd-man-pages-257.3.tar.xz \\**
-> ** \--no-same-owner \--strip-components=1 \\**
-> ** -C /usr/share/man \--wildcards \'\*/udev\*\' \'\*/libudev\*\'
-> \\**
-> ** \'\*/systemd.link.5\' \\**
-> ** \'\*/systemd-\'{hwdb,udevd.service}.8**
-> **sed \'s\ | systemd/network\ | udev/network\ | \' \\**
-> ** /usr/share/man/man5/systemd.link.5 \\**
-> ** \> /usr/share/man/man5/udev.link.5**
-> **sed \'s/systemd\\(\\\\\\?-\\)/udev\\1/\' \\**
-> ** /usr/share/man/man8/systemd-hwdb.8 \\**
-> ** \> /usr/share/man/man8/udev-hwdb.8**
-> **sed \'s\ | lib.\*udevd\ | sbin/udevd\ | \' \\**
-> ** /usr/share/man/man8/systemd-udevd.service.8 \\**
-> ** \> /usr/share/man/man8/udevd.8**
-> **rm /usr/share/man/man\*/systemd\***
-> +----------------------------------------------------------------------+
+> tar -xf ../../systemd-man-pages-257.3.tar.xz \
+> --no-same-owner --strip-components=1 \
+> -C /usr/share/man --wildcards '*/udev*' '*/libudev*' \
+> '*/systemd.link.5' \
+> '*/systemd-'{hwdb,udevd.service}.8
+> sed 's | systemd/network | udev/network |' \
+> ** /usr/share/man/man5/systemd.link.5 \
+> > /usr/share/man/man5/udev.link.5**
+> **sed 's/systemd\\(\\\?-\)/udev\1/' \
+> ** /usr/share/man/man8/systemd-hwdb.8 \
+> ** > /usr/share/man/man8/udev-hwdb.8
+> **sed 's | lib.*udevd | sbin/udevd | ' \
+> /usr/share/man/man8/systemd-udevd.service.8 \
+> > /usr/share/man/man8/udevd.8**
+> rm /usr/share/man/man*/systemd
 
-****Finalmente, desactive la variable udev_helpers:****
+Finalmente, desactive la variable udev_helpers:
 
   ------------------------
-  **unset udev_helpers**
+  unset udev_helpers
   ------------------------
 
-### **8.76.2. Configuración de Udev**
+### 8.76.2. Configuración de Udev
 
-****La información sobre los dispositivos de hardware se guarda en los
-directorios *****/etc/udev/hwdb.d***** y *****/usr/lib/udev/hwdb.d*****.
+La información sobre los dispositivos de hardware se guarda en los
+directorios **/etc/udev/hwdb.d** y **/usr/lib/udev/hwdb.d**.
 Udev necesita que dicha información se compile en una base de datos
-binaria *****llamada /etc/udev/hwdb.bin*****. Cree la base de datos
-inicial:****
+binaria **llamada /etc/udev/hwdb.bin**. Cree la base de datos
+inicial:
 
   ----------------------
-  **udev-hwdb update**
+  udev-hwdb update
   ----------------------
 
-****Este comando debe ejecutarse cada vez que se actualice la
-información del hardware.****
+Este comando debe ejecutarse cada vez que se actualice la
+información del hardware.
 
-### **8.76.3. Contenido de Udev**
+### 8.76.3. Contenido de Udev
 
 **Programas instalados**: udevadm, udevd (enlace simbólico a udevadm) y
-udev-hwdb****
+udev-hwdb
 
-**Bibliotecas instaladas**: libudev.so****
+**Bibliotecas instaladas**: libudev.so
 
-**Directorios instalados**: /etc/udev y /usr/lib/udev****
+**Directorios instalados**: /etc/udev y /usr/lib/udev
 
 ### **Descripciones breves**
 
 **udevadm** Herramienta genérica de administración de udev: controla el
 demonio udevd, proporciona información de la base de datos de Udev,
 supervisa los eventos UE, espera a que finalicen, prueba la
-configuración de Udev y los activa para un dispositivo determinado.****
+configuración de Udev y los activa para un dispositivo determinado.
 
 **udevd** Un demonio que detecta los eventos UE en el socket Netlink,
 crea dispositivos y ejecuta los programas externos configurados en
-respuesta a estos eventos UE.****
+respuesta a estos eventos UE.
 
-**udev-hwdb** Actualiza o consulta la base de datos de hardware.****
+**udev-hwdb** Actualiza o consulta la base de datos de hardware.
 
-*****libudev *****Una interfaz de biblioteca para la información de
-dispositivos udev****
+**libudev** Una interfaz de biblioteca para la información de
+dispositivos udev**
 
-*****/etc/udev***** Contiene archivos de configuración de Udev, permisos
-de dispositivos y reglas para la nomenclatura de dispositivos.****
+**/etc/udev** Contiene archivos de configuración de Udev, permisos
+de dispositivos y reglas para la nomenclatura de dispositivos.
 
-## **8.77. Man-DB-2.13.0**
+## 8.77. Man-DB-2.13.0
 
-****El paquete Man-DB contiene programas para buscar y visualizar
-páginas de manual.****
+El paquete Man-DB contiene programas para buscar y visualizar
+páginas de manual.
 
-****Tiempo de compilación aproximado: ****0.3 SBU****
+Tiempo de compilación aproximado: 0.3 SBU
 
-****Espacio en disco requerido: ****44 MB**** ****
+Espacio en disco requerido: 44 MB
 
-### **8.77.1. Instalación de Man-DB**
+### 8.77.1. Instalación de Man-DB
 
-****Preparar Man-DB para la compilación:****
+Preparar Man-DB para la compilación:
 
-> +----------------------------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--docdir=/usr/share/doc/man-db-2.13.0 \\**
-> ** \--sysconfdir=/***etc*** \\**
-> ** \--disable-setuid \\**
-> ** \--enable-cache-owner=bin \\**
-> ** \--with-browser=/usr/bin/lynx \\**
-> ** \--with-vgrind=/usr/bin/vgrind \\**
-> ** \--with-grap=/usr/bin/grap \\**
-> ** \--with-systemdtmpfilesdir= \\**
-> ** \--with-systemdsystemunitdir=**
-> +----------------------------------------------------------------+
+> ./configure --prefix=/usr \
+> --docdir=/usr/share/doc/man-db-2.13.0 \
+> --sysconfdir=/etc \
+> --disable-setuid \
+> --enable-cache-owner=bin \
+> --with-browser=/usr/bin/lynx \
+> --with-vgrind=/usr/bin/vgrind \
+> --with-grap=/usr/bin/grap \
+> --with-systemdtmpfilesdir= \
+> --with-systemdsystemunitdir
 
-****Significado de las opciones de configuración:****
+Significado de las opciones de configuración:
 
-***** \--disable-setuid*****
+\--disable-setuid
 
-**** Esto desactiva la asignación de setuid al programa man al usuario
-man.****
+Esto desactiva la asignación de setuid al programa man al usuario
+man.
 
-***** \--enable-cache-owner=bin*****
+\--enable-cache-owner=bin
 
-**** Esto cambia la propiedad de los archivos de caché del sistema al
-usuario bin.****
+Esto cambia la propiedad de los archivos de caché del sistema al
+usuario bin.
 
-**** *****\--with-\...*****
+\--with-\...
 
-**** ****Estos tres parámetros se utilizan para configurar algunos
+Estos tres parámetros se utilizan para configurar algunos
 programas predeterminados. Lynx es un navegador web basado en texto
 (consulte BLFS para obtener instrucciones de instalación), Vgrind
 convierte el código fuente del programa a la entrada de Groff y Grap es
 útil para la composición tipográfica de gráficos en documentos de Groff.
 Los programas Vgrind y Grap normalmente no son necesarios para ver las
 páginas del manual. No forman parte de LFS ni de BLFS, pero debería
-poder instalarlos usted mismo después de finalizar LFS si lo desea.****
+poder instalarlos usted mismo después de finalizar LFS si lo desea.
 
-***** \--with-systemd\...*****
+\--with-systemd\...
 
-**** Estos parámetros evitan la instalación de directorios y archivos
-systemd innecesarios.****
+Estos parámetros evitan la instalación de directorios y archivos
+systemd innecesarios.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------------
-  **make ***install*****
+  make install
   ------------------------
 
-### **8.77.2. Páginas del manual en otros idiomas en LFS**
+### 8.77.2. Páginas del manual en otros idiomas en LFS
 
-****La siguiente tabla muestra el conjunto de caracteres con el que
+La siguiente tabla muestra el conjunto de caracteres con el que
 Man-DB asume que se codificarán las páginas del manual instaladas en
 /usr/share/man/\<ll\>. Además de esto, Man-DB determina correctamente si
 las páginas manuales instaladas en ese directorio están codificadas en
-UTF-8.****
+UTF-8.
 
-**Tabla 8.1. Codificación de caracteres esperada de las páginas del
-manual de 8 bits heredadas**
+Tabla 8.1. Codificación de caracteres esperada de las páginas del
+manual de 8 bits heredadas
 
-  ---------------------------------- ------------------ ---------------------------------------- ------------------
-  **Idioma (código) **               **Codificación**   **Idioma (código)**                      **Codificación**
-  Danés (da)                         ISO-8859-1         Croata (hr)                              ISO-8859-2
-  Alemán (de)                        ISO-8859-1         Húngaro (hu)                             ISO-8859-2
-  Inglés (en)                        ISO-8859-1         Japonés (ja)                             EUC-JP
-  Español (es)                       ISO-8859-1         Coreano (ko)                             EUC-KR
-  Estonio (et)                       ISO-8859-1         Lituano (lt)                             ISO-8859-13
-  Finlandés (fi)                     ISO-8859-1         Letón (lv)                               ISO-8859-13
-  Francés (fr)                       ISO-8859-1         Macedonio (mk)                           ISO-8859-5
-  Irlandés (ga)                      ISO-8859-1         Polaco (pl)                              ISO-8859-2
-  Gallego (gl)                       ISO-8859-1         Rumano (ro)                              ISO-8859-2
-  Indonesio (id)                     ISO-8859-1         Griego (el)                              ISO-8859-7
-  Islandés (is)                      ISO-8859-1         Eslovaco (sk)                            ISO-8859-2
-  Italiano (it)                      ISO-8859-1         Esloveno (sl)                            ISO-8859-2
-  Bokmal noruego (nb)                ISO-8859-1         Serbio latino (sr@latin)                 ISO-8859-2
-  Neerlandés (nl)                    ISO-8859-1         Serbio (sr)                              ISO-8859-5
-  Nynorsk noruego (nn)               ISO-8859-1         Turco (tr)                               ISO-8859-9
-  Noruego (no)                       ISO-8859-1         Ucraniano (uk)                           KOI8-U
-  Portugués (pt)                     ISO-8859-1         Vietnamita (vi)                          TCVN5712-1
-  Sueco (sv)                         ISO-8859-1         Chino simplificado (zh_CN)               GBK
-  Bielorruso (be)                    CP1251             Chino simplificado de Singapur (zh_SG)   GBK
-  Búlgaro (bg)                       CP1251             Chino tradicional de Hong Kong (zh_HK)   BIG5HKSCS
-  Checo (cs)                         ISO-8859-2         Chino tradicional (zh_TW)                BIG5}
-  ---------------------------------- ------------------ ---------------------------------------- ------------------
+  |**Idioma (código) **     |       **Codificación** | **Idioma (código)**         |            |**Codificación**|
+  |:-----------------------:|:----------------------:|:---------------------------:|:----------:|:--------------:|
+  |Danés (da)               |         ISO-8859-1     |   Croata (hr)                            |  ISO-8859-2    |
+  |Alemán (de)              |         ISO-8859-1     |   Húngaro (hu)                           |  ISO-8859-2    |
+  |Inglés (en)              |         ISO-8859-1     |   Japonés (ja)                           |  EUC-JP        |
+  |Español (es)             |         ISO-8859-1     |   Coreano (ko)                           |  EUC-KR        |
+  |Estonio (et)             |         ISO-8859-1     |   Lituano (lt)                           |  ISO-8859-13   |
+  |Finlandés (fi)           |         ISO-8859-1     |   Letón (lv)                             |  ISO-8859-13   |
+  |Francés (fr)             |         ISO-8859-1     |   Macedonio (mk)                         |  ISO-8859-5    |
+  |Irlandés (ga)            |         ISO-8859-1     |   Polaco (pl)                            |  ISO-8859-2    |
+  |Gallego (gl)             |         ISO-8859-1     |   Rumano (ro)                            |  ISO-8859-2    |
+  |Indonesio (id)           |         ISO-8859-1     |   Griego (el)                            |  ISO-8859-7    |
+  |Islandés (is)            |         ISO-8859-1     |   Eslovaco (sk)                          |  ISO-8859-2    |
+  |Italiano (it)            |         ISO-8859-1     |   Esloveno (sl)                          |  ISO-8859-2    |
+  |Bokmal noruego (nb)      |         ISO-8859-1     |   Serbio latino (sr@latin)               |  ISO-8859-2    |
+  |Neerlandés (nl)          |         ISO-8859-1     |   Serbio (sr)                            |  ISO-8859-5    |
+  |Nynorsk noruego (nn)     |         ISO-8859-1     |   Turco (tr)                             |  ISO-8859-9    |
+  |Noruego (no)             |         ISO-8859-1     |   Ucraniano (uk)                         |  KOI8-U        |
+  |Portugués (pt)           |         ISO-8859-1     |   Vietnamita (vi)                        |  TCVN5712-1    |
+  |Sueco (sv)               |         ISO-8859-1     |   Chino simplificado (zh_CN)             |  GBK           |
+  |Bielorruso (be)          |         CP1251         |   Chino simplificado de Singapur (zh_SG) |  GBK           |
+  |Búlgaro (bg)             |         CP1251         |   Chino tradicional de Hong Kong (zh_HK) |  BIG5HKSCS     |
+  |Checo (cs)               |         ISO-8859-2     |   Chino tradicional (zh_TW)              |  BIG5}         |
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Las páginas del manual en idiomas no incluidos en la lista no son
 > compatibles.
-> +----------------------------------------------------------------------+
 
 ### 8.77.3. Contenido de Man-DB
 
