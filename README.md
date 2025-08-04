@@ -52,7 +52,6 @@ LFS4Students-ES/
 ├── README.md
 └── índice-complementario.md              # Mapa con enlaces a todos los agregados
 ```
-
 ---
 
 ## Objetivos del proyecto
