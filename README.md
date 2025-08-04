@@ -39,7 +39,7 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 
 ## Ejemplo de estructura del proyecto ***LFS4Students-ES***
 
-***Cada capítulo de [`Linux_From_Scratch-12.3-ES`](./Linux_From_Scratch-12.3-ES.md) tendrá sus omplementos*** siguiendo este estilo:
+***Cada capítulo de 📘 [`Linux_From_Scratch-12.3-ES`](./Linux_From_Scratch-12.3-ES.md) tendrá sus omplementos*** siguiendo este estilo:
 
 ```
 LFS4Students-ES/
