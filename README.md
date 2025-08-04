@@ -39,9 +39,11 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 
 ## Ejemplo de estructura del proyecto ***LFS4Students-ES***
 
+(Linux_From_Scratch-12.3-ES.md)[https://github.com/GualaDRAKE/LFS4Students-ES/blob/main/Linux_From_Scratch-12.3-ES.md]
+
 ```
 LFS4Students-ES/
-├── (Linux_From_Scratch-12.3-ES.md)[https://github.com/GualaDRAKE/LFS4Students-ES/blob/main/Linux_From_Scratch-12.3-ES.md]         # Traducción fiel del libro
+├── Linux_From_Scratch-12.3-ES.md         # Traducción fiel del libro
 ├── Capítulos/                       ┐
 │   ├── cap06-introduccion.md        │
 │   ├── cap06-nota-final.md          │
