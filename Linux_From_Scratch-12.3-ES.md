@@ -1,4 +1,4 @@
-  # **Linux From Scratch** 4 ***EN ESPAÑOL***
+  # **Linux From Scratch** ~ ***EN ESPAÑOL***
 
    Versión 12.3
 
