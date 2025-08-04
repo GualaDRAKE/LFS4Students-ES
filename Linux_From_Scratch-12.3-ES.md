@@ -5420,6 +5420,10 @@ Instalar el paquete:
 
 Los detalles de este paquete se encuentran en la Sección 8.35.2, "Contenido de Grep".
 
+---
+&nbsp;
+&nbsp;
+
 ## 6.11. Gzip-1.13
 
 El paquete Gzip contiene programas para comprimir y descomprimir archivos.
@@ -5432,24 +5436,28 @@ Espacio en disco requerido: 11 MB
 
 Preparar Gzip para la compilación:
 
-  -----------------------------------------------
-  ./configure \--prefix=/usr --*host*=\$LFS_TGT
-  -----------------------------------------------
+> ```bash
+> ./configure --prefix=/usr --host=$LFS_TGT
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.65.2,
 "Contenido de Gzip".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.12. Make-4.4.1
 
@@ -5457,21 +5465,20 @@ El paquete Make contiene un programa para controlar la generación de
 ejecutables y otros archivos no fuente de un paquete a partir de los
 archivos fuente.
 
-**Tiempo de compilación aproximado: **menos de 0,1 SBU
-
-**Espacio en disco requerido: **15 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|15 MB|
 
 ### 6.12.1. Instalación de Make
 
 Preparar Make para la compilación:
 
-> +-------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--without-guile \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess)
-> +-------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --without-guile  \
+>             --host=$LFS_TGT \
+>             --build=$(build-aux/config.guess)
+> ```
 
 Significado de la nueva opción de configuración:
 
@@ -5481,18 +5488,22 @@ Aunque se realiza una compilación cruzada, configure intenta usar guile
 del host de compilación si lo encuentra. Esto provoca un error en la
 compilación, por lo que esta opción impide su uso. Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=\$LFS install
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.69.2,
 "Contenido de Make".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.13. Parche-2.7.6
 
@@ -5500,69 +5511,75 @@ El paquete Parche contiene un programa para modificar o crear archivos
 mediante la aplicación de un archivo de parche, generalmente creado por
 el programa diff.
 
-**Tiempo de compilación aproximado: **0,1 SBU
-
-**Espacio en disco necesario: **12 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|12 MB|
 
 ### 6.13.1. Instalación del parche
 
 Preparar el parche para la compilación:
 
-> +-------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess)
-> +-------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --host=$LFS_TGT  \
+>             --build=$(build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.70.2,
 "Contenido del parche".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.14. Sed-4.9
 
 El paquete Sed contiene un editor de flujos.
 
-**Tiempo de compilación aproximado: **0.1 SBU
-
-**Espacio en disco requerido: **21 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|21 MB|
 
 ### 6.14.1. Instalación de Sed
 
 Preparar Sed para la compilación:
 
-> +---------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(./build-aux/config.guess)
-> +---------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr   \
+>             --host=$LFS_TGT \
+>             --build=$(./build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.31.2,
 "Contenido de Sed".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.15. Tar-1.35
 
@@ -5571,35 +5588,38 @@ manipulaciones de archivos. Tar se puede usar en archivos creados
 previamente para extraer archivos, almacenar archivos adicionales o
 actualizar o listar archivos ya almacenados.
 
-**Tiempo de compilación aproximado: **0,1 SBU
-
-**Espacio en disco necesario: **42 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|42 MB|
 
 ### 6.15.1. Instalación de Tar
 
 Preparar Tar para la compilación:
 
-> +-------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess)
-> +-------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr   \
+>             --host=$LFS_TGT \
+>             --build=$(build-aux/config.guess)
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.71.2,
 "Contenido de Tar".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.16. Xz-5.6.4
 
@@ -5608,53 +5628,56 @@ Ofrece funciones para los formatos de compresión lzma y xz, que son más
 recientes. Comprimir archivos de texto con xz ofrece un mejor porcentaje
 de compresión que con los comandos tradicionales gzip o bzip2.
 
-**Tiempo de compilación aproximado: **0,1 SBU
-
-**Espacio en disco requerido: **21 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|21 MB|
 
 ### 6.16.1. Instalación de Xz
 
 Preparar Xz para la compilación:
 
-> +----------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr* *\\
-> \--host=\$LFS_TGT \\
-> \--build=\$(build-aux/config.guess) \\
-> \--disable-static \\
-> \--docdir=/usr/share/doc/xz-5.6.4
-> +----------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr                      \
+>             --host=$LFS_TGT                    \
+>             --build=$(build-aux/config.guess)  \
+>             --disable-static                   \
+>             --docdir=/usr/share/doc/xz-5.6.4
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Eliminar el archivo libtool, ya que es perjudicial para la compilación
 cruzada:
 
-  --------------------------------
-  rm -v \$LFS/usr/lib/liblzma.la
-  --------------------------------
+> ```bash
+> rm -v $LFS/usr/lib/liblzma.la
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.8.2,
 "Contenido de Xz".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.17. Binutils-2.44 - Paso 2
 
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-**Tiempo de compilación aproximado: **0,4 SBU
-
-**Espacio en disco requerido: **539 MB
+|Tiempo de compilación aproximado:|0.4 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|539 MB|
 
 ### 6.17.1. Instalación de Binutils
 
@@ -5665,34 +5688,32 @@ inconsistencia puede provocar que los binarios generados se enlacen por
 error con bibliotecas de la distribución anfitriona. Solución
 alternativa:
 
-  ------------------------------------------
-  sed \'6031s/\$add_dir//\' -i *ltmain.sh*
-  ------------------------------------------
+> ```bash
+> sed '6031s/$add_dir//' -i ltmain.sh
+> ```
 
 Crear de nuevo un directorio de compilación independiente:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
 Preparar Binutils para la compilación:
 
-> +--------------------------------------+
-> ---
-> ../configure \\
-> \--prefix=/usr \\
-> \--build=\$(../config.guess) \\
-> \--host=\$LFS_TGT \\
-> \--disable-nls \\
-> \--enable-shared \\
-> \--enable-gprofng=no \\
-> \--disable-werror \\
-> \--enable-64-bit-bfd \\
-> \--enable-new-dtags \\
-> \--enable-default-hash-style=gnu
-> +--------------------------------------+
+> ```bash
+> ../configure                    \
+>     --prefix=/usr               \
+>     --build=$(../config.guess)  \
+>     --host=$LFS_TGT             \
+>     --disable-nls               \
+>     --enable-shared             \
+>     --enable-gprofng=no         \
+>     --disable-werror            \
+>     --enable-64-bit-bfd         \
+>     --enable-new-dtags          \
+>     --enable-default-hash-style=gnu
+> ```
 
 Significado de las nuevas opciones de configuración:
 
@@ -5708,34 +5729,37 @@ pero no causa ningún daño.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
-
+> ```bash
+> make
+> ```
 Instalar el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=$LFS install
+> ```
 
 Eliminar los archivos de libtool, ya que son perjudiciales para la
 compilación cruzada, y eliminar las bibliotecas estáticas innecesarias:
 
-  ------------------------------------------------------------------
-  rm -v \$LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}
-  ------------------------------------------------------------------
+> ```bash
+> rm -v $LFS/usr/lib/lib{bfd,ctf,ctf-nobfd,opcodes,sframe}.{a,la}
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.20.2,
 "Contenido de Binutils".
+
+---
+&nbsp;
+&nbsp;
 
 ## 6.18. GCC-14.2.0 - Paso 2
 
 El paquete GCC contiene la colección de compiladores GNU, que incluye
 los compiladores de C y C++.
 
-**Tiempo de compilación aproximado: **4,1 SBU
-
-**Espacio en disco requerido: **5,5 GB
+|Tiempo de compilación aproximado:|4,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|5,5 GB|
 
 ### 6.18.1. Instalación de GCC
 
@@ -5743,46 +5767,42 @@ Al igual que en la primera compilación de GCC, se requieren los paquetes
 GMP, MPFR y MPC. Descomprima los archivos tar y muévalos a los
 directorios necesarios:
 
-> +------------------------------+
-> ---
+> ```bash
 > tar -xf ../mpfr-4.2.1.tar.xz
 > mv -v mpfr-4.2.1 mpfr
 > tar -xf ../gmp-6.3.0.tar.xz
 > mv -v gmp-6.3.0 gmp
 > tar -xf ../mpc-1.3.1.tar.gz
 > mv -v mpc-1.3.1 mpc
-> +------------------------------+
+> ```
 
 Si se compila en x86_64, cambie el nombre del directorio predeterminado
 para las bibliotecas de 64 bits a \"lib\":
 
-> +-------------------------------------------+
-> ---
+> ```bash
 > case \$(uname -m) in
-> x86_64)
-> sed -e \'/m64=/s/lib64/lib/\' \\
-> -i.orig gcc/config/i386/t-linux64
-> ;;
+>   x86_64)
+>     sed -e '/m64=/s/lib64/lib/' \
+>         -i.orig gcc/config/i386/t-linux64
+>   ;;
 > esac
-> +-------------------------------------------+
+> ```
 
 Anule la regla de compilación de las cabeceras de libgcc y libstdc++
 para permitir la compilación de estas bibliotecas con compatibilidad con
 subprocesos POSIX:
 
-> +------------------------------------------------------------+
-> ---
-> sed \'/thread_header =/s/@.\*@/gthr-posix.h/\' \\
-> -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in
-> +------------------------------------------------------------+
+> ```bash
+> sed '/thread_header =/s/@.*@/gthr-posix.h/' \
+>     -i libgcc/Makefile.in libstdc++-v3/include/Makefile.in
+> ```
 
 Cree de nuevo un directorio de compilación independiente:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
 Antes de comenzar a compilar GCC, recuerde deshabilitar cualquier
 variable de entorno que anule los indicadores de optimización
@@ -5790,27 +5810,26 @@ predeterminados.
 
 Ahora prepare GCC para la compilación:
 
-> +----------------------------------------------------+
-> ---
+> ```bash
 > ../configure
-> \--build=\$(../config.guess) \\
-> \--host=\$LFS_TGT \\
-> \--target=\$LFS_TGT \\
-> LDFLAGS_FOR_TARGET=-L\$PWD/\$LFS_TGT/libgcc \\
-> \--prefix=/usr \\
-> \--with-build-sysroot=\$LFS \\
-> \--enable-default-pie \\
-> \--enable-default-ssp \\
-> \--disable-nls \\
-> \--disable-multilib \\
-> \--disable-libatomic \\
-> \--disable-libgomp \\
-> \--disable-libquadmath \\
-> \--disable-libsanitizer \\
-> \--disable-libssp \\
-> \--disable-libvtv \\
-> \--enable-languages=c,c++
-> +----------------------------------------------------+
+>     --build=$(../config.guess)                  \
+>     --host=$LFS_TGT                             \
+>     --target=$LFS_TGT                           \
+>     LDFLAGS_FOR_TARGET=-L$PWD/$LFS_TGT/libgcc   \
+>     --prefix=/usr                               \
+>     --with-build-sysroot=$LFS                   \
+>     --enable-default-pie                        \
+>     --enable-default-ssp                        \
+>     --disable-nls                               \
+>     --disable-multilib                          \
+>     --disable-libatomic                         \
+>     --disable-libgomp                           \
+>     --disable-libquadmath                       \
+>     --disable-libsanitizer                      \
+>     --disable-libssp                            \
+>     --disable-libvtv                            \
+>     --enable-languages=c,c++
+> ```
 
 Significado de las nuevas opciones de configuración:
 
@@ -5852,15 +5871,15 @@ explícitamente.
 
 Compila el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instala el paquete:
 
-  ----------------------------
-  make DESTDIR=\$LFS install
-  ----------------------------
+> ```bash
+> make DESTDIR=\$LFS install
+> ```
 
 Como toque final, crea un enlace simbólico de utilidad. Muchos programas
 y scripts ejecutan cc en lugar de gcc, lo cual se utiliza para mantener
@@ -5869,12 +5888,16 @@ sistemas UNIX donde el compilador GNU C no siempre está instalado.
 Ejecutar cc permite al administrador del sistema decidir libremente qué
 compilador de C instalar:
 
-  -----------------------------
-  ln -sv gcc \$LFS/usr/bin/cc
-  -----------------------------
+> ```bash
+> ln -sv gcc $LFS/usr/bin/cc
+> ```
 
 Los detalles sobre este paquete se encuentran en la Sección 8.29.2,
 "Contenido de GCC".
+
+---
+&nbsp;
+&nbsp;
 
 ## Capítulo 7 - Entrada al entorno chroot y creación de herramientas temporales adicionales <a name="capitulo-7"></a>
 
@@ -5901,13 +5924,11 @@ con comandos erróneos.
 
 ## 7.2. Cambio de propiedad
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Los comandos del resto de este libro deben ejecutarse con la sesión
 > iniciada como root y ya no como lfs. Además, verifique que \$LFS
 > esté establecido en el entorno root.
-> +----------------------------------------------------------------------+
 
 Actualmente, toda la jerarquía de directorios en \$LFS pertenece al
 usuario lfs, un usuario que solo existe en el sistema host.
@@ -5920,15 +5941,16 @@ de \$LFS, exponiéndolos así a una posible manipulación maliciosa. Para
 solucionar este problema, cambie la propiedad de los directorios
 \$LFS/\* al usuario root ejecutando el siguiente comando:
 
-> +-----------------------------------------------------------------------+
-> ---
-> chown \--from lfs -R root:root \$LFS/{usr,lib,var,etc,bin,sbin,tools}
-> case \$(uname -m) in
-> x86_64) chown \--from lfs -R root:root \$LFS/lib64 ;;
+> ```bash
+> chown --from lfs -R root:root $LFS/{usr,lib,var,etc,bin,sbin,tools}
+> case $(uname -m) in
+>   x86_64) chown --from lfs -R root:root $LFS/lib64 ;;
 > esac
-> +-----------------------------------------------------------------------+
+> ```
 
-### 
+---
+&nbsp;
+&nbsp;
 
 ## 7.3. Preparación de los sistemas de archivos virtuales del kernel
 
@@ -5941,9 +5963,9 @@ directorios \$LFS para que las aplicaciones puedan encontrarlos en el
 entorno chroot. Comience creando los directorios donde se montarán estos
 sistemas de archivos virtuales:
 
-  ------------------------------------
-  mkdir -pv \$LFS/{dev,proc,sys,run}
-  ------------------------------------
+> ```bash
+> mkdir -pv $LFS/{dev,proc,sys,run}
+> ```
 
 ### 7.3.1. Montaje y llenado de /dev
 
@@ -5969,21 +5991,20 @@ directorio \$LFS/dev es mediante un montaje de enlace del directorio
 montaje que hace visible un subárbol de directorios o un archivo en otra
 ubicación. Utilice el siguiente comando para ello:
 
-  ---------------------------------
-  mount -v \--bind /dev \$LFS/dev
-  ---------------------------------
+> ```bash
+> mount -v --bind /dev $LFS/dev
+> ```
 
 ### 7.3.2. Montaje de sistemas de archivos virtuales del kernel
 
 Ahora monte los sistemas de archivos virtuales del kernel restantes:
 
-> +----------------------------------------------------------+
-> ---
-> mount -vt devpts devpts -o gid=5,mode=0620 \$LFS/dev/pts
-> mount -vt proc proc \$LFS/proc
-> mount -vt sysfs sysfs \$LFS/sys
-> mount -vt tmpfs tmpfs \$LFS/run
-> +----------------------------------------------------------+
+> ```bash
+> mount -vt devpts devpts -o gid=5,mode=0620 $LFS/dev/pts
+> mount -vt proc proc $LFS/proc
+> mount -vt sysfs sysfs $LFS/sys
+> mount -vt tmpfs tmpfs $LFS/run
+> ```bash
 
 **Significado de las opciones de montaje para devpts**:
 
@@ -6013,14 +6034,17 @@ tmpfs. En ese caso, el montaje de /dev anterior solo creará /dev/shm
 como directorio en el entorno chroot. En esta situación, debemos montar
 explícitamente un archivo tmpfs:
 
-> +-------------------------------------------------------+
-> ---
-> if \[ -h \$LFS/dev/shm \]; then
-> install -v -d -m 1777 \$LFS\$(realpath /dev/shm)
+> ```bash
+> if [ -h $LFS/dev/shm ]; then
+>   install -v -d -m 1777 $LFS$(realpath /dev/shm)
 > else
-> mount -vt tmpfs -o nosuid,nodev tmpfs \$LFS/dev/shm
+>   mount -vt tmpfs -o nosuid,nodev tmpfs $LFS/dev/shm
 > fi
-> +-------------------------------------------------------+
+> ```
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.4. Acceso al entorno chroot
 
@@ -6031,17 +6055,16 @@ entorno también se utilizará para instalar el sistema final. Como
 usuario root, ejecute el siguiente comando para acceder al entorno que,
 actualmente, solo contiene herramientas temporales:
 
-> +------------------------------------------+
-> ---
-> chroot \"\$LFS\" /usr/bin/env -i \\
-> HOME=/root \\
-> TERM=\"\$TERM\" \\
-> PS1=\'(lfs chroot) \\u:\\w\\\$ \' \\
-> PATH=/usr/bin:/usr/sbin \\
-> MAKEFLAGS=\"-j\$(nproc)\" \\
-> TESTSUITEFLAGS=\"-j\$(nproc)\" \\
-> /bin/bash --login
-> +------------------------------------------+
+> ```bash
+> chroot "$LFS" /usr/bin/env -i \
+>     HOME=/root                    \
+>     TERM="$TERM"                  \
+>     PS1='(lfs chroot) \u:\w\$ '   \
+>     PATH=/usr/bin:/usr/sbin       \
+>     MAKEFLAGS="-j$(nproc)"        \
+>     TESTSUITEFLAGS="-j$(nproc)"   \
+>     /bin/bash --login
+> ```
 
 Si no desea utilizar todos los núcleos lógicos disponibles, reemplace
 \$(nproc) con el número de núcleos lógicos que desea utilizar para
@@ -6071,9 +6094,8 @@ Tenga en cuenta también que el prompt de **Bash** mostrará el mensaje
 \"¡No tengo nombre!\". Esto es normal, ya que el archivo /etc/passwd aún
 no se ha creado.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Es importante que todos los comandos de este capítulo y los
 > siguientes se ejecuten desde el entorno chroot. Si abandona este
 > entorno por cualquier motivo (por ejemplo, al reiniciar), asegúrese
@@ -6082,33 +6104,32 @@ no se ha creado.
 > la Sección 7.3.2, "Montaje de sistemas de archivos virtuales del
 > kernel" y vuelva a entrar en chroot antes de continuar con la
 > instalación.
-> +----------------------------------------------------------------------+
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.5. Creación de directorios
 
 Es hora de crear la estructura completa de directorios en el sistema de
 archivos LFS.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
 > Es posible que algunos de los directorios mencionados en esta
 > sección ya se hayan creado previamente con instrucciones explícitas
 > o al instalar algunos paquetes. Se repiten a continuación para mayor
 > claridad. Cree algunos directorios de nivel raíz que no estén en el
 > conjunto limitado requerido en los capítulos anteriores ejecutando
 > el siguiente comando:
-> +----------------------------------------------------------------------+
 
-  ------------------------------------
-  mkdir -pv /{boot,home,mnt,opt,srv}
-  ------------------------------------
+> ```bash
+> mkdir -pv /{boot,home,mnt,opt,srv}
+> ```
 
 Cree el conjunto de subdirectorios requerido por debajo del nivel raíz
 con los siguientes comandos:
 
-> +----------------------------------------------------------------+
-> ---
+> ```bash
 > mkdir -pv /etc/{opt,sysconfig}
 > mkdir -pv /lib/firmware
 > mkdir -pv /{floppy,cdrom}
@@ -6120,11 +6141,13 @@ con los siguientes comandos:
 > mkdir -pv /usr/{,local/}share/man/man{1..8}
 > mkdir -pv /var/{cache,local,log,mail,opt,spool}
 > mkdir -pv /var/lib/{color,misc,locate}
+> 
 > ln -sfv /run /var/run
 > ln -sfv /run/lock /var/lock
+> 
 > install -dv -m 0750 /root
 > install -dv -m 1777 /tmp /var/tmp
-> +----------------------------------------------------------------+
+> ```
 
 Los directorios se crean, por defecto, con el modo de permiso 755, pero
 esto no es recomendable en todos los casos. En los comandos anteriores,
@@ -6149,16 +6172,18 @@ especifica la existencia opcional de directorios adicionales como
 directorios realmente necesarios. Sin embargo, puede crear más
 directorios si lo desea.
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> **Advertencia**
+> 
 > El FHS no exige la existencia del directorio /usr/lib64, y los
 > editores de LFS han decidido no usarlo. Para que las instrucciones
 > de LFS y BLFS funcionen correctamente, es imperativo que este
 > directorio no exista. Debe verificarlo de vez en cuando, ya que es
 > fácil crearlo accidentalmente, lo que probablemente dañará su
 > sistema.
-> +----------------------------------------------------------------------+
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.6. Creación de archivos esenciales y enlaces simbólicos
 
@@ -6168,29 +6193,27 @@ lista internamente y la exponen al usuario a través del sistema de
 archivos /proc. Para satisfacer las necesidades de las utilidades que
 esperan encontrar /etc/mtab, cree el siguiente enlace simbólico:
 
-  ------------------------------------
-  ln -sv /proc/self/mounts /etc/mtab
-  ------------------------------------
+> ```bash
+> ln -sv /proc/self/mounts /etc/mtab
+> ```
 
 Cree un archivo /etc/hosts básico que se referenciará en algunos
 conjuntos de pruebas y también en uno de los archivos de configuración
 de Perl:
 
-> +-----------------------------------------+
-> ---
-> cat \> /etc/hosts \<\< EOF
-> 127.0.0.1 localhost \$(nombre_del_host)
+> ```bash
+> cat > /etc/hosts << EOF
+> 127.0.0.1 localhost $(nombre_del_host)
 > ::1 localhost
 > EOF
-> +-----------------------------------------+
+> ```
 
 Para que el usuario root pueda iniciar sesión y se reconozca el nombre
 \"root\", debe haber entradas relevantes en los archivos /etc/passwd y
 /etc/group. Cree el archivo /etc/passwd ejecutando el siguiente comando:
 
-> +-----------------------------------------------------------------------+
-> ---
-> cat \> /etc/passwd \<\< \"EOF\"
+> ```bash
+> cat > /etc/passwd << "EOF"
 > root:x:0:0:root:/root:/bin/bash
 > bin:x:1:1:bin:/dev/null:/usr/bin/false
 > daemon:x:6:6:Daemon User:/dev/null:/usr/bin/false
@@ -6198,14 +6221,13 @@ Para que el usuario root pueda iniciar sesión y se reconozca el nombre
 > uuidd:x:80:80:UUID Generation Daemon User:/dev/null:/usr/bin/false
 > nobody:x:65534:65534:Unprivileged User:/dev/null:/usr/bin/false
 > EOF
-> +-----------------------------------------------------------------------+
+> ```
 
 La contraseña de root se establecerá más adelante. Cree el archivo
 /etc/group ejecutando el siguiente comando:
 
-> +--------------------------------+
-> ---
-> cat \> /etc/group \<\< \"EOF\"
+> ```bash
+> cat > /etc/group << "EOF"
 > root:x:0:
 > bin:x:1:daemon
 > sys:x:2:
@@ -6231,7 +6253,7 @@ La contraseña de root se establecerá más adelante. Cree el archivo
 > users:x:999:
 > nogroup:x:65534:
 > EOF
-> +--------------------------------+
+> ```
 
 Los grupos creados no forman parte de ningún estándar; son grupos
 determinados en parte por los requisitos de la Configuración de Udev en
@@ -6259,10 +6281,9 @@ que ningún programa portátil debería depender de esta asignación.
 Algunas pruebas del Capítulo 8 requieren un usuario regular. Añadimos
 este usuario aquí y eliminamos esta cuenta al final de ese capítulo.
 
-> +--------------------------------------------------------------------+
-> ---
-> echo \"tester:x:101:101::/home/tester:/bin/bash\" \>\> /etc/passwd
-> echo \"tester:x:101:\" \>\> /etc/group
+> ```bash
+> echo "tester:x:101:101::/home/tester:/bin/bash" >> /etc/passwd
+> echo "tester:x:101:" >> /etc/group
 > install -o tester -d /home/tester
 > +--------------------------------------------------------------------+
 
@@ -6270,9 +6291,9 @@ Para eliminar el mensaje \"¡No tengo nombre!\", inicie una nueva
 consola. Dado que los archivos /etc/passwd y /etc/group ya se han
 creado, la resolución de nombres de usuario y de grupo funcionará:
 
-  ----------------------------
-  exec /usr/bin/bash --login
-  ----------------------------
+> ```bash
+> exec /usr/bin/bash --login
+> ```
 
 Los programas **login**, **agetty** e **init** (y otros) utilizan varios
 archivos de registro para registrar información como quién inició sesión
@@ -6280,13 +6301,12 @@ en el sistema y cuándo. Sin embargo, estos programas no escribirán en
 los archivos de registro si no existen. Inicialice los archivos de
 registro y asígneles los permisos adecuados:
 
-> +--------------------------------------------+
-> ---
+> ```bash
 > touch /var/log/{btmp,lastlog,faillog,wtmp}
 > chgrp -v utmp /var/log/lastlog
-> chmod -v 664 /var/log/lastlog
-> chmod -v 600 /var/log/btmp
-> +--------------------------------------------+
+> chmod -v 664  /var/log/lastlog
+> chmod -v 600  /var/log/btmp
+> ```
 
 El archivo /var/log/wtmp registra todos los inicios y cierres de sesión.
 El archivo /var/log/lastlog registra la última vez que cada usuario
@@ -6294,24 +6314,22 @@ inició sesión. El archivo /var/log/faillog registra los intentos
 fallidos de inicio de sesión. El archivo /var/log/btmp registra los
 intentos fallidos de inicio de sesión.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El archivo /run/utmp registra los usuarios que han iniciado sesión.
 > Este archivo se crea dinámicamente en los scripts de arranque.
-> +----------------------------------------------------------------------+
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Los archivos utmp, wtmp, btmp y lastlog utilizan enteros de 32 bits
 > para las marcas de tiempo y dejarán de funcionar completamente
 > después del año 2038. Muchos paquetes han dejado de usarlos y otros
 > dejarán de usarlos.
 > Probablemente sea mejor considerarlos obsoletos.
-> +----------------------------------------------------------------------+
 
-### 
+---
+&nbsp;
+&nbsp;
 
 ## 7.7. Gettext-0.24
 
@@ -6320,9 +6338,9 @@ localización. Estas permiten compilar programas con NLS (Soporte de
 Lenguaje Nativo), lo que les permite mostrar mensajes en el idioma
 nativo del usuario.
 
-**Tiempo de compilación aproximado: **1.3 SBU
-
-**Espacio en disco requerido: **349 MB
+|Tiempo de compilación aproximado:|1.3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|349 MB|
 
 ### 7.7.1. Instalación de Gettext
 
@@ -6330,9 +6348,9 @@ Para nuestro conjunto temporal de herramientas, solo necesitamos
 instalar tres programas de Gettext. Preparar Gettext para la
 compilación:
 
-  ------------------------------
-  ./configure --disable-shared
-  ------------------------------
+> ```bash
+> ./configure --disable-shared
+> ```
 
 Significado de la opción de configuración:
 
@@ -6343,38 +6361,41 @@ Gettext en este momento, por lo que no es necesario compilarlas.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar los programas msgfmt, msgmerge y xgettext:
 
-  -------------------------------------------------------------
-  cp -v gettext-tools/src/{msgfmt,msgmerge,xgettext} /usr/bin
-  -------------------------------------------------------------
+> ```bash
+> cp -v gettext-tools/src/{msgfmt,msgmerge,xgettext} /usr/bin
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.33.2,
 "Contenido de Gettext".
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.8. Bison-3.8.2
 
 El paquete Bison contiene un generador de analizadores sintácticos.
 
-**Tiempo de compilación aproximado: **0,2 SBU
-
-**Espacio en disco necesario: **58 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|58 MB|
 
 ### 7.8.1. Instalación de Bison
 
 Preparar Bison para la compilación:
 
-> +--------------------------------------------------+
-> ---
-> ./configure \--*prefix*=/usr \\
-> \--docdir=/usr/share/doc/bison-3.8.2
-> +--------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr \
+>             --docdir=/usr/share/doc/bison-3.8.2
+> ```
 
-Significado de la nueva opción de configuración:
+**Significado de la nueva opción de configuración**:
 
 \--docdir=/usr/share/doc/bison-3.8.2
 
@@ -6383,44 +6404,47 @@ Bison en un directorio versionado.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Los detalles sobre este paquete se encuentran en la Sección 8.34.2,
 "Contenido de Bison".
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.9. Perl-5.40.1
 
 El paquete Perl contiene el Lenguaje Práctico de Extracción e Informes.
 
-**Tiempo de compilación aproximado: **0,6 SBU
-
-**Espacio en disco requerido: **285 MB
+|Tiempo de compilación aproximado:|0,6 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|285 MB|
 
 ### 7.9.1. Instalación de Perl
 
 Preparar Perl para la compilación:
 
-> +--------------------------------------------------------------+
-> ---
-> sh Configure -des \\
-> -D prefix=/usr \\
-> -D vendorprefix=/usr \\
-> -D useshrplib \\
-> -D privlib=/usr/lib/perl5/5.40/core_perl \\
-> -D archlib=/usr/lib/perl5/5.40/core_perl \\
-> -D sitelib=/usr/lib/perl5/5.40/site_perl \\
-> -D sitearch=/usr/lib/perl5/5.40/site_perl \\
-> -D vendorlib=/usr/lib/perl5/5.40/vendor_perl \\
-> -D vendorarch=/usr/lib/perl5/5.40/vendor_perl
-> +--------------------------------------------------------------+
+> ```bash
+> sh Configure -des                                         \
+>              -D prefix=/usr                               \
+>              -D vendorprefix=/usr                         \
+>              -D useshrplib                                \
+>              -D privlib=/usr/lib/perl5/5.40/core_perl     \
+>              -D archlib=/usr/lib/perl5/5.40/core_perl     \
+>              -D sitelib=/usr/lib/perl5/5.40/site_perl     \
+>              -D sitearch=/usr/lib/perl5/5.40/site_perl    \
+>              -D vendorlib=/usr/lib/perl5/5.40/vendor_perl \
+>              -D vendorarch=/usr/lib/perl5/5.40/vendor_perl
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -6451,18 +6475,22 @@ versión completa, como 5.40.1) sin reinstalar todos los módulos.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Los detalles sobre este paquete se encuentran en la Sección 8.43.2,
 "Contenido de Perl".
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.10. Python-3.13.2
 
@@ -6472,28 +6500,25 @@ creación de prototipos de programas grandes y el desarrollo de
 aplicaciones completas. Python es un lenguaje de programación
 interpretado.
 
-**Tiempo de compilación aproximado: **0,5 SBU
-
-**Espacio en disco necesario: **634 MB
+|Tiempo de compilación aproximado:|0,5 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|634 MB|
 
 ### 7.10.1. Instalación de Python
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Hay dos archivos de paquete cuyo nombre empieza con el prefijo
 > \"python\". El que se debe extraer es Python3.13.2.tar.xz (observe
 > la primera letra en mayúscula).
-> +----------------------------------------------------------------------+
 
 Preparar Python para la compilación:
 
-> +-----------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--enable-shared \\**
-> \--without-ensurepip
-> +-----------------------------------+
+> ```bash
+> ./configure --prefix=/usr   \
+>             --enable-shared \
+>             --without-ensurepip
+> ```
 
 Significado de la opción de configuración:
 
@@ -6508,69 +6533,75 @@ necesario en esta etapa.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```bash
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Algunos módulos de Python 3 no se pueden compilar ahora porque las
 > dependencias aún no están instaladas. Para el módulo ssl, se muestra
 > el mensaje \"Python requiere OpenSSL 1.1.1 o posterior\". Este
 > mensaje debe ignorarse. Solo asegúrese de que el comando make de
 > nivel superior no haya fallado. Los módulos opcionales no son
 > necesarios ahora y se compilarán en el Capítulo 8.
-> +----------------------------------------------------------------------+
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Los detalles sobre este paquete se encuentran en la Sección 8.51.2,
 \"Contenido de Python 3\".
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.11. Texinfo-7.2
 
 El paquete Texinfo contiene programas para leer, escribir y convertir
 páginas de información.
 
-**Tiempo de compilación aproximado: **0,2 SBU
-
-**Espacio en disco requerido: **152 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|152 MB|
 
 ### 7.11.1. Instalación de Texinfo
 
 Preparar Texinfo para la compilación:
 
-  ---------------------------
-  ./configure --prefix=/usr
-  ---------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Los detalles de este paquete se encuentran en la Sección 8.72.2,
 "Contenido de Texinfo".
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.12. Util-linux-2.40.4
 
 El paquete Util-linux contiene diversas utilidades.
 
-**Tiempo de compilación aproximado: **0.2 SBU
-
-**Espacio en disco necesario: **182 MB
+|Tiempo de compilación aproximado:|0.2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|182 MB|
 
 ### 7.12.1. Instalación de Util-linux
 
@@ -6578,29 +6609,28 @@ FHS recomienda usar el directorio /var/lib/hwclock en lugar del
 directorio /etc habitual como ubicación para el archivo adjtime. Cree
 este directorio con:
 
-  ----------------------------
-  mkdir -pv /var/lib/hwclock
-  ----------------------------
+> ```bash
+> mkdir -pv /var/lib/hwclock
+> ```
 
 Prepare Util-linux para la compilación:
 
-> +--------------------------------------------------------+
-> ---
-> ./configure \--libdir=/usr/lib \\
-> \--runstatedir=/run \\
-> \--disable-chfn-chsh \\
-> \--disable-login \\
-> \--disable-nologin \\
-> \--disable-su \\
-> \--disable-setpriv* *\\
-> \--disable-runuser \\
-> \--disable-pylibmount \\
-> \--disable-static \\
-> \--disable-liblastlog2 \\
-> \--without-python \\
-> ADJTIME_PATH=/var/lib/hwclock/adjtime \\
-> \--docdir=/usr/share/doc/util-linux-2.40.4
-> +--------------------------------------------------------+
+> ```bash
+> ./configure --libdir=/usr/lib     \
+>             --runstatedir=/run    \
+>             --disable-chfn-chsh   \
+>             --disable-login       \
+>             --disable-nologin     \
+>             --disable-su          \
+>             --disable-setpriv     \
+>             --disable-runuser     \
+>             --disable-pylibmount  \
+>             --disable-static      \
+>             --disable-liblastlog2 \
+>             --without-python      \
+>             ADJTIME_PATH=/var/lib/hwclock/adjtime \
+>             --docdir=/usr/share/doc/util-linux-2.40.4
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -6636,18 +6666,22 @@ por **uuidd** y libuuid.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Los detalles sobre este paquete se encuentran en la Sección 8.79.2,
 "Contenido de Util-linux".
+
+---
+&nbsp;
+&nbsp;
 
 ## 7.13. Limpieza y guardado del sistema temporal
 
@@ -6656,28 +6690,30 @@ Los detalles sobre este paquete se encuentran en la Sección 8.79.2,
 Primero, elimine los archivos de documentación instalados para evitar
 que se instalen en el sistema final y ahorrar unos 35 MB:
 
-  -------------------------------------
-  rm -rf /usr/share/{info,man,doc}/\*
-  -------------------------------------
+> ```bash
+> rm -rf /usr/share/{info,man,doc}/*
+> ```
 
 Segundo, en un sistema Linux moderno, los archivos .la de libtool solo
 son útiles para libltdl. Libltdl no carga ninguna biblioteca en LFS, y
 se sabe que algunos archivos .la pueden causar fallos en los paquetes
 BLFS. Elimine esos archivos ahora:
 
-  ---------------------------------------------------------
-  **find /usr/{lib,libexec} -name \\\*.la -*****delete***
-  ---------------------------------------------------------
-
-\
+> ```bash
+> find /usr/{lib,libexec} -name \*.la -delete
+> ```
 
 El tamaño actual del sistema es de unos 3 GB; sin embargo, el directorio
 /tools ya no es necesario. Ocupa aproximadamente 1 GB de espacio en
 disco. Elimínelo ahora:
 
-  ---------------
-  rm -rf /tools
-  ---------------
+> ```bash
+> rm -rf /tools
+> ```
+
+---
+&nbsp;
+&nbsp;
 
 ### 7.13.2. Copia de seguridad
 
@@ -6692,15 +6728,13 @@ se eliminarán todos los archivos temporales. Para evitar perder tiempo
 rehaciendo algo que se ha hecho correctamente, puede resultar útil crear
 una copia de seguridad del sistema LFS actual.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Todos los pasos restantes de esta sección son opcionales. Sin
 > embargo, en cuanto empiece a instalar paquetes en el capítulo 8, se
 > sobrescribirán los archivos temporales. Por lo tanto, puede ser
 > recomendable realizar una copia de seguridad del sistema actual como
 > se describe a continuación.
-> +----------------------------------------------------------------------+
 
 Los siguientes pasos se realizan desde fuera del entorno chroot. Esto
 significa que primero debe salir del entorno chroot antes de continuar.
@@ -6711,13 +6745,12 @@ no debe estar dentro de la jerarquía \$LFS.
 Si ha decidido realizar una copia de seguridad, abandone el entorno
 chroot:
 
-  ------
-  exit
-  ------
+> ```bash
+> exit
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Todas las siguientes instrucciones las ejecuta el usuario root en su
 > sistema host. Tenga especial cuidado con los comandos que va a
 > ejecutar, ya que los errores que cometa aquí pueden modificar su
@@ -6728,17 +6761,15 @@ chroot:
 > haber configurado LFS.
 > Esto se ha explicado en la Sección 2.6, "Configuración de la
 > variable \$LFS y Umask".
-> +----------------------------------------------------------------------+
 
 Antes de realizar una copia de seguridad, desmonte los sistemas de
 archivos virtuales:
 
-> +-----------------------------------------------------+
-> ---
-> mountpoint -q \$LFS/dev/shm && umount \$LFS/dev/shm
-> umount \$LFS/dev/pts
-> umount \$LFS/{sys,proc,run,dev}
-> +-----------------------------------------------------+
+> ```bash
+> mountpoint -q $LFS/dev/shm && umount $LFS/dev/shm
+> umount $LFS/dev/pts
+> umount $LFS/{sys,proc,run,dev}
+> ```
 
 Asegúrese de tener al menos 1 GB de espacio libre en disco (los archivos
 tar de origen se incluirán en el archivo de copia de seguridad) en el
@@ -6753,26 +6784,25 @@ almacene en el directorio de inicio del usuario root.
 
 Cree el archivo de copia de seguridad ejecutando el siguiente comando:
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Debido a que el archivo de copia de seguridad está comprimido, tarda
 > bastante tiempo (más de 10 minutos) incluso en un sistema
 > relativamente rápido.
-> +----------------------------------------------------------------------+
 
-> +-------------------------------------------------+
-> ---
-> cd \$LFS
-> tar -cJpf \$HOME/lfs-temp-*tools*-12.3.tar.xz .
-> +-------------------------------------------------+
+> ```bash
+> cd $LFS
+> tar -cJpf $HOME/lfs-temp-tools-12.3.tar.xz .
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Si continúa con el capítulo 8, no olvide volver a acceder al entorno
 > chroot como se explica en el recuadro \"Importante\" a continuación.
-> +----------------------------------------------------------------------+
+
+---
+&nbsp;
+&nbsp;
 
 ### 7.13.3. Restaurar
 
@@ -6785,28 +6815,24 @@ por lo que no es necesario volver a descargarlas. Después de comprobar
 que \$LFS esté configurado correctamente, puede restaurar la copia de
 seguridad ejecutando los siguientes comandos:
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> **Advertencia**
+> 
 > Los siguientes comandos son extremadamente peligrosos. Si ejecuta rm
 > -rf ./\* como usuario root y no cambia al directorio \$LFS o la
 > variable de entorno LFS no está configurada para el usuario root, se
 > destruirá todo el sistema host. ADVERTENCIA.
-> +----------------------------------------------------------------------+
 
-> +--------------------------------------------+
-> ---
-> cd \$LFS
-> rm -rf ./\*
-> tar -xpf \$HOME/lfs-temp-tools-12.3.tar.xz
-> +--------------------------------------------+
+> ```bash
+> cd $LFS
+> rm -rf ./*
+> tar -xpf $HOME/lfs-temp-tools-12.3.tar.xz
+> ```
 
 De nuevo, verifique que el entorno se haya configurado correctamente y
 continúe compilando el resto del sistema.
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Si abandonó el entorno chroot para crear una copia de seguridad o
 > reiniciar la compilación mediante una restauración, recuerde
 > comprobar que los sistemas de archivos virtuales sigan montados
@@ -6814,27 +6840,14 @@ continúe compilando el resto del sistema.
 > describe en la Sección 7.3, "Preparación de los sistemas de archivos
 > virtuales del kernel" y vuelva a acceder al entorno chroot (consulte
 > la Sección 7.4, "Acceso al entorno chroot") antes de continuar.
-> +----------------------------------------------------------------------+
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
 
 ## Parte IV. Compilación del sistema LFS
 
 ## Capítulo 8. Instalación del software básico del sistema <a name="capitulo-8"></a>
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.1. Introducción
 
@@ -6879,15 +6892,13 @@ espacio en disco necesario durante el proceso. Tras las instrucciones de
 instalación, se incluye una lista de programas y bibliotecas (junto con
 breves descripciones) que instala el paquete.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Los valores de SBU y el espacio en disco requerido incluyen datos de
 > la suite de pruebas para todos los paquetes aplicables en el
 > Capítulo 8. Los valores de SBU se han calculado utilizando cuatro
 > núcleos de CPU (-j4) para todas las operaciones, a menos que se
 > especifique lo contrario.
-> +----------------------------------------------------------------------+
 
 ### 8.1.1. Acerca de las bibliotecas
 
@@ -6912,6 +6923,10 @@ creación de paquetes.
 
 Para una explicación más completa sobre las bibliotecas, véase
 *Bibliotecas: ¿Estáticas o compartidas?* en el libro BLFS.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.2. Gestión de Paquetes
 
@@ -7012,12 +7027,12 @@ El siguiente comando, ejecutado como root una vez completada la
 actualización, mostrará qué procesos utilizan las versiones anteriores
 de esas bibliotecas (reemplace libfoo con el nombre de la biblioteca):
 
-  --------------------------------------------------------------------------------
-  grep -l \'libfoo.\*deleted\' /proc/\*/maps \| tr -cd 0-9\\\\n \| xargs -r ps u
-  --------------------------------------------------------------------------------
+  > ```bash
+>   grep -l 'libfoo.*deleted' /proc/*/maps | tr -cd 0-9\\n | xargs -r ps u
+> ```
 
 Si se utiliza OpenSSH para acceder al sistema y este está vinculado a la
-biblioteca actualizada, debe reiniciar el servicio sshd, cerrar sesión,
+biblioteca actualizada, debe reiniciar el servicio **sshd**, cerrar sesión,
 volver a iniciarla y ejecutar el comando anterior para confirmar que no
 haya ningún programa utilizando las bibliotecas eliminadas.
 
@@ -7090,12 +7105,11 @@ sencilla. Por ejemplo, supongamos que se instala el paquete libfoo-1.1.
 Es posible que las siguientes instrucciones no instalen el paquete
 correctamente:
 
-> +-------------------------------------------+
-> ---
-> ./configure \--prefix=/usr/pkg/libfoo/1.1
+> ```bash
+> ./configure --prefix=/usr/pkg/libfoo/1.1
 > make
 > make install
-> +-------------------------------------------+
+> ```
 
 La instalación funcionará, pero es posible que los paquetes dependientes
 no se enlacen a libfoo como cabría esperar. Si compila un paquete que
@@ -7106,12 +7120,11 @@ la variable *DESTDIR* para dirigir la instalación.
 
 Este enfoque funciona de la siguiente manera:
 
-> +------------------------------------------+
-> ---
-> ./configure \--prefix=/usr
+> ```bash
+> ./configure --prefix=/usr
 > make
 > make DESTDIR=/usr/pkg/libfoo/1.1 install
-> +------------------------------------------+
+> ```
 
 La mayoría de los paquetes admiten este enfoque, pero algunos no. Para
 los paquetes no compatibles, es posible que deba instalarlos manualmente
@@ -7210,96 +7223,106 @@ Es posible que se necesite un kernel personalizado para el nuevo
 sistema, dependiendo de las diferencias en el hardware del sistema y la
 configuración original del kernel.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Se han reportado algunos *problemas* al copiar entre arquitecturas
 > similares, pero no idénticas. Por ejemplo, el conjunto de
 > instrucciones de un sistema Intel no es idéntico al de un procesador
 > AMD, y las versiones posteriores de algunos procesadores pueden
 > proporcionar instrucciones que no están disponibles en versiones
 > anteriores.
-> +----------------------------------------------------------------------+
 
 Finalmente, el nuevo sistema debe ser arrancable mediante la Sección
 10.4, \"Uso de GRUB para configurar el proceso de arranque\".
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.3. Páginas de manual - 6.12
 
 El paquete de páginas de manual contiene más de 2400 páginas de manual.
 
-**Tiempo aproximado de compilación:** 0.1 SBU
-
-**Espacio en disco necesario:** 52 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|52 MB|
 
 ### 8.3.1. Instalación de páginas de manual
 
 Elimine dos páginas de manual para las funciones de hash de contraseñas.
 Libxcrypt proporcionará una versión mejorada de estas páginas de manual:
 
-  --------------------
-  rm -v man3/crypt\*
-  --------------------
+> ```bash
+> rm -v man3/crypt*
+> ```
 
 Instale las páginas de manual ejecutando:
 
-  ---------------------------------------
-  make -R GIT=false prefix=/usr install
-  ---------------------------------------
+> ```bash
+> make -R GIT=false prefix=/usr install
+> ```
 
-Significado de las opciones:
+**Significado de las opciones**:
 
--***R***
+-R
 
 Esto impide que **make** configure variables integradas. El sistema de
 compilación de páginas de manual no funciona bien con variables
 integradas, pero actualmente no hay forma de desactivarlas, excepto
 pasando explícitamente *-R* vía línea de comandos.
 
-*GIT=false*
+GIT=false
 
 Esto evita que el sistema de compilación emita muchas líneas de
 advertencia «*git: command not found*».
 
 ### 8.3.2. Contenido de las páginas de manual
 
-**Archivos instalados:** Varias páginas de manual
+**Archivos instalados**: Varias páginas de manual
 
-Descripciones breves
+## Descripciones breves
 
-*Páginas de manual* Descripción de las funciones del lenguaje de
+man pages Descripción de las funciones del lenguaje de
 programación C, archivos importantes de dispositivos y archivos de
-configuración significativos
+configuración significativos.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.4. Iana-Etc-20250123
 
 El paquete Iana-Etc proporciona datos para servicios y protocolos de
 red.
 
-***Tiempo de compilación aproximado:** menos de 0,1 SBU*
-
-**Espacio en disco necesario:** 4,8 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|4,8 MB|
 
 ### 8.4.1. Instalación de Iana-Etc
 
 Para este paquete, solo necesitamos copiar los archivos:
 
-  ----------------------------
-  cp services protocols /etc
-  ----------------------------
+> ```bash
+> cp services protocols /etc
+> ```
 
 ### 8.4.2. Contenido de Iana-Etc
 
-**Archivos instalados:** /etc/protocols y /etc/services
+**Archivos instalados**: /etc/protocols y /etc/services
 
-Descripciones breves
+## Descripciones breves
 
 */etc/protocols* Describe los diversos protocolos de Internet de DARPA
 disponibles en el subsistema TCP/IP
 
 */etc/services* Proporciona una correspondencia entre los nombres
 textuales descriptivos de los servicios de Internet y sus números de
-puerto y tipos de protocolo asignados subyacentes
+puerto y tipos de protocolo asignados subyacentes.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.5. Glibc-2.41
 
@@ -7308,9 +7331,9 @@ proporciona las rutinas básicas para asignar memoria, buscar
 directorios, abrir y cerrar archivos, leer y escribir archivos, manejar
 cadenas, comparar patrones, realizar operaciones aritméticas, etc.
 
-**Tiempo de compilación aproximado:** 12 SBU
-
-**Espacio en disco requerido:** 3,2 GB
+|Tiempo de compilación aproximado:|12 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|3,2 GB|
 
 ### 8.5.1. Instalación de Glibc
 
@@ -7319,48 +7342,46 @@ cumple con FHS, para almacenar sus datos de ejecución. Aplique el
 siguiente parche para que dichos programas almacenen sus datos de
 ejecución en ubicaciones compatibles con FHS:
 
-  -----------------------------------------
-  patch -Np1 -i ../glibc-2.41-fhs-1.patch
-  -----------------------------------------
+> ```bash
+> patch -Np1 -i ../glibc-2.41-fhs-1.patch
+> ```
 
 La documentación de Glibc recomienda compilar Glibc en un directorio de
 compilación dedicado:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
 Asegúrese de que las utilidades **ldconfig** y **sln** se instalen en
 */usr/sbin*:
 
-  -----------------------------------------------
-  echo \"rootsbindir=/usr/sbin\" \> configparms
-  -----------------------------------------------
+> ```bash
+> echo "rootsbindir=/usr/sbin" > configparms
+> ```
 
 Prepare Glibc para la compilación:
 
-> +--------------------------------------------------+
-> ---
-> ../configure \--prefix=/usr \\
-> \--disable-werror* *\\
-> \--enable-kernel=5.4 \\
-> \--enable-stack-protector=strong \\
-> \--disable-nscd \\
-> libc_cv_slibdir=/usr/lib
-> +--------------------------------------------------+
+> ```bash
+> ../configure --prefix=/usr                   \
+>              --disable-werror                \
+>              --enable-kernel=5.4             \
+>              --enable-stack-protector=strong \
+>              --disable-nscd                  \
+>              libc_cv_slibdir=/usr/lib
+> ```
 
 **Significado de las opciones de configuración**:
 
-*\--disable-werror *
+\--disable-werror
 
-* *Esta opción deshabilita la opción -Werror pasada a GCC. Esto es
+Esta opción deshabilita la opción -Werror pasada a GCC. Esto es
 necesario para ejecutar el conjunto de pruebas.
 
 \--enable-kernel=5.4
 
-* *Esta opción indica al sistema de compilación que esta Glibc puede
+Esta opción indica al sistema de compilación que esta Glibc puede
 usarse con kernels de hasta la versión 5.4. Esto implica generar
 soluciones alternativas en caso de que no se pueda usar una llamada al
 sistema introducida en una versión posterior.
@@ -7385,23 +7406,21 @@ No queremos que se use lib64.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > En esta sección, el conjunto de pruebas de Glibc se considera
 > crítico. No lo omita bajo ninguna circunstancia.
-> +----------------------------------------------------------------------+
 
 Generalmente, algunas pruebas no superan los requisitos. Los fallos de
 prueba que se enumeran a continuación se pueden ignorar.
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Es posible que observe algunos fallos de prueba. El conjunto de pruebas
 de Glibc depende en cierta medida del sistema host. De entre más de 6000
@@ -7417,9 +7436,9 @@ debido a un tiempo de espera (especialmente cuando el sistema es
 relativamente lento o se ejecuta el conjunto de pruebas con varios
 trabajos de make en paralelo). Estas pruebas se pueden identificar con:
 
-  --------------------------------------------
-  grep \"Timed out\" \$(find -name \\\*.out)
-  --------------------------------------------
+> ```bash
+> grep "Timed out" $(find -name \*.out)
+> ```
 
 Es posible volver a ejecutar una sola prueba con un tiempo de espera
 mayor con **TIMEOUTFACTOR=\<*****factor*****\> make test t=\<*****test
@@ -7437,20 +7456,19 @@ Aunque es un mensaje inofensivo, la instalación de Glibc mostrará un
 mensaje sobre la ausencia de */etc/ld.so.conf*. Evitar esta advertencia
 con:
 
-  -----------------------
-  touch /etc/ld.so.conf
-  -----------------------
+> ```bash
+> touch /etc/ld.so.conf
+> ```
 
 Corregir el Makefile para que omita una comprobación de seguridad
 obsoleta que falla con una configuración moderna de Glibc:
 
-  --------------------------------------------------------------------------
-  sed \'/test-installation/s@\$(*PERL*)@echo not running@\' -i ../Makefile
-  --------------------------------------------------------------------------
+> ```bash
+> sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Si actualiza Glibc a una nueva versión menor (por ejemplo, de
 > Glibc-2.36 a Glibc-2.41) en un sistema LFS en ejecución, debe tomar
 > precauciones adicionales para evitar dañar el sistema:
@@ -7466,9 +7484,9 @@ obsoleta que falla con una configuración moderna de Glibc:
 > anterior de Glibc)**.
 > • Si actualiza en un sistema LFS anterior a la versión 12.1
 > (exclusiva), elimine el programa ***nscd***:
-> +----------------------------------------------------------------------+
-> rm -f /usr/*sbin*/nscd
-> +----------------------------------------------------------------------+
+> ```bash
+> rm -f /usr/sbin/nscd
+> ```
 > Actualice el kernel y reinicie si es anterior a la versión 5.4
 > (verifique la versión actual con **uname -r**) o si desea
 > actualizarlo de todas formas, siga la Sección 10.3, "Linux-6.13.4".
@@ -7479,10 +7497,10 @@ obsoleta que falla con una configuración moderna de Glibc:
 > (pero elimine *\$LFS* del comando **cp**). Realice una instalación
 > de *DESTDIR* y actualice las bibliotecas compartidas de Glibc en el
 > sistema con un solo comando de **instalación**:
-> +----------------------------------------------------------------------+
-> make DESTDIR=\$PWD/dest install
-> install -vm755 dest/usr/lib/\*.so.\* /usr/lib
-> +----------------------------------------------------------------------+
+> ```bash
+> make DESTDIR=$PWD/dest install
+> install -vm755 dest/usr/lib/*.so.* /usr/lib
+> ```
 > Es fundamental seguir estrictamente estos pasos a menos que
 > comprenda completamente lo que está haciendo. **Cualquier desviación
 > inesperada puede inutilizar el sistema por completo. ADVERTENCIA**.
@@ -7494,27 +7512,25 @@ obsoleta que falla con una configuración moderna de Glibc:
 > donde GCC no se creó con la opción *\--disable-fixincludes*, mueva
 > dos encabezados de GCC a una mejor ubicación y elimine las copias
 > obsoletas \"corregidas\" de los encabezados de Glibc:
-> +----------------------------------------------------------------------+
-> DIR=\$(dirname \$(gcc -print-libgcc-file-name))
-> \[ -e \$DIR/include/limits.h \] \ | \ | mv
-> \$DIR/include{-fixed,}/limits.h
-> \[ -e \$DIR/include/syslimits.h \] \ | \ | mv
-> \$DIR/include{-fixed,}/syslimits.h
-> rm -rfv \$(dirname \$(gcc -print-libgcc-file-name))/include-fixed/\*
-> +----------------------------------------------------------------------+
+> ```bash
+> DIR=$(dirname $(gcc -print-libgcc-file-name))
+> [ -e $DIR/include/limits.h ] || mv $DIR/include{-fixed,}/limits.h
+> [ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h
+> rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/\*
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Corregir una ruta codificada al cargador de ejecutables en el script
 ldd:
 
-  ----------------------------------------------
-  sed \'/RTLDLIST=/s@/usr@@g\' -i /usr/bin/ldd
-  ----------------------------------------------
+> ```bash
+> sed '/RTLDLIST=/s@/usr@@g\ -i /usr/bin/ldd
+> ```
 
 A continuación, instalar las configuraciones regionales que permiten que
 el sistema responda en un idioma diferente. Ninguna de estas
@@ -7532,8 +7548,7 @@ con la definición de mapa de caracteres
 instalarán el conjunto mínimo de configuraciones regionales necesario
 para una cobertura óptima de las pruebas:
 
-> +--------------------------------------------------------------------+
-> ---
+> ```bash
 > localedef -i C -f UTF-8 C.UTF-8
 > localedef -i cs_CZ -f UTF-8 cs_CZ.UTF-8
 > localedef -i de_DE -f ISO-8859-1 de_DE
@@ -7558,7 +7573,7 @@ para una cobertura óptima de las pruebas:
 > localedef -i it_IT -f ISO-8859-15 it_IT@euro
 > localedef -i it_IT -f UTF-8 it_IT.UTF-8
 > localedef -i ja_JP -f EUC-JP ja_JP
-> localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2\> /dev/null \ | \ | true
+> localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2> /dev/null || true
 > localedef -i ja_JP -f UTF-8 ja_JP.UTF-8
 > localedef -i nl_NL@euro -f ISO-8859-15 nl_NL@euro
 > localedef -i ru_RU -f KOI8-R ru_RU.KOI8-R
@@ -7569,7 +7584,7 @@ para una cobertura óptima de las pruebas:
 > localedef -i zh_CN -f GB18030 zh_CN.GB18030
 > localedef -i zh_HK -f BIG5-HKSCS zh_HK.BIG5-HKSCS
 > localedef -i zh_TW -f UTF-8 zh_TW.UTF-8
-> +--------------------------------------------------------------------+
+> ```
 
 Además, instale la configuración regional para su país, idioma y
 conjunto de caracteres.
@@ -7579,9 +7594,9 @@ en el archivo *glibc-2.41/localedata/SUPPORTED* (que incluye todas las
 configuraciones regionales mencionadas anteriormente y muchas más) a la
 vez con el siguiente comando, que requiere mucho tiempo:
 
-  ---------------------------------
-  make localedata/install-locales
-  ---------------------------------
+> ```bash
+> make localedata/install-locales
+> ```
 
 A continuación, utilice el comando localedef para crear e instalar las
 configuraciones regionales que no aparecen en el archivo
@@ -7591,20 +7606,17 @@ cuando las necesite. Por ejemplo, las dos configuraciones regionales
 siguientes son necesarias para algunas pruebas posteriores en este
 capítulo:
 
-> +--------------------------------------------------------------------+
-> ---
+> ```bash
 > localedef -i C -f UTF-8 C.UTF-8
-> localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2\> /dev/null \ | \ | true
-> +--------------------------------------------------------------------+
+> localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2> /dev/null || true
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Glibc ahora utiliza libidn2 al resolver nombres de dominio
 > internacionalizados. Esta es una dependencia en tiempo de ejecución.
 > Si se necesita esta capacidad, las instrucciones para instalar
 > libidn2 se encuentran en la página de libidn2 de BLFS.
-> +----------------------------------------------------------------------+
 
 ### 8.5.2. Configuración de Glibc
 
@@ -7616,44 +7628,49 @@ entorno de red.
 
 Cree un nuevo archivo */etc/nsswitch.conf* ejecutando lo siguiente:
 
-> +----------------------------------------+
-> ---
-> cat \> /etc/nsswitch.conf \<\< \"EOF\"
-> \# Begin /etc/nsswitch.conf
+> ```bash
+> cat > /etc/nsswitch.conf << "EOF"
+> # Begin /etc/nsswitch.conf
+> 
 > passwd: files
 > group: files
 > shadow: files
+> 
 > hosts: files dns
 > networks: files
+> 
 > protocols: files
 > services: files
 > ethers: files
 > rpc: files
-> \# End /etc/nsswitch.conf
+> 
+> # End /etc/nsswitch.conf
 > EOF
-> +----------------------------------------+
+> ```
 
 ### 8.5.2.2. Añadir datos de zona horaria
 
 Instale y configure los datos de zona horaria con lo siguiente:
 
-> +--------------------------------------------------------------------------+
-> ---
+> ```bash
 > tar -xf ../../tzdata2025a.tar.gz
+> 
 > ZONEINFO=/usr/share/zoneinfo
-> mkdir -pv \$ZONEINFO/{posix,right}
-> for tz in etcetera southamerica northamerica europe africa antarctica \\
-> asia australasia backward; do
-> zic -L /dev/null -d \$ZONEINFO \${tz}
-> zic -L /dev/null -d \$ZONEINFO/posix \${tz}
-> zic -L leapseconds -d \$ZONEINFO/right \${tz}
+> mkdir -pv $ZONEINFO/{posix,right}
+> 
+> for tz in etcetera southamerica northamerica europe africa antarctica \
+>           asia australasia backward; do
+>     zic -L /dev/null -d $ZONEINFO ${tz}
+>     zic -L /dev/null -d $ZONEINFO/posix ${tz}
+>     zic -L leapseconds -d $ZONEINFO/right ${tz}
 > done
-> cp -v zone.tab zone1970.tab iso3166.tab \$ZONEINFO
-> zic -d \$ZONEINFO -p America/New_York
+> 
+> cp -v zone.tab zone1970.tab iso3166.tab $ZONEINFO
+> zic -d $ZONEINFO -p America/New_York
 > unset ZONEINFO tz
-> +--------------------------------------------------------------------------+
+> ```
 
-Significado de los comandos zic:
+**Significado de los comandos zic**:
 
 zic -L /dev/null \...
 
@@ -7682,9 +7699,9 @@ UU.
 Una forma de determinar la zona horaria local es ejecutar el siguiente
 script:
 
-  ----------
-  tzselect
-  ----------
+> ```bash
+> tzselect
+> ```
 
 Tras responder algunas preguntas sobre la ubicación, el script mostrará
 el nombre de la zona horaria (p. ej., *América/Edmonton*). También hay
@@ -7694,9 +7711,9 @@ usar.
 
 A continuación, cree el archivo */etc/localtime* ejecutando:
 
-  ------------------------------------------------------
-  ln -sfv /usr/share/*zoneinfo*/\<xxx\> /etc/localtime
-  ------------------------------------------------------
+> ```bash
+> ln -sfv /usr/share/zoneinfo/<xxx> /etc/localtime
+> ```
 
 Reemplace \<xxx\> con el nombre de la zona horaria seleccionada (p. ej.,
 Canadá/Este).
@@ -7714,14 +7731,14 @@ búsqueda del cargador dinámico.
 
 Cree un nuevo archivo */etc/ld.so.conf* ejecutando lo siguiente:
 
-> +-------------------------------------+
-> ---
-> cat \> /etc/ld.so.conf \<\< \"EOF\"
-> \# Begin /etc/ld.so.conf
+> ```bash
+> cat > /etc/ld.so.conf << "EOF"
+> # Begin /etc/ld.so.conf
 > /usr/local/lib
 > /opt/lib
+> 
 > EOF
-> +-------------------------------------+
+> ```
 
 Si lo desea, el cargador dinámico también puede buscar en un directorio
 e incluir el contenido de los archivos que se encuentran allí.
@@ -7729,14 +7746,18 @@ Generalmente, los archivos en este directorio de inclusión son una línea
 que especifica la ruta de la biblioteca deseada. Para añadir esta
 función, ejecute los siguientes comandos:
 
-> +---------------------------------------+
-> ---
-> cat \>\> /etc/ld.so.conf \<\< \"EOF\"
-> \# Añadir un directorio de inclusión
-> include /etc/ld.so.conf.d/\*.conf
+> ```bash
+> cat >> /etc/ld.so.conf << "EOF"
+> # Añadir un directorio de inclusión
+> include /etc/ld.so.conf.d/*.conf
+> 
 > EOF
 > mkdir -pv /etc/ld.so.conf.d
-> +---------------------------------------+
+> ```
+
+---
+&nbsp;
+&nbsp;
 
 ### 8.5.3. Contenido de Glibc
 
