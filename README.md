@@ -39,7 +39,7 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 
 ## Ejemplo de estructura del proyecto ***LFS4Students-ES***
 
-Complemento de [`Linux_From_Scratch-12.3-ES.md`](./Linux_From_Scratch-12.3-ES.md)
+***Cada capítulo de [`Linux_From_Scratch-12.3-ES.md`](./Linux_From_Scratch-12.3-ES.md) tendrá sus omplementos***
 
 ```
 LFS4Students-ES/
@@ -47,8 +47,10 @@ LFS4Students-ES/
 ├── Capítulos/                       ┐
 │   ├── cap06-introduccion.md        │
 │   ├── cap06-nota-final.md          │
+│   │                                │   
 │   ├── cap07-introduccion.md        ├──  # Versión complementaria de apoyo al LFS-Book
 │   ├── cap07-nota-final.md          │
+│   │                                │         
 │   ├── ...                          │
 │   └── ...                          ┘
 ├── README.md
