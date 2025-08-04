@@ -37,7 +37,7 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 
 ---
 
-## Ejemplo de estructura del proyecto
+## Ejemplo de estructura del proyecto ***LFS4Students-ES***
 
 ```
 LFS4Students-ES/
