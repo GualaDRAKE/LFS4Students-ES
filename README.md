@@ -24,7 +24,7 @@ Linux From Scratch (LFS) es un proyecto que proporciona instrucciones paso a pas
 
 Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo que permite su fácil lectura en GitHub y su futura integración en herramientas de documentación o plataformas educativas.
 
-> ---
+  ---
 > **Importante**
 > 
 > LFS4Students-ES es una versión ***complementaria*** del libro original. Además de ofrecer la traducción de **Linux From Scratch v12.3**, agrega referencias y > aclaraciones sobre aspectos que el libro oficial da por sabidos, por ejemplo:
