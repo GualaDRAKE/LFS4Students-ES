@@ -21,6 +21,13 @@ El proyecto original en inglés se encuentra en:
 
 Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo que permite su fácil lectura en GitHub y su futura integración en herramientas de documentación o plataformas educativas.
 
+**LFS4Students-ES** es una versión ***COMPLEMENTARIA*** a LFS, es decir, además de tener la traducción hispanada de Linux From Scratch V. 12.3, se agrega referencias que no son part de LFS-Book, hablamos de lo que el libro considera por sabido de parte del usuario, por ejempo:
+
+- Dar a conocer ****¨Lo Básico¨**** del ***Sistema de archivos tipo *nix***.
+- Explicar ****¨Lo Básico¨**** de ***Las Herramientas*** usadas por LFS-Book, hablamos del **ToolChain**.
+- Documentar experiencias de usuario, **como usar un dispisitivo SSD** para alojar a LFS.
+- Documentar experiencias de usuario **con respecto a la ***Distro*** usada para usar como el **HOST** de LFS.
+
 ## Objetivos del proyecto
 
 - 🧠 Promover el aprendizaje activo de GNU/Linux a través de la construcción manual del sistema.
