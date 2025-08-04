@@ -29,15 +29,15 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 
 ## ¿A quién está dirigido?
 
-- Estudiantes de informática, ingeniería y áreas técnicas.
-- Usuarios avanzados de Linux que quieran profundizar sus conocimientos.
+- A ¨Estudiantes¨ por HOBBY y linuxeros de corazón, obviamente no queda fuera los de informática, ingeniería y ptros.
+- Usuarios de Linux, nóveles o avanzados, que quieran profundizar sus conocimientos.
 - Docentes y facilitadores que deseen usar LFS como recurso educativo.
 - Entusiastas del software libre.
 
 ## ¿Cómo empiezo?
 
 Puedes comenzar leyendo el archivo principal del libro en este repositorio:  
-📄 [`Linux_From_Scratch-12.3-ES.md`](./Linux_From_Scratch-12.3-ES.md)
+📄 [`Linux_From_Scratch-12.3-ES.md`](./Linux_From_Scratch-12.3-ES.md)  ⭐️ 
 
 Si ya conoces LFS y quieres colaborar con la mejora de esta versión traducida, ¡tus aportes son bienvenidos! Consulta la sección de contribuciones más abajo.
 
