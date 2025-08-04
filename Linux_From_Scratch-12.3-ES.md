@@ -10,8 +10,6 @@
 
    ![LFS](https://github.com/GualaDRAKE/LFS4Students-ES/blob/main/Images/LinuxFromScratch.png)
 
-   ![LFS](https://borkorajkovic.com/assets/img/posts/2025-05-06-lfs/lfs.png)
-
 &nbsp;
 
 &nbsp;
