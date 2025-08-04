@@ -28,7 +28,7 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 > **Importante**
 > 
 > LFS4Students-ES es una versión ***complementaria*** del libro original. Además de ofrecer la traducción de **Linux From Scratch v12.3**, agrega referencias y > aclaraciones sobre aspectos que el libro oficial da por sabidos, por ejemplo:
-> ---
+  ---
 
 - Explicaciones básicas sobre el ***sistema de archivos tipo *nix***.
 - Conceptos fundamentales sobre el ***toolchain*** y las herramientas utilizadas en LFS.
