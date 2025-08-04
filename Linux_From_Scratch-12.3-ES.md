@@ -8,7 +8,7 @@
 
 &nbsp;
 
-   ![LFS]([../Images/Linux%20From%20Scratch.png](https://github.com/GualaDRAKE/LFS4Students-ES/blob/main/Images/Linux%20From%20Scratch.png))
+   ![LFS](../LFS4Students-ES/Images/LinuxFromScratch.png)
 
    ![LFS](https://borkorajkovic.com/assets/img/posts/2025-05-06-lfs/lfs.png)
 
