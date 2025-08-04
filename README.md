@@ -28,6 +28,21 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 - Documentar experiencias de usuario, **como usar un dispisitivo SSD** para alojar a LFS.
 - Documentar experiencias de usuario **con respecto a la ***Distro*** usada para usar como el **HOST** de LFS.
 
+## Acá un ejemplo de **LFS4Students-ES** como una versión ***COMPLEMENTARIA*** a LFS
+
+  /LFS4Students-ES/
+  │
+  ├── Linux_From_Scratch-12.3-ES.md       # Traducción fiel del libro
+  ├── Capítulos/
+  │   ├── cap06-introduccion.md
+  │   ├── cap06-nota-final.md
+  │   ├── cap07-introduccion.md
+  │   ├── cap07-nota-final.md
+  │   └── ...
+  ├── README.md
+  └── índice-complementario.md            # Mapa con enlaces a todos los agregados
+
+
 ## Objetivos del proyecto
 
 - 🧠 Promover el aprendizaje activo de GNU/Linux a través de la construcción manual del sistema.
