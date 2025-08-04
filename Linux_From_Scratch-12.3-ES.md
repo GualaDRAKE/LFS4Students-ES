@@ -4,7 +4,7 @@
 
    Publicado el 5 de marzo de 2025
 
-   ![LFS](https://www.muylinux.com/wp-content/uploads/2020/09/Linux-From-Scratch.png)
+   ![LFS](https://borkorajkovic.com/assets/img/posts/2025-05-06-lfs/lfs.png)
 
 &nbsp;
 
