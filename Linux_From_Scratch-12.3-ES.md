@@ -14808,238 +14808,222 @@ lexgrog, man, man-recode, mandb, manpath y whatis
 formato legible.
 
 **apropos** Busca en la base de datos **whatis** y muestra descripciones
-breves de los comandos del sistema que contienen una cadena dada.****
+breves de los comandos del sistema que contienen una cadena dada.
 
-****catman**** Crea o actualiza las páginas de manual preformateadas.
-****
+**catman** Crea o actualiza las páginas de manual preformateadas.
 
 **lexgrog** Muestra información resumida de una línea sobre una página
-de manual dada.****
+de manual dada.
 
-**man** Formatea y muestra la página de manual solicitada.****
+**man** Formatea y muestra la página de manual solicitada.
 
-**man-recode** Convierte las páginas de manual a otra codificación.****
+**man-recode** Convierte las páginas de manual a otra codificación.
 
-**mandb** Crea o actualiza la base de datos **whatis**. ****
+**mandb** Crea o actualiza la base de datos **whatis**.
 
 **manpath** Muestra el contenido de \$MANPATH o (si \$MANPATH no está
 configurado) una ruta de búsqueda adecuada según la configuración de
-man.conf y el entorno del usuario.****
+man.conf y el entorno del usuario.
 
 **whatis** Busca en la base de datos **whatis** y muestra descripciones
 breves de los comandos del sistema que contienen la palabra clave dada
-como una palabra separada.****
+como una palabra separada.
 
-*****libman***** Contiene soporte en tiempo de ejecución para **man**.
-****
+**libman** Contiene soporte en tiempo de ejecución para **man**.
 
-*****libmandb***** Contiene soporte en tiempo de ejecución para
-**man**.****
+**libmandb** Contiene soporte en tiempo de ejecución para
+**man.
 
-## **8.78. Procps-ng-4.0.5**
+## 8.78. Procps-ng-4.0.5
 
-****El paquete Procps-ng contiene programas para monitorizar
-procesos.****
+El paquete Procps-ng contiene programas para monitorizar
+procesos.
 
-****Tiempo de compilación aproximado: ****0.1 SBU****
+Tiempo de compilación aproximado: 0.1 SBU
 
-****Espacio en disco necesario: ****28 MB****
+Espacio en disco necesario: 28 MB
 
-### **8.78.1. Instalación de Procps-ng**
+### 8.78.1. Instalación de Procps-ng
 
-****Preparar Procps-ng para la compilación:****
+Preparar Procps-ng para la compilación:
 
-> +------------------------------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--docdir=/usr/share/doc/procps-ng-4.0.5 \\**
-> ** \--disable-static \\**
-> ** \--disable-kill*** ***\\**
-> ** \--enable-watch8bit**
-> +------------------------------------------------------------------+
+> ./configure --prefix=/usr \
+> --docdir=/usr/share/doc/procps-ng-4.0.5 \
+> --disable-static \
+> --disable-kill \
+> --enable-watch8bit
 
-****Significado de la opción de configuración:****
+**Significado de la opción de configuración**:
 
-***** \--disable-kill*****
+\--disable-kill
 
-**** Esta opción deshabilita la compilación del comando **kill**; se
-instalará desde el paquete Util- linux.****
+Esta opción deshabilita la compilación del comando **kill**; se
+instalará desde el paquete Util- linux.
 
-***** \--enable-watch8bit*****
+\--enable-watch8bit
 
-**** Esta opción habilita la compatibilidad de ncursesw con el comando
-**watch**, de modo que pueda manejar caracteres de 8 bits.****
+Esta opción habilita la compatibilidad de ncursesw con el comando
+**watch**, de modo que pueda manejar caracteres de 8 bits.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para ejecutar el conjunto de pruebas, ejecute:****
+Para ejecutar el conjunto de pruebas, ejecute:
 
-> +---------------------------------------------------+
-> ---
-> **chown -R tester .**
-> **su tester -c \"PATH=\$***PATH*** make check\"**
-> +---------------------------------------------------+
+> chown -R tester .
+> su tester -c "PATH=$PATH make check"
 
-****Se sabe que una prueba llamada *****ps con el indicador de salida
-bsdtime, cputime, etime, etimes***** falla si el kernel del host no está
-compilado con *****CONFIG_BSD_PROCESS_ACCT***** habilitado. Además, una
-prueba pgrep puede fallar en el entorno chroot.****
+Se sabe que una prueba llamada ps con el indicador de salida
+bsdtime, cputime, etime, etimes falla si el kernel del host no está
+compilado con **CONFIG_BSD_PROCESS_ACCT** habilitado. Además, una
+prueba pgrep puede fallar en el entorno chroot.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.78.2. Contenido de Procps-ng**
+### 8.78.2. Contenido de Procps-ng
 
 **Programas instalados**: free, pgrep, pidof, pkill, pmap, ps, pwdx,
-slabtop, sysctl, tload, top, uptime, vmstat, w y watch****
+slabtop, sysctl, tload, top, uptime, vmstat, w y watch
 
-**Biblioteca instalada**: libproc-2.so****
+**Biblioteca instalada**: libproc-2.so
 
 **Directorios instalados**: /usr/include/procps y
-/usr/share/doc/procps-ng-4.0.5****
+/usr/share/doc/procps-ng-4.0.5
 
-### **Descripciones breves**
+### Descripciones breves
 
-**free** ****Informa sobre la cantidad de memoria libre y usada (física
-y de intercambio) en el sistema.****
+**free** Informa sobre la cantidad de memoria libre y usada (física
+y de intercambio) en el sistema.
 
-**pgrep** Busca procesos según su nombre y otros atributos.****
+**pgrep** Busca procesos según su nombre y otros atributos.
 
-**pidof** Informa sobre los PID de los programas.****
+**pidof** Informa sobre los PID de los programas.
 
-**pkill** Señaliza los procesos según su nombre y otros atributos.****
+**pkill** Señaliza los procesos según su nombre y otros atributos.
 
-**pmap** Informa sobre el mapa de memoria del proceso.****
+**pmap** Informa sobre el mapa de memoria del proceso.
 
-**ps **Enumera los procesos en ejecución****
+**ps **Enumera los procesos en ejecución.
 
-**pwdx **Informa del directorio de trabajo actual de un proceso****
+**pwdx** Informa del directorio de trabajo actual de un proceso.
 
-**slabtop **Muestra información detallada de la caché slab del núcleo en
-tiempo real****
+**slabtop** Muestra información detallada de la caché slab del núcleo en
+tiempo real.
 
-**sysctl **Modifica los parámetros del núcleo en tiempo de ejecución****
+**sysctl** Modifica los parámetros del núcleo en tiempo de ejecución.
 
-**tload **Imprime un gráfico del promedio de carga actual del
-sistema****
+**tload** Imprime un gráfico del promedio de carga actual del
+sistema.
 
-**top **Muestra una lista de los procesos con mayor uso de la CPU;
+**top** Muestra una lista de los procesos con mayor uso de la CPU;
 proporciona una visión continua de la actividad del procesador en tiempo
-real****
+real.
 
-**uptime **Informa del tiempo de ejecución del sistema, la cantidad de
+**uptime** Informa del tiempo de ejecución del sistema, la cantidad de
 usuarios conectados y los promedios de carga del sistema****
 
 **vmstat **Informa de las estadísticas de memoria virtual, con
 información sobre procesos, memoria, paginación, entrada/salida (E/S) de
-bloques, traps y actividad de la CPU****
+bloques, traps y actividad de la CPU.
 
-**w **Muestra qué usuarios han iniciado sesión, dónde y desde cuándo****
+**w** Muestra qué usuarios han iniciado sesión, dónde y desde cuándo.
 
 **watch **Ejecuta un comando repetidamente, mostrando la primera
 pantalla completa de su salida; esto permite al usuario observar cómo
-cambia la salida a lo largo del tiempo****
+cambia la salida a lo largo del tiempo.
 
-*****libproc-2 *****Contiene las funciones utilizadas por la mayoría de
-los programas de este paquete****
+**libproc-2** Contiene las funciones utilizadas por la mayoría de
+los programas de este paquete.
 
-## **8.79. Util-linux-2.40.4**
+## 8.79. Util-linux-2.40.4
 
-****El paquete Util-linux contiene diversas utilidades. Entre ellas, se
+El paquete Util-linux contiene diversas utilidades. Entre ellas, se
 encuentran utilidades para gestionar sistemas de archivos, consolas,
-particiones y mensajes.****
+particiones y mensajes.
 
-****Tiempo de compilación aproximado: ****0.5 SBU****
+Tiempo de compilación aproximado: 0.5 SBU
 
-****Espacio en disco necesario: ****316 MB****
+Espacio en disco necesario: 316 MB
 
-### **8.79.1. Instalación de Util-linux**
+### 8.79.1. Instalación de Util-linux
 
-****Preparar Util-linux para la compilación:****
+Preparar Util-linux para la compilación:
 
-> +------------------------------------------------------------+
-> ---
-> **./configure \--bindir=/usr/bin \\**
-> ** \--libdir=/usr/lib \\**
-> ** \--runstatedir=/run \\**
-> ** \--sbindir=/usr/sbin \\**
-> ** \--disable-chfn-chsh \\**
-> ** \--disable-login \\**
-> ** \--disable-nologin \\**
-> ** \--disable-su \\**
-> ** \--disable-setpriv \\**
-> ** \--disable-runuser \\**
-> ** \--disable-pylibmount \\**
-> ** \--disable-liblastlog2 \\**
-> ** \--disable-static \\**
-> ** \--without-python \\**
-> ** \--without-systemd \\**
-> ** \--without-systemdsystemunitdir \\**
-> ** ADJTIME_PATH=/var/lib/hwclock/adjtime \\**
-> ** \--docdir=/usr/share/doc/util-linux-2.40.4**
-> +------------------------------------------------------------+
+> ./configure --bindir=/usr/bin \
+> --libdir=/usr/lib \
+> --runstatedir=/run \
+> --sbindir=/usr/sbin \
+> --disable-chfn-chsh \
+> --disable-login \
+> --disable-nologin \
+> --disable-su \
+> --disable-setpriv \
+> --disable-runuser \
+> --disable-pylibmount \
+> --disable-liblastlog2 \
+> --disable-static \
+> --without-python \
+> --without-systemd \
+> --without-systemdsystemunitdir \
+> ADJTIME_PATH=/var/lib/hwclock/adjtime \
+> --docdir=/usr/share/doc/util-linux-2.40.4
 
-****Las opciones \--disable y \--without evitan advertencias sobre la
+Las opciones \--disable y \--without evitan advertencias sobre la
 compilación de componentes que requieren paquetes que no están en LFS o
 que son incompatibles con los programas instalados por otros
-paquetes.****
+paquetes.
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Si lo desea, cree un archivo *****/etc/fstab***** ficticio para
+Si lo desea, cree un archivo **/etc/fstab** ficticio para
 realizar dos pruebas y ejecute el conjunto de pruebas como usuario no
-*****root*****:****
+**root**:
 
-> +----------------------------------------------------------------------+
-> ---
 > **Advertencia**
-> ****Ejecutar el conjunto de pruebas como usuario root puede ser
+> 
+> Ejecutar el conjunto de pruebas como usuario root puede ser
 > perjudicial para el sistema. Para ejecutarlo, la opción
 > CONFIG_SCSI_DEBUG del kernel debe estar disponible en el sistema en
 > ejecución y compilarse como un módulo. Integrarla en el kernel
 > impedirá el arranque. Para una cobertura completa, se deben instalar
 > otros paquetes BLFS. Si se desea, esta prueba se puede ejecutar
-> iniciando el sistema LFS completo y ejecutando:****
-> +----------------------------------------------------------------------+
-> *****bash tests/run.sh \--srcdir=\$PWD --builddir=\$PWD*****
-> +----------------------------------------------------------------------+
+> iniciando el sistema LFS completo y ejecutando:
+> 
+> bash tests/run.sh --srcdir=$PWD --builddir=$PWD
 
-> +------------------------------------+
-> ---
-> **touch /etc/fstab**
-> **chown -R tester .**
-> **su tester -c \"make -k check\"**
-> +------------------------------------+
+> touch /etc/fstab
+> chown -R tester .
+> su tester -c "make -k check"
 
-****Las pruebas de enlace físico fallarán si el kernel del host no tiene
-habilitada la opción *****CONFIG_CRYPTO_USER_API_HASH***** o no tiene
+Las pruebas de enlace físico fallarán si el kernel del host no tiene
+habilitada la opción **CONFIG_CRYPTO_USER_API_HASH** o no tiene
 habilitada ninguna opción que proporcione una implementación
-*****SHA256***** (por ejemplo, *****CONFIG_CRYPTO_SHA256***** o
-*****CONFIG_CRYPTO_SHA256_SSSE3***** si la CPU admite SSE3
+**SHA256** (por ejemplo, **CONFIG_CRYPTO_SHA256** o
+**CONFIG_CRYPTO_SHA256_SSSE3** si la CPU admite SSE3
 suplementario). Además, la prueba lsfd: inotify fallará si la opción del
-kernel *****CONFIG_NETLINK_DIAG***** no está habilitada.****
+kernel **CONFIG_NETLINK_DIAG** no está habilitada.
 
-****Se sabe que otras dos pruebas, lsfd: columna SOURCE y utmp: last,
-fallan en el entorno chroot.****
+Se sabe que otras dos pruebas, lsfd: columna SOURCE y utmp: last,
+fallan en el entorno chroot.
 
-****Instale el paquete:****
+Instale el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.79.2. Contenido de Util-linux**
+### 8.79.2. Contenido de Util-linux
 
 **Programas instalados**: addpart, agetty, blkdiscard, blkid, blkzone,
 blockdev, cal, cfdisk, chcpu, chmem, choom, chrt, col, colcrt, colrm,
@@ -15056,757 +15040,738 @@ rfkill, rtcwake, script, scriptlive, scriptreplay, setarch, setsid,
 setterm, sfdisk, sulogin, swaplabel, swapoff, swapon, switch_root,
 tasket, uclampset, ul, umount, uname26 (enlace a Setarch), dejar de
 compartir, utmpdump uuidd, uuidgen, uuidparse, wall, wdctl, whereis,
-wipefs, x86_64 (enlace a setarch) y zramctl****
+wipefs, x86_64 (enlace a setarch) y zramctl
 
 **Bibliotecas**: libblkid.so, libfdisk.so, libmount.so, libsmartcols.so
-y libuuid.so****
+y libuuid.so
 
 **Directorios**: /usr/include/blkid, /usr/include/libfdisk,
 /usr/include/libmount, /usr/include/libsmartcols, /usr/include/uuid,
-/usr/share/doc/util-linux-2.40.4 y /var/lib/hwclock****
+/usr/share/doc/util-linux-2.40.4 y /var/lib/hwclock
 
-### **Descripciones breves**
+### Descripciones breves
 
-**addpart** Informa al kernel de Linux sobre nuevas particiones.****
+**addpart** Informa al kernel de Linux sobre nuevas particiones.
 
 **agetty** Abre un puerto TTY, solicita un nombre de usuario y luego
-invoca el programa de inicio de sesión.****
+invoca el programa de inicio de sesión.
 
-**blkdiscard** Descarta sectores en un dispositivo.****
+**blkdiscard** Descarta sectores en un dispositivo.
 
 **blkid** Una utilidad de línea de comandos para localizar e imprimir
-atributos de dispositivos de bloque.****
+atributos de dispositivos de bloque.
 
 **blkzone** Se utiliza para administrar dispositivos de bloque de
-almacenamiento por zonas.****
+almacenamiento por zonas.
 
 **blockdev** Permite a los usuarios llamar a las IOCTL de dispositivos
-de bloque desde la línea de comandos.****
+de bloque desde la línea de comandos.
 
-**cal** Muestra un calendario simple.****
+**cal** Muestra un calendario simple.
 
-**cfdisk** Manipula la tabla de particiones del dispositivo dado.****
+**cfdisk** Manipula la tabla de particiones del dispositivo dado.
 
-**chcpu** Modifica el estado de las CPU.****
+**chcpu** Modifica el estado de las CPU.
 
-**chmem** Configura la memoria.****
+**chmem** Configura la memoria.
 
 **choom** Muestra y ajusta las puntuaciones de OOM-killer, que se
 utilizan para determinar qué proceso eliminar primero cuando Linux se
-queda sin memoria.****
+queda sin memoria.
 
-**chrt** Manipula los atributos en tiempo real de un proceso.****
+**chrt** Manipula los atributos en tiempo real de un proceso.
 
-**col** Filtra los avances de línea inversos.****
+**col** Filtra los avances de línea inversos.
 
 **colcrt** Filtra la salida nroff para terminales que carecen de algunas
-capacidades, como la sobrescritura y las medias líneas.****
+capacidades, como la sobrescritura y las medias líneas.
 
-**colrm** Filtra los datos dados. columnas****
+**colrm** Filtra los datos dados. columnas.
 
-**column** Formatea un archivo dado en varias columnas****
+**column** Formatea un archivo dado en varias columnas.
 
 **ctrlaltsupr** Establece la función de la combinación de teclas
-Ctrl+Alt+Supr como restablecimiento completo o parcial.****
+Ctrl+Alt+Supr como restablecimiento completo o parcial.
 
-**delpart** Solicita al kernel de Linux que elimine una partición.****
+**delpart** Solicita al kernel de Linux que elimine una partición.
 
-**dmesg** Vuelca los mensajes de arranque del kernel.****
+**dmesg** Vuelca los mensajes de arranque del kernel.
 
-**eject** Expulsa los medios extraíbles.****
+**eject** Expulsa los medios extraíbles.
 
-**fallocate** Preasigna espacio a un archivo.****
+**fallocate** Preasigna espacio a un archivo.
 
-**fdisk** Manipula la tabla de particiones del dispositivo dado.****
+**fdisk** Manipula la tabla de particiones del dispositivo dado.
 
 **fincore** Cuenta las páginas de contenido de archivo en el núcleo.****
 
 **findfs** Encuentra un sistema de archivos, ya sea por etiqueta o por
-Identificador Único Universal (UUID).****
+Identificador Único Universal (UUID).
 
 **findmnt** Es una interfaz de línea de comandos para la biblioteca
-libmount para trabajar con archivos mountinfo, fstab y mtab.****
+libmount para trabajar con archivos mountinfo, fstab y mtab.
 
 **flock** Adquiere un bloqueo de archivo y luego ejecuta un comando con
-el bloqueo activado.****
+el bloqueo activado.
 
 **fsck** Se utiliza para verificar y, opcionalmente, reparar sistemas de
-archivos.****
+archivos.
 
 **fsck.cramfs** Realiza una comprobación de consistencia en el sistema
-de archivos Cramfs del dispositivo dado.****
+de archivos Cramfs del dispositivo dado.
 
 **fsck.minix** Realiza una comprobación de consistencia en el sistema de
-archivos Minix del dispositivo dado.****
+archivos Minix del dispositivo dado.
 
 **fsfreeze** Es una envoltura muy simple para las operaciones del
-controlador de kernel ioctl FIFREEZE/FITHAW.****
+controlador de kernel ioctl FIFREEZE/FITHAW.
 
 **fstrim** Descarta los bloques no utilizados en un sistema de archivos
-montado.****
+montado.
 
-**getopt** Analiza las opciones en la línea de comandos dada.****
+**getopt** Analiza las opciones en la línea de comandos dada.
 
 **hardlink** Consolida archivos duplicados mediante la creación de
-enlaces físicos.****
+enlaces físicos.
 
 **hexdump** Vuelca el archivo dado en hexadecimal, decimal, octal o
-ascii****
+ascii.
 
 **hwclock** Lee o configura el reloj de hardware del sistema, también
 llamado reloj de tiempo real (RTC) o reloj del sistema básico de entrada
-y salida (BIOS).****
+y salida (BIOS.
 
-**I386** Un enlace simbólico a setarch****
+**I386** Un enlace simbólico a setarch.
 
 **ionice** Obtiene o establece la clase de programación de E/S y la
-prioridad de un programa.****
+prioridad de un programa.
 
-**ipcmk** Crea varios recursos IPC.****
+**ipcmk** Crea varios recursos IPC.
 
 **ipcrm** Elimina el recurso de Comunicación entre Procesos (IPC)
-especificado.****
+especificado.
 
-**ipcs** Proporciona información del estado de IPC.****
+**ipcs** Proporciona información del estado de IPC.
 
 **irqtop** Muestra la información del contador de interrupciones del
-núcleo en la vista superior (1).****
+núcleo en la vista superior (1).
 
-**isosize** Informa del tamaño de un sistema de archivos ISO9660.****
+**isosize** Informa del tamaño de un sistema de archivos ISO9660.
 
-**kill** Envía señales a los procesos.****
+**kill** Envía señales a los procesos.
 
 **last** Muestra qué usuarios iniciaron (y cerraron) la última vez,
 buscando en el archivo /var/log/wtmp. También muestra los arranques,
-apagados y cambios en el nivel de ejecución del sistema.****
+apagados y cambios en el nivel de ejecución del sistema.
 
 **lastb** Muestra los intentos fallidos de inicio de sesión, tal como se
-iniciaron en /var/log/btmp.****
+iniciaron en /var/log/btmp.
 
-**ldattach** Añade una disciplina de línea a una línea serie.****
+**ldattach** Añade una disciplina de línea a una línea serie.
 
-**linux32** Un enlace simbólico a setarch.****
+**linux32** Un enlace simbólico a setarch.
 
-**linux64** Un enlace simbólico a setarch.****
+**linux64** Un enlace simbólico a setarch.
 
 **logger** Introduce el mensaje especificado en el registro del
-sistema.****
+sistema.
 
 **look** Muestra las líneas que comienzan con la cadena
-especificada.****
+especificada.
 
-**losetup** Configura y controla dispositivos de bucle.****
+**losetup** Configura y controla dispositivos de bucle.
 
 **lsblk** Muestra información sobre todos los dispositivos de bloque o
-algunos seleccionados en un formato de árbol.****
+algunos seleccionados en un formato de árbol.
 
-**lscpu** Imprime información de la arquitectura de la CPU.****
+**lscpu** Imprime información de la arquitectura de la CPU.
 
 **lsfd** Muestra información sobre los archivos abiertos; reemplaza a
-lsof.****
+lsof.
 
 **lsipc** Imprime información sobre las funciones IPC actualmente
-empleadas en el sistema.****
+empleadas en el sistema.
 
 **lsirq** Muestra información del contador de interrupciones del
-núcleo.****
+núcleo.
 
-**lslocks** Enumera los bloqueos del sistema local.****
+**lslocks** Enumera los bloqueos del sistema local.
 
 **lslogins** Enumera información sobre usuarios, grupos y cuentas del
-sistema.****
+sistema.
 
 **lsmem** Enumera los rangos de memoria disponible con su estado en
-línea.****
+línea.
 
-**lsns** Enumera los espacios de nombres.****
+**lsns** Enumera los espacios de nombres.
 
 **mcookie** Genera cookies mágicas (números hexadecimales aleatorios de
-128 bits) para xauth.****
+128 bits) para xauth.
 
 **mesg** Controla si otros usuarios pueden enviar mensajes al terminal
-del usuario actual.****
+del usuario actual.
 
 **mkfs** Construye un sistema de archivos en un dispositivo (normalmente
-una partición del disco duro).****
+una partición del disco duro).
 
 **mkfs.bfs** Crea un sistema de archivos bfs de Santa Cruz Operations
-(SCO).****
+(SCO).
 
-**mkfs.cramfs** Crea un sistema de archivos cramfs.****
+**mkfs.cramfs** Crea un sistema de archivos cramfs.
 
-**mkfs.minix** Crea un sistema de archivos Minix.****
+**mkfs.minix** Crea un sistema de archivos Minix.
 
 **mkswap** Inicializa el dispositivo o archivo dado para usarlo como
-área de intercambio.****
+área de intercambio.
 
-**more** Un filtro para navegar por el texto pantalla por pantalla.****
+**more** Un filtro para navegar por el texto pantalla por pantalla.
 
-****m**ount** Conecta el sistema de archivos del dispositivo dado a un
-directorio específico en el árbol del sistema de archivos.****
+**mount** Conecta el sistema de archivos del dispositivo dado a un
+directorio específico en el árbol del sistema de archivos.
 
-**mountpoint** Comprueba si el directorio es un punto de montaje.****
+**mountpoint** Comprueba si el directorio es un punto de montaje.
 
-**namei** Muestra los enlaces simbólicos en las rutas dadas.****
+**namei** Muestra los enlaces simbólicos en las rutas dadas.
 
 **nsenter** Ejecuta un programa con los espacios de nombres de otros
-procesos.****
+procesos.
 
 **partx** Informa al núcleo sobre la presencia y numeración de las
-particiones en disco.****
+particiones en disco.
 
 **pivot_root** Convierte el sistema de archivos dado en el nuevo sistema
-de archivos raíz del proceso actual.****
+de archivos raíz del proceso actual.
 
 **prlimit** Obtiene y establece los límites de recursos de un
-proceso.****
+proceso.
 
-**readprofile** Lee la información de perfil del núcleo.****
+**readprofile** Lee la información de perfil del núcleo.
 
 **rename** Renombra los archivos dados, reemplazando una cadena dada por
-otra.****
+otra.
 
-**renice** Modifica la prioridad de los procesos en ejecución.****
+**renice** Modifica la prioridad de los procesos en ejecución.
 
 **resizepart** Solicita al núcleo de Linux que redimensione una
-partición.****
+partición.
 
-**rev** Invierte las líneas de un archivo dado.****
+**rev** Invierte las líneas de un archivo dado.
 
 **rfkill** Herramienta para habilitar y deshabilitar dispositivos
-inalámbricos.****
+inalámbricos.
 
 **rtcwake** Se utiliza para entrar en un estado de suspensión del
-sistema hasta la hora de activación especificada.****
+sistema hasta la hora de activación especificada.
 
-**script** Crea un script de una sesión de terminal.****
+**script** Crea un script de una sesión de terminal.
 
 **scriptlive** Reejecuta scripts de sesión usando información de
-tiempo.****
+tiempo.
 
 **scriptreplay** Reproduce scripts de sesión usando información de
-tiempo.****
+tiempo.
 
 **setarch** Cambia la arquitectura reportada en un nuevo entorno de
-programa y establece indicadores de personalidad.****
+programa y establece indicadores de personalidad.
 
-**setsid** Ejecuta el programa dado en una nueva sesión.****
+**setsid** Ejecuta el programa dado en una nueva sesión.
 
-**setterm** Establece los atributos de la terminal****
+**setterm** Establece los atributos de la terminal.
 
-**sfdisk** Un manipulador de la tabla de particiones de disco****
+**sfdisk** Un manipulador de la tabla de particiones de disco.
 
 **sulogin** Permite al usuario root iniciar sesión; normalmente lo
-invoca init cuando el sistema entra en modo monousuario****
+invoca init cuando el sistema entra en modo monousuario.
 
 **swaplabel** Realiza cambios en el UUID y la etiqueta del área de
-intercambio****
+intercambio.
 
 **swapoff** Desactiva la paginación y el intercambio de dispositivos y
-archivos****
+archivos.
 
 **swapon** Habilita la paginación y el intercambio de dispositivos y
-archivos, y lista los dispositivos y archivos actualmente en uso****
+archivos, y lista los dispositivos y archivos actualmente en uso.
 
 **switch_root** Cambia a otro sistema de archivos como raíz del árbol de
-montaje****
+montaje.
 
-**taskset** Recupera o establece la afinidad de CPU de un proceso****
+**taskset** Recupera o establece la afinidad de CPU de un proceso.
 
 **uclampset** Manipula los atributos de restricción de utilización del
-sistema o de un proceso****
+sistema o de un proceso.
 
 **ul** Un filtro para traducir guiones bajos en secuencias de escape que
-indican subrayado para la terminal en uso****
+indican subrayado para la terminal en uso.
 
 **umount** Desconecta un sistema de archivos del árbol de archivos del
-sistema****
+sistema.
 
-**uname26** Un enlace simbólico a setarch****
+**uname26** Un enlace simbólico a setarch.
 
 **unshare** Ejecuta un programa con algunos espacios de nombres no
-compartidos con el padre****
+compartidos con el padre.
 
 **utmpdump** Muestra el contenido del archivo de inicio de sesión dado
-en un formato intuitivo****
+en un formato intuitivo.
 
 **uuidd** Un demonio utilizado por la biblioteca UUID para generar UUID
-basados en tiempo de forma segura y con garantía de unicidad****
+basados en tiempo de forma segura y con garantía de unicidad.
 
 **uuidgen** Crea nuevos UUID. Cada nuevo UUID es un número aleatorio que
 probablemente sea único entre todos los UUID creados, tanto en el
 sistema local como en otros sistemas, en **** el pasado y en el futuro,
-con una probabilidad extremadamente alta (2 UUID son posibles).****
+con una probabilidad extremadamente alta (2 UUID son posibles).
 
-**uuidparse** Una utilidad para analizar identificadores únicos.****
+**uuidparse** Una utilidad para analizar identificadores únicos.
 
 **wall** Muestra el contenido de un archivo o, por defecto, su entrada
-estándar, en las terminales de todos los usuarios conectados.****
+estándar, en las terminales de todos los usuarios conectados.
 
-**wdctl** Muestra el estado del sistema de vigilancia del hardware.****
+**wdctl** Muestra el estado del sistema de vigilancia del hardware.
 
 **whereis** Informa de la ubicación de los archivos binarios, fuente y
 de la página de manual del comando dado.****
 
-**wipefs** Borra la firma del sistema de archivos de un dispositivo.****
+**wipefs** Borra la firma del sistema de archivos de un dispositivo.
 
-**x86_64** Un enlace simbólico a setarch.****
+**x86_64** Un enlace simbólico a setarch.
 
 **zramctl** Un programa para configurar y controlar dispositivos zram
-(disco RAM comprimido).****
+(disco RAM comprimido).
 
-*****libblkid***** Contiene rutinas para la identificación de
+**libblkid***** Contiene rutinas para la identificación de
 dispositivos y la extracción de tokens.****
 
-*****libfdisk***** Contiene rutinas para manipular tablas de
-particiones.****
+**libfdisk** Contiene rutinas para manipular tablas de
+particiones.
 
-*****libmount***** Contiene rutinas para el montaje y desmontaje de
-dispositivos de bloque.****
+**libmount** Contiene rutinas para el montaje y desmontaje de
+dispositivos de bloque.
 
-*****libsmartcols***** Contiene rutinas para facilitar la salida de
-pantalla en formato tabular.****
+**libsmartcols** Contiene rutinas para facilitar la salida de
+pantalla en formato tabular.
 
-*****libuuid***** Contiene rutinas para generar identificadores únicos
-para objetos accesibles más allá del sistema local.****
+**libuuid** Contiene rutinas para generar identificadores únicos
+para objetos accesibles más allá del sistema local.
 
-## **8.80. E2fsprogs-1.47.2**
+## 8.80. E2fsprogs-1.47.2
 
-****El paquete E2fsprogs contiene las utilidades para gestionar el
+El paquete E2fsprogs contiene las utilidades para gestionar el
 sistema de archivos ext2. También es compatible con los sistemas de
-archivos con registro en diario ext3 y ext4.****
+archivos con registro en diario ext3 y ext4.
 
 **Tiempo de compilación aproximado**: 2,4 SBU en un disco duro, 0,5 SBU
-en un SSD****
+en un SSD
 
-**Espacio en disco necesario**: 99 MB****
+**Espacio en disco necesario**: 99 MB
 
-### **8.80.1. Instalación de E2fsprogs**
+### 8.80.1. Instalación de E2fsprogs
 
-****La documentación de E2fsprogs recomienda compilar el paquete en un
-subdirectorio del árbol de código fuente:****
+La documentación de E2fsprogs recomienda compilar el paquete en un
+subdirectorio del árbol de código fuente:
 
-> +--------------------+
-> ---
-> **mkdir -v build**
-> **cd build**
-> +--------------------+
+> mkdir -v build
+> cd build
 
-****Preparar E2fsprogs para la compilación:****
+Preparar E2fsprogs para la compilación:
 
-> +------------------------------------------+
-> ---
-> **../configure \--prefix=/usr \\**
-> ** \--sysconfdir=/etc \\**
-> ** \--enable-elf-shlibs \\**
-> ** \--disable-libblkid \\**
-> ** \--disable-libuuid \\**
-> ** \--disable-uuidd \\**
-> ** \--disable-fsck**
-> +------------------------------------------+
+> ../configure --prefix=/usr \
+> --sysconfdir=/etc \
+> --enable-elf-shlibs \
+> --disable-libblkid \
+> --disable-libuuid \
+> --disable-uuidd \
+> --disable-fsck
 
-**Significado de las opciones de configuración:**
+**Significado de las opciones de configuración**:
 
-***** \--enable-elf-shlibs*****
+\--enable-elf-shlibs
 
-**** Esto crea las bibliotecas compartidas que utilizan algunos
-programas de este paquete.****
+Esto crea las bibliotecas compartidas que utilizan algunos
+programas de este paquete.
 
-***** \--disable-\******
+\--disable-\
 
-**** Esto impide compilar e instalar las bibliotecas *****libuuid***** y
-*****libblkid*****, el demonio *****uuidd***** y el contenedor **fsck**;
-util-linux instala versiones más recientes. Compilar el paquete:****
+Esto impide compilar e instalar las bibliotecas **libuuid** y
+**libblkid**, el demonio **uuidd** y el contenedor **fsck**;
+util-linux instala versiones más recientes. Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Para ejecutar las pruebas, ejecute:****
+Para ejecutar las pruebas, ejecute:
 
   ----------------
-  **make check**
+  make check
   ----------------
 
-****Se sabe que una prueba llamada *****m_assume_storage_prezeroed*****
-falla. Otra prueba llamada *****m_rootdir_acl***** falla si el sistema
-de archivos utilizado para el sistema LFS no es *****ext4*****.****
+Se sabe que una prueba llamada **m_assume_storage_prezeroed**
+falla. Otra prueba llamada **m_rootdir_acl** falla si el sistema
+de archivos utilizado para el sistema LFS no es **ext4**.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-****Eliminar las bibliotecas estáticas innecesarias:****
+Eliminar las bibliotecas estáticas innecesarias:
 
   -----------------------------------------------------------------
-  **rm -fv /usr/lib/{libcom_err,***libe2p***,libext2fs,libss}.a**
+  rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
   -----------------------------------------------------------------
 
-****Este paquete instala un archivo *****.info***** comprimido con gzip,
-pero no actualiza el archivo *****dir***** del sistema. Descomprima este
-archivo y actualice el archivo *****dir***** del sistema con los
-siguientes comandos:****
+Este paquete instala un archivo **.info** comprimido con gzip,
+pero no actualiza el archivo **dir** del sistema. Descomprima este
+archivo y actualice el archivo **dir** del sistema con los
+siguientes comandos:
 
-> +----------------------------------------------------------------------+
-> ---
-> **gunzip -v /usr/share/info/libext2fs.info.gz**
-> **install-info \--dir-file=/***usr***/share/info/dir
-> /usr/share/info/libext2fs.info**
-> +----------------------------------------------------------------------+
+> gunzip -v /usr/share/info/libext2fs.info.gz
+> install-info --dir-file=/usr/share/info/dir
+> /usr/share/info/libext2fs.info
 
-****Si lo desea, cree e instale documentación adicional con los
-siguientes comandos:****
+Si lo desea, cree e instale documentación adicional con los
+siguientes comandos:
 
-> +----------------------------------------------------------------------+
-> ---
-> **makeinfo -o**
-> **doc/com_err.info ../lib/et/com_err.texinfo**
-> **install -v -m644 doc/com_err.info /usr/share/info**
-> **install-info \--dir-file=/usr/share/info/dir
-> /usr/share/info/com_err.info**
-> +----------------------------------------------------------------------+
+> makeinfo -o
+> doc/com_err.info ../lib/et/com_err.texinfo
+> install -v -m644 doc/com_err.info /usr/share/info
+> install-info --dir-file=/usr/share/info/dir
+> /usr/share/info/com_err.info
 
-### **8.80.2. Configuración de E2fsprogs**
+### 8.80.2. Configuración de E2fsprogs
 
-*****/etc/mke2fs.conf***** contiene los valores predeterminados de
+**/etc/mke2fs.conf** contiene los valores predeterminados de
 varias opciones de línea de comandos de **mke2fs**. Puede editar el
 archivo para que los valores predeterminados se ajusten a sus
 necesidades. Por ejemplo, algunas utilidades (no en LFS ni BLFS) no
-reconocen un sistema de archivos *****ext4***** con la función
-*****metadata_csum_seed***** habilitada. **Si** necesita dicha utilidad,
+reconocen un sistema de archivos **ext4** con la función
+**metadata_csum_seed** habilitada. **Si** necesita dicha utilidad,
 puede eliminar la función de la lista de funciones predeterminadas de
-*****ext4***** con el comando:****
+**ext4** con el comando:
 
   ---------------------------------------------------------------
-  **sed \'s/***metadata_csum_seed***,//\' -i /etc/mke2fs.conf**
+  sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf
   ---------------------------------------------------------------
 
-****Consulte la página del manual *****mke2fs.conf(5)***** para obtener
-más información.****
+Consulte la página del manual *****mke2fs.conf(5)***** para obtener
+más información.
 
-### **8.80.3. Contenido de E2fsprogs**
+### 8.80.3. Contenido de E2fsprogs
 
 **Programas instalados**: badblocks, chattr, compile_et, debugfs,
 dumpe2fs, e2freefrag, e2fsck, e2image, e2label, e2mmpstatus, e2scrub,
 e2scrub_all, e2undo, e4crypt, e4defrag, filefrag, fsck.ext2, fsck.ext3,
 fsck.ext4, logsave, lsattr, mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3,
-mkfs.ext4, mklost+found, resize2fs y tune2fs****
+mkfs.ext4, mklost+found, resize2fs y tune2fs
 
 **Bibliotecas instaladas**: libcom_err.so, libe2p.so, libext2fs.so y
-libss.so****
+libss.so
 
 **Directorios instalados**: /usr/include/e2p, /usr/include/et,
 /usr/include/ext2fs, /usr/include/ss, /usr/lib/e2fsprogs, /usr/share/et
-y /usr/share/ss****
+y /usr/share/ss
 
-### **Descripciones breves**
+### Descripciones breves
 
 **badblocks** Busca bloques defectuosos en un dispositivo (normalmente
-una partición de disco).****
+una partición de disco).
 
 **chattr** Cambia los atributos de los archivos en sistemas de archivos
-*****ext{234}*****.****
+*****ext{234}*****.
 
 **compile_et** Un compilador de tablas de errores; convierte una tabla
 de nombres y mensajes de códigos de error en un archivo fuente en C.
-Ideal para usar con la biblioteca *****com_err*****.****
+Ideal para usar con la biblioteca *****com_err*****.
 
 **debugfs** Un depurador de sistemas de archivos. Se puede usar para
 examinar y cambiar el estado de los sistemas de archivos
-*****ext{234}*****.****
+*****ext{234}*****.
 
 **dumpe2fs** Imprime la información del superbloque y del grupo de
-bloques del sistema de archivos presente en un dispositivo.****
+bloques del sistema de archivos presente en un dispositivo.
 
-**e2freefrag** Informa sobre la fragmentación del espacio libre.****
+**e2freefrag** Informa sobre la fragmentación del espacio libre.
 
 **e2fsck** Se usa para comprobar y, opcionalmente, reparar sistemas de
-archivos *****ext{234}*****.****
+archivos *****ext{234}*****.
 
 **e2image** Se usa para guardar datos críticos del sistema de archivos
-*****ext{234}***** en un archivo.****
+*****ext{234}***** en un archivo.
 
 **e2label** Muestra o cambia la etiqueta del sistema de archivos
-*****ext{234}***** en un dispositivo.****
+*****ext{234}***** en un dispositivo.
 
 **e2mmpstatus** Comprueba el estado de MMP (Protección de Montaje
-Múltiple) de un sistema de archivos ext4.****
+Múltiple) de un sistema de archivos ext4.
 
 **e2scrub** Comprueba el contenido de un sistema de archivos
-*****ext{234}***** montado.****
+*****ext{234}***** montado.
 
 **e2scrub_all** Comprueba si hay errores en todos los sistemas de
-archivos ext{234} montados.****
+archivos ext{234} montados.
 
 **e2undo** Reproduce el registro de deshacer de un sistema de archivos
 *****ext{234}***** encontrado en un dispositivo. \[Esto puede usarse
-para deshacer una operación fallida de un programa E2fsprogs.\]****
+para deshacer una operación fallida de un programa E2fsprogs.\].
 
-**e4crypt** Utilidad de cifrado del sistema de archivos *****Ext4*****
+**e4crypt** Utilidad de cifrado del sistema de archivos *****Ext4*****.
 
 **e4defrag** Desfragmentador en línea para sistemas de archivos
-*****Ext4*****
+*****Ext4*****.
 
 **filefrag** Informa sobre el grado de fragmentación de un archivo en
-particular.****
+particular.
 
 **fsck.ext2** Por defecto, verifica los sistemas de archivos ext2 y es
-un enlace duro a **e2fsck**.****
+un enlace duro a **e2fsck**.
 
 **fsck.ext3** Por defecto, verifica los sistemas de archivos ext3 y es
-un enlace duro a **e2fsck**.****
+un enlace duro a **e2fsck**.
 
 **fsck.ext4** Por defecto, verifica los sistemas de archivos ext4 y es
-un enlace duro a **e2fsck**.****
+un enlace duro a **e2fsck**.
 
 **logsave** Guarda la salida de un comando en un archivo de
-registro.****
+registro.
 
 **lsattr** Enumera los atributos de los archivos en un segundo sistema
-de archivos extendido.****
+de archivos extendido.
 
 **mk_cmds** Convierte una tabla de nombres de comandos y mensajes de
 ayuda en un archivo fuente en C compatible con la biblioteca del
-subsistema libss.****
+subsistema libss.
 
 **mke2fs** Crea un sistema de archivos ext{234} en el dispositivo
-indicado.****
+indicado.
 
 **mkfs.ext2** Por defecto, crea sistemas de archivos ext2 y es un enlace
-duro a **mke2fs**.****
+duro a **mke2fs**.
 
 **mkfs.ext3** Por defecto, crea sistemas de archivos ext3 y es un enlace
-duro a **mke2fs**.****
+duro a **mke2fs**.
 
 **mkfs.ext4** Por defecto, crea sistemas de archivos ext4 y es un enlace
-duro a **mke2fs**.****
+duro a **mke2fs**.
 
 **mklost+found** Crea un directorio \"lost+found\" en un sistema de
 archivos ext{234}. Preasigna bloques de disco a este directorio para
-simplificar la tarea de **e2fsck**.****
+simplificar la tarea de **e2fsck**.
 
 **resize2fs** Puede usarse para ampliar o reducir el tamaño de los
-sistemas de archivos ext{234}.****
+sistemas de archivos ext{234}.
 
 **tune2fs** Ajusta los parámetros configurables del sistema de archivos
-en sistemas de archivos ext{234}.****
+en sistemas de archivos ext{234}.
 
-*****libcom_err***** La rutina común de visualización de errores.****
+**libcom_err** La rutina común de visualización de errores.
 
-*****libe2p***** Usada por **dumpe2fs**, **chattr** y **lsattr**.****
+**libe2p** Usada por **dumpe2fs**, **chattr** y **lsattr**.
 
-*****libext2fs***** Contiene rutinas que permiten a los programas de
-usuario manipular sistemas de archivos ext{234}.****
+**libext2fs** Contiene rutinas que permiten a los programas de
+usuario manipular sistemas de archivos ext{234}.
 
-*****libss***** Usada por **debugfs**.****
+**libss** Usada por **debugfs**.
 
-## **8.81. Sysklogd-2.7.0**
+## .8.81. Sysklogd-2.7.0
 
-****El paquete Sysklogd contiene programas para registrar mensajes del
+El paquete Sysklogd contiene programas para registrar mensajes del
 sistema, como los que emite el núcleo cuando ocurren eventos
-inusuales.****
+inusuales.
 
-****Tiempo de compilación aproximado: ****menos de 0,1 SBU****
+Tiempo de compilación aproximado: menos de 0,1 SBU
 
-****Espacio en disco requerido: ****4,1 MB****
+Espacio en disco requerido: 4,1 MB
 
-### **8.81.1. Instalación de Sysklogd**
+### 8.81.1. Instalación de Sysklogd
 
-****Preparar el paquete para la compilación:****
+Preparar el paquete para la compilación:
 
-> +---------------------------------------------------------+
-> ---
-> **./configure \--prefix=/usr \\**
-> ** \--sysconfdir=/etc \\**
-> ** \--runstatedir=/run \\**
-> ** \--without-logger \\**
-> ** \--disable-static \\**
-> ** \--docdir=/usr/share/doc/sysklogd-2.7.0**
-> +---------------------------------------------------------+
+> ./configure --prefix=/usr \
+> --sysconfdir=/etc \
+> --runstatedir=/run \
+> --without-logger \
+> --disable-static \
+> --docdir=/usr/share/doc/sysklogd-2.7.0
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Este paquete no incluye un conjunto de pruebas.****
+Este paquete no incluye un conjunto de pruebas.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.81.2. Configuración de Sysklogd**
+### 8.81.2. Configuración de Sysklogd
 
-****Cree un nuevo archivo /etc/syslog.conf ejecutando lo siguiente:****
+Cree un nuevo archivo /etc/syslog.conf ejecutando lo siguiente:
 
-> +-------------------------------------------------------+
-> ---
-> **cat \> /etc/syslog.conf \<\< \"EOF\"**
-> ****\# Inicio /etc/syslog.conf****
-> ****auth,authpriv.\* -/*****var*****/log/auth.log****
-> ****\*.\*;auth,authpriv.none -/var/log/sys.log****
-> ****daemon.\* -/var/log/daemon.log****
-> ****kern.\* -/var/log/kern.log****
-> ****mail.\* -/var/log/mail.log****
-> ****user.\* -/var/log/user.log****
-> ****\*.emerg \*****
-> ****\# No abra ningún puerto de internet.****
-> ****secure_mode 2****
-> ****\# Fin /etc/syslog.conf****
-> **EOF**
-> +-------------------------------------------------------+
+> cat > /etc/syslog.conf << "EOF"
+> # Inicio /etc/syslog.conf
+> auth,authpriv.* -/var/log/auth.log
+> *.*;auth,authpriv.none -/var/log/sys.log
+> daemon.* -/var/log/daemon.log
+> kern.* -/var/log/kern.log
+> mail.* -/var/log/mail.log
+> user.* -/var/log/user.log
+> *.emerg \
+> # No abra ningún puerto de internet
+> secure_mode 2
+> # Fin /etc/syslog.conf
+> EOF
 
-### **8.81.3. Contenido de Sysklogd**
+### 8.81.3. Contenido de Sysklogd
 
-**Programa instalado**: syslogd****
+**Programa instalado**: syslogd
 
-### **Descripciones breves**
+### Descripciones breves
 
 **syslogd** Registra los mensajes que los programas del sistema ofrecen
 para su registro. \[Cada mensaje registrado contiene al menos una marca
 de fecha y un nombre de host, y normalmente también el nombre del
 programa, pero esto depende de la confianza que se le indique al demonio
-de registro\].****
+de registro\].
 
-## **8.82. SysVinit-3.14**
+## 8.82. SysVinit-3.14
 
-****El paquete SysVinit contiene programas para controlar el inicio, la
-ejecución y el apagado del sistema.****
+El paquete SysVinit contiene programas para controlar el inicio, la
+ejecución y el apagado del sistema.
 
-****Tiempo aproximado de compilación: ****Menos de 0,1 SBU****
+Tiempo aproximado de compilación: Menos de 0,1 SBU
 
-****Espacio en disco necesario: ****2,9 MB****
+Espacio en disco necesario: 2,9 MB
 
-### **8.82.1. Instalación de SysVinit**
+### 8.82.1. Instalación de SysVinit
 
-****Primero, aplique un parche que elimina varios programas instalados
+Primero, aplique un parche que elimina varios programas instalados
 por otros paquetes, aclara un mensaje y corrige una advertencia del
-compilador:****
+compilador:
 
   ---------------------------------------------------------------
-  **patch -Np1 -i ../***sysvinit***-3.14-consolidated-1.patch**
+  patch -Np1 -i ../sysvinit-3.14-consolidated-1.patch
   ---------------------------------------------------------------
 
-****Compilar el paquete:****
+Compilar el paquete:
 
   ----------
-  **make**
+  make
   ----------
 
-****Este paquete no incluye un conjunto de pruebas.****
+Este paquete no incluye un conjunto de pruebas.
 
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **8.82.2. Contenido de SysVinit**
+### 8.82.2. Contenido de SysVinit
 
 **Programas instalados**: bootlogd, fstab-decode, halt, init, killall5,
 poweroff (enlace a halt), reboot (enlace a halt), runlevel, shutoff y
-telinit (enlace a init)****
+telinit (enlace a init)
 
-### **Descripciones breves**
+### Descripciones breves
 
 **bootlogd** Registra los mensajes de arranque en un archivo de
 registro.****
 
 **fstab-decode** Ejecuta un comando con argumentos codificados en
-fstab.****
+fstab.
 
 **halt** Normalmente invoca el **apagado** con la opción *****-h*****,
 pero cuando ya está en el nivel de ejecución 0, le indica al núcleo que
 detenga el sistema; anota en el archivo *****/var/log/wtmp***** que el
-sistema se está apagando.****
+sistema se está apagando.
 
 **init** El primer proceso que se inicia cuando el núcleo ha
 inicializado el hardware; asume el proceso de arranque e inicia todos
-los procesos especificados en su archivo de configuración.****
+los procesos especificados en su archivo de configuración.
 
 **killall5** Envía una señal a todos los procesos, excepto a los de su
-propia sesión. No eliminará su shell principal.****
+propia sesión. No eliminará su shell principal.
 
 **poweroff** Indica al kernel que detenga el sistema y apague el
-ordenador (ver **halt**).****
+ordenador (ver **halt**).
 
-**reboot** Indica al kernel que reinicie el sistema (ver **halt**).****
+**reboot** Indica al kernel que reinicie el sistema (ver **halt**).
 
 **runlevel** Informa del nivel de ejecución anterior y actual, como se
 indica en el último registro de nivel de ejecución en
-*****/run/utmp*****.****
+*****/run/utmp*****.
 
 **shutdown** Detiene el sistema de forma segura, enviando señales a
-todos los procesos y notificando a todos los usuarios conectados.****
+todos los procesos y notificando a todos los usuarios conectados.
 
-**telinit** Indica a **init** a qué nivel de ejecución cambiar.****
+**telinit** Indica a **init** a qué nivel de ejecución cambiar.
 
-## **8.83. Acerca de los símbolos de depuración**
+## 8.83. Acerca de los símbolos de depuración
 
-****La mayoría de los programas y bibliotecas se compilan, por defecto,
+La mayoría de los programas y bibliotecas se compilan, por defecto,
 con símbolos de depuración incluidos (con la opción *****-g***** de
 gcc). Esto significa que, al depurar un programa o biblioteca compilado
 con información de depuración, el depurador puede proporcionar no solo
 las direcciones de memoria, sino también los nombres de las rutinas y
-las variables.****
+las variables.
 
 ****La inclusión de estos símbolos de depuración amplía
 significativamente el programa o la biblioteca. A continuación, se
 muestran dos ejemplos del espacio que ocupan estos símbolos:****
 
-****• Un binario **bash** con símbolos de depuración: 1200 KB****
+• Un binario **bash** con símbolos de depuración: 1200 KB
 
-****• Un binario **bash** sin símbolos de depuración: 480 KB (60 %
-menor)****
+• Un binario **bash** sin símbolos de depuración: 480 KB (60 %
+menor)
 
-****• Archivos Glibc y GCC (*****/lib***** y *****/usr/lib*****) con
-símbolos de depuración: 87 MB****
+• Archivos Glibc y GCC (*****/lib***** y *****/usr/lib*****) con
+símbolos de depuración: 87 MB
 
-****• Archivos Glibc y GCC sin símbolos de depuración: 16 MB (82 %
-menor)****
+• Archivos Glibc y GCC sin símbolos de depuración: 16 MB (82 %
+menor)
 
-****El tamaño varía según el compilador y la biblioteca de C utilizados,
+El tamaño varía según el compilador y la biblioteca de C utilizados,
 pero un programa al que se le han eliminado los símbolos de depuración
 suele ser entre un 50 % y un 80 % menor que su equivalente sin ellos.
 Dado que la mayoría de los usuarios nunca utilizarán un depurador en el
 software de su sistema, se puede recuperar mucho espacio en disco
 eliminando estos símbolos. La siguiente sección muestra cómo eliminar
-todos los símbolos de depuración de los programas y bibliotecas.****
+todos los símbolos de depuración de los programas y bibliotecas.
 
-### **8.84. Eliminación**
+### 8.84. Eliminación
 
-****Esta sección es opcional. Si el usuario previsto no es programador y
+Esta sección es opcional. Si el usuario previsto no es programador y
 no planea depurar el software del sistema, el tamaño del sistema se
 puede reducir en unos 2 GB eliminando los símbolos de depuración y
 algunas entradas innecesarias de la tabla de símbolos de los binarios y
 bibliotecas. Esto no supone ningún inconveniente para un usuario típico
-de Linux.****
+de Linux.
 
-****La mayoría de las personas que utilizan los comandos mencionados a
+La mayoría de las personas que utilizan los comandos mencionados a
 continuación no experimentan ninguna dificultad. Sin embargo, es fácil
 cometer un error y dejar el nuevo sistema inutilizable. Por lo tanto,
 antes de ejecutar los comandos de **depuración **(**strip**)****,
 conviene realizar una copia de seguridad del sistema LFS en su estado
-actual.****
+actual.
 
-****Un comando de **depuración** con la opción
+Un comando de **depuración** con la opción
 *****\--strip-unneeded***** elimina todos los símbolos de depuración de
 un binario o biblioteca. También elimina todas las entradas de la tabla
 de símbolos que no necesita el enlazador (para bibliotecas estáticas) o
 el enlazador dinámico (para binarios enlazados dinámicamente y
-bibliotecas compartidas).****
-
+bibliotecas compartidas).
 ****Los símbolos de **depuracirón** de las bibliotecas seleccionadas se
 comprimen con Zlib y se conservan en archivos separados. Esa información
 de depuración es necesaria para ejecutar pruebas de regresión con
-*****valgrind***** o *****gdb***** posteriormente, en BLFS.****
+*****valgrind***** o *****gdb***** posteriormente, en BLFS.
 
-****Tenga en cuenta que **depurar **(**strip**)**** sobrescribirá el
+Tenga en cuenta que **depurar **(**strip**)**** sobrescribirá el
 archivo binario o de biblioteca que esté procesando. Esto puede bloquear
 los procesos que usan código o datos del archivo. Si el proceso que
 ejecuta strip se ve afectado, el binario o la biblioteca que se está
@@ -15815,129 +15780,121 @@ completamente inutilizable. Para evitar este problema, copiamos algunas
 bibliotecas y binarios en *****/tmp*****, los desmontamos allí y luego
 los reinstalamos con el comando **install**. (La entrada relacionada en
 la Sección 8.2.1, \"Problemas de actualización\", explica la
-justificación para usar el comando **install** aquí).****
+justificación para usar el comando **install** aquí).
 
-> +----------------------------------------------------------------------+
-> ---
 > **Nota**
-> ****El nombre del cargador ELF es ld-linux-x86-64.so.2 en sistemas
+> 
+> El nombre del cargador ELF es ld-linux-x86-64.so.2 en sistemas
 > de 64 bits y ld-linux.so.2 en sistemas de 32 bits. La **siguiente**
 > construcción selecciona el nombre correcto para la arquitectura
 > actual, excluyendo cualquier cosa que termine en g, en caso de que
-> los siguientes comandos ya se hayan ejecutado.****
-> +----------------------------------------------------------------------+
+> los siguientes comandos ya se hayan ejecutado.
 
-> +----------------------------------------------------------------------+
-> ---
 > **Importante**
-> ****Si hay algún paquete cuya versión es diferente a la especificada
+> 
+> Si hay algún paquete cuya versión es diferente a la especificada
 > en el libro (ya sea por un aviso de seguridad o por gusto personal),
 > podría ser necesario actualizar el nombre del archivo de la
 > biblioteca en save_usrlib o online_usrlib. De lo contrario, el
-> sistema podría quedar completamente inutilizable.****
-> +----------------------------------------------------------------------+
+> sistema podría quedar completamente inutilizable.
 
-> +----------------------------------------------------------------------+
-> ---
-> **save_usrlib=\"\$(cd /usr/lib; ls ld-linux\*\[\^g\])**
-> ** libc.so.6**
-> ** libthread_db.so.1**
-> ** libquadmath.so.0.0.0**
-> ** libstdc++.so.6.0.33**
-> ** libitm.so.1.0.0**
-> ** libatomic.so.1.2.0\"**
-> **cd /usr/lib**
-> **for LIB in \$save_usrlib; do**
-> ** objcopy \--only-keep-debug \--compress-debug-sections=zlib \$LIB
-> \$LIB.dbg**
-> ** cp \$LIB /tmp/\$LIB**
-> ** strip \--strip-unneeded /tmp/\$LIB**
-> ** objcopy \--add-gnu-debuglink=\$LIB.dbg /tmp/\$LIB**
-> ** install -vm755 /tmp/\$LIB /usr/lib**
-> ** rm /tmp/\$LIB**
-> **done**
-> **online_usrbin=\"bash find strip\"**
-> **online_usrlib=\"libbfd-2.44.so**
-> ** libsframe.so.1.0.0**
-> ** libhistory.so.8.2**
-> ** libncursesw.so.6.5**
-> ** libm.so.6**
-> ** libreadline.so.8.2**
-> ** libz.so.1.3.1**
-> ** libzstd.so.1.5.7**
-> ** \$(cd /usr/lib; find libnss\*.so\* -type f)\"**
-> **for BIN in \$online_usrbin; do**
-> ** cp /usr/bin/\$BIN /tmp/\$BIN**
-> ** strip \--strip-unneeded /tmp/\$BIN**
-> ** install -vm755 /tmp/\$BIN /usr/bin**
-> ** rm /tmp/\$BIN**
-> **done**
-> **for LIB in \$online_usrlib; do**
-> ** cp /usr/lib/\$LIB /tmp/\$LIB**
-> ** strip \--strip-unneeded /tmp/\$LIB**
-> ** install -vm755 /tmp/\$LIB /usr/lib**
-> ** rm /tmp/\$LIB**
-> **done**
-> **for i in \$(find /usr/lib -type f -name \\\*.so\* ! -name \\\*dbg)
-> \\**
-> ** \$(find /usr/lib -type f -name \\\*.a) \\**
-> ** \$(find /usr/{bin,sbin,libexec} -type f); do**
-> ** case \"\$online_usrbin \$online_usrlib \$save_usrlib\" in**
-> ** \*\$(basename \$i)\* )**
-> ** ;;**
-> ** \* ) strip \--strip-unneeded \$i**
-> ** ;;**
-> ** esac**
-> **done**
-> **unset BIN LIB save_usrlib online_usrbin online_usrlib**
-> +----------------------------------------------------------------------+
+> save_usrlib="$(cd /usr/lib; ls ld-linux*[^g])
+>  libc.so.6
+>  libthread_db.so.1
+>  libquadmath.so.0.0.0
+>  libstdc++.so.6.0.33
+>  libitm.so.1.0.0
+>  libatomic.so.1.2.0"
+> cd /usr/lib
+> for LIB in $save_usrlib; do
+>  objcopy --only-keep-debug --compress-debug-sections=zlib $LIB
+> $LIB.dbg
+>  cp $LIB /tmp/$LIB
+>  strip --strip-unneeded /tmp/$LIB
+>  objcopy --add-gnu-debuglink=$LIB.dbg /tmp/$LIB
+>  install -vm755 /tmp/$LIB /usr/lib
+>  rm /tmp/$LIB
+> done
+> online_usrbin="bash find strip"
+> online_usrlib="libbfd-2.44.so
+>  libsframe.so.1.0.0
+>  libhistory.so.8.2
+>  libncursesw.so.6.5
+>  libm.so.6
+>  libreadline.so.8.2
+>  libz.so.1.3.1
+>  libzstd.so.1.5.7
+>  $(cd /usr/lib; find libnss*.so* -type f)"
+> for BIN in $online_usrbin; do
+>  cp /usr/bin/\$BIN /tmp/$BIN
+>  strip --strip-unneeded /tmp/$BIN
+>  install -vm755 /tmp/$BIN /usr/bin
+>  rm /tmp/$BIN
+> done
+> for LIB in $online_usrlib; do
+>  cp /usr/lib/$LIB /tmp/$LIB
+>  strip --strip-unneeded /tmp/$LIB
+>  install -vm755 /tmp/$LIB /usr/lib
+>  rm /tmp/$LIB
+> done
+> for i in $(find /usr/lib -type f -name \\.so ! -name \\dbg) \
+>  $(find /usr/lib -type f -name \\.a) \
+>  $(find /usr/{bin,sbin,libexec} -type f); do
+>  case "$online_usrbin $online_usrlib $save_usrlib" in
+>  $(basename $i)* )
+>  ;;
+>   ) strip --strip-unneeded $i
+>  ;;
+>  esac
+> done
+> unset BIN LIB save_usrlib online_usrbin online_usrlib
 
-****Una gran cantidad de archivos se marcarán como errores porque no se
+Una gran cantidad de archivos se marcarán como errores porque no se
 reconoce su formato. Estas advertencias se pueden ignorar sin problemas.
-Indican que esos archivos son scripts, no binarios.****
+Indican que esos archivos son scripts, no binarios.
 
-### **8.85. Limpieza**
+### 8.85. Limpieza
 
 ****Finalmente, limpie algunos archivos sobrantes de las pruebas:****
 
   --------------------------
-  **rm -rf /tmp/{\*,.\*}**
+  rm -rf /tmp/{*,.*}
   --------------------------
 
-****También hay varios archivos en los directorios /usr/lib y
+También hay varios archivos en los directorios /usr/lib y
 /usr/libexec con la extensión .la. Estos son archivos \"libtool\". En un
 sistema Linux moderno, los archivos .la de libtool solo son útiles para
 libltdl. No se espera que libltdl cargue ninguna biblioteca en LFS, y se
 sabe que algunos archivos .la pueden interrumpir la compilación de
-paquetes BLFS. Elimine esos archivos ahora:****
+paquetes BLFS. Elimine esos archivos ahora:
 
   ------------------------------------------------------------
-  **find /usr/lib /usr/***libexec*** -name \\\*.la -delete**
+  find /usr/lib /usr/libexec -name \\*.la -delete
   ------------------------------------------------------------
 
-****Para obtener más información sobre los archivos comprimidos de
+Para obtener más información sobre los archivos comprimidos de
 libtool, consulte la sección de *****BLFS \"Acerca de los archivos
-comprimidos de libtool (.la)*****\".****
+comprimidos de libtool (.la)*****\".
 
-****El compilador creado en los capítulos 6 y 7 aún está parcialmente
-instalado y ya no es necesario. Elimínelo con:****
+El compilador creado en los capítulos 6 y 7 aún está parcialmente
+instalado y ya no es necesario. Elimínelo con:
 
   ---------------------------------------------------------------------------------
-  **find /usr -depth -***name*** \$(uname -m)-lfs-linux-gnu\\\* \| xargs rm -rf**
+  find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf
   ---------------------------------------------------------------------------------
 
-****Finalmente, elimine la cuenta de usuario temporal \"tester\" creada
-al principio del capítulo anterior.****
+Finalmente, elimine la cuenta de usuario temporal \"tester\" creada
+al principio del capítulo anterior.
 
   -----------------------
-  **userdel -r tester**
+  userdel -r tester
   -----------------------
 
 ## Capítulo 9. Configuración del sistema <a name="capitulo-9"></a>
 
 ## 9.1. Introducción
 
-****Arrancar un sistema Linux implica varias tareas. El proceso debe
+Arrancar un sistema Linux implica varias tareas. El proceso debe
 montar sistemas de archivos virtuales y reales, inicializar
 dispositivos, comprobar la integridad de los sistemas de archivos,
 montar y activar particiones o archivos de intercambio, configurar el
@@ -15945,147 +15902,141 @@ reloj del sistema, activar la red, iniciar los daemons requeridos por el
 sistema y realizar cualquier otra tarea personalizada especificada por
 el usuario. Este proceso debe organizarse para garantizar que las tareas
 se realicen en el orden correcto y se ejecuten lo más rápido
-posible.****
+posible.
 
-### **9.1.1. System V**
+### 9.1.1. System V
 
-****System V es el proceso de arranque clásico que se ha utilizado en
+System V es el proceso de arranque clásico que se ha utilizado en
 Unix y sistemas similares a Unix, como Linux, desde aproximadamente
 1983. Consiste en un pequeño programa, init, que configura procesos
 básicos como el **inicio de sesión** (mediante getty) y ejecuta un
 script. Este script, generalmente llamado rc, controla la ejecución de
 un conjunto de scripts adicionales que realizan las tareas necesarias
-para inicializar el sistema.****
+para inicializar el sistema.
 
-****El programa init se controla mediante el archivo
+El programa init se controla mediante el archivo
 *****/etc/inittab***** y se organiza en niveles de ejecución que el
-usuario puede seleccionar.****
+usuario puede seleccionar.
 
-****En LFS, se utilizan de la siguiente manera:****
+En LFS, se utilizan de la siguiente manera:
 
-> +--------------------------------------------------------------------+
-> ---
-> **0 --- detener**
-> **1 --- Modo monousuario**
-> **2 --- Definible por el usuario**
-> **3 --- Modo multiusuario completo**
-> **4 --- Definible por el usuario**
-> **5 --- Modo multiusuario completo con administrador de pantalla**
-> **6 --- reiniciar**
-> +--------------------------------------------------------------------+
+> 0 --- detener
+> 1 --- Modo monousuario
+> 2 --- Definible por el usuario
+> 3 --- Modo multiusuario completo
+> 4 --- Definible por el usuario
+> 5 --- Modo multiusuario completo con administrador de pantalla
+> 6 --- reiniciar**
 
-**\
-**El nivel de ejecución predeterminado habitual es 3 o 5.****
+El nivel de ejecución predeterminado habitual es 3 o 5.
 
-### **Ventajas**
+### Ventajas
 
-****• Sistema establecido y bien comprendido.****
+• Sistema establecido y bien comprendido.
+• Fácil de personalizar.
 
-****• Fácil de personalizar.****
+### Desventajas
 
-### **Desventajas**
-
-****• Puede ser más lento al arrancar. Un sistema LFS básico de
+• Puede ser más lento al arrancar. Un sistema LFS básico de
 velocidad media tarda entre 8 y 12 segundos, donde el tiempo de arranque
 se mide desde el primer mensaje del kernel hasta la solicitud de inicio
 de sesión. La conectividad de red suele establecerse unos 2 segundos
-después de la solicitud de inicio de sesión.****
+después de la solicitud de inicio de sesión.
 
-****• Procesamiento en serie de las tareas de arranque. Esto está
+• Procesamiento en serie de las tareas de arranque. Esto está
 relacionado con el punto anterior. Un retraso en cualquier proceso, como
 una comprobación del sistema de archivos, retrasará todo el proceso de
-arranque.****
+arranque.
 
-****• No admite directamente funciones avanzadas como grupos de control
-(cgroups) ni programación de reparto equitativo por usuario.****
+• No admite directamente funciones avanzadas como grupos de control
+(cgroups) ni programación de reparto equitativo por usuario.
 
-****• Agregar scripts requiere decisiones de secuenciación estáticas y
-manuales.****
+• Agregar scripts requiere decisiones de secuenciación estáticas y
+manuales.
 
-## **9.2. LFS-Bootscripts-20240825**
+## 9.2. LFS-Bootscripts-20240825
 
-****El paquete LFS-Bootscripts contiene un conjunto de scripts para
+El paquete LFS-Bootscripts contiene un conjunto de scripts para
 iniciar/detener el sistema LFS al arrancar/apagar. Los archivos de
 configuración y los procedimientos necesarios para personalizar el
-proceso de arranque se describen en las siguientes secciones.****
+proceso de arranque se describen en las siguientes secciones.
 
-****Tiempo de compilación aproximado: ****menos de 0,1 SBU****
+Tiempo de compilación aproximado: menos de 0,1 SBU
+Espacio en disco necesario: 244 KB
 
-****Espacio en disco necesario: ****244 KB****
+### 9.2.1. Instalación de LFS-Bootscripts
 
-### **9.2.1. Instalación de LFS-Bootscripts**
-
-****Instalar el paquete:****
+Instalar el paquete:
 
   ------------------
-  **make install**
+  make install
   ------------------
 
-### **9.2.2. Contenido de los scripts de arranque de LFS**
+### 9.2.2. Contenido de los scripts de arranque de LFS
 
 **Scripts instalados**: checkfs, cleanfs, console, functions, halt,
 ifdown, ifup, localnet, modules, mountfs, mountvirtfs, network, rc,
 reboot, sendsignals, setclock, ipv4- static, swap, sysctl, sysklogd,
-template, udev y udev_retry****
+template, udev y udev_retry
 
 **Directorios instalados**: /etc/rc.d, /etc/init.d (enlace simbólico),
-/etc/sysconfig, /lib/services, /lib/lsb (enlace simbólico)****
+/etc/sysconfig, /lib/services, /lib/lsb (enlace simbólico)
 
-### **Descripciones breves**
+### Descripciones breves
 
 **checkfs** Comprueba la integridad de los sistemas de archivos antes de
 montarlos (con excepción de los sistemas de archivos de registro y
-basados en red).****
+basados en red).
 
 **cleanfs ** Elimina los archivos que no deben conservarse entre
 reinicios, como los de *****/run/***** y *****/var/lock/*****; recrea
 *****/run/utmp***** y elimina los archivos *****/etc/nologin,
-/fastboot***** y /forcefsck posiblemente presentes.****
+/fastboot***** y /forcefsck posiblemente presentes.
 
 **console** Carga la tabla de mapas de teclas correcta para la
 distribución de teclado deseada. También establece la fuente de la
-pantalla.****
+pantalla.
 
 **functions** Contiene funciones comunes, como la comprobación de
-errores y estado, que utilizan varios scripts de arranque.****
+errores y estado, que utilizan varios scripts de arranque.
 
-**halt** Detiene el sistema.****
+**halt** Detiene el sistema.
 
-**ifdown ** Detiene un dispositivo de red.****
+**ifdown** Detiene un dispositivo de red.
 
-**ifup** Inicializa un dispositivo de red.****
+**ifup** Inicializa un dispositivo de red.
 
 **localnet** Configura el nombre de host del sistema y el dispositivo de
-bucle invertido local.****
+bucle invertido local.
 
 **modules** Carga los módulos del kernel listados en
 *****/etc/sysconfig/modules*****, utilizando los argumentos que también
-se proporcionan allí.****
+se proporcionan allí.
 
 **mountfs** Monta todos los sistemas de archivos, excepto aquellos que
-están marcados como *****noauto***** o que están basados en red.****
+están marcados como *****noauto***** o que están basados en red.
 
 **mountvirtfs** Monta sistemas de archivos virtuales del kernel, como
-*****proc*****.****
+*****proc*****.
 
 **network** Configura interfaces de red, como tarjetas de red, y
-configura la puerta de enlace predeterminada (cuando corresponda).****
+configura la puerta de enlace predeterminada (cuando corresponda).
 
 **rc** El script de control de nivel de ejecución maestro. Es
 responsable de ejecutar todos los demás scripts de arranque uno por uno,
 en una secuencia determinada por los nombres de los enlaces simbólicos a
-esos otros scripts de arranque.****
+esos otros scripts de arranque.
 
-**reboot** Reinicia el sistema.****
+**reboot** Reinicia el sistema.
 
 **sendsignals** Se asegura de que todos los procesos finalicen antes de
-que el sistema se reinicie o se detenga.****
+que el sistema se reinicie o se detenga.
 
 **setclock** Reinicia el reloj del sistema a la hora local si el reloj
-del hardware no está configurado en UTC.****
+del hardware no está configurado en UTC.
 
 **ipv4-static** Proporciona la funcionalidad necesaria para asignar una
-dirección IP estática a una interfaz de red.****
+dirección IP estática a una interfaz de red.
 
 **swap** Habilita y deshabilita archivos de intercambio y particiones.
 
@@ -16356,9 +16307,8 @@ Puede encontrar documentación adicional útil en los siguientes sitios:
 
 <http://www.kroah.com/linux/talks/ols_2003_udev_paper/Reprint-Kroah-Hartman-OLS2003.pdf>
 
-• El sistema de archivos *sysfs:*
+• El sistema de archivos *sysfs*:
 
-*
 *<https://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/ols-2005/mochel.pdf>
 
 ## 9.4. Administración de dispositivos
@@ -16409,15 +16359,13 @@ asignó a cada dispositivo de red:
   cat /etc/udev/rules.d/70-persistent-net.rules
   -----------------------------------------------
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > En algunos casos, como cuando se asignan direcciones MAC manualmente
 > a una tarjeta de red o en un entorno virtual como Qemu o Xen, es
 > posible que el archivo de reglas de red no se genere porque las
 > direcciones no se asignan de forma consistente. En estos casos, este
 > método no se puede utilizar.
-> +----------------------------------------------------------------------+
 
 El archivo comienza con un bloque de comentarios, seguido de dos líneas
 para cada NIC. La primera línea de cada NIC es una descripción comentada
@@ -16472,12 +16420,9 @@ con una política de asignación alternativa vacía, anulando así el
 archivo de configuración predeterminado
 */usr/lib/udev/network/99-default.link*:
 
-> +------------------------------------------------------+
-> ---
-> sed -e \'/\^AlternativeNamesPolicy/s/=.\*\$/=/\' \\
-> /usr/lib/udev/network/99-*default.link* \\
-> \> /etc/udev/network/99-default.link
-> +------------------------------------------------------+
+> sed -e '/^AlternativeNamesPolicy/s/=.*$=' \
+> /usr/lib/udev/network/99-*default.link* \
+> > /etc/udev/network/99-default.link
 
 ### 9.4.2. Enlaces simbólicos de CD-ROM
 
@@ -16514,16 +16459,14 @@ conectores, debería usar el modo \"por ruta\".
 Si su unidad admite cualquiera de los dos tipos de cambios, elija un
 modo según el tipo de cambio que prevea que ocurra con mayor frecuencia.
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> **Importante**
+> 
 > Los dispositivos externos (por ejemplo, una unidad de CD conectada
 > por USB) no deben usar la persistencia por ruta, ya que cada vez que
 > se conectan a un nuevo puerto externo, su ruta física cambia. Todos
 > los dispositivos conectados externamente tendrán este problema si se
 > escriben reglas de udev para reconocerlos por su ruta física; el
 > problema no se limita a las unidades de CD y DVD.
-> +----------------------------------------------------------------------+
 
 Si desea ver los valores que usarán los scripts de udev, para el
 dispositivo de CD-ROM correspondiente, busque el directorio
@@ -16542,11 +16485,8 @@ adapta a su situación, puede realizar la siguiente modificación en el
 archivo */etc/udev/rules.d/83-cdrom-symlinks.rules*, como se indica a
 continuación (donde mode es \"by-id\" o \"by-path\"):
 
-> +---------------------------------------------------------------+
-> ---
-> sed -e \'s/\"*write_cd_rules*\"/\"write_cd_rules mode\"/\' \\
+> sed -e 's/"*write_cd_rules*"/"write_cd_rules mode"/' \
 > -i /etc/udev/rules.d/83-cdrom-symlinks.rules
-> +---------------------------------------------------------------+
 
 Tenga en cuenta que no es necesario crear los archivos de reglas ni los
 enlaces simbólicos en este momento, ya que ha montado mediante enlace el
@@ -16594,17 +16534,13 @@ funcionan):
 
 Luego, escriba las reglas que creen los enlaces simbólicos, por ejemplo:
 
-> +----------------------------------------------------------------------+
-> ---
-> cat \> /etc/udev/rules.d/83-duplicate_devs.rules \<\< \"EOF\"
-> \# Enlaces simbólicos persistentes para la cámara web y el
-> sintonizador
-> KERNEL==\"video\*\", ATTRS{idProduct}==\"1910\",
-> ATTRS{idVendor}==\"0d81\", SYMLINK+=\"webcam\"
-> KERNEL==\"video\*\", ATTRS{device}==\"0x036f\",
-> ATTRS{vendor}==\"0x109e\", SYMLINK+=\"tvtuner\"
+> cat > /etc/udev/rules.d/83-duplicate_devs.rules << "EOF"
+> # Enlaces simbólicos persistentes para la cámara web y el sintonizador
+> KERNEL=="video*", ATTRS{idProduct}=="1910",
+> ATTRS{idVendor}=="0d81", SYMLINK+="webcam"
+> KERNEL=="video*", ATTRS{device}=="0x036f",
+> ATTRS{vendor}=="0x109e", SYMLINK+="tvtuner"
 > EOF
-> +----------------------------------------------------------------------+
 
 El resultado es que los dispositivos */dev/video0* y */dev/video1*
 siguen haciendo referencia aleatoriamente a sintonizador y la cámara web
@@ -16624,9 +16560,8 @@ la interfaz (p. ej., eth0) suele ser adecuado. Cada archivo contiene los
 atributos de una interfaz, como su(s) dirección(es) IP, máscaras de
 subred, etc. La raíz del nombre del archivo debe ser *ifconfig*.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Si no se utilizó el procedimiento de la sección anterior, udev
 > asignará nombres de interfaz a la tarjeta de red según las
 > características físicas del sistema, como enp2s1. Si no está seguro
@@ -16639,15 +16574,12 @@ subred, etc. La raíz del nombre del archivo debe ser *ifconfig*.
 > Por lo tanto, los nombres de las interfaces en el sistema LFS no
 > siempre se pueden determinar ejecutando estos comandos en la
 > distribución del host,* ni siquiera en el entorno chroot*.
-> +----------------------------------------------------------------------+
 
 El siguiente comando crea un archivo de ejemplo para el dispositivo eth0
 con una dirección IP estática:
 
-> +-----------------------------------+
-> ---
 > cd /etc/sysconfig/
-> cat \> ifconfig.eth0 \<\< \"EOF\"
+> cat > ifconfig.eth0 << "EOF"
 > ONBOOT=yes
 > IFACE=eth0
 > SERVICE=ipv4-static
@@ -16656,7 +16588,6 @@ con una dirección IP estática:
 > PREFIX=24
 > BROADCAST=192.168.1.255
 > EOF
-> +-----------------------------------+
 
 Los valores en cursiva deben modificarse en cada archivo para configurar
 las interfaces correctamente.
@@ -16705,16 +16636,13 @@ lograrlo es introducir la dirección IP del servidor DNS, disponible a
 través del ISP o del administrador de red, en */etc/resolv.conf*. Cree
 el archivo ejecutando lo siguiente:
 
-> +--------------------------------------------------------------------+
-> ---
-> cat \> /etc/resolv.conf \<\< \"EOF\"
-> \# Begin /etc/resolv.conf
-> domain \<S*u nombre de dominio*\>
-> nameserver \<*Dirección IP de su servidor de nombres principal*\>
-> nameserver \<*Dirección IP de su servidor de nombres secundario*\>
-> \# End /etc/resolv.conf
+> cat > /etc/resolv.conf << "EOF"
+> # Begin /etc/resolv.conf
+> domain <S*u nombre de dominio*\>
+> nameserver <*Dirección IP de su servidor de nombres principal*>
+> nameserver <*Dirección IP de su servidor de nombres secundario*>
+> # End /etc/resolv.conf
 > EOF
-> +--------------------------------------------------------------------+
 
 La instrucción *domain* puede omitirse o reemplazarse con una
 instrucción de *búsqueda*. Consulte la página del manual de resolv.conf
@@ -16727,11 +16655,9 @@ solo necesita o desea un servidor DNS, elimine la segunda línea del
 servidor de nombres del archivo. La dirección IP también puede ser la de
 un enrutador en la red local.
 
-> +--------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Las direcciones DNS IPv4 públicas de Google son 8.8.8.8 y 8.8.4.4.
-> +--------------------------------------------------------------------+
 
 ### 9.5.3. Configuración del nombre de host del sistema
 
@@ -16742,7 +16668,7 @@ Cree el archivo */etc/hostname* e introduzca un nombre de host
 ejecutando:
 
   -------------------------------------
-  echo \"\<*lfs*\>\" \> /etc/hostname
+  echo "<*lfs*>" > /etc/hostname
   -------------------------------------
 
 \<lfs\> debe reemplazarse por el nombre asignado al equipo. No
@@ -16766,13 +16692,10 @@ asignadas; la mayoría de los usuarios no lo tienen), asegúrese de que la
 dirección IP esté dentro del rango de direcciones IP de la red privada.
 Los rangos válidos son:
 
-> +-------------------------------------------------------+
-> ---
 > Rango de direcciones de red privada Prefijo normal
 > 10.0.0.1 - 10.255.255.254 8
 > 172.x.0.1 - 172.x.*255.254* 16
 > 192.168.y.1 - 192.168.y.254 24
-> +-------------------------------------------------------+
 
 \"x\" puede ser cualquier número entre 16 y 31. \"y\" puede ser
 cualquier número entre 0 y 255.
@@ -16790,19 +16713,16 @@ necesario para que ciertos programas, como los MTA, funcionen
 correctamente. Para ello, se puede utilizar un FQDN especial,
 *localhost.localdomain*. Cree el archivo */etc/hosts* ejecutando:
 
-> +------------------------------------------------------------------+
-> ---
-> cat \> /etc/hosts \<\< \"EOF\"
-> \# Begin /etc/hosts
+> cat > /etc/hosts << "EOF"
+> # Begin /etc/hosts
 > 127.0.0.1 localhost.localdomain localhost
-> 127.0.1.1 \<FQDN\> \<HOSTNAME\>
-> \<192.168.1.2\> \<FQDN\> \<HOSTNAME\> \[alias1\] \[alias2 \...\]
+> 127.0.1.1 <FQDN> <HOSTNAME>
+> <192.168.1.2> <FQDN> <HOSTNAME> [alias1] [alias2 ...]
 > ::1 localhost ip6-localhost ip6-loopback
 > ff02::1 ip6-allnodes
 > ff02::2 ip6-allrouters
 > \# End /etc/hosts
 > EOF
-> +------------------------------------------------------------------+
 
 Los valores *\<192.168.1.2\>*, *\<FQDN\>* y *\<HOSTNAME\>* deben
 modificarse para usos o requisitos específicos (si un administrador de
@@ -16837,8 +16757,6 @@ apagarse. El nivel de ejecución predeterminado es 3. A continuación, se
 detallan los diferentes niveles de ejecución tal como se implementan en
 LFS:
 
-> +----------------------------------------------------------------------+
-> ---
 > 0: detener el equipo
 > 1: modo monousuario
 > 2: reservado para personalización; en caso contrario, igual que 3
@@ -16847,17 +16765,14 @@ LFS:
 > 5: igual que 4, se suele usar para iniciar sesión mediante interfaz
 > gráfica (como **gdm** de GNOME o **lxdm** de LXDE)
 > 6: reiniciar el equipo
-> +----------------------------------------------------------------------+
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Clásicamente, el nivel de ejecución 2 anterior se definía como
 > \"modo multiusuario sin conexión de red\", pero esto solo ocurría
 > hace muchos años, cuando varios usuarios podían conectarse a un
 > sistema mediante puertos serie. En el entorno actual, esto no tiene
 > sentido, y ahora decimos que está \"reservado\".
-> +----------------------------------------------------------------------+
 
 ### 9.6.2. Configuración de SysVinit
 
@@ -16866,10 +16781,8 @@ Durante la inicialización del núcleo, el primer programa que se ejecuta
 programa lee el archivo de inicialización */etc/inittab*. Cree este
 archivo con:
 
-> +--------------------------------------------------+
-> ---
-> cat \> /etc/inittab \<\< \"EOF\"
-> \# Begin /etc/inittab
+> cat > /etc/inittab << "EOF"
+> # Begin /etc/inittab
 > id:3:initdefault:
 > si::sysinit:/etc/rc.d/init.d/rc S
 > l0:0:wait:/etc/rc.d/init.d/rc 0
@@ -16882,15 +16795,14 @@ archivo con:
 > ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
 > su:S06:once:/sbin/sulogin
 > s1:1:respawn:/sbin/sulogin
-> 1:2345:respawn:/sbin/agetty \--noclear tty1 9600
+> 1:2345:respawn:/sbin/agetty --noclear tty1 9600
 > 2:2345:respawn:/sbin/agetty tty2 9600
 > 3:2345:respawn:/sbin/agetty tty3 9600
 > 4:2345:respawn:/sbin/agetty tty4 9600
 > 5:2345:respawn:/sbin/agetty tty5 9600
 > 6:2345:respawn:/sbin/agetty tty6 9600
-> \# Fin de /etc/inittab
+> # Fin de /etc/inittab
 > EOF
-> +--------------------------------------------------+
 
 Una explicación de esto El archivo de inicialización se encuentra en la
 página del manual de inittab. En LFS, el comando clave es **rc**. El
@@ -17026,29 +16938,24 @@ hardware *NO* está configurado en hora UTC.
 
 Cree un nuevo archivo */etc/sysconfig/clock* ejecutando lo siguiente:
 
-> +-------------------------------------------------------------------+
-> ---
-> cat \> /etc/sysconfig/clock \<\< \"EOF\"
-> \# Begin /etc/sysconfig/clock
+> cat > /etc/sysconfig/clock << "EOF"
+> # Begin /etc/sysconfig/clock
 > UTC=1
-> \# Configure aquí las opciones que necesite para hwclock,
-> \# como el tipo de reloj *de* hardware de la máquina para Alphas.
+> # Configure aquí las opciones que necesite para hwclock,
+> # como el tipo de reloj *de* hardware de la máquina para Alphas.
 > CLOCKPARAMS=
-> \# End /etc/sysconfig/clock
+> # End /etc/sysconfig/clock
 > EOF
-> +-------------------------------------------------------------------+
 
 En <https://www.linuxfromscratch.org/hints/downloads/files/time.tx>t se
 encuentra una buena sugerencia sobre cómo gestionar la hora en LFS.
 Explica aspectos como las zonas horarias, la hora UTC y la variable de
 entorno TZ.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Los parámetros CLOCKPARAMS y UTC también se pueden configurar en el
 > archivo */etc/sysconfig/rc.site*.
-> +----------------------------------------------------------------------+
 
 ### 9.6.5. Configuración de la consola de Linux
 
@@ -17145,59 +17052,47 @@ comillas Unicode izquierdas/derechas y el guion Unicode inglés). Por lo
 tanto, establezca una de ellas, por ejemplo, Lat2-Terminus16.psfu.gz,
 como la fuente de consola predeterminada.
 
-> +--------------------------------------------+
-> ---
-> cat \> /etc/sysconfig/console \<\< \"EOF\"
-> \# Begin /etc/sysconfig/*console*
-> UNICODE=\"1\"
-> FONT=\"Lat2-Terminus16\"
-> \# End /etc/sysconfig/console
+> cat > /etc/sysconfig/console << "EOF"
+> # Begin /etc/sysconfig/*console*
+> UNICODE="1"
+> FONT="Lat2-Terminus16"
+> # End /etc/sysconfig/console
 > EOF
-> +--------------------------------------------+
 
 • Para una configuración no Unicode, generalmente solo se necesitan las
 variables KEYMAP y FONT. Por ejemplo, para una configuración polaca, se
 usaría:
 
-> +--------------------------------------------+
-> ---
-> cat \> /etc/sysconfig/console \<\< \"EOF\"
-> \# Begin /etc/sysconfig/console
-> KEYMAP=\"pl2\"
-> FONT=\"lat2a-16 -m 8859-2\"
-> \# End /etc/sysconfig/console
+> cat > /etc/sysconfig/console << "EOF"
+> # Begin /etc/sysconfig/console
+> KEYMAP="pl2"
+> FONT="lat2a-16 -m 8859-2"
+> # End /etc/sysconfig/console
 > EOF
-> +--------------------------------------------+
 
 • Como se mencionó anteriormente, a veces es necesario ajustar
 ligeramente el mapa de teclas estándar. El siguiente ejemplo añade el
 símbolo del euro al mapa de teclas alemán:
 
-> +--------------------------------------------+
-> ---
-> cat \> /etc/sysconfig/console \<\< \"EOF\"
-> \# Begin /etc/sysconfig/console
-> KEYMAP=\"de-latin1\"
-> KEYMAP_CORRECTIONS=\"euro2\"
-> FONT=\"lat0-16 -m 8859-*15*\"
-> UNICODE=\"1\"
-> \# End /etc/sysconfig/console
+> cat > /etc/sysconfig/console << "EOF"
+> # Begin /etc/sysconfig/console
+> KEYMAP="de-latin1"
+> KEYMAP_CORRECTIONS="euro2"
+> FONT="lat0-16 -m 8859-*15*"
+> UNICODE="1"
+> # End /etc/sysconfig/console
 > EOF
-> +--------------------------------------------+
 
 • El siguiente es un ejemplo con Unicode habilitado para búlgaro, donde
 existe un mapa de teclas UTF-8 estándar:
 
-> +--------------------------------------------+
-> ---
-> cat \> /etc/sysconfig/console \<\< \"EOF\"
-> \# Begin /etc/sysconfig/console
-> UNICODE=\"1\"
-> KEYMAP=\"bg_bds-utf8\"
-> FONT=\"LatArCyrHeb-16\"
-> \# End /etc/sysconfig/console
+> cat > /etc/sysconfig/console << "EOF"
+> # Begin /etc/sysconfig/console
+> UNICODE="1"
+> KEYMAP="bg_bds-utf8"
+> FONT="LatArCyrHeb-16"
+> # End /etc/sysconfig/console
 > EOF
-> +--------------------------------------------+
 
 • Debido al uso de un En el ejemplo anterior, la fuente LatArCyrHeb-16
 de 512 glifos ya no permite colores brillantes en la consola de Linux a
@@ -17206,32 +17101,26 @@ framebuffer y se puede prescindir de caracteres que no pertenezcan al
 idioma, aún es posible usar una fuente específica del idioma de 256
 glifos, como se ilustra a continuación:
 
-> +--------------------------------------------+
-> ---
-> cat \> /etc/sysconfig/console \<\< \"EOF\"
-> \# Begin /etc/sysconfig/*console*
-> UNICODE=\"1\"
-> KEYMAP=\"bg_bds-utf8\"
-> FONT=\"cyr-sun16\"
-> \# End /etc/sysconfig/console
+> cat > /etc/sysconfig/console << "EOF"
+> # Begin /etc/sysconfig/*console*
+> UNICODE="1"
+> KEYMAP="bg_bds-utf8"
+> FONT="cyr-sun16"
+> # End /etc/sysconfig/console
 > EOF
-> +--------------------------------------------+
 
 • El siguiente ejemplo ilustra la autoconversión del mapa de teclas de
 ISO-8859-15 a UTF-8 y la habilitación de teclas muertas en modo Unicode:
 
-> +--------------------------------------------+
-> ---
-> cat \> /etc/sysconfig/console \<\< \"EOF\"
-> \# Begin /etc/sysconfig/console
-> UNICODE=\"1\"
-> KEYMAP=\"de-latin1\"
-> KEYMAP_CORRECTIONS=\"euro2\"
-> LEGACY_CHARSET=\"iso-8859-15\"
-> FONT=\"LatArCyrHeb-16 -m 8859-15\"
-> \# Fin de /etc/sysconfig/console
+> cat > /etc/sysconfig/console << "EOF"
+> # Begin /etc/sysconfig/console
+> UNICODE="1"
+> KEYMAP="de-latin1"
+> KEYMAP_CORRECTIONS="euro2"
+> LEGACY_CHARSET="iso-8859-15"
+> FONT="LatArCyrHeb-16 -m 8859-15"
+> # Fin de /etc/sysconfig/console
 > EOF
-> +--------------------------------------------+
 
 • Algunos mapas de teclas tienen teclas muertas (es decir, teclas que no
 producen un carácter por sí mismas, sino que acentúan el carácter
@@ -17254,9 +17143,8 @@ que necesiten estos idiomas deben instalar el sistema X Window, fuentes
 que cubran los rangos de caracteres necesarios y el método de entrada
 adecuado (por ejemplo, SCIM admite una amplia variedad de idiomas).
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El archivo */etc/sysconfig/console* solo controla la localización de
 > la consola de texto de Linux. No tiene nada que ver con la
 > configuración de la distribución de teclado ni las fuentes de
@@ -17264,7 +17152,6 @@ adecuado (por ejemplo, SCIM admite una amplia variedad de idiomas).
 > una consola serie. En tales situaciones, las limitaciones
 > mencionadas en los dos últimos puntos de la lista anterior no se
 > aplican.
-> +----------------------------------------------------------------------+
 
 ### 9.6.6. Creación de archivos durante el arranque
 
@@ -17285,10 +17172,10 @@ SYSKLOGD_PARMS con el valor deseado. Por ejemplo, para eliminar todos
 los parámetros, establezca la variable en un valor nulo:
 
   -------------------
-  *SYSKLOGD_PARMS*=
+  SYSKLOGD_PARMS=
   -------------------
 
-Consulte **man syslogd **para obtener más opciones.
+Consulte **man syslogd** para obtener más opciones.
 
 ### 9.6.8. El archivo rc.site
 
@@ -17306,8 +17193,6 @@ permitirá la ejecución selectiva de scripts de arranque. Otras opciones
 se describen en los comentarios del archivo. La versión predeterminada
 del archivo es la siguiente:
 
-> +----------------------------------------------------------------------+
-> ---
 > \# rc.site
 > \# Optional parameters for boot scripts.
 > \# Distro Information
@@ -17384,7 +17269,6 @@ del archivo es la siguiente:
 > #KEYMAP_CORRECTIONS=\"euro2\"
 > #FONT=\"lat0-16 -m 8859-15\"
 > #LEGACY_CHARSET=
-> +----------------------------------------------------------------------+
 
 ### 9.6.8.1. Personalización de los scripts de arranque y apagado
 
@@ -17497,13 +17381,10 @@ Esto da como resultado una configuración regional final de
 encontrada mediante la heurística anterior se pruebe antes de agregarla
 a los archivos de inicio de Bash:
 
-> +-------------------------------------------------+
-> ---
 > LC_ALL=\<locale name\> locale language
 > LC_ALL=\<locale name\> locale charmap
 > LC_ALL=\<locale name\> locale *int_curr_symbol*
 > LC_ALL=\<locale name\> locale int_prefix
-> +-------------------------------------------------+
 
 Los comandos anteriores deben imprimir el nombre del idioma, la
 codificación de caracteres utilizada por la configuración regional, la
@@ -17550,21 +17431,18 @@ regional deseada, pero configure la configuración regional *C.UTF-8* si
 se ejecuta en la consola de Linux (para evitar que los programas
 muestren caracteres que la consola de Linux no puede representar).
 
-> +------------------------------------------------------+
-> ---
-> cat \> /etc/profile \<\< \"EOF\"
-> \# Begin /etc/profile
-> for i in \$(locale); do
-> unset \${i%=\*}
+> cat > /etc/profile << "EOF"
+> # Begin /etc/profile
+> for i in $(locale); do
+> unset ${i%=*}
 > done
-> if \[\[ \"\$TERM\" = linux \]\]; then
+> if [[ "$TERM" = linux ]]; then
 > export LANG=C.UTF-8
 > else
-> export LANG=\<ll\>\_\<CC\>.\<charmap\>\<@modifiers\>
+> export LANG=<ll>_<CC>.<charmap><@modifiers>
 > fi
-> \# End /etc/profile
+> # End /etc/profile
 > EOF
-> +------------------------------------------------------+
 
 Las configuraciones regionales *C* (predeterminada) y *en_US*
 (recomendada para usuarios de inglés estadounidense) son diferentes. *C*
@@ -17603,40 +17481,38 @@ comentarios que explican la función de las distintas opciones. Tenga en
 cuenta que los comentarios no pueden estar en la misma línea que los
 comandos. Cree el archivo con el siguiente comando:
 
-> +---------------------------------------------------------------------+
-> ---
-> cat \> /etc/inputrc \<\< \"EOF\"
-> \# Begin /etc/inputrc
-> \# Modified by Chris Lynn \<<roryo@roryo.dynup.net>\>
-> \# Allow the command prompt to wrap to the next line
+> cat > /etc/inputrc << "EOF"
+> # Begin /etc/inputrc
+> # Modified by Chris Lynn \<<roryo@roryo.dynup.net>\>
+> # Allow the command prompt to wrap to the next line
 > set horizontal-scroll-mode Off
-> \# Enable 8-bit input
+> # Enable 8-bit input
 > set meta-flag On
 > set input-meta On
-> \# Turns off 8th bit stripping
+> # Turns off 8th bit stripping
 > set convert-meta Off
-> \# Keep the 8th bit for display
+> # Keep the 8th bit for display
 > set output-meta On
-> \# none, visible or audible
+> # none, visible or audible
 > set bell-style none
-> \# All of the following map the escape sequence of the value
-> \# contained in the 1st argument to the readline specific functions
-> \"\\eOd\": backward-word
-> \"\\eOc\": forward-word
-> \# for linux console
-> \"\\e\[1\~\": beginning-of-line
-> \"\\e\[4\~\": end-of-line
-> \"\\e\[5\~\": beginning-of-history
-> \"\\e\[6\~\": end-of-history
-> \"\\e\[3\~\": delete-char
-> \"\\e\[2\~\": quoted-insert
-> \# for xterm
-> \"\\eOH\": beginning-of-line
-> \"\\eOF\": end-of-line
-> \# for Konsole
-> \"\\e\[H\": beginning-of-line
-> \"\\e\[F\": end-of-line
-> \# End /etc/inputrc
+> # All of the following map the escape sequence of the value
+> # contained in the 1st argument to the readline specific functions
+> "\eOd": backward-word
+> "\eOc": forward-word
+> # for linux console
+> "\e[1~": beginning-of-line
+> "\e[4~": end-of-line
+> "\e[5~": beginning-of-history
+> "\e[6~": end-of-history
+> "\e[3~": delete-char
+> "\e[2~": quoted-insert
+> # for xterm
+> "\eOH": beginning-of-line
+> "\eOF": end-of-line
+> # for Konsole
+> "\e[H": beginning-of-line
+> "\e[F": end-of-line
+> # End /etc/inputrc
 > EOF
 > +---------------------------------------------------------------------+
 
@@ -17657,15 +17533,12 @@ de accesos si no encuentra */etc/shells*, o para los daemons FTP, que
 tradicionalmente impiden el acceso a usuarios con shells no incluidas en
 este archivo.
 
-> +---------------------------------+
-> ---
-> cat \> /etc/shells \<\< \"EOF\"
-> \# Begin /etc/shells
+> cat > /etc/shells << "EOF"
+> # Begin /etc/shells
 > /bin/sh
 > /bin/bash
-> \# End /etc/shells
+> # End /etc/shells
 > EOF
-> +---------------------------------+
 
 ## Capítulo 10. Haciendo que el sistema LFS sea arrancable <a name="capitulo-10"></a>
 
@@ -17684,13 +17557,11 @@ se montarán los sistemas de archivos por defecto, en qué orden y cuáles
 deben comprobarse (para detectar errores de integridad) antes del
 montaje. Cree una nueva tabla de sistemas de archivos como la siguiente:
 
-> +----------------------------------------------------------------------+
-> ---
-> cat \> /etc/fstab \<\< \"EOF\"
-> \# Begin /etc/fstab
-> \# file system mount-point type options dump fsck order
-> /dev/\<xxx\> / \<fff\> defaults 1 1
-> /dev/\<yyy\> swap swap pri=1 0 0
+> cat > /etc/fstab << "EOF"
+> # Begin /etc/fstab
+> # file system mount-point type options dump fsck order
+> /dev/<xxx> / <fff> defaults 1 1
+> /dev/<yyy> swap swap pri=1 0 0
 > proc /proc proc nosuid,noexec,nodev 0 0
 > sysfs /sys sysfs nosuid,noexec,nodev 0 0
 > devpts /dev/pts devpts gid=5,mode=620 0 0
@@ -17698,9 +17569,8 @@ montaje. Cree una nueva tabla de sistemas de archivos como la siguiente:
 > devtmpfs /dev devtmpfs mode=0755,nosuid 0 0
 > tmpfs /dev/shm tmpfs nosuid,nodev 0 0
 > cgroup2 /sys/fs/cgroup cgroup2 nosuid,noexec,nodev 0 0
-> \# End /etc/fstab
+> # End /etc/fstab
 > EOF
-> +----------------------------------------------------------------------+
 
 Reemplace *\<xxx\>*, *\<yyy\>* y *\<fff\>* con los valores apropiados
 para el sistema, por ejemplo, *sda2*, *sda5* y *ext4*. Para obtener más
@@ -17785,9 +17655,8 @@ compilación e instalación. Consulte el archivo README en el árbol de
 código fuente del kernel para conocer métodos alternativos a la
 configuración del kernel en este libro.
 
-> +----------------------------------------------------------------------+
-> ---
 > **Importante**
+> 
 > Compilar el kernel de Linux por primera vez es una de las tareas más
 > difíciles en LFS. Su correcta configuración depende del hardware
 > específico del sistema de destino y de sus necesidades específicas.
@@ -17802,8 +17671,7 @@ configuración del kernel en este libro.
 > optimización y la personalización no son un objetivo.
 > Para obtener información general sobre la configuración del kernel,
 > consulte
-> <https://www.l
-> inuxfromscratch.org/hints/downloads/files/kernel-configuration.txt>.
+> <https://www.linuxfromscratch.org/hints/downloads/files/kernel-configuration.txt>.
 > Puede encontrar información adicional sobre la configuración y la
 > compilación del kernel en
 > <https://anduin.linuxfromscratch.org/LFS/kernel-nutshell/>.
@@ -17812,7 +17680,6 @@ configuración del kernel en este libro.
 > Si todo lo demás falla, puede solicitar ayuda en la lista de correo
 > lfs-support. Tenga en cuenta que es necesario suscribirse para
 > evitar el spam.
-> +----------------------------------------------------------------------+
 
 Prepárese para la compilación ejecutando el siguiente comando:
 
@@ -17834,7 +17701,7 @@ esto se hace mediante una interfaz de menús, por ejemplo:
 
 El significado de las variables de entorno opcionales de make:
 
-LANG=\<host_LANG_value\> LC_ALL=
+LANG=<host_LANG_value> LC_ALL=
 
 Esto establece la configuración regional a la utilizada en el host. Esto
 puede ser necesario para un correcto dibujo de líneas de la interfaz de
@@ -17851,9 +17718,8 @@ el valor del host *\$LC_ALL *o* \$LC_CTYPE*.
 Esto inicia una interfaz de ncurses basada en menús. Para otras
 interfaces (gráficas), escriba **make help**.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Un buen punto de partida para configurar el kernel es ejecutar
 > **make defconfig**. Esto establecerá la configuración base en un
 > estado óptimo que tenga en cuenta la arquitectura actual de su
@@ -17861,7 +17727,7 @@ interfaces (gráficas), escriba **make help**.
 > Asegúrese de habilitar, deshabilitar o configurar las siguientes
 > funciones; de lo contrario, el sistema podría no funcionar
 > correctamente o no arrancar:
-> +----------------------------------------------------------------------+
+> 
 > General setup \-\--\>
 > \[ \] Compile the ***kernel*** with warnings as errors \[WERROR\]
 > CPU/Task time and stats accounting \-\--\>
@@ -17942,14 +17808,12 @@ Existen otras opciones que podrían ser útiles según los requisitos del
 sistema. Para obtener una lista de las opciones necesarias para los
 paquetes BLFS, consulte el Índice de configuración del kernel de BLFS.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Si el hardware de su host usa UEFI y desea arrancar el sistema LFS
 > con él, debe ajustar la configuración del kernel siguiendo la página
 > de *BLFS*, **incluso si va a usar el gestor de arranque UEFI de la
 > distribución del host**.
-> +----------------------------------------------------------------------+
 
 Razones para los elementos de configuración anteriores:
 
@@ -18126,9 +17990,8 @@ Una vez completada la compilación del kernel, se requieren pasos
 adicionales para completar la instalación. Algunos archivos deben
 copiarse al directorio */boot*.
 
-> +----------------------------------------------------------------------+
-> ---
-> Precaución
+> **Precaución**
+> 
 > Si ha decidido usar una partición */boot* independiente para el
 > sistema LFS (quizás compartiendo una partición */boot* con la
 > distribución del host), los archivos copiados a continuación
@@ -18136,12 +17999,12 @@ copiarse al directorio */boot*.
 > la entrada para */boot* en */etc/fstab* (consulte la sección
 > anterior para obtener más información) y, a continuación, ejecutar
 > el siguiente comando como usuario *root* en el *entorno chroot*:
-> +----------------------------------------------------------------------+
+> 
 > mount /boot
-> +----------------------------------------------------------------------+
+> 
 > La ruta al nodo del dispositivo se omite en el comando porque
 > **mount** puede leerla desde */etc/fstab*.
-> +----------------------------------------------------------------------+
+> 
 
 La ruta a la imagen del kernel puede variar según la plataforma
 utilizada. El nombre de archivo a continuación se puede modificar según
@@ -18190,9 +18053,8 @@ ello, existe la posibilidad de que el ID de usuario utilizado por el
 empaquetador se asigne a alguien en el equipo. Esa persona tendría
 entonces acceso de escritura al código fuente del kernel.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > En muchos casos, será necesario actualizar la configuración del
 > kernel para los paquetes que se instalarán posteriormente en BLFS. A
 > diferencia de otros paquetes, no es necesario eliminar el árbol de
@@ -18213,18 +18075,15 @@ entonces acceso de escritura al código fuente del kernel.
 > ejecutar \"**make clean**\" para purgar todos los archivos *.o* de
 > la compilación anterior; de lo contrario, la nueva compilación
 > podría fallar.
-> +----------------------------------------------------------------------+
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> **Advertencia**
+> 
 > Alguna documentación del kernel recomienda crear un enlace simbólico
 > desde */usr/src/linux* que apunte al directorio fuente del kernel.
 > Esto es específico para kernels anteriores a la serie 2.6 y *no
 > debe* crearse en un sistema LFS, ya que puede causar problemas con
 > los paquetes que desee compilar una vez que su sistema LFS base esté
 > completo.
-> +----------------------------------------------------------------------+
 
 ### 10.3.2. Configuración del orden de carga de módulos de Linux
 
@@ -18240,18 +18099,15 @@ evitar una advertencia al arrancar.
 Cree un nuevo archivo */etc/modprobe.d/usb.conf* ejecutando lo
 siguiente:
 
-> +----------------------------------------------------------------------+
-> ---
 > install -v -m755 -d /etc/modprobe.d
-> cat \> /etc/modprobe.d/usb.conf \<\< \"EOF\"
-> \# Begin /etc/modprobe.d/usb.conf
+> cat > /etc/modprobe.d/usb.conf << "EOF"
+> # Begin /etc/modprobe.d/usb.conf
 > install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i
 > ohci_hcd ; true
 > install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i
 > uhci_hcd ; true
-> \# End /etc/modprobe.d/usb.conf
+> # End /etc/modprobe.d/usb.conf
 > EOF
-> +----------------------------------------------------------------------+
 
 ### 10.3.3. Contenido de Linux
 
@@ -18262,7 +18118,7 @@ System.map-6.13.4
 
 ### Descripciones breves
 
-*config-6.13.4 * Contiene todas las opciones de configuración del
+*config-6.13.4* Contiene todas las opciones de configuración del
 kernel.
 
 *vmlinuz-6.13.4-lfs-12.3* El motor del sistema Linux. Al encender el
@@ -18278,28 +18134,24 @@ de datos en el núcleo.
 
 ## 10.4. Uso de GRUB para configurar el proceso de arranque
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Si su sistema es compatible con UEFI y desea arrancar LFS con UEFI,
 > debe omitir las instrucciones de esta página, pero aun así debe
 > aprender la sintaxis de grub.cfg y el método para especificar una
 > partición en el archivo desde esta página, y configurar GRUB con
 > compatibilidad con UEFI siguiendo las instrucciones de la *página
 > BLFS*.
-> +----------------------------------------------------------------------+
 
 ### 10.4.1. Introducción
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> **Advertencia**
+> 
 > Configurar GRUB incorrectamente puede dejar su sistema inoperativo
 > sin un dispositivo de arranque alternativo, como un CD-ROM o una
 > unidad USB de arranque. Esta sección no es necesaria para arrancar
 > su sistema LFS. Quizás simplemente desee modificar su gestor de
 > arranque actual, por ejemplo, Grub-Legacy, GRUB2 o LILO.
-> +----------------------------------------------------------------------+
 
 Asegúrese de tener listo un disco de arranque de emergencia para
 rescatar el equipo si este queda inutilizable (no arrancable). Si aún no
@@ -18307,12 +18159,9 @@ tiene un dispositivo de arranque, puede crear uno. Para que el siguiente
 procedimiento funcione, debe acceder a BLFS e instalar **xorriso** desde
 el paquete *libisoburn*.
 
-> +--------------------------------------------------------------------+
-> ---
 > cd /tmp
-> grub-mkrescue \--*output*=grub-img.iso
+> grub-mkrescue --*output*=grub-img.iso
 > xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso
-> +--------------------------------------------------------------------+
 
 ### 10.4.2. Convenciones de nomenclatura de GRUB
 
@@ -18357,47 +18206,40 @@ raíz (o de arranque independiente) es *sda2*.
 Instale los archivos de GRUB en */boot/grub* y configure la ruta de
 arranque:
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> **Advertencia**
+> 
 > El siguiente comando sobrescribirá el gestor de arranque actual. No
 > lo ejecute si no lo desea, por ejemplo, si utiliza un gestor de
 > arranque externo para gestionar el Registro Maestro de Arranque
 > (MBR).
-> +----------------------------------------------------------------------+
 
   -------------------------
   grub-install /dev/sda**
   -------------------------
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Si el sistema se ha iniciado mediante UEFI, **grub-install**
 > intentará instalar los archivos para el destino *x86_64-efi*, pero
 > estos archivos no se instalaron en el Capítulo 8. En ese caso, añada
 > *\--target i386-pc* al comando anterior.
-> +----------------------------------------------------------------------+
 
 ### 10.4.4. Creación del archivo de configuración de GRUB
 
 Generar /*boot/grub/grub.cfg*:
 
-> +----------------------------------------------------------------+
-> ---
-> cat \> /boot/grub/grub.cfg \<\< \"EOF\"
-> \# Begin /boot/grub/grub.cfg
+> cat > /boot/grub/grub.cfg << "EOF"
+> # Begin /boot/grub/grub.cfg
 > set default=0
 > set timeout=5
 > insmod part_gpt
 > insmod ext2
 > set root=(hd0,2)
 > set gfxpayload=*1024x768x32*
-> menuentry \"GNU/Linux, Linux 6.13.4-lfs-12.3\" {
+> menuentry "GNU/Linux, Linux 6.13.4-lfs-12.3" {
 > linux /boot/vmlinuz-6.13.4-lfs-12.3 root=/dev/sda2 ro
 > }
 > EOF
-> +----------------------------------------------------------------+
 
 Los comandos **insmod** cargan los módulos de GRUB llamados *part_gpt* y
 *ext2*. A pesar del nombre, ext2 admite los sistemas de archivos *ext2*,
@@ -18415,19 +18257,16 @@ necesario que el controlador SimpleDRM del kernel utilice el framebuffer
 VESA. Puede usar un valor de resolución o profundidad de color diferente
 que se adapte mejor a su monitor.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Desde la perspectiva de GRUB, los archivos del kernel son relativos
 > a la partición utilizada. Si utilizó una partición /boot
 > independiente, elimine /boot de la línea de Linux anterior. También
 > necesitarás cambiar la línea raíz establecida para que apunte a la
 > partición de arranque.
-> +----------------------------------------------------------------------+
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > El designador GRUB de una partición puede cambiar si agregó o quitó
 > discos (incluidos discos extraíbles como memorias USB). Este cambio
 > puede provocar un fallo de arranque, ya que *grub.cfg* hace
@@ -18453,7 +18292,6 @@ que se adapte mejor a su monitor.
 > como */dev/sda1* con *PARTUUID=\<UUID de la partición\>*, en
 > */etc/fstab*, para evitar un posible fallo de arranque en caso de
 > que el nombre del nodo de dispositivo haya cambiado.
-> +----------------------------------------------------------------------+
 
 GRUB es un programa extremadamente potente que ofrece una gran cantidad
 de opciones para arrancar desde una amplia variedad de dispositivos,
@@ -18462,9 +18300,8 @@ personalización, como pantallas de inicio gráficas, reproducción de
 sonidos, entrada del ratón, etc. Los detalles de estas opciones quedan
 fuera del alcance de esta introducción.
 
-> +----------------------------------------------------------------------+
-> ---
-> Precaución
+> **Precaución**
+> 
 > Existe un comando, grub-mkconfig, que puede escribir un archivo de
 > configuración automáticamente. Utiliza un conjunto de scripts en
 > /etc/grub.d/ y eliminará cualquier personalización que realice.
@@ -18473,7 +18310,6 @@ fuera del alcance de esta introducción.
 > distribución comercial de Linux, es muy probable que se ejecute este
 > programa. Asegúrese de hacer una copia de seguridad de su archivo
 > grub.cfg.
-> +----------------------------------------------------------------------+
 
 ## Capítulo 11. Fin <a name="capitulo-11"></a>
 
@@ -18498,32 +18334,26 @@ compilándolos.
 El primero muestra el estado de su nuevo sistema con respecto a la Base
 de Estándares de Linux (LSB). Para crear este archivo, ejecute:
 
-> +--------------------------------------------+
-> ---
-> cat \> /etc/lsb-release \<\< \"EOF\"
-> DISTRIB_ID=\"Linux From Scratch\"
-> DISTRIB_RELEASE=\"12.3\"
-> DISTRIB_CODENAME=\"\<su nombre aquí\>\"
-> DISTRIB_DESCRIPTION=\"Linux From Scratch\"
+> cat > /etc/lsb-release << "EOF"
+> DISTRIB_ID="Linux From Scratch"
+> DISTRIB_RELEASE="12.3"
+> DISTRIB_CODENAME="<su nombre aquí>"
+> DISTRIB_DESCRIPTION="Linux From Scratch"
 > EOF
-> +--------------------------------------------+
 
 El segundo contiene prácticamente la misma información y lo utilizan
 systemd y algunos entornos gráficos de escritorio. Para crear este
 archivo, ejecuta:
 
-> +----------------------------------------------------+
-> ---
-> cat \> /etc/os-release \<\< \"EOF\"
-> NAME=\"Linux From Scratch\"
-> VERSION=\"12.3\"
+> cat > /etc/os-release << "EOF"
+> NAME="Linux From Scratch\
+> VERSION="12.3"
 > ID=lfs
-> PRETTY_NAME=\"Linux From Scratch 12.3\"
-> VERSION_CODENAME=\"\<tu nombre aquí\>\"
-> HOME_URL=\"https://www.linuxfromscratch.org/lfs/\"
-> RELEASE_TYPE=\"stable\"
+> PRETTY_NAME="Linux From Scratch 12.3"
+> VERSION_CODENAME="<tu nombre aquí>"
+> HOME_URL="https://www.linuxfromscratch.org/lfs/"
+> RELEASE_TYPE="stable"
 > EOF
-> +----------------------------------------------------+
 
 Asegúrate de personalizar los campos \'DISTRIB_CODENAME\' y
 \'VERSION_CODENAME\' para que el sistema sea exclusivamente tuyo.
@@ -18583,24 +18413,18 @@ primera vez! Primera salida del entorno *chroot*:
 
 Luego, desmonte los sistemas de archivos virtuales:
 
-> +--------------------------------------------------------+
-> ---
-> umount -v \$LFS/dev/pts
-> mountpoint -q \$LFS/dev/shm && umount -v \$LFS/dev/shm
-> umount -v \$LFS/dev
-> umount -v \$LFS/run
-> umount -v \$LFS/proc
-> umount -v \$LFS/sys
-> +--------------------------------------------------------+
+> umount -v $LFS/dev/pts
+> mountpoint -q $LFS/dev/shm && umount -v $LFS/dev/shm
+> umount -v $LFS/dev
+> umount -v $LFS/run
+> umount -v $LFS/proc
+> umount -v $LFS/sys
 
 Si se crearon varias particiones, desmonte las demás antes de desmontar
 la principal, de la siguiente manera:
 
-> +----------------------+
-> ---
-> umount -v \$LFS/home
-> umount -v \$LFS
-> +----------------------+
+> umount -v $LFS/home
+> umount -v $LFS
 
 Desmonte el sistema de archivos LFS:
 
@@ -18721,35 +18545,33 @@ Para compilar paquetes correctamente en chroot, también deberá recordar
 montar los sistemas de archivos virtuales si aún no lo están. Una forma
 de hacerlo es crear un script en el sistema **HOST**:
 
-> +----------------------------------------------------+
-> ---
-> cat \> \~/mount-virt.sh \<\< \"EOF\"
+> cat > ~/mount-virt.sh << "EOF"
 > #!/bin/bash
 > function mountbind
 > {
-> if ! mountpoint \$LFS/\$1 \>/dev/null; then
-> \$SUDO mount \--bind /\$1 \$LFS/\$1
-> echo \$LFS/\$1 mounted
+> if ! mountpoint \$LFS/$1 >/dev/null; then
+> $SUDO mount --bind /$1 $LFS/$1
+> echo $LFS/$1 mounted
 > else
-> echo \$LFS/\$1 already mounted
+> echo $LFS/$1 already mounted
 > fi
 > }
 > function mounttype
 > {
-> if ! mountpoint \$LFS/\$1 \>/dev/null; then
-> \$SUDO mount -t \$2 \$3 \$4 \$5 \$LFS/\$1
-> echo \$LFS/\$1 mounted
+> if ! mountpoint $LFS/$1 >/dev/null; then
+> $SUDO mount -t $2 $3 $4 $5 $LFS/$1
+> echo $LFS/$1 mounted
 > else
-> echo \$LFS/\$1 already mounted
+> echo $LFS/$1 already mounted
 > fi
 > }
-> if \[ \$EUID -ne 0 \]; then
+> if [ $EUID -ne 0 ]; then
 > SUDO=sudo
 > else
-> SUDO=\"\"
+> SUDO=""
 > fi
-> if \[ x\$LFS == x \]; then
-> echo \"LFS not set\"
+> if [ x\$LFS == x ]; then
+> echo "LFS not set"
 > exit 1
 > fi
 > mountbind dev
@@ -18757,8 +18579,8 @@ de hacerlo es crear un script en el sistema **HOST**:
 > mounttype proc proc proc
 > mounttype sys sysfs sysfs
 > mounttype run tmpfs run
-> if \[ -h \$LFS/dev/shm \]; then
-> install -v -d -m 1777 \$LFS\$(realpath /dev/shm)
+> if [ -h $LFS/dev/shm ]; then
+> install -v -d -m 1777 $LFS$(realpath /dev/shm)
 > else
 > mounttype dev/shm tmpfs tmpfs -o nosuid,nodev
 > fi
@@ -18766,7 +18588,6 @@ de hacerlo es crear un script en el sistema **HOST**:
 > #mountbind boot
 > #mountbind home
 > EOF
-> +----------------------------------------------------+
 
 Tenga en cuenta que los tres últimos comandos del script están
 comentados. Son útiles si esos directorios están montados como
@@ -18788,11 +18609,9 @@ Una última característica práctica que se presenta aquí es agilizar el
 proceso de acceso al entorno chroot. Esto se puede hacer con un alias en
 el archivo \~/.bashrc del usuario en el sistema host:
 
-> +----------------------------------------------------------------------+
-> ---
-> alias lfs=\'sudo /usr/sbin/chroot /mnt/lfs /usr/bin/env -i
-> HOME=/root TERM=\"\$TERM\" PS1=\"\\u:\\w\\\\\\\\\$ \"
-> PATH=/usr/bin:/usr/sbin /bin/bash --login\'
+> alias lfs='sudo /usr/sbin/chroot /mnt/lfs /usr/bin/env -i
+> HOME=/root TERM="$TERM\" PS1="\u:\w\\\\\\\\$ "
+> PATH=/usr/bin:/usr/sbin /bin/bash --login'
 > +----------------------------------------------------------------------+
 
 Este alias es un poco complejo debido a las comillas y los niveles de
@@ -18828,13 +18647,11 @@ enlaces o el navegador Lynx en una consola y bash en la otra. GPM
 permite copiar comandos del navegador con el botón izquierdo del ratón,
 cambiar de consola y pegarlos en la otra.
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> **Nota**
+> 
 > Como nota al margen, también se puede cambiar de consola virtual
 > desde una instancia de X Window con la combinación de teclas
 > **Ctrl+Alt+Fx**, pero la operación de copiar con el ratón no
 > funciona entre la interfaz gráfica y una consola virtual. Puede
 > volver a la pantalla de X Window con la combinación **Ctrl+Alt+Fx**,
 > donde **Fx** suele ser **F1**, pero también puede ser **F7**.
-> +----------------------------------------------------------------------+
