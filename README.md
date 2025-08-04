@@ -1,6 +1,6 @@
 # LFS4Students-ES
 
-**Linux From Scratch para estudiantes hispanohablantes**
+**Linux From Scratch Para Estudiantes Hispanohablantes**
 
 Bienvenido al proyecto **LFS4Students-ES**, una adaptación en español del libro **Linux From Scratch (LFS) versión 12.3**, pensada especialmente para estudiantes autodidactas, entusiastas del software libre y personas que deseen aprender en profundidad cómo se construye un sistema GNU/Linux desde cero.
 
