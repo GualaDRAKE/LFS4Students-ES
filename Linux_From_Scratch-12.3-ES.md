@@ -14762,8 +14762,8 @@ UTF-8.
 Tabla 8.1. Codificación de caracteres esperada de las páginas del
 manual de 8 bits heredadas
 
-  |**Idioma (código) **     |       **Codificación** | **Idioma (código)**         |            |**Codificación**|
-  |:-----------------------:|:----------------------:|:---------------------------:|:----------:|:--------------:|
+  |**Idioma (código) **     |       **Codificación** | **Idioma (código)**                      |**Codificación**|
+  |:-----------------------:|:----------------------:|:----------------------------------------:|:--------------:|
   |Danés (da)               |         ISO-8859-1     |   Croata (hr)                            |  ISO-8859-2    |
   |Alemán (de)              |         ISO-8859-1     |   Húngaro (hu)                           |  ISO-8859-2    |
   |Inglés (en)              |         ISO-8859-1     |   Japonés (ja)                           |  EUC-JP        |
