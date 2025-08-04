@@ -1,4 +1,4 @@
-   # `#RRGGBB`**Linux From Scratch**           
+   `#RRGGBB`# Linux From Scratch         
 
    Versión 12.3
 
