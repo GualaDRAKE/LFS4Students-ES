@@ -77,7 +77,7 @@ LFS4Students-ES/
 
 ## ¿Cómo empiezo?
 
-Puedes comenzar leyendo el archivo principal (***traducción hispana***) del libro en este repositorio:  
+Puedes comenzar leyendo el archivo principal (_traducción hispana_) del libro en este repositorio:  
 📄 [`Linux_From_Scratch-12.3-ES.md`](./Linux_From_Scratch-12.3-ES.md) ⭐️
 
 Si ya conoces LFS y quieres colaborar con la mejora de esta versión traducida y comentada, ¡tus aportes son bienvenidos! Consulta la sección de contribuciones más abajo.
