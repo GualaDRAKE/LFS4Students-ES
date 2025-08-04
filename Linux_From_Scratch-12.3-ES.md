@@ -1,4 +1,4 @@
-  # **Linux From Scratch**        
+  # `#0969DA`**Linux From Scratch**        
 
    Versión 12.3
 
