@@ -4,12 +4,16 @@
 
 Bienvenido al proyecto **LFS4Students-ES**, una adaptación en español del libro **Linux From Scratch (LFS) versión 12.3**, pensada especialmente para estudiantes autodidactas, entusiastas del software libre y personas que deseen aprender en profundidad cómo se construye un sistema GNU/Linux desde cero.
 
+---
+
 ## ¿Qué es Linux From Scratch?
 
 Linux From Scratch (LFS) es un proyecto que proporciona instrucciones paso a paso para construir tu propio sistema Linux personalizado completamente desde el código fuente. Es una herramienta educativa poderosa para comprender cómo funcionan internamente los sistemas Linux.
 
 El proyecto original en inglés se encuentra en:  
 📘 https://www.linuxfromscratch.org/lfs/
+
+---
 
 ## ¿Qué es LFS4Students-ES?
 
@@ -28,7 +32,9 @@ Este repositorio contiene el libro completo en **formato Markdown (.md)**, lo qu
 - Documentar experiencias de usuario, **como usar un dispisitivo SSD** para alojar a LFS.
 - Documentar experiencias de usuario **con respecto a la ***Distro*** usada para usar como el **HOST** de LFS.
 
-## Acá un ejemplo de **LFS4Students-ES** como una versión ***COMPLEMENTARIA*** a LFS:
+---
+
+## Acá un ejemplo de **LFS4Students-ES** como una versión ***COMPLEMENTARIA*** a LFS
 
 ```
 LFS4Students-ES/
@@ -43,23 +49,15 @@ LFS4Students-ES/
 └── índice-complementario.md            # Mapa con enlaces a todos los agregados
 ```
 
-- `LFS4Students-ES/`
-  - `Linux_From_Scratch-12.3-ES.md`     — Traducción fiel del libro
-  - `Capítulos/`
-    - `cap06-introduccion.md`
-    - `cap06-nota-final.md`
-    - `cap07-introduccion.md`
-    - `cap07-nota-final.md`
-    - ...
-  - `README.md`
-  - `índice-complementario.md`          — Mapa con enlaces a todos los agregados
-
+---
 
 ## Objetivos del proyecto
 
 - 🧠 Promover el aprendizaje activo de GNU/Linux a través de la construcción manual del sistema.
 - 📚 Ofrecer un recurso en español para estudiantes, centros educativos y autodidactas.
 - 🛠️ Preparar el terreno para proyectos complementarios como automatizaciones, scripts de ayuda o entornos de práctica colaborativa.
+
+---
 
 ## ¿A quién está dirigido?
 
@@ -68,12 +66,16 @@ LFS4Students-ES/
 - Docentes y facilitadores que deseen usar LFS como recurso educativo.
 - Entusiastas del software libre.
 
+---
+
 ## ¿Cómo empiezo?
 
 Puedes comenzar leyendo el archivo principal del libro en este repositorio:  
 📄 [`Linux_From_Scratch-12.3-ES.md`](./Linux_From_Scratch-12.3-ES.md)  ⭐️ 
 
 Si ya conoces LFS y quieres colaborar con la mejora de esta versión traducida, ¡tus aportes son bienvenidos! Consulta la sección de contribuciones más abajo.
+
+---
 
 ## Contribuciones
 
