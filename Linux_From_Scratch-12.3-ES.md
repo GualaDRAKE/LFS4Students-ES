@@ -25,19 +25,12 @@
 &nbsp;
 
 ### Linux From Scratch: Versión 12.3: Publicado el 5 de marzo de 2025
-
    Creado por Gerard Beekmans y Editor en Jefe: Bruce Dubbs
-
    Copyright © 1999-2025 Gerard Beekmans
-
    Copyright © 1999-2025, Gerard Beekmans
-
    Todos los derechos reservados.
-
    Este libro está licenciado bajo la Licencia Creative Commons.
-
    Se pueden extraer instrucciones del libro bajo la Licencia MIT.
-
    Linux® es una marca registrada de Linus Torvalds.
 
 &nbsp;
