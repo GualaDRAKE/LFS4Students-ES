@@ -8,6 +8,8 @@
 
 &nbsp;
 
+   ![LFS](../Images/Linux%20From%20Scratch.png)
+
    ![LFS](https://borkorajkovic.com/assets/img/posts/2025-05-06-lfs/lfs.png)
 
 &nbsp;
