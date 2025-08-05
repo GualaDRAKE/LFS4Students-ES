@@ -13887,7 +13887,7 @@ lnstat), ss y tc****
 
 ### Descripciones breves
 
-```markdown
+```text
 |**bridge**    |Configura puentes de red                     |                       |
 |:-------------|:--------------------------------------------|:----------------------|
 |**ctstat**    |Utilidad de estado de conexión               |                       |
