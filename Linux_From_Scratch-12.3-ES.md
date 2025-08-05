@@ -13940,11 +13940,11 @@ lnstat), ss y tc****
 |**rtpr**       | Convierte la salida de<br> **ip -o** a un formato legible||
 |**rtstat**     | Utilidad de estado de ruta   ||
 |**ss**         | Similar al comando<br> **netstat**; muestra las conexiones activas||
-|**tc**         | Control de tráfico para<br> implementaciones de calidad<br> de servicio (QoS) y<br> clase de servicio (CoS)||
-|               | `tc qdisc`                   | permite a los usuarios configurar la disciplina de<br> colas|
-|               | `tc class`                   | permite a los usuarios configurar clases según la<br> programación de la disciplina de colas|
-|               | `tc filter`                  | permite a los usuarios configurar el filtrado de<br> paquetes QoS/CoS|
-|               | `tc monitor`                 | permite visualizar los cambios realizados en el<br> control de tráfico del kernel|
+|**tc**         | Control de tráfico para implementaciones de calidad de servicio (QoS) y clase de servicio (CoS)||
+|               | `tc qdisc`                   | permite a los usuarios configurar la disciplina de colas|
+|               | `tc class`                   | permite a los usuarios configurar clases según la programación de la disciplina de colas|
+|               | `tc filter`                  | permite a los usuarios configurar el filtrado de paquetes QoS/CoS|
+|               | `tc monitor`                 | permite visualizar los cambios realizados en el control de tráfico del kernel|
 
 ---
 &nbsp;
