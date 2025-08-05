@@ -1142,18 +1142,18 @@ versión anterior del libro.
 
 Entradas del registro de cambios:
 
-• 05/03/2025.
+- 05/03/2025.
 
-• \[bdubbs\] - Publicación de LFS-12.3.
+  - \[bdubbs\] - Publicación de LFS-12.3.
 
-• 02/03/2025.
+- 02/03/2025.
 
-• \[bdubbs\] - Actualización a vim-9.1.1166 (Actualización de
+  - \[bdubbs\] - Actualización a vim-9.1.1166 (Actualización de
 seguridad). Corrige el problema n.° 5666.
 
-• 27/02/2025.
+- 27/02/2025.
 
-• \[bdubbs\] - Actualización a zstd-1.5.7. Corrige el problema n.° 5652.
+  - \[bdubbs\] - Actualización a zstd-1.5.7. Corrige el problema n.° 5652.
 
 • \[bdubbs\] - Actualización a systemd-257.3. Corrige el error n.° 5612.
 
