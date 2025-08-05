@@ -278,7 +278,7 @@ El LFS intenta cumplir con las especificaciones del LSB para las
 arquitecturas IA32 (x86 de 32 bits) o AMD64 (x86_64) descritas en la
 sección anterior.
 
-> **Nota**
+> ⚠️ **Nota**
 > 
 > Mucha gente no está de acuerdo con estos requisitos. El objetivo principal del LSB es garantizar que el software propietario pueda instalarse y
 > ejecutarse en un sistema compatible. Dado que el LFS se basa en el código fuente, el usuario tiene control total sobre los paquetes que desea;
@@ -17665,8 +17665,9 @@ Para comprobar si la unidad de disco admite esta opción, ejecute
 
 devuelve una salida no vacía; la opción es compatible.
 
-Nota: Las particiones basadas en la gestión de volúmenes lógicos (LVM)
-no pueden usar la opción de *barrera (barrier)*.
+> ⚠️ Nota:
+> Las particiones basadas en la gestión de volúmenes lógicos (LVM)
+> no pueden usar la opción de *barrera (barrier)*.
 
 ## 10.3. Linux-6.13.4
 
