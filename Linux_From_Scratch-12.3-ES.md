@@ -13882,29 +13882,12 @@ Si lo desea, instale la documentación:
 **Programas instalados**: bridge, ctstat (enlace a lnstat), genl,
 ifstat, ip, lnstat, nstat, routel, rtacct, rtmon, rtpr, rtstat (enlace a
 lnstat), ss y tc****
-**Directorios instalados**: /etc/iproute2, /usr/lib/tc y
-/usr/share/doc/iproute2-6.13.0
+**Directorios instalados**: /etc/iproute2, /usr/lib/tc y /usr/share/doc/iproute2-6.13.0
 
 ### Descripciones breves
 
-**bridge**   Configures network bridges  
-**ctstat**   Connection status utility  
-**genl**     Generic netlink utility front end  
-**ifstat**   Shows interface statistics, including the number of packets transmitted and received, by interface  
-**ip**       The main executable. It has several different functions, including these:  
-- **ip link _<device>_**   allows users to look at the state of devices and to make changes  
-- **ip addr**              allows users to look at addresses and their properties, add new addresses, and delete old ones  
-- **ip neighbor**          allows users to look at neighbor bindings and their properties, add new neighbor entries, and delete old ones  
-- **ip rule**              allows users to look at the routing policies and change them  
-- **ip route**             allows users to look at the routing table and change routing table rules  
-- **ip tunnel**            allows users to look at the IP tunnels and their properties, and change them  
-- **ip maddr**             allows users to look at the multicast addresses and their properties, and change them  
-- **ip mroute**            allows users to set, change, or delete the multicast routing  
-
-
-| Comando       | Descripción                                        |
+|**bridge**     | Configures network bridges                          |
 |---------------|----------------------------------------------------|
-| **bridge**    | Configures network bridges                         |
 |**ctstat**     | Connection status utility                          |
 |**genl**       | Generic netlink utility front end                  |
 |**ifstat**     | Shows interface statistics, by interface           |
