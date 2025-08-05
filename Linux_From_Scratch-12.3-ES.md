@@ -13887,10 +13887,11 @@ lnstat), ss y tc****
 
 ### Descripciones breves
 
-|              |                       |                       |
-|--------------|-----------------------|-----------------------|
-|              |                       |                       |
-|              |                       |                       |
+|**bridge**    |Configura puentes de red                     |                       |
+|--------------|---------------------------------------------|-----------------------|
+|**ctstat**    |Utilidad de estado de conexión               |                       |
+|**genl**      |Interfaz genérica de la utilidad netlink     |                       |
+|**ifstat**    |Muestra estadísticas de interfaz, incluyendo<br>el número de paquetes transmitidos y recibidos,<br>por interfaz |                       |
 
 | Arquitectura | Tiempo de compilación | Tamaño de compilación |
 |--------------|-----------------------|-----------------------|
