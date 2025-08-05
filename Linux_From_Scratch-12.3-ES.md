@@ -13886,8 +13886,8 @@ lnstat), ss y tc****
 
 ### Descripciones breves
 
-|**bridge**     | Configures network bridges                          |
-|---------------|----------------------------------------------------|
+|**bridge**     | Configures network bridges                         |
+|:--------------|:---------------------------------------------------|
 |**ctstat**     | Connection status utility                          |
 |**genl**       | Generic netlink utility front end                  |
 |**ifstat**     | Shows interface statistics, by interface           |
