@@ -13902,6 +13902,24 @@ lnstat), ss y tc****
 - **ip mroute**            allows users to set, change, or delete the multicast routing  
 
 
+| Comando     | Descripción                                        |
+|-------------|----------------------------------------------------|
+| `bridge`    | Configures network bridges                         |
+| `ctstat`    | Connection status utility                          |
+| `genl`      | Generic netlink utility front end                  |
+| `ifstat`    | Shows interface statistics, by interface           |
+| `ip`        | The main executable. It has several functions:     |
+|             | `ip link <device>`    look at the state of devices|
+|             | `ip addr`             manage addresses             |
+|             | `ip neighbor`         manage neighbor bindings     |
+|             | `ip rule`             manage routing policies      |
+|             | `ip route`            manage routing table         |
+|             | `ip tunnel`           manage IP tunnels            |
+|             | `ip maddr`            manage multicast addresses   |
+|             | `ip mroute`           manage multicast routing     |
+
+
+
 |**bridge**    |Configura puentes de red                     |                       |
 |:-------------|:--------------------------------------------|:----------------------|
 |**ctstat**    |Utilidad de estado de conexión               |                       |
