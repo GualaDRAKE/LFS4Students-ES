@@ -7889,12 +7889,13 @@ Eliminar una biblioteca estática inútil:
 
 ### 8.6.2. Contenido de Zlib
 
-**Bibliotecas instaladas: **libz.so
+**Bibliotecas instaladas**: libz.so
 
 ### Descripciones breves
 
 *libz* Contiene funciones de compresión y descompresión utilizadas por
 algunos programas
+
 ---
 &nbsp;
 &nbsp;
