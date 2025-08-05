@@ -13173,6 +13173,10 @@ con el framework de pruebas unitarias Check
 *libcheck.so* Contiene funciones que permiten llamar a Check
 desde un programa de prueba
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.60. Diffutils-3.11
 
 El paquete Diffutils contiene programas que muestran las diferencias
