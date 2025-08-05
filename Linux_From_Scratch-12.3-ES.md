@@ -13886,37 +13886,6 @@ lnstat), ss y tc****
 
 ### Descripciones breves
 
-|**bridge**     | Configures network bridges                                             |
-|:--------------|:-----------------------------------------------------------------------|
-|**ctstat**     | Connection status utility                                              |
-|**genl**       | Generic netlink utility front end                                      |
-|**ifstat**     | Shows interface statistics, by interface                               |
-|**ip**         | The main executable. It has several functions:                         |
-|               | `ip link <device>`    look at the state of devices                     |
-|               | `ip addr`             manage addresses                                 |
-|               | `ip neighbor`         manage neighbor bindings                         |
-|               | `ip rule`             manage routing policies                          |
-|               | `ip route`            manage routing table                             |
-|               | `ip tunnel`           manage IP tunnels                                |
-|               | `ip maddr`            manage multicast addresses                       |
-|               | `ip mroute`           manage multicast routing                         |
-|               | `ip monitor`          permite a los usuarios supervisar continuamente<br> el estado de dispositivos, direcciones y rutas|
-|**lnstat**     | Proporciona estadísticas de red de Linux; es un reemplazo generalizado<br> y con más funciones del antiguo programa **rtstat**|
-|**nstat**      | Muestra estadísticas de red|
-|**routel**     | Un componente de **ip route** para listar las tablas de enrutamiento|
-|**rtacct**     | Muestra el contenido de **/proc/net/rt_acct**|
-|**rtmon**      | Utilidad de monitorización de rutas|
-|**rtpr**       | Convierte la salida de **ip -o** a un formato legible|
-|**rtstat**     | Utilidad de estado de ruta|
-|**ss**         | Similar al comando **netstat**; muestra las conexiones activas|
-|**tc**         | Control de tráfico para implementaciones de calidad de servicio (QoS) y<br> clase de servicio (CoS)|
-|               | `tc qdisc`          permite a los usuarios configurar la disciplina de<br> colas|
-|               | `tc class`          permite a los usuarios configurar clases según la<br> programación de la disciplina de colas|
-|               | `tc filter`         permite a los usuarios configurar el filtrado de<br> paquetes QoS/CoS|
-|               | `tc monitor`        permite visualizar los cambios realizados en el<br> control de tráfico del kernel|
-
-
-
 |**bridge**     | Configures network bridges  |                                                     |
 |:--------------|:----------------------------|:----------------------------------------------------|
 |**ctstat**     | Connection status utility   |                                                     |
