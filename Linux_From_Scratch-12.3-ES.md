@@ -9950,38 +9950,37 @@ incluye los compiladores de C y C++.
 Si se compila en x86_64, cambie el nombre del directorio
 predeterminado para las bibliotecas de 64 bits a \"lib\":
 
-> +-----------------------------------------------+
-> ---
-> case \$(uname -m) in
+> ```bash
+> case $(uname -m) in
 >    x86_64)
->    sed -e '/m64=/s/lib64/lib/' \
->    -i.orig gcc/config/i386/t-linux64
+>      sed -e '/m64=/s/lib64/lib/' \
+>        -i.orig gcc/config/i386/t-linux64
 >    ;;
 > esac
-> +-----------------------------------------------+
+> ```
 
 La documentación de GCC recomienda compilar GCC en un directorio de
 compilación dedicado:
 
-> +--------------------+
-> ---
+> ```bash
 > mkdir -v build
-> cd
-> build
-> +--------------------+
+> cd       build
+> ```
 
 Preparar GCC para la compilación:
 
-> ../configure --prefix=/usr \
->  LD=ld\\
-> --enable-languages=c,c++ \
-> --enable-default-pie \
-> --enable-default-ssp \
-> --enable-host-pie \
-> --disable-multilib \
-> --disable-bootstrap \
-> --disable-fixincludes \
-> --with-system-zlib
+> ```bash
+> ../configure --prefix=/usr            \
+>              LD=ld                    \
+>              --enable-languages=c,c++ \
+>              --enable-default-pie     \
+>              --enable-default-ssp     \
+>              --enable-host-pie        \
+>              --disable-multilib       \
+>              --disable-bootstrap      \
+>              --disable-fixincludes    \
+>              --with-system-zlib
+> ```
 
 GCC admite siete lenguajes de programación diferentes, pero los
 requisitos previos para la mayoría de ellos aún no se han instalado.
@@ -10031,9 +10030,9 @@ interna.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 > 📌 **Importante**
 > 
@@ -10055,37 +10054,36 @@ explícitamente. No es necesario cambiar el límite flexible del tamaño de
 la pila, ya que GCC lo establecerá automáticamente en un valor
 apropiado, siempre que no exceda el límite rígido:
 
-  ----------------------------
-  ulimit -s -H unlimited
-  ----------------------------
+> ```bash
+> ulimit -s -H unlimited
+> ```
 
-****Ahora elimine/corrija varios fallos de prueba conocidos:
+Ahora elimine/corrija varios fallos de prueba conocidos:
 
-> sed -e '/cpython/d'
->-i ../gcc/testsuite/gcc.dg/plugin/plugin.exp
-> sed -e 's/no-pic /&-no-pie /'
->-i ../gcc/testsuite/gcc.target/i386/pr113689-1.c
-> sed -e 's/300000/(1 | 300000)/'
-> -i ../libgomp/testsuite/libgomp.c-c++-common/pr109062.c
-> sed -e 's/{ target nonpic } /' 
-> -e '/GOTPCREL/d\'
-> -i ../gcc/testsuite/gcc.target/i386/fentryname3.c
+> ```bash
+> sed -e '/cpython/d'             -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp
+> sed -e 's/no-pic /&-no-pie /'   -i ../gcc/testsuite/gcc.target/i386/pr113689-1.c
+> sed -e 's/300000/(1 | 300000)/'  -i ../libgomp/testsuite/libgomp.c-c++-common/pr109062.c
+> sed -e 's/{ target nonpic } //'  \
+>     -e '/GOTPCREL/d'             -i ../gcc/testsuite/gcc.target/i386/fentryname3.c
+> ```
 
 Pruebe los resultados como un usuario sin privilegios, pero no se
 detenga en los errores:
 
->chown -R tester 
->su tester -c \"PATH=\$PATH make -k check\"
+> ```bash
+> chown -R tester .
+> su tester -c "PATH=\$PATH make -k check"
+> ```
 
 Para extraer un resumen de los resultados del conjunto de pruebas,
 ejecute:
 
-  -----------------------------------
-  ../contrib/test_summary
-  -----------------------------------
+> ```bash
+> ../contrib/test_summary
+> ```
 
-Para filtrar solo los resúmenes, envíe la salida mediante **grep -A7
-Summ**.
+Para filtrar solo los resúmenes, envíe la salida mediante **grep -A7 Summ**.
 
 Los resultados se pueden comparar con los que se encuentran en:
 
@@ -10104,68 +10102,76 @@ los de la URL anterior, es seguro continuar.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 El directorio de compilación de GCC ahora pertenece a tester, y la
 propiedad del directorio de encabezado instalado (y su contenido) es
 incorrecta. Cambie la propiedad al usuario y grupo root:
 
+> ```bash
 > chown -v -R root:root \
 > /usr/lib/gcc/$(gcc -dumpmachine)/14.2.0/include{,-fixed}
+> ```
 
 Cree un enlace simbólico requerido por el FHS por razones
 históricas.
 
-  -----------------------------------
-  ln -svr /usr/bin/cpp /usr/lib
-  -----------------------------------
+> ```bash
+> ln -svr /usr/bin/cpp /usr/lib
+> ```
 
 Muchos paquetes usan el nombre cc para llamar al compilador de C. Ya
 hemos creado cc como enlace simbólico en gcc-pass2; crea también su
 página de manual como enlace simbólico:
 
-  -------------------------------------------------
-  ln -sv gcc.1 /usr/share/man/man1/cc.1
-  -------------------------------------------------
+> ```bash
+> ln -sv gcc.1 /usr/share/man/man1/cc.1
+> ```
 
 Añade un enlace simbólico de compatibilidad para habilitar la
 compilación de programas con Optimización del Tiempo de Enlace
 (LTO):
 
+> ```bash
 > ln -sfv ../../libexec/gcc/$(gcc-dumpmachine)/14.2.0/liblto_plugin.so \
-> /usr/lib/bfd-plugins/
+>         /usr/lib/bfd-plugins/
+> ```
 
 Ahora que nuestra cadena de herramientas final está lista, es
 importante asegurar de nuevo que la compilación y el enlace funcionen
 correctamente. Para ello, realizamos algunas comprobaciones de
 seguridad:
 
+> ```bash
 > echo 'int main(){}' > dummy.c
 > cc dummy.c -v -Wl,--verbose &> dummy.log
 > readelf -l a.out | grep ': /lib'
+> ```
 
 No debería haber errores y la salida del último comando será
 (teniendo en cuenta las diferencias específicas de la plataforma en el
 nombre del enlazador dinámico):
 
-  --------------------------------------------------------------------------------------------
-  [Intérprete del programa solicitante: /lib64/ld-linux-x86-64.so.2]
-  --------------------------------------------------------------------------------------------
+> ```bash
+> [Intérprete del programa solicitante: /lib64/ld-linux-x86-64.so.2]
+> ``
 
 Ahora asegúrese de que estamos configurados para usar los archivos
 de inicio correctos:
 
-  -----------------------------------------------------------------------
-  grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log
-  -----------------------------------------------------------------------
+> ```bash
+> grep -E -o '/usr/lib.*/S?crt[1in].*succeeded' dummy.log
+> ```
 
 La salida del último comando debería ser:
 
+> ```bash
 > /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/Scrt1.o succeeded
 > /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/crti.o succeeded
 > /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/../../../../lib/crtn.o succeeded
+> ```
 
 Dependiendo de la arquitectura de su equipo, lo anterior puede
 variar ligeramente. La diferencia radica en el nombre del directorio
@@ -10174,17 +10180,19 @@ encontrado los tres archivos **crt\*.o** en el directorio
 **/usr/lib**. Verifique que el compilador esté buscando los
 archivos de encabezado correctos:
 
-  --------------------------------------------------
-  grep -B4 '^ /usr/include' dummy.log
-  --------------------------------------------------
+> ```bash
+> grep -B4 '^ /usr/include' dummy.log
+> ```
 
 Este comando debería devolver el siguiente resultado:
 
+> ```bash
 > #include <...> search starts here:
-> /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include
-> /usr/local/include
-> /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed
-> /usr/include
+>  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include
+>  /usr/local/include
+>  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.0/include-fixed
+>  /usr/include
+> ```
 
 Nuevamente, el directorio nombrado según el triplete de destino
 puede ser diferente al anterior, dependiendo de la arquitectura de su
@@ -10193,14 +10201,15 @@ sistema.
 A continuación, verifique que el nuevo enlazador se esté utilizando
 con las rutas de búsqueda correctas:
 
-  ------------------------------------------------------------------------
-  grep 'SEARCH.usr/lib' dummy.log | sed 's|;|\n|g'
-  ------------------------------------------------------------------------
+> ```bash
+> grep 'SEARCH.*/usr/lib' dummy.log | sed 's|; |\n|g'
+> ```
 
 Las referencias a rutas que tengan componentes con \'-linux-gnu\'
 deben ignorarse; de lo contrario, la salida del último comando debería
 ser:
 
+> ```bash
 > SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib64")
 > SEARCH_DIR("/usr/local/lib64")
 > SEARCH_DIR("/lib64")
@@ -10209,10 +10218,12 @@ ser:
 > SEARCH_DIR("/usr/local/lib")
 > SEARCH_DIR("/lib")
 > SEARCH_DIR("/usr/lib");
+> ```
 
 Un sistema de 32 bits puede usar algunos otros directorios. Por
 ejemplo, aquí está la salida de una máquina i686:
 
+> ```bash
 > SEARCH_DIR("/usr/i686-pc-linux-gnu/lib32")
 > SEARCH_DIR("/usr/local/lib32")
 > SEARCH_DIR("/lib32")
@@ -10221,32 +10232,33 @@ ejemplo, aquí está la salida de una máquina i686:
 > SEARCH_DIR("/usr/local/lib")
 > SEARCH_DIR("/lib")
 > SEARCH_DIR("/usr/lib"); 
+> ```
 
 A continuación, asegúrese de usar la libc correcta:
 
-  -------------------------------------------
-  grep "/lib.*/libc.so.6" dummy.log
-  -------------------------------------------
+> ```bash
+> grep "/lib.*/libc.so.6 " dummy.log
+> ```
 
 El resultado del último comando debería ser:
 
-  --------------------------------------------------------
-  attempt to open /usr/lib/libc.so.6 succeeded
-  --------------------------------------------------------
+> ```bash
+> attempt to open /usr/lib/libc.so.6 succeeded
+> ```
 
 Asegúrese de que GCC esté usando el enlazador dinámico correcto:
 
-  --------------------------------
-  grep found dummy.log
-  --------------------------------
+> ```bash
+> grep found dummy.log
+> ```
 
 El resultado del último comando debería ser (teniendo en cuenta las
 diferencias específicas de la plataforma en el nombre del enlazador
 dinámico):
 
-  -----------------------------------------------------------------------
-  found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2
-  -----------------------------------------------------------------------
+> ```bash
+> found ld-linux-x86-64.so.2 at /usr/lib/ld-linux-x86-64.so.2
+> ```
 
 Si el resultado no se muestra como se muestra arriba o no se recibe,
 entonces algo está muy mal. Investigue y vuelva a seguir los pasos para
@@ -10254,43 +10266,43 @@ encontrar el problema y corregirlo. Cualquier problema debe resolverse
 antes de continuar con el proceso. Una vez que todo funcione
 correctamente, limpie los archivos de prueba:
 
-  -----------------------------------------
-  rm -v dummy.c a.out dummy.log
-  -----------------------------------------
+> ```bash
+> rm -v dummy.c a.out dummy.log
+> ```
 
 Finalmente, mueva un archivo extraviado:
 
+> ```bash
 > mkdir -pv /usr/share/gdb/auto-load/usr/lib
 > mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
+> ```
 
 ### 8.29.2. Contenido de GCC
 
 **Programas instalados**: c++, cc (enlace a gcc), cpp, g++, gcc, gcc-ar,
 gcc-nm, gcc-ranlib, gcov, gcov-dump, gcov-tool y lto-dump
-
 **Bibliotecas instaladas**: libasan.{a,so}, libatomic.{a,so},
 libcc1.so, libgcc.a, libgcc_eh.a, libgcc_s.so, libgcov.a,
 libgomp.{a,so}, libhwasan.{a,so}, libitm.{a,so}, liblsan.{a,so},
 liblto_plugin.so, libquadmath.{a,so}, libssp.{a,so}, libssp_nonshared.a,
 libstdc++.{a,so}, libstdc++exp.a, libstdc++fs.a, libsupc++.a,
 libtsan.{a,so} y libubsan.{a,so}
-
 **Directorio instalados**: /usr/include/c++, /usr/lib/gcc,
 /usr/libexec/gcc y /usr/share/gcc-14.2.0
 
 ### Descripciones breves
 
-c++ El compilador de C++
+**c++** El compilador de C++
 
-cc El compilador de C
+**cc** El compilador de C
 
-cpp El preprocesador de C; El compilador lo utiliza para
+**cpp** El preprocesador de C; El compilador lo utiliza para
 expandir las directivas #include, #define y similares en los archivos
 fuente
 
-g++ El compilador de C++
+**g++** El compilador de C++
 
-gcc El compilador de C
+**gcc** El compilador de C
 
 **gcc-ar** Un contenedor de ar que añade un complemento a la línea
 de comandos. Este programa solo se utiliza para añadir \"optimización
@@ -10320,72 +10332,78 @@ conexión
 **lto-dump** Herramienta para volcar archivos objeto generados por GCC
 con LTO habilitado
 
-libasan Biblioteca de ejecución Address Sanitizer.
+*libasan* Biblioteca de ejecución Address Sanitizer.
 
-libatomic Biblioteca de ejecución atómica integrada de GCC.
+*libatomic* Biblioteca de ejecución atómica integrada de GCC.
 
-libcc1 Una biblioteca que permite a GDB utilizar GCC.
+*libcc1* Una biblioteca que permite a GDB utilizar GCC.
 
-libgcc Contiene soporte en tiempo de ejecución para gcc.
+*libgcc* Contiene soporte en tiempo de ejecución para gcc.
 
-libgcov Esta biblioteca se vincula a un programa cuando se le indica
+*libgcov* Esta biblioteca se vincula a un programa cuando se le indica
 a GCC que habilite la generación de perfiles.
 
-libgomp Implementación GNU de la API OpenMP para programación
+*libgomp* Implementación GNU de la API OpenMP para programación
 paralela multiplataforma de memoria compartida en C/C++ y Fortran.
 
-libhwasan Biblioteca de ejecución Address Sanitizer asistida por
+*libhwasan* Biblioteca de ejecución Address Sanitizer asistida por
 hardware
 
-libitm Biblioteca de memoria transaccional de GNU
+*libitm* Biblioteca de memoria transaccional de GNU
 
-liblsan Biblioteca de ejecución Leak Sanitizer
+*liblsan* Biblioteca de ejecución Leak Sanitizer
 
-liblto_plugin El complemento LTO de GCC permite a Binutils procesar
+*liblto_plugin* El complemento LTO de GCC permite a Binutils procesar
 archivos objeto generados por GCC con LTO habilitado****
 
-libquadmath API de la biblioteca matemática de precisión cuádruple
+*libquadmath* API de la biblioteca matemática de precisión cuádruple
 de GCC
 
-libssp Contiene rutinas que soportan la función de protección contra
+*libssp* Contiene rutinas que soportan la función de protección contra
 la destrucción de pila de GCC. Normalmente no se utiliza, ya que Glibc
 también proporciona dichas rutinas
 
-libstdc++ La biblioteca estándar de C++
+*libstdc++* La biblioteca estándar de C++
 
-libstdc++exp La biblioteca experimental de contratos de C++
+*libstdc++exp* La biblioteca experimental de contratos de C++
 
-libstdc++fs La biblioteca del sistema de archivos ISO/IEC TS
+*libstdc++fs* La biblioteca del sistema de archivos ISO/IEC TS
 18822:2015
 
-libsupc++ Proporciona rutinas de soporte para el lenguaje de
-programación C++****
+*libsupc++* Proporciona rutinas de soporte para el lenguaje de
+programación C
 
-libtsan La biblioteca de ejecución Thread Sanitizer****
+*libtsan* La biblioteca de ejecución Thread Sanitizer
 
-libubsan La biblioteca de ejecución Undefined Behavior Sanitizer****
+*libubsan* La biblioteca de ejecución Undefined Behavior Sanitizer
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.30. Ncurses-6.5
 
 El paquete Ncurses contiene bibliotecas para la gestión de pantallas
 de caracteres independiente de la terminal
 
-**Tiempo de compilación aproximado**: 0.2 SBU
-
-**Espacio en disco necesario**: 46 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|46 MB|
 
 ### 8.30.1. Instalación de Ncurses
 
 Preparar Ncurses para la compilación:
 
-> ./configure --prefix=/usr \
-> --mandir=/usr/share/man \
-> --with-shared \
-> --without-debug \
-> --without-normal \
-> --with-cxx-shared \
-> --enable-pc-files \
-> --with-pkg-config-libdir=/usr/lib/pkgconfig
+> ```bash
+> ./configure --prefix=/usr           \
+>             --mandir=/usr/share/man \
+>             --with-shared           \
+>             --without-debug         \
+>             --without-normal        \
+>             --with-cxx-shared       \
+>             --enable-pc-files       \
+>             --with-pkg-config-libdir=/usr/lib/pkgconfig
+> ```
 
 **El significado de las nuevas opciones de configuración**:
 
@@ -10415,9 +10433,9 @@ Esta opción genera e instala archivos .pc para pkg-config.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Este paquete incluye un conjunto de pruebas, pero solo se puede
 ejecutar después de instalarlo. Las pruebas se encuentran en el
@@ -10432,12 +10450,14 @@ el comando **install** (el encabezado **curses.h** también se edita para garant
 use la ABI de caracteres anchos, como se hizo en la Sección 6.3,
 "Ncurses-6.5"):
 
-> make DESTDIR=\$PWD/dest install
+> ```bash
+> make DESTDIR=$PWD/dest install
 > install -vm755 dest/usr/lib/libncursesw.so.6.5 /usr/lib
 > rm -v dest/usr/lib/libncursesw.so.6.5
 > sed -e 's/^#if.*XOPEN.*$/#if 1/' \
-> -i dest/usr/include/curses.h**
-> cp -av dest/* 
+>     -i dest/usr/include/curses.h
+> cp -av dest/* /
+> ```
 
 Muchas aplicaciones aún esperan que el enlazador pueda encontrar
 bibliotecas de Ncurses que no sean de caracteres anchos. Engañe a estas
@@ -10446,23 +10466,25 @@ mediante enlaces simbólicos (tenga en cuenta que los enlaces .so solo
 son seguros con curses.h). Editado para usar siempre la ABI de
 caracteres anchos:
 
-> for lib in ncurses form panel menu ; do**
-> ln -sfv lib\${lib}w.so /usr/lib/lib\${lib}.so**
-> ln -sfv \${lib}***w.pc*** /usr/lib/pkgconfig/\${lib}.pc**
+> ```bash
+> for lib in ncurses form panel menu ; do
+> ln -sfv lib${lib}w.so /usr/lib/lib${lib}.so
+> ln -sfv ${lib}w.pc /usr/lib/pkgconfig/${lib}.pc
 > done
+> ```
 
 Finalmente, asegúrese de que las aplicaciones antiguas que buscan
 \"-lcurses\" en tiempo de compilación aún se puedan compilar:
 
-  --------------------------------------------------
-  ln -sfv libncursesw.so /usr/lib/libcurses.so
-  --------------------------------------------------
+> ```bash
+> ln -sfv libncursesw.so /usr/lib/libcurses.so
+> ```
 
 Si lo desea, instale la documentación de Ncurses:
-
-  ------------------------------------------------------
-  cp -v -R doc -T /usr/share/doc/ncurses-6.5
-  ------------------------------------------------------
+>
+> ```bash
+> cp -v -R doc -T /usr/share/doc/ncurses-6.5
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -10474,29 +10496,29 @@ Si lo desea, instale la documentación de Ncurses:
 > anchos requieren la versión 5. Si necesita tener dichas bibliotecas
 > debido a alguna aplicación de solo **binario** o para cumplir con
 > LSB, vuelva a compilar el paquete con los siguientes comandos:
-> 
+>
+> ```bash
 > make distclean
-> ./configure --prefix=/usr \
-> --with-shared \
-> --without-normal \
-> --without-debug \
-> --without-cxx-binding \
-> --with-abi-version=5
+> ./configure --prefix=/usr         \
+>             --with-shared         \
+>             --without-normal      \
+>             --without-debug       \
+>             --without-cxx-binding \
+>             --with-abi-version=5
 > make sources libs
 > cp -av lib/lib*.so.5* /usr/lib
+> ```
 
 ### 8.30.2. Contenido de Ncurses
 
 **Programas instalados**: captoinfo (enlace a tic), clear, infocmp,
 infotocap (enlace a tic), ncursesw6-config, reset (enlace a tset), tabs,
 tic, toe, tput y tset
-
 **Bibliotecas instaladas**: libcurses.so (enlace simbólico),
 libform.so (enlace simbólico), libformw.so, libmenu.so (enlace
 simbólico), libmenuw.so, libncurses.so (enlace simbólico),
 libncursesw.so, libncurses++w.so, libpanel.so (enlace simbólico) y
 libpanelw.so
-
 **Directorios instalados**: /usr/share/tabset, /usr/share/terminfo y
 /usr/share/doc/ncurses-6.5
 
@@ -10533,56 +10555,65 @@ inicializar una terminal o informar su nombre completo
 
 **tset** Se puede usar para inicializar terminales
 
-**libncursesw** Contiene funciones para mostrar texto de muchas
+*libncursesw* Contiene funciones para mostrar texto de muchas
 formas complejas en una pantalla de terminal; un buen ejemplo del uso de
 estas funciones es el menú que se muestra durante el **make menuconfig**
 del kernel.
 
-**libncurses++w** Contiene enlaces de C++ para otras bibliotecas de
+*libncurses++w* Contiene enlaces de C++ para otras bibliotecas de
 este paquete
 
-**libformw** Contiene funciones para implementar formularios
+*libformw* Contiene funciones para implementar formularios
 
-**libmenuw** Contiene funciones para implementar menús
+*libmenuw* Contiene funciones para implementar menús
 
-**libpanelw** Contiene funciones para implementar paneles
+*libpanelw* Contiene funciones para implementar paneles
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.31. Sed-4.9
 
 El paquete Sed contiene un editor de flujos.
 
-Tiempo aproximado de compilación: 0.3 SBU
-
-Espacio en disco requerido: 30 MB
+|Tiempo de compilación aproximado:|0,3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|30 MB|
 
 ### 8.31.1. Instalación de Sed
 
 Preparar Sed para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete y generar la documentación HTML:
 
+> ```bash
 > make
 > make html
+> ```
 
 Para probar los resultados, ejecute:
 
+> ```bash
 > chown -R tester .
-> su tester -c "PATH=\$PATH make check"
+> su tester -c "PATH=$PATH make check"
+> ```
 
 Instalar el paquete y su documentación:
 
+> ```bash
 > make install
-> install -d -m755 /usr/share/doc/sed-4.9
+> install -d -m755           /usr/share/doc/sed-4.9
 > install -m644 doc/sed.html /usr/share/doc/sed-4.9
+> ```
 
 ### 8.31.2. Contenido de Sed
 
 **Programa instalado**: sed
-
 **Directorio de instalación**: /usr/share/doc/sed-4.9
 
 ### Descripciones breves
@@ -10602,31 +10633,31 @@ Espacio en disco necesario: 6,7 MB
 
 Preparar Psmisc para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para ejecutar el conjunto de pruebas, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.32.2. Contenido de Psmisc
 
-Programas instalados: fuser, killall, peekfd, prtstat, pslog, pstree
+**Programas instalados**: fuser, killall, peekfd, prtstat, pslog, pstree
 y pstree.x11 (enlace a pstree)
 
 ### Descripciones breves
@@ -10651,6 +10682,10 @@ proceso.
 **pstree.x11** Igual que **pstree**, excepto que espera confirmación
 antes de salir.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.33. Gettext-0.24
 
 El paquete Gettext contiene utilidades para la internacionalización
@@ -10658,34 +10693,38 @@ y localización. Estas permiten compilar programas con NLS (Soporte de
 Lenguaje Nativo), lo que les permite mostrar mensajes en el idioma
 nativo del usuario.
 
-Tiempo de compilación aproximado: 1.7 SBU
-
-Espacio en disco requerido: 290 MB
+|Tiempo de compilación aproximado:|1.7 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|290 MB|
 
 ### 8.33.1. Instalación de Gettext
 
 Preparar Gettext para la compilación:
 
-> ./configure --prefix=/usr \
-> --disable-static \
-> --docdir=/usr/share/doc/gettext-0.24
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --docdir=/usr/share/doc/gettext-0.24
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
+> ```bash
 > make install
 > chmod -v 0755 /usr/lib/preloadable_libintl.so
+> ```
 
 ### 8.33.2. Contenido de Gettext
 
@@ -10693,11 +10732,9 @@ Instalar el paquete:
 gettextize, msgattrib, msgcat, msgcmp, msgcomm, msgconv, msgen, msgexec,
 msgfilter, msgfmt, msggrep, msginit, msgmerge, msgunfmt, msguniq,
 ngettext, recode-sr- latin y xgettext
-
 **Bibliotecas instaladas**: libasprintf.so, libgettextlib.so,
 libgettextpo.so, libgettextsrc.so, libtextstyle.so y
 preloadable_libintl.so
-
 **Directorios instalados**: /usr/lib/gettext,
 /usr/share/doc/gettext-0.24, /usr/share/gettext y
 /usr/share/gettext-0.24
@@ -10770,68 +10807,70 @@ cirílico al latino
 **xgettext** Extrae las líneas de mensaje traducibles de los archivos
 fuente dados para crear la primera plantilla de traducción
 
-**libasprintf** Define la clase autosprintf, que permite usar rutinas de
+*libasprintf* Define la clase autosprintf, que permite usar rutinas de
 salida con formato C en programas C++, para su uso con las cadenas
 \<string\> y los flujos \<iostream\>.
 
-**libgettextlib** Contiene rutinas comunes utilizadas por los diversos
+*libgettextlib* Contiene rutinas comunes utilizadas por los diversos
 programas Gettext; estas no están diseñadas para uso general.
 
-**libgettextpo** Se utiliza para escribir programas especializados que
+*libgettextpo* Se utiliza para escribir programas especializados que
 procesan archivos .po; esta biblioteca se utiliza cuando las
 aplicaciones estándar incluidas con Gettext (como msgcomm, msgcmp,
 msgattrib y msgen) no son suficientes.
 
-**libgettextsrc** Proporciona rutinas comunes utilizadas por los
+*libgettextsrc* Proporciona rutinas comunes utilizadas por los
 diversos programas Gettext; Estos no están destinados a uso general.
 
-**libtextstyle** Biblioteca de estilos de texto.
+*libtextstyle* Biblioteca de estilos de texto.
 
-**preloadable_libintl** Una biblioteca, diseñada para ser utilizada
+*preloadable_libintl* Una biblioteca, diseñada para ser utilizada
 por LD_PRELOAD, que ayuda a libintl a registrar mensajes no
 traducidos.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.34. Bison-3.8.2
 
 El paquete Bison contiene un generador de analizadores
 sintácticos.
 
-Tiempo de compilación aproximado: 2.1 SBU
-
-Espacio en disco necesario: 62 MB
+|Tiempo de compilación aproximado:|2.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|62 MB|
 
 ### 8.34.1. Instalación de Bison
 
 Preparar Bison para la compilación:
 
-  --------------------------------------------------------------------
-  ./configure --prefix=/usr --docdir=/usr/share/doc/bison-3.8.2
-  --------------------------------------------------------------------
+> ```bash
+> ./configure --prefix=/usr --docdir=/usr/share/doc/bison-3.8.2
+> ```
 
 Compilar el paquete:
 
-  ----------
-make
-  ----------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.34.2. Contenido de Bison
 
 **Programas instalados**: bison y yacc
-
 **Biblioteca instalada**: liby.a
-
 **Directorio de instalación**: /usr/share/bison****
 
 ### Descripciones breves
@@ -10843,51 +10882,54 @@ Yacc (Yet Another Compiler Compiler).
 **yacc** Un contenedor para bison, pensado para programas que aún llaman
 a yacc en lugar de bison; llama a bison con la opción -y.
 
-**liby** La biblioteca de Yacc que contiene implementaciones de las
+*liby* La biblioteca de Yacc que contiene implementaciones de las
 funciones yyerror y main compatibles con Yacc. Esta biblioteca no suele
 ser muy útil, pero POSIX la requiere.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.35. Grep-3.11
 
 El paquete Grep contiene programas para buscar en el contenido de
 los archivos.
 
-Tiempo de compilación aproximado: 0.4 SBU
-
-Espacio en disco necesario: 39 MB
-
+|Tiempo de compilación aproximado:|0,4 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|39 MB|
 ### 8.35.1. Instalación de Grep
 
 Primero, elimine una advertencia sobre el uso de egrep y fgrep que
 provoca el fallo de las pruebas en algunos paquetes:
 
-  -------------------------------------------
-sed -i "s/echo/#echo/" src/egrep.sh
-  -------------------------------------------
+> ```bash
+> sed -i "s/echo/#echo/" src/egrep.sh
+> ```
 
 Prepare Grep para la compilación:
 
-  ------------------------------
-./configure --prefix=/usr
-  -------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.35.2. Contenido de Grep
 
@@ -10904,22 +10946,28 @@ Está obsoleto, use grep -F en su lugar.
 **grep** Imprime líneas que coinciden con una expresión regular
 básica.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.36. Bash-5.2.37
 
 El paquete Bash contiene Bourne-Again Shell.
 
-Tiempo de compilación aproximado: 1.4 SBU
-
-Espacio en disco requerido: 53 MB
+|Tiempo de compilación aproximado:|1.4 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|53 MB|
 
 ### 8.36.1. Instalación de Bash
 
 Preparar Bash para la compilación:
 
-> ./configure \--prefix=/usr \
-> --without-bash-malloc \
-> --with-***installed***-readline \
-> --docdir=/usr/share/doc/bash-5.2.37
+> ```bash
+> ./configure --prefix=/usr                   \
+>             --without-bash-malloc           \
+>             --with-installed-readline       \
+>             --docdir=/usr/share/doc/bash-5.2.37
+> ```
 
 **Significado de la nueva opción de configuración**:
 
@@ -10931,9 +10979,9 @@ readline.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Vaya a \"Instalar el paquete\" si no está ejecutando el conjunto de
 pruebas.
@@ -10941,9 +10989,9 @@ pruebas.
 Para preparar las pruebas, asegúrese de que el usuario
 **tester** pueda escribir en el árbol de fuentes:
 
-  -----------------------
-  chown -R tester .
-  -----------------------
+> ```bash
+> chown -R tester .
+> ```
 
 El conjunto de pruebas de este paquete está diseñado para ejecutarse
 como un usuario no-**root**, propietario de la terminal conectada
@@ -10951,6 +10999,7 @@ a la entrada estándar. Para cumplir con este requisito, cree una nueva
 pseudoterminal con Expect y ejecute las pruebas como el usuario
 **tester**:
 
+> ```bash
 > su -s /usr/bin/expect tester << "EOF"
 > set timeout -1
 > spawn make tests
@@ -10958,6 +11007,7 @@ pseudoterminal con Expect y ejecute las pruebas como el usuario
 > lassign [wait] _ _ _ value
 > exit $value
 > EOF
+> ```
 
 El conjunto de pruebas utiliza **diff** para detectar la diferencia
 entre la salida del script de prueba y la salida esperada. Cualquier
@@ -10969,16 +11019,16 @@ línea de la salida.
 
 Instale el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+ > ```
 
 Ejecute el programa bash recién compilado (reemplazando el que se
 está ejecutando):
 
-  --------------------------------------
-  exec /usr/bin/bash --login
-  --------------------------------------
+> ```bash
+> exec /usr/bin/bash --login
+> ```
 
 ### 8.36.2. Contenido de Bash
 
@@ -11003,54 +11053,56 @@ bash intenta imitar el comportamiento de inicio de versiones anteriores
 de sh con la mayor fidelidad posible, a la vez que cumple con el
 estándar POSIX.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.37. Libtool-2.5.4
 
 El paquete Libtool contiene el script de soporte para bibliotecas
 genéricas de GNU. Simplifica el uso de bibliotecas compartidas con una
 interfaz consistente y portátil.
 
-Tiempo de compilación aproximado: 0.6 SBU
-
-Espacio en disco necesario: 44 MB
+|Tiempo de compilación aproximado:|0.6 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|44 MB|
 
 ### 8.37.1. Instalación de Libtool
 
 Preparar Libtool para la compilación:
 
-  -------------------------------
-  ./configure --prefix=/usr
-  -------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 Eliminar una biblioteca estática inútil:
 
-  -------------------------------
-  rm -fv /usr/lib/libltdl.a
-  -------------------------------
+> ```bash
+> rm -fv /usr/lib/libltdl.a
+> ```
 
 ### 8.37.2. Contenido de Libtool
 
 **Programas instalados**: libtool y libtoolize
-
 **Bibliotecas instaladas**: libltdl.so
-
 **Directorios instalados**: /usr/include/libltdl y /usr/share/libtool
 
 ### Descripciones breves
@@ -11061,8 +11113,12 @@ creación de bibliotecas.
 **libtoolize** Proporciona una forma estándar de añadir soporte para
 **libtool** a un paquete.
 
-**libltdl** Oculta las diversas dificultades al abrir bibliotecas
+*libltdl* Oculta las diversas dificultades al abrir bibliotecas
 cargadas dinámicamente.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.38. GDBM-1.24
 
@@ -11072,17 +11128,19 @@ funciona como el dbm estándar de UNIX. La biblioteca proporciona
 primitivas para almacenar pares clave/datos, buscar y recuperar datos
 por su clave, y eliminar una clave junto con sus datos.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-
-Espacio en disco requerido: 13 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|13 MB|
 
 ### 8.38.1. Instalación de GDBM
 
 Preparar GDBM para la compilación:
 
-> ./configure --prefix=/usr \
-> --disable-static \
-> --enable-libgdbm-compat
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --enable-libgdbm-compat
+> ```
 
 **Significado de la opción de configuración**:
 
@@ -11094,26 +11152,25 @@ más antiguas que proporciona.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.38.2. Contenido de GDBM
 
 **Programas instalados**: gdbm_dump, gdbm_load y gdbmtool
-
 **Bibliotecas instaladas**: libgdbm.so y libgdbm_compat.so
 
 ### Descripciones breves
@@ -11125,105 +11182,112 @@ volcado
 
 **gdbmtool** Prueba y modifica una base de datos de GDBM
 
-**libgdbm** Contiene funciones para manipular una base de datos
+*libgdbm* Contiene funciones para manipular una base de datos
 con hash
 
-**libgdbm_compat** Biblioteca de compatibilidad con funciones de
+*libgdbm_compat* Biblioteca de compatibilidad con funciones de
 DBM antiguas
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.39. Gperf-3.1
 
 Gperf genera una función hash perfecta a partir de un conjunto de
 claves.
 
-**Tiempo de compilación aproximado**: Menos de 0,1 SBU
-
-**Espacio en disco necesario**: 6,1 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|6,1 MB|
 
 ### 8.39.1. Instalación de Gperf
 
 Preparar Gperf para la compilación:
 
-  --------------------------------------------------------------
-  ./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.1
-  --------------------------------------------------------------
+> ```bash
+> ./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.1
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Se sabe que las pruebas fallan si se ejecutan varias simultáneamente
 (opción -j mayor que 1). Para comprobar los resultados, ejecute:
 
-  ----------------
-  make -j1 check
-  ----------------
+> ```bash
+> make -j1 check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.39.2. Contenido de Gperf
 
 **Programa instalado**: gperf
-
 **Directorio de instalación**: /usr/share/doc/gperf-3.1
 
 ### Descripciones breves
 
 **gperf** Genera un hash perfecto a partir de un conjunto de claves
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.40. Expat-2.6.4
 
 El paquete Expat contiene una biblioteca de C orientada a flujos para
 analizar XML.
 
-**Tiempo aproximado de compilación**: 0.1 SBU
-
-**Espacio en disco requerido**: 14 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|14 MB|
 
 ### 8.40.1. Instalación de Expat
 
 Preparar Expat para la compilación:
 
-> ./configure --prefix=/usr \
-> --disable-static \
-> --docdir=/usr/share/doc/expat-2.6.4
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --docdir=/usr/share/doc/expat-2.6.4
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Si lo desea, instale la documentación:
 
-  ---------------------------------------------------------------
-  install -v -m644 doc/*.{html,css} /usr/share/doc/expat-2.6.4
-  ---------------------------------------------------------------
+> ```bash
+> install -v -m644 doc/*.{html,css} /usr/share/doc/expat-2.6.4
+> ```
 
 ### 8.40.2. Contenido de Expat
 
 **Programa instalado**: xmlwf
-
 **Bibliotecas instaladas**: libexpat.so
-
 **Directorio de instalación**: /usr/share/doc/expat-2.6.4
 
 ### Descripciones breves
@@ -11231,37 +11295,42 @@ Si lo desea, instale la documentación:
 **xmlwf** Es una utilidad sin validación que comprueba si los documentos
 XML están correctamente formados.
 
-**libexpat** Contiene funciones API para analizar XML.
+*libexpat* Contiene funciones API para analizar XML.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.41. Inetutils-2.6
 
 El paquete Inetutils contiene programas para redes básicas.
 
-**Tiempo de compilación aproximado**: 0,2 SBU
-
-**Espacio en disco requerido**: 35 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|35 MB|
 
 ### 8.41.1. Instalación de Inetutils
 
 Primero, compile el paquete con gcc-14.1 o posterior:
 
-  -------------------------------------------------------------
-  sed -i 's/def *HAVE_TERMCAP_TGETENT*/ 1/' telnet/telnet.c
-  -------------------------------------------------------------
+> ```bash
+> sed -i 's/def *HAVE_TERMCAP_TGETENT*/ 1/' telnet/telnet.c
+> ```
 
 Prepare Inetutils para la compilación:
 
-> ./configure --prefix=/usr \
-> --bindir=/usr/bin \
-> --localstatedir=/var \
-> --disable-logger \
-> --disable-whois \
-> --disable-rcp \
-> --disable-rexec \
-> --disable-rlogin \
-> --disable-rsh \
-> --disable-servers
-> +---------------------------------------+
+> ```bash
+> ./configure --prefix=/usr        \
+>             --bindir=/usr/bin    \
+>             --localstatedir=/var \
+>             --disable-logger     \
+>             --disable-whois      \
+>             --disable-rcp        \
+>             --disable-rexec      \
+>             --disable-rlogin     \
+>             --disable-rsh        \
+>             --disable-servers
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -11295,41 +11364,74 @@ cuenta que existen alternativas mejores para muchos de estos servidores.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Mueva un programa a la ubicación correcta:
 
-  -------------------------------
-  mv -v /usr/{,s}bin/*ifconfig*
-  -------------------------------
+> ```bash
+> mv -v /usr/{,s}bin/ifconfig
+> ```
+
+### 8.41.2. Contenido de inetutils
+
+**Programas instalados**: dnsdomainname, ftp, ifconfig, hostname, ping, ping6, talk, telnet, tftp y traceroute
+
+### Descripciones breves
+
+**dnsdomainname** Mostrar el nombre de dominio DNS del sistema
+
+**ftp** Es el programa de protocolo de transferencia de archivos
+
+**hostname**  Informa o establece el nombre del host
+
+**ifconfig**  Administra interfaces de red
+
+**ping**  Envía paquetes e informes de eco-requisito cuánto tiempo tardan las respuestas
+
+**ping6**  Una versión de Ping para redes IPv6
+
+**talk**  Se usa para chatear con otro usuario
+
+**telnet**  Una interfaz al protocolo de Telnet
+
+**tftp**  Un programa de transferencia de archivos trivial
+
+**traceroute**  Traza la ruta que toman sus paquetes del host en el que está trabajando a otro host en una red,
+mostrando todos los lúpulos intermedios (puertas de enlace) en la línea
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.42. Less-668
 
 El paquete Less contiene un visor de archivos de texto.
 
-Tiempo de compilación aproximado: Menos de 0,1 SBU
-
-Espacio en disco necesario: 14 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|14 MB|
 
 ### 8.42.1. Instalación de Less
 
 Preparar Less para la compilación:
 
-./configure \--prefix=/usr --sysconfdir=/etc
+> ```bash
+> ./configure --prefix=/usr --sysconfdir=/etc
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -11340,25 +11442,25 @@ busquen los archivos de configuración en /etc
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.42.2. Contenido de Less
 
-Programas instalados: less, lessecho y lesskey
+**Programas instalados**: less, lessecho y lesskey
 
 ### Descripciones breves
 
@@ -11372,14 +11474,18 @@ nombres de archivo en sistemas Unix.
 **lesskey** Se utiliza para especificar las combinaciones de teclas para
 **less**.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.43. Perl-5.40.1
 
 El paquete Perl contiene el Lenguaje Práctico de Extracción e
 Informes.
 
-Tiempo aproximado de compilación: 1.3 SBU
-
-Espacio en disco necesario: 245 MB
+|Tiempo de compilación aproximado:|1.3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|245 MB|
 
 ### 8.43.1. Instalación de Perl
 
@@ -11388,8 +11494,10 @@ Compress::Raw::BZip2. Por defecto, Perl utilizará una copia interna del
 código fuente para la compilación. Ejecute el siguiente comando para que
 Perl utilice las bibliotecas instaladas en el sistema:
 
+> ```bash
 > export BUILD_ZLIB=False
 > export BUILD_BZIP2=0
+> ```
 
 Para tener control total sobre la configuración de Perl, puede
 eliminar las opciones \"-des\" del siguiente comando y configurar
@@ -11397,20 +11505,21 @@ manualmente la compilación de este paquete. Como alternativa, use el
 comando exactamente como se muestra a continuación para usar los valores
 predeterminados que Perl detecta automáticamente:
 
-> sh Configure -des \
-> -D prefix=/usr \
->  -D vendorprefix=/usr \
->  -D privlib=/usr/lib/perl5/5.40/core_perl \
->  -D archlib=/usr/lib/perl5/5.40/core_perl \
->  -D sitelib=/usr/lib/perl5/5.40/site_perl \
->  -D sitearch=/usr/lib/perl5/5.40/site_perl \
->  -D vendorlib=/usr/lib/perl5/5.40/vendor_perl \
->  -D vendorarch=/usr/lib/perl5/5.40/vendor_perl \
->  -D man1dir=/usr/share/man/man1 \
->  -D man3dir=/usr/share/man/man3 \
->  -D pager="/usr/bin/less -isR" \
->  -D useshrplib \
->  -D usethreads
+> ```bash
+> sh Configure -des                                          \
+>              -D prefix=/usr                                \
+>              -D vendorprefix=/usr                          \
+>              -D privlib=/usr/lib/perl5/5.40/core_perl      \
+>              -D archlib=/usr/lib/perl5/5.40/core_perl      \
+>              -D sitelib=/usr/lib/perl5/5.40/site_perl      \
+>              -D sitearch=/usr/lib/perl5/5.40/site_perl     \
+>              -D vendorlib=/usr/lib/perl5/5.40/vendor_perl  \
+>              -D vendorarch=/usr/lib/perl5/5.40/vendor_perl \
+>              -D man1dir=/usr/share/man/man1                \
+>              -D man3dir=/usr/share/man/man3                \
+>              -D pager="/usr/bin/less -isR"                 \
+>              -D useshrplib                                 \
+>              -D usethreads
 
 **Significado de las nuevas opciones de Configure**:
 
@@ -11430,20 +11539,22 @@ Compile Perl con soporte para hilos.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ------------------------------------------
-  TEST_JOBS=\$(nproc) make test_harness
-  -------------------------------------------
+> ```bash
+> TEST_JOBS=$(nproc) make test_harness
+> ```
 
 Instalar el paquete y limpiarlo:
 
+> ```bash
 > make install
 > unset BUILD_ZLIB BUILD_BZIP2
+> ```
 
 ### 8.43.2. Contenido de Perl
 
@@ -11454,9 +11565,7 @@ piconv, pl2pm, pod2html, pod2man, pod2text, pod2usage, podchecker,
 podselect, prove, ptar, ptardiff, ptargrep, shasum, splain, xsubpp y
 zipdetails
 
-**Bibliotecas instaladas**: Muchas de las cuales no se pueden enumerar
-todas aquí
-
+**Bibliotecas instaladas**: Muchas de las cuales no se pueden enumerar todas aquí
 **Directorio de instalación**: /usr/lib/perl5
 
 ### Descripciones breves
@@ -11489,7 +11598,7 @@ salida.
 **perl** Combina algunas de las mejores características de C, sed, awk y
 sh en un único lenguaje de programación.
 
-**perl5.40.1* *Un enlace directo a Perl.
+**perl5.40.1** Un enlace directo a Perl.
 
 **perlbug** Se usa para generar informes de errores sobre Perl o los
 módulos que lo acompañan y enviarlos por correo.
@@ -11546,66 +11655,74 @@ Perl.
 **zipdetails** Muestra detalles sobre la estructura interna de un
 archivo Zip.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.44. XML::Parser-2.47
 
 El módulo XML::Parser es una interfaz de Perl para el analizador XML
 Expat de James Clark.
 
-Tiempo de compilación aproximado: Menos de 0,1 SBU
-
-Espacio en disco necesario: 2,4 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|2,4 MB|
 
 ### 8.44.1. Instalación de XML::Parser
 
 Preparar XML::Parser para la compilación:
 
-  ----------------------
-  perl Makefile.PL
-  ----------------------
+> ```bash
+> perl Makefile.PL
+> ```
 
-****Compilar el paquete:****
+Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ---------------
-make test
-  ---------------
+> ```bash
+> make test
+> ```
 
 Instalar el paquete.
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.44.2. Contenido de XML::Parser
 
-Módulo instalado**:  Expat.so
+**Módulo instalado**:  Expat.so
 
 ### Descripciones breves
 
-Expat proporciona la interfaz Perl Expat
+*Expat*  proporciona la interfaz Perl Expat
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.45. Intltool-0.51.0
 
 Intltool es una herramienta de internacionalización que se utiliza
 para extraer cadenas traducibles de archivos fuente.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-
-Espacio en disco requerido: 1,5 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|1,5 MB|
 
 ### 8.45.1. Instalación de Intltool
 
 Primero, corrija una advertencia causada por Perl-5.22 y versiones
 posteriores:
 
-  --------------------------------------------------------------
-  sed -i 's:\\\${:\\\$\\{:' intltool-update.in
-  --------------------------------------------------------------
+> ```bash
+> sed -i 's:\\\${:\\\$\\{:' intltool-update.in
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -11616,33 +11733,33 @@ posteriores:
 
 Preparar Intltool para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
+> ```bash
 > make install
-> install -v -Dm644 doc/I18N-HOWTO
-> /usr/share/doc/intltool-0.51.0/I18N-HOWTO
+> install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-0.51.0/I18N-HOWTO
+> ```
 
 ### 8.45.2. Contenido de Intltool
 
 **Programas instalados**: intltool-extract, intltool-merge,
 intltool-prepare, intltool-update e intltoolize****
-
 **Directorios instalados**: /usr/share/doc/intltool-0.51.0 y
 /usr/share/intltool
 
@@ -11662,48 +11779,51 @@ archivos de traducción
 **intltool-update** Actualiza los archivos de plantilla po y los fusiona
 con las traducciones
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.46. Autoconf-2.72
 
 El paquete Autoconf contiene programas para generar scripts de shell
 que configuran automáticamente el código fuente.
 
-Tiempo de compilación aproximado: Menos de 0,1 SBU
-(aproximadamente 0,4 SBU con pruebas)
-
-Espacio en disco necesario: 25 MB
+|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 0,4 SBU con pruebas)|
+|---------------------------------|-------|
+|Espacio en disco requerido:|25 MB|
 
 ### 8.46.1. Instalación de Autoconf
 
 Preparar Autoconf para la compilación:
 
-  -------------------------------
-  ./configure --prefix=/usr
-  -------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.46.2. Contenido de Autoconf
 
-Programas instalados: autoconf, autoheader, autom4te,
+**Programas instalados**: autoconf, autoheader, autom4te,
 autoreconf, autoscan, autoupdate e ifnames
 
-Directorio de instalación:  /usr/share/autoconf
+**Directorio de instalación**:  /usr/share/autoconf
 
 ### Descripciones breves
 
@@ -11740,53 +11860,55 @@ determinar qué debe revisar **configure**. También puede completar las
 lagunas en un archivo configure.in generado por
 **autoescaneo**\].
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.47. Automake-1.17
 
 El paquete Automake contiene programas para generar archivos
 Makefile para usar con Autoconf.
 
-Tiempo de compilación aproximado: menos de 0.1 SBU
-(aproximadamente 1.1 SBU con pruebas)
-
-Espacio en disco requerido: 121 MB
+|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 1.1 SBU con pruebas)|
+|---------------------------------|-------|
+|Espacio en disco requerido:|121 MB|
 
 ### 8.47.1. Instalación de Automake
 
 Preparar Automake para la compilación:
 
-  ----------------------------------------------------------------------------
-  ./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.17
-  ----------------------------------------------------------------------------
+> ```bash
+> ./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.17
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Usar cuatro trabajos en paralelo acelera las pruebas, incluso en
 sistemas con menos núcleos lógicos, debido a retrasos internos en las
 pruebas individuales. Para comprobar los resultados, ejecute:
 
-  -------------------------------------------------
-  make -j$(($(nproc)\>4?$(nproc):4)) check
-  -------------------------------------------------
+> ```bash
+> make -j$(($(nproc)\>4?$(nproc):4)) check
+> ```
 
 Reemplace $((...)) con el número de núcleos lógicos que desea usar
 si no desea usarlos todos.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.47.2. Contenido de Automake
 
 **Programas instalados**: aclocal, aclocal-1.17 (vinculado directamente
 con aclocal), automake y automake-1.17 (vinculado directamente con
 automake)
-
 **Directorios instalados**: /usr/share/aclocal-1.17,
 /usr/share/automake-1.17 y /usr/share/doc/automake-1.17
 
@@ -11807,6 +11929,10 @@ correspondiente.\]
 
 **automake-1.17** Un enlace directo a **automake**
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.48. OpenSSL-3.4.1
 
 El paquete OpenSSL contiene herramientas de gestión y bibliotecas
@@ -11814,31 +11940,33 @@ relacionadas con la criptografía. Estas son útiles para proporcionar
 funciones criptográficas a otros paquetes, como OpenSSH, aplicaciones de
 correo electrónico y navegadores web (para acceder a sitios HTTPS).
 
-Tiempo de compilación aproximado: 1.8 SBU
-
-Espacio en disco necesario: 920 MB
+|Tiempo de compilación aproximado:|1.8 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|920 MB|
 
 ### 8.48.1. Instalación de OpenSSL
 
 Preparar OpenSSL para la compilación:
 
-> ./config --prefix=/usr \
-> --***openssldir***=/etc/ssl \
-> --libdir=lib \
->  shared \
->  zlib-dynamic
+> ```bash
+> ./config --prefix=/usr         \
+>          --openssldir=/etc/ssl \
+>         --libdir=lib           \
+>         shared                 \
+>         zlib-dynamic
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  --------------------------------------
-  HARNESS_JOBS=$(nproc) make test
-  --------------------------------------
+> ```bash
+> HARNESS_JOBS=$(nproc) make test
+> ```
 
 Se sabe que una prueba, 30-test_afalg.t, falla si el kernel del host
 no tiene habilitado **CONFIG_CRYPTO_USER_API_SKCIPHER** o no tiene
@@ -11849,21 +11977,23 @@ la CPU admite AES-NI). Si falla, se puede ignorar sin problemas.
 
 Instalar el paquete:
 
-> sed -i '/INSTALL_LIBS/s/*libcrypto.a* libssl.a//' Makefile
+> ```bash
+> sed -i '/INSTALL_LIBS/s/libcrypto.a libssl.a//' Makefile
 > make MANSUFFIX=ssl install
+> ``
 
 Añadir la versión al nombre del directorio de documentación para
 mantener la coherencia con otros paquetes:
 
-  ---------------------------------------------------------------
-  mv -v /usr/share/doc/openssl /usr/share/doc/openssl-3.4.1
-  ---------------------------------------------------------------
+> ```bash
+> mv -v /usr/share/doc/openssl /usr/share/doc/openssl-3.4.1
+> ```
 
 Si se desea, instalar documentación adicional:
 
-  -------------------------------------------------------
-  cp -vfr doc/* /usr/share/doc/openssl-3.4.1
-  -------------------------------------------------------
+> ```bash
+> cp -vfr doc/* /usr/share/doc/openssl-3.4.1
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -11883,9 +12013,7 @@ Si se desea, instalar documentación adicional:
 ### 8.48.2. Contenido de OpenSSL
 
 **Programas instalados**: c_rehash y openssl
-
 **Bibliotecas instaladas**: libcrypto.so y libssl.so
-
 **Directorios instalados**: /etc/ssl, /usr/include/openssl,
 /usr/lib/engines y /usr/share/doc/openssl-3.4.1
 
@@ -11901,7 +12029,7 @@ diversas funciones criptográficas de la biblioteca de cifrado de OpenSSL
 desde el shell. Se puede utilizar para diversas funciones documentadas
 en *openssl(1)*.
 
-*libcrypto.so *implementa una amplia gama de algoritmos criptográficos
+*libcrypto.so* implementa una amplia gama de algoritmos criptográficos
 utilizados en diversos estándares de Internet. Los servicios que ofrece
 esta biblioteca son utilizados por las implementaciones de OpenSSL de
 SSL, TLS y S/MIME, y también se han empleado para implementar OpenSSH,
@@ -11911,14 +12039,18 @@ OpenPGP y otros estándares criptográficos.
 Transporte (TLS v1). Proporciona una API completa, cuya documentación se
 puede encontrar en *ssl(7)*.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.49. Libelf de Elfutils-0.192
 
 Libelf es una biblioteca para gestionar archivos ELF (formato ejecutable
 y enlazable).
 
-**Tiempo de compilación aproximado**: 0.3 SBU
-
-**Espacio en disco necesario**: 135 MB
+|Tiempo de compilación aproximado:|0,3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|135 MB|
 
 ### 8.49.1. Instalación de Libelf
 
@@ -11926,38 +12058,44 @@ Libelf forma parte del paquete elfutils-0.192. Utilice el archivo
 elfutils-0.192.tar.bz2 como archivo tar de origen. Preparar Libelf para
 la compilación:
 
-> ./configure --prefix=/usr \
-> --disable-debuginfod \
-> --enable-libdebuginfod=dummy
+> ```bash
+> ./configure --prefix=/usr        \
+>             --disable-debuginfod \
+>             --enable-libdebuginfod=dummy
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar solo Libelf:
 
+> ```bash
 > make -C libelf install
-> install -vm644 config/*libelf.pc* /usr/lib/pkgconfig
+> install -vm644 config/libelf.pc /usr/lib/pkgconfig
 > rm /usr/lib/libelf.a
+> ```
 
 ### 8.49.2. Contenido de Libelf
 
 **Biblioteca instalada**: libelf.so
-
 **Directorio de instalación**: /usr/include/elfutils
 
 ### Descripciones breves
 
-*libelf.so *Contiene funciones de la API para gestionar archivos de
+*libelf.so* Contiene funciones de la API para gestionar archivos de
 objeto ELF
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.50. Libffi-3.4.7
 
@@ -11971,13 +12109,14 @@ programa escrito en un lenguaje llame a un programa escrito en otro.
 Específicamente, Libffi puede servir de puente entre un intérprete como
 Perl o Python y subrutinas de biblioteca compartida escritas en C o C++.
 
-**Tiempo de compilación aproximado**: 1.7 SBU
-
-**Espacio en disco requerido**: 11 MB
+|Tiempo de compilación aproximado:|1.7 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|11 MB|
 
 ### 8.50.1. Instalación de Libffi
 
-> Nota
+> ℹ️ **Nota**
+> 
 > Al igual que GMP, Libffi se compila con optimizaciones específicas
 > para el procesador en uso. Si se compila para otro sistema, cambie
 > el valor del parámetro \--with-gcc-arch= en el siguiente comando a
@@ -11987,9 +12126,10 @@ Perl o Python y subrutinas de biblioteca compartida escritas en C o C++.
 
 Prepare Libffi para la compilación:
 
+> ```bash
 > ./configure --prefix=/usr \
-> --disable-static \
-> --with-gcc-arch=native
+>             --disable-static \
+>             --with-gcc-arch=native
 
 Significado de la opción de configuración:
 
@@ -12004,21 +12144,21 @@ consulte las opciones x86 en el manual de GCC.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.50.2. Contenido de Libffi
 
@@ -12028,6 +12168,10 @@ Instalar el paquete:
 
 *libffi* Contiene las funciones API de la interfaz de funciones externas
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.51. Python-3.13.2
 
 El paquete Python 3 contiene el entorno de desarrollo de Python. Es
@@ -12036,18 +12180,20 @@ la creación de prototipos de programas grandes y el desarrollo de
 aplicaciones completas. Python es un lenguaje de programación
 interpretado.
 
-Tiempo de compilación aproximado: 2.1 SBU
-
-Espacio en disco requerido: 501 MB
+|Tiempo de compilación aproximado:|2.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|501 MB|
 
 ### 8.51.1. Instalación de Python 3
 
 Preparar Python para la compilación:
 
-> ./configure \--prefix=/usr \
-> --enable-*shared* \
-> --with-system-expat \
-> --enable-optimizations
+> ```bash
+> ./configure --prefix=/usr        \
+>             --enable-shared      \
+>             --with-system-expat  \
+>             --enable-optimizations
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -12063,17 +12209,17 @@ requieren mucho tiempo. El intérprete se compila dos veces; las pruebas
 realizadas en la primera compilación se utilizan para mejorar la versión
 final optimizada. Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 ****Se sabe que algunas pruebas se bloquean indefinidamente. Para
 comprobar los resultados, ejecute el conjunto de pruebas, pero
 establezca un límite de tiempo de 2 minutos para cada caso:****
 
-  -------------------------------------------------
-  make test TESTOPTS="--timeout 120"
-  -------------------------------------------------
+> ```bash
+> make test TESTOPTS="--timeout 120"
+> ```
 
 Para un sistema relativamente lento, podría ser necesario aumentar
 el límite de tiempo; 1 SBU (medido al compilar Binutils pass 1 con un
@@ -12085,9 +12231,9 @@ test_ssl, falla en el entorno chroot.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 En varios lugares de este libro, utilizamos el comando **pip3** para
 instalar programas y módulos de Python 3 para todos los usuarios como
@@ -12119,11 +12265,13 @@ ignorarse. Si lo desea, puede suprimir todas estas advertencias
 ejecutando el siguiente comando, que crea un archivo de
 configuración:
 
+> ```bash
 > cat > /etc/pip.conf << EOF
 > [global]
 > root-user-action = ignore
 > disable-pip-version-check = true
 > EOF
+> ```
 
 > 📌 **Importante**
 > 
@@ -12142,14 +12290,17 @@ configuración:
 > módulo o reinstalar la misma versión por algún motivo, inserte
 > \--force-reinstall \--no-deps en la línea de comandos.
 
-**Si lo desea, instale la documentación preformateada:**
+**Si lo desea, instale la documentación preformateada**:
 
+> ```bash
 > install -v -dm755 /usr/share/doc/python-3.13.2/html
-> tar --strip-components=1  \
-> --no-same-owner \
-> --no-same-permissions \
-> -C /usr/share/doc/python-3.13.2/html \
-> -xvf ../python-3.13.2-docs-html.tar.bz2
+> 
+> tar --strip-components=1                 \
+>     --no-same-owner                      \
+>     --no-same-permissions                \
+>     -C /usr/share/doc/python-3.13.2/html \
+>     -xvf ../python-3.13.2-docs-html.tar.bz2
+> ```
 
 **Significado de los comandos de instalación de la documentación**:
 
@@ -12161,11 +12312,8 @@ paquete con los valores del creador original.
 
 ### 8.51.2. Contenido de Python 3
 
-**Programas instalados**: 2to3, idle3, pip3, pydoc3, python3 y
-python3-config
-
+**Programas instalados**: 2to3, idle3, pip3, pydoc3, python3 y python3-config
 **Biblioteca instalada**: libpython3.13.so y libpython3.so
-
 **Directorios instalados**: /usr/include/python3.13, /usr/lib/python3 y
 /usr/share/doc/python-3.13.2
 
@@ -12188,32 +12336,36 @@ instalar paquetes desde el índice de paquetes de Python y otros
 **python3** es el intérprete de Python, un lenguaje de programación
 interpretado, interactivo y orientado a objetos.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.52. Flit-Core-3.11.0
 
 Flit-core es la parte de Flit (una herramienta de empaquetado para
 módulos Python simples) que permite compilar distribuciones.
 
-Tiempo aproximado de compilación: menos de 0.1 SBU
-
-Espacio en disco requerido: 1.0 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|1.0 MB|
 
 ### 8.52.1. Instalación de Flit-Core
 
 Compilación del paquete:
 
-  -------------------------------------------------------------------------------
-  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
-  -------------------------------------------------------------------------------
+> ```bash
+> pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+> ```
 
-****Instalación del paquete:****
+Instalación del paquete:
 
-  -----------------------------------------------------------------
-  **pip3 install \--no-***index*** \--find-links dist flit_core**
-  -----------------------------------------------------------------
+> ```bash
+> pip3 install --no-index --find-links dist flit_core
+> ```
 
 **Significado de las opciones y comandos de configuración de pip3**:
 
-wheel
+**wheel**
 
 Este comando compila el archivo wheel para este paquete.****
 
@@ -12226,7 +12378,7 @@ Instruye a pip a colocar la rueda creada en el directorio dist.
 Evita que pip copie la rueda creada en el directorio
 /root/.cache/pip.
 
-install
+**install**
 
 Este comando instala el paquete.
 
@@ -12247,33 +12399,36 @@ Instruye a pip a buscar archivos wheel en el directorio dist.
 /usr/lib/python3.13/site-packages/flit_core y /usr/lib/python3.13/site-
 packages/flit_core-3.11.0.dist-info
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.53. Wheel-0.45.1
 
 Wheel es una biblioteca de Python que constituye la implementación
 de referencia del estándar de empaquetado Wheel de Python.
 
-**Tiempo de compilación aproximado**: Menos de 0,1 SBU
-
-**Espacio en disco requerido**: 1,6 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|1,6 MB|
 
 ### 8.53.1. Instalación de Wheel
 
 Compile Wheel con el siguiente comando:
 
-  -------------------------------------------------------------------------------
-  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
-  -------------------------------------------------------------------------------
+> ```bash
+> pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+> ```
 
 Instale Wheel con el siguiente comando:
 
-  -------------------------------------------------------
-  pip3 install --no-index --find-links dist wheel
-  -------------------------------------------------------
+> ```bash
+> pip3 install --no-index --find-links dist wheel
+> ```
 
 ### 8.53.2. Contenido de Wheel
 
 **Programa instalado**: wheel
-
 **Directorios de instalación**: /usr/lib/python3.13/site-packages/wheel
 y /usr/lib/python3.13/site- packages/wheel-0.45.1.dist-info
 
@@ -12282,28 +12437,32 @@ y /usr/lib/python3.13/site- packages/wheel-0.45.1.dist-info
 **wheel** es una utilidad para descomprimir, empaquetar o convertir
 archivos de wheel.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.54. Setuptools-75.8.1
 
 Setuptools es una herramienta que se utiliza para descargar,
 compilar, instalar, actualizar y desinstalar paquetes de Python.
 
-**Tiempo de compilación aproximado**: Menos de 0,1 SBU
-
-**Espacio en disco necesario**: 26 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|26 MB|
 
 ### 8.54.1. Instalación de Setuptools
 
 Compilación del paquete:
 
-  -------------------------------------------------------------------------------------
-  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
-  -------------------------------------------------------------------------------------
+> ```bash
+> pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+> ```
 
 Instalación del paquete:
 
-  ------------------------------------------------------------
-  pip3 install --no-index --find-links dist setuptools
-  ------------------------------------------------------------
+> ```bash
+> pip3 install --no-index --find-links dist setuptools
+> ```
 
 ### 8.54.2. Contenido de 
 
@@ -12313,14 +12472,18 @@ Instalación del paquete:
 /usr/lib/python3.13/site- packages/setuptools y
 /usr/lib/python3.13/site-packages/setuptools- 75.8.1.dist-info
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.55. Ninja-1.12.1
 
 Ninja es un sistema de compilación pequeño enfocado en la
 velocidad.
 
-Tiempo de compilación aproximado: 0.2 SBU
-
-Espacio en disco requerido: 37 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|37 MB|
 
 ### 8.55.1. Instalación de Ninja
 
@@ -12336,28 +12499,30 @@ El siguiente procedimiento opcional permite al usuario limitar el
 número de procesos en paralelo mediante una variable de entorno,
 NINJAJOBS. **Por ejemplo**, al establecer:
 
-  ----------------------------
-  export NINJAJOBS=4
-  ----------------------------
+> ```bash
+> export NINJAJOBS=4
+> ```
 
 se limitará **ninja** a cuatro procesos en paralelo. Si lo
 desea, haga que **ninja** reconozca la variable de entorno NINJAJOBS
 ejecutando el editor de flujo:
 
+> ```bash
 > sed -i '/int Guess/a \
-> int j = 0;\
-> char * jobs = getenv( "NINJAJOBS" );\
-> if ( jobs != NULL ) j = atoi( jobs );\
-> if ( j > 0 ) return j;\
+>   int j = 0;\
+>   char* jobs = getenv( "NINJAJOBS" );\
+>   if ( jobs != NULL ) j = atoi( jobs );\
+>   if ( j > 0 ) return j;\
 > ' src/ninja.cc
+> ```
 
 Construya Ninja con:
 
-  -------------------------------------------------------
-  python3 configure.py --bootstrap --verbose*
-  -------------------------------------------------------
+> ```bash
+> python3 configure.py --bootstrap --verbose
+> ```
 
-Significado de la opción de compilación:
+**Significado de la opción de compilación**:
 
 \--bootstrap
 
@@ -12374,11 +12539,11 @@ Requieren **cmake**. Sin embargo, la función básica de este
 paquete ya se ha probado reconstruyéndose (con la opción
 **--bootstrap**). Instalar el paquete:
 
+> ```bash
 > install -vm755 ninja /usr/bin/
-> install -vDm644 misc/bash-completion
-> /usr/share/bash-completion/completions/ninja
-> install -vDm644 misc/zsh-completion
-> /usr/share/zsh/site-functions/\_ninja
+> install -vDm644 misc/bash-completion /usr/share/bash-completion/completions/ninja
+> install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja
+> ```
 
 ### 8.55.2. Contenido de Ninja
 
@@ -12388,31 +12553,37 @@ paquete ya se ha probado reconstruyéndose (con la opción
 
 **ninja** es el sistema de compilación de Ninja
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.56. Meson-1.7.0
 
 Meson es un sistema de compilación de código abierto diseñado para
 ser extremadamente rápido y lo más intuitivo posible.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-
-Espacio en disco requerido: 44 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|44 MB|
 
 ### 8.56.1. Instalación de Meson
 
 Compile Meson con el siguiente comando:
 
-  -------------------------------------------------------------------------------------
-  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
-  -------------------------------------------------------------------------------------
+> ```bash
+> pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+> ```
 
 El conjunto de pruebas requiere algunos paquetes fuera del alcance
-de LFS. Instalar el paquete:
+de LFS.
 
+Instalar el paquete:
+
+> ```bash
 > pip3 install --no-index --find-links dist meson
-> install -vDm644 data/shell-completions/bash/meson
-> /usr/share/bash-completion/completions/meson
-> install -vDm644 data/shell-completions/zsh/\_meson
-> /usr/share/zsh/site-functions/\_meson
+> install -vDm644 data/shell-completions/bash/meson /usr/share/bash-completion/completions/meson
+> install -vDm644 data/shell-completions/zsh/_meson /usr/share/zsh/site-functions/_meson
+> ```
 
 **Significado de los parámetros de instalación**:
 
@@ -12427,7 +12598,6 @@ Instala las ruedas desde el directorio dist.
 ### 8.56.2. Contenido de Meson
 
 **Programas instalados**: meson
-
 **Directorio de instalación**:
 /usr/lib/python3.13/site-packages/meson-1.7.0.dist-info y
 /usr/lib/python3.13/site-packages/mesonbuild
@@ -12436,25 +12606,31 @@ Instala las ruedas desde el directorio dist.
 
 **meson** Un sistema de compilación de alta productividad
 
-## **8.57. Kmod-34**
+---
+&nbsp;
+&nbsp;
+
+## 8.57. Kmod-34
 
 El paquete Kmod contiene bibliotecas y utilidades para cargar
 módulos del kernel.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-
-Espacio en disco necesario: 11 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|11 MB|
 
 ### 8.57.1. Instalación de Kmod
 
 Preparar Kmod para la compilación:
 
+> ```bash
 > mkdir -p build
-> cd build
-> meson setup --prefix=/usr .. \
-> --sbindir=/usr/sbin \
-> --buildtype=release \
-> -D manpages=false
+> cd       build
+> meson setup --prefix=/usr ..    \
+>             --sbindir=/usr/sbin \
+>             --buildtype=release \
+>             -D manpages=false
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -12465,9 +12641,9 @@ requiere un programa externo.
 
 Compilar el paquete:
 
-  -----------
-  ninja
-  -----------
+> ```bash
+> ninja
+> ```
 
 El conjunto de pruebas de este paquete requiere encabezados de
 kernel sin procesar (no los encabezados de kernel \"saneados\"
@@ -12475,16 +12651,15 @@ instalados anteriormente), que están fuera del alcance de LFS.
 
 Ahora instale el paquete:
 
-  -------------------
-  ninja install
-  -------------------
+> ```bash
+> ninja install
+> ```
 
 ### 8.57.2. Contenido de Kmod
 
 **Programas instalados**: depmod (enlace a kmod), insmod (enlace a
 kmod), kmod, lsmod (enlace a kmod), modinfo (enlace a kmod), modprobe
 (enlace a kmod) y rmmod (enlace a kmod)
-
 **Biblioteca instalada**: libkmod.so
 
 ### Descripciones breves
@@ -12508,17 +12683,21 @@ para cargar automáticamente los módulos relevantes.
 
 **rmmod** Descarga módulos del kernel en ejecución.
 
-**libkmod** Esta biblioteca la utilizan otros programas para
+*libkmod* Esta biblioteca la utilizan otros programas para
 cargar y descargar módulos del kernel.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.58. Coreutils-9.6
 
 El paquete Coreutils contiene las utilidades básicas necesarias para
 cualquier sistema operativo.
 
-**Tiempo de compilación aproximado**: 1.2 SBU
-
-**Espacio en disco necesario**: 182 MB
+|Tiempo de compilación aproximado:|1.2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|182 MB|
 
 ### 8.58.1. Instalación de Coreutils
 
@@ -12527,9 +12706,9 @@ correctamente los límites de caracteres, incluso en configuraciones
 regionales multibyte. El siguiente parche corrige este incumplimiento y
 otros errores relacionados con la internacionalización.
 
-  -------------------------------------------------------
-  patch -Np1 -i ../coreutils-9.6-i18n-1.patch
-  -------------------------------------------------------
+> ```bash
+> patch -Np1 -i ../coreutils-9.6-i18n-1.patch
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -12539,15 +12718,17 @@ otros errores relacionados con la internacionalización.
 
 Ahora prepare Coreutils para la compilación:
 
+> ```bash
 > autoreconf -fv
 > automake -af
 > FORCE_UNSAFE_CONFIGURE=1 ./configure \
-> --prefix=/usr \
-> --enable-no-install-program=kill,uptime
+>             --prefix=/usr            \
+>             --enable-no-install-program=kill,uptime
+> ```
 
 **Significado de los comandos y opciones de configuración**:
 
-autoreconf -fv
+**autoreconf -fv**
 
 El parche de internacionalización ha modificado el sistema de
 compilación, por lo que es necesario regenerar los archivos de
@@ -12557,7 +12738,7 @@ Normalmente, usaríamos la opción **-i** para actualizar los
 archivos auxiliares estándar, pero para este paquete no funciona porque
 **configure.ac** especificó una versión antigua de gettext.
 
-automake -af
+**automake -af**
 
 Autoreconf no actualizó los archivos auxiliares de automake debido
 a la falta de la opción **-i**. Este comando los actualiza para
@@ -12575,9 +12756,9 @@ programas que serán instalados por o tros paquetes.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Si no se está ejecutando el conjunto de pruebas, vaya a \"Instalar
 el paquete\".
@@ -12586,25 +12767,25 @@ Ahora el conjunto de pruebas está listo para ejecutarse. Primero,
 ejecute las pruebas que deben ejecutarse como usuario
 **root**:
 
-  ----------------------------------------------------
-  make NON_ROOT_USERNAME=tester check-root
-  ----------------------------------------------------
+> ```bash
+> make NON_ROOT_USERNAME=tester check-root
+> ```
 
 Ejecutaremos el resto de las pruebas como el usuario tester. Algunas
 pruebas requieren que el usuario pertenezca a más de un grupo. Para
 evitar que estas pruebas se omitan, agregue un grupo temporal e
 incorpore al usuario **tester**:
 
-  -------------------------------------
-  groupadd -g 102 dummy -U tester
-  -------------------------------------
+> ```bash
+> groupadd -g 102 dummy -U tester
+> ```
 
 Corrija algunos de los permisos para que el usuario no root pueda
 compilar y ejecutar las pruebas:
 
-  -----------------------------
-  chown -R tester .
-  -----------------------------
+> ```bash
+> chown -R tester .
+> ```
 
 Ahora ejecute las pruebas (usando **/dev/null** como entrada
 estándar; de lo contrario, dos pruebas podrían fallar si se compila LFS
@@ -12613,25 +12794,30 @@ entrada estándar está conectada a un PTY de la distribución del host y
 no se puede acceder al nodo del dispositivo para dicho PTY desde el
 entorno chroot de LFS):
 
-> su tester -c "PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check" < /dev/null
+> ```bash
+> su tester -c "PATH=$PATH make -k RUN_EXPENSIVE_TESTS=yes check" \
+>    < /dev/null
+> ```
 
 Elimine el grupo temporal:
 
-  --------------------
-  groupdel dummy
-  --------------------
+> ```bash
+> groupdel dummy
+> ```
 
 Instale el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 Mueva los programas a las ubicaciones especificadas por el FHS:
 
+> ```bash
 > mv -v /usr/bin/chroot /usr/sbin
 > mv -v /usr/share/man/man1/chroot.1 /usr/share/man/man8/chroot.8
 > sed -i 's/"1"/"8"/' /usr/share/man/man8/chroot.8
+> ```
 
 ### 8.58.2. Contenido de Coreutils
 
@@ -12646,9 +12832,7 @@ sha224sum, sha256sum, sha384sum, sha512sum, shred, shuf, sleep, sort,
 split, stat, stdbuf, stty, sum, sync, tac, tail, tee, test, timeout,
 touch, tr, true, truncate, tsort, tty, uname, unexpand, uniq, unlink,
 users, vdir, wc, who, whoami, and yes
-
 **Biblioteca instalada**: libstdbuf.so (en /usr/libexec/coreutils)
-
 **Directorios instalados**: /usr/libexec/coreutils
 
 ### Descripciones breves
@@ -12720,7 +12904,7 @@ comando ls).
 **dircolors **Emite comandos para establecer LS_COLOR. Variable de
 entorno para cambiar el esquema de colores utilizado por ls.
 
-**dirname **Extrae las porciones de directorio del nombre
+**dirname** Extrae las porciones de directorio del nombre
 especificado.
 
 **du** Informa la cantidad de espacio en disco utilizado por el
@@ -12765,12 +12949,12 @@ separados.
 **link** Crea un enlace físico (con el nombre indicado) a un
 archivo.
 
-**ln* *Crea enlaces físicos o enlaces simbólicos entre archivos.****
+**ln** Crea enlaces físicos o enlaces simbólicos entre archivos.****
 
 **logname** Informa sobre el nombre de inicio de sesión del usuario
 actual.
 
-**ls **Enumera el contenido de cada directorio.****
+**ls** Enumera el contenido de cada directorio.****
 
 **md5sum** Informa o comprueba las sumas de comprobación del Message
 Digest 5 (MD5).
@@ -12934,47 +13118,50 @@ efectivo actual.
 **yes** Emite repetidamente \`y\` o una cadena dada, hasta que se
 elimina.
 
-**libstdbuf** Biblioteca utilizada por \`stdbuf\`.
+*libstdbuf* Biblioteca utilizada por \`stdbuf\`.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.59. Check-0.15.2
 
 Check es un framework de pruebas unitarias para C
 
-Tiempo de compilación aproximado: 0.1 SBU (aproximadamente 2.1 SBU con pruebas)
-
-Espacio en disco requerido: 11 MB
+|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 2.1 SBU con pruebas)|
+|---------------------------------|-------|
+|Espacio en disco requerido:|11 MB|
 
 ### 8.59.1. Instalación de Check
 
 Preparar Check para la compilación:
 
-  -------------------------------------------------
- ./configure --prefix=/usr --disable-static
-  -------------------------------------------------
+> ```bash
+> ./configure --prefix=/usr --disable-static
+> ```
 
 Compilación del paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 La compilación ha finalizado. Para ejecutar el conjunto de pruebas
 de Check, ejecute el siguiente comando:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  -----------------------------------------------------------
-  make docdir=/usr/share/doc/check-0.15.2 install
-  -----------------------------------------------------------
+> ```bash
+> make docdir=/usr/share/doc/check-0.15.2 install
+> ```
 
 ### 8.59.2. Contenido de Check
 
 **Programa instalado**: checkmk
-
 **Biblioteca instalada**: libcheck.so
 
 ### Descripciones breves
@@ -12982,7 +13169,7 @@ Instalar el paquete:
 **checkmk** Script de AWK para generar pruebas unitarias de C para usar
 con el framework de pruebas unitarias Check
 
-**libcheck.so** Contiene funciones que permiten llamar a Check
+*libcheck.so* Contiene funciones que permiten llamar a Check
 desde un programa de prueba
 
 ## 8.60. Diffutils-3.11
@@ -12990,35 +13177,35 @@ desde un programa de prueba
 El paquete Diffutils contiene programas que muestran las diferencias
 entre archivos o directorios.
 
-Tiempo de compilación aproximado: 0.4 SBU
-
-Espacio en disco necesario: 50 MB
+|Tiempo de compilación aproximado:|0,4 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|50 MB|
 
 ### 8.60.1. Instalación de Diffutils
 
 Preparar Diffutils para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.60.2. Contenido de Diffutils
 
@@ -13037,48 +13224,56 @@ difieren
 **sdiff** Combina dos archivos y muestra los resultados de forma
 interactiva
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.61. Gawk-5.3.1
 
 El paquete Gawk contiene programas para manipular archivos de
 texto.
 
-Tiempo aproximado de compilación: 0.2 SBU
-
-Espacio en disco necesario: 43 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|43 MB|
 
 ### 8.61.1. Instalación de Gawk
 
 Primero, asegúrese de que no se instalen archivos innecesarios:
 
-  ---------------------------------------------
-  sed -i 's/extras//' Makefile.in
-  ---------------------------------------------
+> ```bash
+> sed -i 's/extras//' Makefile.in
+> ``
 
 Prepare Gawk para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
+> ```bash
 > chown -R tester .
 > su tester -c "PATH=$PATH make check"
+> ```
 
 Instalar el paquete:
 
+> ```bash
 > rm -f /usr/bin/gawk-5.3.1
 > make install
+> ```
 
 **Significado del comando**:
 
-rm -f /usr/bin/gawk-5.3.1
+**rm -f /usr/bin/gawk-5.3.1**
 
 El sistema de compilación no recreará el enlace físico
 gawk-5.3.1 si ya existe. Elimínelo para garantizar que el enlace físico
@@ -13088,24 +13283,22 @@ aquí.*
 El proceso de instalación ya creó **awk** como enlace simbólico a
 **gawk**; cree también su página de manual como enlace simbólico:
 
-  ---------------------------------------------
-  ln -sv gawk.1 /usr/share/man/man1/awk.1
-  ---------------------------------------------
+> ```bash
+> ln -sv gawk.1 /usr/share/man/man1/awk.1
+> ```
 
 Si lo desea, instale la documentación:
 
-  --------------------------------------------------------------------------------------------
-  install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-5.3.1
-  --------------------------------------------------------------------------------------------
+> ```bash
+> install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-5.3.1
+> ```
 
 ### 8.61.2. Contenido de Gawk
 
 **Programas instalados**: awk (enlace a gawk), gawk y gawk-5.3.1
-
 **Bibliotecas instaladas**: filefuncs.so, fnmatch.so, fork.so,
 inplace.so, intdiv.so, ordchr.so, readdir.so, readfile.so, revoutput.so,
 revtwoway.so, rwarray.so y time.so (todas en /usr/lib/gawk)****
-
 **Directorios instalados**: /usr/lib/gawk, /usr/libexec/awk,
 /usr/share/awk y /usr/share/doc/gawk- 5.3.1
 
@@ -13118,6 +13311,10 @@ implementación GNU de **awk**
 
 **gawk-5.3.1** Enlace físico a **gawk**
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.62. Findutils-4.10.0
 
 El paquete Findutils contiene programas para buscar archivos. Se
@@ -13128,18 +13325,17 @@ que la base de datos se haya actualizado recientemente). Findutils
 también incluye el programa **xargs**, que permite ejecutar un comando
 específico en cada archivo seleccionado en una búsqueda.
 
-Tiempo de compilación aproximado: 0.7 SBU
-
-Espacio en disco necesario: 63 MB
+|Tiempo de compilación aproximado:|0,7 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|63 MB|
 
 ### 8.62.1. Instalación de Findutils
 
-****Preparar Findutils para la compilación:****
+Preparar Findutils para la compilación:
 
-  ----------------------------------------------------------------------
- ./configure --prefix=/usr --localstatedir=/var/lib/locate
-  ----------------------------------------------------------------------
-
+> ```bash
+> ./configure --prefix=/usr --localstatedir=/var/lib/locate
+> ```
 Significado de las opciones de configuración:
 
 \--localstatedir
@@ -13149,25 +13345,26 @@ Esta opción mueve la base de datos de localización a
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
+> ```bash
 > chown -R tester .
 > su tester -c "PATH=$PATH make check"
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.62.2. Contenido de Findutils
 
 **Programas instalados**: find, locate, updatedb y xargs
-
 **Directorio de instalación**: /var/lib/locate
 
 ### Descripciones breves
@@ -13186,14 +13383,18 @@ que encuentra en la base de datos
 **xargs** Se puede usar para aplicar un comando a una lista de
 archivos
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.63. Groff-1.23.0
 
 El paquete Groff contiene programas para procesar y formatear texto
 e imágenes
 
-Tiempo aproximado de compilación: 0.2 SBU
-
-Espacio en disco requerido: 108 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|108 MB|
 
 ### 8.63.1. Instalación de Groff
 
@@ -13206,27 +13407,27 @@ archivo /etc/papersize.
 
 Preparar Groff para la compilación:
 
-  ---------------------------------------------------------
-  PAGE=<paper_size> ./configure --prefix=/usr
-  ---------------------------------------------------------
+> ```bash
+> PAGE=<paper_size> ./configure --prefix=/usr
+> ```
 
 Compilación del paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.63.2. Contenido de Groff
 
@@ -13237,7 +13438,6 @@ lkbib, lookbib, mmroff, neqn, nroff, pdfmom, pdfroff, pfbtops, pic,
 pic2graph, post-grohtml, preconv, pre-grohtml, refer, roff2dvi,
 roff2html, roff2pdf, roff2ps, roff2text, roff2x, soelim, tbl, tfmtodit y
 troff
-
 **Directorios instalados**: /usr/lib/groff y
 /usr/share/doc/groff-1.23.0, /usr/share/groff
 
@@ -13270,11 +13470,11 @@ Perl en archivos groff
 **gpinyin** Preprocesador para groff, que permite la inserción de Pinyin
 (chino mandarín escrito con el alfabeto romano) en archivos groff
 
-**grap2graph **Convierte un archivo de programa grap en una imagen de
+**grap2graph** Convierte un archivo de programa grap en una imagen de
 mapa de bits recortada (grap es un antiguo lenguaje de programación Unix
 para crear diagramas)
 
-**grn** ** **Un preprocesador de **groff** para archivos gremlin
+**grn** Un preprocesador de **groff** para archivos gremlin
 
 **grodvi** Un controlador para **groff** que produce archivos de salida
 en formato TeX dvi
@@ -13378,14 +13578,18 @@ debe invocar con el comando **groff**, que también ejecutará
 preprocesadores y posprocesadores en el orden y con las opciones
 adecuadas
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.64. GRUB-2.12
 
 El paquete GRUB contiene el cargador de arranque unificado
 GRand.
 
-Tiempo aproximado de compilación: 0.3 SBU
-
-Espacio en disco necesario: 166 MB
+|Tiempo de compilación aproximado:|0,3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|166 MB|
 
 ### 8.64.1. Instalación de GRUB
 
@@ -13402,9 +13606,9 @@ Espacio en disco necesario: 166 MB
 > 
 > Desactive cualquier variable de entorno que pueda afectar la
 > compilación:
-> +----------------------------------------------------------------------+
+> ```bash
 > unset {C,CPP,CXX,LD}FLAGS
-> +----------------------------------------------------------------------+
+> ```
 > No intente ajustar este *****paquete***** con indicadores de
 > compilación personalizados. Este paquete es un cargador de arranque.
 > Las operaciones de bajo nivel del código fuente podrían verse
@@ -13413,16 +13617,18 @@ Espacio en disco necesario: 166 MB
 Agregar un archivo que falta en el archivo tarball de la
 versión:
 
-  -------------------------------------------------------------------------
-  echo depends bli part_gpt > grub-core/extra_deps.lst
-  -------------------------------------------------------------------------
+> ```bash
+> echo depends bli part_gpt > grub-core/extra_deps.lst
+> ```
 
 Preparar GRUB para la compilación:
 
-> ./configure --prefix=/usr \
-> --sysconfdir=/etc \
-> --disable-efiemu \
-> --disable-werror
+> ```bash
+> ./configure --prefix=/usr     \
+>             --sysconfdir=/etc \
+>             --disable-efiemu  \
+>             --disable-werror
+> ```
 
 **Significado de las nuevas opciones de configuración**:
 
@@ -13438,9 +13644,9 @@ eliminar algunos programas de prueba innecesarios para LFS.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 No se recomienda el conjunto de pruebas para estos paquetes. La
 mayoría de las pruebas dependen de paquetes que no están disponibles en
@@ -13451,9 +13657,10 @@ Instale el paquete y mueva el archivo de soporte de compleción de
 Bash a la ubicación recomendada por los responsables de la compleción de
 Bash:
 
+> ```bash
 > make install
-> mv -v /etc/bash_completion.d/grub
-> /usr/share/bash-completion/completions
+> mv -v /etc/bash_completion.d/grub /usr/share/bash-completion/completions
+> ```
 
 Cómo hacer que su sistema LFS sea arrancable con GRUB se explicará
 en la Sección 10.4, "Uso de GRUB para configurar el proceso de
@@ -13468,7 +13675,6 @@ grub-mknetdir, grub-mkpasswd-pbkdf2, grub-mkrelpath, grub-mkrescue,
 grub-mkstandalone, grub-ofpathname, grub-probe, grub-reboot,
 grub-render-label, grub-script-check, grub-set- default,
 grub-sparc64-setup, and grub-syslinux2cfg
-
 **Directorios instalados**: /usr/lib/grub, /etc/grub.d, /usr/share/grub,
 and /boot/grub (when grub- install is first run)
 
@@ -13542,40 +13748,44 @@ GRUB.
 **grub-syslinux2cfg** Transforma un archivo de configuración de syslinux
 al formato grub.cfg.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.65. Gzip-1.13
 
 El paquete Gzip contiene programas para comprimir y descomprimir
 archivos.
 
-Tiempo aproximado de compilación: 0.3 SBU
-
-Espacio en disco requerido: 21 MB
+|Tiempo de compilación aproximado:|0,3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|21 MB|
 
 ### 8.65.1. Instalación de Gzip
 
 Preparar Gzip para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+ > ```
 
 ### 8.65.2. Contenido de Gzip
 
@@ -13618,14 +13828,18 @@ transferencia.
 **znew** **Recomprime** archivos del formato comprimido al formato
 **gzip** (de .****z**** a .gz).
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.66. IPRoute2-6.13.0
 
 El paquete IPRoute2 contiene programas para redes básicas y
 avanzadas basadas en IPV4.
 
-Tiempo de compilación aproximado: 0.1 SBU
-
-Espacio en disco requerido: 17 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|17 MB|
 
 ### 8.66.1. Instalación de IPRoute2
 
@@ -13634,35 +13848,35 @@ depende de la base de datos Berkeley, que no está instalada en LFS. Sin
 embargo, se instalarán un directorio y una página de manual para arpd.
 Para evitarlo, ejecute los comandos que se muestran a continuación:
 
+> ```bash
 > sed -i /ARPD/d Makefile
 > rm -fv man/man8/arpd.8
-
+> ```
 
 Compilar el paquete:
 
-  -----------------------------------------
-  make NETNS_RUN_DIR=/run/netns
-  -----------------------------------------
+> ```bash
+> make NETNS_RUN_DIR=/run/netns
+> ```
 
 Este paquete no cuenta con un conjunto de pruebas funcional.
 Instalar el paquete:
 
-  ------------------------------------
-  make SBINDIR=/usr/sbin install
-  ------------------------------------
+> ```bash
+> make SBINDIR=/usr/sbin install
+> ```
 
 Si lo desea, instale la documentación:
 
-  ------------------------------------------------------------------------------
-  install -vDm644 COPYING README\* -t /usr/share/doc/iproute2-6.13.0
-  ------------------------------------------------------------------------------
+> ```bash
+> install -vDm644 COPYING README* -t /usr/share/doc/iproute2-6.13.0
+> ```
 
 ### 8.66.2. Contenido de IPRoute2
 
 **Programas instalados**: bridge, ctstat (enlace a lnstat), genl,
 ifstat, ip, lnstat, nstat, routel, rtacct, rtmon, rtpr, rtstat (enlace a
 lnstat), ss y tc****
-
 **Directorios instalados**: /etc/iproute2, /usr/lib/tc y
 /usr/share/doc/iproute2-6.13.0
 
