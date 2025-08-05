@@ -7455,7 +7455,7 @@ obsoleta que falla con una configuración moderna de Glibc:
 > DIR=$(dirname $(gcc -print-libgcc-file-name))
 > [ -e $DIR/include/limits.h ] || mv $DIR/include{-fixed,}/limits.h
 > [ -e $DIR/include/syslimits.h ] || mv $DIR/include{-fixed,}/syslimits.h
-> rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/\*
+> rm -rfv $(dirname $(gcc -print-libgcc-file-name))/include-fixed/*
 > ```
 
 Instalar el paquete:
@@ -7468,7 +7468,7 @@ Corregir una ruta codificada al cargador de ejecutables en el script
 ldd:
 
 > ```bash
-> sed '/RTLDLIST=/s@/usr@@g\ -i /usr/bin/ldd
+> sed '/RTLDLIST=/s@/usr@@g' -i /usr/bin/ldd
 > ```
 
 A continuación, instalar las configuraciones regionales que permiten que
@@ -7599,8 +7599,8 @@ Instale y configure los datos de zona horaria con lo siguiente:
 > 
 > for tz in etcetera southamerica northamerica europe africa antarctica \
 >           asia australasia backward; do
->     zic -L /dev/null -d $ZONEINFO ${tz}
->     zic -L /dev/null -d $ZONEINFO/posix ${tz}
+>     zic -L /dev/null   -d $ZONEINFO       ${tz}
+>     zic -L /dev/null   -d $ZONEINFO/posix ${tz}
 >     zic -L leapseconds -d $ZONEINFO/right ${tz}
 > done
 > 
@@ -7700,12 +7700,12 @@ función, ejecute los siguientes comandos:
 
 ### 8.5.3. Contenido de Glibc
 
-Programas instalados: gencat, getconf, getent, iconv, iconvconfig,
+**Programas instalados**: gencat, getconf, getent, iconv, iconvconfig,
 ldconfig, ldd, lddlibc4, ld.so (symlink to ld-linux-x86-64.so.2 or
 ld-linux.so.2), locale, localedef, makedb, mtrace, pcprofiledump, pldd,
 sln, sotruss, sprof, tzselect, xtrace, zdump, and zic
 
-Bibliotecas instaladas: ld-linux-x86-64.so.2, ld-linux.so.2,
+**Bibliotecas instaladas**: ld-linux-x86-64.so.2, ld-linux.so.2,
 libBrokenLocale.{a,so}, libanl.{a,so}, libc.{a,so}, libc_nonshared.a,
 libc_malloc_debug.so, libdl.{a,so.2}, libg.a, libm.{a,so}, libmcheck.a,
 libmemusage.so, libmvec.{a,so}, libnsl.so.1, libnss_compat.so,
@@ -7713,7 +7713,7 @@ libnss_dns.so, libnss_files.so, libnss_hesiod.so, libpcprofile.so,
 libpthread.{a,so.0}, libresolv.{a,so}, librt.{a,so.1}, libthread_db.so,
 and libutil.{a,so.1}
 
-Directorios instalados: /usr/include/arpa, /usr/include/bits,
+**Directorios instalados**: /usr/include/arpa, /usr/include/bits,
 /usr/include/gnu, /usr/include/net, /usr/include/netash,
 /usr/include/netatalk, /usr/include/netax25, /usr/include/neteconet,
 /usr/include/netinet, /usr/include/netipx, /usr/include/netiucv,
@@ -7759,7 +7759,7 @@ muestra un resumen en formato legible.
 
 **pcprofiledump** Vuelca la información generada por el perfilado de PC.
 
-**Pldd **Enumera los objetos compartidos dinámicos utilizados por los
+**Pldd** Enumera los objetos compartidos dinámicos utilizados por los
 procesos en ejecución.
 
 **sln** Un programa **ln** enlazado estáticamente.
@@ -7779,118 +7779,125 @@ actualmente ejecutada.
 
 **zic** Compilador de zona horaria.
 
-**ld-\*.so** Programa auxiliar para ejecutables de bibliotecas
+ld-\*.so Programa auxiliar para ejecutables de bibliotecas
 compartidas.
 
-**libBrokenLocale** Usado internamente por Glibc como un truco para
+libBrokenLocale Usado internamente por Glibc como un truco para
 obtener programas dañados (por ejemplo, algunos Motif). aplicaciones) en
 ejecución. Consulte los comentarios en
 *glibc-2.41/locale/broken_cur_max.c* para obtener más información.
 
-**libanl** Biblioteca ficticia sin funciones. Anteriormente era la
+libanl Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de búsqueda de nombres asíncrona, cuyas funciones ahora están
 en **libc**.
 
-**libc** Biblioteca principal de C.
+libc Biblioteca principal de C.
 
-**libc_malloc_debug** Activa la comprobación de asignación de memoria al
+libc_malloc_debug Activa la comprobación de asignación de memoria al
 precargarse.
 
-**libdl** Biblioteca ficticia sin funciones. Anteriormente era la
+libdl Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de interfaz de enlace dinámico, cuyas funciones ahora están
 en *libc*.
 
-**libg** Biblioteca ficticia sin funciones. Anteriormente era una
+libg Biblioteca ficticia sin funciones. Anteriormente era una
 biblioteca de tiempo de ejecución para g**++**.
 
-**libm** La biblioteca matemática.
+libm La biblioteca matemática.
 
-**Libmvec** La biblioteca matemática vectorial, enlazada según sea
+Libmvec La biblioteca matemática vectorial, enlazada según sea
 necesario cuando se usa *libm*.
 
-**libmcheck** Activa la comprobación de asignación de memoria cuando se
+libmcheck Activa la comprobación de asignación de memoria cuando se
 enlaza a.
 
-**libmemusage** Usada por **memusage** para ayudar a recopilar información
+libmemusage Usada por **memusage** para ayudar a recopilar información
 sobre el uso de memoria de un programa.
 
-**libnsl** La biblioteca de servicios de red, ahora obsoleta.
+libnsl La biblioteca de servicios de red, ahora obsoleta.
 
-**libnss\_\** Los módulos de conmutación de servicio de nombres, que
+libnss\_ Los módulos de conmutación de servicio de nombres, que
 contienen funciones para resolver nombres de host, nombres de usuario,
 nombres de grupo, alias, servicios, protocolos, etc. Cargados por *libc*
 según la configuración en */etc/nsswitch.conf*.
 
-**libpcprofile** Se puede precargar en el perfil de PC de un ejecutable.
+libpcprofile Se puede precargar en el perfil de PC de un ejecutable.
 
-**libpthread** Biblioteca ficticia que no contiene funciones.
+libpthread Biblioteca ficticia que no contiene funciones.
 Anteriormente contenía funciones que proporcionaban la mayoría de las
 interfaces especificadas por las extensiones de subprocesos POSIX.1c y
 las interfaces de semáforo especificadas por las extensiones de tiempo
 real POSIX.1b. Ahora, estas funciones se encuentran en *libc*.
 
-**libresolv** Contiene funciones para crear, enviar e interpretar paquetes
+libresolv Contiene funciones para crear, enviar e interpretar paquetes
 a los servidores de nombres de dominio de Internet.
 
-**librt** Contiene funciones que proporcionan la mayoría de las interfaces
+librt Contiene funciones que proporcionan la mayoría de las interfaces
 especificadas por las extensiones de tiempo real POSIX.1b.
 
-**libthread_db** Contiene funciones útiles para crear depuradores para
+libthread_db Contiene funciones útiles para crear depuradores para
 programas multiproceso.
 
-**libutil** Biblioteca ficticia sin funciones. Anteriormente, contenía
+libutil Biblioteca ficticia sin funciones. Anteriormente, contenía
 código para funciones estándar utilizadas en diversas utilidades de
 Unix. Estas funciones ahora se encuentran en *libc*.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.6. Zlib-1.3.1
 
 El paquete Zlib contiene rutinas de compresión y descompresión
 utilizadas por algunos programas.
 
-**Tiempo aproximado de compilación: **menos de 0,1 SBU
-
-**Espacio en disco requerido:** 6,4 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|6,4 GB|
 
 ### 8.6.1. Instalación de Zlib
 
 Preparar Zlib para la compilación:
 
-  ---------------------------
-  ./configure --prefix=/usr
-  ---------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Eliminar una biblioteca estática inútil:
 
-  ------------------------
-  rm -fv /usr/lib/libz.a
-  ------------------------
+> ```bash
+> rm -fv /usr/lib/libz.a
+> ```
 
 ### 8.6.2. Contenido de Zlib
 
 **Bibliotecas instaladas: **libz.so
 
-Descripciones breves
+## Descripciones breves
 
 *libz* Contiene funciones de compresión y descompresión utilizadas por
 algunos programas
+---
+&nbsp;
+&nbsp;
 
 ## 8.7. Bzip2-1.0.8
 
@@ -7898,39 +7905,38 @@ El paquete Bzip2 contiene programas para comprimir y descomprimir
 archivos. Comprimir archivos de texto con **bzip2** ofrece un porcentaje
 de compresión mucho mejor que con el gzip tradicional.
 
-**Tiempo de compilación aproximado:** menos de 0,1 SBU
-
-**Espacio en disco requerido: ** 7,2 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|7,2 MB|
 
 ### 8.7.1. Instalación de Bzip2
 
 Aplique un parche que instale la documentación de este paquete:
 
-  ---------------------------------------------------
-  patch -Np1 -i ../bzip2-1.0.8-install_docs-1.patch
-  ---------------------------------------------------
-
+> ```bash
+> patch -Np1 -i ../bzip2-1.0.8-install_docs-1.patch
+> ```
+  
 El siguiente comando garantiza que la instalación de enlaces simbólicos
 sea relativa:
 
-  -----------------------------------------------------------
-  sed -i \'s@\\(ln -s -f \\)\$(PREFIX)/bin/@\\1@\' Makefile
-  -----------------------------------------------------------
+> ```bash
+> sed -i 's@(ln -s -f \)$(PREFIX)/bin/@\1@' Makefile
+> ```
 
 Asegúrese de que las páginas del manual estén instaladas en la ubicación
 correcta:
 
-  -----------------------------------------------------------
-  sed -i \"s@(PREFIX)/man@(*PREFIX*)/share/man@g\" Makefile
-  -----------------------------------------------------------
+> ```bash
+> sed -i "s@(PREFIX)/man@(PREFIX)/share/man@g" Makefile
+> ```
 
 Prepare Bzip2 para la compilación con:
 
-> +----------------------------+
-> ---
+> ```bash
 > make -f Makefile-libbz2_so
 > make clean
-> +----------------------------+
+> ```
 
 Significado del parámetro make:
 
@@ -7941,40 +7947,38 @@ diferente, en este caso el archivo *Makefile-libbz2_so*, que crea una
 biblioteca dinámica *libbz2.so* y enlaza las utilidades de Bzip2 con
 ella. Compilar y probar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar los programas:
 
-  --------------------------
-  make PREFIX=/usr install
-  --------------------------
+> ```bash
+> make PREFIX=/usr install
+> ```
 
 Instalar la biblioteca compartida:
 
-> +---------------------------------------------+
-> ---
-> cp -av libbz2.so.\* /usr/lib
-> ln -sv libbz2.so.1.0.8 /usr/lib/*libbz2*.so
-> +---------------------------------------------+
+> ```bash
+> cp -av libbz2.so.* /usr/lib
+> ln -sv libbz2.so.1.0.8 /usr/lib/libbz2.so
+> ```
 
 Instalar el binario **bzip2** compartido en el directorio */usr/bin* y
 reemplazar dos copias de **bzip2** con enlaces simbólicos:
 
-> +-----------------------------------------+
-> ---
+> ```bash
 > cp -v bzip2-shared /usr/bin/bzip2
-> for i in /usr/bin/{bzcat,bunzip2}; *do*
-> ln -sfv bzip2 \$i
+> for i in /usr/bin/{bzcat,bunzip2}; do
+>   ln -sfv bzip2 $i
 > done
-> +-----------------------------------------+
+> ```
 
 Eliminar una biblioteca estática inútil:
 
-  ------------------------
-  rm -fv /usr/lib/libbz2
-  ------------------------
+> ```bash
+> rm -fv /usr/lib/libbz2
+> ```
 
 ### 8.7.2. Contenido de Bzip2
 
@@ -7987,9 +7991,9 @@ bzmore) y bzmore
 
 **Directorio de instalación**: /usr/share/doc/bzip2-1.0.8
 
-### Descripciones breves
+## Descripciones breves
 
-**Bunzip2** Descomprime archivos comprimidos
+**bunzip2** Descomprime archivos comprimidos
 
 **bzcat** Descomprime a la salida estándar
 
@@ -8008,9 +8012,9 @@ Burrows-Wheeler con ordenamiento por bloques y codificación Huffman. La
 tasa de compresión es mejor que la alcanzada por compresores más
 convencionales que utilizan algoritmos \"Lempel-Ziv\", como **gzip**.
 
-Bzip2recover Intenta recuperar datos de archivos comprimidos dañados.
+**bzip2recover** Intenta recuperar datos de archivos comprimidos dañados.
 
-**Bzless** Se ejecuta con **less** frecuencia en archivos comprimidos
+**bzless** Se ejecuta con **less** frecuencia en archivos comprimidos
 
 **bzmore** Se ejecuta con **more** frecuencia en archivos comprimidos
 
