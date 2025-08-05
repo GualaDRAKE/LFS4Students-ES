@@ -278,7 +278,7 @@ El LFS intenta cumplir con las especificaciones del LSB para las
 arquitecturas IA32 (x86 de 32 bits) o AMD64 (x86_64) descritas en la
 sección anterior.
 
-> ⚠️ **Nota**
+> ℹ️ **Nota**
 > 
 > Mucha gente no está de acuerdo con estos requisitos. El objetivo principal del LSB es garantizar que el software propietario pueda instalarse y
 > ejecutarse en un sistema compatible. Dado que el LFS se basa en el código fuente, el usuario tiene control total sobre los paquetes que desea;
@@ -799,7 +799,7 @@ pantalla, generalmente como resultado de los comandos ejecutados. Este
 formato también se utiliza para mostrar nombres de archivos, como
 /etc/ld.so.conf.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Configure su navegador para mostrar texto de ancho fijo con una
 > buena fuente monoespaciada \"font-size=\"9ptd\", con la que podrá
@@ -954,7 +954,7 @@ enlazador y un intérprete de comandos, para construir el nuevo sistema.
 Seleccione la opción \"desarrollo\" durante la instalación de la
 distribución para incluir estas herramientas.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Existen muchas maneras de *instalar* una distribución de Linux y las
 > opciones predeterminadas no suelen ser las óptimas para construir un
@@ -1547,7 +1547,7 @@ de LFS (ver arriba).
 
 ## 1.5. Ayuda
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > En caso de que haya encontrado un problema al compilar un paquete
 > con la instrucción LFS, le recomendamos encarecidamente que no
@@ -1606,7 +1606,7 @@ sistema](#Script version-check.sh|outline)
 
 • Indique si se ha desviado del libro
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Desviarse del libro no significa que no le ayudaremos. Al fin y al
 > cabo, LFS se basa en preferencias personales.
@@ -1998,7 +1998,7 @@ una partición de intercambio (swap), si es necesario. Consulte
 [*fdisk(8)*](https://man.archlinux.org/man/fdisk.8) si aún no sabe cómo
 usar estos programas.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Para usuarios experimentados, existen *otros* esquemas de
 > particionado. El nuevo sistema LFS puede estar en una matriz RAID
@@ -2071,7 +2071,7 @@ para que GRUB la utilice durante la instalación del gestor de arranque.
 Esta partición normalmente se etiquetará como \'BIOS Boot\' si se usa
 fdisk o tendrá el código EF02 si se usa el comando gdisk.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > La partición Grub Bios debe estar en la unidad que la BIOS utiliza
 > para arrancar el sistema. Esta no es necesariamente la unidad que
@@ -2243,7 +2243,7 @@ seguridad en el sistema LFS, y una configuración predeterminada
 demasiado restrictiva puede causar problemas extraños al crear o usar el
 sistema LFS.
 
-> **Precaución**
+> ⚠️ **Precaución**
 > 
 > No olvide comprobar que LFS esté configurado y que la máscara de
 > usuario (umask) esté configurada en 022 al salir y volver a entrar
@@ -2270,7 +2270,7 @@ sistema LFS.
 > umask
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Una forma de garantizar que la variable LFS y umask siempre estén
 > configuradas correctamente es editar el archivo .bash_profile, tanto
@@ -2342,7 +2342,7 @@ la partición LFS montada.
 
 Si nosuid o nodev están configurados, la partición debe volver a montarse.
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > Las instrucciones anteriores presuponen que no reiniciará el equipo
 > durante el proceso LFS. Si apaga el sistema, deberá volver a montar
@@ -2484,7 +2484,7 @@ root para evitar este problema:
 
 ## 3.2. Todos los paquetes
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Lea los avisos de seguridad antes de descargar paquetes para
 > determinar si debe usar una versión más reciente de algún paquete y
@@ -2716,7 +2716,7 @@ Descargar: https://ftp.gnu.org/gnu/glibc/glibc-2.41.tar.xz
 
 Suma MD5: 19862601af60f73ac69e067d3e9267d4
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Los desarrolladores de Glibc mantienen una rama de Git con parches
 > considerados útiles para Glibc-2.41, pero que, lamentablemente, se
@@ -2902,7 +2902,7 @@ https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.13.4.tar.xz
 
 Suma MD5: 13b9e6c29105a34db4647190a43d1810
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El kernel de Linux se actualiza con frecuencia, muchas veces debido
 > al descubrimiento de vulnerabilidades de seguridad. Se puede usar la
@@ -3137,7 +3137,7 @@ https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-257.3.tar.xz
 
 Suma MD5: 9b77c3b066723d490cb10aed4fb05696
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El equipo de Linux From Scratch genera su propio archivo tar de las
 > páginas de manual utilizando el código fuente de systemd. Esto se
@@ -3217,7 +3217,7 @@ https://github.com/vim/vim/archive/v9.1.1166/vim-9.1.1166.tar.gz
 
 Suma MD5: 718d43ce957ab7c81071793de176c2eb
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > La versión de Vim cambia a diario. Para obtener la versión más
 > reciente, visite https://github.com/vim/vim/tags.
@@ -3384,7 +3384,7 @@ directorio con este comando:
 > mkdir -pv $LFS/tools
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Los editores de LFS han decidido deliberadamente no usar el
 > directorio /usr/lib64. Se toman varias medidas para garantizar que
@@ -3459,7 +3459,7 @@ convirtiéndolo en el propietario:
 > esac
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > En algunos sistemas host, el siguiente comando su no se completa
 > correctamente y suspende el inicio de sesión del usuario lfs en
@@ -3730,7 +3730,7 @@ rendimiento. Algunas distribuciones proporcionan el comando
 **tuned-adm profile throughput-performance** para seleccionar el perfil
 de rendimiento (throughput-performance).
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Cuando se utilizan varios procesadores de esta manera, las unidades
 > SBU del libro variarán aún más de lo normal. En algunos casos, el
@@ -3766,7 +3766,7 @@ fundamental en el correcto funcionamiento del sistema. Las suites de
 pruebas para GCC y glibc pueden tardar mucho tiempo en completarse,
 especialmente en hardware lento, pero se recomiendan encarecidamente.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Ejecutar las suites de pruebas de los capítulos 5 y 6 no tiene
 > sentido; dado que los programas de prueba se compilan con un
@@ -3851,7 +3851,7 @@ depender del entorno del host.
 
 ## Acerca de la compilación-cruzada
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El libro de LFS no es (ni contiene) un tutorial general para
 > construir una cadena de herramientas cruzada (o nativa). No utilice
@@ -3917,7 +3917,7 @@ compiladores nativos.
 
 Implementación de la compilación cruzada para LFS
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Todos los paquetes compilados cruzados de este libro utilizan un
 > sistema de compilación basado en autoconf. Este sistema acepta tipos
@@ -4136,7 +4136,7 @@ funcional.
 
 ## Instrucciones generales de compilación
 
-> **Precaución**
+> ⚠️ **Precaución**
 > 
 > Durante el ciclo de desarrollo de LFS, las instrucciones del libro
 > suelen modificarse para adaptarse a una actualización de paquete o
@@ -4259,7 +4259,7 @@ herramientas para gestionar archivos objeto.
 
 ### 5.2.1. Instalación de Cross Binutils
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Revise las notas en la sección titulada Instrucciones generales de
 > compilación. Comprender las notas marcadas como importantes puede
@@ -4277,7 +4277,7 @@ compilación dedicado:
 > cd build
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Para que los valores de SBU que se indican en el resto del libro
 > sean útiles, mida el tiempo que tarda en compilarse este paquete
@@ -4393,7 +4393,7 @@ Descomprima cada paquete en el directorio de origen de GCC y renombre
 los directorios resultantes para que los procedimientos de compilación
 de GCC los utilicen automáticamente:
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Este capítulo suele dar lugar a malentendidos. Los procedimientos
 > son los mismos que en los demás capítulos, como se explicó
@@ -4539,7 +4539,7 @@ interno completo se necesitará más adelante. Cree una versión completa
 del encabezado interno con un comando idéntico a lo que el sistema de
 compilación GCC realiza en circunstancias normales:
 
-> **Nota**  
+> ℹ️ **Nota**  
 >  
 > El siguiente comando muestra un ejemplo de sustitución de comandos anidada con dos métodos: comillas invertidas y una construcción `$()`. Podría reescribirse con el mismo método para ambas sustituciones, pero se muestra así para demostrar cómo combinarlas. Generalmente, se prefiere el método `$()`.
 >
@@ -4646,7 +4646,7 @@ bibliotecas:
 > esac
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El comando anterior es correcto. El comando ln tiene varias
 > versiones sintácticas, así que asegúrese de consultar la información
@@ -4733,7 +4733,7 @@ El programa msgfmt faltante o incompatible generalmente es inofensivo.
 Este programa msgfmt forma parte del paquete Gettext, que la
 distribución del host debería proporcionar.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Se han reportado errores al compilar este paquete como \"make
 > paralelo\". Si esto ocurre, vuelva a ejecutar el comando make con la
@@ -4747,7 +4747,7 @@ Compilar el paquete:
 
 Instalar el paquete:
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > Si LFS no está configurado correctamente y, a pesar de las
 > recomendaciones, compila como root, el siguiente comando instalará
@@ -4776,7 +4776,7 @@ Corrija una ruta fija al cargador de ejecutables en el script **ldd**:
 > sed '/RTLDLIST=/s@/usr@@g' -i $LFS/usr/bin/ldd
 > ```
 
-> **Precaución**
+> ⚠️ **Precaución**
 > 
 > En este punto, es fundamental detener el proceso y asegurarse de que
 > las funciones básicas (compilación y enlazado) de la nueva cadena de
@@ -4802,7 +4802,7 @@ Corrija una ruta fija al cargador de ejecutables en el script **ldd**:
 > rm -v a.out
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > La compilación de los paquetes en el siguiente capítulo servirá como
 > comprobación adicional de que la cadena de herramientas se ha
@@ -4829,7 +4829,7 @@ que aún no estaba disponible en el directorio de destino.
 
 ### 5.6.1. Instalación de Libstdc++ de destino
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Libstdc++ forma parte del código fuente de GCC. Primero debe
 > descomprimir el archivo tar de GCC y acceder al directorio
@@ -5932,7 +5932,7 @@ con comandos erróneos.
 
 ## 7.2. Cambio de propiedad
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Los comandos del resto de este libro deben ejecutarse con la sesión
 > iniciada como root y ya no como lfs. Además, verifique que \$LFS
@@ -6102,7 +6102,7 @@ Tenga en cuenta también que el prompt de **Bash** mostrará el mensaje
 \"¡No tengo nombre!\". Esto es normal, ya que el archivo /etc/passwd aún
 no se ha creado.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Es importante que todos los comandos de este capítulo y los
 > siguientes se ejecuten desde el entorno chroot. Si abandona este
@@ -6122,7 +6122,7 @@ no se ha creado.
 Es hora de crear la estructura completa de directorios en el sistema de
 archivos LFS.
 
-> **Nota**
+> ℹ️ **Nota**
 > Es posible que algunos de los directorios mencionados en esta
 > sección ya se hayan creado previamente con instrucciones explícitas
 > o al instalar algunos paquetes. Se repiten a continuación para mayor
@@ -6180,7 +6180,7 @@ especifica la existencia opcional de directorios adicionales como
 directorios realmente necesarios. Sin embargo, puede crear más
 directorios si lo desea.
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > El FHS no exige la existencia del directorio /usr/lib64, y los
 > editores de LFS han decidido no usarlo. Para que las instrucciones
@@ -6322,12 +6322,12 @@ inició sesión. El archivo /var/log/faillog registra los intentos
 fallidos de inicio de sesión. El archivo /var/log/btmp registra los
 intentos fallidos de inicio de sesión.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El archivo /run/utmp registra los usuarios que han iniciado sesión.
 > Este archivo se crea dinámicamente en los scripts de arranque.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Los archivos utmp, wtmp, btmp y lastlog utilizan enteros de 32 bits
 > para las marcas de tiempo y dejarán de funcionar completamente
@@ -6514,7 +6514,7 @@ interpretado.
 
 ### 7.10.1. Instalación de Python
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Hay dos archivos de paquete cuyo nombre empieza con el prefijo
 > \"python\". El que se debe extraer es Python3.13.2.tar.xz (observe
@@ -6545,7 +6545,7 @@ Compilar el paquete:
 > make
 > ```bash
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Algunos módulos de Python 3 no se pueden compilar ahora porque las
 > dependencias aún no están instaladas. Para el módulo ssl, se muestra
@@ -6736,7 +6736,7 @@ se eliminarán todos los archivos temporales. Para evitar perder tiempo
 rehaciendo algo que se ha hecho correctamente, puede resultar útil crear
 una copia de seguridad del sistema LFS actual.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Todos los pasos restantes de esta sección son opcionales. Sin
 > embargo, en cuanto empiece a instalar paquetes en el capítulo 8, se
@@ -6792,7 +6792,7 @@ almacene en el directorio de inicio del usuario root.
 
 Cree el archivo de copia de seguridad ejecutando el siguiente comando:
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Debido a que el archivo de copia de seguridad está comprimido, tarda
 > bastante tiempo (más de 10 minutos) incluso en un sistema
@@ -6803,7 +6803,7 @@ Cree el archivo de copia de seguridad ejecutando el siguiente comando:
 > tar -cJpf $HOME/lfs-temp-tools-12.3.tar.xz .
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Si continúa con el capítulo 8, no olvide volver a acceder al entorno
 > chroot como se explica en el recuadro \"Importante\" a continuación.
@@ -6823,7 +6823,7 @@ por lo que no es necesario volver a descargarlas. Después de comprobar
 que \$LFS esté configurado correctamente, puede restaurar la copia de
 seguridad ejecutando los siguientes comandos:
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > Los siguientes comandos son extremadamente peligrosos. Si ejecuta rm
 > -rf ./\* como usuario root y no cambia al directorio \$LFS o la
@@ -6900,7 +6900,7 @@ espacio en disco necesario durante el proceso. Tras las instrucciones de
 instalación, se incluye una lista de programas y bibliotecas (junto con
 breves descripciones) que instala el paquete.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Los valores de SBU y el espacio en disco requerido incluyen datos de
 > la suite de pruebas para todos los paquetes aplicables en el
@@ -7231,7 +7231,7 @@ Es posible que se necesite un kernel personalizado para el nuevo
 sistema, dependiendo de las diferencias en el hardware del sistema y la
 configuración original del kernel.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Se han reportado algunos *problemas* al copiar entre arquitecturas
 > similares, pero no idénticas. Por ejemplo, el conjunto de
@@ -7619,7 +7619,7 @@ capítulo:
 > localedef -i ja_JP -f SHIFT_JIS ja_JP.SJIS 2> /dev/null || true
 > ```
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Glibc ahora utiliza libidn2 al resolver nombres de dominio
 > internacionalizados. Esta es una dependencia en tiempo de ejecución.
@@ -10084,7 +10084,7 @@ Esta opción indica a GCC que enlace con la copia de la biblioteca
 Zlib instalada en el sistema, en lugar de con su propia copia
 interna.
 
-> **Nota**
+> ℹ️ **Nota**
 > Los ejecutables independientes de la posición (PIE) son
 > programas binarios que se pueden cargar en cualquier lugar de la
 > memoria. Sin PIE, la función de seguridad ASLR (Aleatorización del
@@ -10535,7 +10535,7 @@ Si lo desea, instale la documentación de Ncurses:
   cp -v -R doc -T /usr/share/doc/ncurses-6.5
   ------------------------------------------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Las instrucciones anteriores no crean bibliotecas de Ncurses que
 > no sean de caracteres anchos, ya que ningún paquete instalado al
@@ -11678,7 +11678,7 @@ posteriores:
   sed -i 's:\\\${:\\\$\\{:' intltool-update.in
   --------------------------------------------------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > La expresión regular anterior parece inusual debido a las barras
 > invertidas. Lo que hace es agregar una barra **invertida** antes de
@@ -11936,7 +11936,7 @@ Si se desea, instalar documentación adicional:
   cp -vfr doc/* /usr/share/doc/openssl-3.4.1
   -------------------------------------------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Debe actualizar OpenSSL cuando se anuncie una nueva versión que
 > corrija vulnerabilidades. Desde OpenSSL 3.0.0, el esquema de
@@ -12602,7 +12602,7 @@ otros errores relacionados con la internacionalización.
   patch -Np1 -i ../coreutils-9.6-i18n-1.patch
   -------------------------------------------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Se han **encontrado** muchos errores en este parche. Al informar
 > de nuevos errores a los responsables de Coreutils, compruebe primero
@@ -13460,7 +13460,7 @@ Espacio en disco necesario: 166 MB
 
 ### 8.64.1. Instalación de GRUB
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Si su sistema es compatible con UEFI y desea arrancar LFS con
 > UEFI, debe instalar GRUB con soporte UEFI (y sus dependencias)
@@ -13469,7 +13469,7 @@ Espacio en disco necesario: 166 MB
 > de BLFS sin conflicto (la página de BLFS proporciona instrucciones
 > para ambos casos).
 > 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > Desactive cualquier variable de entorno que pueda afectar la
 > compilación:
@@ -13876,7 +13876,7 @@ Instalar el paquete:
   make install
   ------------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Para algunos idiomas (p. ej., bielorruso), el paquete Kbd no
 > proporciona una configuración de teclado útil, ya que la
@@ -14417,7 +14417,7 @@ el siguiente comando:
   vim -c \':options\'
   ---------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Por defecto, vim solo instala archivos de corrección ortográfica
 > para El idioma inglés. Para instalar los archivos de corrección
@@ -14815,7 +14815,7 @@ manual de 8 bits heredadas
   |Búlgaro (bg)             |         CP1251         |   Chino tradicional de Hong Kong (zh_HK) |  BIG5HKSCS     |
   |Checo (cs)               |         ISO-8859-2     |   Chino tradicional (zh_TW)              |  BIG5}         |
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Las páginas del manual en idiomas no incluidos en la lista no son
 > compatibles.
@@ -15019,7 +15019,7 @@ Si lo desea, cree un archivo **/etc/fstab** ficticio para
 realizar dos pruebas y ejecute el conjunto de pruebas como usuario no
 **root**:
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > Ejecutar el conjunto de pruebas como usuario root puede ser
 > perjudicial para el sistema. Para ejecutarlo, la opción
@@ -15811,7 +15811,7 @@ los reinstalamos con el comando **install**. (La entrada relacionada en
 la Sección 8.2.1, \"Problemas de actualización\", explica la
 justificación para usar el comando **install** aquí).
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El nombre del cargador ELF es ld-linux-x86-64.so.2 en sistemas
 > de 64 bits y ld-linux.so.2 en sistemas de 32 bits. La **siguiente**
@@ -16388,7 +16388,7 @@ asignó a cada dispositivo de red:
   cat /etc/udev/rules.d/70-persistent-net.rules
   -----------------------------------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > En algunos casos, como cuando se asignan direcciones MAC manualmente
 > a una tarjeta de red o en un entorno virtual como Qemu o Xen, es
@@ -16589,7 +16589,7 @@ la interfaz (p. ej., eth0) suele ser adecuado. Cada archivo contiene los
 atributos de una interfaz, como su(s) dirección(es) IP, máscaras de
 subred, etc. La raíz del nombre del archivo debe ser *ifconfig*.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Si no se utilizó el procedimiento de la sección anterior, udev
 > asignará nombres de interfaz a la tarjeta de red según las
@@ -16684,7 +16684,7 @@ solo necesita o desea un servidor DNS, elimine la segunda línea del
 servidor de nombres del archivo. La dirección IP también puede ser la de
 un enrutador en la red local.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Las direcciones DNS IPv4 públicas de Google son 8.8.8.8 y 8.8.4.4.
 
@@ -16795,7 +16795,7 @@ LFS:
 > gráfica (como **gdm** de GNOME o **lxdm** de LXDE)
 > 6: reiniciar el equipo
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Clásicamente, el nivel de ejecución 2 anterior se definía como
 > \"modo multiusuario sin conexión de red\", pero esto solo ocurría
@@ -16981,7 +16981,7 @@ encuentra una buena sugerencia sobre cómo gestionar la hora en LFS.
 Explica aspectos como las zonas horarias, la hora UTC y la variable de
 entorno TZ.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Los parámetros CLOCKPARAMS y UTC también se pueden configurar en el
 > archivo */etc/sysconfig/rc.site*.
@@ -17172,7 +17172,7 @@ que necesiten estos idiomas deben instalar el sistema X Window, fuentes
 que cubran los rangos de caracteres necesarios y el método de entrada
 adecuado (por ejemplo, SCIM admite una amplia variedad de idiomas).
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El archivo */etc/sysconfig/console* solo controla la localización de
 > la consola de texto de Linux. No tiene nada que ver con la
@@ -17665,7 +17665,7 @@ Para comprobar si la unidad de disco admite esta opción, ejecute
 
 devuelve una salida no vacía; la opción es compatible.
 
-> ⚠️ Nota:
+> ℹ️ **Nota**
 > Las particiones basadas en la gestión de volúmenes lógicos (LVM)
 > no pueden usar la opción de *barrera (barrier)*.
 
@@ -17748,7 +17748,7 @@ el valor del host *\$LC_ALL *o* \$LC_CTYPE*.
 Esto inicia una interfaz de ncurses basada en menús. Para otras
 interfaces (gráficas), escriba **make help**.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Un buen punto de partida para configurar el kernel es ejecutar
 > **make defconfig**. Esto establecerá la configuración base en un
@@ -17838,7 +17838,7 @@ Existen otras opciones que podrían ser útiles según los requisitos del
 sistema. Para obtener una lista de las opciones necesarias para los
 paquetes BLFS, consulte el Índice de configuración del kernel de BLFS.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Si el hardware de su host usa UEFI y desea arrancar el sistema LFS
 > con él, debe ajustar la configuración del kernel siguiendo la página
@@ -18020,7 +18020,7 @@ Una vez completada la compilación del kernel, se requieren pasos
 adicionales para completar la instalación. Algunos archivos deben
 copiarse al directorio */boot*.
 
-> **Precaución**
+> ⚠️ **Precaución**
 > 
 > Si ha decidido usar una partición */boot* independiente para el
 > sistema LFS (quizás compartiendo una partición */boot* con la
@@ -18083,7 +18083,7 @@ ello, existe la posibilidad de que el ID de usuario utilizado por el
 empaquetador se asigne a alguien en el equipo. Esa persona tendría
 entonces acceso de escritura al código fuente del kernel.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > En muchos casos, será necesario actualizar la configuración del
 > kernel para los paquetes que se instalarán posteriormente en BLFS. A
@@ -18106,7 +18106,7 @@ entonces acceso de escritura al código fuente del kernel.
 > la compilación anterior; de lo contrario, la nueva compilación
 > podría fallar.
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > Alguna documentación del kernel recomienda crear un enlace simbólico
 > desde */usr/src/linux* que apunte al directorio fuente del kernel.
@@ -18164,7 +18164,7 @@ de datos en el núcleo.
 
 ## 10.4. Uso de GRUB para configurar el proceso de arranque
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Si su sistema es compatible con UEFI y desea arrancar LFS con UEFI,
 > debe omitir las instrucciones de esta página, pero aun así debe
@@ -18175,7 +18175,7 @@ de datos en el núcleo.
 
 ### 10.4.1. Introducción
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > Configurar GRUB incorrectamente puede dejar su sistema inoperativo
 > sin un dispositivo de arranque alternativo, como un CD-ROM o una
@@ -18236,7 +18236,7 @@ raíz (o de arranque independiente) es *sda2*.
 Instale los archivos de GRUB en */boot/grub* y configure la ruta de
 arranque:
 
-> **Advertencia**
+> 🛑 **Advertencia**
 > 
 > El siguiente comando sobrescribirá el gestor de arranque actual. No
 > lo ejecute si no lo desea, por ejemplo, si utiliza un gestor de
@@ -18247,7 +18247,7 @@ arranque:
   grub-install /dev/sda**
   -------------------------
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Si el sistema se ha iniciado mediante UEFI, **grub-install**
 > intentará instalar los archivos para el destino *x86_64-efi*, pero
@@ -18287,7 +18287,7 @@ necesario que el controlador SimpleDRM del kernel utilice el framebuffer
 VESA. Puede usar un valor de resolución o profundidad de color diferente
 que se adapte mejor a su monitor.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Desde la perspectiva de GRUB, los archivos del kernel son relativos
 > a la partición utilizada. Si utilizó una partición /boot
@@ -18295,7 +18295,7 @@ que se adapte mejor a su monitor.
 > necesitarás cambiar la línea raíz establecida para que apunte a la
 > partición de arranque.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > El designador GRUB de una partición puede cambiar si agregó o quitó
 > discos (incluidos discos extraíbles como memorias USB). Este cambio
@@ -18330,7 +18330,7 @@ personalización, como pantallas de inicio gráficas, reproducción de
 sonidos, entrada del ratón, etc. Los detalles de estas opciones quedan
 fuera del alcance de esta introducción.
 
-> **Precaución**
+> ⚠️ **Precaución**
 > 
 > Existe un comando, grub-mkconfig, que puede escribir un archivo de
 > configuración automáticamente. Utiliza un conjunto de scripts en
@@ -18677,7 +18677,7 @@ enlaces o el navegador Lynx en una consola y bash en la otra. GPM
 permite copiar comandos del navegador con el botón izquierdo del ratón,
 cambiar de consola y pegarlos en la otra.
 
-> **Nota**
+> ℹ️ **Nota**
 > 
 > Como nota al margen, también se puede cambiar de consola virtual
 > desde una instancia de X Window con la combinación de teclas
