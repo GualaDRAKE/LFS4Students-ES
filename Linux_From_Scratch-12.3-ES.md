@@ -1720,7 +1720,7 @@ kernel.
 
 • Xz-5.0.0
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Tenga en cuenta que los enlaces simbólicos mencionados anteriormente
 > son necesarios para construir un sistema LFS siguiendo las
@@ -3529,7 +3529,7 @@ export \...
 Aunque los comandos anteriores han configurado algunas variables, para
 que sean visibles en cualquier subshell, las exportamos.
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Varias distribuciones comerciales añaden una *instancia* no
 > documentada de /etc/bash.bashrc a la inicialización de bash. Este
@@ -3574,7 +3574,7 @@ comandos:
 > export MAKEFLAGS=-j32
 > ```
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Nunca pase una opción -j sin un número para **make** ni configure
 > dicha opción en MAKEFLAGS. Hacerlo permitiría que **make** genere
@@ -3739,7 +3739,7 @@ aíslen de la distribución del host; y tercero, entrar en el entorno
 chroot (que mejora aún más el aislamiento del host) y construir las
 herramientas restantes necesarias para construir el sistema final.
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Aquí es donde comienza el verdadero trabajo de construir un nuevo
 > sistema. Asegúrese de seguir las instrucciones exactamente como se
@@ -4115,7 +4115,7 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 
 • Finalmente, es importante destacar dos puntos importantes:
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Las instrucciones de compilación asumen que los requisitos del
 > sistema host, incluidos los enlaces simbólicos, se han configurado
@@ -4128,7 +4128,7 @@ partición LFS, que es /mnt/lfs, usando nuestro ejemplo.
 > 
 > ---
 > 
-> **Importante**
+> 📌 **Importante**
 > 
 > A continuación, se presenta una sinopsis del proceso de compilación.
 > 
@@ -6689,7 +6689,7 @@ chroot:
 > exit
 > ```
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Todas las siguientes instrucciones las ejecuta el usuario root en su
 > sistema host. Tenga especial cuidado con los comandos que va a
@@ -6771,7 +6771,7 @@ seguridad ejecutando los siguientes comandos:
 De nuevo, verifique que el entorno se haya configurado correctamente y
 continúe compilando el resto del sistema.
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Si abandonó el entorno chroot para crear una copia de seguridad o
 > reiniciar la compilación mediante una restauración, recuerde
@@ -7350,7 +7350,7 @@ Compilar el paquete:
 > make
 > ```
 
-> **Importante**
+> 📌 **Importante**
 > 
 > En esta sección, el conjunto de pruebas de Glibc se considera
 > crítico. No lo omita bajo ninguna circunstancia.
@@ -7407,7 +7407,7 @@ obsoleta que falla con una configuración moderna de Glibc:
 > sed '/test-installation/s@$(PERL)@echo not running@' -i ../Makefile
 > ```
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Si actualiza Glibc a una nueva versión menor (por ejemplo, de
 > Glibc-2.36 a Glibc-2.41) en un sistema LFS en ejecución, debe tomar
@@ -10038,7 +10038,7 @@ Compilar el paquete:
   make
   ----------
 
-> **Importante**
+> 📌 **Importante**
 > 
 > En esta sección, el **conjunto** de pruebas para GCC se
 > considera importante, pero requiere mucho tiempo. Se recomienda a
@@ -12128,7 +12128,7 @@ configuración:
 > disable-pip-version-check = true
 > EOF
 
-> **Importante**
+> 📌 **Importante**
 > 
 > En LFS y BLFS, normalmente compilamos e instalamos módulos de
 > Python con el comando pip3. Asegúrese de que los comandos pip3
@@ -15751,7 +15751,7 @@ justificación para usar el comando **install** aquí).
 > actual, excluyendo cualquier cosa que termine en g, en caso de que
 > los siguientes comandos ya se hayan ejecutado.
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Si hay algún paquete cuya versión es diferente a la especificada
 > en el libro (ya sea por un aviso de seguridad o por gusto personal),
@@ -16420,7 +16420,7 @@ conectores, debería usar el modo \"por ruta\".
 Si su unidad admite cualquiera de los dos tipos de cambios, elija un
 modo según el tipo de cambio que prevea que ocurra con mayor frecuencia.
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Los dispositivos externos (por ejemplo, una unidad de CD conectada
 > por USB) no deben usar la persistencia por ruta, ya que cada vez que
@@ -17617,7 +17617,7 @@ compilación e instalación. Consulte el archivo README en el árbol de
 código fuente del kernel para conocer métodos alternativos a la
 configuración del kernel en este libro.
 
-> **Importante**
+> 📌 **Importante**
 > 
 > Compilar el kernel de Linux por primera vez es una de las tareas más
 > difíciles en LFS. Su correcta configuración depende del hardware
