@@ -13887,24 +13887,21 @@ lnstat), ss y tc****
 
 ### Descripciones breves
 
-|**bridge** | Configura puentes de red|
-|:----------|:-------------------------:|
-|**ctstat** | Utilidad de estado de conexión|
-|**genl** | Interfaz genérica de la utilidad netlink|
-|**ifstat** | Muestra estadísticas de interfaz, incluyendo el número de paquetes transmitidos y recibidos, por interfaz|
-|**ip** | El ejecutable principal. Tiene varias funciones, incluyendo las siguientes:|
-||**ip link** | \<device\> permite a los usuarios ver el estado de los dispositivos y realizar cambios|
-||**ip addr** | permite a los usuarios ver direcciones y sus propiedades, añadir nuevas direcciones y eliminar las antiguas|
+|**bridge**       | Configura puentes de red  |
+|:----------------|:-------------------------:|
+|**ctstat**       | Utilidad de estado de conexión|
+|**genl**         | Interfaz genérica de la utilidad netlink|
+|**ifstat**       | Muestra estadísticas de interfaz, incluyendo el número de paquetes transmitidos y recibidos, por interfaz|
+|**ip**           | El ejecutable principal. Tiene varias funciones, incluyendo las siguientes:|
+||**ip link**     | \<device\> permite a los usuarios ver el estado de los dispositivos y realizar cambios|
+||**ip addr**     | permite a los usuarios ver direcciones y sus propiedades, añadir nuevas direcciones y eliminar las antiguas|
 ||**ip neighbor** | permite a los usuarios ver enlaces de vecinos y sus propiedades, añadir nuevas entradas de vecinos y eliminar las antiguas|
-||**ip rule** | permite a los usuarios ver las políticas de enrutamiento y modificarlas|
-||**ip route** | permite a los usuarios ver la tabla de enrutamiento y modificar sus reglas|
-||**ip tunnel** | permite a los usuarios ver los túneles IP y sus propiedades y modificarlas|
-||**ip maddr** | permite a los usuarios ver las direcciones multicast y sus propiedades y modificarlas|
-**ip mroute** permite a los usuarios configurar, cambiar o eliminar
-el enrutamiento multicast
-
-**ip monitor** permite a los usuarios supervisar continuamente el
-estado de dispositivos, direcciones y rutas
+||**ip rule**     | permite a los usuarios ver las políticas de enrutamiento y modificarlas|
+||**ip route**    | permite a los usuarios ver la tabla de enrutamiento y modificar sus reglas|
+||**ip tunnel**   | permite a los usuarios ver los túneles IP y sus propiedades y modificarlas|
+||**ip maddr**    | permite a los usuarios ver las direcciones multicast y sus propiedades y modificarlas|
+||**ip mroute**   | permite a los usuarios configurar, cambiar o eliminar el enrutamiento multicast|
+||**ip monitor**  | permite a los usuarios supervisar continuamente el estado de dispositivos, direcciones y rutas
 
 **lnstat** Proporciona estadísticas de red de Linux; es un reemplazo
 generalizado y con más funciones del antiguo programa **rtstat**
