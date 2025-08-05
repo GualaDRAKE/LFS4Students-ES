@@ -4531,7 +4531,7 @@ ubicación necesaria. crear encabezados
 |**Directorios instalados**:| /usr/include/asm, /usr/include/asm-generic, /usr/include/drm,<br>  /usr/include/linux, /usr/include/misc, /usr/include/mtd,<br>  /usr/include/rdma, /usr/include/scsi, /usr/include/sound,<br>  /usr/include/video y /usr/include/xen|
 |------|------|
 
-#### Descripciones breves
+### Descripciones breves
 >
 |/usr/include/asm/\*.h|Cabeceras ASM de la API de Linux|
 |:------|:------|
@@ -7219,7 +7219,7 @@ advertencia «*git: command not found*».
 
 **Archivos instalados**: Varias páginas de manual
 
-## Descripciones breves
+### Descripciones breves
 
 man pages Descripción de las funciones del lenguaje de
 programación C, archivos importantes de dispositivos y archivos de
@@ -7250,7 +7250,7 @@ Para este paquete, solo necesitamos copiar los archivos:
 
 **Archivos instalados**: /etc/protocols y /etc/services
 
-## Descripciones breves
+### Descripciones breves
 
 */etc/protocols* Describe los diversos protocolos de Internet de DARPA
 disponibles en el subsistema TCP/IP
@@ -7779,66 +7779,66 @@ actualmente ejecutada.
 
 **zic** Compilador de zona horaria.
 
-ld-\*.so Programa auxiliar para ejecutables de bibliotecas
+*ld-\*.so* Programa auxiliar para ejecutables de bibliotecas
 compartidas.
 
-libBrokenLocale Usado internamente por Glibc como un truco para
+*libBrokenLocale* Usado internamente por Glibc como un truco para
 obtener programas dañados (por ejemplo, algunos Motif). aplicaciones) en
 ejecución. Consulte los comentarios en
 *glibc-2.41/locale/broken_cur_max.c* para obtener más información.
 
-libanl Biblioteca ficticia sin funciones. Anteriormente era la
+*libanl* Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de búsqueda de nombres asíncrona, cuyas funciones ahora están
 en **libc**.
 
-libc Biblioteca principal de C.
+*libc* Biblioteca principal de C.
 
-libc_malloc_debug Activa la comprobación de asignación de memoria al
+*libc_malloc_debug* Activa la comprobación de asignación de memoria al
 precargarse.
 
-libdl Biblioteca ficticia sin funciones. Anteriormente era la
+*libdl* Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de interfaz de enlace dinámico, cuyas funciones ahora están
 en *libc*.
 
-libg Biblioteca ficticia sin funciones. Anteriormente era una
+*libg* Biblioteca ficticia sin funciones. Anteriormente era una
 biblioteca de tiempo de ejecución para g**++**.
 
-libm La biblioteca matemática.
+*libm* La biblioteca matemática.
 
-Libmvec La biblioteca matemática vectorial, enlazada según sea
+*libmvec* La biblioteca matemática vectorial, enlazada según sea
 necesario cuando se usa *libm*.
 
-libmcheck Activa la comprobación de asignación de memoria cuando se
+*libmcheck* Activa la comprobación de asignación de memoria cuando se
 enlaza a.
 
-libmemusage Usada por **memusage** para ayudar a recopilar información
+*libmemusage* Usada por **memusage** para ayudar a recopilar información
 sobre el uso de memoria de un programa.
 
-libnsl La biblioteca de servicios de red, ahora obsoleta.
+*libnsl* La biblioteca de servicios de red, ahora obsoleta.
 
-libnss\_ Los módulos de conmutación de servicio de nombres, que
+*libnss\_\* Los módulos de conmutación de servicio de nombres, que
 contienen funciones para resolver nombres de host, nombres de usuario,
 nombres de grupo, alias, servicios, protocolos, etc. Cargados por *libc*
 según la configuración en */etc/nsswitch.conf*.
 
-libpcprofile Se puede precargar en el perfil de PC de un ejecutable.
+*libpcprofile* Se puede precargar en el perfil de PC de un ejecutable.
 
-libpthread Biblioteca ficticia que no contiene funciones.
+*libpthread* Biblioteca ficticia que no contiene funciones.
 Anteriormente contenía funciones que proporcionaban la mayoría de las
 interfaces especificadas por las extensiones de subprocesos POSIX.1c y
 las interfaces de semáforo especificadas por las extensiones de tiempo
 real POSIX.1b. Ahora, estas funciones se encuentran en *libc*.
 
-libresolv Contiene funciones para crear, enviar e interpretar paquetes
+*libresolv* Contiene funciones para crear, enviar e interpretar paquetes
 a los servidores de nombres de dominio de Internet.
 
-librt Contiene funciones que proporcionan la mayoría de las interfaces
+*librt* Contiene funciones que proporcionan la mayoría de las interfaces
 especificadas por las extensiones de tiempo real POSIX.1b.
 
-libthread_db Contiene funciones útiles para crear depuradores para
+*libthread_db* Contiene funciones útiles para crear depuradores para
 programas multiproceso.
 
-libutil Biblioteca ficticia sin funciones. Anteriormente, contenía
+*libutil* Biblioteca ficticia sin funciones. Anteriormente, contenía
 código para funciones estándar utilizadas en diversas utilidades de
 Unix. Estas funciones ahora se encuentran en *libc*.
 
@@ -7891,7 +7891,7 @@ Eliminar una biblioteca estática inútil:
 
 **Bibliotecas instaladas: **libz.so
 
-## Descripciones breves
+### Descripciones breves
 
 *libz* Contiene funciones de compresión y descompresión utilizadas por
 algunos programas
@@ -7988,10 +7988,9 @@ bzfgrep (enlace a bzgrep), bzgrep, bzip2, bzip2recover, bzless (enlace a
 bzmore) y bzmore
 
 **Bibliotecas instaladas**: libbz2.so
-
 **Directorio de instalación**: /usr/share/doc/bzip2-1.0.8
 
-## Descripciones breves
+### Descripciones breves
 
 **bunzip2** Descomprime archivos comprimidos
 
@@ -8021,6 +8020,10 @@ convencionales que utilizan algoritmos \"Lempel-Ziv\", como **gzip**.
 *libbz2* La biblioteca implementa la compresión de datos sin pérdida con
 ordenamiento por bloques mediante el algoritmo Burrows-Wheeler.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.8. Xz-5.6.4
 
 El paquete Xz contiene programas para comprimir y descomprimir archivos.
@@ -8028,37 +8031,37 @@ Ofrece funciones para los formatos de compresión lzma y xz, que son más
 recientes. Comprimir archivos de texto con xz ofrece un mejor porcentaje
 de compresión que con los comandos tradicionales gzip o bzip2.
 
-**Tiempo de compilación aproximado**: 0.1 SBU
-
-**Espacio en disco necesario**: 21 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|21 MB|
 
 ### 8.8.1. Instalación de Xz
 
 Prepare Xz para la compilación con:
 
-./configure \--prefix=/usr \\
-
-\--disable-static \\
-
-\--docdir=/usr/share/doc/xz-5.6.4
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --docdir=/usr/share/doc/xz-5.6.4
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.8.2. Contenido de Xz
 
@@ -8071,7 +8074,6 @@ xzgrep), lzgrep (enlace a xzgrep), lzless (enlace a xzless), lzma
 (enlace a xzgrep), xzgrep, xzless y xzmore
 
 **Bibliotecas instaladas**: liblzma.so
-
 **Directorios instalados**: /usr/include/lzma y /usr/share/doc/xz-5.6.4
 
 ### Descripciones breves
@@ -8128,6 +8130,10 @@ archivo comprimido LZMA
 pérdida y con ordenación de bloques, utilizando Algoritmo de cadena
 Lempel-Ziv-Markov
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.9. Lz4-1.10.0
 
 Lz4 es un algoritmo de compresión sin pérdidas que proporciona una
@@ -8136,35 +8142,34 @@ decodificador extremadamente rápido, con una velocidad de varios GB/s
 por núcleo. Lz4 es compatible con Zstandard para que ambos algoritmos
 puedan comprimir los datos más rápidamente.
 
-**Tiempo de compilación aproximado**: 0,1 UEN
-
-**Espacio en discoteca necesario**: 4,2MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|4,2MB|
 
 ### 8.9.1. Instalación de Lz4
 
 Compilando el paquete:
 
-  ------------------------------------
-  make BUILD_STATIC=no *PREFIX*=/usr
-  ------------------------------------
+> ```bash
+> make BUILD_STATIC=no *PREFIX*=/usr
+> ```bash
 
 Para probar los resultados, ejecute:
 
-  -----------------
-  hacer -j1 check
-  -----------------
+> ```bash
+> make -j1 check
+> ```
 
 Instalar el paquete:
 
-  --------------------------------------------
-  make BUILD_STATIC=no PREFIX=/*usr* install
-  --------------------------------------------
+> ```bash
+> make BUILD_STATIC=no PREFIX=/usr install
+> ```
 
 ### 8.9.2. Contenido de Lz4
 
 **Programas instalados**: lz4, lz4c (enlazar a lz4), lz4cat (enlazar a
 lz4) y unlz4 (enlazar a lz4)
-
 **Biblioteca instalada**: liblz4.so
 
 ### Descripciones breves
@@ -8173,13 +8178,16 @@ lz4) y unlz4 (enlazar a lz4)
 
 **lz4c** Comprimir archivos con el formato LZ4
 
-**lz4cat** Muestra el contenido de un archivo comprimido con el formato
-LZ4
+**lz4cat** Muestra el contenido de un archivo comprimido con el formato LZ4
 
 **unlz4** Descomprime archivos con el formato LZ4
 
 *liblz4* Biblioteca que implementa la compresión de datos sin pérdida
 mediante el algoritmo LZ4
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.10. Zstd-1.5.7
 
@@ -8188,49 +8196,46 @@ altas tasas de compresión. Ofrece una amplia gama de ventajas y
 desventajas entre compresión y velocidad, además de estar respaldado por
 un decodificador muy rápido.
 
-**Tiempo de compilación aproximado**: 0.4 SBU
-
-**Espacio en disco requerido**: 85 MB
+|Tiempo de compilación aproximado:|0.4 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|85 MB|
 
 ### 8.10.1. Instalación de Zstd
 
 Compilar el paquete:
 
-  ------------------
-  make prefix=/usr
-  ------------------
+> ```bash
+> make prefix=/usr
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> ℹ️ **Nota**
+> 
 > En la salida de la prueba, hay varios lugares que indican
 > \"failed\". Estos son los esperados y solo \"FAIL\" es un fallo de
 > prueba real. No debería haber fallos de prueba.
-> +----------------------------------------------------------------------+
 
 Para probar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------------------
-  make prefix=/usr install
-  --------------------------
+> ```bash
+> make prefix=/usr install
+> ```
 
 Eliminar la biblioteca estática:
 
-  --------------------------
-  rm -v /usr/lib/libzstd.a
-  --------------------------
+> ```bash
+> rm -v /usr/lib/libzstd.a
+> ```
 
 ### 8.10.2. Contenido de Zstd
 
 **Programas instalados**: zstd, zstdcat (enlace a zstd), zstdgrep,
 zstdless, zstdmt (enlace a zstd) y unzstd (enlace a zstd)
-
 **Biblioteca instalada**: libzstd.so
 
 ### Descripciones breves
@@ -8239,51 +8244,53 @@ zstdless, zstdmt (enlace a zstd) y unzstd (enlace a zstd)
 
 **zstdgrep** Ejecuta grep en archivos comprimidos con ZSTD.
 
-**zstdless** Se ejecuta con menos frecuencia en archivos comprimidos con
-ZSTD.
+**zstdless** Se ejecuta con menos frecuencia en archivos comprimidos con ZSTD.
 
 *libzstd* Biblioteca que implementa la compresión de datos sin pérdida
 mediante el algoritmo ZSTD.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.11. Archivo-5.46
 
 El paquete Archivo contiene una utilidad para determinar el tipo de uno
 o más archivos.
 
-**Tiempo de compilación aproximado**: menos de 0.1 SBU
-
-**Espacio en disco requerido**: 19 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|19 MB|
 
 ### 8.11.1. Instalación de Archivo
 
 Preparar Archivo para la compilación:
 
-  ---------------------------
-  ./configure --prefix=/usr
-  ---------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.11.2. Contenido de Archivo
 
 **Programas instalados**: file
-
 **Biblioteca instalada**: libmagic.so
 
 ### Descripciones breves
@@ -8300,9 +8307,9 @@ utilizadas por el programa Archivo.
 El paquete Readline es un conjunto de bibliotecas que ofrecen funciones
 de edición e historial desde la línea de comandos.
 
-**Tiempo de compilación aproximado**: menos de 0,1 SBU
-
-**Espacio en disco necesario**: 16 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|16 MB|
 
 ### 8.12.1. Instalación de Readline
 
@@ -8311,30 +8318,28 @@ a \<libraryname\>.old. Aunque esto no suele ser un problema, en algunos
 casos puede provocar un error de enlace en **ldconfig**. Esto se puede
 evitar ejecutando los dos siguientes comandos sed:
 
-> +------------------------------------------------+
-> ---
-> sed -i \'/MV.\*old/d\' *Makefile.in*
-> sed -i \'/{OLDSUFF}/c:\' support/shlib-install
-> +------------------------------------------------+
+> ```bash
+> sed -i '/MV.*old/d' Makefile.in
+> sed -i '/{OLDSUFF}/c:' support/shlib-install
+> ```
 
 Evitar la codificación rígida de las rutas de búsqueda de bibliotecas
 (rpath) en las bibliotecas compartidas. Este paquete no necesita rpath
 para instalarse en la ubicación estándar, y rpath puede causar efectos
 no deseados o incluso problemas de seguridad:
 
-  --------------------------------------------------------
-  sed -i \'s/-Wl,-rpath,\[\^ \]\*//\' support/shobj-conf
-  --------------------------------------------------------
+> ```bash
+> sed -i 's/-Wl,-rpath,[^ ]*//' support/shobj-conf
+> ```
 
 Preparar Readline para la compilación:
 
-> +------------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--disable-static \\
-> \--with-*curses* \\
-> \--docdir=/usr/share/doc/readline-8.2.13
-> +------------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --with-curses  \
+>             --docdir=/usr/share/doc/readline-8.2.13
+> ```
 
 Significado de la nueva opción de configuración:
 
@@ -8346,9 +8351,9 @@ independiente. Esto generará el archivo readline.pc correcto.
 
 Compilar el paquete:
 
-  ----------------------------------
-  make SHLIB_LIBS=\"-*lncursesw*\"
-  ----------------------------------
+> ```bash
+> make SHLIB_LIBS=\"-lncursesw"
+> ```
 
 Significado de la opción \"make\":
 
@@ -8362,22 +8367,20 @@ Este paquete no incluye un conjunto de pruebas.
 
 Instalar el paquete:
 
-  ----------------
-  make *install*
-  ----------------
+> ```bash
+> make install
+> ```
 
 Si lo desea, instale la documentación:
 
-  --------------------------------------------------------------------------
-  install -v -m644 doc/\*.{ps,pdf,html,dvi} /usr/share/doc/readline-8.2.13
-  --------------------------------------------------------------------------
+> ```bash
+> install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-8.2.13
+> ```
 
 ### 8.12.2. Contenido de Readline
 
 **Bibliotecas instaladas**: libhistory.so y libreadline.so
-
-**Directorios instalados**: /usr/include/readline y
-/usr/share/doc/readline- 8.2.13
+**Directorios instalados**: /usr/include/readline y /usr/share/doc/readline- 8.2.13
 
 ### Descripciones breves
 
@@ -8387,39 +8390,43 @@ recuperar líneas del historial.
 *libreadline* Proporciona un conjunto de comandos para manipular el
 texto introducido en una sesión interactiva de un programa.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.13. M4-1.4.19
 
 El paquete M4 contiene un procesador de macros.
 
-**Tiempo aproximado de compilación**: 0.3 SBU
-
-**Espacio en disco requerido**: 49 MB
+|Tiempo de compilación aproximado:|0.3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|49 MB|
 
 ### 8.13.1. Instalación de M4
 
 Preparar M4 para la compilación:
 
-  -----------------------------
-  ./configure --*prefix*=/usr
-  -----------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.13.2. Contenido de M4
 
@@ -8436,22 +8443,26 @@ enteros, manipular texto y realizar recursiones, entre otras. El
 programa **m4** puede utilizarse como interfaz para un compilador o como
 procesador de macros por sí mismo.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.14. Bc-7.0.3
 
 El paquete Bc contiene un lenguaje de procesamiento numérico de
 precisión arbitraria.
 
-**Tiempo de compilación aproximado**: Menos de 0,1 SBU
-
-**Espacio en disco necesario**: 7,8 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|7,8 MB
 
 ### 8.14.1. Instalación de Bc
 
 Preparar Bc para la compilación:
 
-  -----------------------------------------------
-  CC=gcc ./configure \--*prefix*=/usr -G -O3 -r
-  -----------------------------------------------
+> ```bash
+> CC=gcc ./configure --prefix=/usr -G -O3 -r
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -8475,21 +8486,21 @@ de bc.
 
 Compila el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar bc, ejecuta:
 
-  -----------
-  make test
-  -----------
+> ```bash
+> make test
+> ```
 
 Instala el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.14.2. Contenido de Bc
 
@@ -8501,43 +8512,46 @@ Instala el paquete:
 
 **dc** Calculadora de línea de comandos con pulido inverso
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.15. Flex-2.6.4
 
 El paquete Flex contiene una utilidad para generar programas que
 reconocen patrones en texto.
 
-**Tiempo aproximado de compilación**: 0.1 SBU
-
-**Espacio en disco requerido**: 33 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|33 MB|
 
 ### 8.15.1. Instalación de Flex
 
 Preparar Flex para la compilación:
 
-> +----------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--docdir=/usr/share/doc/flex-2.6.4 \\
-> \--disable-static
-> +----------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr                      \
+>             --docdir=/usr/share/doc/flex-2.6.4 \
+>             --disable-static
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Algunos programas aún no conocen **flex** e intentan ejecutar su
 predecesor, **lex**. Para dar soporte a estos programas, cree un enlace
@@ -8545,19 +8559,15 @@ simbólico llamado lex que ejecute **flex** en modo de emulación de
 **lex** y cree también la página de manual de **lex** como enlace
 simbólico:
 
-> +-----------------------------------------+
-> ---
+> ```bash
 > ln -sv flex /usr/bin/lex
 > ln -sv flex.1 /usr/share/man/man1/lex.1
-> +-----------------------------------------+
+> ```
 
 ### 8.15.2. Contenido de Flex
 
-**Programas instalados**: flex, flex++ (enlace a flex) y lex (enlace a
-flex)
-
+**Programas instalados**: flex, flex++ (enlace a flex) y lex (enlace a flex)
 **Bibliotecas instaladas**: libfl.so
-
 **Directorio de instalación**: /usr/share/doc/flex-2.6.4
 
 ### Descripciones breves
@@ -8567,13 +8577,17 @@ Permite la versatilidad de especificar las reglas para la búsqueda de
 patrones, eliminando la necesidad de desarrollar un programa
 especializado.
 
-flex++ Extensión de flex, utilizada para generar código y clases en C++.
+**flex++** Extensión de flex, utilizada para generar código y clases en C++.
 Es un enlace simbólico a **flex**
 
-lex Un enlace simbólico que ejecuta **flex** en modo de emulación
+**lex** Un enlace simbólico que ejecuta **flex** en modo de emulación
 **lex**
 
-libfl La biblioteca *flex*
+*libfl* La biblioteca *flex*
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.16. Tcl-8.6.16
 
@@ -8581,9 +8595,9 @@ El paquete Tcl contiene el Lenguaje de Comandos de Herramientas, un
 lenguaje de scripting robusto y de propósito general. El paquete Expect
 está escrito en Tcl (se pronuncia \"cosquillas\").
 
-**Tiempo de compilación aproximado**: 3.1 SBU
-
-**Espacio en disco requerido**: 91 MB
+|Tiempo de compilación aproximado:|3.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|91 MB|
 
 ### 8.16.1. Instalación de Tcl
 
@@ -8595,14 +8609,13 @@ herramientas más importantes funcionan correctamente.
 
 Preparar Tcl para la compilación:
 
-> +-----------------------------------------+
-> ---
-> SRCDIR=\$(pwd)
+> ```bash
+> SRCDIR=$(pwd)
 > cd unix
-> ./configure \--prefix=/usr \\
-> \--mandir=/usr/share/man \\
-> \--disable-rpath
-> +-----------------------------------------+
+> ./configure --prefix=/usr           \
+>             --mandir=/usr/share/man \
+>             --disable-rpath
+> ```
 
 Significado de los nuevos parámetros de configuración:
 
@@ -8616,26 +8629,25 @@ causar efectos no deseados o incluso problemas de seguridad.
 
 Construir el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
-> Make
-> sed -e \"s\ | \$SRCDIR/unix\ | /usr/lib\ | \" \\
-> -e \"s\ | \$SRCDIR\ | /usr/include\ | \" \\
-> -i tclConfig.sh
-> sed -e \"s\ | \$SRCDIR/unix/pkgs/tdbc1.1.10\ | /usr/lib/tdbc1.1.10\ | \"
-> \\
-> -e \"s\ | \$SRCDIR/paquetes/tdbc1.1.10/genérico\ | /usr/include\ | \" \\
-> -e \"s\ | \$SRCDIR/paquetes/tdbc1.1.10/biblioteca\ | /usr/lib/tcl8.6\ | \"
-> \\
-> -e \"s\ | \$SRCDIR/paquetes/tdbc1.1.10\ | /usr/include\ | \" \\
-> -i paquetes/tdbc1.1.10/tdbcConfig.sh
-> sed -e \"s\ | \$SRCDIR/unix/paquetes/itcl4.3.2\ | /usr/lib/itcl4.3.2\ | \"
-> \\
-> -e \"s\ | \$SRCDIR/paquetes/itcl4.3.2/genérico\ | /usr/include\ | \" \\
-> -e \"s\ | \$SRCDIR/pkgs/itcl4.3.2\ | /usr/include\ | \" \\
-> -i pkgs/itcl4.3.2/itclConfig.sh
+> ```bash
+> make
+> sed -e "s | $SRCDIR/unix | /usr/lib | " \
+>     -e "s | $SRCDIR | /usr/include  | " \
+>     -i tclConfig.sh
+> 
+> sed -e "s | $SRCDIR/unix/pkgs/tdbc1.1.10 | /usr/lib/tdbc1.1.10 | "       \
+>     -e "s | $SRCDIR/paquetes/tdbc1.1.10/generic | /usr/include | "      \
+>     -e "s | $SRCDIR/paquetes/tdbc1.1.10/library | /usr/lib/tcl8.6 | " \
+>     -e "s | $SRCDIR/paquetes/tdbc1.1.10 | /usr/include | "               \
+>     -i paquetes/tdbc1.1.10/tdbcConfig.sh
+> 
+> sed -e "s | $SRCDIR/unix/paquetes/itcl4.3.2 | /usr/lib/itcl4.3.2 | "     \
+>     -e "s | $SRCDIR/paquetes/itcl4.3.2/generic | /usr/include | "       \
+>     -e "s | $SRCDIR/pkgs/itcl4.3.2 | /usr/include | "                    \
+>     -i pkgs/itcl4.3.2/itclConfig.sh
+> 
 > unset SRCDIR
-> +----------------------------------------------------------------------+
+> ```
 
 Las distintas instrucciones \"sed\" después del comando \"make\"
 eliminan las referencias al directorio de compilación de los archivos de
@@ -8645,57 +8657,55 @@ paquete compilado posteriormente utiliza Tcl.
 
 Para probar los resultados, ejecute:
 
-  -----------
-  make test
-  -----------
+> ```bash
+> make test
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Permite la escritura en la biblioteca instalada para que los símbolos de
 depuración se puedan eliminar posteriormente:
 
-  --------------------------------------
-  chmod -v u+w /usr/lib/*libtcl8.6*.so
-  --------------------------------------
+> ```bash
+> chmod -v u+w /usr/lib/libtcl8.6.so
+> ```
 
 Instalar las cabeceras de Tcl. El siguiente paquete, Expect, las
 requiere.
 
-  --------------------------------
-  make install-private-*headers*
-  --------------------------------
+> ```bash
+> make install-private-headers
+> ```
 
 Ahora cree el enlace simbólico necesario:
 
-  -----------------------------------
-  ln -sfv tclsh8.6 /usr/*bin*/tclsh
-  -----------------------------------
+> ```bash
+> ln -sfv tclsh8.6 /usr/bin/tclsh
+> ```
 
 Renombrar una página de manual que entre en conflicto con una página de
 manual de Perl:
 
-  ------------------------------------------------
-  mv /usr/share/man/man3/{*Thread*,Tcl_Thread}.3
-  ------------------------------------------------
+> ```bash
+> mv /usr/share/man/man3/{Thread,Tcl_Thread}.3
+> ```
 
 Opcionalmente, instale la documentación con los siguientes comandos:
 
-> +--------------------------------------------------------+
-> ---
+> ```bash
 > cd ..
-> tar -xf ../tcl8.6.16-html.tar.gz \--strip-components=1
+> tar -xf ../tcl8.6.16-html.tar.gz --strip-components=1
 > mkdir -v -p /usr/share/doc/tcl-8.6.16
-> cp -v -r ./html/\* /usr/share/doc/tcl-8.6.16
-> +--------------------------------------------------------+
+> cp -v -r ./html/* /usr/share/doc/tcl-8.6.16
+> ```
 
 ### 8.16.2. Contenido de Tcl
 
-**Programas instalados:** tclsh (enlace a tclsh8.6) y tclsh8.6
-
+**Programas instalados**: tclsh (enlace a tclsh8.6) y tclsh8.6
 **Bibliotecas instaladas**: libtcl8.6.so y libtclstub8.6.a
 
 ### Descripciones breves
@@ -8708,6 +8718,10 @@ Opcionalmente, instale la documentación con los siguientes comandos:
 
 *libtclstub8.6.a* La biblioteca de stubs de Tcl
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.17. Expect-5.45.4
 
 El paquete Expect contiene herramientas para automatizar, mediante
@@ -8717,18 +8731,18 @@ mismas aplicaciones, así como para facilitar todo tipo de tareas que
 resultan extremadamente difíciles con cualquier otro sistema. El
 framework DejaGnu está escrito en Expect.
 
-**Tiempo de compilación aproximado**: 0.2 SBU
-
-**Espacio en disco requerido**: 3.9 MB
+|Tiempo de compilación aproximado:|0.2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|3.9 MB|
 
 ### 8.17.1. Instalación de Expect
 
 Expect necesita PTY para funcionar. Verifique que los PTY funcionen
 correctamente dentro del entorno chroot realizando una prueba sencilla:
 
-  -------------------------------------------------------------------
-  python3 -c \'from pty import spawn; spawn(\[\"echo\", \"ok\"\])\'
-  -------------------------------------------------------------------
+> ```bash
+> python3 -c 'from pty import spawn; spawn(["echo", "ok"])'
+> ```
 
 Este comando debería tener un resultado correcto. Si, por el contrario,
 el resultado incluye *OSError: out of pty devices*, el entorno no está
@@ -8745,21 +8759,20 @@ propio Expect) fallarán gravemente y podrían producirse otras fallas
 menores. Ahora, realice algunos cambios para permitir el paquete con
 gcc-14.1 o posterior:
 
-  ----------------------------------------------
-  patch -Np1 -i ../expect-5.45.4-gcc14-1.patch
-  ----------------------------------------------
+> ```bash
+> patch -Np1 -i ../expect-5.45.4-gcc14-1.patch
+> ```
 
 Preparar Expect para la compilación:
 
-> +---------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--with-tcl=/usr/*lib* \\
-> \--enable-shared \\
-> \--disable-rpath \\
-> \--mandir=/usr/share/man \\
-> \--with-tclinclude=/usr/include
-> +---------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr           \
+>             --with-tcl=/usr/lib   \
+>             --enable-shared         \
+>             --disable-rpath         \
+>             --mandir=/usr/share/man \
+>             --with-tclinclude=/usr/include
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -8775,37 +8788,38 @@ internas de Tcl.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  -----------
-  make test
-  -----------
+> ```bash
+> make test
+> ```
 
 Instalar el paquete:
 
-> +----------------------------------------------------+
-> ---
+> ```bash
 > make install
-> ln -svf expect5.45.4/*libexpect5.45.4*.so /usr/lib
-> +----------------------------------------------------+
+> ln -svf expect5.45.4/libexpect5.45.4.so /usr/lib
+> ```
 
 ### 8.17.2. Contenido de Expect
 
 **Programa instalado**: expect
-
 **Biblioteca instalada**: libexpect5.45.4.so
 
 ### Descripciones breves
 
-**expect **Se comunica con otros programas interactivos mediante un
-script
+**expect** Se comunica con otros programas interactivos mediante un script
 
 *libexpect-5.45.4.so* Contiene funciones que permiten usar Expect como
 extensión de Tcl o directamente desde C o C++ (sin Tcl)
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.18. DejaGNU-1.6.3
 
@@ -8813,44 +8827,41 @@ El paquete DejaGnu contiene un marco de trabajo para ejecutar conjuntos
 de pruebas en herramientas GNU. Está escrito en expect, que a su vez
 utiliza Tcl (lenguaje de comandos de herramientas).
 
-**Tiempo de compilación aproximado**: menos de 0,1 SBU
-
-**Espacio en disco requerido**: 6,9 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|6,9 MB|
 
 ### 8.18.1. Instalación de DejaGNU
 
 El desarrollador original recomienda compilar DejaGNU en un directorio
 de compilación dedicado:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
 Preparar DejaGNU para la compilación:
 
-> +----------------------------------------------------------------------+
-> ---
-> ../configure \--prefix=/usr
-> makeinfo \--html \--no-split -o doc/dejagnu.html ../doc/dejagnu.texi
+> ```bash
+> ../configure --prefix=/usr
+> makeinfo --html --no-split -o doc/dejagnu.html ../doc/dejagnu.texi
 > makeinfo --plaintext -o doc/dejagnu.txt ../doc/dejagnu.texi
-> +----------------------------------------------------------------------+
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-> +----------------------------------------------------------------------+
-> ---
+> ```bash
 > make install
 > install -v -dm755 /usr/share/doc/dejagnu-1.6.3
 > install -v -m644 doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-1.6.3
-> +----------------------------------------------------------------------+
+> ```
 
 ### 8.18.2. Contenido de DejaGNU
 
@@ -8863,6 +8874,10 @@ Instalar el paquete:
 **runtest** Un script contenedor que localiza el intérprete de comandos
 de espera adecuado y luego ejecuta DejaGNU
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.19. Pkgconf-2.3.0
 
 El paquete pkgconf es el sucesor de pkg-config y contiene una
@@ -8870,49 +8885,44 @@ herramienta para pasar la ruta de inclusión y/o las rutas de biblioteca
 a las herramientas de compilación durante las fases de configuración y
 creación de la instalación de paquetes.
 
-**Tiempo de compilación aproximado**: menos de 0,1 SBU
-
-**Espacio en disco requerido**: 4,7 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|4,7 MB|
 
 ### 8.19.1. Instalación de Pkgconf
 
 Preparar Pkgconf para la compilación:
 
-> +----------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--*disable*-static \\
-> \--docdir=/usr/share/doc/pkgconf-2.3.0
-> +----------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --docdir=/usr/share/doc/pkgconf-2.3.0
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 Para mantener la compatibilidad con el Pkg-config original, cree dos
 enlaces simbólicos:
 
-> +---------------------------------------------------+
-> ---
-> ln -sv pkgconf /usr/bin/pkg-config
+> ```bash
+> ln -sv pkgconf   /usr/bin/pkg-config
 > ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1
-> +---------------------------------------------------+
+> ```
 
 ### 8.19.2. Contenido de Pkgconf
 
-**Programas instalados ** pkgconf, pkg-config (enlace a pkgconf) y
-bomtool
-
+**Programas instalados**: pkgconf, pkg-config (enlace a pkgconf) y bomtool
 **Biblioteca instalada**: libpkgconf.so
-
 **Directorio de instalación**: /usr/share/doc/pkgconf-2.3.0
 
 ### Descripciones breves
@@ -8927,41 +8937,43 @@ archivos .pc de pkg-config.
 permite que otras herramientas, como IDE y compiladores, utilicen sus
 frameworks.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.20. Binutils-2.44
 
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-**Tiempo de compilación aproximado: **1.6 SBU
-
-**Espacio en disco necesario**: 819 MB
+|Tiempo de compilación aproximado:|1.6 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|819 MB|
 
 ### 8.20.1. Instalación de Binutils
 
 La documentación de Binutils recomienda compilar Binutils en un
 directorio de compilación dedicado:
 
-> +----------------+
-> ---
+> ```bash
 > mkdir -v build
 > cd build
-> +----------------+
+> ```
 
 Preparar Binutils para la compilación:
 
-> +-----------------------------------------------+
-> ---
-> ../configure \--prefix=/usr \\
-> \--sysconfdir=/etc \\
-> \--enable-ld=default \\
-> \--enable-plugins \\
-> \--enable-shared \\
-> \--disable-werror \\
-> \--enable-64-bit-bfd \\
-> \--enable-new-dtags \\
-> \--with-system-zlib \\
-> \--enable-default-hash-style=gnu
-> +-----------------------------------------------+
+> ```bash
+> ../configure --prefix=/usr       \
+>              --sysconfdir=/etc   \
+>              --enable-ld=default \
+>              --enable-plugins    \
+>              --enable-shared     \
+>              --disable-werror    \
+>              --enable-64-bit-bfd \
+>              --enable-new-dtags  \
+>              --with-system-zlib  \
+>              --enable-default-hash-style=gnu
+> ```
 
 Significado de los nuevos parámetros de configuración:
 
@@ -8981,9 +8993,9 @@ incluida.
 
 Compilar el paquete:
 
-  -------------------
-  make tooldir=/usr
-  -------------------
+> ```bash
+> make tooldir=/usr
+> ```
 
 Significado del parámetro make:
 
@@ -8999,48 +9011,43 @@ usara para realizar compilación cruzada (por ejemplo, compilar un
 paquete en una máquina Intel que genera código ejecutable en máquinas
 PowerPC).
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+
+> 📌 **Importante**
 > El conjunto de pruebas para Binutils de esta sección se considera
 > crítico. No lo omita bajo ninguna circunstancia.
-> +----------------------------------------------------------------------+
 
 Pruebe los resultados:
 
-  ---------------
-  make -k check
-  ---------------
+> ```bash
+> make -k check
+> ```
 
 Para obtener una lista de las pruebas fallidas, ejecute:
 
-  --------------------------------------------
-  grep \'\^FAIL:\' \$(find -name \'\*.log\')
-  --------------------------------------------
+> ```bash
+> grep '^FAIL:' $(find -name '*.log')
+> ```
 
 Instale el paquete:
 
-  ---------------------------
-  make tooldir=/usr install
-  ---------------------------
+> ```bash
+> make tooldir=/usr install
+> ```
 
 Elimine las bibliotecas estáticas innecesarias y otros archivos:
 
-> +---------------------------------------------------------------------+
-> ---
-> rm -rfv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a \\
-> /usr/share/doc/gprofng/
-> +---------------------------------------------------------------------+
+> ```bash
+> rm -rfv /usr/lib/lib{bfd,ctf,ctf-nobfd,gprofng,opcodes,sframe}.a \
+>         /usr/share/doc/gprofng/
+> ```
 
 ### 8.20.2. Contenido de Binutils
 
 **Programas instalados**: addr2line, ar, as, c++filt, dwp, elfedit,
 gprof, gprofng, ld, ld.bfd, nm, objcopy, objdump, ranlib, readelf, size,
 strings y strip
-
 **Bibliotecas instaladas**: libbfd.so, libctf.so, libctf-nobfd.so,
 libgprofng.so, libopcodes.so y libsframe.so
-
 **Directorio de instalación**: /usr/lib/ldscripts
 
 ### Descripciones breves
@@ -9116,48 +9123,47 @@ Se utiliza para crear utilidades como **objdump**.
 *libsframe* Una biblioteca para soportar el rastreo inverso en línea
 utilizando un desempaquetador (unwinder) simple..
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.21. GMP-6.3.0
 
 El paquete GMP contiene bibliotecas matemáticas. Estas ofrecen funciones
 útiles para cálculos aritméticos de precisión arbitraria.
 
-**Tiempo de compilación aproximado**: 0.3 SBU
-
-**Espacio en disco necesario**: 54 MB
-
+|Tiempo de compilación aproximado:|0.3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|54 MB|
 ### 8.21.1. Instalación de GMP
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> ℹ️ **Nota**
+> 
 > Si está compilando para x86 de 32 bits, pero tiene una CPU capaz de
 > ejecutar código de 64 bits y ha especificado *CFLAGS* en el entorno,
 > el script de configuración intentará configurarlo para 64 bits y
 > fallará. Evite esto invocando el comando de configuración a
 > continuación con
-> +----------------------------------------------------------------------+
-> *ABI*=32 ./configure ...
-> +----------------------------------------------------------------------+
+> ```bash
+> ABI=32 ./configure ...
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> ℹ️ **Nota**
+> 
 > La configuración predeterminada de GMP genera bibliotecas
 > optimizadas para el procesador host. Si se desean bibliotecas
 > adecuadas para procesadores con menor capacidad que la CPU del host,
 > se pueden crear bibliotecas genéricas añadiendo la opción
 > *\--host=none-linux-gnu* al comando de **configuración**.
-> +----------------------------------------------------------------------+
 
 Preparar GMP para la compilación:
 
-> +------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--enable-cxx \\
-> \--disable-static \\
-> \--docdir=/usr/share/doc/gmp-6.3.0
-> +------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --enable-cxx     \
+>             --disable-static \
+>             --docdir=/usr/share/doc/gmp-6.3.0
+> ```
 
 Significado de las nuevas opciones de configuración:
 
@@ -9171,28 +9177,25 @@ Esta variable especifica la ubicación correcta de la documentación.
 
 Compilar el paquete y generar la documentación HTML:
 
-> +-----------+
-> ---
+> ```bash
 > make
 > make html
-> +-----------+
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+
+> 📌 **Importante**
+> 
 > El conjunto de pruebas para GMP de esta sección se considera
 > crítico. No lo omita bajo ninguna circunstancia.
-> +----------------------------------------------------------------------+
 
 Pruebe los resultados:
 
-  ---------------------------------------
-  make check 2\>&1 \| tee gmp-check-log
-  ---------------------------------------
+> ```bash
+> make check 2>&1 | tee gmp-check-log
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Precaución
+> ⚠️ **Precaución**
+> 
 > El código de gmp está altamente optimizado para el procesador donde
 > se compila. Ocasionalmente, el código que detecta el procesador
 > identifica erróneamente las capacidades del sistema, lo que genera
@@ -9200,27 +9203,24 @@ Pruebe los resultados:
 > bibliotecas gmp con el mensaje \"*Illegal instruction*\". En este
 > caso, se debe reconfigurar gmp con la opción
 > *\--host=none-linux-gnu* y reconstruir.
-> +----------------------------------------------------------------------+
 
 Asegúrese de que al menos 199 pruebas del conjunto de pruebas hayan
 pasado. Compruebe los resultados con el siguiente comando:
 
-  ----------------------------------------------------------------
-  awk \'/# PASS:/{total+=\$3} ; END{print total}\' gmp-check-log
-  ----------------------------------------------------------------
+> ```bash
+> awk '/# PASS:/{total+=$3} ; END{print total}' gmp-check-log
+> ```
 
 Instale el paquete y su documentación:
 
-> +-------------------+
-> ---
+> ```bash
 > make install
 > make install-html
-> +-------------------+
+> ```
 
 ### 8.21.2. Contenido de GMP
 
 **Bibliotecas instaladas**: libgmp.so y libgmpxx.so
-
 **Directorio de instalación**: /usr/share/doc/gmp-6.3.0
 
 ### Descripciones breves
@@ -9229,66 +9229,68 @@ Instale el paquete y su documentación:
 
 *libgmpxx* Contiene funciones matemáticas de precisión de C++
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.22. MPFR-4.2.1
 
 El paquete MPFR contiene funciones para cálculos matemáticos de
 precisión múltiple.
 
-**Tiempo de compilación aproximado**: 0.2 SBU
-
-**Espacio en disco requerido**: 43 MB
+|Tiempo de compilación aproximado:|0,2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|43 MB|
 
 ### 8.22.1. Instalación de MPFR
 
 Preparar MPFR para la compilación:
 
-> +-------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--*disable*-static \\
-> \--enable-thread-safe \\
-> \--docdir=/usr/share/doc/mpfr-4.2.1
-> +-------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr \
+>             --disable-static \
+>             --enable-thread-safe \
+>             --docdir=/usr/share/doc/mpfr-4.2.1
+> ```
 
 Compilar el paquete y generar la documentación HTML:
 
-> +-----------+
-> ---
+> ```bash
 > make
 > make html
-> +-----------+
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> 📌 **Importante**
+> 
 > El conjunto de pruebas para MPFR de esta sección se considera
 > crítico. No lo omita bajo ninguna circunstancia.
-> +----------------------------------------------------------------------+
 
 Pruebe los resultados y asegúrese de que las 198 pruebas hayan sido
 aprobadas:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete y su documentación:
 
-> +-------------------+
-> ---
+> ```bash
 > make install
 > make install-html
-> +-------------------+
+> ```
 
 ### 8.22.2. Contenido de MPFR
 
 **Bibliotecas instaladas**: libmpfr.so
-
 **Directorio de instalación**: /usr/share/doc/mpfr-4.2.1
 
 ### Descripciones breves
 
 *libmpfr* Contiene funciones matemáticas de precisión múltiple
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.23. MPC-1.3.1
 
@@ -9296,61 +9298,61 @@ El paquete MPC contiene una biblioteca para la aritmética de números
 complejos con precisión arbitrariamente alta y redondeo correcto del
 resultado.
 
-**Tiempo de compilación aproximado**: 0.1 SBU
-
-**Espacio en disco requerido**: 22 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|22 MB|
 
 ### 8.23.1. Instalación de MPC
 
 Preparar MPC para la compilación:
 
-> +------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--*disable*-static \\
-> \--docdir=/usr/share/doc/mpc-1.3.1
-> +------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --docdir=/usr/share/doc/mpc-1.3.1
+> ```
 
 Compilar el paquete y generar la documentación HTML:
 
-> +-----------+
-> ---
+> ```bash
 > make
 > make html
-> +-----------+
+> ```
 
 Para probar los resultados, ejecute:
 
-  --------------
-  make *check*
-  --------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete y su documentación:
 
-> +-------------------+
-> ---
+> ```bash
 > make install
 > make install-html
-> +-------------------+
+> ```
 
 ### 8.23.2. Contenido de MPC
 
 **Bibliotecas instaladas**: libmpc.so
-
 **Directorio de instalación**: /usr/share/doc/mpc-1.3.1
 
 ### Descripciones breves
 
 *libmpc* Contiene funciones matemáticas complejas
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.24. Attr-2.5.2
 
 El paquete Attr contiene utilidades para administrar los atributos
 extendidos de los objetos del sistema de archivos.
 
-**Tiempo de compilación aproximado**: menos de 0,1 SBU
-
-**Espacio en disco requerido**: 4,1 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|4,1 MB|
 
 ### 8.24.1. Instalación de Attr
 
@@ -9366,45 +9368,47 @@ Preparar Attr para la compilación:
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Las pruebas deben ejecutarse en un sistema de archivos compatible con
 atributos extendidos, como ext2, ext3 o ext4. Para comprobar los
 resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.24.2. Contenido de Attr
 
 **Programas instalados**: attr, getfattr y setfattr
-
 **Biblioteca instalada**: libattr.so
 
-**Directorios instalados**: /usr/include/attr y
-/usr/share/doc/attr-2.5.2
+**Directorios instalados**: /usr/include/attr y /usr/share/doc/attr-2.5.2
 
 ### Descripciones breves
 
-**attr **Extiende los atributos de los objetos del sistema de archivos.
+**attr** Extiende los atributos de los objetos del sistema de archivos.
 
-**getfattr **Obtiene los atributos extendidos de los objetos del sistema
+**getfattr** Obtiene los atributos extendidos de los objetos del sistema
 de archivos.
 
-**setfattr **Establece los atributos extendidos de los objetos del
+**setfattr** Establece los atributos extendidos de los objetos del
 sistema de archivos.
 
 *libattr* Contiene las funciones de la biblioteca para manipular
 atributos extendidos.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.25. Acl-2.3.2
 
@@ -9412,62 +9416,63 @@ El paquete Acl contiene utilidades para administrar las Listas de
 Control de Acceso (ACL), que se usan para definir permisos
 discrecionales detallados de acceso a archivos y directorios.
 
-**Tiempo de compilación aproximado**: menos de 0,1 SBU
-
-**Espacio en disco necesario**: 6,5 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|6,5 MB|
 
 ### 8.25.1. Instalación de Acl
 
 Preparar Acl para la compilación:
 
-> +------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--disable-*static* \\
-> \--docdir=/usr/share/doc/acl-2.3.2
-> +------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr    \
+>             --disable-static \
+>             --docdir=/usr/share/doc/acl-2.3.2
+> ```
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Las pruebas de Acl deben ejecutarse en un sistema de archivos compatible
 con controles de acceso. Para comprobar los resultados, ejecute:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Se sabe que una prueba llamada *test/cp.test* falla porque Coreutils aún
 no está compilado con la compatibilidad de Acl.
 
 Instalar el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
 ### 8.25.2. Contenido de Acl
 
 **Programas instalados**: chacl, getfacl y setfacl
-
 **Biblioteca instalada**: libacl.so
-
 **Directorios instalados**: /usr/include/acl y /usr/share/doc/acl-2.3.2
 
 ### Descripciones breves
 
-**chacl **Cambia la lista de control de acceso de un archivo o
+**chacl** Cambia la lista de control de acceso de un archivo o
 directorio
 
-**getfacl **Obtiene listas de control de acceso a archivos
+**getfacl** Obtiene listas de control de acceso a archivos
 
-**setfacl **Establece listas de control de acceso a archivos
+**setfacl** Establece listas de control de acceso a archivos
 
 *libacl* Contiene las funciones de la biblioteca para manipular las
 listas de control de acceso
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.26. Libcap-2.73
 
@@ -9477,25 +9482,25 @@ capacidades POSIX 1003.1e disponibles en los kernels de Linux.
 Estas capacidades dividen el privilegio root en un conjunto de
 privilegios distintos.
 
-**Tiempo de compilación aproximado**: menos de 0,1 SBU
-
-**Espacio en disco requerido**: 3,0 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|3,0 MB|
 
 ### 8.26.1. Instalación de Libcap
 
 Evitar la instalación de bibliotecas estáticas:
 
-  --------------------------------------------------
-  sed -i \'/*install* -m.\*STA/d\' libcap/Makefile
-  --------------------------------------------------
+> ```bash
+> sed -i '/install -m.*STA/d' libcap/Makefile
+> ```
 
 Compilar el paquete:
 
-  ----------------------------
-  make prefix=/usr *lib*=lib
-  ----------------------------
+> ```bash
+> make prefix=/usr lib=lib
+> ```
 
-Significado de la opción make:
+**Significado de la opción make**:
 
 *lib=lib*
 
@@ -9503,20 +9508,19 @@ Este parámetro establece el directorio de la biblioteca en /usr/lib en
 lugar de /usr/lib64 en x86_64. No tiene efecto en x86. Para probar los
 resultados, ejecute:
 
-  -----------
-  make test
-  -----------
+> ```bash
+> make test
+> ```
 
 Instale el paquete:
 
-  ------------------------------------
-  make prefix=/usr lib=lib *install*
-  ------------------------------------
+> ```bash
+> make prefix=/usr lib=lib install
+> ```
 
 ### 8.26.2. Contenido de Libcap
 
 **Programas instalados**: capsh, getcap, getpcaps y setcap
-
 **Biblioteca instalada**: libcap.so y libpsx.so
 
 ### Descripciones breves
@@ -9536,42 +9540,45 @@ capacidades de POSIX 1003.1e
 *libpsx* Contiene funciones para la compatibilidad con la semántica
 POSIX para las llamadas al sistema asociadas con la biblioteca pthread
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.27. Libxcrypt-4.4.38
 
 El paquete Libxcrypt contiene una biblioteca moderna para el hash
 unidireccional de contraseñas.
 
-**Tiempo aproximado de compilación**: 0.1 SBU
-
-**Espacio en disco requerido**: 12 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|12 MB|
 
 ### 8.27.1. Instalación de Libxcrypt
 
 Preparar Libxcrypt para la compilación:
 
-> +------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--enable-*hashes*=strong,glibc \\
-> \--enable-obsolete-api=no \\
-> \--disable-static \\
-> \--disable-failure-tokens
-> +------------------------------------------------+
+> ```bash
+> ./configure --prefix=/usr \
+>             --enable-hashes=strong,glibc \
+>             --enable-obsolete-api=no \
+>             --disable-static \
+>             --disable-failure-tokens
+> ```
 
-El significado de las nuevas opciones de configuración:
+**El significado de las nuevas opciones de configuración**:
 
- * \--enable-hashes=strong,glibc*
+ \--enable-hashes=strong,glibc
 
 Construir algoritmos hash robustos recomendados para casos de seguridad
 y los algoritmos hash proporcionados por libcrypt Glibc tradicional para
 compatibilidad.
 
-*\--enable-obsolete-api=no*
+\--enable-obsolete-api=no
 
 Desactivar funciones obsoletas de la API. No son necesarios para un
 sistema Linux moderno compilado desde el código fuente.
 
-*\--disable-failure-tokens*
+\--disable-failure-tokens
 
 Desactiva la función de token de error. Es necesaria para la
 compatibilidad con las bibliotecas hash tradicionales de algunas
@@ -9579,25 +9586,24 @@ plataformas, pero un sistema Linux basado en Glibc no la necesita.
 
 Compila el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecuta:
 
-  ------------
-  make check
-  ------------
+> ```bash
+> make check
+> ```
 
 Instala el paquete:
 
-  --------------
-  make install
-  --------------
+> ```bash
+> make install
+> ```
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> ℹ️ **Nota**
+> 
 > Las instrucciones anteriores deshabilitaron funciones obsoletas de
 > la API, ya que ningún paquete instalado mediante la compilación
 > desde el código fuente las enlazaría en tiempo de ejecución. Sin
@@ -9605,16 +9611,16 @@ Instala el paquete:
 > estas funciones requieren la versión 1 de ABI. Si necesita estas
 > funciones debido a alguna aplicación binaria o para cumplir con LSB,
 > vuelva a compilar el paquete con los siguientes comandos:
-> +----------------------------------------------------------------------+
+> ```bash
 > make distclean
-> ./configure \--prefix=/usr \\
-> \--enable-hashes=strong,glibc \\
-> \--enable-obsolete-api=glibc \\
-> \--disable-static \\
-> \--disable-failure-tokens
+> ./configure --prefix=/usr                \
+>             --enable-hashes=strong,glibc \
+>             --enable-obsolete-api=glibc  \
+>             --disable-static             \
+>             --disable-failure-tokens
 > make
-> cp -av \--remove-destination .libs/libcrypt.so.1\* /usr/lib
-> +----------------------------------------------------------------------+
+> cp -av --remove-destination .libs/libcrypt.so.1* /usr/lib
+> ```
 
 ### 8.27.2. Contenido de Libxcrypt
 
@@ -9624,46 +9630,45 @@ Instala el paquete:
 
 *libcrypt* Contiene funciones para generar hashes de contraseñas
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.28. Shadow-4.17.3
 
 El paquete Shadow contiene programas para gestionar contraseñas de forma
 segura.
 
-**Tiempo de compilación aproximado**:0.1 SBU
-
-**Espacio en disco necesario**:114 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|114 MB|
 
 ### 8.28.1. Instalación de Shadow
 
-> +----------------------------------------------------------------------+
-> ---
-> Importante
+> 📌 **Importante**
+> 
 > Si ha instalado Linux-PAM, debe seguir las instrucciones de BLFS en
 > lugar de esta página para compilar (o reconstruir o actualizar)
 > Shadow.
-> +----------------------------------------------------------------------+
 
-> +----------------------------------------------------------------------+
-> ---
-> Nota
+> ℹ️ **Nota**
+> 
 > Si desea forzar el uso de contraseñas seguras, primero instale y
 > configure Linux-PAM. A continuación, instale y configure Shadow con
 > compatibilidad con PAM. Por último, instale libpwquality y configure
 > PAM para usarlo.
-> +----------------------------------------------------------------------+
 
 Desactive la instalación del programa \"groups\" y sus páginas de
 manual, ya que Coreutils ofrece una versión mejorada. Además, evite la
 instalación de páginas de manual que ya estaban instaladas en la Sección
 8.3, "Man-pages-6.12":
 
-> +-----------------------------------------------------------------------+
-> ---
-> sed -i \'s/groups\$(EXEEXT) //\' src/Makefile.in
-> find man -name Makefile.in -exec sed -i \'s/groups\\.1 / /\' {} \\;
-> find man -name Makefile.in -exec sed -i \'s/getspnam\\.3 / /\' {} \\;
-> find man -name Makefile.in -exec sed -i \'s/passwd\\.5 / /\' {} \\;
-> +-----------------------------------------------------------------------+
+> ```bash
+> sed -i 'sgroups$(EXEEXT) //' src/Makefile.in
+> find man -name Makefile.in -exec sed -i 's/groups\.1 / /'   {} \;
+> find man -name Makefile.in -exec sed -i 's/getspnam\.3 / /' {} \;
+> find man -name Makefile.in -exec sed -i 's/passwd\.5 / /'   {} \;
+> ```
 
 En lugar de usar el método de cifrado predeterminado, utiliza el método
 de cifrado de contraseñas *YESCRYPT*, mucho más seguro, que además
@@ -9674,46 +9679,37 @@ la utilizada actualmente. Por último, elimina */bin* y */sbin* del
 *PATH*, ya que son simplemente enlaces simbólicos a sus respectivos
 equivalentes en */usr*.
 
-> +----------------------------------------------------------------------+
-> ---
-> Advertencia
+> 🛑 **Advertencia**
 > Incluir */bin* y/o */sbin* en la variable de entorno *PATH* puede
 > provocar que algunos paquetes de BLFS fallen al compilar, así que no
 > lo hagas ni en el archivo *.bashrc* ni en ningún otro lugar.
-> +----------------------------------------------------------------------+
-
-> +----------------------------------------------------------------------+
-> ---
-> sed -e \'s:#ENCRYPT_METHOD DES:ENCRYPT_METHOD YESCRYPT:\' \\
-> ** -e
-> \'**[**s:/var/spool/m
-> ail:/var/mail**](../../../../../../s:/var/spool/mail:/var/mail)**:\'
-> \\**
-> -e \'/PATH=/{s@/sbin:@@;s@/bin:@@}\' \\
-> -i etc/login.defs
-> +----------------------------------------------------------------------+
+> ```bash
+> sed -e 's:#ENCRYPT_METHOD DES:ENCRYPT_METHOD YESCRYPT:' \
+>     -e 's:/var/spool/mail:/var/mail:'                   \
+>     -e '/PATH=/{s@/sbin:@@;s@/bin:@@}'                  \
+>     -i etc/login.defs
+> ```
 
 Preparar Shadow para la compilación:
 
-> +----------------------------------------------+
-> ---
+> ```bash
 > touch /usr/bin/passwd
-> ./configure \--sysconfdir=/etc\\
-> \--disable-static\\
-> \--with-{b,yes}crypt \\
-> \--without-libbsd\\
-> \--with-group-name-max-length=32
-> +----------------------------------------------+
+> ./configure --sysconfdir=/etc   \
+>             --disable-static    \
+>             --with-{b,yes}crypt \
+>             --without-libbsd    \
+>             --with-group-name-max-length=32
+> ```
 
-Significado de las nuevas opciones de configuración:
+**Significado de las nuevas opciones de configuración**:
 
-touch /usr/bin/passwd
+**touch /usr/bin/passwd**
 
 El archivo */usr/bin/passwd* debe existir porque su ubicación está
 codificada en algunos programas; si no existe, el script de instalación
 lo creará en el lugar incorrecto.
 
-*\--with-{b,yes}crypt*
+\--with-{b,yes}crypt
 
 El shell amplía esto a dos opciones: *\--with-bcrypt* y
 *\--with-yescrypt*. Estas permiten que shadow utilice los algoritmos
@@ -9722,31 +9718,30 @@ contraseñas. Estos algoritmos son más seguros (en particular, mucho más
 resistentes a ataques basados en GPU) que los algoritmos SHA
 tradicionales.
 
-*\--with-group-name-max-length=32*
+\--with-group-name-max-length=32
 
 El nombre de usuario máximo permitido es de 32 caracteres. Mantenga la
 longitud máxima del nombre de grupo igual.
 
-*\--without-libbsd*
+\--without-libbsd
 
 No utilice la función readpassphrase de libbsd, que no está en LFS.
 Utilice la copia interna en su lugar.
 
 Compilar el paquete:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Este paquete no incluye un conjunto de pruebas.
 
 Instalar el paquete:
 
-> +---------------------------------+
-> ---
-> make exec_prefix=/usr *install*
+> ```bash
+> make exec_prefix=/usr install
 > make -C man install-man
-> +---------------------------------+
+> ```
 
 ### 8.28.2. Configuración de Shadow
 
@@ -9762,15 +9757,15 @@ deben poder trabajar con contraseñas shadowed.
 
 Para habilitar las contraseñas shadowed, ejecute el siguiente comando:
 
-  --------
-  pwconv
-  --------
+> ```bash
+> pwconv
+ > ```
 
 Para habilitar las contraseñas de grupo shadowed, ejecute:
 
-  ---------
-  grpconv
-  ---------
+> ```bash
+> grpconv
+> ```
 
 La configuración predeterminada de Shadow para la utilidad **useradd**
 requiere una explicación. Primero, la acción predeterminada de la
@@ -9787,13 +9782,12 @@ En segundo lugar, para cambiar los parámetros predeterminados, debe
 crear el archivo */etc/default/useradd* y adaptarlo a sus necesidades
 específicas. Créelo con:
 
-> +-----------------------+
-> ---
+> ```bash
 > mkdir -p /etc/default
-> useradd -D \--gid 999
-> +-----------------------+
+> useradd -D --gid 999
+> ```
 
-Explicación de los parámetros de /etc/default/useradd
+**Explicación de los parámetros de /etc/default/useradd**
 
 GROUP=999
 
@@ -9816,17 +9810,17 @@ usuario. useradd asignará la propiedad de este archivo al grupo de
 *correo* con permisos 0660. Si prefiere no crear estos archivos, ejecute
 el siguiente comando:
 
-  -------------------------------------------------
-  sed -i \'/MAIL/s/yes/no/\' /etc/default/useradd
-  -------------------------------------------------
+> ```bash
+> sed -i '/MAIL/s/yes/no/' /etc/default/useradd
+> ```
 
 ### 8.28.3. Configuración de la contraseña de root
 
 Elija una contraseña para el usuario root y configúrela ejecutando:
 
-  -------------
-  passwd root
-  -------------
+> ```bash
+> passwd root
+> ```
 
 ### 8.28.4. Contenido de Shadow
 
@@ -9837,7 +9831,6 @@ newuidmap, newusers, nologin, passwd, pwck, pwconv, pwunconv, sg (link
 to newgrp), su, useradd, userdel, usermod, vigr (link to vipw), and vipw
 
 **Directorios instalados**: /etc/default and /usr/include/shadow
-
 **Bibliotecas instaladas**: libsubid.so
 
 ### Descripciones breves
@@ -9845,14 +9838,11 @@ to newgrp), su, useradd, userdel, usermod, vigr (link to vipw), and vipw
 **chage** Se utiliza para cambiar el número máximo de días entre cambios
 obligatorios de contraseña.
 
-**chfn** Se utiliza para cambiar la contraseña completa de un usuario.
-Nombre y otra información
+**chfn** Se utiliza para cambiar la contraseña completa de un usuario nombre y otra información
 
-**chgpasswd** Se utiliza para actualizar las contraseñas de grupo por
-lotes.
+**chgpasswd** Se utiliza para actualizar las contraseñas de grupo por lotes.
 
-**chpasswd** Se utiliza para actualizar las contraseñas de usuario por
-lotes.
+**chpasswd** Se utiliza para actualizar las contraseñas de usuario por lotes.
 
 **chsh** Se utiliza para cambiar el shell de inicio de sesión
 predeterminado de un usuario.
@@ -9891,65 +9881,69 @@ elimina este último.
 **login** El sistema lo utiliza para permitir que los usuarios inicien
 sesión.
 
-logoutd Es un demonio que se utiliza para imponer restricciones en el
+**logoutd** Es un demonio que se utiliza para imponer restricciones en el
 tiempo y los puertos de inicio de sesión.
 
-newgidmap Se usa para establecer el mapeo de GID de un espacio de
+**newgidmap** Se usa para establecer el mapeo de GID de un espacio de
 nombres de usuario
 
-newgrp Se usa para cambiar el GID actual durante una sesión de
+**newgrp** Se usa para cambiar el GID actual durante una sesión de
 inicio de sesión
 
-newuidmap Se usa para establecer el mapeo de UID de un espacio de
+**newuidmap** Se usa para establecer el mapeo de UID de un espacio de
 nombres de usuario
 
-newusers Se usa para crear o actualizar toda una serie de cuentas de
+**newusers** Se usa para crear o actualizar toda una serie de cuentas de
 usuario
 
-nologin Muestra un mensaje diciendo que una cuenta no está
+**nologin** Muestra un mensaje diciendo que una cuenta no está
 disponible; está diseñado para usarse como shell por defecto para
 cuentas deshabilitadas
 
-passwd Se usa para cambiar la contraseña de una cuenta de usuario o
+**passwd** Se usa para cambiar la contraseña de una cuenta de usuario o
 grupo
 
-pwck Verifica la integridad de los archivos de contraseñas
+**pwck** Verifica la integridad de los archivos de contraseñas
 /etc/passwd y /etc/shadow
 
-pwconv Crea o actualiza el archivo de contraseñas shadow a partir
+**pwconv** Crea o actualiza el archivo de contraseñas shadow a partir
 del archivo de contraseñas normal
 
-pwunconv Actualiza /etc/passwd desde /etc/shadow y luego elimina
+**pwunconv** Actualiza /etc/passwd desde /etc/shadow y luego elimina
 este último
 
-sg Ejecuta un comando dado mientras el GID del usuario está
+**sg** Ejecuta un comando dado mientras el GID del usuario está
 establecido al del grupo dado
 
 **su** Ejecuta un shell con IDs de usuario y grupo sustitutos
 
-useradd Crea un nuevo usuario con el nombre dado, o actualiza la
+**useradd** Crea un nuevo usuario con el nombre dado, o actualiza la
 información predeterminada de nuevos usuarios
 
-userdel Elimina la cuenta de usuario especificada
+**userdel** Elimina la cuenta de usuario especificada
 
-usermod Se usa para modificar el nombre de inicio de sesión, UID,
+**usermod** Se usa para modificar el nombre de inicio de sesión, UID,
 shell, grupo inicial, directorio personal, etc. del usuario dado
 
-vigr Edita los archivos /etc/group o /etc/gshadow
+**vigr** Edita los archivos /etc/group o /etc/gshadow
 
-vipw Edita los archivos /etc/passwd o /etc/shadow
+**vipw** Edita los archivos /etc/passwd o /etc/shadow
 
-libsubid Biblioteca para manejar rangos de ID subordinados para
+*libsubid* Biblioteca para manejar rangos de ID subordinados para
 usuarios y grupos
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.29. GCC-14.2.0
 
 El paquete GCC contiene la colección de compiladores GNU, que
 incluye los compiladores de C y C++.
 
-**Tiempo de compilación aproximado**: 46 SBU (con pruebas)
-
-**Espacio en disco necesario**: 6,3 GB
+|Tiempo de compilación aproximado:|46 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|6,3 GB|
 
 ### 8.29.1. Instalación de GCC
 
@@ -10840,7 +10834,7 @@ Instalar el paquete:
 
 **Directorio de instalación**: /usr/share/bison****
 
-### **Descripciones breves**
+### Descripciones breves
 
 **bison** Genera, a partir de una serie de reglas, un programa para
 analizar la estructura de archivos de texto. Bison es un reemplazo de
@@ -13247,7 +13241,7 @@ troff
 **Directorios instalados**: /usr/lib/groff y
 /usr/share/doc/groff-1.23.0, /usr/share/groff
 
-### **Descripciones breves**
+### Descripciones breves
 
 **addftinfo** Lee un archivo de fuente troff y añade información
 adicional sobre la métrica de la fuente, utilizada por el sistema
@@ -13840,7 +13834,7 @@ unicode_start y unicode_stop
 /usr/share/consoletrans, /usr/share/keymaps, /usr/share/doc/kbd-2.7.1 y
 /usr/share/unimaps
 
-### **Descripciones breves**
+### Descripciones breves
 
 **chvt** Cambia la terminal virtual en primer plano
 
@@ -14626,7 +14620,7 @@ udev-hwdb
 
 **Directorios instalados**: /etc/udev y /usr/lib/udev
 
-### **Descripciones breves**
+### Descripciones breves
 
 **udevadm** Herramienta genérica de administración de udev: controla el
 demonio udevd, proporciona información de la base de datos de Udev,
