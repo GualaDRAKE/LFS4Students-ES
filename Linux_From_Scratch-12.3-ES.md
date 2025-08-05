@@ -13902,35 +13902,35 @@ lnstat), ss y tc****
 - **ip mroute**            allows users to set, change, or delete the multicast routing  
 
 
-| Comando     | Descripción                                        |
-|-------------|----------------------------------------------------|
-| `bridge`    | Configures network bridges                         |
-| `ctstat`    | Connection status utility                          |
-| `genl`      | Generic netlink utility front end                  |
-| `ifstat`    | Shows interface statistics, by interface           |
-| `ip`        | The main executable. It has several functions:     |
-|             | `ip link <device>`    look at the state of devices|
-|             | `ip addr`             manage addresses             |
-|             | `ip neighbor`         manage neighbor bindings     |
-|             | `ip rule`             manage routing policies      |
-|             | `ip route`            manage routing table         |
-|             | `ip tunnel`           manage IP tunnels            |
-|             | `ip maddr`            manage multicast addresses   |
-|             | `ip mroute`           manage multicast routing     |
-
-
-
-|**bridge**    |Configura puentes de red                     |                       |
-|:-------------|:--------------------------------------------|:----------------------|
-|**ctstat**    |Utilidad de estado de conexión               |                       |
-|**genl**      |Interfaz genérica de la utilidad netlink     |                       |
-|**ifstat**    |Muestra estadísticas de interfaz, incluyendo<br>el número de paquetes transmitidos y recibidos,<br>por interfaz |                       |
-
-
-| Arquitectura | Tiempo de compilación | Tamaño de compilación |
-|--------------|-----------------------|-----------------------|
-| 32 bits      | 239,9 minutos         | 3,6 GB                |
-| 64 bits      | 233,2 minutos         | 4,4 GB                |
+| Comando       | Descripción                                        |
+|---------------|----------------------------------------------------|
+| **bridge**    | Configures network bridges                         |
+|**ctstat**     | Connection status utility                          |
+|**genl**       | Generic netlink utility front end                  |
+|**ifstat**     | Shows interface statistics, by interface           |
+|**ip**         | The main executable. It has several functions:     |
+|               | `ip link <device>`    look at the state of devices |
+|               | `ip addr`             manage addresses             |
+|               | `ip neighbor`         manage neighbor bindings     |
+|               | `ip rule`             manage routing policies      |
+|               | `ip route`            manage routing table         |
+|               | `ip tunnel`           manage IP tunnels            |
+|               | `ip maddr`            manage multicast addresses   |
+|               | `ip mroute`           manage multicast routing     |
+|               | `ip monitor`          permite a los usuarios supervisar continuamente el estado de dispositivos, direcciones y rutas|
+|**lnstat**     | Proporciona estadísticas de red de Linux; es un reemplazo generalizado y con más funciones del antiguo programa **rtstat**|
+|**nstat**      | Muestra estadísticas de red|
+|**routel**     | Un componente de **ip route** para listar las tablas de enrutamiento|
+|**rtacct**     | Muestra el contenido de **/proc/net/rt_acct**|
+|**rtmon**      | Utilidad de monitorización de rutas|
+|**rtpr**       | Convierte la salida de **ip -o** a un formato legible|
+|**rtstat**     | Utilidad de estado de ruta|
+|**ss**         | Similar al comando **netstat**; muestra las conexiones activas|
+|**tc**         | Control de tráfico para implementaciones de calidad de servicio (QoS) y clase de servicio (CoS)|
+|**tc qdisc**   | permite a los usuarios configurar la disciplina de colas|
+|**tc class**   | permite a los usuarios configurar clases según la programación de la disciplina de colas|
+|**tc filter**  | permite a los usuarios configurar el filtrado de paquetes QoS/CoS|
+|**tc monitor** | permite visualizar los cambios realizados en el control de tráfico del kernel|
 
 
 
