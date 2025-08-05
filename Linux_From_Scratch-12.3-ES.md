@@ -13887,13 +13887,27 @@ lnstat), ss y tc****
 
 ### Descripciones breves
 
-```text
+**bridge**   Configures network bridges  
+**ctstat**   Connection status utility  
+**genl**     Generic netlink utility front end  
+**ifstat**   Shows interface statistics, including the number of packets transmitted and received, by interface  
+**ip**       The main executable. It has several different functions, including these:  
+- **ip link _<device>_**   allows users to look at the state of devices and to make changes  
+- **ip addr**              allows users to look at addresses and their properties, add new addresses, and delete old ones  
+- **ip neighbor**          allows users to look at neighbor bindings and their properties, add new neighbor entries, and delete old ones  
+- **ip rule**              allows users to look at the routing policies and change them  
+- **ip route**             allows users to look at the routing table and change routing table rules  
+- **ip tunnel**            allows users to look at the IP tunnels and their properties, and change them  
+- **ip maddr**             allows users to look at the multicast addresses and their properties, and change them  
+- **ip mroute**            allows users to set, change, or delete the multicast routing  
+
+
 |**bridge**    |Configura puentes de red                     |                       |
 |:-------------|:--------------------------------------------|:----------------------|
 |**ctstat**    |Utilidad de estado de conexión               |                       |
 |**genl**      |Interfaz genérica de la utilidad netlink     |                       |
 |**ifstat**    |Muestra estadísticas de interfaz, incluyendo<br>el número de paquetes transmitidos y recibidos,<br>por interfaz |                       |
-```
+
 
 | Arquitectura | Tiempo de compilación | Tamaño de compilación |
 |--------------|-----------------------|-----------------------|
