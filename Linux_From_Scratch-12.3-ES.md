@@ -13888,7 +13888,7 @@ lnstat), ss y tc****
 ### Descripciones breves
 
 |**bridge**       | Configura puentes de red  ||
-|:----------------|:-------------------------||
+|:----------------|:--------------------------||
 |**ctstat**       | Utilidad de estado de conexión||
 |**genl**         | Interfaz genérica de la utilidad netlink||
 |**ifstat**       | Muestra estadísticas de interfaz, incluyendo el número de paquetes transmitidos y recibidos, por interfaz||
@@ -13903,18 +13903,18 @@ lnstat), ss y tc****
 ||**ip mroute**   | permite a los usuarios configurar, cambiar o eliminar el enrutamiento multicast|
 ||**ip monitor**  | permite a los usuarios supervisar continuamente el estado de dispositivos, direcciones y rutas|
 |**lnstat** |Proporciona estadísticas de red de Linux; es un reemplazo generalizado y con más funciones del antiguo programa **rtstat**||
-||**nstat** |Muestra estadísticas de red||
-||**routel** |Un componente de **ip route** para listar las tablas de enrutamiento||
-||**rtacct**| Muestra el contenido de **/proc/net/rt_acct**||
-||**rtmon** |Utilidad de monitorización de rutas||
-||**rtpr** |Convierte la salida de **ip -o** a un formato legible||
-||**rtstat** |Utilidad de estado de ruta||
-||**ss** |Similar al comando **netstat**; muestra las conexiones activas||
-||**tc** |Control de tráfico para implementaciones de calidad de servicio (QoS) y clase de servicio (CoS)|
-||**tc qdisc** |permite a los usuarios configurar la disciplina de colas|
-||**tc class** |permite a los usuarios configurar clases según la programación de la disciplina de colas|
-||**tc filter** |permite a los usuarios configurar el filtrado de paquetes QoS/CoS|
-||**tc monitor** |permite visualizar los cambios realizados en el control de tráfico del kernel|
+|**nstat** |Muestra estadísticas de red||
+|**routel** |Un componente de **ip route** para listar las tablas de enrutamiento||
+|**rtacct**| Muestra el contenido de **/proc/net/rt_acct**||
+|**rtmon** |Utilidad de monitorización de rutas||
+|**rtpr** |Convierte la salida de **ip -o** a un formato legible||
+|**rtstat** |Utilidad de estado de ruta||
+|**ss** |Similar al comando **netstat**; muestra las conexiones activas||
+|**tc** |Control de tráfico para implementaciones de calidad de servicio (QoS) y clase de servicio (CoS)||
+|**tc qdisc** |permite a los usuarios configurar la disciplina de colas||
+|**tc class** |permite a los usuarios configurar clases según la programación de la disciplina de colas||
+|**tc filter** |permite a los usuarios configurar el filtrado de paquetes QoS/CoS||
+|**tc monitor** |permite visualizar los cambios realizados en el control de tráfico del kernel||
 
 ---
 &nbsp;
