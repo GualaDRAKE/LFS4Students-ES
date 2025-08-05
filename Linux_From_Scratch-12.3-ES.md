@@ -6225,7 +6225,6 @@ este usuario aquí y eliminamos esta cuenta al final de ese capítulo.
 > echo "tester:x:101:101::/home/tester:/bin/bash" >> /etc/passwd
 > echo "tester:x:101:" >> /etc/group
 > install -o tester -d /home/tester
-> +--------------------------------------------------------------------+
 
 Para eliminar el mensaje \"¡No tengo nombre!\", inicie una nueva
 consola. Dado que los archivos /etc/passwd y /etc/group ya se han
@@ -6388,7 +6387,7 @@ Preparar Perl para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\-**des**
+\-des
 
 Esta es una combinación de tres opciones: -d usa valores predeterminados
 para todos los elementos; -e garantiza la finalización de todas las
@@ -6475,7 +6474,7 @@ Compilar el paquete:
 
 > ```bash
 > make
-> ```bash
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -6967,7 +6966,7 @@ El siguiente comando, ejecutado como root una vez completada la
 actualización, mostrará qué procesos utilizan las versiones anteriores
 de esas bibliotecas (reemplace libfoo con el nombre de la biblioteca):
 
-  > ```bash
+> ```bash
 >   grep -l 'libfoo.*deleted' /proc/*/maps | tr -cd 0-9\\n | xargs -r ps u
 > ```
 
@@ -7780,66 +7779,66 @@ actualmente ejecutada.
 
 **zic** Compilador de zona horaria.
 
-*ld-\*.so* Programa auxiliar para ejecutables de bibliotecas
+**ld-\*.so** Programa auxiliar para ejecutables de bibliotecas
 compartidas.
 
-*libBrokenLocale* Usado internamente por Glibc como un truco para
+**libBrokenLocale** Usado internamente por Glibc como un truco para
 obtener programas dañados (por ejemplo, algunos Motif). aplicaciones) en
 ejecución. Consulte los comentarios en
 *glibc-2.41/locale/broken_cur_max.c* para obtener más información.
 
-*libanl* Biblioteca ficticia sin funciones. Anteriormente era la
+**libanl** Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de búsqueda de nombres asíncrona, cuyas funciones ahora están
-en *libc*.
+en **libc**.
 
-*libc* Biblioteca principal de C.
+**libc** Biblioteca principal de C.
 
-*libc_malloc_debug* Activa la comprobación de asignación de memoria al
+**libc_malloc_debug** Activa la comprobación de asignación de memoria al
 precargarse.
 
-*libdl* Biblioteca ficticia sin funciones. Anteriormente era la
+**libdl** Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de interfaz de enlace dinámico, cuyas funciones ahora están
 en *libc*.
 
-*libg* Biblioteca ficticia sin funciones. Anteriormente era una
+**libg** Biblioteca ficticia sin funciones. Anteriormente era una
 biblioteca de tiempo de ejecución para g**++**.
 
-*libm* La biblioteca matemática.
+**libm** La biblioteca matemática.
 
-*Libmvec* La biblioteca matemática vectorial, enlazada según sea
+**Libmvec** La biblioteca matemática vectorial, enlazada según sea
 necesario cuando se usa *libm*.
 
-*libmcheck* Activa la comprobación de asignación de memoria cuando se
+**libmcheck** Activa la comprobación de asignación de memoria cuando se
 enlaza a.
 
-*libmemusage* Usada por **memusage** para ayudar a recopilar información
+**libmemusage** Usada por **memusage** para ayudar a recopilar información
 sobre el uso de memoria de un programa.
 
-*libnsl* La biblioteca de servicios de red, ahora obsoleta.
+**libnsl** La biblioteca de servicios de red, ahora obsoleta.
 
-*libnss\_\** Los módulos de conmutación de servicio de nombres, que
+**libnss\_\** Los módulos de conmutación de servicio de nombres, que
 contienen funciones para resolver nombres de host, nombres de usuario,
 nombres de grupo, alias, servicios, protocolos, etc. Cargados por *libc*
 según la configuración en */etc/nsswitch.conf*.
 
-*libpcprofile* Se puede precargar en el perfil de PC de un ejecutable.
+**libpcprofile** Se puede precargar en el perfil de PC de un ejecutable.
 
-*libpthread* Biblioteca ficticia que no contiene funciones.
+**libpthread** Biblioteca ficticia que no contiene funciones.
 Anteriormente contenía funciones que proporcionaban la mayoría de las
 interfaces especificadas por las extensiones de subprocesos POSIX.1c y
 las interfaces de semáforo especificadas por las extensiones de tiempo
 real POSIX.1b. Ahora, estas funciones se encuentran en *libc*.
 
-*libresolv* Contiene funciones para crear, enviar e interpretar paquetes
+**libresolv** Contiene funciones para crear, enviar e interpretar paquetes
 a los servidores de nombres de dominio de Internet.
 
-*librt* Contiene funciones que proporcionan la mayoría de las interfaces
+**librt** Contiene funciones que proporcionan la mayoría de las interfaces
 especificadas por las extensiones de tiempo real POSIX.1b.
 
-*libthread_db* Contiene funciones útiles para crear depuradores para
+**libthread_db** Contiene funciones útiles para crear depuradores para
 programas multiproceso.
 
-*libutil* Biblioteca ficticia sin funciones. Anteriormente, contenía
+**libutil** Biblioteca ficticia sin funciones. Anteriormente, contenía
 código para funciones estándar utilizadas en diversas utilidades de
 Unix. Estas funciones ahora se encuentran en *libc*.
 
