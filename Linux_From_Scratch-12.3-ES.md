@@ -291,6 +291,8 @@ adicionales que exceden el alcance del manual de LFS. Las instrucciones
 de instalación de algunos de estos paquetes adicionales se pueden
 encontrar en BLFS.
 
+&nbsp;
+
 ### Paquetes proporcionados por LFS necesarios para cumplir con los requisitos de LSB:
 
 |LSB Core:   |Bash, Bc, Binutils, Coreutils, Diffutils, File, Findutils, Gawk, GCC, Gettext,<br> Glibc, Grep, Gzip, M4, Man-DB, Procps, Psmisc, Sed,Shadow, SysVinit, Tar,<br> Util-linux, Zlib|
@@ -300,6 +302,8 @@ encontrar en BLFS.
 |LSB Imaging:|Ninguno|
 |LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|Ninguno|
 
+&nbsp;
+
 ### Paquetes proporcionados por BLFS necesarios para cumplir con los requisitos de LSB
 
 |LSB Core:|At, Batch (parte de At), archivos de inicio de BLFS Bash, Cpio, Ed, Fcrontab,<br> LSB-Tools, NSPR, NSS, Linux-PAM, Pax, Sendmail (o Postfix o Exim), Time|
@@ -308,6 +312,8 @@ encontrar en BLFS.
 |LSB Languages:|Libxml2, Libxslt|
 |LSB Imaging:|CUPS, Cups-filters, Ghostscript, SANE|
 |LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|GTK+3|
+
+&nbsp;
 
 ### Componentes no proporcionados o proporcionados opcionalmente por LFS o BLFS necesarios para cumplir con los requisitos Requisitos de LSB
 
@@ -1359,6 +1365,8 @@ alguna pregunta o cree que hay una errata en el libro, consulte la lista
 de preguntas frecuentes en
 [*https://www.linuxfromscratch.org/faq/*](https://www.linuxfromscratch.org/faq/)
 
+&nbsp;
+
 ### 1.4.2. Listas de correo
 
 El servidor linuxfromscratch.org alberga varias listas de correo
@@ -1372,6 +1380,8 @@ Para obtener información sobre las diferentes listas, cómo suscribirse,
 la ubicación de los archivos e información adicional, visite
 [*https://www.linuxfromscratch.org/mail.html*](https://www.linuxfromscratch.org/mail.html).
 
+&nbsp;
+
 ### 1.4.3. IRC
 
 Varios miembros de la comunidad LFS ofrecen asistencia a través de
@@ -1379,6 +1389,8 @@ Internet Relay Chat (IRC). Antes de usar este soporte, asegúrese de que
 su pregunta no esté ya respondida en las preguntas frecuentes de LFS ni
 en los archivos de las listas de correo. Puede encontrar la red IRC en
 irc.libera.chat. El canal de soporte se llama #lfs-support.
+
+&nbsp;
 
 ### 1.4.4. Sitios espejo
 
@@ -1389,6 +1401,8 @@ necesarios. Visite el sitio web de
 lista de los sitios espejo actuales.
 
 [*https://www.linuxfromscratch.org/mirrors.html*](https://www.linuxfromscratch.org/mirrors.html)
+
+&nbsp;
 
 ### 1.4.5. Información de contacto
 
@@ -1441,6 +1455,8 @@ necesidades de soporte más inusuales. Si sus búsquedas no dan una
 solución, incluya toda la información relevante (mencionada a
 continuación) en su solicitud de ayuda.
 
+&nbsp;
+
 ### 1.5.1. Aspectos a mencionar
 
 Además de una breve explicación del problema, cualquier solicitud de
@@ -1468,12 +1484,16 @@ sistema](#Script version-check.sh|outline)
 > establecido nos ayuda a evaluar y determinar las posibles causas de
 > su problema.
 
+&nbsp;
+
 ### 1.5.2. Problemas con el script de configuración
 
 Si algo falla al ejecutar el script de **configuración**, revise el
 archivo config.log. Este archivo puede contener errores encontrados
 durante la **configuración** que no se mostraron en pantalla. Incluya
 las líneas relevantes si necesita solicitar ayuda.
+
+&nbsp;
 
 ### 1.5.3. Problemas de compilación
 
@@ -1556,6 +1576,8 @@ cuatro núcleos y al menos 8 GB de memoria. Los sistemas antiguos que no
 cumplan estos requisitos seguirán funcionando, pero el tiempo de
 compilación de los paquetes será significativamente mayor que el
 documentado.
+
+&nbsp;
 
 ### 2.2.2. Software
 
@@ -1655,6 +1677,8 @@ kernel.
 Para comprobar si su Sistema Host tiene todas las versiones adecuadas y
 la capacidad de compilar programas, cree el script version-check.sh, el
 cual ejecutará una serie de comandos de verificación:
+
+&nbsp;
 
 #### Script version-check.sh
 > ```bash
@@ -1765,6 +1789,8 @@ Esto no significa que el sistema deba compilarse de una sola vez. El
 problema radica en que ciertos procedimientos deben repetirse después de
 reiniciar al reanudar LFS en diferentes puntos.
 
+&nbsp;
+
 ### 2.3.1. Capítulos 1-4
 
 Estos capítulos ejecutan comandos en el sistema host. Al reiniciar,
@@ -1773,6 +1799,8 @@ asegúrese de una cosa:
 • Los procedimientos realizados como usuario root después de la Sección
 2.4 deben tener la variable de entorno LFS configurada *PARA EL USUARIO
 ROOT*.
+
+&nbsp;
 
 ### 2.3.2. Capítulos 5-6
 
@@ -1789,6 +1817,8 @@ fundamentales. Si tiene alguna duda sobre la instalación correcta de un
 paquete, asegúrese de que se haya eliminado el archivo tar previamente
 expandido, vuelva a extraer el paquete y complete todas las
 instrucciones de esa sección.
+
+&nbsp;
 
 ### 2.3.3. Capítulos 7-10
 
@@ -1866,6 +1896,8 @@ libro, la llamaremos partición LFS. Recuerde también la designación de
 la partición de intercambio. Estos nombres serán necesarios más adelante
 para el archivo /etc/fstab.
 
+&nbsp;
+
 ### 2.4.1. Otros problemas de particiones
 
 Las solicitudes de asesoramiento sobre particionamiento del sistema
@@ -1881,6 +1913,8 @@ seguridad consuman más tiempo y puede desperdiciar espacio en disco
 debido a una asignación ineficiente de las estructuras del sistema de
 archivos.
 
+&nbsp;
+
 ### 2.4.1.1. La partición raíz
 
 Una partición raíz de LFS (no confundir con el directorio /root) de
@@ -1888,6 +1922,8 @@ veinte gigabytes es una buena opción para la mayoría de los sistemas.
 Proporciona suficiente espacio para compilar LFS y la mayor parte de
 BLFS, pero es lo suficientemente pequeña como para permitir la creación
 fácil de múltiples particiones para experimentación.
+
+&nbsp;
 
 ### 2.4.1.2. La partición de intercambio
 
@@ -1916,6 +1952,8 @@ comando irrazonable, como intentar editar un archivo de cinco gigabytes.
 Si el intercambio se convierte en algo habitual, la mejor solución es
 adquirir más RAM para el sistema.
 
+&nbsp;
+
 ### 2.4.1.3. La partición de la BIOS de Grub
 
 Si el disco de arranque se ha particionado con una tabla de particiones
@@ -1933,6 +1971,8 @@ fdisk o tendrá el código EF02 si se usa el comando gdisk.
 > diferentes tipos de tablas de particiones. La nec esidad de la
 > partición Grub Bios depende únicamente del tipo de tabla de
 > particiones del disco de arranque.
+
+&nbsp;
 
 ### 2.4.1.4. Particiones de conveniencia
 
@@ -3719,16 +3759,22 @@ volver a ella más adelante le ayudará a comprender mejor el proceso.
 
 Primero, definamos algunos términos utilizados en este contexto.
 
+&nbsp;
+
 ### La compilación
 
 es la máquina donde compilamos los programas. Tenga en cuenta que esta
 máquina también se denomina \"host\".
+
+&nbsp;
 
 ### El host
 
 es la máquina/sistema donde se ejecutarán los programas compilados.
 Tenga en cuenta que este uso de \"host\" no es el mismo que en otras
 secciones.
+
+&nbsp;
 
 ### El objetivo
 
@@ -4111,6 +4157,8 @@ herramientas para gestionar archivos objeto.
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|677 GB|
 
+&nbsp;
+
 ### 5.2.1. Instalación de Cross Binutils
 
 > ℹ️ **Nota**
@@ -4238,6 +4286,8 @@ los compiladores de C y C++.
 |**Tiempo de compilación aproximado**:|3,2 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerid**o:|4,8 GB|
+
+&nbsp;
 
 ### 5.3.1. Instalación de Cross GCC
 
@@ -4419,6 +4469,8 @@ del kernel para que Glibc los use.
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|1,61 GB|
 
+&nbsp;
+
 ### 5.4.1. Instalación de las cabeceras de la API de Linux
 
 El kernel de Linux necesita exponer una interfaz de programación de
@@ -4445,6 +4497,8 @@ ubicación necesaria. crear encabezados
 > cp -rv usr/include $LFS/usr
 > ```
 
+&nbsp;
+
 ### 5.4.2. Contenido de las cabeceras de la API de Linux
 
 |**Cabeceras instaladas**:| /usr/include/asm/*.h, /usr/include/asm-generic/*.h, /usr/include/drm/*.h,<br> /usr/include/linux/*.h, /usr/include/misc/*.h, /usr/include/mtd/*.h,<br> /usr/include/rdma/*.h, /usr/include/scsi/*.h, /usr/include/sound/*.h,<br> /usr/include/video/*.h y /usr/include/xen/*.h|
@@ -4452,6 +4506,8 @@ ubicación necesaria. crear encabezados
 
 |**Directorios instalados**:| /usr/include/asm, /usr/include/asm-generic, /usr/include/drm,<br>  /usr/include/linux, /usr/include/misc, /usr/include/mtd,<br>  /usr/include/rdma, /usr/include/scsi, /usr/include/sound,<br>  /usr/include/video y /usr/include/xen|
 |------|------|
+
+&nbsp;
 
 ### Descripciones breves
 >
@@ -4482,6 +4538,8 @@ cadenas, buscar patrones, realizar operaciones aritméticas, etc.
 |**Tiempo de compilación aproximado**:|1,4 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|850 MB|
+
+&nbsp;
 
 ### 5.5.1. Instalación de Glibc
 
@@ -4681,6 +4739,8 @@ que aún no estaba disponible en el directorio de destino.
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|850 MB|
 
+&nbsp;
+
 ### 5.6.1. Instalación de Libstdc++ de destino
 
 > ℹ️ **Nota**
@@ -4795,6 +4855,8 @@ El paquete M4 contiene un procesador de macros.
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|32 MB|
 
+&nbsp;
+
 ### 6.2.1. Instalación de M4
 
 Preparar M4 para la compilación:
@@ -4831,6 +4893,8 @@ caracteres independiente de la terminal.
 |**Tiempo de compilación aproximado**:|0,4 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|53 MB|
+
+&nbsp;
 
 ### 6.3.1. Instalación de Ncurses
 
@@ -4961,6 +5025,8 @@ El paquete Bash contiene Bourne-Again Shell.
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|68 MB|
 
+&nbsp;
+
 ### 6.4.1. Instalación de Bash
 
 Preparar Bash para la compilación:
@@ -5008,9 +5074,11 @@ Los detalles de este paquete se encuentran en la Sección 8.36.2, "Contenido de 
 El paquete Coreutils contiene las utilidades básicas que necesita
 cualquier sistema operativo.
 
-|**Tiempo de compilación aproximado**:|0,3 SBU|
+|Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|181 MB|
+|Espacio en disco requerido:|181 MB|
+
+&nbsp;
 
 ### 6.5.1. Instalación de Coreutils
 
@@ -5069,6 +5137,8 @@ entre archivos o directorios.
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|35 MB|
 
+&nbsp;
+
 ### 6.6.1. Instalación de Diffutils
 
 Preparar Diffutils para la compilación:
@@ -5104,6 +5174,8 @@ El paquete File contiene una utilidad para determinar el tipo de uno o más arch
 |**Tiempo de compilación aproximado**:|0,1 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|42 MB|
+
+&nbsp;
 
 ### 6.7.1. Instalación de File
 
@@ -5178,6 +5250,8 @@ específico en cada archivo seleccionado en una búsqueda.
 |---------------------------------|-------|
 |*Espacio en disco requerido*:|48 MB|
 
+&nbsp;
+
 ### 6.8.1. Instalación de Findutils
 
 Preparar Findutils para la compilación:
@@ -5214,6 +5288,8 @@ El paquete Gawk contiene programas para manipular archivos de texto.
 |**Tiempo de compilación aproximado**:|0,1 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|47 MB|
+
+&nbsp;
 
 ### 6.9.1. Instalación de Gawk
 
@@ -5258,6 +5334,8 @@ archivos.
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|27 MB|
 
+&nbsp;
+
 ### 6.10.1. Instalación de Grep
 
 Preparar Grep para la compilación:
@@ -5293,6 +5371,8 @@ El paquete Gzip contiene programas para comprimir y descomprimir archivos.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|11 MB|
+
+&nbsp;
 
 ### 6.11.1. Instalación de Gzip
 
@@ -5330,6 +5410,8 @@ archivos fuente.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|15 MB|
+
+&nbsp;
 
 ### 6.12.1. Instalación de Make
 
@@ -5377,6 +5459,8 @@ el programa diff.
 |---------------------------------|-------|
 |Espacio en disco requerido:|12 MB|
 
+&nbsp;
+
 ### 6.13.1. Instalación del parche
 
 Preparar el parche para la compilación:
@@ -5413,6 +5497,8 @@ El paquete Sed contiene un editor de flujos.
 |Tiempo de compilación aproximado:|0.1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|21 MB|
+
+&nbsp;
 
 ### 6.14.1. Instalación de Sed
 
@@ -5454,6 +5540,8 @@ actualizar o listar archivos ya almacenados.
 |---------------------------------|-------|
 |Espacio en disco requerido:|42 MB|
 
+&nbsp;
+
 ### 6.15.1. Instalación de Tar
 
 Preparar Tar para la compilación:
@@ -5493,6 +5581,8 @@ de compresión que con los comandos tradicionales gzip o bzip2.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|21 MB|
+
+&nbsp;
 
 ### 6.16.1. Instalación de Xz
 
@@ -5540,6 +5630,8 @@ herramientas para gestionar archivos objeto.
 |Tiempo de compilación aproximado:|0,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|539 MB|
+
+&nbsp;
 
 ### 6.17.1. Instalación de Binutils
 
@@ -5622,6 +5714,8 @@ los compiladores de C y C++.
 |Tiempo de compilación aproximado:|4,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|5,5 GB|
+
+&nbsp;
 
 ### 6.18.1. Instalación de GCC
 
@@ -5829,6 +5923,8 @@ sistemas de archivos virtuales:
 > mkdir -pv $LFS/{dev,proc,sys,run}
 > ```
 
+&nbsp;
+
 ### 7.3.1. Montaje y llenado de /dev
 
 Durante un arranque normal de un sistema LFS, el kernel monta
@@ -5856,6 +5952,8 @@ ubicación. Utilice el siguiente comando para ello:
 > ```bash
 > mount -v --bind /dev $LFS/dev
 > ```
+
+&nbsp;
 
 ### 7.3.2. Montaje de sistemas de archivos virtuales del kernel
 
@@ -6023,6 +6121,8 @@ usuario pueda escribir en los directorios /tmp y /var/tmp, pero no puede
 eliminar los archivos de otro usuario. Esto último está prohibido por el
 llamado \"bit pegajoso\", el bit más alto (1) en la máscara de 1777
 bits.
+
+&nbsp;
 
 ### 7.5.1. Nota de conformidad con FHS
 
@@ -6203,6 +6303,8 @@ nativo del usuario.
 |---------------------------------|-------|
 |Espacio en disco requerido:|349 MB|
 
+&nbsp;
+
 ### 7.7.1. Instalación de Gettext
 
 Para nuestro conjunto temporal de herramientas, solo necesitamos
@@ -6247,6 +6349,8 @@ El paquete Bison contiene un generador de analizadores sintácticos.
 |---------------------------------|-------|
 |Espacio en disco requerido:|58 MB|
 
+&nbsp;
+
 ### 7.8.1. Instalación de Bison
 
 Preparar Bison para la compilación:
@@ -6289,6 +6393,8 @@ El paquete Perl contiene el Lenguaje Práctico de Extracción e Informes.
 |Tiempo de compilación aproximado:|0,6 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|285 MB|
+
+&nbsp;
 
 ### 7.9.1. Instalación de Perl
 
@@ -6365,6 +6471,8 @@ interpretado.
 |---------------------------------|-------|
 |Espacio en disco requerido:|634 MB|
 
+&nbsp;
+
 ### 7.10.1. Instalación de Python
 
 > ℹ️ **Nota**
@@ -6429,6 +6537,8 @@ páginas de información.
 |---------------------------------|-------|
 |Espacio en disco requerido:|152 MB|
 
+&nbsp;
+
 ### 7.11.1. Instalación de Texinfo
 
 Preparar Texinfo para la compilación:
@@ -6463,6 +6573,8 @@ El paquete Util-linux contiene diversas utilidades.
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|182 MB|
+
+&nbsp;
 
 ### 7.12.1. Instalación de Util-linux
 
@@ -6761,6 +6873,8 @@ breves descripciones) que instala el paquete.
 > núcleos de CPU (-j4) para todas las operaciones, a menos que se
 > especifique lo contrario.
 
+&nbsp;
+
 ### 8.1.1. Acerca de las bibliotecas
 
 En general, los editores de LFS desaconsejan compilar e instalar
@@ -6814,6 +6928,8 @@ sus ventajas y desventajas. Encontrar una solución que satisfaga a todos
 los públicos es difícil. Hay algunos consejos sobre la gestión de
 paquetes. Visite el Proyecto Hints y compruebe si alguno se ajusta a sus
 necesidades.
+
+&nbsp;
 
 ### 8.2.1. Problemas de actualización
 
@@ -6911,11 +7027,15 @@ existe; esto provoca un bloqueo. Por lo tanto, es más seguro guardar el
 trabajo y cerrar los procesos en ejecución innecesarios antes de
 actualizar un paquete.
 
+&nbsp;
+
 ### 8.2.2. Técnicas de gestión de paquetes
 
 A continuación, se presentan algunas técnicas comunes de gestión de
 paquetes. Antes de decidirse por un gestor de paquetes, investigue las
 distintas técnicas, especialmente las desventajas de cada esquema.
+
+&nbsp;
 
 ### 8.2.2.1. ¡Todo está en mi cabeza!
 
@@ -6924,6 +7044,8 @@ necesitan un gestor de paquetes porque conocen los paquetes a la
 perfección y saben qué archivos instala cada uno. Otros usuarios tampoco
 necesitan ninguna gestión de paquetes porque planean reconstruir todo el
 sistema cada vez que se modifica un paquete.
+
+&nbsp;
 
 ### 8.2.2.2. Instalar en directorios separados
 
@@ -6946,6 +7068,8 @@ paquetes, este esquema se vuelve inmanejable. Además, algunos paquetes
 (por ejemplo, las cabeceras de la API de Linux y Glibc) podrían no
 funcionar correctamente con este esquema. **Nunca lo utilice en todo el
 sistema**.
+
+&nbsp;
 
 ### 8.2.2.3. Gestión de paquetes con enlaces simbólicos
 
@@ -6992,6 +7116,8 @@ los paquetes no compatibles, es posible que deba instalarlos manualmente
 o que le resulte más fácil instalar algunos paquetes problemáticos en
 */opt*.
 
+&nbsp;
+
 ### 8.2.2.4. Basado en marca de tiempo
 
 En esta técnica, se marca la hora de un archivo antes de la instalación
@@ -7006,6 +7132,8 @@ una marca de tiempo distinta a la actual, el gestor de paquetes no los
 rastreará. Además, este esquema solo se puede utilizar cuando los
 paquetes se instalan uno a la vez. Los registros no son fiables si se
 instalan dos paquetes simultáneamente desde dos consolas diferentes.
+
+&nbsp;
 
 ### 8.2.2.5. Seguimiento de scripts de instalación
 
@@ -7025,6 +7153,8 @@ paquetes no produzca errores y que registre todos los archivos
 correspondientes. Otra técnica es usar **strace**, que registra todas
 las llamadas al sistema realizadas durante la ejecución de los scripts
 de instalación.
+
+&nbsp;
 
 ### 8.2.2.6. Creación de Archivos de Paquetes
 
@@ -7054,6 +7184,8 @@ detalles sobre la gestión de paquetes de Slackware, consulte:
 
 <https://www.slackbook.org/html/package-management.html>
 
+&nbsp;
+
 ### 8.2.2.7. Gestión basada en usuarios
 
 Este esquema, exclusivo de LFS, fue ideado por Matthias Benkmann y está
@@ -7065,6 +7197,8 @@ enfoque son demasiado complejas para describirlas en esta sección. Para
 más detalles, consulte la sugerencia en:
 
 <https://www.linuxfromscratch.org/hints/downloads/files/more_control_and_pkg_man.txt>
+
+&nbsp;
 
 ### 8.2.3. Implementación de LFS en varios sistemas
 
@@ -7108,6 +7242,8 @@ El paquete de páginas de manual contiene más de 2400 páginas de manual.
 |---------------------------------|-------|
 |Espacio en disco requerido:|52 MB|
 
+&nbsp;
+
 ### 8.3.1. Instalación de páginas de manual
 
 Elimine dos páginas de manual para las funciones de hash de contraseñas.
@@ -7137,9 +7273,13 @@ GIT=false
 Esto evita que el sistema de compilación emita muchas líneas de
 advertencia «*git: command not found*».
 
+&nbsp;
+
 ### 8.3.2. Contenido de las páginas de manual
 
 **Archivos instalados**: Varias páginas de manual
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -7160,6 +7300,8 @@ red.
 |---------------------------------|-------|
 |Espacio en disco requerido:|4,8 MB|
 
+&nbsp;
+
 ### 8.4.1. Instalación de Iana-Etc
 
 Para este paquete, solo necesitamos copiar los archivos:
@@ -7168,9 +7310,13 @@ Para este paquete, solo necesitamos copiar los archivos:
 > cp services protocols /etc
 > ```
 
+&nbsp;
+
 ### 8.4.2. Contenido de Iana-Etc
 
 **Archivos instalados**: /etc/protocols y /etc/services
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -7195,6 +7341,8 @@ cadenas, comparar patrones, realizar operaciones aritméticas, etc.
 |Tiempo de compilación aproximado:|12 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|3,2 GB|
+
+&nbsp;
 
 ### 8.5.1. Instalación de Glibc
 
@@ -7479,6 +7627,8 @@ capítulo:
 > Si se necesita esta capacidad, las instrucciones para instalar
 > libidn2 se encuentran en la página de libidn2 de BLFS.
 
+&nbsp;
+
 ### 8.5.2. Configuración de Glibc
 
 ### 8.5.2.1. Adición de nsswitch.conf
@@ -7508,6 +7658,8 @@ Cree un nuevo archivo */etc/nsswitch.conf* ejecutando lo siguiente:
 > # End /etc/nsswitch.conf
 > EOF
 > ```
+
+&nbsp;
 
 ### 8.5.2.2. Añadir datos de zona horaria
 
@@ -7579,6 +7731,8 @@ A continuación, cree el archivo */etc/localtime* ejecutando:
 Reemplace \<xxx\> con el nombre de la zona horaria seleccionada (p. ej.,
 Canadá/Este).
 
+&nbsp;
+
 ### 8.5.2.3. Configuración del cargador dinámico
 
 De forma predeterminada, el cargador dinámico (*/lib/ld-linux.so.2*)
@@ -7644,6 +7798,8 @@ and libutil.{a,so.1}
 /usr/include/sys, /usr/lib/audit, /usr/lib/gconv, /usr/lib/locale,
 /usr/libexec/getconf, /usr/share/i18n, /usr/share/zoneinfo, and
 /var/lib/nss_db
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -7777,6 +7933,8 @@ utilizadas por algunos programas.
 |---------------------------------|-------|
 |Espacio en disco requerido:|6,4 GB|
 
+&nbsp;
+
 ### 8.6.1. Instalación de Zlib
 
 Preparar Zlib para la compilación:
@@ -7809,9 +7967,13 @@ Eliminar una biblioteca estática inútil:
 > rm -fv /usr/lib/libz.a
 > ```
 
+&nbsp;
+
 ### 8.6.2. Contenido de Zlib
 
 **Bibliotecas instaladas**: libz.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -7831,6 +7993,8 @@ de compresión mucho mejor que con el gzip tradicional.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|7,2 MB|
+
+&nbsp;
 
 ### 8.7.1. Instalación de Bzip2
 
@@ -7903,6 +8067,8 @@ Eliminar una biblioteca estática inútil:
 > rm -fv /usr/lib/libbz2
 > ```
 
+&nbsp;
+
 ### 8.7.2. Contenido de Bzip2
 
 **Programas instalados**: bunzip2 (enlace a bzip2), bzcat (enlace a
@@ -7912,6 +8078,8 @@ bzmore) y bzmore
 
 **Bibliotecas instaladas**: libbz2.so
 **Directorio de instalación**: /usr/share/doc/bzip2-1.0.8
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -7958,6 +8126,8 @@ de compresión que con los comandos tradicionales gzip o bzip2.
 |---------------------------------|-------|
 |Espacio en disco requerido:|21 MB|
 
+&nbsp;
+
 ### 8.8.1. Instalación de Xz
 
 Prepare Xz para la compilación con:
@@ -7986,6 +8156,8 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.8.2. Contenido de Xz
 
 **Programas instalados**: lzcat (enlace a xz), lzcmp (enlace a xzdiff),
@@ -7998,6 +8170,8 @@ xzgrep), lzgrep (enlace a xzgrep), lzless (enlace a xzless), lzma
 
 **Bibliotecas instaladas**: liblzma.so
 **Directorios instalados**: /usr/include/lzma y /usr/share/doc/xz-5.6.4
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8069,6 +8243,8 @@ puedan comprimir los datos más rápidamente.
 |---------------------------------|-------|
 |Espacio en disco requerido:|4,2MB|
 
+&nbsp;
+
 ### 8.9.1. Instalación de Lz4
 
 Compilando el paquete:
@@ -8089,11 +8265,15 @@ Instalar el paquete:
 > make BUILD_STATIC=no PREFIX=/usr install
 > ```
 
+&nbsp;
+
 ### 8.9.2. Contenido de Lz4
 
 **Programas instalados**: lz4, lz4c (enlazar a lz4), lz4cat (enlazar a
 lz4) y unlz4 (enlazar a lz4)
 **Biblioteca instalada**: liblz4.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8122,6 +8302,8 @@ un decodificador muy rápido.
 |Tiempo de compilación aproximado:|0,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|85 MB|
+
+&nbsp;
 
 ### 8.10.1. Instalación de Zstd
 
@@ -8155,11 +8337,15 @@ Eliminar la biblioteca estática:
 > rm -v /usr/lib/libzstd.a
 > ```
 
+&nbsp;
+
 ### 8.10.2. Contenido de Zstd
 
 **Programas instalados**: zstd, zstdcat (enlace a zstd), zstdgrep,
 zstdless, zstdmt (enlace a zstd) y unzstd (enlace a zstd)
 **Biblioteca instalada**: libzstd.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8184,6 +8370,8 @@ o más archivos.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|19 MB|
+
+&nbsp;
 
 ### 8.11.1. Instalación de Archivo
 
@@ -8211,10 +8399,14 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.11.2. Contenido de Archivo
 
 **Programas instalados**: file
 **Biblioteca instalada**: libmagic.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8233,6 +8425,8 @@ de edición e historial desde la línea de comandos.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|16 MB|
+
+&nbsp;
 
 ### 8.12.1. Instalación de Readline
 
@@ -8300,10 +8494,14 @@ Si lo desea, instale la documentación:
 > install -v -m644 doc/*.{ps,pdf,html,dvi} /usr/share/doc/readline-8.2.13
 > ```
 
+&nbsp;
+
 ### 8.12.2. Contenido de Readline
 
 **Bibliotecas instaladas**: libhistory.so y libreadline.so
 **Directorios instalados**: /usr/include/readline y /usr/share/doc/readline- 8.2.13
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8324,6 +8522,8 @@ El paquete M4 contiene un procesador de macros.
 |Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|49 MB|
+
+&nbsp;
 
 ### 8.13.1. Instalación de M4
 
@@ -8351,9 +8551,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.13.2. Contenido de M4
 
 **Programa instalado**: m4
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8378,6 +8582,8 @@ precisión arbitraria.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|7,8 MB
+
+&nbsp;
 
 ### 8.14.1. Instalación de Bc
 
@@ -8425,9 +8631,13 @@ Instala el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.14.2. Contenido de Bc
 
 **Programas instalados:** bc y dc
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8447,6 +8657,8 @@ reconocen patrones en texto.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|33 MB|
+
+&nbsp;
 
 ### 8.15.1. Instalación de Flex
 
@@ -8487,11 +8699,15 @@ simbólico:
 > ln -sv flex.1 /usr/share/man/man1/lex.1
 > ```
 
+&nbsp;
+
 ### 8.15.2. Contenido de Flex
 
 **Programas instalados**: flex, flex++ (enlace a flex) y lex (enlace a flex)
 **Bibliotecas instaladas**: libfl.so
 **Directorio de instalación**: /usr/share/doc/flex-2.6.4
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8521,6 +8737,8 @@ está escrito en Tcl (se pronuncia \"cosquillas\").
 |Tiempo de compilación aproximado:|3,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|91 MB|
+
+&nbsp;
 
 ### 8.16.1. Instalación de Tcl
 
@@ -8626,10 +8844,14 @@ Opcionalmente, instale la documentación con los siguientes comandos:
 > cp -v -r ./html/* /usr/share/doc/tcl-8.6.16
 > ```
 
+&nbsp;
+
 ### 8.16.2. Contenido de Tcl
 
 **Programas instalados**: tclsh (enlace a tclsh8.6) y tclsh8.6
 **Bibliotecas instaladas**: libtcl8.6.so y libtclstub8.6.a
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8657,6 +8879,8 @@ framework DejaGnu está escrito en Expect.
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|3,9 MB|
+
+&nbsp;
 
 ### 8.17.1. Instalación de Expect
 
@@ -8728,10 +8952,14 @@ Instalar el paquete:
 > ln -svf expect5.45.4/libexpect5.45.4.so /usr/lib
 > ```
 
+&nbsp;
+
 ### 8.17.2. Contenido de Expect
 
 **Programa instalado**: expect
 **Biblioteca instalada**: libexpect5.45.4.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8753,6 +8981,8 @@ utiliza Tcl (lenguaje de comandos de herramientas).
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|6,9 MB|
+
+&nbsp;
 
 ### 8.18.1. Instalación de DejaGNU
 
@@ -8786,9 +9016,13 @@ Instalar el paquete:
 > install -v -m644 doc/dejagnu.{html,txt} /usr/share/doc/dejagnu-1.6.3
 > ```
 
+&nbsp;
+
 ### 8.18.2. Contenido de DejaGNU
 
 **Programas instalados**: dejagnu y runtest
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8811,6 +9045,8 @@ creación de la instalación de paquetes.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|4,7 MB|
+
+&nbsp;
 
 ### 8.19.1. Instalación de Pkgconf
 
@@ -8842,11 +9078,15 @@ enlaces simbólicos:
 > ln -sv pkgconf.1 /usr/share/man/man1/pkg-config.1
 > ```
 
+&nbsp;
+
 ### 8.19.2. Contenido de Pkgconf
 
 **Programas instalados**: pkgconf, pkg-config (enlace a pkgconf) y bomtool
 **Biblioteca instalada**: libpkgconf.so
 **Directorio de instalación**: /usr/share/doc/pkgconf-2.3.0
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -8872,6 +9112,8 @@ herramientas para gestionar archivos objeto.
 |Tiempo de compilación aproximado:|1,6 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|819 MB|
+
+&nbsp;
 
 ### 8.20.1. Instalación de Binutils
 
@@ -8964,6 +9206,8 @@ Elimine las bibliotecas estáticas innecesarias y otros archivos:
 >         /usr/share/doc/gprofng/
 > ```
 
+&nbsp;
+
 ### 8.20.2. Contenido de Binutils
 
 **Programas instalados**: addr2line, ar, as, c++filt, dwp, elfedit,
@@ -8972,6 +9216,8 @@ strings y strip
 **Bibliotecas instaladas**: libbfd.so, libctf.so, libctf-nobfd.so,
 libgprofng.so, libopcodes.so y libsframe.so
 **Directorio de instalación**: /usr/lib/ldscripts
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9058,6 +9304,9 @@ El paquete GMP contiene bibliotecas matemáticas. Estas ofrecen funciones
 |Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|54 MB|
+
+&nbsp;
+
 ### 8.21.1. Instalación de GMP
 
 > ℹ️ **Nota**
@@ -9141,10 +9390,14 @@ Instale el paquete y su documentación:
 > make install-html
 > ```
 
+&nbsp;
+
 ### 8.21.2. Contenido de GMP
 
 **Bibliotecas instaladas**: libgmp.so y libgmpxx.so
 **Directorio de instalación**: /usr/share/doc/gmp-6.3.0
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9164,6 +9417,8 @@ precisión múltiple.
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|43 MB|
+
+&nbsp;
 
 ### 8.22.1. Instalación de MPFR
 
@@ -9202,10 +9457,14 @@ Instalar el paquete y su documentación:
 > make install-html
 > ```
 
+&nbsp;
+
 ### 8.22.2. Contenido de MPFR
 
 **Bibliotecas instaladas**: libmpfr.so
 **Directorio de instalación**: /usr/share/doc/mpfr-4.2.1
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9224,6 +9483,8 @@ resultado.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|22 MB|
+
+&nbsp;
 
 ### 8.23.1. Instalación de MPC
 
@@ -9255,10 +9516,14 @@ Instalar el paquete y su documentación:
 > make install-html
 > ```
 
+&nbsp;
+
 ### 8.23.2. Contenido de MPC
 
 **Bibliotecas instaladas**: libmpc.so
 **Directorio de instalación**: /usr/share/doc/mpc-1.3.1
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9276,6 +9541,8 @@ extendidos de los objetos del sistema de archivos.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|4,1 MB|
+
+&nbsp;
 
 ### 8.24.1. Instalación de Attr
 
@@ -9309,12 +9576,15 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.24.2. Contenido de Attr
 
 **Programas instalados**: attr, getfattr y setfattr
 **Biblioteca instalada**: libattr.so
-
 **Directorios instalados**: /usr/include/attr y /usr/share/doc/attr-2.5.2
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9342,6 +9612,8 @@ discrecionales detallados de acceso a archivos y directorios.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|6,5 MB|
+
+&nbsp;
 
 ### 8.25.1. Instalación de Acl
 
@@ -9375,11 +9647,15 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.25.2. Contenido de Acl
 
 **Programas instalados**: chacl, getfacl y setfacl
 **Biblioteca instalada**: libacl.so
 **Directorios instalados**: /usr/include/acl y /usr/share/doc/acl-2.3.2
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9408,6 +9684,8 @@ privilegios distintos.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|3,0 MB|
+
+&nbsp;
 
 ### 8.26.1. Instalación de Libcap
 
@@ -9441,10 +9719,14 @@ Instale el paquete:
 > make prefix=/usr lib=lib install
 > ```
 
+&nbsp;
+
 ### 8.26.2. Contenido de Libcap
 
 **Programas instalados**: capsh, getcap, getpcaps y setcap
 **Biblioteca instalada**: libcap.so y libpsx.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9475,6 +9757,8 @@ unidireccional de contraseñas.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|12 MB|
+
+&nbsp;
 
 ### 8.27.1. Instalación de Libxcrypt
 
@@ -9545,9 +9829,13 @@ Instala el paquete:
 > cp -av --remove-destination .libs/libcrypt.so.1* /usr/lib
 > ```
 
+&nbsp;
+
 ### 8.27.2. Contenido de Libxcrypt
 
 **Bibliotecas instaladas**: libcrypt.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9565,6 +9853,8 @@ segura.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|114 MB|
+
+&nbsp;
 
 ### 8.28.1. Instalación de Shadow
 
@@ -9666,6 +9956,8 @@ Instalar el paquete:
 > make -C man install-man
 > ```
 
+&nbsp;
+
 ### 8.28.2. Configuración de Shadow
 
 Este paquete contiene utilidades para agregar, modificar y eliminar
@@ -9737,6 +10029,8 @@ el siguiente comando:
 > sed -i '/MAIL/s/yes/no/' /etc/default/useradd
 > ```
 
+&nbsp;
+
 ### 8.28.3. Configuración de la contraseña de root
 
 Elija una contraseña para el usuario root y configúrela ejecutando:
@@ -9744,6 +10038,8 @@ Elija una contraseña para el usuario root y configúrela ejecutando:
 > ```bash
 > passwd root
 > ```
+
+&nbsp;
 
 ### 8.28.4. Contenido de Shadow
 
@@ -9755,6 +10051,8 @@ to newgrp), su, useradd, userdel, usermod, vigr (link to vipw), and vipw
 
 **Directorios instalados**: /etc/default and /usr/include/shadow
 **Bibliotecas instaladas**: libsubid.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -9867,6 +10165,8 @@ incluye los compiladores de C y C++.
 |Tiempo de compilación aproximado:|46 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|6,3 GB|
+
+&nbsp;
 
 ### 8.29.1. Instalación de GCC
 
@@ -10200,6 +10500,8 @@ Finalmente, mueva un archivo extraviado:
 > mv -v /usr/lib/*gdb.py /usr/share/gdb/auto-load/usr/lib
 > ```
 
+&nbsp;
+
 ### 8.29.2. Contenido de GCC
 
 **Programas instalados**: c++, cc (enlace a gcc), cpp, g++, gcc, gcc-ar,
@@ -10212,6 +10514,8 @@ libstdc++.{a,so}, libstdc++exp.a, libstdc++fs.a, libsupc++.a,
 libtsan.{a,so} y libubsan.{a,so}
 **Directorio instalados**: /usr/include/c++, /usr/lib/gcc,
 /usr/libexec/gcc y /usr/share/gcc-14.2.0
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10312,6 +10616,8 @@ de caracteres independiente de la terminal
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|46 MB|
+
+&nbsp;
 
 ### 8.30.1. Instalación de Ncurses
 
@@ -10432,6 +10738,8 @@ Si lo desea, instale la documentación de Ncurses:
 > cp -av lib/lib*.so.5* /usr/lib
 > ```
 
+&nbsp;
+
 ### 8.30.2. Contenido de Ncurses
 
 **Programas instalados**: captoinfo (enlace a tic), clear, infocmp,
@@ -10444,6 +10752,8 @@ libncursesw.so, libncurses++w.so, libpanel.so (enlace simbólico) y
 libpanelw.so
 **Directorios instalados**: /usr/share/tabset, /usr/share/terminfo y
 /usr/share/doc/ncurses-6.5
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10504,6 +10814,8 @@ El paquete Sed contiene un editor de flujos.
 |---------------------------------|-------|
 |Espacio en disco requerido:|30 MB|
 
+&nbsp;
+
 ### 8.31.1. Instalación de Sed
 
 Preparar Sed para la compilación:
@@ -10534,10 +10846,14 @@ Instalar el paquete y su documentación:
 > install -m644 doc/sed.html /usr/share/doc/sed-4.9
 > ```
 
+&nbsp;
+
 ### 8.31.2. Contenido de Sed
 
 **Programa instalado**: sed
 **Directorio de instalación**: /usr/share/doc/sed-4.9
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10551,6 +10867,8 @@ los procesos en ejecución.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|6,7 MB|
+
+&nbsp;
 
 ### 8.32.1. Instalación de Psmisc
 
@@ -10578,10 +10896,14 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.32.2. Contenido de Psmisc
 
 **Programas instalados**: fuser, killall, peekfd, prtstat, pslog, pstree
 y pstree.x11 (enlace a pstree)
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10620,6 +10942,8 @@ nativo del usuario.
 |---------------------------------|-------|
 |Espacio en disco requerido:|290 MB|
 
+&nbsp;
+
 ### 8.33.1. Instalación de Gettext
 
 Preparar Gettext para la compilación:
@@ -10649,6 +10973,8 @@ Instalar el paquete:
 > chmod -v 0755 /usr/lib/preloadable_libintl.so
 > ```
 
+&nbsp;
+
 ### 8.33.2. Contenido de Gettext
 
 **Programas instalados**: autopoint, envsubst, gettext, gettext.sh,
@@ -10661,6 +10987,8 @@ preloadable_libintl.so
 **Directorios instalados**: /usr/lib/gettext,
 /usr/share/doc/gettext-0.24, /usr/share/gettext y
 /usr/share/gettext-0.24
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10764,6 +11092,8 @@ sintácticos.
 |---------------------------------|-------|
 |Espacio en disco requerido:|62 MB|
 
+&nbsp;
+
 ### 8.34.1. Instalación de Bison
 
 Preparar Bison para la compilación:
@@ -10790,11 +11120,15 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.34.2. Contenido de Bison
 
 **Programas instalados**: bison y yacc
 **Biblioteca instalada**: liby.a
 **Directorio de instalación**: /usr/share/bison****
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10821,6 +11155,9 @@ los archivos.
 |Tiempo de compilación aproximado:|0,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|39 MB|
+
+&nbsp;
+
 ### 8.35.1. Instalación de Grep
 
 Primero, elimine una advertencia sobre el uso de egrep y fgrep que
@@ -10854,9 +11191,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.35.2. Contenido de Grep
 
 **Programas instalados**: egrep, fgrep y grep
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10880,6 +11221,8 @@ El paquete Bash contiene Bourne-Again Shell.
 |Tiempo de compilación aproximado:|1,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|53 MB|
+
+&nbsp;
 
 ### 8.36.1. Instalación de Bash
 
@@ -10953,12 +11296,16 @@ está ejecutando):
 > exec /usr/bin/bash --login
 > ```
 
+&nbsp;
+
 ### 8.36.2. Contenido de Bash
 
 **Programas instalados**: bash, bashbug y sh (enlace a bash)
 
 **Directorio de instalación**: /usr/include/bash, /usr/lib/bash y
 /usr/share/doc/bash-5.2.37
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -10989,6 +11336,8 @@ interfaz consistente y portátil.
 |Tiempo de compilación aproximado:|0,6 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|44 MB|
+
+&nbsp;
 
 ### 8.37.1. Instalación de Libtool
 
@@ -11022,11 +11371,15 @@ Eliminar una biblioteca estática inútil:
 > rm -fv /usr/lib/libltdl.a
 > ```
 
+&nbsp;
+
 ### 8.37.2. Contenido de Libtool
 
 **Programas instalados**: libtool y libtoolize
 **Bibliotecas instaladas**: libltdl.so
 **Directorios instalados**: /usr/include/libltdl y /usr/share/libtool
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11054,6 +11407,8 @@ por su clave, y eliminar una clave junto con sus datos.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|13 MB|
+
+&nbsp;
 
 ### 8.38.1. Instalación de GDBM
 
@@ -11091,10 +11446,14 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.38.2. Contenido de GDBM
 
 **Programas instalados**: gdbm_dump, gdbm_load y gdbmtool
 **Bibliotecas instaladas**: libgdbm.so y libgdbm_compat.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11124,6 +11483,8 @@ claves.
 |---------------------------------|-------|
 |Espacio en disco requerido:|6,1 MB|
 
+&nbsp;
+
 ### 8.39.1. Instalación de Gperf
 
 Preparar Gperf para la compilación:
@@ -11151,10 +11512,14 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.39.2. Contenido de Gperf
 
 **Programa instalado**: gperf
 **Directorio de instalación**: /usr/share/doc/gperf-3.1
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11172,6 +11537,8 @@ analizar XML.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|14 MB|
+
+&nbsp;
 
 ### 8.40.1. Instalación de Expat
 
@@ -11207,11 +11574,15 @@ Si lo desea, instale la documentación:
 > install -v -m644 doc/*.{html,css} /usr/share/doc/expat-2.6.4
 > ```
 
+&nbsp;
+
 ### 8.40.2. Contenido de Expat
 
 **Programa instalado**: xmlwf
 **Bibliotecas instaladas**: libexpat.so
 **Directorio de instalación**: /usr/share/doc/expat-2.6.4
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11231,6 +11602,8 @@ El paquete Inetutils contiene programas para redes básicas.
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|35 MB|
+
+&nbsp;
 
 ### 8.41.1. Instalación de Inetutils
 
@@ -11309,9 +11682,13 @@ Mueva un programa a la ubicación correcta:
 > mv -v /usr/{,s}bin/ifconfig
 > ```
 
+&nbsp;
+
 ### 8.41.2. Contenido de inetutils
 
 **Programas instalados**: dnsdomainname, ftp, ifconfig, hostname, ping, ping6, talk, telnet, tftp y traceroute
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11348,6 +11725,8 @@ El paquete Less contiene un visor de archivos de texto.
 |---------------------------------|-------|
 |Espacio en disco requerido:|14 MB|
 
+&nbsp;
+
 ### 8.42.1. Instalación de Less
 
 Preparar Less para la compilación:
@@ -11381,9 +11760,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.42.2. Contenido de Less
 
 **Programas instalados**: less, lessecho y lesskey
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11409,6 +11792,8 @@ Informes.
 |Tiempo de compilación aproximado:|1,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|245 MB|
+
+&nbsp;
 
 ### 8.43.1. Instalación de Perl
 
@@ -11479,6 +11864,8 @@ Instalar el paquete y limpiarlo:
 > unset BUILD_ZLIB BUILD_BZIP2
 > ```
 
+&nbsp;
+
 ### 8.43.2. Contenido de Perl
 
 Programas instalados**: corelist, cpan, enc2xs, encguess, h2ph, h2xs,
@@ -11490,6 +11877,8 @@ zipdetails
 
 **Bibliotecas instaladas**: Muchas de las cuales no se pueden enumerar todas aquí
 **Directorio de instalación**: /usr/lib/perl5
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11591,6 +11980,8 @@ Expat de James Clark.
 |---------------------------------|-------|
 |Espacio en disco requerido:|2,4 MB|
 
+&nbsp;
+
 ### 8.44.1. Instalación de XML::Parser
 
 Preparar XML::Parser para la compilación:
@@ -11617,9 +12008,13 @@ Instalar el paquete.
 > make install
 > ```
 
+&nbsp;
+
 ### 8.44.2. Contenido de XML::Parser
 
 **Módulo instalado**:  Expat.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11637,6 +12032,8 @@ para extraer cadenas traducibles de archivos fuente.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|1,5 MB|
+
+&nbsp;
 
 ### 8.45.1. Instalación de Intltool
 
@@ -11679,12 +12076,16 @@ Instalar el paquete:
 > install -v -Dm644 doc/I18N-HOWTO /usr/share/doc/intltool-0.51.0/I18N-HOWTO
 > ```
 
+&nbsp;
+
 ### 8.45.2. Contenido de Intltool
 
 **Programas instalados**: intltool-extract, intltool-merge,
 intltool-prepare, intltool-update e intltoolize****
 **Directorios instalados**: /usr/share/doc/intltool-0.51.0 y
 /usr/share/intltool
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11715,6 +12116,8 @@ que configuran automáticamente el código fuente.
 |---------------------------------|-------|
 |Espacio en disco requerido:|25 MB|
 
+&nbsp;
+
 ### 8.46.1. Instalación de Autoconf
 
 Preparar Autoconf para la compilación:
@@ -11741,12 +12144,15 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.46.2. Contenido de Autoconf
 
 **Programas instalados**: autoconf, autoheader, autom4te,
 autoreconf, autoscan, autoupdate e ifnames
-
 **Directorio de instalación**:  /usr/share/autoconf
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11796,6 +12202,8 @@ Makefile para usar con Autoconf.
 |---------------------------------|-------|
 |Espacio en disco requerido:|121 MB|
 
+&nbsp;
+
 ### 8.47.1. Instalación de Automake
 
 Preparar Automake para la compilación:
@@ -11827,6 +12235,8 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.47.2. Contenido de Automake
 
 **Programas instalados**: aclocal, aclocal-1.17 (vinculado directamente
@@ -11834,6 +12244,8 @@ con aclocal), automake y automake-1.17 (vinculado directamente con
 automake)
 **Directorios instalados**: /usr/share/aclocal-1.17,
 /usr/share/automake-1.17 y /usr/share/doc/automake-1.17
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11866,6 +12278,8 @@ correo electrónico y navegadores web (para acceder a sitios HTTPS).
 |Tiempo de compilación aproximado:|1,8 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|920 MB|
+
+&nbsp;
 
 ### 8.48.1. Instalación de OpenSSL
 
@@ -11933,12 +12347,16 @@ Si se desea, instalar documentación adicional:
 > relacionadas en la Sección 8.2.1, \"Problemas de
 > actualización\".
 
+&nbsp;
+
 ### 8.48.2. Contenido de OpenSSL
 
 **Programas instalados**: c_rehash y openssl
 **Bibliotecas instaladas**: libcrypto.so y libssl.so
 **Directorios instalados**: /etc/ssl, /usr/include/openssl,
 /usr/lib/engines y /usr/share/doc/openssl-3.4.1
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -11975,6 +12393,8 @@ y enlazable).
 |---------------------------------|-------|
 |Espacio en disco requerido:|135 MB|
 
+&nbsp;
+
 ### 8.49.1. Instalación de Libelf
 
 Libelf forma parte del paquete elfutils-0.192. Utilice el archivo
@@ -12006,10 +12426,14 @@ Instalar solo Libelf:
 > rm /usr/lib/libelf.a
 > ```
 
+&nbsp;
+
 ### 8.49.2. Contenido de Libelf
 
 **Biblioteca instalada**: libelf.so
 **Directorio de instalación**: /usr/include/elfutils
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -12035,6 +12459,8 @@ Perl o Python y subrutinas de biblioteca compartida escritas en C o C++.
 |Tiempo de compilación aproximado:|1,7 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|11 MB|
+
+&nbsp;
 
 ### 8.50.1. Instalación de Libffi
 
@@ -12083,9 +12509,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.50.2. Contenido de Libffi
 
 **Biblioteca instalada**: libffi.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -12106,6 +12536,8 @@ interpretado.
 |Tiempo de compilación aproximado:|2,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|501 MB|
+
+&nbsp;
 
 ### 8.51.1. Instalación de Python 3
 
@@ -12233,12 +12665,16 @@ Asegúrese de que los archivos instalados tengan la propiedad y los
 permisos correctos. Sin estas opciones, tar instalará los archivos del
 paquete con los valores del creador original.
 
+&nbsp;
+
 ### 8.51.2. Contenido de Python 3
 
 **Programas instalados**: 2to3, idle3, pip3, pydoc3, python3 y python3-config
 **Biblioteca instalada**: libpython3.13.so y libpython3.so
 **Directorios instalados**: /usr/include/python3.13, /usr/lib/python3 y
 /usr/share/doc/python-3.13.2
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -12271,6 +12707,8 @@ módulos Python simples) que permite compilar distribuciones.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|1,0 MB|
+
+&nbsp;
 
 ### 8.52.1. Instalación de Flit-Core
 
@@ -12316,6 +12754,8 @@ ofrecen mayor seguridad en caso de error del usuario.
 
 Instruye a pip a buscar archivos wheel en el directorio dist.
 
+&nbsp;
+
 ### 8.52.2. Contenido de Flit-Core
 
 **Directorio de instalación**:
@@ -12335,6 +12775,8 @@ de referencia del estándar de empaquetado Wheel de Python.
 |---------------------------------|-------|
 |Espacio en disco requerido:|1,6 MB|
 
+&nbsp;
+
 ### 8.53.1. Instalación de Wheel
 
 Compile Wheel con el siguiente comando:
@@ -12349,11 +12791,15 @@ Instale Wheel con el siguiente comando:
 > pip3 install --no-index --find-links dist wheel
 > ```
 
+&nbsp;
+
 ### 8.53.2. Contenido de Wheel
 
 **Programa instalado**: wheel
 **Directorios de instalación**: /usr/lib/python3.13/site-packages/wheel
 y /usr/lib/python3.13/site- packages/wheel-0.45.1.dist-info
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -12373,6 +12819,8 @@ compilar, instalar, actualizar y desinstalar paquetes de Python.
 |---------------------------------|-------|
 |Espacio en disco requerido:|26 MB|
 
+&nbsp;
+
 ### 8.54.1. Instalación de Setuptools
 
 Compilación del paquete:
@@ -12386,6 +12834,8 @@ Instalación del paquete:
 > ```bash
 > pip3 install --no-index --find-links dist setuptools
 > ```
+
+&nbsp;
 
 ### 8.54.2. Contenido de 
 
@@ -12407,6 +12857,8 @@ velocidad.
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|37 MB|
+
+&nbsp;
 
 ### 8.55.1. Instalación de Ninja
 
@@ -12468,9 +12920,13 @@ paquete ya se ha probado reconstruyéndose (con la opción
 > install -vDm644 misc/zsh-completion  /usr/share/zsh/site-functions/_ninja
 > ```
 
+&nbsp;
+
 ### 8.55.2. Contenido de Ninja
 
 **Programas instalados**: ninja
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -12488,6 +12944,8 @@ ser extremadamente rápido y lo más intuitivo posible.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|44 MB|
+
+&nbsp;
 
 ### 8.56.1. Instalación de Meson
 
@@ -12518,12 +12976,16 @@ Coloca las ruedas creadas en el directorio dist.
 
 Instala las ruedas desde el directorio dist.
 
+&nbsp;
+
 ### 8.56.2. Contenido de Meson
 
 **Programas instalados**: meson
 **Directorio de instalación**:
 /usr/lib/python3.13/site-packages/meson-1.7.0.dist-info y
 /usr/lib/python3.13/site-packages/mesonbuild
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -12541,6 +13003,8 @@ módulos del kernel.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|11 MB|
+
+&nbsp;
 
 ### 8.57.1. Instalación de Kmod
 
@@ -12578,12 +13042,16 @@ Ahora instale el paquete:
 > ninja install
 > ```
 
+&nbsp;
+
 ### 8.57.2. Contenido de Kmod
 
 **Programas instalados**: depmod (enlace a kmod), insmod (enlace a
 kmod), kmod, lsmod (enlace a kmod), modinfo (enlace a kmod), modprobe
 (enlace a kmod) y rmmod (enlace a kmod)
 **Biblioteca instalada**: libkmod.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -12621,6 +13089,8 @@ cualquier sistema operativo.
 |Tiempo de compilación aproximado:|1,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|182 MB|
+
+&nbsp;
 
 ### 8.58.1. Instalación de Coreutils
 
@@ -12742,6 +13212,8 @@ Mueva los programas a las ubicaciones especificadas por el FHS:
 > sed -i 's/"1"/"8"/' /usr/share/man/man8/chroot.8
 > ```
 
+&nbsp;
+
 ### 8.58.2. Contenido de Coreutils
 
 **Programas instalados**: \[, b2sum, base32, base64, basename, basenc,
@@ -12757,6 +13229,8 @@ touch, tr, true, truncate, tsort, tty, uname, unexpand, uniq, unlink,
 users, vdir, wc, who, whoami, and yes
 **Biblioteca instalada**: libstdbuf.so (en /usr/libexec/coreutils)
 **Directorios instalados**: /usr/libexec/coreutils
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13055,6 +13529,8 @@ Check es un framework de pruebas unitarias para C
 |---------------------------------|-------|
 |Espacio en disco requerido:|11 MB|
 
+&nbsp;
+
 ### 8.59.1. Instalación de Check
 
 Preparar Check para la compilación:
@@ -13082,10 +13558,14 @@ Instalar el paquete:
 > make docdir=/usr/share/doc/check-0.15.2 install
 > ```
 
+&nbsp;
+
 ### 8.59.2. Contenido de Check
 
 **Programa instalado**: checkmk
 **Biblioteca instalada**: libcheck.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13107,6 +13587,8 @@ entre archivos o directorios.
 |Tiempo de compilación aproximado:|0,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|50 MB|
+
+&nbsp;
 
 ### 8.60.1. Instalación de Diffutils
 
@@ -13134,9 +13616,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.60.2. Contenido de Diffutils
 
 **Programas instalados**: cmp, diff, diff3 y sdiff
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13163,6 +13649,8 @@ texto.
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|43 MB|
+
+&nbsp;
 
 ### 8.61.1. Instalación de Gawk
 
@@ -13220,6 +13708,8 @@ Si lo desea, instale la documentación:
 > install -vDm644 doc/{awkforai.txt,*.{eps,pdf,jpg}} -t /usr/share/doc/gawk-5.3.1
 > ```
 
+&nbsp;
+
 ### 8.61.2. Contenido de Gawk
 
 **Programas instalados**: awk (enlace a gawk), gawk y gawk-5.3.1
@@ -13228,6 +13718,8 @@ inplace.so, intdiv.so, ordchr.so, readdir.so, readfile.so, revoutput.so,
 revtwoway.so, rwarray.so y time.so (todas en /usr/lib/gawk)****
 **Directorios instalados**: /usr/lib/gawk, /usr/libexec/awk,
 /usr/share/awk y /usr/share/doc/gawk- 5.3.1
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13255,6 +13747,8 @@ específico en cada archivo seleccionado en una búsqueda.
 |Tiempo de compilación aproximado:|0,7 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|63 MB|
+
+&nbsp;
 
 ### 8.62.1. Instalación de Findutils
 
@@ -13290,10 +13784,14 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.62.2. Contenido de Findutils
 
 **Programas instalados**: find, locate, updatedb y xargs
 **Directorio de instalación**: /var/lib/locate
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13323,6 +13821,8 @@ e imágenes
 |Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|108 MB|
+
+&nbsp;
 
 ### 8.63.1. Instalación de Groff
 
@@ -13357,6 +13857,8 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.63.2. Contenido de Groff
 
 **Programas instalados**: addftinfo, afmtodit, chem, eqn, eqn2graph,
@@ -13368,6 +13870,8 @@ roff2html, roff2pdf, roff2ps, roff2text, roff2x, soelim, tbl, tfmtodit y
 troff
 **Directorios instalados**: /usr/lib/groff y
 /usr/share/doc/groff-1.23.0, /usr/share/groff
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13519,6 +14023,8 @@ GRand.
 |---------------------------------|-------|
 |Espacio en disco requerido:|166 MB|
 
+&nbsp;
+
 ### 8.64.1. Instalación de GRUB
 
 > ℹ️ **Nota**
@@ -13594,6 +14100,8 @@ Cómo hacer que su sistema LFS sea arrancable con GRUB se explicará
 en la Sección 10.4, "Uso de GRUB para configurar el proceso de
 arranque".
 
+&nbsp;
+
 ### 8.64.2. Contenido de GRUB
 
 **Programas instalados**: grub-bios-setup, grub-editenv, grub-file,
@@ -13605,6 +14113,8 @@ grub-render-label, grub-script-check, grub-set- default,
 grub-sparc64-setup, and grub-syslinux2cfg
 **Directorios instalados**: /usr/lib/grub, /etc/grub.d, /usr/share/grub,
 and /boot/grub (when grub- install is first run)
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13689,6 +14199,8 @@ archivos.
 |---------------------------------|-------|
 |Espacio en disco requerido:|21 MB|
 
+&nbsp;
+
 ### 8.65.1. Instalación de Gzip
 
 Preparar Gzip para la compilación:
@@ -13713,13 +14225,17 @@ Instalar el paquete:
 
 > ```bash
 > make install
- > ```
+> ```
+
+&nbsp;
 
 ### 8.65.2. Contenido de Gzip
 
 **Programas instalados**: gunzip, gzexe, gzip, uncompress (enlace duro
 con gunzip), zcat, zcmp, zdiff, zegrep, zfgrep, zforce, zgrep, zless,
 zmore y znew
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13769,6 +14285,8 @@ avanzadas basadas en IPV4.
 |---------------------------------|-------|
 |Espacio en disco requerido:|17 MB|
 
+&nbsp;
+
 ### 8.66.1. Instalación de IPRoute2
 
 El programa arpd incluido en este paquete no se compilará, ya que
@@ -13800,13 +14318,16 @@ Si lo desea, instale la documentación:
 > install -vDm644 COPYING README* -t /usr/share/doc/iproute2-6.13.0
 > ```
 
+&nbsp;
+
 ### 8.66.2. Contenido de IPRoute2
 
 **Programas instalados**: bridge, ctstat (enlace a lnstat), genl,
 ifstat, ip, lnstat, nstat, routel, rtacct, rtmon, rtpr, rtstat (enlace a
 lnstat), ss y tc
-
 **Directorios instalados**: /etc/iproute2, /usr/lib/tc y /usr/share/doc/iproute2-6.13.0
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -13851,6 +14372,8 @@ consola y utilidades de teclado.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|34 MB|
+
+&nbsp;
 
 ### 8.67.1. Instalación de Kbd
 
@@ -13923,6 +14446,8 @@ Si lo desea, instale la documentación:
 > cp -R -v docs/doc -T /usr/share/doc/kbd-2.7.1
 > ```
 
+&nbsp;
+
 ### 8.67.2. Contenido de Kbd
 
 **Programas instalados**: chvt, deallocvt, dumpkeys, fgconsole,
@@ -13934,6 +14459,8 @@ unicode_start y unicode_stop
 **Directorios instalados**: /usr/share/consolefonts,
 /usr/share/consoletrans, /usr/share/keymaps, /usr/share/doc/kbd-2.7.1 y
 /usr/share/unimaps
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14018,6 +14545,8 @@ pipelines de subprocesos de forma flexible y práctica
 |---------------------------------|-------|
 |Espacio en disco requerido:|11 MB|
 
+&nbsp;
+
 ### 8.68.1. Instalación de Libpipeline
 
 Preparar Libpipeline para la compilación:
@@ -14044,9 +14573,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.68.2. Contenido de Libpipeline
 
 **Biblioteca instalada**: libpipeline.so
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14094,9 +14627,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.69.2. Contenido de Make
 
 **Programa instalado**: make
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14116,6 +14653,8 @@ creado por el programa **diff**.
 |Tiempo de compilación aproximado:|0.2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|12 MB|
+
+&nbsp;
 
 ### **8.70.1. Instalación del parche**
 
@@ -14143,9 +14682,13 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.70.2. Contenido del parche
 
 **Programa instalado**: patch
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14168,6 +14711,8 @@ actualizar o listar archivos ya almacenados.
 |Tiempo de compilación aproximado:|0,6 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|43 MB|
+
+&nbsp;
 
 ### 8.71.1. Instalación de Tar
 
@@ -14212,10 +14757,14 @@ Instalar el paquete:
 > make -C doc install-html docdir=/usr/share/doc/tar-1.35
 > ```
 
+&nbsp;
+
 ### 8.71.2. Contenido de Tar
 
 **Programas instalados**: tar
 **Directorio de instalación**: /usr/share/doc/tar-1.35
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14234,6 +14783,8 @@ convertir páginas de información.
 |Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|160 MB|
+
+&nbsp;
 
 ### 8.72.1. Instalación de Texinfo
 
@@ -14293,6 +14844,8 @@ siguientes comandos opcionales lo harán:
 > popd
 > ```
 
+&nbsp;
+
 ### 8.72.2. Contenido de Texinfo
 
 **Programas instalados**: info, install-info, makeinfo (enlace a
@@ -14301,6 +14854,8 @@ texindex
 **Bibliotecas instaladas**: MiscXS.so, Parsetexi.so y XSParagraph.so
 (todas en /usr/lib/texinfo)
 **Directorios instalados**: /usr/share/texinfo y /usr/lib/texinfo
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14347,6 +14902,8 @@ El paquete Vim contiene un potente editor de texto.
 > 💡 **Alternativas a Vim**
 > 
 > Si prefiere otro editor, como Emacs, Joe o Nano, consulte [*https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html*](https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html) para obtener instrucciones de instalación sugeridas.
+
+&nbsp;
 
 ### 8.73.1. Instalación de Vim
 
@@ -14428,6 +14985,8 @@ adicionales. Para obtener más información sobre este proceso, consulte
 la documentación de Vim y la página de instalación de Vim en el libro de
 BLFS en <https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/vim.html>.
 
+&nbsp;
+
 ### 8.73.2. Configuración de Vim
 
 De forma predeterminada, **Vim** se ejecuta en modo incompatible con Vi.
@@ -14498,12 +15057,16 @@ el siguiente comando:
 > ```
 > Para más información, consulte *runtime/spell/README.txt*.
 
+&nbsp;
+
 ### 8.73.3. Contenido de Vim
 
 **Programas instalados**: ex (enlace a vim), rview (enlace a vim), rvim
 (enlace a vim), vi (enlace a vim), view (enlace a vim), vim, vimdiff
 (enlace a vim), vimtutor y xxd
 **Directorio de instalación**: /usr/share/vim
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14543,6 +15106,8 @@ de marcado XML/HTML/XHTML.
 |---------------------------------|-------|
 |Espacio en disco requerido:| 500 KB|
 
+&nbsp;
+
 ### 8.74.1. Instalación de MarkupSafe
 
 Compile MarkupSafe con el siguiente comando:
@@ -14558,6 +15123,8 @@ Instale el paquete:
 > ```bash
 > pip3 install --no-index --find-links dist Markupsafe
 > ```
+
+&nbsp;
 
 ### 8.74.2. Contenido de MarkupSafe
 
@@ -14577,6 +15144,8 @@ plantillas Python simple.
 |---------------------------------|-------|
 |Espacio en disco requerido:|2,5 MB|
 
+&nbsp;
+
 ### 8.75.1. Instalación de Jinja2
 
 Compilación del paquete:
@@ -14590,6 +15159,8 @@ Instalación del paquete:
 > ```bash
 > pip3 install --no-index --find-links dist Jinja2
 > ```
+
+&nbsp;
 
 ### 8.75.2. Contenido de Jinja2
 
@@ -14608,6 +15179,8 @@ dispositivos.
 |Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|161 MB|
+
+&nbsp;
 
 ### 8.76.1. Instalación de Udev
 
@@ -14756,6 +15329,8 @@ Finalmente, desactive la variable udev_helpers:
 > unset udev_helpers
 > ```
 
+&nbsp;
+
 ### 8.76.2. Configuración de Udev
 
 La información sobre los dispositivos de hardware se guarda en los
@@ -14771,11 +15346,15 @@ inicial:
 Este comando debe ejecutarse cada vez que se actualice la
 información del hardware.
 
+&nbsp;
+
 ### 8.76.3. Contenido de Udev
 
 **Programas instalados**: udevadm, udevd (enlace simbólico a udevadm) y udev-hwdb
 **Bibliotecas instaladas**: libudev.so
 **Directorios instalados**: /etc/udev y /usr/lib/udev
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14808,6 +15387,8 @@ páginas de manual.
 |Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|44 MB|
+
+&nbsp;
 
 ### 8.77.1. Instalación de Man-DB
 
@@ -14872,6 +15453,8 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.77.2. Páginas del manual en otros idiomas en LFS
 
 La siguiente tabla muestra el conjunto de caracteres con el que
@@ -14912,6 +15495,8 @@ manual de 8 bits heredadas
 > Las páginas del manual en idiomas no incluidos en la lista no son
 > compatibles.
 
+&nbsp;
+
 ### 8.77.3. Contenido de Man-DB
 
 **Programas instalados**: accessdb, apropos (enlace a whatis), catman,
@@ -14920,6 +15505,8 @@ lexgrog, man, man-recode, mandb, manpath y whatis
 /usr/lib/man-db)
 **Directorios instalados**: /usr/lib/man-db, /usr/libexec/man-db y
 /usr/share/doc/man-db-2.13.0
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -14964,6 +15551,8 @@ procesos.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|28 MB|
+
+&nbsp;
 
 ### 8.78.1. Instalación de Procps-ng
 
@@ -15013,12 +15602,16 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.78.2. Contenido de Procps-ng
 
 **Programas instalados**: free, pgrep, pidof, pkill, pmap, ps, pwdx,
 slabtop, sysctl, tload, top, uptime, vmstat, w y watch
 **Biblioteca instalada**: libproc-2.so
 **Directorios instalados**: /usr/include/procps y /usr/share/doc/procps-ng-4.0.5
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -15078,6 +15671,8 @@ particiones y mensajes.
 |Tiempo de compilación aproximado:|0,5 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|316 MB|
+
+&nbsp;
 
 ### 8.79.1. Instalación de Util-linux
 
@@ -15153,6 +15748,8 @@ Instale el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.79.2. Contenido de Util-linux
 
 **Programas instalados**: addpart, agetty, blkdiscard, blkid, blkzone,
@@ -15176,6 +15773,8 @@ y libuuid.so
 **Directorios**: /usr/include/blkid, /usr/include/libfdisk,
 /usr/include/libmount, /usr/include/libsmartcols, /usr/include/uuid,
 /usr/share/doc/util-linux-2.40.4 y /var/lib/hwclock
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -15496,6 +16095,8 @@ archivos con registro en diario ext3 y ext4.
 |---------------------------------|-------|
 |Espacio en disco requerido:|99 MB|
 
+&nbsp;
+
 ### 8.80.1. Instalación de E2fsprogs
 
 La documentación de E2fsprogs recomienda compilar el paquete en un
@@ -15576,6 +16177,8 @@ siguientes comandos:
 > install-info --dir-file=/usr/share/info/dir /usr/share/info/com_err.info
 > ```
 
+&nbsp;
+
 ### 8.80.2. Configuración de E2fsprogs
 
 **/etc/mke2fs.conf** contiene los valores predeterminados de
@@ -15594,6 +16197,8 @@ puede eliminar la función de la lista de funciones predeterminadas de
 Consulte la página del manual *****mke2fs.conf(5)***** para obtener
 más información.
 
+&nbsp;
+
 ### 8.80.3. Contenido de E2fsprogs
 
 **Programas instalados**: badblocks, chattr, compile_et, debugfs,
@@ -15605,6 +16210,8 @@ mkfs.ext4, mklost+found, resize2fs y tune2fs
 **Directorios instalados**: /usr/include/e2p, /usr/include/et,
 /usr/include/ext2fs, /usr/include/ss, /usr/lib/e2fsprogs, /usr/share/et
 y /usr/share/ss
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -15721,6 +16328,8 @@ inusuales.
 |---------------------------------|-------|
 |Espacio en disco requerido:|4,1 MB|
 
+&nbsp;
+
 ### 8.81.1. Instalación de Sysklogd
 
 Preparar el paquete para la compilación:
@@ -15748,6 +16357,8 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.81.2. Configuración de Sysklogd
 
 Cree un nuevo archivo */etc/syslog.conf* ejecutando lo siguiente:
@@ -15771,9 +16382,13 @@ Cree un nuevo archivo */etc/syslog.conf* ejecutando lo siguiente:
 > EOF
 > ```
 
+&nbsp;
+
 ### 8.81.3. Contenido de Sysklogd
 
 **Programa instalado**: syslogd
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -15795,6 +16410,8 @@ ejecución y el apagado del sistema.
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|2,9 MB|
+
+&nbsp;
 
 ### 8.82.1. Instalación de SysVinit
 
@@ -15820,11 +16437,15 @@ Instalar el paquete:
 > make install
 > ```
 
+&nbsp;
+
 ### 8.82.2. Contenido de SysVinit
 
 **Programas instalados**: bootlogd, fstab-decode, halt, init, killall5,
 poweroff (enlace a halt), reboot (enlace a halt), runlevel, shutoff y
 telinit (enlace a init)
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -16071,6 +16692,8 @@ el usuario. Este proceso debe organizarse para garantizar que las tareas
 se realicen en el orden correcto y se ejecuten lo más rápido
 posible.
 
+&nbsp;
+
 ### 9.1.1. System V
 
 System V es el proceso de arranque clásico que se ha utilizado en
@@ -16099,10 +16722,14 @@ En LFS, se utilizan de la siguiente manera:
 
 El nivel de ejecución predeterminado habitual es 3 o 5.
 
+&nbsp;
+
 ### Ventajas
 
 • Sistema establecido y bien comprendido.
 • Fácil de personalizar.
+
+&nbsp;
 
 ### Desventajas
 
@@ -16138,6 +16765,8 @@ proceso de arranque se describen en las siguientes secciones.
 |---------------------------------|-------|
 |Espacio en disco requerido:|244 KB|
 
+&nbsp;
+
 ### 9.2.1. Instalación de LFS-Bootscripts
 
 Instalar el paquete:
@@ -16145,6 +16774,8 @@ Instalar el paquete:
 > ```bash
 > make install
 > ```
+
+&nbsp;
 
 ### 9.2.2. Contenido de los scripts de arranque de LFS
 
@@ -16154,6 +16785,8 @@ reboot, sendsignals, setclock, ipv4- static, swap, sysctl, sysklogd,
 template, udev y udev_retry
 **Directorios instalados**: /etc/rc.d, /etc/init.d (enlace simbólico),
 /etc/sysconfig, /lib/services, /lib/lsb (enlace simbólico)
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -16255,6 +16888,8 @@ completamente en la memoria del sistema). Los nodos de dispositivo no
 requieren mucho espacio, por lo que la memoria utilizada es
 insignificante.
 
+&nbsp;
+
 ### 9.3.1. Historia
 
 En febrero de 2000, un nuevo sistema de archivos llamado *devfs* se
@@ -16285,6 +16920,8 @@ a los procesos del espacio de usuario. Con esta representación visible
 en el espacio de usuario, fue posible desarrollar un reemplazo para
 *devfs* en el espacio de usuario.
 
+&nbsp;
+
 ### 9.3.2. Implementación de Udev
 
 ### 9.3.2.1. Sysfs
@@ -16300,6 +16937,8 @@ los datos que los controladores han registrado con sysfs están
 disponibles para los procesos del espacio de usuario y para udevd para
 su procesamiento (incluidas las modificaciones en los nodos de
 dispositivo).
+
+&nbsp;
 
 ### 9.3.2.2. Creación de nodos de dispositivo
 
@@ -16322,6 +16961,8 @@ Las reglas de estos tres directorios están numeradas y se fusionan. Si
 **udevd** no encuentra una regla para el dispositivo que está creando,
 conservará los permisos y la propiedad del archivo *devtmpfs* utilizado
 inicialmente.
+
+&nbsp;
 
 ### 9.3.2.3. Carga de módulos
 
@@ -16349,6 +16990,8 @@ Consulte a continuación cómo evitar la carga de controladores indeseado.
 El propio kernel también puede cargar módulos para protocolos de red,
 sistemas de archivos y compatibilidad con NLS bajo demanda.
 
+&nbsp;
+
 ### 9.3.2.4. Manejo de dispositivos conectables en caliente/dinámicos
 
 Al conectar un dispositivo, como un reproductor de MP3 USB (Universal
@@ -16356,10 +16999,14 @@ Serial Bus), el kernel reconoce que el dispositivo está conectado y
 genera un evento UE. Este evento UE es gestionado por **udevd** como se
 describió anteriormente.
 
+&nbsp;
+
 ### 9.3.3. Problemas con la carga de módulos y la creación de dispositivos
 
 Existen algunos problemas posibles al crear automáticamente nodos de
 dispositivos.
+
+&nbsp;
 
 ### 9.3.3.1. Un módulo del kernel no se carga automáticamente
 
@@ -16389,6 +17036,8 @@ se solucione en versiones posteriores del kernel.
 Udev no está diseñado para cargar controladores \"wrapper\" como
 *snd-pcm-oss* ni controladores no hardware como *loop*.
 
+&nbsp;
+
 ### 9.3.3.2. Un módulo del kernel no se carga automáticamente y Udev no está diseñado para cargarlo.
 
 Si el módulo \"wrapper\" solo mejora la funcionalidad de otro módulo
@@ -16416,6 +17065,8 @@ al arrancar el sistema. Para ello, añada el nombre del módulo al archivo
 */etc/sysconfig/modules* en una línea aparte. Esto también funciona con
 módulos wrapper, pero no es óptimo en ese caso.
 
+&nbsp;
+
 ### 9.3.3.3. Udev carga un módulo no deseado
 
 No compile el módulo o agréguelo a la lista negra en el archivo
@@ -16429,6 +17080,8 @@ ejemplo siguiente:
 Los módulos incluidos en la lista negra se pueden cargar manualmente con
 el comando explícito **modprobe**.
 
+&nbsp;
+
 ### 9.3.3.4. Udev crea un dispositivo incorrectamente o crea un enlace simbólico erróneo.
 
 Esto suele ocurrir si una regla coincide inesperadamente con un
@@ -16436,6 +17089,8 @@ dispositivo. Por ejemplo, una regla mal escrita puede coincidir tanto
 con un disco SCSI (como se desea) como con el dispositivo genérico SCSI
 correspondiente (incorrectamente) por proveedor. Encuentre la regla
 problemática y especifíquela con el comando **udevadm info.**
+
+&nbsp;
 
 ### 9.3.3.5. La regla de Udev funciona de forma poco fiable.
 
@@ -16447,6 +17102,8 @@ Por ahora, puede solucionarlo creando una regla que espere el atributo
 */etc/udev/rules.d/10-wait_for_sysfs.rules* (cree este archivo si no
 existe). Por favor, notifique a la lista de desarrollo de LFS si lo hace
 y le resulta útil.
+
+&nbsp;
 
 ### 9.3.3.6. Udev no crea un dispositivo
 
@@ -16463,6 +17120,8 @@ adecuados (consulte el archivo *devices.txt* en la documentación del
 kernel o la documentación proporcionada por el proveedor del controlador
 externo). **udev** copiará el nodo de dispositivo estático a */dev*.
 
+&nbsp;
+
 ### 9.3.3.7. El orden de nombres de los dispositivos cambia aleatoriamente después de reiniciar
 
 Esto se debe a que udev, por diseño, gestiona los eventos y carga los
@@ -16474,6 +17133,8 @@ atributos estables del dispositivo, como un número de serie o la salida
 de varias utilidades \*\_id instaladas por udev. Consulte la Sección
 9.4, \"Administración de dispositivos\" y la Sección 9.5,
 \"Configuración general de red\" para ver ejemplos.
+
+&nbsp;
 
 ### 9.3.4. Lecturas útiles
 
@@ -16510,6 +17171,8 @@ dispositivos de red son similares a enp5s0 o wlp3s0. Si no se desea esta
 convención de nomenclatura, se puede implementar el esquema de
 nomenclatura tradicional o uno personalizado.
 
+&nbsp;
+
 ### 9.4.1.1. Desactivación de la nomenclatura persistente en la línea de comandos del kernel
 
 El esquema de nomenclatura tradicional, con eth0, eth1, etc., se puede
@@ -16520,6 +17183,8 @@ llamadas eth0 y wlan0; estos portátiles también pueden usar este método.
 La línea de comandos se encuentra en el archivo de configuración de
 GRUB. Consulte la Sección 10.4.4, "Creación del archivo de configuración
 de GRUB".
+
+&nbsp;
 
 ### 9.4.1.2. Creación de reglas udev personalizadas
 
@@ -16606,6 +17271,8 @@ archivo de configuración predeterminado
 >      > /etc/udev/network/99-default.link
 > ```
 
+&nbsp;
+
 ### 9.4.2. Enlaces simbólicos de CD-ROM
 
 Algunos programas que desee instalar posteriormente (por ejemplo, varios
@@ -16689,6 +17356,8 @@ posiblemente edite) el archivo
 */etc/udev/rules.d/70-persistent-cd.rules* generado tras el arranque
 para asegurarse de que los enlaces simbólicos asignados se ajusten a sus
 necesidades.
+
+&nbsp;
 
 ### 9.4.3. Gestión de dispositivos duplicados
 
@@ -16818,6 +17487,8 @@ subred específica. Si se omite, el valor predeterminado de PREFIX es 24.
 
 Para obtener más información, consulte la página de manual de **ifup**.
 
+&nbsp;
+
 ### 9.5.2. Creación del archivo /etc/resolv.conf
 
 El sistema necesitará algún método para obtener la resolución de nombres
@@ -16854,6 +17525,8 @@ un enrutador en la red local.
 > 
 > Las direcciones DNS IPv4 públicas de Google son 8.8.8.8 y 8.8.4.4.
 
+&nbsp;
+
 ### 9.5.3. Configuración del nombre de host del sistema
 
 Durante el proceso de arranque, el archivo */etc/hostname* se utiliza
@@ -16869,6 +17542,8 @@ ejecutando:
 \<lfs\> debe reemplazarse por el nombre asignado al equipo. No
 introduzca aquí el nombre de dominio completo (FQDN). Esa información se
 guarda en el archivo /etc/hosts.
+
+&nbsp;
 
 ### 9.5.4. Personalización del archivo /etc/hosts
 
@@ -16980,6 +17655,8 @@ LFS:
 > sistema mediante puertos serie. En el entorno actual, esto no tiene
 > sentido, y ahora decimos que está \"reservado\".
 
+&nbsp;
+
 ### 9.6.2. Configuración de SysVinit
 
 Durante la inicialización del núcleo, el primer programa que se ejecuta
@@ -17040,6 +17717,8 @@ registra toda la salida en */run/var/bootlog*. Dado que el directorio
 arranques; Sin embargo, se añade al archivo más permanente
 */var/log/boot.log* al final del proceso de arranque.
 
+&nbsp;
+
 ### 9.6.2.1. Cambio de niveles de ejecución
 
 El cambio de niveles de ejecución se realiza con **init**
@@ -17091,6 +17770,8 @@ Siéntase libre de modificar el funcionamiento del proceso de arranque
 (después de todo, es su propio sistema LFS). Los archivos que se
 proporcionan aquí son un ejemplo de cómo se puede hacer.
 
+&nbsp;
+
 ### 9.6.3. Scripts de arranque de Udev
 
 El script de inicio */etc/rc.d/init.d/udev* inicia **udevd**, activa
@@ -17116,6 +17797,8 @@ de un dispositivo, utilice **udevadm info \--attribute-walk
 
 Para obtener información sobre la carga de módulos del kernel y udev,
 consulte la Sección 9.3.2.3, "Carga de módulos".
+
+&nbsp;
 
 ### 9.6.4. Configuración del reloj del sistema
 
@@ -17170,6 +17853,8 @@ entorno TZ.
 > 
 > Los parámetros CLOCKPARAMS y UTC también se pueden configurar en el
 > archivo */etc/sysconfig/rc.site*.
+
+&nbsp;
 
 ### 9.6.5. Configuración de la consola de Linux
 
@@ -17385,6 +18070,8 @@ adecuado (por ejemplo, SCIM admite una amplia variedad de idiomas).
 > mencionadas en los dos últimos puntos de la lista anterior no se
 > aplican.
 
+&nbsp;
+
 ### 9.6.6. Creación de archivos durante el arranque
 
 En ocasiones, es conveniente crear archivos durante el arranque. Por
@@ -17392,6 +18079,8 @@ ejemplo, suele ser necesario el directorio */tmp/.ICE-unix*. Esto se
 puede hacer creando una entrada en el script de configuración
 */etc/sysconfig/createfiles*. El formato de este archivo está incrustado
 en los comentarios del archivo de configuración predeterminado.
+
+&nbsp;
 
 ### 9.6.7. Configuración del script Sysklogd
 
@@ -17408,6 +18097,8 @@ los parámetros, establezca la variable en un valor nulo:
 > ```
 
 Consulte **man syslogd** para obtener más opciones.
+
+&nbsp;
 
 ### 9.6.8. El archivo rc.site
 
@@ -17518,6 +18209,8 @@ del archivo es la siguiente:
 > #FONT="lat0-16 -m 8859-15"
 > #LEGACY_CHARSET=
 > ```
+
+&nbsp;
 
 ### 9.6.8.1. Personalización de los scripts de arranque y apagado
 
@@ -17940,6 +18633,8 @@ El paquete Linux contiene el kernel de Linux.
 |---------------------------------|-------|
 |Espacio en disco requerido:|1,7 - 14 GB<br>(normalmente unos 2,3 GB)|
 
+&nbsp;
+
 ### 10.3.1. Instalación del kernel
 
 La compilación del kernel implica varios pasos: configuración,
@@ -18323,6 +19018,8 @@ entonces acceso de escritura al código fuente del kernel.
 > los paquetes que desee compilar una vez que su sistema LFS base esté
 > completo.
 
+&nbsp;
+
 ### 10.3.2. Configuración del orden de carga de módulos de Linux
 
 La mayoría de las veces, los módulos de Linux se cargan automáticamente,
@@ -18349,11 +19046,15 @@ siguiente:
 > EOF
 > ```
 
+&nbsp;
+
 ### 10.3.3. Contenido de Linux
 
 **Archivos instalados**: config-6.13.4, vmlinuz-6.13.4-lfs-12.3 y
 System.map-6.13.4
 **Directorios instalados**: /lib/modules, /usr/share/doc/linux-6.13.4
+
+&nbsp;
 
 ### Descripciones breves
 
@@ -18386,6 +19087,8 @@ de datos en el núcleo.
 > compatibilidad con UEFI siguiendo las instrucciones de la *página
 > BLFS*.
 
+&nbsp;
+
 ### 10.4.1. Introducción
 
 > 🛑 **Advertencia**
@@ -18408,6 +19111,8 @@ el paquete *libisoburn*.
 > xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso
 > ```
 
+&nbsp;
+
 ### 10.4.2. Convenciones de nomenclatura de GRUB
 
 GRUB utiliza su propia estructura de nomenclatura para unidades y
@@ -18421,6 +19126,8 @@ ambos números empezaban desde cero. Por ejemplo, la partición *sda1* es
 no considera las unidades de CD-ROM como discos duros. Por ejemplo, si
 se usa un CD en *hdb* y un segundo disco duro en *hdc,* ese segundo
 disco duro seguirá siendo *(hd1)*.
+
+&nbsp;
 
 ### 10.4.3. Configuración
 
@@ -18468,6 +19175,8 @@ arranque:
 > intentará instalar los archivos para el destino *x86_64-efi*, pero
 > estos archivos no se instalaron en el Capítulo 8. En ese caso, añada
 > *\--target i386-pc* al comando anterior.
+
+&nbsp;
 
 ### 10.4.4. Creación del archivo de configuración de GRUB
 
@@ -18785,11 +19494,15 @@ son necesarios en todos los entornos. Por ejemplo, *dhcpcd* no suele ser
 apropiado para un servidor, y wireless_tools solo suele ser útil para un
 sistema portátil.
 
+&nbsp;
+
 ### 11.5.2. Trabajando en un entorno LFS básico
 
 Al iniciar LFS por primera vez, se dispone de todas las herramientas
 internas para crear paquetes adicionales. Desafortunadamente, el entorno
 de usuario es bastante escaso. Hay un par de maneras de mejorar esto.
+
+&nbsp;
 
 ### 11.5.2.1. Trabajar desde el host LFS en chroot
 
@@ -18883,6 +19596,8 @@ Este alias es un poco complejo debido a las comillas y los niveles de
 barra invertida. Debe estar todo en una sola línea. El comando anterior
 se ha dividido en dos para facilitar la presentación.
 
+&nbsp;
+
 ### 11.5.2.2. Trabajo remoto mediante ssh
 
 Este método también proporciona un entorno gráfico completo, pero
@@ -18898,6 +19613,8 @@ paquetes que se compilarán en el sistema LFS. Si prefiere descargar el
 código fuente directamente en el sistema LFS, instale *libtasn1,
 p11-kit*, *make-ca* y *wget* en chroot (o cargue sus fuentes mediante
 **scp** después de iniciar el sistema LFS).
+
+&nbsp;
 
 ### 11.5.2.3. Trabajar desde la línea de comandos de LFS
 
