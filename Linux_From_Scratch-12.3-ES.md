@@ -3527,7 +3527,7 @@ el nuevo perfil de usuario:
 &nbsp;
 &nbsp;
 
-## 4.5. Acerca de las Standard Build Unit o SBU
+## 4.5. Acerca de Standard Build Unit o SBU
 
 Muchas personas desean saber de antemano cuánto tiempo se tarda
 aproximadamente en compilar e instalar cada paquete.
