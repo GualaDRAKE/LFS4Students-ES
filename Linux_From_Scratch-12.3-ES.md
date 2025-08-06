@@ -3380,7 +3380,7 @@ archivo .bashrc ahora:
 > EOF
 > ```
 
-Significado de la configuración en .bashrc
+**Significado de la configuración en .bashrc**:
 
 set +h
 
@@ -4153,7 +4153,7 @@ Ahora prepare Binutils para la compilación:
 >               --enable-default-hash-style=gnu
 > ```
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 \--prefix=\$LFS/tools
 
@@ -4310,7 +4310,7 @@ Preparar GCC para la compilación:
 >     --enable-languages=c,c++
 > ```
 
-El significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 \--with-glibc-version=2.41
 
@@ -4542,7 +4542,7 @@ A continuación, prepare Glibc para la compilación:
 >       libc_cv_slibdir=/usr/lib
 > ```
 
-El significado de Opciones de configuración:
+**Significado de Opciones de configuración**:
 
 \--host=\$LFS_TGT, \--build=\$(../scripts/config.guess)
 
@@ -4614,7 +4614,7 @@ Instalar el paquete:
 > make DESTDIR=$LFS install
 > ```
 
-Significado de la opción make install:
+**Significado de la opción make install**:
 
 DESTDIR=\$LFS
 
@@ -4710,7 +4710,7 @@ Prepare Libstdc++ para la compilación:
 >     --with-gxx-include-dir=/tools/$LFS_TGT/include/c++/14.2.0
 > ```
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 \--host=\...
 
@@ -4863,7 +4863,7 @@ Preparar Ncurses para la compilación:
 >             AWK=gawk
 > ```
 
-El significado de las nuevas opciones de configuración:
+**Significado de las nuevas opciones de configuración**:
 
 \--with-manpage-format=normal
 
@@ -4957,7 +4957,7 @@ Los detalles de este paquete se encuentran en la Sección 8.30.2, "Contenido de 
 
 El paquete Bash contiene Bourne-Again Shell.
 
-|**Tiempo de compilación aproximado**:|0.2 SBU|
+|**Tiempo de compilación aproximado**:|0,2 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|68 MB|
 
@@ -5008,7 +5008,7 @@ Los detalles de este paquete se encuentran en la Sección 8.36.2, "Contenido de 
 El paquete Coreutils contiene las utilidades básicas que necesita
 cualquier sistema operativo.
 
-|**Tiempo de compilación aproximado**:|0.3 SBU|
+|**Tiempo de compilación aproximado**:|0,3 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|181 MB|
 
@@ -5101,7 +5101,7 @@ Los detalles de este paquete se encuentran en la Sección 8.60.2, "Contenido de 
 
 El paquete File contiene una utilidad para determinar el tipo de uno o más archivos.
 
-|**Tiempo de compilación aproximado**:|0.1 SBU|
+|**Tiempo de compilación aproximado**:|0,1 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerido**:|42 MB|
 
@@ -5122,7 +5122,7 @@ los siguientes comandos para crear una copia temporal del archivo:
 > popd
 > ```
 
-Significado de la nueva opción de configuración:
+**Significado de la nueva opción de configuración**:
 
 \--disable-\*
 
@@ -5290,9 +5290,9 @@ Los detalles de este paquete se encuentran en la Sección 8.35.2, "Contenido de 
 
 El paquete Gzip contiene programas para comprimir y descomprimir archivos.
 
-Tiempo de compilación aproximado: 0,1 SBU
-
-Espacio en disco requerido: 11 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|11 MB|
 
 ### 6.11.1. Instalación de Gzip
 
@@ -5342,7 +5342,7 @@ Preparar Make para la compilación:
 >             --build=$(build-aux/config.guess)
 > ```
 
-Significado de la nueva opción de configuración:
+**Significado de la nueva opción de configuración**:
 
 \--without-guile
 
@@ -5450,7 +5450,7 @@ manipulaciones de archivos. Tar se puede usar en archivos creados
 previamente para extraer archivos, almacenar archivos adicionales o
 actualizar o listar archivos ya almacenados.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|42 MB|
 
@@ -5490,7 +5490,7 @@ Ofrece funciones para los formatos de compresión lzma y xz, que son más
 recientes. Comprimir archivos de texto con xz ofrece un mejor porcentaje
 de compresión que con los comandos tradicionales gzip o bzip2.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|21 MB|
 
@@ -5537,7 +5537,7 @@ Los detalles de este paquete se encuentran en la Sección 8.8.2,
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-|Tiempo de compilación aproximado:|0.4 SBU|
+|Tiempo de compilación aproximado:|0,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|539 MB|
 
@@ -5577,7 +5577,7 @@ Preparar Binutils para la compilación:
 >     --enable-default-hash-style=gnu
 > ```
 
-Significado de las nuevas opciones de configuración:
+**Significado de las nuevas opciones de configuración**:
 
 \--enable-shared
 
@@ -5693,7 +5693,7 @@ Ahora prepare GCC para la compilación:
 >     --enable-languages=c,c++
 > ```
 
-Significado de las nuevas opciones de configuración:
+**Significado de las nuevas opciones de configuración**:
 
 \--with-build-sysroot=\$LFS
 
@@ -6199,7 +6199,7 @@ localización. Estas permiten compilar programas con NLS (Soporte de
 Lenguaje Nativo), lo que les permite mostrar mensajes en el idioma
 nativo del usuario.
 
-|Tiempo de compilación aproximado:|1.3 SBU|
+|Tiempo de compilación aproximado:|1,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|349 MB|
 
@@ -6213,7 +6213,7 @@ compilación:
 > ./configure --disable-shared
 > ```
 
-Significado de la opción de configuración:
+**Significado de la opción de configuración**:
 
 \--disable-shared
 
@@ -6381,7 +6381,7 @@ Preparar Python para la compilación:
 >             --without-ensurepip
 > ```
 
-Significado de la opción de configuración:
+**Significado de la opción de configuración**:
 
 \--enable-shared
 
@@ -6460,7 +6460,7 @@ Los detalles de este paquete se encuentran en la Sección 8.72.2,
 
 El paquete Util-linux contiene diversas utilidades.
 
-|Tiempo de compilación aproximado:|0.2 SBU|
+|Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|182 MB|
 
@@ -7104,7 +7104,7 @@ Finalmente, el nuevo sistema debe ser arrancable mediante la Sección
 
 El paquete de páginas de manual contiene más de 2400 páginas de manual.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|52 MB|
 
@@ -7156,7 +7156,7 @@ configuración significativos.
 El paquete Iana-Etc proporciona datos para servicios y protocolos de
 red.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|4,8 MB|
 
@@ -7861,7 +7861,7 @@ Prepare Bzip2 para la compilación con:
 > make clean
 > ```
 
-Significado del parámetro make:
+**Significado del parámetro make**:
 
 -f Makefile-libbz2_so
 
@@ -7954,7 +7954,7 @@ Ofrece funciones para los formatos de compresión lzma y xz, que son más
 recientes. Comprimir archivos de texto con xz ofrece un mejor porcentaje
 de compresión que con los comandos tradicionales gzip o bzip2.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|21 MB|
 
@@ -8119,7 +8119,7 @@ altas tasas de compresión. Ofrece una amplia gama de ventajas y
 desventajas entre compresión y velocidad, además de estar respaldado por
 un decodificador muy rápido.
 
-|Tiempo de compilación aproximado:|0.4 SBU|
+|Tiempo de compilación aproximado:|0,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|85 MB|
 
@@ -8181,7 +8181,7 @@ mediante el algoritmo ZSTD.
 El paquete Archivo contiene una utilidad para determinar el tipo de uno
 o más archivos.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|19 MB|
 
@@ -8264,7 +8264,7 @@ Preparar Readline para la compilación:
 >             --docdir=/usr/share/doc/readline-8.2.13
 > ```
 
-Significado de la nueva opción de configuración:
+**Significado de la nueva opción de configuración**:
 
 \--with-curses
 
@@ -8278,7 +8278,7 @@ Compilar el paquete:
 > make SHLIB_LIBS="-lncursesw"
 > ```
 
-Significado de la opción \"make\":
+**Significado de la opción make**:
 
 *SHLIB_LIBS=\"-lncursesw\"*
 
@@ -8321,7 +8321,7 @@ texto introducido en una sesión interactiva de un programa.
 
 El paquete M4 contiene un procesador de macros.
 
-|Tiempo de compilación aproximado:|0.3 SBU|
+|Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|49 MB|
 
@@ -8518,7 +8518,7 @@ El paquete Tcl contiene el Lenguaje de Comandos de Herramientas, un
 lenguaje de scripting robusto y de propósito general. El paquete Expect
 está escrito en Tcl (se pronuncia \"cosquillas\").
 
-|Tiempo de compilación aproximado:|3.1 SBU|
+|Tiempo de compilación aproximado:|3,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|91 MB|
 
@@ -8540,7 +8540,7 @@ Preparar Tcl para la compilación:
 >             --disable-rpath
 > ```
 
-Significado de los nuevos parámetros de configuración:
+**Significado de los nuevos parámetros de configuración**:
 
 \--disable-rpath
 
@@ -8654,9 +8654,9 @@ mismas aplicaciones, así como para facilitar todo tipo de tareas que
 resultan extremadamente difíciles con cualquier otro sistema. El
 framework DejaGnu está escrito en Expect.
 
-|Tiempo de compilación aproximado:|0.2 SBU|
+|Tiempo de compilación aproximado:|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|3.9 MB|
+|Espacio en disco requerido:|3,9 MB|
 
 ### 8.17.1. Instalación de Expect
 
@@ -8690,7 +8690,7 @@ Preparar Expect para la compilación:
 
 > ```bash
 > ./configure --prefix=/usr           \
->             --with-tcl=/usr/lib   \
+>             --with-tcl=/usr/lib     \
 >             --enable-shared         \
 >             --disable-rpath         \
 >             --mandir=/usr/share/man \
@@ -8869,7 +8869,7 @@ frameworks.
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-|Tiempo de compilación aproximado:|1.6 SBU|
+|Tiempo de compilación aproximado:|1,6 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|819 MB|
 
@@ -8898,7 +8898,7 @@ Preparar Binutils para la compilación:
 >              --enable-default-hash-style=gnu
 > ```
 
-Significado de los nuevos parámetros de configuración:
+**Significado de los nuevos parámetros de configuración**:
 
 \--enable-ld=default
 
@@ -8920,7 +8920,7 @@ Compilar el paquete:
 > make tooldir=/usr
 > ```
 
-Significado del parámetro make:
+**Significado del parámetro make**:
 
 tooldir=/usr
 
@@ -9055,7 +9055,7 @@ utilizando un desempaquetador (unwinder) simple..
 El paquete GMP contiene bibliotecas matemáticas. Estas ofrecen funciones
 útiles para cálculos aritméticos de precisión arbitraria.
 
-|Tiempo de compilación aproximado:|0.3 SBU|
+|Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|54 MB|
 ### 8.21.1. Instalación de GMP
@@ -9088,7 +9088,7 @@ Preparar GMP para la compilación:
 >             --docdir=/usr/share/doc/gmp-6.3.0
 > ```
 
-Significado de las nuevas opciones de configuración:
+**Significado de las nuevas opciones de configuración**:
 
 \--enable-cxx
 
@@ -9488,7 +9488,7 @@ Preparar Libxcrypt para la compilación:
 >             --disable-failure-tokens
 > ```
 
-**El significado de las nuevas opciones de configuración**:
+**Significado de las nuevas opciones de configuración**:
 
  \--enable-hashes=strong,glibc
 
@@ -10328,7 +10328,7 @@ Preparar Ncurses para la compilación:
 >             --with-pkg-config-libdir=/usr/lib/pkgconfig
 > ```
 
-**El significado de las nuevas opciones de configuración**:
+**Significado de las nuevas opciones de configuración**:
 
 \--with-shared
 
@@ -10548,9 +10548,9 @@ Instalar el paquete y su documentación:
 El paquete Psmisc contiene programas para mostrar información sobre
 los procesos en ejecución.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-
-Espacio en disco necesario: 6,7 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|6,7 MB|
 
 ### 8.32.1. Instalación de Psmisc
 
@@ -10616,7 +10616,7 @@ y localización. Estas permiten compilar programas con NLS (Soporte de
 Lenguaje Nativo), lo que les permite mostrar mensajes en el idioma
 nativo del usuario.
 
-|Tiempo de compilación aproximado:|1.7 SBU|
+|Tiempo de compilación aproximado:|1,7 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|290 MB|
 
@@ -10760,7 +10760,7 @@ traducidos.
 El paquete Bison contiene un generador de analizadores
 sintácticos.
 
-|Tiempo de compilación aproximado:|2.1 SBU|
+|Tiempo de compilación aproximado:|2,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|62 MB|
 
@@ -10877,7 +10877,7 @@ básica.
 
 El paquete Bash contiene Bourne-Again Shell.
 
-|Tiempo de compilación aproximado:|1.4 SBU|
+|Tiempo de compilación aproximado:|1,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|53 MB|
 
@@ -10986,7 +10986,7 @@ El paquete Libtool contiene el script de soporte para bibliotecas
 genéricas de GNU. Simplifica el uso de bibliotecas compartidas con una
 interfaz consistente y portátil.
 
-|Tiempo de compilación aproximado:|0.6 SBU|
+|Tiempo de compilación aproximado:|0,6 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|44 MB|
 
@@ -11406,7 +11406,7 @@ nombres de archivo en sistemas Unix.
 El paquete Perl contiene el Lenguaje Práctico de Extracción e
 Informes.
 
-|Tiempo de compilación aproximado:|1.3 SBU|
+|Tiempo de compilación aproximado:|1,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|245 MB|
 
@@ -11792,7 +11792,7 @@ lagunas en un archivo configure.in generado por
 El paquete Automake contiene programas para generar archivos
 Makefile para usar con Autoconf.
 
-|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 1.1 SBU con pruebas)|
+|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 1,1 SBU con pruebas)|
 |---------------------------------|-------|
 |Espacio en disco requerido:|121 MB|
 
@@ -11863,7 +11863,7 @@ relacionadas con la criptografía. Estas son útiles para proporcionar
 funciones criptográficas a otros paquetes, como OpenSSH, aplicaciones de
 correo electrónico y navegadores web (para acceder a sitios HTTPS).
 
-|Tiempo de compilación aproximado:|1.8 SBU|
+|Tiempo de compilación aproximado:|1,8 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|920 MB|
 
@@ -12032,7 +12032,7 @@ programa escrito en un lenguaje llame a un programa escrito en otro.
 Específicamente, Libffi puede servir de puente entre un intérprete como
 Perl o Python y subrutinas de biblioteca compartida escritas en C o C++.
 
-|Tiempo de compilación aproximado:|1.7 SBU|
+|Tiempo de compilación aproximado:|1,7 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|11 MB|
 
@@ -12054,7 +12054,7 @@ Prepare Libffi para la compilación:
 >             --disable-static \
 >             --with-gcc-arch=native
 
-Significado de la opción de configuración:
+**Significado de la opción de configuración**:
 
 \--with-gcc-arch=native
 
@@ -12103,7 +12103,7 @@ la creación de prototipos de programas grandes y el desarrollo de
 aplicaciones completas. Python es un lenguaje de programación
 interpretado.
 
-|Tiempo de compilación aproximado:|2.1 SBU|
+|Tiempo de compilación aproximado:|2,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|501 MB|
 
@@ -12270,7 +12270,7 @@ módulos Python simples) que permite compilar distribuciones.
 
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|1.0 MB|
+|Espacio en disco requerido:|1,0 MB|
 
 ### 8.52.1. Instalación de Flit-Core
 
@@ -12618,7 +12618,7 @@ cargar y descargar módulos del kernel.
 El paquete Coreutils contiene las utilidades básicas necesarias para
 cualquier sistema operativo.
 
-|Tiempo de compilación aproximado:|1.2 SBU|
+|Tiempo de compilación aproximado:|1,2 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|182 MB|
 
@@ -13051,7 +13051,7 @@ elimina.
 
 Check es un framework de pruebas unitarias para C
 
-|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 2.1 SBU con pruebas)|
+|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 2,1 SBU con pruebas)|
 |---------------------------------|-------|
 |Espacio en disco requerido:|11 MB|
 
@@ -13263,7 +13263,8 @@ Preparar Findutils para la compilación:
 > ```bash
 > ./configure --prefix=/usr --localstatedir=/var/lib/locate
 > ```
-Significado de las opciones de configuración:
+
+**Significado de las opciones de configuración**:
 
 \--localstatedir
 
@@ -14062,7 +14063,7 @@ El paquete Make contiene un programa para controlar la generación de
 ejecutables y otros archivos no fuente de un paquete a partir de los
 archivos fuente.
 
-|Tiempo de compilación aproximado:|0.7 SBU|
+|Tiempo de compilación aproximado:|0,7 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|13 MB|
 
@@ -14164,10 +14165,9 @@ manipulaciones de archivos. Tar se puede usar en archivos previamente
 creados para extraer archivos, almacenar archivos adicionales,
 actualizar o listar archivos ya almacenados.
 
-
-Tiempo de compilación aproximado: 0.6 SBU
-
-Espacio en disco requerido: 43 MB
+|Tiempo de compilación aproximado:|0,6 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|43 MB|
 
 ### 8.71.1. Instalación de Tar
 
@@ -14178,7 +14178,7 @@ Preparar Tar para la compilación:
 > ./configure --prefix=/usr
 > ```
 
-Significado de la opción de configuración:
+**Significado de la opción de configuración**:
 
 FORCE_UNSAFE_CONFIGURE=1
 
@@ -14231,7 +14231,7 @@ comprimidos, también conocidos como tarballs.
 El paquete Texinfo contiene programas para leer, escribir y
 convertir páginas de información.
 
-|Tiempo de compilación aproximado:|0.3 SBU|
+|Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|160 MB|
 
@@ -14268,7 +14268,7 @@ TeX:
 > make TEXMF=/usr/share/texmf install-tex
 > ```
 
-****Significado del parámetro make:****
+**Significado del parámetro make**:
 
 TEXMF=/usr/share/texmf
 
@@ -14340,7 +14340,7 @@ Texinfo.
 
 El paquete Vim contiene un potente editor de texto.
 
-|Tiempo de compilación aproximado:|3.4 SBU|
+|Tiempo de compilación aproximado:|3,4 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|251 MB|
 
@@ -14575,7 +14575,8 @@ plantillas Python simple.
 
 |Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|2.5 MB|
+|Espacio en disco requerido:|2,5 MB|
+
 ### 8.75.1. Instalación de Jinja2
 
 Compilación del paquete:
@@ -14604,7 +14605,7 @@ Instalación del paquete:
 El paquete Udev contiene programas para la creación dinámica de nodos de
 dispositivos.
 
-|Tiempo de compilación aproximado:|0.3 SBU|
+|Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|161 MB|
 
@@ -14650,7 +14651,7 @@ Prepare Udev para la compilación:
 >       -D vconsole=false
 > ```
 
-Significado de las opciones de meson:
+**Significado de las opciones de meson**:
 
 \--buildtype=release
 
@@ -14804,7 +14805,7 @@ de dispositivos y reglas para la nomenclatura de dispositivos.
 El paquete Man-DB contiene programas para buscar y visualizar
 páginas de manual.
 
-|Tiempo de compilación aproximado:|0.3 SBU|
+|Tiempo de compilación aproximado:|0,3 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|44 MB|
 
@@ -14825,7 +14826,7 @@ Preparar Man-DB para la compilación:
 >             --with-systemdsystemunitdir
 > ```
 
-Significado de las opciones de configuración:
+**Significado de las opciones de configuración**:
 
 \--disable-setuid
 
@@ -14960,7 +14961,7 @@ como una palabra separada.
 El paquete Procps-ng contiene programas para monitorizar
 procesos.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado:|0,1 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|28 MB|
 
@@ -15074,7 +15075,7 @@ El paquete Util-linux contiene diversas utilidades. Entre ellas, se
 encuentran utilidades para gestionar sistemas de archivos, consolas,
 particiones y mensajes.
 
-|Tiempo de compilación aproximado:|0.5 SBU|
+|Tiempo de compilación aproximado:|0,5 SBU|
 |---------------------------------|-------|
 |Espacio en disco requerido:|316 MB|
 
@@ -16133,8 +16134,9 @@ iniciar/detener el sistema LFS al arrancar/apagar. Los archivos de
 configuración y los procedimientos necesarios para personalizar el
 proceso de arranque se describen en las siguientes secciones.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-Espacio en disco necesario: 244 KB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|244 KB|
 
 ### 9.2.1. Instalación de LFS-Bootscripts
 
@@ -17989,7 +17991,7 @@ esto se hace mediante una interfaz de menús, por ejemplo:
 > make menuconfig
 > ```
 
-El significado de las variables de entorno opcionales de make:
+**Significado de las variables de entorno opcionales de make**:
 
 LANG=<host_LANG_value> LC_ALL=
 
