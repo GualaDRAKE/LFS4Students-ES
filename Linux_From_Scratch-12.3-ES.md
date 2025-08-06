@@ -171,6 +171,8 @@ mucho, la razón más importante. A medida que avance en su experiencia
 con LFS, descubrirá el poder que la información y el conocimiento pueden
 aportar.
 
+&nbsp;
+
 ## Arquitecturas de destino de LFS
 
 Las principales arquitecturas de destino de LFS son las CPU AMD/Intel
@@ -256,6 +258,8 @@ buen resumen de las técnicas básicas para crear e instalar software.
 Esta guía proporciona un buen resumen de las habilidades y técnicas
 básicas necesarias para crear software a partir del código fuente.
 
+&nbsp;
+
 ## LFS y estándares
 
 La estructura de LFS sigue los estándares de Linux al máximo. Los
@@ -323,6 +327,8 @@ encontrar en BLFS.
 |Lenguajes LSB:|/usr/bin/python (LSB requiere Python 2, pero LFS y BLFS solo ofrecen Python 3)|
 |Imágenes LSB:|Ninguna|
 |LSB Gtk3<br> y<br> LSB Graphics (uso de prueba):<br>|libpng15.so (pero libpng16.so lo proporciona el paquete Libpng de BLFS)|
+
+&nbsp;
 
 ## Justificación de los paquetes del libro
 
@@ -3246,6 +3252,8 @@ unidades de tiempo (SBU) que utilizamos para medir el tiempo de
 compilación de paquetes LFS y proporcionaremos información sobre los
 conjuntos de pruebas de paquetes.
 
+&nbsp;
+
 ## 4.2. Creación de una distribución de directorios limitada en el sistema de archivos LFS
 
 En esta sección, comenzamos a poblar el sistema de archivos LFS con los
@@ -3692,7 +3700,6 @@ suites de pruebas de este libro.
 &nbsp;
 &nbsp;
 
-
 ## Parte III. Creación de la cadena de herramientas cruzadas de LFS y herramientas temporales
 
 ## Material preliminar importante
@@ -3722,6 +3729,8 @@ La siguiente sección es una introducción técnica al proceso de
 compilación, mientras que la siguiente presenta instrucciones generales
 muy importantes.
 
+&nbsp;
+
 ## Notas técnicas de la cadena de compilación o Toolchain
 
 Esta sección explica algunos de los fundamentos y detalles técnicos del
@@ -3747,6 +3756,8 @@ LFS, ya que la máquina donde se ejecutará el nuevo sistema es la misma
 que se utilizó para la compilación. Sin embargo, la compilación cruzada
 tiene una gran ventaja: todo lo compilado de forma cruzada no puede
 depender del entorno del host.
+
+&nbsp;
 
 ## Acerca de la compilación-cruzada
 
@@ -3943,6 +3954,8 @@ paquetes temporales carezcan de características opcionales o utilicen
 rutinas de código deficientes. Además, una razón menor para reconstruir
 los paquetes es ejecutar las suites de pruebas.
 
+&nbsp;
+
 ## Otros detalles del procedimiento
 
 El compilador cruzado se instalará en un directorio separado,
@@ -4038,6 +4051,8 @@ cadena de herramientas principal es autocontenida y autoalojada.
 En el Capítulo 8, se construyen, prueban e instalan las versiones
 finales de todos los paquetes necesarios para un sistema completamente
 funcional.
+
+&nbsp;
 
 ## Instrucciones generales de compilación
 
@@ -5883,6 +5898,8 @@ afortunadamente sin acceso al sistema operativo del equipo en el que se
 creó LFS. Tenga cuidado, ya que es fácil destruir todo el sistema LFS
 con comandos erróneos.
 
+&nbsp;
+
 ## 7.2. Cambio de propiedad
 
 > ℹ️ **Nota**
@@ -6818,6 +6835,8 @@ continúe compilando el resto del sistema.
 > describe en la Sección 7.3, "Preparación de los sistemas de archivos
 > virtuales del kernel" y vuelva a acceder al entorno chroot (consulte
 > la Sección 7.4, "Acceso al entorno chroot") antes de continuar.
+
+&nbsp;
 
 ## Parte IV. Compilación del sistema LFS
 
@@ -8421,6 +8440,10 @@ lenguaje.
 
 *libmagic* Contiene rutinas para el reconocimiento de números mágicos,
 utilizadas por el programa Archivo.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.12. Readline-8.2.13
 
@@ -10863,6 +10886,10 @@ Instalar el paquete y su documentación:
 ### Descripciones breves
 
 **sed** Filtra y transforma archivos de texto en una sola pasada
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.32. Psmisc-23.7
 
@@ -18535,6 +18562,10 @@ un kernel para el nuevo sistema LFS y la instalación del gestor de
 arranque GRUB para que el sistema LFS pueda seleccionarse para el
 arranque al inicio.
 
+---
+&nbsp;
+&nbsp;
+
 ## 10.2. Creación del archivo /etc/fstab
 
 Algunos programas utilizan el archivo */etc/fstab* para determinar dónde
@@ -18629,6 +18660,10 @@ devuelve una salida no vacía; la opción es compatible.
 > ℹ️ **Nota**
 > Las particiones basadas en la gestión de volúmenes lógicos (LVM)
 > no pueden usar la opción de *barrera (barrier)*.
+
+---
+&nbsp;
+&nbsp;
 
 ## 10.3. Linux-6.13.4
 
