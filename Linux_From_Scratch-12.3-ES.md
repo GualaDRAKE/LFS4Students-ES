@@ -5866,7 +5866,7 @@ Ahora monte los sistemas de archivos virtuales del kernel restantes:
 > mount -vt proc proc $LFS/proc
 > mount -vt sysfs sysfs $LFS/sys
 > mount -vt tmpfs tmpfs $LFS/run
-> ```bash
+> ```
 
 **Significado de las opciones de montaje para devpts**:
 
