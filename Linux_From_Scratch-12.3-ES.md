@@ -13881,7 +13881,8 @@ Si lo desea, instale la documentación:
 
 **Programas instalados**: bridge, ctstat (enlace a lnstat), genl,
 ifstat, ip, lnstat, nstat, routel, rtacct, rtmon, rtpr, rtstat (enlace a
-lnstat), ss y tc****
+lnstat), ss y tc
+
 **Directorios instalados**: /etc/iproute2, /usr/lib/tc y /usr/share/doc/iproute2-6.13.0
 
 ### Descripciones breves
@@ -13924,9 +13925,9 @@ lnstat), ss y tc****
 El paquete Kbd contiene archivos de tabla de teclas, fuentes de
 consola y utilidades de teclado.
 
-Tiempo de compilación aproximado: 0.1 SBU
-
-Espacio en disco necesario: 34 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|34 MB|
 
 ### 8.67.1. Instalación de Kbd
 
@@ -13934,9 +13935,9 @@ El comportamiento de las teclas de retroceso y suprimir no es
 uniforme en los mapas de teclas del paquete Kbd. El siguiente parche
 corrige este problema para los mapas de teclas i386:
 
-  --------------------------------------------------
-  patch -Np1 -i ../kbd-2.7.1-backspace-1.patch
-  --------------------------------------------------
+> ```bash
+> patch -Np1 -i ../kbd-2.7.1-backspace-1.patch
+> ```
 
 Tras la aplicación del parche, la tecla de retroceso genera el
 carácter con el código 127, y la tecla suprimir genera una secuencia de
@@ -13947,14 +13948,16 @@ Elimine el programa redundante **resizecons** (requiere la extinta
 normal, \`**setfont**\` ajusta el tamaño de la consola correctamente)
 junto con su página de manual.
 
-> sed -i 'RESIZECONS_PROGS*=/s/yes/no/' configure
+> ```bash
+> sed -i '/RESIZECONS_PROGS=/s/yes/no/' configure
 > sed -i 's/resizecons.8 //' docs/man/man8/Makefile.in
+> ```
 
 Preparar Kbd para la compilación:
 
-  ------------------------------------------------------
- ./configure \--prefix=/usr --disable-vlock
-  ------------------------------------------------------
+> ```bash
+> ./configure --prefix=/usr --disable-vlock
+> ```
 
 **Significado de la opción configure**:
 
@@ -13966,21 +13969,21 @@ chroot.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
-****Para comprobar los resultados, ejecute:****
+Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------------
-  make install
-  ------------------------
+> ```bash
+> make install
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -13990,13 +13993,12 @@ Instalar el paquete:
 > normalmente se utiliza la configuración CP1251. Los usuarios de
 > estos idiomas deben descargar las configuraciones de teclado
 > funcionales por separado.
-> +----------------------------------------------------------------------+
 
 Si lo desea, instale la documentación:
 
-  ---------------------------------------------------------
-  cp -R -v docs/doc -T /usr/share/doc/kbd-2.7.1
-  ---------------------------------------------------------
+> ```bash
+> cp -R -v docs/doc -T /usr/share/doc/kbd-2.7.1
+> ```
 
 ### 8.67.2. Contenido de Kbd
 
@@ -14006,7 +14008,6 @@ openvt, psfaddtable (enlace a psfxtable), psfgettable (enlace a
 psfxtable), psfstriptable (enlace a psfxtable), psfxtable, setfont,
 setkeycodes, setleds, setmetamode, setvtrgb, showconsolefont, showkey,
 unicode_start y unicode_stop
-
 **Directorios instalados**: /usr/share/consolefonts,
 /usr/share/consoletrans, /usr/share/keymaps, /usr/share/doc/kbd-2.7.1 y
 /usr/share/unimaps
@@ -14047,7 +14048,7 @@ consola
 **psfgettable** Extrae la tabla de caracteres Unicode incrustada de una
 fuente de consola
 
-**psfstriptable**Elimina la tabla de caracteres Unicode incrustada de
+**psfstriptable** Elimina la tabla de caracteres Unicode incrustada de
 una fuente de consola
 
 **psfxtable** Administra las tablas de caracteres Unicode para fuentes
@@ -14081,40 +14082,44 @@ produce resultados incorrectos\]
 
 **unicode_stop** Revierte el teclado y la consola del modo UNICODE
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.68. Libpipeline-1.5.8
 
 El paquete Libpipeline contiene una biblioteca para manipular
 pipelines de subprocesos de forma flexible y práctica
 
-Tiempo de compilación aproximado: 0.1 SBU
-
-Espacio en disco necesario: 11 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|11 MB|
 
 ### 8.68.1. Instalación de Libpipeline
 
 Preparar Libpipeline para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.68.2. Contenido de Libpipeline
 
@@ -14122,8 +14127,12 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**libpipeline** Esta biblioteca se utiliza para construir
+*libpipeline* Esta biblioteca se utiliza para construir
 pipelines entre subprocesos de forma segura
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.69. Make-4.4.1
 
@@ -14131,34 +14140,36 @@ El paquete Make contiene un programa para controlar la generación de
 ejecutables y otros archivos no fuente de un paquete a partir de los
 archivos fuente.
 
-Tiempo de compilación aproximado: 0.7 SBU
-
-Espacio en disco necesario: 13 MB
+|Tiempo de compilación aproximado:|0.7 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|13 MB|
 
 ## 8.69.1. Instalación de Make
 
 Preparar Make para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para probar los resultados, ejecute:
 
+> ```bash
 > chown -R tester .
-> su tester -c \"PATH=\$PATH make check\
+> su tester -c "PATH=$PATH make check"
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.69.2. Contenido de Make
 
@@ -14169,41 +14180,45 @@ Instalar el paquete:
 **make** Determina automáticamente qué partes de un paquete deben
 (re)compilarse y luego ejecuta los comandos correspondientes.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.70. Parche-2.7.6
 
 El paquete de parches contiene un programa para modificar o crear
 archivos mediante la aplicación de un archivo de parche, generalmente
 creado por el programa **diff**.
 
-Tiempo de compilación aproximado: 0.2 SBU
-
-Espacio en disco necesario: 12 MB
+|Tiempo de compilación aproximado:|0.2 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|12 MB|
 
 ### **8.70.1. Instalación del parche**
 
 Preparar el parche para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.70.2. Contenido del parche
 
@@ -14216,12 +14231,17 @@ de parche suele ser una lista de diferencias creada con el programa
 **diff**. Al aplicar estas diferencias a los archivos originales,
 **patch** crea las versiones parcheadas).
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.71. Tar-1.35
 
 El paquete Tar permite crear archivos tar, así como realizar otras
 manipulaciones de archivos. Tar se puede usar en archivos previamente
 creados para extraer archivos, almacenar archivos adicionales,
 actualizar o listar archivos ya almacenados.
+
 
 Tiempo de compilación aproximado: 0.6 SBU
 
@@ -14231,8 +14251,10 @@ Espacio en disco requerido: 43 MB
 
 Preparar Tar para la compilación:
 
+> ```bash
 > FORCE_UNSAFE_CONFIGURE=1 \
 > ./configure --prefix=/usr
+> ```
 
 Significado de la opción de configuración:
 
@@ -14245,17 +14267,17 @@ compilado parcialmente, no hay problema en sobrescribirla.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
-***Se sabe que una prueba, \"capacidades: almacenamiento/restauración
+Se sabe que una prueba, \"capacidades: almacenamiento/restauración
 de binarios\", falla si se ejecuta porque LFS no es compatible con
 SELinux, pero se omitirá si el kernel del host no admite atributos
 extendidos ni etiquetas de seguridad en el sistema de archivos utilizado
@@ -14263,13 +14285,14 @@ para compilar LFS.
 
 Instalar el paquete:
 
+> ```bash
 > make install
 > make -C doc install-html docdir=/usr/share/doc/tar-1.35
+> ```
 
 ### 8.71.2. Contenido de Tar
 
 **Programas instalados**: tar
-
 **Directorio de instalación**: /usr/share/doc/tar-1.35
 
 ### Descripciones breves
@@ -14277,47 +14300,51 @@ Instalar el paquete:
 **tar** Crea, extrae archivos y lista su contenido en archivos
 comprimidos, también conocidos como tarballs.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.72. Texinfo-7.2
 
 El paquete Texinfo contiene programas para leer, escribir y
 convertir páginas de información.
 
-Tiempo aproximado de compilación: 0.3 SBU
-
-Espacio en disco requerido: 160 MB
+|Tiempo de compilación aproximado:|0.3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|160 MB|
 
 ### 8.72.1. Instalación de Texinfo
 
 Preparar Texinfo para la compilación:
 
-  -------------------------------
-  ./configure --prefix=/usr
-  -------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 Opcionalmente, instale los componentes de una instalación de
 TeX:
 
-  ---------------------------------------------------
-  make TEXMF=/usr/share/texmf install-tex
-  ---------------------------------------------------
+> ```bash
+> make TEXMF=/usr/share/texmf install-tex
+> ```
 
 ****Significado del parámetro make:****
 
@@ -14335,22 +14362,22 @@ desincronizarse con las páginas de información instaladas en el sistema.
 Si alguna vez es necesario recrear el archivo /usr/share/info/dir, los
 siguientes comandos opcionales lo harán:
 
+> ```bash
 > pushd /usr/share/info
-> rm -v dir
-> for f in \
-> do install-info \$f dir 2\>/dev/null
-> done
+>   rm -v dir
+>   for f in *
+>     do install-info $f dir 2>/dev/null
+>   done
 > popd
+> ```
 
 ### 8.72.2. Contenido de Texinfo
 
 **Programas instalados**: info, install-info, makeinfo (enlace a
 texi2any), pdftexi2dvi, pod2texi, texi2any, texi2dvi, texi2pdf y
 texindex
-
 **Bibliotecas instaladas**: MiscXS.so, Parsetexi.so y XSParagraph.so
 (todas en /usr/lib/texinfo)
-
 **Directorios instalados**: /usr/share/texinfo y /usr/lib/texinfo
 
 ### Descripciones breves
@@ -14358,10 +14385,10 @@ texindex
 **info** Se utiliza para leer páginas de información similares a las
 páginas de manual, pero que a menudo profundizan mucho más que
 simplemente explicar todas las opciones disponibles de la línea de
-comandos \[Por ejemplo, compare man bison e info bison\].
+comandos \[Por ejemplo, compare **man bison** e **info bison**\].
 
 **install-info** Se utiliza para instalar páginas de información;
-actualiza las entradas en el archivo de índice de información.
+actualiza las entradas en el archivo de índice de **información**.
 
 **makeinfo** Traduce los documentos fuente de Texinfo a páginas de
 información, texto plano o HTML.
@@ -14383,55 +14410,58 @@ archivo PDF ( Portable Document Format).
 **texindex** Se utiliza para ordenar los archivos de índice de
 Texinfo.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.73. Vim-9.1.1166
 
 El paquete Vim contiene un potente editor de texto.
 
-Tiempo de compilación aproximado: 3.4 SBU
+|Tiempo de compilación aproximado:|3.4 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|251 MB|
 
-Espacio en disco necesario: 251 MB
-
-Alternativas a Vim****
-
-Si prefiere otro editor, como Emacs, Joe o Nano, consulte****
-
-[*https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html*](https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html)
-
-para obtener instrucciones de instalación sugeridas.
+> 💡 **Alternativas a Vim**
+> 
+> Si prefiere otro editor, como Emacs, Joe o Nano, consulte [*https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html*](https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/editors.html) para obtener instrucciones de instalación sugeridas.
 
 ### 8.73.1. Instalación de Vim
 
 Primero, cambie la ubicación predeterminada del archivo de
 configuración de vimrc a /etc:
 
-  -----------------------------------------------------------------------------
-  echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
+> ```bash
+> echo '#define SYS_VIMRC_FILE "/etc/vimrc"' >> src/feature.h
   -----------------------------------------------------------------------------
 
 Prepare Vim para la compilación:
 
-  -------------------------------------
-  ./configure --prefix=/usr
-  -------------------------------------
+> ```bash
+> ./configure --prefix=/usr
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para preparar las pruebas, asegúrese de que el usuario tester pueda
 escribir en el árbol de código fuente y excluya un archivo que contenga
 pruebas que requieran **curl** o **wget**:
 
+> ```bash
 > chown -R tester .
 > sed '/test_plugin_glvs/d' -i src/testdir/Make_all.mak
+> ```
 
 Ahora ejecute las pruebas como usuario tester:
 
-> su tester -c "TERM=***xterm***-256color LANG=en_US.UTF-8 make -j1
-> test" \
-> &> vim-test.log
+> ```bash
+> su tester -c "TERM=xterm-256color LANG=en_US.UTF-8 make -j1 test" \
+>    &> vim-test.log
+> ```
 
 El conjunto de pruebas muestra una gran cantidad de datos binarios
 en la pantalla. Esto puede causar problemas con la configuración de la
@@ -14443,9 +14473,9 @@ el archivo de registro al finalizar.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 Muchos usuarios escriben \"**vi**\" en lugar de \"**vim**\" de forma
 automática. Para permitir la ejecución de **vim** cuando los usuarios
@@ -14453,19 +14483,21 @@ escriben **vi** habitualmente, cree un enlace simbólico tanto para el
 binario como para la página del manual en los idiomas
 proporcionados:
 
+> ```bash
 > ln -sv vim /usr/bin/vi
 > for L in /usr/share/man/{,*/}man1/vim.1; do
-> ln -sv vim.1 $(dirname $L)/vi.1
+>     ln -sv vim.1 $(dirname $L)/vi.1
 > done
+> ```
 
 Por defecto, la documentación de Vim se instala en /usr/share/vim.
 El siguiente enlace simbólico permite acceder a la documentación a
 través de /usr/share/doc/vim-9.1.1166, lo que la hace coherente con la
 ubicación de la documentación de otros paquetes:
 
-  ---------------------------------------------------------------
-  ln -sv ../vim/vim91doc /usr/share/doc/vim-9.1.1166
-  ---------------------------------------------------------------
+> ```bash
+> ln -sv ../vim/vim91/doc /usr/share/doc/vim-9.1.1166
+> ```
 
 Si se va a instalar un sistema X Window en el sistema LFS, puede que sea
 necesario recompilar Vim después de instalar X. Vim incluye una versión
@@ -14486,21 +14518,26 @@ modifica otras opciones, y las modificaciones deben realizarse después
 de esta. Cree un archivo de configuración de **vim** predeterminado
 ejecutando lo siguiente:
 
+> ```bash
 > cat > /etc/vimrc << "EOF"
 > " Begin /etc/vimrc
+> 
 > " Asegúrese de que los valores predeterminados se configuren antes
 > de personalizar la configuración, no después.
 > source $VIMRUNTIME/defaults.vim
 > let skip_defaults_vim=1
+> 
 > set nocompatible
 > set backspace=2
 > set mouse=
 > syntax on
 > if (&term == "xterm") || (&term == "putty")
-> set background=dark
+>   set background=dark
 > endif
-> " Fin de /etc/vimrc
+> 
+> " End /etc/vimrc
 > EOF
+> ```
 
 La opción \"*set nocompatible*\" hace que **vim** se comporte de forma
 más útil (por defecto) que con la compatibilidad con Vi.
@@ -14519,9 +14556,9 @@ para su uso sobre el fondo negro de estos programas.
 Puede obtener documentación sobre otras opciones disponibles ejecutando
 el siguiente comando:
 
-  ---------------------
-  vim -c \':options\'
-  ---------------------
+> ```bash
+> vim -c ':options'
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -14533,10 +14570,10 @@ el siguiente comando:
 > */usr/share/vim/vim91/spell/*.
 > Para usar estos archivos de corrección ortográfica, se requiere
 > cierta configuración en */etc/vimrc*, por ejemplo:
-> 
+> ```bash
 > set spelllang=en,ru
 > set spell
-> 
+> ```
 > Para más información, consulte *runtime/spell/README.txt*.
 
 ### 8.73.3. Contenido de Vim
@@ -14544,18 +14581,17 @@ el siguiente comando:
 **Programas instalados**: ex (enlace a vim), rview (enlace a vim), rvim
 (enlace a vim), vi (enlace a vim), view (enlace a vim), vim, vimdiff
 (enlace a vim), vimtutor y xxd
-
 **Directorio de instalación**: /usr/share/vim
 
 ### Descripciones breves
 
 **ex** Inicia **vim** en modo ex
 
-**rview** Es una versión restringida de view; no se pueden iniciar
-comandos de shell ni suspender view.
+**rview** Es una versión restringida de **view**; no se pueden iniciar
+comandos de shell ni suspender **view**.
 
-****r****vim**** Es una versión restringida de vim; No se pueden iniciar
-comandos de shell y ****v****im**** no se puede suspender.
+**rvim** Es una versión restringida de **vim**; No se pueden iniciar
+comandos de shell y **vim** no se puede suspender.
 
 **vi** Enlace a **vim**
 
@@ -14566,79 +14602,89 @@ comandos de shell y ****v****im**** no se puede suspender.
 **vimdiff** Edita dos o tres versiones de un archivo con **vim**
 y muestra las diferencias.
 
-**vimtutor** Enseña las teclas y comandos básicos de
-**vim**.
+**vimtutor** Enseña las teclas y comandos básicos de **vim**.
 
 **xxd** Crea un volcado hexadecimal del archivo dado; también puede
 realizar la operación inversa, por lo que puede usarse para parches
 binarios.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.74. MarkupSafe-3.0.2
 
 MarkupSafe es un módulo de Python que implementa una cadena segura
 de marcado XML/HTML/XHTML.
 
-Tiempo de compilación aproximado: Menos de 0,1 SBU
-
-Espacio en disco necesario: 500 KB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:| 500 KB|
 
 ### 8.74.1. Instalación de MarkupSafe
 
 Compile MarkupSafe con el siguiente comando:
 
-  -------------------------------------------------------------------------------
-  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
-  -------------------------------------------------------------------------------
+> ```bash
+> pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+> ```
 
 Este paquete no incluye un conjunto de pruebas.
 
 Instale el paquete:
 
-  ------------------------------------------------------------------
-  pip3 install --no-index --find-links dist Markupsafe
-  ------------------------------------------------------------------
+> ```bash
+> pip3 install --no-index --find-links dist Markupsafe
+> ```
 
 ### 8.74.2. Contenido de MarkupSafe
 
 **Directorio de instalación**:
 /usr/lib/python3.13/site-packages/MarkupSafe-3.0.2.dist-info
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.75. Jinja2-3.1.5
 
 ***Jinja2 es un módulo de Python que implementa un lenguaje de
 plantillas Python simple.
 
-Tiempo de compilación aproximado: Menos de 0.1 SBU
-
-Espacio en disco requerido: 2.5 MB
-
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|2.5 MB|
 ### 8.75.1. Instalación de Jinja2
 
 Compilación del paquete:
 
-  -------------------------------------------------------------------------------
-  pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
-  -------------------------------------------------------------------------------
+> ```bash
+> pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+> ```
 
 Instalación del paquete:
 
-  --------------------------------------------------------
-  pip3 install --no-index --find-links dist Jinja2
-  --------------------------------------------------------
+> ```bash
+> pip3 install --no-index --find-links dist Jinja2
+> ```
 
 ### 8.75.2. Contenido de Jinja2
 
 **Directorio de instalación**:
 /usr/lib/python3.13/site-packages/Jinja2-3.1.5.dist-info
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.76. Udev desde Systemd-257.3
 
 El paquete Udev contiene programas para la creación dinámica de nodos de
 dispositivos.
 
-Tiempo de compilación aproximado: 0.3 SBU
-
-Espacio en disco requerido: 161 MB
+|Tiempo de compilación aproximado:|0.3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|161 MB|
 
 ### 8.76.1. Instalación de Udev
 
@@ -14646,35 +14692,41 @@ Udev forma parte del paquete systemd-257.3. Utilice el archivo
 systemd-257.3.tar.xz como archivo tar de origen. Elimine dos grupos
 innecesarios, *render* y *sgx*, de las reglas predeterminadas de Udev:
 
+> ```bash
 > sed -e 's/GROUP="render"/GROUP="video"' \
-> -e 's/GROUP="sgx", //' \
-> -i rules.d/50-udev-default.rules.in
+>     -e 's/GROUP="sgx", //'              \
+>     -i rules.d/50-udev-default.rules.in
+> ```
 
 Elimine una regla de Udev que requiere una instalación completa de
 Systemd:
 
-  ----------------------------------------------------------------
-  sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in
-  ----------------------------------------------------------------
+> ```bash
+> sed -i '/systemd-sysctl/s/^/#/' rules.d/99-systemd.rules.in
+> ```
 
 Ajuste las rutas predefinidas de los archivos de configuración de red
 para la instalación independiente de Udev:
 
+> ```bash
 > sed -e '/NETWORK_DIRS/s/systemd/udev/' \
-> -i src/libsystemd/sd-network/network-util.h
+>     -i src/libsystemd/sd-network/network-util.h
+> ```
 
 Prepare Udev para la compilación:
 
+> ```bash
 > mkdir -p build
-> cd build
-> meson setup .. \
-> --prefix=/usr \
-> --buildtype=release \
-> -D mode=release* \
-> -D dev-kvm-mode=0660 \
-> -D link-udev-shared=false \
-> -D logind=false \
-> -D vconsole=false
+> cd       build
+> meson setup ..                  \
+>       --prefix=/usr             \
+>       --buildtype=release       \
+>       -D mode=release           \
+>       -D dev-kvm-mode=0660      \
+>       -D link-udev-shared=false \
+>       -D logind=false           \
+>       -D vconsole=false
+> ```
 
 Significado de las opciones de meson:
 
@@ -14711,67 +14763,75 @@ una variable de entorno (exportarla no es estrictamente necesario, pero
 facilita la compilación como usuario normal o con un gestor de
 paquetes):
 
-> export udev_helpers=\$(grep "'*name*' :"
-> ../src/udev/meson.build | \
-> awk '{print $3}' | tr -d ",'" | grep -v 'udevadm')
+> ```bash
+> export udev_helpers=\$(grep "'name' :" ../src/udev/meson.build | \
+>                        awk '{print $3}' | tr -d ",'" | grep -v 'udevadm')
+> ```
 
 Compile solo los componentes necesarios para udev:
 
-> ninja udevadm systemd-hwdb \
-> $(ninja -n | grep -Eo '(src/(lib)?udev| rules.d | hwdb.d)/[^]*') \
-> $(realpath libudev.so --relative-to .) \
-> $udev_helpers
+> ```bash
+> ninja udevadm systemd-hwdb                                           \
+>       $(ninja -n | grep -Eo '(src/(lib)?udev|rules.d|hwdb.d)/[^ ]*') \
+>       $(realpath libudev.so --relative-to .)                         \
+>       $udev_helpers
+> ```
 
 Instalar el paquete:
 
+> ```bash
 > install -vm755 -d {/usr/lib,/etc}/udev/{hwdb.d,rules.d,network}
 > install -vm755 -d /usr/{lib,share}/pkgconfig
-> install -vm755 udevadm /usr/bin/
-> install -vm755 systemd-hwdb /usr/bin/udev-hwdb
-> ln -svfn ../bin/udevadm /usr/sbin/udevd
-> cp -av libudev.so{,*[0-9]} /usr/lib/
-> install -vm644 ../src/libudev/libudev.h /usr/include/
-> install -vm644 src/libudev/*.pc /usr/lib/pkgconfig/
-> install -vm644 src/udev/*.pc /usr/share/pkgconfig/
-> install -vm644 ../src/udev/udev.conf /etc/udev/
-> install -vm644 rules.d/* ../rules.d/README
-> /usr/lib/udev/rules.d/
+> install -vm755 udevadm                             /usr/bin/
+> install -vm755 systemd-hwdb                        /usr/bin/udev-hwdb
+> ln      -svfn  ../bin/udevadm                      /usr/sbin/udevd
+> cp      -av    libudev.so{,*[0-9]}                 /usr/lib/
+> install -vm644 ../src/libudev/libudev.h            /usr/include/
+> install -vm644 src/libudev/*.pc                    /usr/lib/pkgconfig/
+> install -vm644 src/udev/*.pc                       /usr/share/pkgconfig/
+> install -vm644 ../src/udev/udev.conf               /etc/udev/
+> install -vm644 rules.d/* ../rules.d/README         /usr/lib/udev/rules.d/
 > install -vm644 $(find ../rules.d/*.rules \
-> -not -name '*power-switch*') /usr/lib/udev/rules.d/
-> install -vm644 hwdb.d/* ../hwdb.d/{*.hwdb,README}
-> /usr/lib/udev/hwdb.d/
-> install -vm755 $udev_helpers /usr/lib/udev
-> install -vm644 ../network/99-default.link /usr/lib/udev/network
+>                       -not -name '*power-switch*') /usr/lib/udev/rules.d/
+> install -vm644 hwdb.d/* ../hwdb.d/{*.hwdb,README}  /usr/lib/udev/hwdb.d/
+> install -vm755 $udev_helpers                       /usr/lib/udev
+> install -vm644 ../network/99-default.link          /usr/lib/udev/network
+> ```
 
 Instala algunas reglas personalizadas y archivos de soporte útiles
 en un entorno LFS:
 
+> ```bash
 > tar -xvf ../../udev-lfs-20230818.tar.xz
 > make -f udev-lfs-20230818/Makefile.lfs install
+> ```
 
 Instala las páginas del manual:
 
-> tar -xf ../../systemd-man-pages-257.3.tar.xz \
-> --no-same-owner --strip-components=1 \
-> -C /usr/share/man --wildcards '*/udev*' '*/libudev*' \
-> '*/systemd.link.5' \
-> '*/systemd-'{hwdb,udevd.service}.8
-> sed 's | systemd/network | udev/network |' \
-> ** /usr/share/man/man5/systemd.link.5 \
-> > /usr/share/man/man5/udev.link.5**
-> **sed 's/systemd\\(\\\?-\)/udev\1/' \
-> ** /usr/share/man/man8/systemd-hwdb.8 \
-> ** > /usr/share/man/man8/udev-hwdb.8
-> **sed 's | lib.*udevd | sbin/udevd | ' \
-> /usr/share/man/man8/systemd-udevd.service.8 \
-> > /usr/share/man/man8/udevd.8**
-> rm /usr/share/man/man*/systemd
+> ```bash
+> tar -xf ../../systemd-man-pages-257.3.tar.xz             \
+>     --no-same-owner --strip-components=1                 \
+>     -C /usr/share/man --wildcards '*/udev*' '*/libudev*' \
+>                                   '*/systemd.link.5'     \
+>                                   '*/systemd-'{hwdb,udevd.service}.8
+> sed 's | systemd/network | udev/network |'               \
+>     /usr/share/man/man5/systemd.link.5                   \
+>   > /usr/share/man/man5/udev.link.5
+> sed 's/systemd\(\\\?-\)/udev\1/'                         \
+>     /usr/share/man/man8/systemd-hwdb.8                   \
+>   > /usr/share/man/man8/udev-hwdb.8
+> sed 's | lib.*udevd | sbin/udevd | '                     \
+>     /usr/share/man/man8/systemd-udevd.service.8          \
+>   > /usr/share/man/man8/udevd.8
+> 
+> rm /usr/share/man/man*/systemd*
+> ```
 
 Finalmente, desactive la variable udev_helpers:
 
-  ------------------------
-  unset udev_helpers
-  ------------------------
+> ```bash
+> unset udev_helpers
+> ```
 
 ### 8.76.2. Configuración de Udev
 
@@ -14781,20 +14841,17 @@ Udev necesita que dicha información se compile en una base de datos
 binaria **llamada /etc/udev/hwdb.bin**. Cree la base de datos
 inicial:
 
-  ----------------------
-  udev-hwdb update
-  ----------------------
+> ```bash
+> udev-hwdb update
+> ```
 
 Este comando debe ejecutarse cada vez que se actualice la
 información del hardware.
 
 ### 8.76.3. Contenido de Udev
 
-**Programas instalados**: udevadm, udevd (enlace simbólico a udevadm) y
-udev-hwdb
-
+**Programas instalados**: udevadm, udevd (enlace simbólico a udevadm) y udev-hwdb
 **Bibliotecas instaladas**: libudev.so
-
 **Directorios instalados**: /etc/udev y /usr/lib/udev
 
 ### Descripciones breves
@@ -14810,35 +14867,41 @@ respuesta a estos eventos UE.
 
 **udev-hwdb** Actualiza o consulta la base de datos de hardware.
 
-**libudev** Una interfaz de biblioteca para la información de
+*libudev* Una interfaz de biblioteca para la información de
 dispositivos udev**
 
-**/etc/udev** Contiene archivos de configuración de Udev, permisos
+*/etc/udev* Contiene archivos de configuración de Udev, permisos
 de dispositivos y reglas para la nomenclatura de dispositivos.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.77. Man-DB-2.13.0
 
 El paquete Man-DB contiene programas para buscar y visualizar
 páginas de manual.
 
-Tiempo de compilación aproximado: 0.3 SBU
-
-Espacio en disco requerido: 44 MB
+|Tiempo de compilación aproximado:|0.3 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|44 MB|
 
 ### 8.77.1. Instalación de Man-DB
 
 Preparar Man-DB para la compilación:
 
-> ./configure --prefix=/usr \
-> --docdir=/usr/share/doc/man-db-2.13.0 \
-> --sysconfdir=/etc \
-> --disable-setuid \
-> --enable-cache-owner=bin \
-> --with-browser=/usr/bin/lynx \
-> --with-vgrind=/usr/bin/vgrind \
-> --with-grap=/usr/bin/grap \
-> --with-systemdtmpfilesdir= \
-> --with-systemdsystemunitdir
+> ```bash
+> ./configure --prefix=/usr                         \
+>             --docdir=/usr/share/doc/man-db-2.13.0 \
+>             --sysconfdir=/etc                     \
+>             --disable-setuid                      \
+>             --enable-cache-owner=bin              \
+>             --with-browser=/usr/bin/lynx          \
+>             --with-vgrind=/usr/bin/vgrind         \
+>             --with-grap=/usr/bin/grap             \
+>             --with-systemdtmpfilesdir=            \
+>             --with-systemdsystemunitdir
+> ```
 
 Significado de las opciones de configuración:
 
@@ -14870,21 +14933,21 @@ systemd innecesarios.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para comprobar los resultados, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Instalar el paquete:
 
-  ------------------------
-  make install
-  ------------------------
+> ```bash
+> make install
+> ```
 
 ### 8.77.2. Páginas del manual en otros idiomas en LFS
 
@@ -14897,7 +14960,7 @@ UTF-8.
 Tabla 8.1. Codificación de caracteres esperada de las páginas del
 manual de 8 bits heredadas
 
-  |**Idioma (código) **     |       **Codificación** | **Idioma (código)**                      |**Codificación**|
+  |Idioma (código)          |       **Codificación** |   Idioma (código)                        |  Codificación  |
   |:-----------------------:|:----------------------:|:----------------------------------------:|:--------------:|
   |Danés (da)               |         ISO-8859-1     |   Croata (hr)                            |  ISO-8859-2    |
   |Alemán (de)              |         ISO-8859-1     |   Húngaro (hu)                           |  ISO-8859-2    |
@@ -14930,10 +14993,8 @@ manual de 8 bits heredadas
 
 **Programas instalados**: accessdb, apropos (enlace a whatis), catman,
 lexgrog, man, man-recode, mandb, manpath y whatis
-
 **Bibliotecas instaladas**: libman.so y libmandb.so (ambas en
 /usr/lib/man-db)
-
 **Directorios instalados**: /usr/lib/man-db, /usr/libexec/man-db y
 /usr/share/doc/man-db-2.13.0
 
@@ -14964,29 +15025,34 @@ man.conf y el entorno del usuario.
 breves de los comandos del sistema que contienen la palabra clave dada
 como una palabra separada.
 
-**libman** Contiene soporte en tiempo de ejecución para **man**.
+*libman* Contiene soporte en tiempo de ejecución para **man**.
 
-**libmandb** Contiene soporte en tiempo de ejecución para
-**man.
+*libmandb* Contiene soporte en tiempo de ejecución para **man**.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.78. Procps-ng-4.0.5
 
 El paquete Procps-ng contiene programas para monitorizar
 procesos.
 
-Tiempo de compilación aproximado: 0.1 SBU
-
-Espacio en disco necesario: 28 MB
+|Tiempo de compilación aproximado:|0.1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|28 MB|
 
 ### 8.78.1. Instalación de Procps-ng
 
 Preparar Procps-ng para la compilación:
 
-> ./configure --prefix=/usr \
-> --docdir=/usr/share/doc/procps-ng-4.0.5 \
-> --disable-static \
-> --disable-kill \
-> --enable-watch8bit
+> ```bash
+> ./configure --prefix=/usr                           \
+>             --docdir=/usr/share/doc/procps-ng-4.0.5 \
+>             --disable-static                        \
+>             --disable-kill                          \
+>             --enable-watch8bit
+> ```
 
 **Significado de la opción de configuración**:
 
@@ -15002,14 +15068,16 @@ Esta opción habilita la compatibilidad de ncursesw con el comando
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para ejecutar el conjunto de pruebas, ejecute:
 
+> ```bash
 > chown -R tester .
 > su tester -c "PATH=$PATH make check"
+> ```
 
 Se sabe que una prueba llamada ps con el indicador de salida
 bsdtime, cputime, etime, etimes falla si el kernel del host no está
@@ -15018,19 +15086,16 @@ prueba pgrep puede fallar en el entorno chroot.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.78.2. Contenido de Procps-ng
 
 **Programas instalados**: free, pgrep, pidof, pkill, pmap, ps, pwdx,
 slabtop, sysctl, tload, top, uptime, vmstat, w y watch
-
 **Biblioteca instalada**: libproc-2.so
-
-**Directorios instalados**: /usr/include/procps y
-/usr/share/doc/procps-ng-4.0.5
+**Directorios instalados**: /usr/include/procps y /usr/share/doc/procps-ng-4.0.5
 
 ### Descripciones breves
 
@@ -15045,7 +15110,7 @@ y de intercambio) en el sistema.
 
 **pmap** Informa sobre el mapa de memoria del proceso.
 
-**ps **Enumera los procesos en ejecución.
+**ps** Enumera los procesos en ejecución.
 
 **pwdx** Informa del directorio de trabajo actual de un proceso.
 
@@ -15064,18 +15129,22 @@ real.
 **uptime** Informa del tiempo de ejecución del sistema, la cantidad de
 usuarios conectados y los promedios de carga del sistema****
 
-**vmstat **Informa de las estadísticas de memoria virtual, con
+**vmstat** Informa de las estadísticas de memoria virtual, con
 información sobre procesos, memoria, paginación, entrada/salida (E/S) de
 bloques, traps y actividad de la CPU.
 
 **w** Muestra qué usuarios han iniciado sesión, dónde y desde cuándo.
 
-**watch **Ejecuta un comando repetidamente, mostrando la primera
+**watch** Ejecuta un comando repetidamente, mostrando la primera
 pantalla completa de su salida; esto permite al usuario observar cómo
 cambia la salida a lo largo del tiempo.
 
-**libproc-2** Contiene las funciones utilizadas por la mayoría de
+*libproc-2* Contiene las funciones utilizadas por la mayoría de
 los programas de este paquete.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.79. Util-linux-2.40.4
 
@@ -15083,32 +15152,34 @@ El paquete Util-linux contiene diversas utilidades. Entre ellas, se
 encuentran utilidades para gestionar sistemas de archivos, consolas,
 particiones y mensajes.
 
-Tiempo de compilación aproximado: 0.5 SBU
-
-Espacio en disco necesario: 316 MB
+|Tiempo de compilación aproximado:|0.5 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|316 MB|
 
 ### 8.79.1. Instalación de Util-linux
 
 Preparar Util-linux para la compilación:
 
-> ./configure --bindir=/usr/bin \
-> --libdir=/usr/lib \
-> --runstatedir=/run \
-> --sbindir=/usr/sbin \
-> --disable-chfn-chsh \
-> --disable-login \
-> --disable-nologin \
-> --disable-su \
-> --disable-setpriv \
-> --disable-runuser \
-> --disable-pylibmount \
-> --disable-liblastlog2 \
-> --disable-static \
-> --without-python \
-> --without-systemd \
-> --without-systemdsystemunitdir \
-> ADJTIME_PATH=/var/lib/hwclock/adjtime \
-> --docdir=/usr/share/doc/util-linux-2.40.4
+> ```bash
+> ./configure --bindir=/usr/bin     \
+>             --libdir=/usr/lib     \
+>             --runstatedir=/run    \
+>             --sbindir=/usr/sbin   \
+>             --disable-chfn-chsh   \
+>             --disable-login       \
+>             --disable-nologin     \
+>             --disable-su          \
+>             --disable-setpriv     \
+>             --disable-runuser     \
+>             --disable-pylibmount  \
+>             --disable-liblastlog2 \
+>             --disable-static      \
+>             --without-python      \
+>             --without-systemd     \
+>             --without-systemdsystemunitdir        \
+>             ADJTIME_PATH=/var/lib/hwclock/adjtime \
+>             --docdir=/usr/share/doc/util-linux-2.40.4
+> ```
 
 Las opciones \--disable y \--without evitan advertencias sobre la
 compilación de componentes que requieren paquetes que no están en LFS o
@@ -15117,13 +15188,12 @@ paquetes.
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Si lo desea, cree un archivo **/etc/fstab** ficticio para
-realizar dos pruebas y ejecute el conjunto de pruebas como usuario no
-**root**:
+realizar dos pruebas y ejecute el conjunto de pruebas como usuario no-**root**:
 
 > 🛑 **Advertencia**
 > 
@@ -15134,29 +15204,31 @@ realizar dos pruebas y ejecute el conjunto de pruebas como usuario no
 > impedirá el arranque. Para una cobertura completa, se deben instalar
 > otros paquetes BLFS. Si se desea, esta prueba se puede ejecutar
 > iniciando el sistema LFS completo y ejecutando:
-> 
+> ```bash 
 > bash tests/run.sh --srcdir=$PWD --builddir=$PWD
-
+> ```
+> ```bash
 > touch /etc/fstab
 > chown -R tester .
 > su tester -c "make -k check"
+> ```
 
 Las pruebas de enlace físico fallarán si el kernel del host no tiene
-habilitada la opción **CONFIG_CRYPTO_USER_API_HASH** o no tiene
+habilitada la opción *CONFIG_CRYPTO_USER_API_HASH* o no tiene
 habilitada ninguna opción que proporcione una implementación
-**SHA256** (por ejemplo, **CONFIG_CRYPTO_SHA256** o
-**CONFIG_CRYPTO_SHA256_SSSE3** si la CPU admite SSE3
+SHA256 (por ejemplo, *CONFIG_CRYPTO_SHA256* o
+*CONFIG_CRYPTO_SHA256_SSSE3* si la CPU admite SSE3
 suplementario). Además, la prueba lsfd: inotify fallará si la opción del
-kernel **CONFIG_NETLINK_DIAG** no está habilitada.
+kernel *CONFIG_NETLINK_DIAG* no está habilitada.
 
 Se sabe que otras dos pruebas, lsfd: columna SOURCE y utmp: last,
 fallan en el entorno chroot.
 
 Instale el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.79.2. Contenido de Util-linux
 
@@ -15176,10 +15248,8 @@ setterm, sfdisk, sulogin, swaplabel, swapoff, swapon, switch_root,
 tasket, uclampset, ul, umount, uname26 (enlace a Setarch), dejar de
 compartir, utmpdump uuidd, uuidgen, uuidparse, wall, wdctl, whereis,
 wipefs, x86_64 (enlace a setarch) y zramctl
-
 **Bibliotecas**: libblkid.so, libfdisk.so, libmount.so, libsmartcols.so
 y libuuid.so
-
 **Directorios**: /usr/include/blkid, /usr/include/libfdisk,
 /usr/include/libmount, /usr/include/libsmartcols, /usr/include/uuid,
 /usr/share/doc/util-linux-2.40.4 y /var/lib/hwclock
@@ -15474,8 +15544,8 @@ de la página de manual del comando dado.****
 **zramctl** Un programa para configurar y controlar dispositivos zram
 (disco RAM comprimido).
 
-**libblkid***** Contiene rutinas para la identificación de
-dispositivos y la extracción de tokens.****
+**libblkid** Contiene rutinas para la identificación de
+dispositivos y la extracción de tokens.
 
 **libfdisk** Contiene rutinas para manipular tablas de
 particiones.
@@ -15489,34 +15559,41 @@ pantalla en formato tabular.
 **libuuid** Contiene rutinas para generar identificadores únicos
 para objetos accesibles más allá del sistema local.
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.80. E2fsprogs-1.47.2
 
 El paquete E2fsprogs contiene las utilidades para gestionar el
 sistema de archivos ext2. También es compatible con los sistemas de
 archivos con registro en diario ext3 y ext4.
 
-**Tiempo de compilación aproximado**: 2,4 SBU en un disco duro, 0,5 SBU
-en un SSD
-
-**Espacio en disco necesario**: 99 MB
+|Tiempo de compilación aproximado:|2,4 SBU en un disco duro<br> 0,5 SBU en un SSD|
+|---------------------------------|-------|
+|Espacio en disco requerido:|99 MB|
 
 ### 8.80.1. Instalación de E2fsprogs
 
 La documentación de E2fsprogs recomienda compilar el paquete en un
 subdirectorio del árbol de código fuente:
 
+> ```bash
 > mkdir -v build
-> cd build
+> cd       build
+> ```
 
 Preparar E2fsprogs para la compilación:
 
-> ../configure --prefix=/usr \
-> --sysconfdir=/etc \
-> --enable-elf-shlibs \
-> --disable-libblkid \
-> --disable-libuuid \
-> --disable-uuidd \
-> --disable-fsck
+> ```bash
+> ../configure --prefix=/usr       \
+>              --sysconfdir=/etc   \
+>              --enable-elf-shlibs \
+>              --disable-libblkid  \
+>              --disable-libuuid   \
+>              --disable-uuidd     \
+>              --disable-fsck
+> ```
 
 **Significado de las opciones de configuración**:
 
@@ -15531,15 +15608,15 @@ Esto impide compilar e instalar las bibliotecas **libuuid** y
 **libblkid**, el demonio **uuidd** y el contenedor **fsck**;
 util-linux instala versiones más recientes. Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Para ejecutar las pruebas, ejecute:
 
-  ----------------
-  make check
-  ----------------
+> ```bash
+> make check
+> ```
 
 Se sabe que una prueba llamada **m_assume_storage_prezeroed**
 falla. Otra prueba llamada **m_rootdir_acl** falla si el sistema
@@ -15547,33 +15624,34 @@ de archivos utilizado para el sistema LFS no es **ext4**.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 Eliminar las bibliotecas estáticas innecesarias:
 
-  -----------------------------------------------------------------
-  rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
-  -----------------------------------------------------------------
+> ```bash
+> rm -fv /usr/lib/{libcom_err,libe2p,libext2fs,libss}.a
+> ```
 
 Este paquete instala un archivo **.info** comprimido con gzip,
 pero no actualiza el archivo **dir** del sistema. Descomprima este
 archivo y actualice el archivo **dir** del sistema con los
 siguientes comandos:
 
+> ```bash
 > gunzip -v /usr/share/info/libext2fs.info.gz
-> install-info --dir-file=/usr/share/info/dir
-> /usr/share/info/libext2fs.info
+> install-info --dir-file=/usr/share/info/dir /usr/share/info/libext2fs.info
+> ```
 
 Si lo desea, cree e instale documentación adicional con los
 siguientes comandos:
 
-> makeinfo -o
-> doc/com_err.info ../lib/et/com_err.texinfo
+> ```bash
+> makeinfo -o      doc/com_err.info ../lib/et/com_err.texinfo
 > install -v -m644 doc/com_err.info /usr/share/info
-> install-info --dir-file=/usr/share/info/dir
-> /usr/share/info/com_err.info
+> install-info --dir-file=/usr/share/info/dir /usr/share/info/com_err.info
+> ```
 
 ### 8.80.2. Configuración de E2fsprogs
 
@@ -15586,9 +15664,9 @@ reconocen un sistema de archivos **ext4** con la función
 puede eliminar la función de la lista de funciones predeterminadas de
 **ext4** con el comando:
 
-  ---------------------------------------------------------------
-  sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf
-  ---------------------------------------------------------------
+> ```bash
+> sed 's/metadata_csum_seed,//' -i /etc/mke2fs.conf
+> ```
 
 Consulte la página del manual *****mke2fs.conf(5)***** para obtener
 más información.
@@ -15600,10 +15678,7 @@ dumpe2fs, e2freefrag, e2fsck, e2image, e2label, e2mmpstatus, e2scrub,
 e2scrub_all, e2undo, e4crypt, e4defrag, filefrag, fsck.ext2, fsck.ext3,
 fsck.ext4, logsave, lsattr, mk_cmds, mke2fs, mkfs.ext2, mkfs.ext3,
 mkfs.ext4, mklost+found, resize2fs y tune2fs
-
-**Bibliotecas instaladas**: libcom_err.so, libe2p.so, libext2fs.so y
-libss.so
-
+**Bibliotecas instaladas**: libcom_err.so, libe2p.so, libext2fs.so y libss.so
 **Directorios instalados**: /usr/include/e2p, /usr/include/et,
 /usr/include/ext2fs, /usr/include/ss, /usr/lib/e2fsprogs, /usr/share/et
 y /usr/share/ss
@@ -15614,15 +15689,15 @@ y /usr/share/ss
 una partición de disco).
 
 **chattr** Cambia los atributos de los archivos en sistemas de archivos
-*****ext{234}*****.
+*ext{234}*.
 
 **compile_et** Un compilador de tablas de errores; convierte una tabla
 de nombres y mensajes de códigos de error en un archivo fuente en C.
-Ideal para usar con la biblioteca *****com_err*****.
+Ideal para usar con la biblioteca *com_err*.
 
 **debugfs** Un depurador de sistemas de archivos. Se puede usar para
 examinar y cambiar el estado de los sistemas de archivos
-*****ext{234}*****.
+*ext{234}*.
 
 **dumpe2fs** Imprime la información del superbloque y del grupo de
 bloques del sistema de archivos presente en un dispositivo.
@@ -15630,31 +15705,31 @@ bloques del sistema de archivos presente en un dispositivo.
 **e2freefrag** Informa sobre la fragmentación del espacio libre.
 
 **e2fsck** Se usa para comprobar y, opcionalmente, reparar sistemas de
-archivos *****ext{234}*****.
+archivos *ext{234}*.
 
 **e2image** Se usa para guardar datos críticos del sistema de archivos
-*****ext{234}***** en un archivo.
+*ext{234}* en un archivo.
 
 **e2label** Muestra o cambia la etiqueta del sistema de archivos
-*****ext{234}***** en un dispositivo.
+*ext{234}* en un dispositivo.
 
 **e2mmpstatus** Comprueba el estado de MMP (Protección de Montaje
 Múltiple) de un sistema de archivos ext4.
 
 **e2scrub** Comprueba el contenido de un sistema de archivos
-*****ext{234}***** montado.
+*ext{234}* montado.
 
 **e2scrub_all** Comprueba si hay errores en todos los sistemas de
-archivos ext{234} montados.
+archivos *ext{234}* montados.
 
 **e2undo** Reproduce el registro de deshacer de un sistema de archivos
-*****ext{234}***** encontrado en un dispositivo. \[Esto puede usarse
+*ext{234}* encontrado en un dispositivo. \[Esto puede usarse
 para deshacer una operación fallida de un programa E2fsprogs.\].
 
-**e4crypt** Utilidad de cifrado del sistema de archivos *****Ext4*****.
+**e4crypt** Utilidad de cifrado del sistema de archivos *Ext4*.
 
 **e4defrag** Desfragmentador en línea para sistemas de archivos
-*****Ext4*****.
+*Ext4*0
 
 **filefrag** Informa sobre el grado de fragmentación de un archivo en
 particular.
@@ -15695,19 +15770,23 @@ archivos ext{234}. Preasigna bloques de disco a este directorio para
 simplificar la tarea de **e2fsck**.
 
 **resize2fs** Puede usarse para ampliar o reducir el tamaño de los
-sistemas de archivos ext{234}.
+sistemas de archivos *ext{234}*.
 
 **tune2fs** Ajusta los parámetros configurables del sistema de archivos
-en sistemas de archivos ext{234}.
+en sistemas de archivos *ext{234}*.
 
-**libcom_err** La rutina común de visualización de errores.
+*libcom_err* La rutina común de visualización de errores.
 
-**libe2p** Usada por **dumpe2fs**, **chattr** y **lsattr**.
+*libe2p* Usada por **dumpe2fs**, **chattr** y **lsattr**.
 
-**libext2fs** Contiene rutinas que permiten a los programas de
-usuario manipular sistemas de archivos ext{234}.
+*libext2fs* Contiene rutinas que permiten a los programas de
+usuario manipular sistemas de archivos *ext{234}*.
 
-**libss** Usada por **debugfs**.
+*libss* Usada por **debugfs**.
+
+---
+&nbsp;
+&nbsp;
 
 ## .8.81. Sysklogd-2.7.0
 
@@ -15715,52 +15794,59 @@ El paquete Sysklogd contiene programas para registrar mensajes del
 sistema, como los que emite el núcleo cuando ocurren eventos
 inusuales.
 
-Tiempo de compilación aproximado: menos de 0,1 SBU
-
-Espacio en disco requerido: 4,1 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|4,1 MB|
 
 ### 8.81.1. Instalación de Sysklogd
 
 Preparar el paquete para la compilación:
 
-> ./configure --prefix=/usr \
-> --sysconfdir=/etc \
-> --runstatedir=/run \
-> --without-logger \
-> --disable-static \
-> --docdir=/usr/share/doc/sysklogd-2.7.0
+> ```bash
+> ./configure --prefix=/usr      \
+>             --sysconfdir=/etc  \
+>             --runstatedir=/run \
+>             --without-logger   \
+>             --disable-static   \
+>             --docdir=/usr/share/doc/sysklogd-2.7.0
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Este paquete no incluye un conjunto de pruebas.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.81.2. Configuración de Sysklogd
 
-Cree un nuevo archivo /etc/syslog.conf ejecutando lo siguiente:
+Cree un nuevo archivo */etc/syslog.conf* ejecutando lo siguiente:
 
+> ```bash
 > cat > /etc/syslog.conf << "EOF"
-> # Inicio /etc/syslog.conf
+> # Begin /etc/syslog.conf
+> 
 > auth,authpriv.* -/var/log/auth.log
 > *.*;auth,authpriv.none -/var/log/sys.log
 > daemon.* -/var/log/daemon.log
 > kern.* -/var/log/kern.log
 > mail.* -/var/log/mail.log
 > user.* -/var/log/user.log
-> *.emerg \
-> # No abra ningún puerto de internet
+> *.emerg *
+> 
+> # Do not open any internet ports.
 > secure_mode 2
-> # Fin /etc/syslog.conf
+> 
+> # End /etc/syslog.conf
 > EOF
+> ```
 
 ### 8.81.3. Contenido de Sysklogd
 
@@ -15774,14 +15860,18 @@ de fecha y un nombre de host, y normalmente también el nombre del
 programa, pero esto depende de la confianza que se le indique al demonio
 de registro\].
 
+---
+&nbsp;
+&nbsp;
+
 ## 8.82. SysVinit-3.14
 
 El paquete SysVinit contiene programas para controlar el inicio, la
 ejecución y el apagado del sistema.
 
-Tiempo aproximado de compilación: Menos de 0,1 SBU
-
-Espacio en disco necesario: 2,9 MB
+|Tiempo de compilación aproximado:|0,1 SBU|
+|---------------------------------|-------|
+|Espacio en disco requerido:|2,9 MB|
 
 ### 8.82.1. Instalación de SysVinit
 
@@ -15789,23 +15879,23 @@ Primero, aplique un parche que elimina varios programas instalados
 por otros paquetes, aclara un mensaje y corrige una advertencia del
 compilador:
 
-  ---------------------------------------------------------------
-  patch -Np1 -i ../sysvinit-3.14-consolidated-1.patch
-  ---------------------------------------------------------------
+> ```bash
+> patch -Np1 -i ../sysvinit-3.14-consolidated-1.patch
+> ```
 
 Compilar el paquete:
 
-  ----------
-  make
-  ----------
+> ```bash
+> make
+> ```
 
 Este paquete no incluye un conjunto de pruebas.
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 8.82.2. Contenido de SysVinit
 
@@ -15816,14 +15906,14 @@ telinit (enlace a init)
 ### Descripciones breves
 
 **bootlogd** Registra los mensajes de arranque en un archivo de
-registro.****
+registro.
 
 **fstab-decode** Ejecuta un comando con argumentos codificados en
 fstab.
 
-**halt** Normalmente invoca el **apagado** con la opción *****-h*****,
+**halt** Normalmente invoca el **shutdown** con la opción *-h*,
 pero cuando ya está en el nivel de ejecución 0, le indica al núcleo que
-detenga el sistema; anota en el archivo *****/var/log/wtmp***** que el
+detenga el sistema; anota en el archivo */var/log/wtmp* que el
 sistema se está apagando.
 
 **init** El primer proceso que se inicia cuando el núcleo ha
@@ -15840,12 +15930,16 @@ ordenador (ver **halt**).
 
 **runlevel** Informa del nivel de ejecución anterior y actual, como se
 indica en el último registro de nivel de ejecución en
-*****/run/utmp*****.
+*/run/utmp*.
 
 **shutdown** Detiene el sistema de forma segura, enviando señales a
 todos los procesos y notificando a todos los usuarios conectados.
 
 **telinit** Indica a **init** a qué nivel de ejecución cambiar.
+
+---
+&nbsp;
+&nbsp;
 
 ## 8.83. Acerca de los símbolos de depuración
 
@@ -15856,20 +15950,17 @@ con información de depuración, el depurador puede proporcionar no solo
 las direcciones de memoria, sino también los nombres de las rutinas y
 las variables.
 
-****La inclusión de estos símbolos de depuración amplía
+La inclusión de estos símbolos de depuración amplía
 significativamente el programa o la biblioteca. A continuación, se
-muestran dos ejemplos del espacio que ocupan estos símbolos:****
+muestran dos ejemplos del espacio que ocupan estos símbolos:
 
 • Un binario **bash** con símbolos de depuración: 1200 KB
 
-• Un binario **bash** sin símbolos de depuración: 480 KB (60 %
-menor)
+• Un binario **bash** sin símbolos de depuración: 480 KB (60 % menor)
 
-• Archivos Glibc y GCC (*****/lib***** y *****/usr/lib*****) con
-símbolos de depuración: 87 MB
+• Archivos Glibc y GCC (*/lib* y */usr/lib*) con símbolos de depuración: 87 MB
 
-• Archivos Glibc y GCC sin símbolos de depuración: 16 MB (82 %
-menor)
+• Archivos Glibc y GCC sin símbolos de depuración: 16 MB (82 % menor)
 
 El tamaño varía según el compilador y la biblioteca de C utilizados,
 pero un programa al que se le han eliminado los símbolos de depuración
@@ -15878,6 +15969,10 @@ Dado que la mayoría de los usuarios nunca utilizarán un depurador en el
 software de su sistema, se puede recuperar mucho espacio en disco
 eliminando estos símbolos. La siguiente sección muestra cómo eliminar
 todos los símbolos de depuración de los programas y bibliotecas.
+
+---
+&nbsp;
+&nbsp;
 
 ### 8.84. Eliminación
 
@@ -15895,24 +15990,25 @@ antes de ejecutar los comandos de **depuración **(**strip**)****,
 conviene realizar una copia de seguridad del sistema LFS en su estado
 actual.
 
-Un comando de **depuración** con la opción
-*****\--strip-unneeded***** elimina todos los símbolos de depuración de
+Un comando de **depuración** o **strip** con la opción
+*\--strip-unneeded* elimina todos los símbolos de depuración de
 un binario o biblioteca. También elimina todas las entradas de la tabla
 de símbolos que no necesita el enlazador (para bibliotecas estáticas) o
 el enlazador dinámico (para binarios enlazados dinámicamente y
 bibliotecas compartidas).
-****Los símbolos de **depuracirón** de las bibliotecas seleccionadas se
+
+Los símbolos de **depuracirón** o **strip** de las bibliotecas seleccionadas se
 comprimen con Zlib y se conservan en archivos separados. Esa información
 de depuración es necesaria para ejecutar pruebas de regresión con
-*****valgrind***** o *****gdb***** posteriormente, en BLFS.
+*valgrind* o *gdb* posteriormente, en BLFS.
 
-Tenga en cuenta que **depurar **(**strip**)**** sobrescribirá el
+Tenga en cuenta que **depurar  o **strip** sobrescribirá el
 archivo binario o de biblioteca que esté procesando. Esto puede bloquear
 los procesos que usan código o datos del archivo. Si el proceso que
 ejecuta strip se ve afectado, el binario o la biblioteca que se está
 desmontando puede destruirse; esto ****puede dejar el sistema
 completamente inutilizable. Para evitar este problema, copiamos algunas
-bibliotecas y binarios en *****/tmp*****, los desmontamos allí y luego
+bibliotecas y binarios en */tmp*, los desmontamos allí y luego
 los reinstalamos con el comando **install**. (La entrada relacionada en
 la Sección 8.2.1, \"Problemas de actualización\", explica la
 justificación para usar el comando **install** aquí).
@@ -15932,34 +16028,36 @@ justificación para usar el comando **install** aquí).
 > podría ser necesario actualizar el nombre del archivo de la
 > biblioteca en save_usrlib o online_usrlib. De lo contrario, el
 > sistema podría quedar completamente inutilizable.
-
+> ```bash
 > save_usrlib="$(cd /usr/lib; ls ld-linux*[^g])
->  libc.so.6
->  libthread_db.so.1
->  libquadmath.so.0.0.0
->  libstdc++.so.6.0.33
->  libitm.so.1.0.0
->  libatomic.so.1.2.0"
+>              libc.so.6
+>              libthread_db.so.1
+>              libquadmath.so.0.0.0
+>              libstdc++.so.6.0.33
+>              libitm.so.1.0.0
+>              libatomic.so.1.2.0"
 > cd /usr/lib
+> 
 > for LIB in $save_usrlib; do
->  objcopy --only-keep-debug --compress-debug-sections=zlib $LIB
-> $LIB.dbg
->  cp $LIB /tmp/$LIB
->  strip --strip-unneeded /tmp/$LIB
->  objcopy --add-gnu-debuglink=$LIB.dbg /tmp/$LIB
->  install -vm755 /tmp/$LIB /usr/lib
->  rm /tmp/$LIB
+>     objcopy --only-keep-debug --compress-debug-sections=zlib $LIB $LIB.dbg
+>     cp $LIB /tmp/$LIB
+>     strip --strip-unneeded /tmp/$LIB
+>     objcopy --add-gnu-debuglink=$LIB.dbg /tmp/$LIB
+>     install -vm755 /tmp/$LIB /usr/lib
+>     rm /tmp/$LIB
 > done
+> 
 > online_usrbin="bash find strip"
 > online_usrlib="libbfd-2.44.so
->  libsframe.so.1.0.0
->  libhistory.so.8.2
->  libncursesw.so.6.5
->  libm.so.6
->  libreadline.so.8.2
->  libz.so.1.3.1
->  libzstd.so.1.5.7
->  $(cd /usr/lib; find libnss*.so* -type f)"
+>                libsframe.so.1.0.0
+>                libhistory.so.8.2
+>                libncursesw.so.6.5
+>                libm.so.6
+>                libreadline.so.8.2
+>                libz.so.1.3.1
+>                libzstd.so.1.5.7
+>                $(cd /usr/lib; find libnss*.so* -type f)"
+> 
 > for BIN in $online_usrbin; do
 >  cp /usr/bin/\$BIN /tmp/$BIN
 >  strip --strip-unneeded /tmp/$BIN
@@ -15967,34 +16065,41 @@ justificación para usar el comando **install** aquí).
 >  rm /tmp/$BIN
 > done
 > for LIB in $online_usrlib; do
->  cp /usr/lib/$LIB /tmp/$LIB
->  strip --strip-unneeded /tmp/$LIB
->  install -vm755 /tmp/$LIB /usr/lib
->  rm /tmp/$LIB
+>     cp /usr/lib/$LIB /tmp/$LIB
+>     strip --strip-unneeded /tmp/$LIB
+>     install -vm755 /tmp/$LIB /usr/lib
+>     rm /tmp/$LIB
 > done
-> for i in $(find /usr/lib -type f -name \\.so ! -name \\dbg) \
->  $(find /usr/lib -type f -name \\.a) \
->  $(find /usr/{bin,sbin,libexec} -type f); do
->  case "$online_usrbin $online_usrlib $save_usrlib" in
->  $(basename $i)* )
->  ;;
->   ) strip --strip-unneeded $i
->  ;;
->  esac
+> 
+> for i in $(find /usr/lib -type f -name \*.so* ! -name \*dbg) \
+>          $(find /usr/lib -type f -name \*.a)                 \
+>          $(find /usr/{bin,sbin,libexec} -type f); do
+>     case "$online_usrbin $online_usrlib $save_usrlib" in
+>         *$(basename $i)* )
+>             ;;
+>         * ) strip --strip-unneeded $i
+>             ;;
+>     esac
 > done
+> 
 > unset BIN LIB save_usrlib online_usrbin online_usrlib
+> ```
 
 Una gran cantidad de archivos se marcarán como errores porque no se
 reconoce su formato. Estas advertencias se pueden ignorar sin problemas.
 Indican que esos archivos son scripts, no binarios.
 
+---
+&nbsp;
+&nbsp;
+
 ### 8.85. Limpieza
 
 ****Finalmente, limpie algunos archivos sobrantes de las pruebas:****
 
-  --------------------------
-  rm -rf /tmp/{*,.*}
-  --------------------------
+> ```bash
+> rm -rf /tmp/{*,.*}
+> ```
 
 También hay varios archivos en los directorios /usr/lib y
 /usr/libexec con la extensión .la. Estos son archivos \"libtool\". En un
@@ -16003,27 +16108,31 @@ libltdl. No se espera que libltdl cargue ninguna biblioteca en LFS, y se
 sabe que algunos archivos .la pueden interrumpir la compilación de
 paquetes BLFS. Elimine esos archivos ahora:
 
-  ------------------------------------------------------------
-  find /usr/lib /usr/libexec -name \\*.la -delete
-  ------------------------------------------------------------
+> ```bash
+> find /usr/lib /usr/libexec -name \*.la -delete
+> ```
 
 Para obtener más información sobre los archivos comprimidos de
-libtool, consulte la sección de *****BLFS \"Acerca de los archivos
-comprimidos de libtool (.la)*****\".
+libtool, consulte la sección de *BLFS \"Acerca de los archivos
+comprimidos de libtool (.la)*\".
 
 El compilador creado en los capítulos 6 y 7 aún está parcialmente
 instalado y ya no es necesario. Elimínelo con:
 
-  ---------------------------------------------------------------------------------
-  find /usr -depth -name $(uname -m)-lfs-linux-gnu\\* | xargs rm -rf
-  ---------------------------------------------------------------------------------
+> ```bash
+> find /usr -depth -name $(uname -m)-lfs-linux-gnu\* | xargs rm -rf
+> ```
 
 Finalmente, elimine la cuenta de usuario temporal \"tester\" creada
 al principio del capítulo anterior.
 
-  -----------------------
-  userdel -r tester
-  -----------------------
+> ```bash
+> userdel -r tester
+> ```
+
+---
+&nbsp;
+&nbsp;
 
 ## Capítulo 9. Configuración del sistema <a name="capitulo-9"></a>
 
@@ -16049,19 +16158,21 @@ script. Este script, generalmente llamado rc, controla la ejecución de
 un conjunto de scripts adicionales que realizan las tareas necesarias
 para inicializar el sistema.
 
-El programa init se controla mediante el archivo
-*****/etc/inittab***** y se organiza en niveles de ejecución que el
+El programa **init** se controla mediante el archivo
+*/etc/inittab* y se organiza en niveles de ejecución que el
 usuario puede seleccionar.
 
 En LFS, se utilizan de la siguiente manera:
 
-> 0 --- detener
-> 1 --- Modo monousuario
-> 2 --- Definible por el usuario
-> 3 --- Modo multiusuario completo
-> 4 --- Definible por el usuario
-> 5 --- Modo multiusuario completo con administrador de pantalla
-> 6 --- reiniciar**
+> ```bash
+> 0 --- detener (halt)
+> 1 --- Modo monousuario (Single user mode)
+> 2 --- Definible por el usuario (User definable)
+> 3 --- Modo multiusuario completo (Full multiuser mode)
+> 4 --- Definible por el usuario (User definable)
+> 5 --- Modo multiusuario completo con administrador de pantalla (Full multiuser mode with display manager)
+> 6 --- reiniciar (reboot)
+> ```
 
 El nivel de ejecución predeterminado habitual es 3 o 5.
 
@@ -16089,6 +16200,10 @@ arranque.
 • Agregar scripts requiere decisiones de secuenciación estáticas y
 manuales.
 
+---
+&nbsp;
+&nbsp;
+
 ## 9.2. LFS-Bootscripts-20240825
 
 El paquete LFS-Bootscripts contiene un conjunto de scripts para
@@ -16103,9 +16218,9 @@ Espacio en disco necesario: 244 KB
 
 Instalar el paquete:
 
-  ------------------
-  make install
-  ------------------
+> ```bash
+> make install
+> ```
 
 ### 9.2.2. Contenido de los scripts de arranque de LFS
 
@@ -16113,7 +16228,6 @@ Instalar el paquete:
 ifdown, ifup, localnet, modules, mountfs, mountvirtfs, network, rc,
 reboot, sendsignals, setclock, ipv4- static, swap, sysctl, sysklogd,
 template, udev y udev_retry
-
 **Directorios instalados**: /etc/rc.d, /etc/init.d (enlace simbólico),
 /etc/sysconfig, /lib/services, /lib/lsb (enlace simbólico)
 
@@ -16124,9 +16238,9 @@ montarlos (con excepción de los sistemas de archivos de registro y
 basados en red).
 
 **cleanfs ** Elimina los archivos que no deben conservarse entre
-reinicios, como los de *****/run/***** y *****/var/lock/*****; recrea
-*****/run/utmp***** y elimina los archivos *****/etc/nologin,
-/fastboot***** y /forcefsck posiblemente presentes.
+reinicios, como los de */run/* y */var/lock/*; recrea
+*/run/utmp* y elimina los archivos */etc/nologin*,
+*/fastboot* y */forcefsck* posiblemente presentes.
 
 **console** Carga la tabla de mapas de teclas correcta para la
 distribución de teclado deseada. También establece la fuente de la
@@ -16145,14 +16259,14 @@ errores y estado, que utilizan varios scripts de arranque.
 bucle invertido local.
 
 **modules** Carga los módulos del kernel listados en
-*****/etc/sysconfig/modules*****, utilizando los argumentos que también
+*/etc/sysconfig/modules*, utilizando los argumentos que también
 se proporcionan allí.
 
 **mountfs** Monta todos los sistemas de archivos, excepto aquellos que
-están marcados como *****noauto***** o que están basados en red.
+están marcados como *noauto* o que están basados en red.
 
 **mountvirtfs** Monta sistemas de archivos virtuales del kernel, como
-*****proc*****.
+*proc*.
 
 **network** Configura interfaces de red, como tarjetas de red, y
 configura la puerta de enlace predeterminada (cuando corresponda).
@@ -16176,7 +16290,7 @@ dirección IP estática a una interfaz de red.
 **swap** Habilita y deshabilita archivos de intercambio y particiones.
 
 **sysctl** Carga los valores de configuración del sistema desde
-*****/etc/sysctl.conf*****, si existe dicho archivo, en el kernel en
+*/etc/sysctl.conf*, si existe dicho archivo, en el kernel en
 ejecución.
 
 **sysklogd** Inicia y detiene los daemons de registro del sistema y del
@@ -16185,11 +16299,14 @@ kernel.
 **template** Una plantilla para crear scripts de arranque personalizados
 para otros daemons.
 
-**udev** Prepara el directorio *****/dev***** e inicia el daemon udev.
+**udev** Prepara el directorio */dev* e inicia el daemon udev.
 
 **udev_retry** Reintenta los eventos udev fallidos y copia los archivos
-de reglas generados desde *****/run/udev***** a
-*****/etc/udev/rules*****. d si es necesario.
+de reglas generados desde */run/udev* a */etc/udev/rules*. d si es necesario.
+
+---
+&nbsp;
+&nbsp;
 
 ## 9.3. Resumen del manejo de dispositivos y módulos
 
@@ -16359,9 +16476,9 @@ archivo* /etc/modprobe*.
 
 *d/\<filename\>.conf* correspondiente. Por ejemplo:
 
-  -----------------------------------
-  softdep snd-pcm post: snd-pcm-oss
-  -----------------------------------
+> ```bash
+> softdep snd-pcm post: snd-pcm-oss
+> ```
 
 Tenga en cuenta que el comando \"softdep\" también permite dependencias
 *pre:* o una combinación de ambas dependencias *pre:* y *post:*.
@@ -16381,9 +16498,9 @@ No compile el módulo o agréguelo a la lista negra en el archivo
 /etc/modprobe.d/blacklist.conf, como se hizo con el módulo forte en el
 ejemplo siguiente:
 
-  -----------------
-  blacklist forte
-  -----------------
+> ```bash
+> blacklist forte
+> ```
 
 Los módulos incluidos en la lista negra se pueden cargar manualmente con
 el comando explícito **modprobe**.
@@ -16446,6 +16563,10 @@ Puede encontrar documentación adicional útil en los siguientes sitios:
 
 *<https://www.kernel.org/pub/linux/kernel/people/mochel/doc/papers/ols-2005/mochel.pdf>
 
+---
+&nbsp;
+&nbsp;
+
 ## 9.4. Administración de dispositivos
 
 ### 9.4.1. Dispositivos de red
@@ -16482,17 +16603,17 @@ El esquema de nomenclatura se puede personalizar creando reglas udev
 personalizadas. Se ha incluido un script que genera las reglas
 iniciales. Genere estas reglas ejecutando:
 
-  ----------------------------------------
-  bash /usr/lib/udev/*init*-net-rules.sh
-  ----------------------------------------
+> ```bash
+> bash /usr/lib/udev/*init*-net-rules.sh
+> ```
 
 Ahora, inspeccione el archivo
 */etc/udev/rules.d/70-persistent-net.rules* para averiguar qué nombre se
 asignó a cada dispositivo de red:
 
-  -----------------------------------------------
-  cat /etc/udev/rules.d/70-persistent-net.rules
-  -----------------------------------------------
+> ```bash
+> cat /etc/udev/rules.d/70-persistent-net.rules
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -16555,9 +16676,11 @@ con una política de asignación alternativa vacía, anulando así el
 archivo de configuración predeterminado
 */usr/lib/udev/network/99-default.link*:
 
-> sed -e '/^AlternativeNamesPolicy/s/=.*$=' \
-> /usr/lib/udev/network/99-*default.link* \
-> > /etc/udev/network/99-default.link
+> ```bash
+> sed -e '/^AlternativeNamesPolicy/s/=.*$/=/'  \
+>        /usr/lib/udev/network/99-default.link \
+>      > /etc/udev/network/99-default.link
+> ```
 
 ### 9.4.2. Enlaces simbólicos de CD-ROM
 
@@ -16608,9 +16731,9 @@ dispositivo de CD-ROM correspondiente, busque el directorio
 correspondiente en */sys* (por ejemplo, */sys/block/hdd*) y ejecute un
 comando similar al siguiente:
 
-  -----------------------------
-  udevadm test /sys/block/hdd
-  -----------------------------
+> ```bash
+> udevadm test /sys/block/hdd
+> ```
 
 Observe las líneas que contienen la salida de varios programas \*\_id.
 El modo \"by-id\" usará el valor ID_SERIAL si existe y no está vacío; de
@@ -16620,8 +16743,10 @@ adapta a su situación, puede realizar la siguiente modificación en el
 archivo */etc/udev/rules.d/83-cdrom-symlinks.rules*, como se indica a
 continuación (donde mode es \"by-id\" o \"by-path\"):
 
-> sed -e 's/"*write_cd_rules*"/"write_cd_rules mode"/' \
-> -i /etc/udev/rules.d/83-cdrom-symlinks.rules
+> ```bash
+> sed -e 's/"write_cd_rules"/"write_cd_rules mode"/' \
+>     -i /etc/udev/rules.d/83-cdrom-symlinks.rules
+> ```
 
 Tenga en cuenta que no es necesario crear los archivos de reglas ni los
 enlaces simbólicos en este momento, ya que ha montado mediante enlace el
@@ -16663,25 +16788,30 @@ Determine los atributos que identifican el dispositivo de forma única
 (normalmente, los ID de proveedor y producto o los números de serie
 funcionan):
 
-  --------------------------------------------------
-  udevadm info -a -p /sys/class/video4linux/video0
-  --------------------------------------------------
+> ```bash
+> udevadm info -a -p /sys/class/video4linux/video0
+> ```
 
 Luego, escriba las reglas que creen los enlaces simbólicos, por ejemplo:
 
+> ```bash
 > cat > /etc/udev/rules.d/83-duplicate_devs.rules << "EOF"
+> 
 > # Enlaces simbólicos persistentes para la cámara web y el sintonizador
-> KERNEL=="video*", ATTRS{idProduct}=="1910",
-> ATTRS{idVendor}=="0d81", SYMLINK+="webcam"
-> KERNEL=="video*", ATTRS{device}=="0x036f",
-> ATTRS{vendor}=="0x109e", SYMLINK+="tvtuner"
+> KERNEL=="video*", ATTRS{idProduct}=="1910", ATTRS{idVendor}=="0d81", SYMLINK+="webcam"
+> KERNEL=="video*", ATTRS{device}=="0x036f",  ATTRS{vendor}=="0x109e", SYMLINK+="tvtuner"
 > EOF
+> ```
 
 El resultado es que los dispositivos */dev/video0* y */dev/video1*
 siguen haciendo referencia aleatoriamente a sintonizador y la cámara web
 (y por lo tanto nunca deben usarse directamente), pero hay enlaces
 simbólicos */dev/tvtuner* y */dev/webcam* que siempre apuntan al
 dispositivo correcto.
+
+---
+&nbsp;
+&nbsp;
 
 ## 9.5. Configuración general de red
 
@@ -16713,6 +16843,7 @@ subred, etc. La raíz del nombre del archivo debe ser *ifconfig*.
 El siguiente comando crea un archivo de ejemplo para el dispositivo eth0
 con una dirección IP estática:
 
+> ```bash
 > cd /etc/sysconfig/
 > cat > ifconfig.eth0 << "EOF"
 > ONBOOT=yes
@@ -16723,6 +16854,7 @@ con una dirección IP estática:
 > PREFIX=24
 > BROADCAST=192.168.1.255
 > EOF
+> ```
 
 Los valores en cursiva deben modificarse en cada archivo para configurar
 las interfaces correctamente.
@@ -16771,13 +16903,17 @@ lograrlo es introducir la dirección IP del servidor DNS, disponible a
 través del ISP o del administrador de red, en */etc/resolv.conf*. Cree
 el archivo ejecutando lo siguiente:
 
+> ```bash
 > cat > /etc/resolv.conf << "EOF"
 > # Begin /etc/resolv.conf
-> domain <S*u nombre de dominio*\>
-> nameserver <*Dirección IP de su servidor de nombres principal*>
-> nameserver <*Dirección IP de su servidor de nombres secundario*>
+> 
+> domain <Su nombre de dominio>
+> nameserver <Dirección IP de su servidor de nombres principal>
+> nameserver <Dirección IP de su servidor de nombres secundario>
+> 
 > # End /etc/resolv.conf
 > EOF
+> ```
 
 La instrucción *domain* puede omitirse o reemplazarse con una
 instrucción de *búsqueda*. Consulte la página del manual de resolv.conf
@@ -16802,9 +16938,9 @@ para establecer el nombre de host del sistema.
 Cree el archivo */etc/hostname* e introduzca un nombre de host
 ejecutando:
 
-  -------------------------------------
-  echo "<*lfs*>" > /etc/hostname
-  -------------------------------------
+> ```bash
+> echo "<lfs>" > /etc/hostname
+> ```
 
 \<lfs\> debe reemplazarse por el nombre asignado al equipo. No
 introduzca aquí el nombre de dominio completo (FQDN). Esa información se
@@ -16817,9 +16953,9 @@ en el archivo */etc/hosts*. Si usa direcciones IP estáticas, también
 deberá elegir una dirección IP. La sintaxis para una entrada en el
 archivo hosts es:
 
-  ---------------------------------------
-  IP_address *myhost.example.org* alias
-  ---------------------------------------
+> ```bash
+> IP_address myhost.example.org alias
+> ```
 
 A menos que el equipo vaya a ser visible en Internet (es decir, que
 exista un dominio registrado y un bloque válido de direcciones IP
@@ -16827,10 +16963,12 @@ asignadas; la mayoría de los usuarios no lo tienen), asegúrese de que la
 dirección IP esté dentro del rango de direcciones IP de la red privada.
 Los rangos válidos son:
 
-> Rango de direcciones de red privada Prefijo normal
-> 10.0.0.1 - 10.255.255.254 8
-> 172.x.0.1 - 172.x.*255.254* 16
-> 192.168.y.1 - 192.168.y.254 24
+> ```bash
+> Rango de direcciones de red privada     Prefijo normal
+> 10.0.0.1 - 10.255.255.254                  8
+> 172.x.0.1 - 172.x.255.254                 16
+> 192.168.y.1 - 192.168.y.254               24
+> ```
 
 \"x\" puede ser cualquier número entre 16 y 31. \"y\" puede ser
 cualquier número entre 0 y 255.
@@ -16848,21 +16986,29 @@ necesario para que ciertos programas, como los MTA, funcionen
 correctamente. Para ello, se puede utilizar un FQDN especial,
 *localhost.localdomain*. Cree el archivo */etc/hosts* ejecutando:
 
+> ```bash
 > cat > /etc/hosts << "EOF"
 > # Begin /etc/hosts
+> 
 > 127.0.0.1 localhost.localdomain localhost
 > 127.0.1.1 <FQDN> <HOSTNAME>
 > <192.168.1.2> <FQDN> <HOSTNAME> [alias1] [alias2 ...]
-> ::1 localhost ip6-localhost ip6-loopback
-> ff02::1 ip6-allnodes
-> ff02::2 ip6-allrouters
-> \# End /etc/hosts
+> ::1       localhost ip6-localhost ip6-loopback
+> ff02::1   ip6-allnodes
+> ff02::2   ip6-allrouters
+> 
+> # End /etc/hosts
 > EOF
+> ```
 
 Los valores *\<192.168.1.2\>*, *\<FQDN\>* y *\<HOSTNAME\>* deben
 modificarse para usos o requisitos específicos (si un administrador de
 red/sistema le asigna una dirección IP y el equipo se conectará a una
 red existente). Los alias opcionales pueden omitirse.
+
+---
+&nbsp;
+&nbsp;
 
 ## 9.6. Uso y configuración de los scripts de arranque de System V
 
@@ -16892,14 +17038,15 @@ apagarse. El nivel de ejecución predeterminado es 3. A continuación, se
 detallan los diferentes niveles de ejecución tal como se implementan en
 LFS:
 
-> 0: detener el equipo
-> 1: modo monousuario
-> 2: reservado para personalización; en caso contrario, igual que 3
-> 3: modo multiusuario con conexión en red
-> 4: reservado para personalización; en caso contrario, igual que 3
-> 5: igual que 4, se suele usar para iniciar sesión mediante interfaz
-> gráfica (como **gdm** de GNOME o **lxdm** de LXDE)
-> 6: reiniciar el equipo
+> ```bash
+> 0: detener el equipo (halt the computer)
+> 1: modo monousuario (single-user mode)
+> 2: reservado para personalización; en caso contrario, igual que 3 ( reserved for customization, otherwise the same as 3)
+> 3: modo multiusuario con conexión en red ( multi-user mode with networking)
+> 4: reservado para personalización; en caso contrario, igual que 3 (reserved for customization, otherwise the same as 3)
+> 5: igual que 4, se suele usar para iniciar sesión mediante interfaz gráfica (como **gdm** de GNOME o **lxdm** de LXDE) ( same as 4, it is usually used for GUI login (like GNOME's gdm or LXDE's lxdm))
+> 6: reiniciar el equipo (reboot the computer)
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -16916,10 +17063,14 @@ Durante la inicialización del núcleo, el primer programa que se ejecuta
 programa lee el archivo de inicialización */etc/inittab*. Cree este
 archivo con:
 
+> ```bash
 > cat > /etc/inittab << "EOF"
 > # Begin /etc/inittab
+> 
 > id:3:initdefault:
+> 
 > si::sysinit:/etc/rc.d/init.d/rc S
+> 
 > l0:0:wait:/etc/rc.d/init.d/rc 0
 > l1:S1:wait:/etc/rc.d/init.d/rc 1
 > l2:2:wait:/etc/rc.d/init.d/rc 2
@@ -16927,17 +17078,22 @@ archivo con:
 > l4:4:wait:/etc/rc.d/init.d/rc 4
 > l5:5:wait:/etc/rc.d/init.d/rc 5
 > l6:6:wait:/etc/rc.d/init.d/rc 6
+> 
 > ca:12345:ctrlaltdel:/sbin/shutdown -t1 -a -r now
+> 
 > su:S06:once:/sbin/sulogin
 > s1:1:respawn:/sbin/sulogin
+> 
 > 1:2345:respawn:/sbin/agetty --noclear tty1 9600
 > 2:2345:respawn:/sbin/agetty tty2 9600
 > 3:2345:respawn:/sbin/agetty tty3 9600
 > 4:2345:respawn:/sbin/agetty tty4 9600
 > 5:2345:respawn:/sbin/agetty tty5 9600
 > 6:2345:respawn:/sbin/agetty tty6 9600
-> # Fin de /etc/inittab
+> 
+> # End /etc/inittab
 > EOF
+> ```
 
 Una explicación de esto El archivo de inicialización se encuentra en la
 página del manual de inittab. En LFS, el comando clave es **rc**. El
@@ -16991,25 +17147,20 @@ Estas son descripciones de lo que los argumentos hacen que hagan los
 scripts:
 
 *inicio*
-
 Se inicia el servicio.
 
 *parada*
-
 Se detiene el servicio.
 
 *reinicio*
-
 Se detiene el servicio y se vuelve a iniciar.
 
 *recarga*
-
 Se actualiza la configuración del servicio. Esto se utiliza después de
 modificar el archivo de configuración de un servicio, cuando no es
 necesario reiniciarlo.
 
 *estado*
-
 Indica si el servicio se está ejecutando y con qué PID.
 
 Siéntase libre de modificar el funcionamiento del proceso de arranque
@@ -17073,14 +17224,18 @@ hardware *NO* está configurado en hora UTC.
 
 Cree un nuevo archivo */etc/sysconfig/clock* ejecutando lo siguiente:
 
+> ```bash
 > cat > /etc/sysconfig/clock << "EOF"
 > # Begin /etc/sysconfig/clock
+> 
 > UTC=1
 > # Configure aquí las opciones que necesite para hwclock,
 > # como el tipo de reloj *de* hardware de la máquina para Alphas.
 > CLOCKPARAMS=
+> 
 > # End /etc/sysconfig/clock
 > EOF
+> ```
 
 En <https://www.linuxfromscratch.org/hints/downloads/files/time.tx>t se
 encuentra una buena sugerencia sobre cómo gestionar la hora en LFS.
@@ -17118,14 +17273,12 @@ El archivo */etc/sysconfig/console* debe contener líneas con el formato:
 *VARIABLE=valor*. Se reconocen las siguientes variables:
 
 LOGLEVEL
-
 Esta variable especifica el nivel de registro de los mensajes del kernel
 enviados a la consola, según lo establecido por **dmesg -n**. Los
 niveles válidos van del 1 (sin mensajes) al 8. El nivel predeterminado
 es 7, que es bastante detallado.
 
 KEYMAP
-
 Esta variable especifica los argumentos del programa **loadkeys**;
 normalmente, el nombre del mapa de teclas que se cargará, por ejemplo,
 it. Si esta variable no está establecida, el script de arranque no
@@ -17138,7 +17291,6 @@ ejemplo, qwerty/es) para garantizar que se cargue el mapa de teclas
 adecuado.
 
 KEYMAP_CORRECTIONS
-
 Esta variable (poco utilizada) especifica los argumentos para la segunda
 llamada al programa **loadkeys**. Resulta útil si el mapa de teclas
 predeterminado no es del todo satisfactorio y es necesario realizar un
@@ -17147,7 +17299,6 @@ de teclas que normalmente no lo tiene, establezca esta variable en
 euro2.
 
 FFONT
-
 Esta variable especifica los argumentos para el programa **setfont**.
 Normalmente, incluye el nombre de la fuente, -m, y el nombre del mapa de
 caracteres de la aplicación que se va a cargar. Por ejemplo, para cargar
@@ -17159,13 +17310,11 @@ tanto, el argumento del parámetro \"-m\" debe establecerse en la
 codificación de los códigos de teclas compuestos en el mapa de teclas.
 
 UNICODE
-
 Establezca esta variable en 1, sí o verdadero para que la consola esté
 en modo UTF-8. Esto es útil en configuraciones regionales basadas en
 UTF-8 y perjudicial en caso contrario.
 
 LEGACY_CHARSET
-
 Para muchas distribuciones de teclado, no existe un mapa de teclas
 Unicode estándar en el paquete Kbd. El script de arranque de la
 **consola** convertirá un mapa de teclas disponible a UTF-8 sobre la
@@ -17187,47 +17336,63 @@ comillas Unicode izquierdas/derechas y el guion Unicode inglés). Por lo
 tanto, establezca una de ellas, por ejemplo, Lat2-Terminus16.psfu.gz,
 como la fuente de consola predeterminada.
 
+> ```bash
 > cat > /etc/sysconfig/console << "EOF"
 > # Begin /etc/sysconfig/*console*
+> 
 > UNICODE="1"
 > FONT="Lat2-Terminus16"
+> 
 > # End /etc/sysconfig/console
 > EOF
+> ```
 
 • Para una configuración no Unicode, generalmente solo se necesitan las
 variables KEYMAP y FONT. Por ejemplo, para una configuración polaca, se
 usaría:
 
+> ```bash
 > cat > /etc/sysconfig/console << "EOF"
 > # Begin /etc/sysconfig/console
+> 
 > KEYMAP="pl2"
 > FONT="lat2a-16 -m 8859-2"
+> 
 > # End /etc/sysconfig/console
 > EOF
+> ```
 
 • Como se mencionó anteriormente, a veces es necesario ajustar
 ligeramente el mapa de teclas estándar. El siguiente ejemplo añade el
 símbolo del euro al mapa de teclas alemán:
 
+> ```bash
 > cat > /etc/sysconfig/console << "EOF"
 > # Begin /etc/sysconfig/console
+> 
 > KEYMAP="de-latin1"
 > KEYMAP_CORRECTIONS="euro2"
 > FONT="lat0-16 -m 8859-*15*"
 > UNICODE="1"
+> 
 > # End /etc/sysconfig/console
 > EOF
+> ```
 
 • El siguiente es un ejemplo con Unicode habilitado para búlgaro, donde
 existe un mapa de teclas UTF-8 estándar:
 
+> ```bash
 > cat > /etc/sysconfig/console << "EOF"
 > # Begin /etc/sysconfig/console
+> 
 > UNICODE="1"
 > KEYMAP="bg_bds-utf8"
 > FONT="LatArCyrHeb-16"
+> 
 > # End /etc/sysconfig/console
 > EOF
+> ```
 
 • Debido al uso de un En el ejemplo anterior, la fuente LatArCyrHeb-16
 de 512 glifos ya no permite colores brillantes en la consola de Linux a
@@ -17236,26 +17401,34 @@ framebuffer y se puede prescindir de caracteres que no pertenezcan al
 idioma, aún es posible usar una fuente específica del idioma de 256
 glifos, como se ilustra a continuación:
 
+> ```bash
 > cat > /etc/sysconfig/console << "EOF"
 > # Begin /etc/sysconfig/*console*
+> 
 > UNICODE="1"
 > KEYMAP="bg_bds-utf8"
 > FONT="cyr-sun16"
+> 
 > # End /etc/sysconfig/console
 > EOF
+> ```
 
 • El siguiente ejemplo ilustra la autoconversión del mapa de teclas de
 ISO-8859-15 a UTF-8 y la habilitación de teclas muertas en modo Unicode:
 
+> ```bash
 > cat > /etc/sysconfig/console << "EOF"
 > # Begin /etc/sysconfig/console
+> 
 > UNICODE="1"
 > KEYMAP="de-latin1"
 > KEYMAP_CORRECTIONS="euro2"
 > LEGACY_CHARSET="iso-8859-15"
 > FONT="LatArCyrHeb-16 -m 8859-15"
+> 
 > # Fin de /etc/sysconfig/console
 > EOF
+> ```
 
 • Algunos mapas de teclas tienen teclas muertas (es decir, teclas que no
 producen un carácter por sí mismas, sino que acentúan el carácter
@@ -17306,9 +17479,9 @@ periódica, edite */etc/sysconfig/rc.site* y defina la variable
 SYSKLOGD_PARMS con el valor deseado. Por ejemplo, para eliminar todos
 los parámetros, establezca la variable en un valor nulo:
 
-  -------------------
-  SYSKLOGD_PARMS=
-  -------------------
+> ```bash
+> SYSKLOGD_PARMS=
+> ```
 
 Consulte **man syslogd** para obtener más opciones.
 
@@ -17328,82 +17501,99 @@ permitirá la ejecución selectiva de scripts de arranque. Otras opciones
 se describen en los comentarios del archivo. La versión predeterminada
 del archivo es la siguiente:
 
-> \# rc.site
-> \# Optional parameters for boot scripts.
-> \# Distro Information
-> \# These values, if specified here, override the defaults
+> ```bash
+> # rc.site
+> # Optional parameters for boot scripts.
+> 
+> # Distro Information
+> # These values, if specified here, override the defaults
 > #DISTRO=\"Linux From Scratch\" \# The distro name
-> #DISTRO_CONTACT=\"lfs-dev@lists.linuxfromscratch.org\" \# Bug report
-> address
-> #DISTRO_MINI=\"LFS\" \# Short *name* used in filenames for distro
-> config
-> \# Define custom colors used in messages printed to the screen
-> \# Please consult \`man console_codes\` for more information
-> \# under the \"ECMA-48 Set Graphics Rendition\" section
-> \#
-> \# Warning: when switching from a 8bit to a 9bit font,
-> \# the linux console will reinterpret the bold (1;) to
-> \# the top 256 glyphs of the 9bit font. This does
-> \# not affect framebuffer consoles
-> \# These values, if specified here, override the defaults
+> #DISTRO_CONTACT=\"lfs-dev@lists.linuxfromscratch.org\" \# Bug report address
+> #DISTRO_MINI=\"LFS\" \# Short *name* used in filenames for distro config
+> 
+> # Define custom colors used in messages printed to the screen
+> 
+> # Please consult \`man console_codes\` for more information
+> # under the \"ECMA-48 Set Graphics Rendition\" section
+> #
+> # Warning: when switching from a 8bit to a 9bit font,
+> # the linux console will reinterpret the bold (1;) to
+> # the top 256 glyphs of the 9bit font. This does
+> # not affect framebuffer consoles
+> 
+> # These values, if specified here, override the defaults
 > #BRACKET=\"\\\\033\[1;34m\" \# Blue
 > #FAILURE=\"\\\\033\[1;31m\" \# Red
 > #INFO=\"\\\\033\[1;36m\" \# Cyan
 > #NORMAL=\"\\\\033\[0;39m\" \# Grey
 > #SUCCESS=\"\\\\033\[1;32m\" \# Green
 > #WARNING=\"\\\\033\[1;33m\" \# Yellow
-> \# Use a colored prefix
-> \# These values, if specified here, override the defaults
-> #BMPREFIX=\" \"
-> #SUCCESS_PREFIX=\"\${SUCCESS} \* \${NORMAL} \"
-> #FAILURE_PREFIX=\"\${FAILURE}\*\*\*\*\*\${NORMAL} \"
-> #WARNING_PREFIX=\"\${WARNING} \*\*\* \${NORMAL} \"
-> \# Manually set the right edge of message output (characters)
-> \# Useful when resetting console font during boot to override
-> \# automatic screen width detection
+> 
+> # Use a colored prefix
+> # These values, if specified here, override the defaults
+> #BMPREFIX="      "
+> #SUCCESS_PREFIX="${SUCCESS}  *  ${NORMAL} "
+> #FAILURE_PREFIX="${FAILURE}*****${NORMAL} "
+> #WARNING_PREFIX="${WARNING} *** ${NORMAL} "
+> 
+> # Manually set the right edge of message output (characters)
+> # Useful when resetting console font during boot to override
+> # automatic screen width detection
 > #COLUMNS=120
-> \# Interactive startup
-> #IPROMPT=\"yes\" \# Whether to display the interactive boot prompt
-> #itime=\"3\" \# The amount of time (in seconds) to display the
-> prompt
-> \# The total length of the distro welcome string, without escape
-> codes
-> #wlen=\$(echo \"Welcome to \${DISTRO}\" \ | wc -c )
-> #welcome_message=\"Welcome to \${INFO}\${DISTRO}\${NORMAL}\"
-> \# The total length of the interactive string, without escape codes
-> #ilen=\$(echo \"Press \'I\' to enter interactive startup\" \ | wc -c
-> )
-> #i_message=\"Press \'\${FAILURE}I\${NORMAL}\' to enter interactive
-> startup\"
-> \# Set scripts to skip the file system check on reboot
+> 
+> # Interactive startup
+> #IPROMPT="yes" # Whether to display the interactive boot prompt
+> #itime="3" # The amount of time (in seconds) to display the prompt
+> 
+> # The total length of the distro welcome string, without escape codes
+> #wlen=$(echo "Welcome to ${DISTRO}" | wc -c )
+> #welcome_message="Welcome to ${INFO}${DISTRO}${NORMAL}"
+> 
+> # The total length of the interactive string, without escape codes
+> #ilen=$(echo "Press 'I' to enter interactive startup" | wc -c)
+> #i_message="Press '${FAILURE}I${NORMAL}' to enter interactive startup"
+> 
+> # Set scripts to skip the file system check on reboot
 > #FASTBOOT=yes
-> \# Skip reading from the console
+> 
+> # Skip reading from the console
 > #HEADLESS=yes
-> \# Write out fsck progress if yes
+> 
+> # Write out fsck progress if yes
 > #VERBOSE_FSCK=no
-> \# Speed up boot without waiting for settle in udev
+> 
+> # Speed up boot without waiting for settle in udev
 > #OMIT_UDEV_SETTLE=y
-> \# Speed up boot without waiting for settle in udev_retry
+> 
+> # Speed up boot without waiting for settle in udev_retry
 > #OMIT_UDEV_RETRY_SETTLE=yes
-> \# Skip cleaning /tmp if yes
+> 
+> # Skip cleaning /tmp if yes 
 > #SKIPTMPCLEAN=no
-> \# For setclock
+> 
+> # For setclock
 > #UTC=1
 > #CLOCKPARAMS=
-> \# For consolelog (Note that the default, 7=debug, is noisy)
+> 
+> # For consolelog (Note that the default, 7=debug, is noisy)
 > #LOGLEVEL=7
-> \# For network
+> 
+> # For network
 > #HOSTNAME=mylfs
-> \# Delay between TERM and KILL signals at shutdown
+> 
+> # Delay between TERM and KILL signals at shutdown
 > #KILLDELAY=3
-> \# Optional sysklogd parameters
-> #SYSKLOGD_PARMS=\"-m 0\"
-> \# Console parameters
+> 
+> # Optional sysklogd parameters
+> #SYSKLOGD_PARMS="-m 0"
+> 
+> # Console parameters
 > #UNICODE=1
-> #KEYMAP=\"de-latin1\"
-> #KEYMAP_CORRECTIONS=\"euro2\"
-> #FONT=\"lat0-16 -m 8859-15\"
+> #KEYMAP="de-latin1"
+> #KEYMAP_CORRECTIONS="euro2"
+> #FONT="lat0-16 -m 8859-15"
 > #LEGACY_CHARSET=
+> ```
 
 ### 9.6.8.1. Personalización de los scripts de arranque y apagado
 
@@ -17459,6 +17649,10 @@ reiniciar (p. ej., ***/sbin/shutdown -t0 -r now***). El retraso del
 script **sendsignals** se puede omitir configurando el parámetro
 KILLDELAY=0.
 
+---
+&nbsp;
+&nbsp;
+
 ## 9.7. Configuración de la configuración regional del sistema
 
 Algunas variables de entorno son necesarias para la compatibilidad con
@@ -17486,9 +17680,9 @@ También pueden estar presentes modificadores opcionales como *\@euro*.
 La lista de todas las configuraciones regionales compatibles con Glibc
 se puede obtener ejecutando el siguiente comando:
 
-  -----------
-  locale -a
-  -----------
+> ```bash
+> locale -a
+> ```
 
 Charmaps puede tener varios alias; por ejemplo, *ISO-8859-1* también se
 conoce como *iso8859-1* e *iso88591*. Algunas aplicaciones no pueden
@@ -17500,26 +17694,28 @@ siguiente comando, donde *\<nombre de configuración regional\>* es el
 resultado de **locale -a** para su configuración regional preferida
 (*en_GB*. *iso88591* en nuestro ejemplo).
 
-  -----------------------------------------
-  LC_ALL=\<*locale* name\> locale charmap
-  -----------------------------------------
+> ```bash
+> LC_ALL=<locale name> locale charmap
+> ```
 
 Para la configuración regional *en_GB.iso88591*, el comando anterior
 imprimirá:
 
-  ------------
-  ISO-8859-1
-  ------------
+> ```bash
+> ISO-8859-1
+> ```
 
 Esto da como resultado una configuración regional final de
 *en_GB.ISO-8859-1*. Es importante que la configuración regional
 encontrada mediante la heurística anterior se pruebe antes de agregarla
 a los archivos de inicio de Bash:
 
-> LC_ALL=\<locale name\> locale language
-> LC_ALL=\<locale name\> locale charmap
-> LC_ALL=\<locale name\> locale *int_curr_symbol*
-> LC_ALL=\<locale name\> locale int_prefix
+> ```bash
+> LC_ALL=<locale name> locale language
+> LC_ALL=<locale name> locale charmap
+> LC_ALL=<locale name> locale int_curr_symbol
+> LC_ALL=<locale name> locale int_prefix
+> ```
 
 Los comandos anteriores deben imprimir el nombre del idioma, la
 codificación de caracteres utilizada por la configuración regional, la
@@ -17529,9 +17725,9 @@ falla con un mensaje similar al que se muestra a continuación, significa
 que su configuración regional no se instaló en el Capítulo 8 o no es
 compatible con la instalación predeterminada de Glibc.
 
-  ------------------------------------------------------------------------
-  locale: Cannot set LC\_\* to default locale: No such file or directory
-  ------------------------------------------------------------------------
+> ```bash
+> locale: Cannot set LC_* to default locale: No such file or directory
+> ```
 
 Si esto ocurre, debe instalar la configuración regional deseada mediante
 el comando **localedef** o considerar elegir una configuración regional
@@ -17566,18 +17762,23 @@ regional deseada, pero configure la configuración regional *C.UTF-8* si
 se ejecuta en la consola de Linux (para evitar que los programas
 muestren caracteres que la consola de Linux no puede representar).
 
+> ```bash
 > cat > /etc/profile << "EOF"
 > # Begin /etc/profile
+> 
 > for i in $(locale); do
-> unset ${i%=*}
+>   unset ${i%=*}
 > done
+> 
 > if [[ "$TERM" = linux ]]; then
-> export LANG=C.UTF-8
+>   export LANG=C.UTF-8
 > else
-> export LANG=<ll>_<CC>.<charmap><@modifiers>
+>   export LANG=<ll>_<CC>.<charmap><@modifiers>
 > fi
+> 
 > # End /etc/profile
 > EOF
+> ```
 
 Las configuraciones regionales *C* (predeterminada) y *en_US*
 (recomendada para usuarios de inglés estadounidense) son diferentes. *C*
@@ -17590,6 +17791,10 @@ conformes con RFC (el conjunto de caracteres del correo saliente se
 indica como *desconocido de 8 bits*). Se recomienda usar la
 configuración regional C solo si está seguro de que nunca necesitará
 caracteres de 8 bits.
+
+---
+&nbsp;
+&nbsp;
 
 ## 9.8. Creación del archivo /etc/inputrc
 
@@ -17616,24 +17821,32 @@ comentarios que explican la función de las distintas opciones. Tenga en
 cuenta que los comentarios no pueden estar en la misma línea que los
 comandos. Cree el archivo con el siguiente comando:
 
+> ```bash
 > cat > /etc/inputrc << "EOF"
 > # Begin /etc/inputrc
-> # Modified by Chris Lynn \<<roryo@roryo.dynup.net>\>
+> # Modified by Chris Lynn <roryo@roryo.dynup.net>
+> 
 > # Allow the command prompt to wrap to the next line
 > set horizontal-scroll-mode Off
+> 
 > # Enable 8-bit input
 > set meta-flag On
 > set input-meta On
+> 
 > # Turns off 8th bit stripping
 > set convert-meta Off
+> 
 > # Keep the 8th bit for display
 > set output-meta On
+> 
 > # none, visible or audible
 > set bell-style none
+> 
 > # All of the following map the escape sequence of the value
 > # contained in the 1st argument to the readline specific functions
 > "\eOd": backward-word
 > "\eOc": forward-word
+> 
 > # for linux console
 > "\e[1~": beginning-of-line
 > "\e[4~": end-of-line
@@ -17641,15 +17854,22 @@ comandos. Cree el archivo con el siguiente comando:
 > "\e[6~": end-of-history
 > "\e[3~": delete-char
 > "\e[2~": quoted-insert
+> 
 > # for xterm
 > "\eOH": beginning-of-line
 > "\eOF": end-of-line
+> 
 > # for Konsole
 > "\e[H": beginning-of-line
 > "\e[F": end-of-line
+> 
 > # End /etc/inputrc
 > EOF
-> +---------------------------------------------------------------------+
+> ```
+
+---
+&nbsp;
+&nbsp;
 
 ## 9.9. Creación del archivo /etc/shells
 
@@ -17668,12 +17888,20 @@ de accesos si no encuentra */etc/shells*, o para los daemons FTP, que
 tradicionalmente impiden el acceso a usuarios con shells no incluidas en
 este archivo.
 
+> ```bash
 > cat > /etc/shells << "EOF"
 > # Begin /etc/shells
+> 
 > /bin/sh
 > /bin/bash
+> 
 > # End /etc/shells
 > EOF
+> ```
+
+---
+&nbsp;
+&nbsp;
 
 ## Capítulo 10. Haciendo que el sistema LFS sea arrancable <a name="capitulo-10"></a>
 
@@ -17692,20 +17920,25 @@ se montarán los sistemas de archivos por defecto, en qué orden y cuáles
 deben comprobarse (para detectar errores de integridad) antes del
 montaje. Cree una nueva tabla de sistemas de archivos como la siguiente:
 
+> ```bash
 > cat > /etc/fstab << "EOF"
 > # Begin /etc/fstab
-> # file system mount-point type options dump fsck order
-> /dev/<xxx> / <fff> defaults 1 1
-> /dev/<yyy> swap swap pri=1 0 0
-> proc /proc proc nosuid,noexec,nodev 0 0
-> sysfs /sys sysfs nosuid,noexec,nodev 0 0
-> devpts /dev/pts devpts gid=5,mode=620 0 0
-> tmpfs /run tmpfs defaults 0 0
-> devtmpfs /dev devtmpfs mode=0755,nosuid 0 0
-> tmpfs /dev/shm tmpfs nosuid,nodev 0 0
-> cgroup2 /sys/fs/cgroup cgroup2 nosuid,noexec,nodev 0 0
+> 
+> # file system  mount-point    type       options               dump   fsck
+>                                                                       order
+> /dev/<xxx>     /              <fff>      defaults              1      1
+> /dev/<yyy>     swap           swap       pri=1 0 0
+> proc           /proc          proc       nosuid,noexec,nodev   0      0
+> sysfs          /sys           sysfs      nosuid,noexec,nodev   0      0
+> devpts         /dev/pts       devpts     gid=5,mode=620        0      0
+> tmpfs          /run           tmpfs      defaults              0      0
+> devtmpfs       /dev           devtmpfs   mode=0755,nosuid      0      0
+> tmpfs          /dev/shm       tmpfs      nosuid,nodev          0      0
+> cgroup2        /sys/fs/cgroup cgroup2    nosuid,noexec,nodev   0      0
+> 
 > # End /etc/fstab
 > EOF
+> ```
 
 Reemplace *\<xxx\>*, *\<yyy\>* y *\<fff\>* con los valores apropiados
 para el sistema, por ejemplo, *sda2*, *sda5* y *ext4*. Para obtener más
@@ -17732,16 +17965,16 @@ ejemplo, para montar unidades flash USB, un usuario ru_RU.KOI8-R
 necesitaría lo siguiente en la sección de opciones de su línea de
 montaje en */etc/fstab*:
 
-  -----------------------------------------------------------
-  noauto,user,quiet,*showexec*,codepage=866,iocharset=koi8r
-  -----------------------------------------------------------
+> ```bash
+> noauto,user,quiet,*showexec*,codepage=866,iocharset=koi8r
+> ```
 
 El fragmento de opciones correspondiente para los usuarios ru_RU.UTF-8
 es:
 
-  ------------------------------------------------
-  noauto,user,quiet,*showexec*,codepage=866,utf8
-  ------------------------------------------------
+> ```bash
+> noauto,user,quiet,*showexec*,codepage=866,utf8
+> ```
 
 Tenga en cuenta que usar *iocharset* es la opción predeterminada para
 *iso8859-1* (que evita que el sistema de archivos distinga entre
@@ -17765,9 +17998,9 @@ de montaje \"*barrier=1*\" a la entrada correspondiente en */etc/fstab*.
 Para comprobar si la unidad de disco admite esta opción, ejecute
 *hdparm* en la unidad de disco correspondiente. Por ejemplo, si:
 
-  --------------------------------
-  hdparm -I /dev/sda \| grep NCQ
-  --------------------------------
+> ```bash
+> hdparm -I /dev/sda | grep NCQ
+> ```
 
 devuelve una salida no vacía; la opción es compatible.
 
@@ -17779,10 +18012,9 @@ devuelve una salida no vacía; la opción es compatible.
 
 El paquete Linux contiene el kernel de Linux.
 
-**Tiempo de compilación aproximado**: 0,4 - 32 SBU (normalmente unas 2,5
-SBU)
-
-**Espacio en disco necesario**: 1,7 - 14 GB (normalmente unos 2,3 GB)
+|Tiempo de compilación aproximado:|0,4 - 32 SBU<br>(normalmente unas 2,5|
+|---------------------------------|-------|
+|Espacio en disco requerido:|1,7 - 14 GB<br>(normalmente unos 2,3 GB)|
 
 ### 10.3.1. Instalación del kernel
 
@@ -17819,9 +18051,9 @@ configuración del kernel en este libro.
 
 Prepárese para la compilación ejecutando el siguiente comando:
 
-  ---------------
-  make mrproper
-  ---------------
+> ```bash
+> make mrproper
+> ```
 
 Esto garantiza que el árbol del kernel esté completamente limpio. El
 equipo del kernel recomienda ejecutar este comando antes de cada
@@ -17831,9 +18063,9 @@ después de descomprimir.
 Hay varias maneras de configurar las opciones del kernel. Normalmente,
 esto se hace mediante una interfaz de menús, por ejemplo:
 
-  -----------------
-  make menuconfig
-  -----------------
+> ```bash
+> make menuconfig
+> ```
 
 El significado de las variables de entorno opcionales de make:
 
@@ -17842,15 +18074,11 @@ LANG=<host_LANG_value> LC_ALL=
 Esto establece la configuración regional a la utilizada en el host. Esto
 puede ser necesario para un correcto dibujo de líneas de la interfaz de
 ncurses de menuconfig en una consola de texto UTF-8 de Linux.
-
 Si se utiliza, asegúrese de reemplazar *\<host_LANG_value\>* por el
 valor de la variable *\$LANG * de su host. Alternativamente, puede usar
 el valor del host *\$LC_ALL *o* \$LC_CTYPE*.
 
-  -------------------
-  make *menuconfig*
-  -------------------
-
+**make menuconfig**
 Esto inicia una interfaz de ncurses basada en menús. Para otras
 interfaces (gráficas), escriba **make help**.
 
@@ -17863,82 +18091,79 @@ interfaces (gráficas), escriba **make help**.
 > Asegúrese de habilitar, deshabilitar o configurar las siguientes
 > funciones; de lo contrario, el sistema podría no funcionar
 > correctamente o no arrancar:
+> ```bash
+> General setup --->
+>   [ ] Compile the kernel with warnings as errors                      [WERROR]
+>   CPU/Task time and stats accounting --->
+>     [*] Pressure stall information tracking                              [PSI]
+>     [ ] Require boot parameter to enable pressure stall information tracking
+>                                                     ... [PSI_DEFAULT_DISABLED]
+>   < > Enable kernel headers through /sys/kernel/kheaders.tar.xz    [IKHEADERS]
+>   [*] Control Group support --->                                     [CGROUPS]
+>     [*] Memory controller                                              [MEMCG]
+>   [ ] Configure standard kernel features (expert users) --->          [EXPERT]
+> Processor type and features --->
+>   [*] Build a relocatable kernel                                 [RELOCATABLE]
+>   [*] Randomize the address of the kernel image (KASLR)       [RANDOMIZE_BASE]
 > 
-> General setup \-\--\>
-> \[ \] Compile the ***kernel*** with warnings as errors \[WERROR\]
-> CPU/Task time and stats accounting \-\--\>
-> \[\*\] Pressure stall information tracking \[PSI\]
-> \[ \] Require boot parameter to enable pressure stall information
-> tracking
-> \... \[PSI_DEFAULT_DISABLED\]
-> \< \> Enable kernel headers through /sys/kernel/kheaders.tar.xz
-> \[IKHEADERS\]
-> \[\*\] Control Group support \-\--\> \[CGROUPS\]
-> \[\*\] Memory controller \[MEMCG\]
-> \[ \] Configure standard kernel features (expert users) \--→
-> \[EXPERT\]
-> Processor type and features \--→
-> \[\*\] Build a relocatable kernel \[RELOCATABLE\]
-> \[\*\] Randomize the address of the kernel image (KASLR)
-> \[RANDOMIZE_BASE\]
-> General architecture-dependent options \-\--\>
-> \[\*\] Stack Protector buffer overflow detection \[STACKPROTECTOR\]
-> \[\*\] Strong Stack Protector \[STACKPROTECTOR_STRONG\]
-> Device Drivers \-\--\>
-> Generic Driver Options \-\--\>
-> \[ \] Support for uevent helper \[UEVENT_HELPER\]
-> \[\*\] Maintain a devtmpfs filesystem to mount at /dev \[DEVTMPFS\]
-> \[\*\] Automount devtmpfs at /dev, after the kernel mounted the
-> rootfs
-> \... \[DEVTMPFS_MOUNT\]
-> Firmware Drivers \-\--\>
-> \[\*\] Mark VGA/VBE/EFI FB as generic system framebuffer
-> \[SYSFB_SIMPLEFB\]
-> Graphics support \-\--\>
-> \<\*\> Direct Rendering Manager (XFree86 4.1.0 and higher DRI
-> support) \-\--\>
-> \... \[DRM\]
-> \[\*\] Display a user-friendly message when a kernel panic occurs
-> \... \[DRM_PANIC\]
-> (kmsg) Panic screen formatter \[DRM_PANIC_SCREEN\]
-> Supported DRM clients \-\--\>
-> \[\*\] Enable legacy fbdev support for your modesetting driver
-> \... \[DRM_FBDEV_EMULATION\]
-> \<\*\> Simple framebuffer driver \[DRM_SIMPLEDRM\]
-> Console display driver support \-\--\>
-> \[\*\] Framebuffer Console support \[FRAMEBUFFER_CONSOLE\]
-> +----------------------------------------------------------------------+
+> General architecture-dependent options --->
+>   [*] Stack Protector buffer overflow detection               [STACKPROTECTOR]
+>   [*] Strong Stack Protector                           [STACKPROTECTOR_STRONG]
+> 
+> Device Drivers --->
+>   Generic Driver Options --->
+>    [ ] Support for uevent helper                               [UEVENT_HELPER]
+>    [*] Maintain a devtmpfs filesystem to mount at /dev              [DEVTMPFS]
+>    [*] Automount devtmpfs at /dev, after the kernel mounted the rootfs
+>                                                           ... [DEVTMPFS_MOUNT]
+>   Firmware Drivers --->
+>    [*] Mark VGA/VBE/EFI FB as generic system framebuffer      [SYSFB_SIMPLEFB]
+>   Graphics support --->
+>    <*> Direct Rendering Manager (XFree86 4.1.0 and higher DRI support) --->
+>                                                                      ... [DRM]
+>       [*] Display a user-friendly message when a kernel panic occurs
+>                                                                ... [DRM_PANIC]
+>       (kmsg) Panic screen formatter [DRM_PANIC_SCREEN]
+>       Supported DRM clients --->
+>         [*] Enable legacy fbdev support for your modesetting driver
+>                                                      ... [DRM_FBDEV_EMULATION]
+>       <*> Simple framebuffer driver                            [DRM_SIMPLEDRM]
+>     Console display driver support --->
+> [*] Framebuffer Console support                          [FRAMEBUFFER_CONSOLE]
+> ```
 > Habilite algunas funciones adicionales si está construyendo un
 > sistema de 64 bits. Si usa menuconfig, habilítelas en el orden
 > CONFIG_PCI_MSI primero, luego *CONFIG_IRQ_REMAP* y, por último,
 > CONFIG_X86_X2APIC, ya que una opción solo aparece después de
 > seleccionar sus dependencias.
-> +----------------------------------------------------------------------+
-> Processor type and features \-\--\>
-> \[\*\] Support x2apic \[X86_X2APIC\]
-> Device Drivers \-\--\>
-> \[\*\] PCI support \--→ \[PCI\]
-> \[\*\] Message Signaled Interrupts (MSI and MSI-X) \[PCI_MSI\]
-> \[\*\] IOMMU Hardware Support \-\--\> \[IOMMU_SUPPORT\]
-> \[\*\] Support for Interrupt Remapping \[IRQ_REMAP\]
-> +----------------------------------------------------------------------+
+> ```bash
+> Processor type and features --->
+>   [*] Support x2apic                                              [X86_X2APIC]
+> 
+> Device Drivers --->
+>   [*] PCI support --->                                                   [PCI]
+>     [*] Message Signaled Interrupts (MSI and MSI-X)                  [PCI_MSI]
+>   [*] IOMMU Hardware Support --->                              [IOMMU_SUPPORT]
+>     [*] Support for Interrupt Remapping                            [IRQ_REMAP]
+> ```
 > Si está creando un sistema de 32 bits con hardware con más de 4 GB
 > de RAM, ajuste la *configuración* para que el kernel pueda usar
 > hasta 64 GB de RAM física:
-> +----------------------------------------------------------------------+
-> Processor type and features \-\--\>
-> High Memory Support \-\--\>
-> (X) 64GB \[HIGHMEM64G\]
-> +----------------------------------------------------------------------+
+> ```bash
+> Processor type and features --->
+>   High Memory Support --->
+>     (X) 64GB                                                      [HIGHMEM64G]
+> ```
+> 
 > Si la partición del sistema LFS está en un SSD NVME (es decir, el
-> nodo de dispositivo de la partición es /dev/nvme\* en lugar de
-> /dev/sd\*), habilite la compatibilidad con NVME; de lo contrario, el
+> nodo de dispositivo de la partición es /dev/nvme* en lugar de
+> /dev/sd*), habilite la compatibilidad con NVME; de lo contrario, el
 > sistema LFS no arrancará:
-> +----------------------------------------------------------------------+
-> Device Drivers \-\--\>
-> NVME Support \-\--\>
-> \<\*\> NVM Express block device \[BLK_DEV_NVME\]
-> +----------------------------------------------------------------------+
+> ```bash
+> Device Drivers --->
+>   NVME Support --->
+>     <*> NVM Express block device                                [BLK_DEV_NVME]
+> ```
 
 Existen otras opciones que podrían ser útiles según los requisitos del
 sistema. Para obtener una lista de las opciones necesarias para los
@@ -17951,74 +18176,46 @@ paquetes BLFS, consulte el Índice de configuración del kernel de BLFS.
 > de *BLFS*, **incluso si va a usar el gestor de arranque UEFI de la
 > distribución del host**.
 
-Razones para los elementos de configuración anteriores:
+**Razones para los elementos de configuración anteriores**:
 
 Aleatorizar la dirección de la imagen del kernel (KASLR)
-
-Randomize the address of the kernel image (KASLR)
-
 Habilitar ASLR para la imagen del kernel para mitigar algunos ataques
 basados en direcciones fijas de datos o código confidencial en el
 kernel.
 
 Compilar el kernel con advertencias como errores
-
-Compile the kernel with warnings as errors
-
 Esto puede causar un fallo de compilación si el compilador o la
 configuración son diferentes a los de los desarrolladores del kernel.
 
-Habilitar los encabezados del kernel a través de
-/sys/kernel/kheaders.tar.xz
-
-Enable kernel headers through /sys/kernel/kheaders.tar.xz
-
+Habilitar los encabezados del kernel a través de /sys/kernel/kheaders.tar.xz
 Esto requerirá cpio para compilar el kernel. LFS no instala cpio.
 
 Configurar las funciones estándar del kernel (usuarios expertos)
-
-Configure standard kernel features (expert users)
-
 Esto hará que aparezcan algunas opciones en la interfaz de
 configuración, pero modificarlas puede ser peligroso. No utilice esta
 opción a menos que sepa lo que hace.
 
 Potente protector de pila
-
-Strong Stack Protector
-
 Habilite SSP para el kernel. Lo hemos habilitado para todo el espacio de
 usuario con --enable- default-ssp al configurar GCC, pero el kernel no
 utiliza la configuración predeterminada de GCC para SSP. Lo habilitamos
 explícitamente aquí.
 
 Compatibilidad con el asistente uevent
-
-Support for uevent helper
-
 Tener esta opción activada puede interferir con la administración de
 dispositivos al usar Udev.
 
 Mantener un devtmpfs
-
-Maintain a devtmpfs
-
 Esto creará nodos de dispositivo automatizados que se rellenan con el
 kernel, incluso sin que Udev se esté ejecutando. Udev se ejecuta sobre
 él, administrando permisos y añadiendo enlaces simbólicos. Esta
 configuración es necesaria para todos los usuarios de Udev.
 
 Montar automáticamente devtmpfs en /dev
-
-Automount devtmpfs at /dev
-
 Esto montará la vista del kernel de los dispositivos en /dev al cambiar
 al sistema de archivos raíz justo antes de iniciar init.
 
 Mostrar un mensaje intuitivo cuando se produce un pánico del kernel
-
-Display a user-friendly message when a kernel panic occurs
-
 Esto hará que el kernel muestre correctamente el mensaje en caso de un
 pánico del kernel, siempre que un controlador DRM en ejecución lo
 permita. Sin esto, sería más difícil diagnosticar un pánico: si no se
@@ -18039,9 +18236,6 @@ ejemplo, una configuración root= incorrecta en la Sección 10.4, \"Uso de
 GRUB para configurar el proceso de arranque\").
 
 Formateador de pantalla de pánico
-
-Panic screen formatter
-
 Configure este kmsg para asegurar que se muestren las últimas líneas de
 mensajes del kernel cuando se produce un pánico del kernel. La opción
 predeterminada, \`user\`, haría que el kernel solo mostrara un mensaje
@@ -18053,13 +18247,7 @@ con un dispositivo externo (como un smartphone). Sin embargo, requiere
 un compilador de Rust que LFS no proporciona.
 
 * Marcar el FB VGA/VBE/EFI como framebuffer genérico del sistema *y*
-controlador de*
-
-* framebuffer simple*
-
-* Mark VGA/VBE/EFI FB as generic system framebuffer and Simple
-framebuffer driver*
-
+controlador de framebuffer simple
 Estos permiten usar el framebuffer VESA (o el framebuffer EFI si se
 inicia el sistema LFS mediante UEFI) como dispositivo DRM. El
 framebuffer VESA se configurará mediante GRUB (o el framebuffer EFI se
@@ -18067,14 +18255,8 @@ configurará mediante el firmware UEFI), por lo que el controlador de
 pánico DRM puede funcionar antes de que se cargue el controlador DRM
 específico de la GPU.
 
-*Habilite la compatibilidad con fbdev heredado para su controlador de
-configura-*
-
-* ción de modo y la compatibilidad con la consola Framebuffer*
-
-* Enable legacy fbdev support for your modesetting driver and
-Framebuffer Console support*
-
+Habilite la compatibilidad con fbdev heredado para su controlador de
+configuración de modo y la compatibilidad con la consola Framebuffer*
 Estos son necesarios para mostrar la consola Linux en una GPU controlada
 por un controlador DRI (Infraestructura de Renderizado Directo). Como
 CONFIG_DRM (Administrador de Renderizado Directo) está habilitado,
@@ -18082,9 +18264,6 @@ también debemos habilitar estas dos opciones; de lo contrario, veremos
 una pantalla en blanco una vez cargado el controlador DRI.
 
 Compatibilidad con x2apic
-
-Support x2apic
-
 Compatibilidad con la ejecución del controlador de interrupciones de
 procesadores x86 de 64 bits en modo x2APIC. x2APIC puede estar
 habilitado por firmware en sistemas x86 de 64 bits, y un kernel sin esta
@@ -18104,9 +18283,9 @@ menús de configuración y crear la configuración del kernel desde cero.
 
 Compilar la imagen del kernel y los módulos:
 
-  ------
-  make
-  ------
+> ```bash
+> make
+> ```
 
 Si utiliza módulos del kernel, puede que se requiera la configuración
 del módulo en */etc/modprobe.d*. La información sobre los módulos y la
@@ -18118,9 +18297,9 @@ de interés el archivo *modprobe.d(5)*.
 A menos que se haya deshabilitado la compatibilidad con módulos en la
 configuración del kernel, instale los módulos con:
 
-  ------------------------
-  make *modules_install*
-  ------------------------
+> ```bash
+> make *modules_install*
+> ```
 
 Una vez completada la compilación del kernel, se requieren pasos
 adicionales para completar la instalación. Algunos archivos deben
@@ -18135,12 +18314,11 @@ copiarse al directorio */boot*.
 > la entrada para */boot* en */etc/fstab* (consulte la sección
 > anterior para obtener más información) y, a continuación, ejecutar
 > el siguiente comando como usuario *root* en el *entorno chroot*:
-> 
+> ```bash
 > mount /boot
-> 
+> ```
 > La ruta al nodo del dispositivo se omite en el comando porque
 > **mount** puede leerla desde */etc/fstab*.
-> 
 
 La ruta a la imagen del kernel puede variar según la plataforma
 utilizada. El nombre de archivo a continuación se puede modificar según
@@ -18149,9 +18327,9 @@ sus preferencias, pero la raíz del nombre de archivo debe ser
 proceso de arranque descrito en la siguiente sección. El siguiente
 comando asume una arquitectura x86:
 
-  ------------------------------------------------------------
-  cp -iv arch/x86/boot/bzImage /boot/vmlinuz-6.13.4-lfs-12.3
-  ------------------------------------------------------------
+> ```bash
+> cp -iv arch/x86/boot/bzImage /boot/vmlinuz-6.13.4-lfs-12.3
+> ```
 
 *System.map* es un archivo de símbolos para el kernel. Mapea los puntos
 de entrada de cada función en la API del kernel, así como las
@@ -18159,24 +18337,24 @@ direcciones de las estructuras de datos del kernel en ejecución. Se
 utiliza como recurso para investigar problemas del kernel. Ejecute el
 siguiente comando para instalar el archivo de mapa:
 
-  ---------------------------------------------
-  cp -iv *System.map* /boot/System.map-6.13.4
-  ---------------------------------------------
+> ```bash
+> cp -iv System.map /boot/System.map-6.13.4
+> ```
 
 El archivo de configuración del kernel *.config* generado por el paso
 \"**make menuconfig**\" anterior contiene todas las selecciones de
 configuración para el kernel que se acaba de compilar. Es recomendable
 guardar este archivo para futuras referencias:
 
-  --------------------------------------
-  cp -iv .config /*boot*/config-6.13.4
-  --------------------------------------
+> ```bash
+> cp -iv .config /boot/config-6.13.4
+> ```
 
 Instalar la documentación del kernel de Linux:
 
-  ------------------------------------------------------
-  cp -r *Documentation* -T /usr/share/doc/linux-6.13.4
-  ------------------------------------------------------
+> ```bash
+> cp -r Documentation -T /usr/share/doc/linux-6.13.4
+> ```
 
 Es importante tener en cuenta que los archivos del directorio de origen
 del kernel no son propiedad del usuario *root*. Al descomprimir un
@@ -18235,21 +18413,22 @@ evitar una advertencia al arrancar.
 Cree un nuevo archivo */etc/modprobe.d/usb.conf* ejecutando lo
 siguiente:
 
+> ```bash
 > install -v -m755 -d /etc/modprobe.d
 > cat > /etc/modprobe.d/usb.conf << "EOF"
 > # Begin /etc/modprobe.d/usb.conf
-> install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i
-> ohci_hcd ; true
-> install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i
-> uhci_hcd ; true
+> 
+> install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
+> install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
+> 
 > # End /etc/modprobe.d/usb.conf
 > EOF
+> ```
 
 ### 10.3.3. Contenido de Linux
 
 **Archivos instalados**: config-6.13.4, vmlinuz-6.13.4-lfs-12.3 y
 System.map-6.13.4
-
 **Directorios instalados**: /lib/modules, /usr/share/doc/linux-6.13.4
 
 ### Descripciones breves
@@ -18267,6 +18446,10 @@ numerosos programas prácticamente al mismo tiempo.
 *System.map-6.13.4* Una lista de direcciones y símbolos. Mapea los
 puntos de entrada y las direcciones de todas las funciones y estructuras
 de datos en el núcleo.
+
+---
+&nbsp;
+&nbsp;
 
 ## 10.4. Uso de GRUB para configurar el proceso de arranque
 
@@ -18295,9 +18478,11 @@ tiene un dispositivo de arranque, puede crear uno. Para que el siguiente
 procedimiento funcione, debe acceder a BLFS e instalar **xorriso** desde
 el paquete *libisoburn*.
 
+> ```bash
 > cd /tmp
-> grub-mkrescue --*output*=grub-img.iso
+> grub-mkrescue --output=grub-img.iso
 > xorriso -as cdrecord -v dev=/dev/cdrw blank=as_needed grub-img.iso
+> ```
 
 ### 10.4.2. Convenciones de nomenclatura de GRUB
 
@@ -18349,9 +18534,9 @@ arranque:
 > arranque externo para gestionar el Registro Maestro de Arranque
 > (MBR).
 
-  -------------------------
-  grub-install /dev/sda**
-  -------------------------
+> ```bash
+> grub-install /dev/sda
+> ```
 
 > ℹ️ **Nota**
 > 
@@ -18364,18 +18549,22 @@ arranque:
 
 Generar /*boot/grub/grub.cfg*:
 
+> ```bash
 > cat > /boot/grub/grub.cfg << "EOF"
 > # Begin /boot/grub/grub.cfg
 > set default=0
 > set timeout=5
+> 
 > insmod part_gpt
 > insmod ext2
 > set root=(hd0,2)
-> set gfxpayload=*1024x768x32*
+> set gfxpayload=1024x768x32
+> 
 > menuentry "GNU/Linux, Linux 6.13.4-lfs-12.3" {
-> linux /boot/vmlinuz-6.13.4-lfs-12.3 root=/dev/sda2 ro
+>         linux   /boot/vmlinuz-6.13.4-lfs-12.3 root=/dev/sda2 ro
 > }
 > EOF
+> ```
 
 Los comandos **insmod** cargan los módulos de GRUB llamados *part_gpt* y
 *ext2*. A pesar del nombre, ext2 admite los sistemas de archivos *ext2*,
@@ -18447,6 +18636,10 @@ fuera del alcance de esta introducción.
 > programa. Asegúrese de hacer una copia de seguridad de su archivo
 > grub.cfg.
 
+---
+&nbsp;
+&nbsp;
+
 ## Capítulo 11. Fin <a name="capitulo-11"></a>
 
 ## 11.1. Fin
@@ -18459,9 +18652,9 @@ archivo, será muy fácil para usted (y para nosotros si necesita ayuda en
 algún momento) averiguar qué versión de LFS está instalada en el
 sistema. Cree este archivo ejecutando:
 
-  ---------------------------------
-  echo 12.3 \> /etc/lfs-*release*
-  ---------------------------------
+> ```bash
+> echo 12.3 > /etc/lfs-release
+> ```
 
 Dos archivos que describen el sistema instalado pueden ser utilizados
 por paquetes que se instalen posteriormente, ya sea en formato binario o
@@ -18470,19 +18663,22 @@ compilándolos.
 El primero muestra el estado de su nuevo sistema con respecto a la Base
 de Estándares de Linux (LSB). Para crear este archivo, ejecute:
 
+> ```bash
 > cat > /etc/lsb-release << "EOF"
 > DISTRIB_ID="Linux From Scratch"
 > DISTRIB_RELEASE="12.3"
 > DISTRIB_CODENAME="<su nombre aquí>"
 > DISTRIB_DESCRIPTION="Linux From Scratch"
 > EOF
+> ```
 
 El segundo contiene prácticamente la misma información y lo utilizan
 systemd y algunos entornos gráficos de escritorio. Para crear este
 archivo, ejecuta:
 
+> ```bash
 > cat > /etc/os-release << "EOF"
-> NAME="Linux From Scratch\
+> NAME="Linux From Scratch"
 > VERSION="12.3"
 > ID=lfs
 > PRETTY_NAME="Linux From Scratch 12.3"
@@ -18490,9 +18686,14 @@ archivo, ejecuta:
 > HOME_URL="https://www.linuxfromscratch.org/lfs/"
 > RELEASE_TYPE="stable"
 > EOF
+> ```
 
 Asegúrate de personalizar los campos \'DISTRIB_CODENAME\' y
 \'VERSION_CODENAME\' para que el sistema sea exclusivamente tuyo.
+
+---
+&nbsp;
+&nbsp;
 
 ## 11.2. Hazte contabilizado
 
@@ -18503,6 +18704,10 @@ como usuario de LFS introduciendo tu nombre y la primera versión de LFS
 que hayas usado.
 
 Reiniciemos LFS.
+
+---
+&nbsp;
+&nbsp;
 
 ## 11.3. Reinicio del sistema
 
@@ -18517,56 +18722,49 @@ firmware para funcionar correctamente, instala el *firmware* necesario.
 
 • También es apropiado en este punto revisar los siguientes archivos de
 configuración.
-
-• /etc/bashrc
-
-• /etc/dircolors
-
-• /etc/fstab
-
-• /etc/hosts
-
-• /etc/inputrc
-
-• /etc/profile
-
-• /etc/resolv.conf
-
-• /etc/vimrc
-
-• /root/.bash_profile
-
-• /root/.bashrc
-
-• /etc/sysconfig/ifconfig.eth0
+   • /etc/bashrc
+   • /etc/dircolors
+   • /etc/fstab
+   • /etc/hosts
+   • /etc/inputrc
+   • /etc/profile
+   • /etc/resolv.conf
+   • /etc/vimrc
+   • /root/.bash_profile
+   • /root/.bashrc
+   • /etc/sysconfig/ifconfig.eth0
 
 Dicho esto, ¡pasemos a arrancar nuestra nueva instalación de LFS por
 primera vez! Primera salida del entorno *chroot*:
 
-  --------
-  logout
-  --------
+> ```bash
+> logout
+> ```
 
 Luego, desmonte los sistemas de archivos virtuales:
 
+> ```bash
 > umount -v $LFS/dev/pts
 > mountpoint -q $LFS/dev/shm && umount -v $LFS/dev/shm
 > umount -v $LFS/dev
 > umount -v $LFS/run
 > umount -v $LFS/proc
 > umount -v $LFS/sys
+> ```
 
 Si se crearon varias particiones, desmonte las demás antes de desmontar
 la principal, de la siguiente manera:
 
+> ```bash
 > umount -v $LFS/home
 > umount -v $LFS
+> ```
 
 Desmonte el sistema de archivos LFS:
 
-  -------------------
-  umount -v \$*LFS*
-  -------------------
+> ```bash
+> umount -v $*LFS*
+> ```
 
 Ahora, reinicie el sistema.
 
@@ -18582,6 +18780,10 @@ Para obtener consejos sobre cómo resolver problemas de arranque inicial,
 consulte:
 
 <https://www.linuxfromscratch.org/lfs/troubleshooting.html>.
+
+---
+&nbsp;
+&nbsp;
 
 ## 11.4. Recursos adicionales
 
@@ -18600,36 +18802,32 @@ su responsabilidad mantenerse al tanto de dichos informes. Existen
 varios recursos en línea que dan seguimiento a estos informes, algunos
 de los cuales se muestran a continuación:
 
-• Avisos de Seguridad de LFS
+   • Avisos de Seguridad de LFS
+   Esta es una lista de vulnerabilidades de seguridad descubiertas en el libro de LFS después de su publicación.
 
-Esta es una lista de vulnerabilidades de seguridad descubiertas en el
-libro de LFS después de su publicación.
-
-• Lista de Correo de Seguridad de Código Abierto
-
-Esta es una lista de correo para debatir sobre fallos de seguridad,
-conceptos y prácticas en la comunidad de código abierto.
+   • Lista de Correo de Seguridad de Código Abierto
+Esta es una lista de correo para debatir sobre fallos de seguridad, conceptos y prácticas en la comunidad de código abierto.
 
 • Consejos de LFS
-
 Los Consejos de LFS son una colección de documentos educativos enviados
 por voluntarios de la comunidad LFS. Los consejos están disponibles en:
-
 <https://www.linuxfromscratch.org/hints/downloads/files/>.
 
 • Listas de Correo
-
 Hay varias listas de correo de LFS a las que puede suscribirse si
 necesita ayuda, desea mantenerse al día con los últimos desarrollos,
 desea contribuir al proyecto y más. Consulte el Capítulo 1 - Listas de
 correo para obtener más información.
 
 • El Proyecto de Documentación de Linux
-
 El objetivo del Proyecto de Documentación de Linux (TLDP) es colaborar
 en todos los temas relacionados con la documentación de Linux. El TLDP
 cuenta con una amplia colección de tutoriales, guías y páginas de
 manual. Se encuentra en <https://tldp.org/>.
+
+---
+&nbsp;
+&nbsp;
 
 ## 11.5. Primeros pasos después de LFS
 
@@ -18681,49 +18879,56 @@ Para compilar paquetes correctamente en chroot, también deberá recordar
 montar los sistemas de archivos virtuales si aún no lo están. Una forma
 de hacerlo es crear un script en el sistema **HOST**:
 
+> ```bash
 > cat > ~/mount-virt.sh << "EOF"
 > #!/bin/bash
+> 
 > function mountbind
 > {
-> if ! mountpoint \$LFS/$1 >/dev/null; then
-> $SUDO mount --bind /$1 $LFS/$1
-> echo $LFS/$1 mounted
-> else
-> echo $LFS/$1 already mounted
-> fi
+>    if ! mountpoint \$LFS/$1 >/dev/null; then
+>      $SUDO mount --bind /$1 $LFS/$1
+>      echo $LFS/$1 mounted
+>    else
+>      echo $LFS/$1 already mounted
+>    fi
 > }
+> 
 > function mounttype
 > {
-> if ! mountpoint $LFS/$1 >/dev/null; then
-> $SUDO mount -t $2 $3 $4 $5 $LFS/$1
-> echo $LFS/$1 mounted
-> else
-> echo $LFS/$1 already mounted
+>    if ! mountpoint $LFS/$1 >/dev/null; then
+>      $SUDO mount -t $2 $3 $4 $5 $LFS/$1
+>      echo $LFS/$1 mounted
+>    else
+>      echo $LFS/$1 already mounted
 > fi
 > }
 > if [ $EUID -ne 0 ]; then
-> SUDO=sudo
+>    SUDO=sudo
 > else
-> SUDO=""
+>    SUDO=""
 > fi
+> 
 > if [ x\$LFS == x ]; then
-> echo "LFS not set"
-> exit 1
+>    echo "LFS not set"
+>    exit 1
 > fi
+> 
 > mountbind dev
-> mounttype dev/pts devpts devpts -o gid=5,mode=620
-> mounttype proc proc proc
-> mounttype sys sysfs sysfs
-> mounttype run tmpfs run
+> mounttype dev/pts devpts  devpts -o gid=5,mode=620
+> mounttype proc    proc    proc
+> mounttype sys     sysfs   sysfs
+> mounttype run     tmpfs   run
 > if [ -h $LFS/dev/shm ]; then
-> install -v -d -m 1777 $LFS$(realpath /dev/shm)
+>   install -v -d -m 1777 $LFS$(realpath /dev/shm)
 > else
-> mounttype dev/shm tmpfs tmpfs -o nosuid,nodev
+>   mounttype dev/shm tmpfs tmpfs -o nosuid,nodev
 > fi
+> 
 > #mountbind usr/src
 > #mountbind boot
 > #mountbind home
 > EOF
+> ```
 
 Tenga en cuenta que los tres últimos comandos del script están
 comentados. Son útiles si esos directorios están montados como
@@ -18745,10 +18950,10 @@ Una última característica práctica que se presenta aquí es agilizar el
 proceso de acceso al entorno chroot. Esto se puede hacer con un alias en
 el archivo \~/.bashrc del usuario en el sistema host:
 
-> alias lfs='sudo /usr/sbin/chroot /mnt/lfs /usr/bin/env -i
-> HOME=/root TERM="$TERM\" PS1="\u:\w\\\\\\\\$ "
+> ```bash
+> alias lfs='sudo /usr/sbin/chroot /mnt/lfs /usr/bin/env -i HOME=/root TERM="$TERM" PS1="\u:\w\\\\$ "
 > PATH=/usr/bin:/usr/sbin /bin/bash --login'
-> +----------------------------------------------------------------------+
+> ```
 
 Este alias es un poco complejo debido a las comillas y los niveles de
 barra invertida. Debe estar todo en una sola línea. El comando anterior
