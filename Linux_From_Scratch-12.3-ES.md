@@ -683,7 +683,9 @@ Este paquete es un módulo de Perl que interactúa con Expat.
 • XZ Utils - 
 Este paquete contiene programas para comprimir y descomprimir archivos.
 Proporciona la mayor compresión disponible y es útil para descomprimir
-paquetes en formato XZ o LZMA. • Zlib
+paquetes en formato XZ o LZMA.
+
+• Zlib - 
 Este paquete contiene rutinas de compresión y descompresión utilizadas
 por algunos programas.
 
