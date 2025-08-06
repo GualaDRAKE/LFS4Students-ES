@@ -8275,7 +8275,7 @@ independiente. Esto generará el archivo readline.pc correcto.
 Compilar el paquete:
 
 > ```bash
-> make SHLIB_LIBS=\"-lncursesw"
+> make SHLIB_LIBS="-lncursesw"
 > ```
 
 Significado de la opción \"make\":
