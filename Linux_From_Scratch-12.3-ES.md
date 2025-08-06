@@ -8260,7 +8260,7 @@ Preparar Readline para la compilación:
 > ```bash
 > ./configure --prefix=/usr    \
 >             --disable-static \
->             --with-curses  \
+>             --with-curses    \
 >             --docdir=/usr/share/doc/readline-8.2.13
 > ```
 
