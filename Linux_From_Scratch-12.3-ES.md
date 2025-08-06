@@ -5357,7 +5357,7 @@ compilación, por lo que esta opción impide su uso. Compilar el paquete:
 Instalar el paquete:
 
 > ```bash
-> make DESTDIR=\$LFS install
+> make DESTDIR=$LFS install
 > ```
 
 Los detalles de este paquete se encuentran en la Sección 8.69.2,
