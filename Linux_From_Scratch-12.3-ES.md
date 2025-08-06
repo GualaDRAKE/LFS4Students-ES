@@ -5351,7 +5351,7 @@ del host de compilación si lo encuentra. Esto provoca un error en la
 compilación, por lo que esta opción impide su uso. Compilar el paquete:
 
 > ```bash
-make
+> make
 > ```
 
 Instalar el paquete:
