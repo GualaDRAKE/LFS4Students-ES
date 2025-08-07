@@ -1641,7 +1641,7 @@ se consideran versiones oficiales del kernel original; consulte
 <https://kernel.org/category/releases.html> para obtener más
 información.
 
-Si el kernel anfitrión es anterior a la 5.4, deberá reemplazarlo por una
+Si el kernel del **Host** es anterior a la 5.4, deberá reemplazarlo por una
 versión más actualizada. Hay dos maneras de hacerlo. Primero, verifique
 si su proveedor de Linux ofrece un paquete de kernel 5.4 o posterior. De
 ser así, puede instalarlo. Si su proveedor no ofrece un paquete de
@@ -1652,9 +1652,9 @@ Capítulo 10.
 
 Requerimos que el kernel del host sea compatible con la pseudoterminal
 (PTY) de UNIX 98. Debe estar habilitada en todas las distribuciones de
-escritorio o servidor que incluyan Linux 5.4 o un kernel posterior. Si
-está compilando un kernel de host personalizado, asegúrese de que
-CONFIG_UNIX98_PTYS esté configurado como y en la configuración del
+escritorio o servidor que incluyan un kernel Linux versión 5.4 o posterior.
+Si está compilando un kernel personalizado para el host, asegúrese de que
+CONFIG_UNIX98_PTYS esté establecida en ¨y¨ (de *YES*) en la configuración del
 kernel.
 
 • **M4-1.4.10**
@@ -1695,45 +1695,48 @@ cual ejecutará una serie de comandos de verificación:
 > ```bash
 > cat > version-check.sh << "EOF"
 > #!/bin/bash
-> # Un script para listar los números de versión de herramientas de desarrollo críticas
+> # Un script para listar los números de versión de herramientas de desarrollo críticas.
 > 
 > # Si tiene herramientas instaladas en otros directorios, ajuste PATH aquí
-> # Y también en ~lfs/.bashrc (sección 4.4)
+> # Y también en ~lfs/.bashrc (sección 4.4).
 > 
 > LC_ALL=C
 > PATH=/usr/bin:/bin
+> 
 > bail() { echo "FATAL: $1"; exit 1; }
 > grep --version > /dev/null 2> /dev/null || bail "grep no funciona"
 > sed '' /dev/null || bail "sed no funciona"
-> sort dev/null || bail "sort no funciona"
+> sort   /dev/null || bail "sort no funciona"
+> 
 > ver_check()
 >    {
->    if ! type -p $2 &>/dev/null
->    then
->    echo "ERROR: No se puede encontrar $2 ($1)"; return 1;
+>       if ! type -p $2 &>/dev/null
+>       then
+>         echo "ERROR: No se puede encontrar $2 ($1)"; return 1;
 >    fi
 >    v=$($2 --version 2>&1 | grep -E -o '[0-9]+\.[0-9\.]+[a-z]*' | head -n1)
 >    if printf '%s\n' $3 $v | sort --version-sort --check &>/dev/null
 >    then
->    printf "OK: %-9s %-6s >= $3\n" "$1" "$v"; return 0;
+>      printf "OK: %-9s %-6s >= $3\n" "$1" "$v"; return 0;
 >    else
->    printf "ERROR: %-9s es DEMASIADO ANTIGUO ($3 o posterior | requerido)\n" "$1";
->    return 1;
+>      printf "ERROR: %-9s es DEMASIADO ANTIGUO ($3 o posterior es requerido)\n" "$1";
+>      return 1;
 >    fi
 > }
+> 
 > ver_kernel()
 > {
 >    kver=$(uname -r | grep -E -o '^[0-9\.]+')
 >    if printf '%s\n' $1 $kver | sort --version-sort --check &>/dev/null
 >    then
->    printf "OK: Linux Kernel $kver >= $1\n"; return 0;
+>      printf "OK: El Kerne Linuxl $kver >= $1\n"; return 0;
 >    else
->    printf "ERROR: Linux Kernel ($kver) es DEMASIADO ANTIGUO ($1 o posterior requerido)\n" "$kver";
->    return 1;
+>      printf "ERROR: El Kernel Linux ($kver) es DEMASIADO ANTIGUO ($1 o posterior es requerido)\n" "$kver";
+>      return 1;
 >    fi
 > }
 > 
-> # Coreutils primero porque --version-sort necesita Coreutils >= 7.0
+> # Coreutils va primero porque --version-sort necesita Coreutils >= 7.0
 > ver_check Coreutils    sort 8.1 || bail "Coreutils demasiado antiguo, detente"
 > ver_check Bash         bash 3.2
 > ver_check Binutils     ld 2.13.1
@@ -1757,8 +1760,8 @@ cual ejecutará una serie de comandos de verificación:
 > ver_kernel 5.4
 > 
 > if mount | grep -q 'devpts on /dev/pts' && [ -e /dev/ptmx ]
-> then echo "OK: El kernel de Linux es compatible con UNIX 98 PTY";
-> else echo "ERROR: El kernel de Linux NO es compatible con UNIX 98 PTY"; fi
+> then echo "OK:  El kernel Linux es compatible con UNIX 98 PTY";
+> else echo "ERROR:  El kernel Linux NO es compatible con UNIX 98 PTY"; fi
 > 
 > alias_check()
 > {
@@ -1771,7 +1774,7 @@ cual ejecutará una serie de comandos de verificación:
 > alias_check yacc Bison
 > alias_check sh Bash
 > 
-> echo "Comprobación del *compilador*:"
+> echo "Comprobación del compilador:"
 > if printf "int main(){}" | g++ -x c++ -
 > then echo "OK: g++ Funciona";
 > else echo "ERROR: g++ NO Funciona"; fi
@@ -1784,7 +1787,7 @@ cual ejecutará una serie de comandos de verificación:
 > fi
 > EOF
 > 
-> $ bash version-check.sh
+> bash version-check.sh
 > ```
 
 ---
@@ -1979,7 +1982,7 @@ fdisk o tendrá el código EF02 si se usa el comando gdisk.
 > La partición Grub Bios debe estar en la unidad que la BIOS utiliza
 > para arrancar el sistema. Esta no es necesariamente la unidad que
 > contiene la partición raíz LFS. Los discos de un sistema pueden usar
-> diferentes tipos de tablas de particiones. La nec esidad de la
+> diferentes tipos de tablas de particiones. La necesidad de la
 > partición Grub Bios depende únicamente del tipo de tabla de
 > particiones del disco de arranque.
 
@@ -1992,10 +1995,9 @@ en cuenta al diseñar la distribución del disco. La siguiente lista no es
 exhaustiva, sino una guía.
 
 • /boot: Muy recomendable. Utilice esta partición para almacenar kernels
-y otra información de arranque. Para minimizar posibles problemas de
-arranque con discos más grandes, utilice esta partición física como
-primera en su primera unidad de disco. Una partición de 200 megabytes es
-suficiente.
+y otra información de arranque. Para minimizar posibles problemas de arranque
+con discos duros grandes, crea esta partición como la primera partición físicaen
+tu primer disco. Un tamaño de partición de 200 megabytes es suficiente.
 
 • /boot/efi: La partición del sistema EFI, necesaria para arrancar el
 sistema con UEFI. Consulte [la página de
@@ -2018,7 +2020,9 @@ configuración, por lo que es adecuada para un cliente ligero o una
 estación de trabajo sin disco (donde /usr se monta desde un servidor
 remoto). Sin embargo, debes tener en cuenta que se necesitará un
 initramfs (no incluido en LFS) para arrancar un sistema con una
-partición /usr independiente. • /opt: Este directorio es especialmente
+partición /usr independiente.
+
+• /opt: Este directorio es especialmente
 útil para BLFS, donde se pueden instalar varios paquetes grandes como
 KDE o Texlive sin incrustar los archivos en la jerarquía /usr. Si se
 utiliza, de 5 a 10 gigabytes suele ser suficiente.
