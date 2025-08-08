@@ -9080,14 +9080,12 @@ extendidos de los objetos del sistema de archivos.
 
 Preparar Attr para la compilación:
 
-> +-------------------------------------------------+
-> ---
-> ./configure \--prefix=/usr \\
-> \--disable-*static* \\
-> \--sysconfdir=/etc \\
-> \--docdir=/usr/share/doc/attr-2.5.2
-> +-------------------------------------------------+
-
+> ```bash
+> ./configure --prefix=/usr      \
+>             --disable-static \
+>             --sysconfdir=/etc  \
+>             --docdir=/usr/share/doc/attr-2.5.2
+> ```
 Compilar el paquete:
 
 > ```bash
