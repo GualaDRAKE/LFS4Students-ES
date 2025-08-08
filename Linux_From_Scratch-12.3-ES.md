@@ -9082,7 +9082,7 @@ Preparar Attr para la compilación:
 
 > ```bash
 > ./configure --prefix=/usr      \
->             --disable-static \
+>             --disable-static   \
 >             --sysconfdir=/etc  \
 >             --docdir=/usr/share/doc/attr-2.5.2
 > ```
