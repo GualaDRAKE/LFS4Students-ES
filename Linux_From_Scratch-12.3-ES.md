@@ -341,8 +341,8 @@ paquetes importantes que, en sentido estricto, no son obligatorios. La
 siguiente lista documenta las razones por las que se ha incluido cada
 paquete en el libro.
 
-• **Acl** - 
-Este paquete contiene utilidades para administrar Listas de Control de
+- **Acl**
+  - Este paquete contiene utilidades para administrar Listas de Control de
 Acceso, que se utilizan para definir permisos de acceso discrecionales
 de granularidad precisa para archivos y directorios.
 
