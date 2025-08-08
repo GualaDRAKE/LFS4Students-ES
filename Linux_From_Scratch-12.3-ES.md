@@ -4037,7 +4037,7 @@ ubicación necesaria. crear encabezados
 &nbsp;
 
 ### Descripciones breves
->
+
 |/usr/include/asm/\*.h|Cabeceras ASM de la API de Linux|
 |:------|:------|
 |/usr/include/asm-generic/\*.h | Cabeceras genéricas ASM de la API de Linux|
@@ -6814,7 +6814,7 @@ advertencia «*git: command not found*».
 
 ### Descripciones breves
 
-man pages Descripción de las funciones del lenguaje de
+**man pages** - Descripción de las funciones del lenguaje de
 programación C, archivos importantes de dispositivos y archivos de
 configuración significativos.
 
@@ -6851,10 +6851,10 @@ Para este paquete, solo necesitamos copiar los archivos:
 
 ### Descripciones breves
 
-*/etc/protocols* Describe los diversos protocolos de Internet de DARPA
+**/etc/protocols** - Describe los diversos protocolos de Internet de DARPA
 disponibles en el subsistema TCP/IP
 
-*/etc/services* Proporciona una correspondencia entre los nombres
+**/etc/services** - Proporciona una correspondencia entre los nombres
 textuales descriptivos de los servicios de Internet y sus números de
 puerto y tipos de protocolo asignados subyacentes.
 
@@ -7334,120 +7334,120 @@ and libutil.{a,so.1}
 
 ### Descripciones breves
 
-**Gencat** Genera catálogos de mensajes.
+**Gencat** - Genera catálogos de mensajes.
 
-**getconf** Muestra los valores de configuración del sistema para las
+**getconf** - Muestra los valores de configuración del sistema para las
 variables específicas del sistema de archivos.
 
-**getent** Obtiene entradas de una base de datos administrativa.
+**getent** - Obtiene entradas de una base de datos administrativa.
 
-**iconv** Realiza la conversión del conjunto de caracteres.
+**iconv** - Realiza la conversión del conjunto de caracteres.
 
-**iconvconfig** Crea archivos de configuración del módulo **iconv** de
+**iconvconfig** - Crea archivos de configuración del módulo **iconv** de
 carga rápida.
 
-**ldconfig** Configura los enlaces de tiempo de ejecución del enlazador
+**ldconfig** - Configura los enlaces de tiempo de ejecución del enlazador
 dinámico.
 
-**ldd** Informa qué bibliotecas compartidas requiere cada programa o
+**ldd** - Informa qué bibliotecas compartidas requiere cada programa o
 biblioteca compartida.
 
-**lddlibc4** Asiste a **ldd** con los archivos objeto. No existe en
+**lddlibc4** - Asiste a **ldd** con los archivos objeto. No existe en
 arquitecturas más nuevas como x86_64.
 
-**locale** Imprime información diversa sobre la configuración regional
+**locale** - Imprime información diversa sobre la configuración regional
 actual.
 
-**localedef** Compila las especificaciones de la configuración regional.
+**localedef** - Compila las especificaciones de la configuración regional.
 
-**makedb** Crea una base de datos simple a partir de una entrada de
+**makedb** - Crea una base de datos simple a partir de una entrada de
 texto.
 
-**mtrace** Lee e interpreta un archivo de seguimiento de memoria y
+**mtrace** - Lee e interpreta un archivo de seguimiento de memoria y
 muestra un resumen en formato legible.
 
-**pcprofiledump** Vuelca la información generada por el perfilado de PC.
+**pcprofiledump** - Vuelca la información generada por el perfilado de PC.
 
-**Pldd** Enumera los objetos compartidos dinámicos utilizados por los
+**Pldd** - Enumera los objetos compartidos dinámicos utilizados por los
 procesos en ejecución.
 
-**sln** Un programa **ln** enlazado estáticamente.
+**sln** - Un programa **ln** enlazado estáticamente.
 
-**sotruss** Rastrea las llamadas a procedimientos de bibliotecas
+**sotruss** - Rastrea las llamadas a procedimientos de bibliotecas
 compartidas de un comando específico.
 
-**sprof** Lee y muestra los datos del perfilado de objetos compartidos.
+**sprof** - Lee y muestra los datos del perfilado de objetos compartidos.
 
-**tzselect** Pregunta al usuario sobre la ubicación del sistema e
+**tzselect** - Pregunta al usuario sobre la ubicación del sistema e
 informa la descripción de la zona horaria correspondiente.
 
-**xtrace** Rastrea la ejecución de un programa imprimiendo la función
+**xtrace** - Rastrea la ejecución de un programa imprimiendo la función
 actualmente ejecutada.
 
-**zdump** Volcador de zona horaria.
+**zdump** - Volcador de zona horaria.
 
-**zic** Compilador de zona horaria.
+**zic** - Compilador de zona horaria.
 
-*ld-\*.so* Programa auxiliar para ejecutables de bibliotecas
+*ld-\*.so* - Programa auxiliar para ejecutables de bibliotecas
 compartidas.
 
-*libBrokenLocale* Usado internamente por Glibc como un truco para
+*libBrokenLocale* - Usado internamente por Glibc como un truco para
 obtener programas dañados (por ejemplo, algunos Motif). aplicaciones) en
 ejecución. Consulte los comentarios en
 *glibc-2.41/locale/broken_cur_max.c* para obtener más información.
 
-*libanl* Biblioteca ficticia sin funciones. Anteriormente era la
+*libanl* - Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de búsqueda de nombres asíncrona, cuyas funciones ahora están
 en **libc**.
 
-*libc* Biblioteca principal de C.
+*libc* - Biblioteca principal de C.
 
-*libc_malloc_debug* Activa la comprobación de asignación de memoria al
+*libc_malloc_debug* - Activa la comprobación de asignación de memoria al
 precargarse.
 
-*libdl* Biblioteca ficticia sin funciones. Anteriormente era la
+*libdl* - Biblioteca ficticia sin funciones. Anteriormente era la
 biblioteca de interfaz de enlace dinámico, cuyas funciones ahora están
 en *libc*.
 
-*libg* Biblioteca ficticia sin funciones. Anteriormente era una
+*libg* - Biblioteca ficticia sin funciones. Anteriormente era una
 biblioteca de tiempo de ejecución para g**++**.
 
-*libm* La biblioteca matemática.
+*libm* - La biblioteca matemática.
 
 *libmvec* La biblioteca matemática vectorial, enlazada según sea
 necesario cuando se usa *libm*.
 
-*libmcheck* Activa la comprobación de asignación de memoria cuando se
+*libmcheck* - Activa la comprobación de asignación de memoria cuando se
 enlaza a.
 
-*libmemusage* Usada por **memusage** para ayudar a recopilar información
+*libmemusage* - Usada por **memusage** para ayudar a recopilar información
 sobre el uso de memoria de un programa.
 
-*libnsl* La biblioteca de servicios de red, ahora obsoleta.
+*libnsl* - La biblioteca de servicios de red, ahora obsoleta.
 
-*libnss\_\* Los módulos de conmutación de servicio de nombres, que
+*libnss\_\* - Los módulos de conmutación de servicio de nombres, que
 contienen funciones para resolver nombres de host, nombres de usuario,
 nombres de grupo, alias, servicios, protocolos, etc. Cargados por *libc*
 según la configuración en */etc/nsswitch.conf*.
 
-*libpcprofile* Se puede precargar en el perfil de PC de un ejecutable.
+*libpcprofile* - Se puede precargar en el perfil de PC de un ejecutable.
 
-*libpthread* Biblioteca ficticia que no contiene funciones.
+*libpthread* - Biblioteca ficticia que no contiene funciones.
 Anteriormente contenía funciones que proporcionaban la mayoría de las
 interfaces especificadas por las extensiones de subprocesos POSIX.1c y
 las interfaces de semáforo especificadas por las extensiones de tiempo
 real POSIX.1b. Ahora, estas funciones se encuentran en *libc*.
 
-*libresolv* Contiene funciones para crear, enviar e interpretar paquetes
+*libresolv* - Contiene funciones para crear, enviar e interpretar paquetes
 a los servidores de nombres de dominio de Internet.
 
-*librt* Contiene funciones que proporcionan la mayoría de las interfaces
+*librt* - Contiene funciones que proporcionan la mayoría de las interfaces
 especificadas por las extensiones de tiempo real POSIX.1b.
 
-*libthread_db* Contiene funciones útiles para crear depuradores para
+*libthread_db* - Contiene funciones útiles para crear depuradores para
 programas multiproceso.
 
-*libutil* Biblioteca ficticia sin funciones. Anteriormente, contenía
+*libutil* - Biblioteca ficticia sin funciones. Anteriormente, contenía
 código para funciones estándar utilizadas en diversas utilidades de
 Unix. Estas funciones ahora se encuentran en *libc*.
 
@@ -7508,7 +7508,7 @@ Eliminar una biblioteca estática inútil:
 
 ### Descripciones breves
 
-*libz* Contiene funciones de compresión y descompresión utilizadas por
+*libz* - Contiene funciones de compresión y descompresión utilizadas por
 algunos programas
 
 ---
@@ -7614,32 +7614,32 @@ bzmore) y bzmore
 
 ### Descripciones breves
 
-**bunzip2** Descomprime archivos comprimidos
+**bunzip2** - Descomprime archivos comprimidos
 
-**bzcat** Descomprime a la salida estándar
+**bzcat** - Descomprime a la salida estándar
 
-**bzcmp** Ejecuta **cmp** en archivos comprimidos
+**bzcmp** - Ejecuta **cmp** en archivos comprimidos
 
-**bzdiff** Ejecuta **diff** en archivos comprimidos
+**bzdiff** - Ejecuta **diff** en archivos comprimidos
 
-**bzegrep** Ejecuta **egrep** en archivos comprimidos Archivos
+**bzegrep** - Ejecuta **egrep** en archivos comprimidos Archivos
 
-**bzfgrep** Ejecuta **fgrep** en archivos comprimidos
+**bzfgrep** - Ejecuta **fgrep** en archivos comprimidos
 
-**bzgrep** Ejecuta **grep** en archivos comprimidos
+**bzgrep** - Ejecuta **grep** en archivos comprimidos
 
-**bzip2** Comprime archivos mediante el algoritmo de compresión de texto
+**bzip2** - Comprime archivos mediante el algoritmo de compresión de texto
 Burrows-Wheeler con ordenamiento por bloques y codificación Huffman. La
 tasa de compresión es mejor que la alcanzada por compresores más
 convencionales que utilizan algoritmos \"Lempel-Ziv\", como **gzip**.
 
-**bzip2recover** Intenta recuperar datos de archivos comprimidos dañados.
+**bzip2recover** - Intenta recuperar datos de archivos comprimidos dañados.
 
-**bzless** Se ejecuta con **less** frecuencia en archivos comprimidos
+**bzless** - Se ejecuta con **less** frecuencia en archivos comprimidos
 
-**bzmore** Se ejecuta con **more** frecuencia en archivos comprimidos
+**bzmore** - Se ejecuta con **more** frecuencia en archivos comprimidos
 
-*libbz2* La biblioteca implementa la compresión de datos sin pérdida con
+*libbz2* - La biblioteca implementa la compresión de datos sin pérdida con
 ordenamiento por bloques mediante el algoritmo Burrows-Wheeler.
 
 ---
@@ -7706,55 +7706,54 @@ xzgrep), lzgrep (enlace a xzgrep), lzless (enlace a xzless), lzma
 
 ### Descripciones breves
 
-**lzcat** Descomprime a la salida estándar
+**lzcat** - Descomprime a la salida estándar
 
-**lzcmp** Ejecuta **cmp** en archivos comprimidos LZMA
+**lzcmp** - Ejecuta **cmp** en archivos comprimidos LZMA
 
-**lzdiff** Ejecuta **diff** en archivos comprimidos LZMA
+**lzdiff** - Ejecuta **diff** en archivos comprimidos LZMA
 
-**lzegrep** Ejecuta **egrep** en archivos comprimidos LZMA
+**lzegrep** - Ejecuta **egrep** en archivos comprimidos LZMA
 
-**lzfgrep** Ejecuta **fgrep** en archivos comprimidos LZMA
+**lzfgrep** - Ejecuta **fgrep** en archivos comprimidos LZMA
 
-**lzgrep** Ejecuta **grep** en archivos comprimidos LZMA
+**lzgrep** - Ejecuta **grep** en archivos comprimidos LZMA
 
-**lzless** Ejecuta **less** en archivos comprimidos LZMA
+**lzless** - Ejecuta **less** en archivos comprimidos LZMA
 
-**lzma** Comprime o descomprime archivos con el formato LZMA
+**lzma** - Comprime o descomprime archivos con el formato LZMA
 
-**lzmadec** Un decodificador pequeño y rápido para archivos comprimidos
-LZMA
+**lzmadec** - Un decodificador pequeño y rápido para archivos comprimidos LZMA
 
-**lzmainfo** Muestra la información almacenada en la cabecera del
+**lzmainfo** - Muestra la información almacenada en la cabecera del
 archivo comprimido LZMA
 
-**lzmore** Ejecuta **more** en archivos comprimidos LZMA Archivos
+**lzmore** - Ejecuta **more** en archivos comprimidos LZMA Archivos
 
-**unlzma** Descomprime archivos en formato LZMA
+**unlzma** - Descomprime archivos en formato LZMA
 
-**unxz** Descomprime archivos en formato XZ
+**unxz** - Descomprime archivos en formato XZ
 
-**xz** Comprime o descomprime archivos en formato XZ
+**xz** - Comprime o descomprime archivos en formato XZ
 
-**xzcat** Descomprime a la salida estándar
+**xzcat** - Descomprime a la salida estándar
 
-**xzcmp** Ejecuta **cmp** en archivos comprimidos XZ
+**xzcmp** - Ejecuta **cmp** en archivos comprimidos XZ
 
-**xzdec** Un decodificador pequeño y rápido para archivos comprimidos XZ
+**xzdec** - Un decodificador pequeño y rápido para archivos comprimidos XZ
 
-**xzdiff** Ejecuta **diff** en archivos comprimidos XZ
+**xzdiff** - Ejecuta **diff** en archivos comprimidos XZ
 
-**xzegrep** Ejecuta **egrep** en archivos comprimidos XZ
+**xzegrep** - Ejecuta **egrep** en archivos comprimidos XZ
 
-**xzfgrep** Ejecuta **fgrep** en archivos comprimidos XZ
+**xzfgrep** - Ejecuta **fgrep** en archivos comprimidos XZ
 
-**xzgrep** Ejecuta **grep** en archivos comprimidos XZ
+**xzgrep** - Ejecuta **grep** en archivos comprimidos XZ
 
 **xzless** Se ejecuta **less** en archivos comprimidos XZ
 
-**xzmore** Se ejecuta **more** en archivos comprimidos XZ
+**xzmore** - Se ejecuta **more** en archivos comprimidos XZ
 
-*liblzma* La biblioteca que implementa la compresión de datos sin
+*liblzma* - La biblioteca que implementa la compresión de datos sin
 pérdida y con ordenación de bloques, utilizando Algoritmo de cadena
 Lempel-Ziv-Markov
 
@@ -7808,15 +7807,15 @@ lz4) y unlz4 (enlazar a lz4)
 
 ### Descripciones breves
 
-**lz4** Comprimir o descomprimir archivos con el formato LZ4
+**lz4** - Comprimir o descomprimir archivos con el formato LZ4
 
-**lz4c** Comprimir archivos con el formato LZ4
+**lz4c** - Comprimir archivos con el formato LZ4
 
-**lz4cat** Muestra el contenido de un archivo comprimido con el formato LZ4
+**lz4cat** - Muestra el contenido de un archivo comprimido con el formato LZ4
 
-**unlz4** Descomprime archivos con el formato LZ4
+**unlz4** - Descomprime archivos con el formato LZ4
 
-*liblz4* Biblioteca que implementa la compresión de datos sin pérdida
+*liblz4* - Biblioteca que implementa la compresión de datos sin pérdida
 mediante el algoritmo LZ4
 
 ---
@@ -7880,13 +7879,13 @@ zstdless, zstdmt (enlace a zstd) y unzstd (enlace a zstd)
 
 ### Descripciones breves
 
-**zstd** Comprime o descomprime archivos con el formato ZSTD.
+**zstd** - Comprime o descomprime archivos con el formato ZSTD.
 
-**zstdgrep** Ejecuta grep en archivos comprimidos con ZSTD.
+**zstdgrep** - Ejecuta grep en archivos comprimidos con ZSTD.
 
-**zstdless** Se ejecuta con menos frecuencia en archivos comprimidos con ZSTD.
+**zstdless** - Se ejecuta con menos frecuencia en archivos comprimidos con ZSTD.
 
-*libzstd* Biblioteca que implementa la compresión de datos sin pérdida
+*libzstd* - Biblioteca que implementa la compresión de datos sin pérdida
 mediante el algoritmo ZSTD.
 
 ---
@@ -7941,11 +7940,11 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**file** Intenta clasificar cada archivo mediante varias pruebas:
+**file** - Intenta clasificar cada archivo mediante varias pruebas:
 pruebas del sistema de archivos, pruebas de números mágicos y pruebas de
 lenguaje.
 
-*libmagic* Contiene rutinas para el reconocimiento de números mágicos,
+*libmagic* - Contiene rutinas para el reconocimiento de números mágicos,
 utilizadas por el programa Archivo.
 
 ---
@@ -8040,10 +8039,10 @@ Si lo desea, instale la documentación:
 
 ### Descripciones breves
 
-*libhistory* Proporciona una interfaz de usuario consistente para
+*libhistory* - Proporciona una interfaz de usuario consistente para
 recuperar líneas del historial.
 
-*libreadline* Proporciona un conjunto de comandos para manipular el
+*libreadline* - Proporciona un conjunto de comandos para manipular el
 texto introducido en una sesión interactiva de un programa.
 
 ---
@@ -8096,7 +8095,7 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**m4** Copia los archivos indicados y expande las macros que contienen.
+**m4** - Copia los archivos indicados y expande las macros que contienen.
 Estas macros pueden estar integradas o definidas por el usuario y pueden
 aceptar cualquier número de argumentos. Además de la expansión de
 macros, **m4** cuenta con funciones integradas para incluir archivos con
@@ -8176,9 +8175,9 @@ Instala el paquete:
 
 ### Descripciones breves
 
-**bc** Calculadora de línea de comandos
+**bc** - Calculadora de línea de comandos
 
-**dc** Calculadora de línea de comandos con pulido inverso
+**dc** - Calculadora de línea de comandos con pulido inverso
 
 ---
 &nbsp;
@@ -8246,18 +8245,16 @@ simbólico:
 
 ### Descripciones breves
 
-flex Herramienta para generar programas que reconocen patrones en texto.
+**flex** - Herramienta para generar programas que reconocen patrones en texto.
 Permite la versatilidad de especificar las reglas para la búsqueda de
 patrones, eliminando la necesidad de desarrollar un programa
 especializado.
 
-**flex++** Extensión de flex, utilizada para generar código y clases en C++.
-Es un enlace simbólico a **flex**
+**flex++** - Extensión de flex, utilizada para generar código y clases en C++. Es un enlace simbólico a **flex**
 
-**lex** Un enlace simbólico que ejecuta **flex** en modo de emulación
-**lex**
+**lex** - Un enlace simbólico que ejecuta **flex** en modo de emulación **lex**.
 
-*libfl* La biblioteca *flex*
+*libfl* - La biblioteca *flex*
 
 ---
 &nbsp;
@@ -8390,13 +8387,13 @@ Opcionalmente, instale la documentación con los siguientes comandos:
 
 ### Descripciones breves
 
-**tclsh8.6** La consola de comandos de Tcl
+**tclsh8.6** - La consola de comandos de Tcl
 
-**tclsh** Un enlace a tclsh8.6
+**tclsh** - Un enlace a tclsh8.6
 
-*libtcl8.6.so* La biblioteca de Tcl
+*libtcl8.6.so* - La biblioteca de Tcl
 
-*libtclstub8.6.a* La biblioteca de stubs de Tcl
+*libtclstub8.6.a* - La biblioteca de stubs de Tcl
 
 ---
 &nbsp;
@@ -8498,9 +8495,9 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**expect** Se comunica con otros programas interactivos mediante un script
+**expect** - Se comunica con otros programas interactivos mediante un script
 
-*libexpect-5.45.4.so* Contiene funciones que permiten usar Expect como
+*libexpect-5.45.4.so* - Contiene funciones que permiten usar Expect como
 extensión de Tcl o directamente desde C o C++ (sin Tcl)
 
 ---
@@ -8561,9 +8558,9 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**dejagnu** Lanzador de comandos auxiliar de DejaGNU
+**dejagnu** - Lanzador de comandos auxiliar de DejaGNU
 
-**runtest** Un script contenedor que localiza el intérprete de comandos
+**runtest** - Un script contenedor que localiza el intérprete de comandos
 de espera adecuado y luego ejecuta DejaGNU
 
 ---
@@ -8625,13 +8622,13 @@ enlaces simbólicos:
 
 ### Descripciones breves
 
-**pkgconf** Devuelve metainformación para la biblioteca o paquete
+**pkgconf** - Devuelve metainformación para la biblioteca o paquete
 especificado.
 
-**bomtool** Genera una lista de materiales de software a partir de los
+**bomtool** - Genera una lista de materiales de software a partir de los
 archivos .pc de pkg-config.
 
-*libpkgconf* Contiene la mayor parte de la funcionalidad de pkgconf y
+*libpkgconf* - Contiene la mayor parte de la funcionalidad de pkgconf y
 permite que otras herramientas, como IDE y compiladores, utilicen sus
 frameworks.
 
@@ -8756,75 +8753,75 @@ libgprofng.so, libopcodes.so y libsframe.so
 
 ### Descripciones breves
 
-**addr2line** Traduce las direcciones de los programas a nombres de
+**addr2line** - Traduce las direcciones de los programas a nombres de
 archivo y números de línea; Dada una dirección y el nombre de un
 ejecutable, utiliza la información de depuración del ejecutable para
 determinar qué archivo fuente y número de línea están asociados a la
 dirección.
 
-**ar** Crea, modifica y extrae de archivos.
+**ar** - Crea, modifica y extrae de archivos.
 
-**as** Un ensamblador que ensambla la salida de gcc en archivos objeto.
+**as** - Un ensamblador que ensambla la salida de gcc en archivos objeto.
 
-**c++filt** Utilizado por el enlazador para descomponer símbolos de C++
+**c++filt** - Utilizado por el enlazador para descomponer símbolos de C++
 y Java y evitar que las funciones sobrecargadas entren en conflicto.
 
-**dwp** La utilidad de empaquetado DWARF.
+**dwp** - La utilidad de empaquetado DWARF.
 
-**elfedit** Actualiza las cabeceras ELF de los archivos ELF.
+**elfedit** - Actualiza las cabeceras ELF de los archivos ELF.
 
-**gprof** Muestra datos del perfil del gráfico de llamadas.
+**gprof** - Muestra datos del perfil del gráfico de llamadas.
 
-**gprofng** Recopila y analiza datos de rendimiento.
+**gprofng** - Recopila y analiza datos de rendimiento.
 
-**ld** Un enlazador que combina varios archivos objeto y de archivo en
+**ld** - Un enlazador que combina varios archivos objeto y de archivo en
 un solo archivo, reubicando sus datos y enlazando referencias de
 símbolos.
 
-**ld.bfd** Un enlace duro a ld.
+**ld.bfd** - Un enlace duro a ld.
 
-**nm** Enumera los símbolos que aparecen en un archivo objeto dado.
+**nm** - Enumera los símbolos que aparecen en un archivo objeto dado.
 
-**objcopy** Traduce un tipo de archivo objeto a otro.
+**objcopy** - Traduce un tipo de archivo objeto a otro.
 
-**objdump** Muestra información sobre el archivo objeto dado, con
+**objdump** - Muestra información sobre el archivo objeto dado, con
 opciones que controlan la información específica que se mostrará; La
 información mostrada es útil para los programadores que trabajan en las
 herramientas de compilación.
 
-**ranlib** Genera un índice del contenido de un archivo y lo almacena en
+**ranlib** - Genera un índice del contenido de un archivo y lo almacena en
 él; el índice enumera todos los símbolos definidos por los miembros del
 archivo que son archivos objeto reubicables.
 
-**readelf** Muestra información sobre los binarios de tipo ELF.
+**readelf** - Muestra información sobre los binarios de tipo ELF.
 
-**size** Enumera los tamaños de sección y el tamaño total de los
+**size** - Enumera los tamaños de sección y el tamaño total de los
 archivos objeto dados.
 
-**strings** Genera, para cada archivo, las secuencias de caracteres
+**strings** - Genera, para cada archivo, las secuencias de caracteres
 imprimibles con al menos la longitud especificada (cuatro por defecto);
 para archivos objeto, imprime, por defecto, solo las cadenas de las
 secciones de inicialización y carga, mientras que para otros tipos de
 archivos, escanea el archivo completo.
 
-**strip** Descarta símbolos de los archivos objeto.
+**strip** - Descarta símbolos de los archivos objeto.
 
-*libbfd* La biblioteca de descriptores de archivos binarios.
+*libbfd* - La biblioteca de descriptores de archivos binarios.
 
-*libctf* La biblioteca de soporte de depuración de formatos de tipo
+*libctf* - La biblioteca de soporte de depuración de formatos de tipo
 ANSI-C compatibles.
 
-*libctf-nobfd* Una variante de libctf que no utiliza la funcionalidad de
+*libctf-nobfd* - Una variante de libctf que no utiliza la funcionalidad de
 libbfd.
 
-*libgprofng* Una biblioteca que contiene la mayoría de las rutinas
+*libgprofng* - Una biblioteca que contiene la mayoría de las rutinas
 utilizadas por **gprofng**.
 
-*libopcodes* Una biblioteca para gestionar códigos de operación (las
+*libopcodes* - Una biblioteca para gestionar códigos de operación (las
 versiones de \"texto legible\" de las instrucciones para el procesador).
 Se utiliza para crear utilidades como **objdump**.
 
-*libsframe* Una biblioteca para soportar el rastreo inverso en línea
+*libsframe* - Una biblioteca para soportar el rastreo inverso en línea
 utilizando un desempaquetador (unwinder) simple..
 
 ---
@@ -8936,9 +8933,9 @@ Instale el paquete y su documentación:
 
 ### Descripciones breves
 
-*libgmp* Contiene funciones matemáticas de precisión
+*libgmp* - Contiene funciones matemáticas de precisión
 
-*libgmpxx* Contiene funciones matemáticas de precisión de C++
+*libgmpxx* - Contiene funciones matemáticas de precisión de C++
 
 ---
 &nbsp;
@@ -9003,7 +9000,7 @@ Instalar el paquete y su documentación:
 
 ### Descripciones breves
 
-*libmpfr* Contiene funciones matemáticas de precisión múltiple
+*libmpfr* - Contiene funciones matemáticas de precisión múltiple
 
 ---
 &nbsp;
@@ -9062,7 +9059,7 @@ Instalar el paquete y su documentación:
 
 ### Descripciones breves
 
-*libmpc* Contiene funciones matemáticas complejas
+*libmpc* - Contiene funciones matemáticas complejas
 
 ---
 &nbsp;
@@ -9123,15 +9120,15 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**attr** Extiende los atributos de los objetos del sistema de archivos.
+**attr** - Extiende los atributos de los objetos del sistema de archivos.
 
-**getfattr** Obtiene los atributos extendidos de los objetos del sistema
+**getfattr** - Obtiene los atributos extendidos de los objetos del sistema
 de archivos.
 
-**setfattr** Establece los atributos extendidos de los objetos del
+**setfattr** - Establece los atributos extendidos de los objetos del
 sistema de archivos.
 
-*libattr* Contiene las funciones de la biblioteca para manipular
+*libattr* - Contiene las funciones de la biblioteca para manipular
 atributos extendidos.
 
 ---
@@ -9194,14 +9191,14 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**chacl** Cambia la lista de control de acceso de un archivo o
+**chacl** - Cambia la lista de control de acceso de un archivo o
 directorio
 
-**getfacl** Obtiene listas de control de acceso a archivos
+**getfacl** - Obtiene listas de control de acceso a archivos
 
-**setfacl** Establece listas de control de acceso a archivos
+**setfacl** - Establece listas de control de acceso a archivos
 
-*libacl* Contiene las funciones de la biblioteca para manipular las
+*libacl* - Contiene las funciones de la biblioteca para manipular las
 listas de control de acceso
 
 ---
@@ -9265,19 +9262,19 @@ Instale el paquete:
 
 ### Descripciones breves
 
-**capsh** Un contenedor de shell para explorar y restringir la
+**capsh** - Un contenedor de shell para explorar y restringir la
 compatibilidad con capacidades
 
-**getcap** Examina las capacidades del archivo
+**getcap** - Examina las capacidades del archivo
 
-**getpcaps** Muestra las capacidades del proceso o procesos consultados
+**getpcaps** - Muestra las capacidades del proceso o procesos consultados
 
-**setcap** Establece las capacidades del archivo
+**setcap** - Establece las capacidades del archivo
 
-*libcap* Contiene las funciones de la biblioteca para manipular las
+*libcap* - Contiene las funciones de la biblioteca para manipular las
 capacidades de POSIX 1003.1e
 
-*libpsx* Contiene funciones para la compatibilidad con la semántica
+*libpsx* - Contiene funciones para la compatibilidad con la semántica
 POSIX para las llamadas al sistema asociadas con la biblioteca pthread
 
 ---
@@ -9374,7 +9371,7 @@ Instala el paquete:
 
 ### Descripciones breves
 
-*libcrypt* Contiene funciones para generar hashes de contraseñas
+*libcrypt* - Contiene funciones para generar hashes de contraseñas
 
 ---
 &nbsp;
@@ -9591,101 +9588,95 @@ to newgrp), su, useradd, userdel, usermod, vigr (link to vipw), and vipw
 
 ### Descripciones breves
 
-**chage** Se utiliza para cambiar el número máximo de días entre cambios
+**chage** - Se utiliza para cambiar el número máximo de días entre cambios
 obligatorios de contraseña.
 
-**chfn** Se utiliza para cambiar la contraseña completa de un usuario nombre y otra información
+**chfn** - Se utiliza para cambiar la contraseña completa de un usuario nombre y otra información
 
-**chgpasswd** Se utiliza para actualizar las contraseñas de grupo por lotes.
+**chgpasswd** - Se utiliza para actualizar las contraseñas de grupo por lotes.
 
-**chpasswd** Se utiliza para actualizar las contraseñas de usuario por lotes.
+**chpasswd** - Se utiliza para actualizar las contraseñas de usuario por lotes.
 
-**chsh** Se utiliza para cambiar el shell de inicio de sesión
+**chsh** - Se utiliza para cambiar el shell de inicio de sesión
 predeterminado de un usuario.
 
-**expiry** Comprueba y aplica la política actual de expiración de
+**expiry** - Comprueba y aplica la política actual de expiración de
 contraseñas.
 
-**faillog** Se utiliza para examinar el registro de errores de inicio de
+**faillog** - Se utiliza para examinar el registro de errores de inicio de
 sesión, establecer un número máximo de errores antes de que una cuenta
 se bloquee y restablecer el recuento de errores.
 
-**getsubids** Se utiliza para listar los rangos de ID subordinados de un
+**getsubids** - Se utiliza para listar los rangos de ID subordinados de un
 usuario.
 
-**gpasswd** Se utiliza para agregar y eliminar miembros y
+**gpasswd** - Se utiliza para agregar y eliminar miembros y
 administradores a grupos.
 
-**groupadd** Crea un grupo con el nombre especificado.
+**groupadd** - Crea un grupo con el nombre especificado.
 
-**groupdel** Elimina el grupo con el nombre especificado.
+**groupdel** - Elimina el grupo con el nombre especificado.
 
-**groupmems** Permite a un usuario administrar su propia lista de
+**groupmems** - Permite a un usuario administrar su propia lista de
 miembros del grupo sin necesidad de privilegios de superusuario.
 
-**groupmod** Se utiliza para modificar el nombre o GID del grupo dado.
+**groupmod** - Se utiliza para modificar el nombre o GID del grupo dado.
 
-**grpck** Verifica la integridad de los archivos de grupo */etc/group* y
+**grpck** - Verifica la integridad de los archivos de grupo */etc/group* y
 */etc/gshadow*.
 
-**grpconv** Crea o actualiza el archivo de grupo shadow a partir del
+**grpconv** - Crea o actualiza el archivo de grupo shadow a partir del
 archivo de grupo normal.
 
-**grpunconv** Actualiza */etc/group* desde */etc/gshadow* y luego
+**grpunconv** - Actualiza */etc/group* desde */etc/gshadow* y luego
 elimina este último.
 
-**login** El sistema lo utiliza para permitir que los usuarios inicien
+**login** - El sistema lo utiliza para permitir que los usuarios inicien
 sesión.
 
-**logoutd** Es un demonio que se utiliza para imponer restricciones en el
-tiempo y los puertos de inicio de sesión.
+**logoutd** - Es un demonio que se utiliza para imponer restricciones en el tiempo y los puertos de inicio de sesión.
 
-**newgidmap** Se usa para establecer el mapeo de GID de un espacio de
-nombres de usuario
+**newgidmap** - Se usa para establecer el mapeo de GID de un espacio de nombres de usuario
 
-**newgrp** Se usa para cambiar el GID actual durante una sesión de
-inicio de sesión
+**newgrp** - Se usa para cambiar el GID actual durante una sesión de inicio de sesión
 
-**newuidmap** Se usa para establecer el mapeo de UID de un espacio de
-nombres de usuario
+**newuidmap** - Se usa para establecer el mapeo de UID de un espacio de nombres de usuario
 
-**newusers** Se usa para crear o actualizar toda una serie de cuentas de
-usuario
+**newusers** - Se usa para crear o actualizar toda una serie de cuentas de usuario
 
-**nologin** Muestra un mensaje diciendo que una cuenta no está
+**nologin** - Muestra un mensaje diciendo que una cuenta no está
 disponible; está diseñado para usarse como shell por defecto para
 cuentas deshabilitadas
 
-**passwd** Se usa para cambiar la contraseña de una cuenta de usuario o
-grupo
+**passwd** - Se usa para cambiar la contraseña de una cuenta de usuario o grupo
 
-**pwck** Verifica la integridad de los archivos de contraseñas
+**pwck** - Verifica la integridad de los archivos de contraseñas
 /etc/passwd y /etc/shadow
 
-**pwconv** Crea o actualiza el archivo de contraseñas shadow a partir
+**pwconv** - Crea o actualiza el archivo de contraseñas shadow a partir
 del archivo de contraseñas normal
 
-**pwunconv** Actualiza /etc/passwd desde /etc/shadow y luego elimina
+**pwunconv** - Actualiza /etc/passwd desde /etc/shadow y luego elimina
 este último
 
-**sg** Ejecuta un comando dado mientras el GID del usuario está
+**sg** - Ejecuta un comando dado mientras el GID del usuario está
 establecido al del grupo dado
 
-**su** Ejecuta un shell con IDs de usuario y grupo sustitutos
+**su** - Ejecuta un shell con IDs de usuario y grupo sustitutos
 
-**useradd** Crea un nuevo usuario con el nombre dado, o actualiza la
+**useradd** - Crea un nuevo usuario con el nombre dado, o actualiza la
 información predeterminada de nuevos usuarios
 
-**userdel** Elimina la cuenta de usuario especificada
+**userdel** - Elimina la cuenta de usuario especificada
 
-**usermod** Se usa para modificar el nombre de inicio de sesión, UID,
+**usermod** - Se usa para modificar el nombre de inicio de sesión, UID,
 shell, grupo inicial, directorio personal, etc. del usuario dado
 
-**vigr** Edita los archivos /etc/group o /etc/gshadow
+**vigr** - Edita los archivos /etc/group o /etc/gshadow
 
-**vipw** Edita los archivos /etc/passwd o /etc/shadow
+**vipw** - Edita los archivos /etc/passwd o /etc/shadow
 
-*libsubid* Biblioteca para manejar rangos de ID subordinados para
+*libsubid* - Biblioteca para manejar rangos de ID subordinados para
 usuarios y grupos
 
 ---
@@ -10054,90 +10045,90 @@ libtsan.{a,so} y libubsan.{a,so}
 
 ### Descripciones breves
 
-**c++** El compilador de C++
+**c++** - El compilador de C++
 
-**cc** El compilador de C
+**cc** - El compilador de C
 
-**cpp** El preprocesador de C; El compilador lo utiliza para
+**cpp** - El preprocesador de C; El compilador lo utiliza para
 expandir las directivas #include, #define y similares en los archivos
 fuente
 
-**g++** El compilador de C++
+**g++** - El compilador de C++
 
-**gcc** El compilador de C
+**gcc** - El compilador de C
 
-**gcc-ar** Un contenedor de ar que añade un complemento a la línea
+**gcc-ar** - Un contenedor de ar que añade un complemento a la línea
 de comandos. Este programa solo se utiliza para añadir \"optimización
 del tiempo de enlace\" y no es útil con las opciones de compilación
 predeterminadas
 
-**gcc-nm** Un contenedor de nm que añade un complemento a la línea
+**gcc-nm** - Un contenedor de nm que añade un complemento a la línea
 de comandos. Este programa solo se utiliza para añadir \"optimización
 del tiempo de enlace\" y no es útil con las opciones de compilación
 predeterminadas
 
-**gcc-ranlib** Un contenedor de ranlib que añade un complemento a la
+**gcc-ranlib** - Un contenedor de ranlib que añade un complemento a la
 línea de comandos Este programa solo se utiliza para añadir
 \"optimización del tiempo de enlace\" y no es útil con las opciones de
 compilación predeterminadas
 
-**gcov** Una herramienta de pruebas de cobertura. Se utiliza para
+**gcov** - Una herramienta de pruebas de cobertura. Se utiliza para
 analizar programas y determinar dónde las optimizaciones tendrán el
 mayor efecto
 
-**gcov-dump** Herramienta de volcado de perfiles gcda y gcno sin
+**gcov-dump** - Herramienta de volcado de perfiles gcda y gcno sin
 conexión
 
-**gcov-tool** Herramienta de procesamiento de perfiles gcda sin
+**gcov-tool** - Herramienta de procesamiento de perfiles gcda sin
 conexión
 
-**lto-dump** Herramienta para volcar archivos objeto generados por GCC
+**lto-dump** - Herramienta para volcar archivos objeto generados por GCC
 con LTO habilitado
 
-*libasan* Biblioteca de ejecución Address Sanitizer.
+*libasan* - Biblioteca de ejecución Address Sanitizer.
 
-*libatomic* Biblioteca de ejecución atómica integrada de GCC.
+*libatomic* - Biblioteca de ejecución atómica integrada de GCC.
 
-*libcc1* Una biblioteca que permite a GDB utilizar GCC.
+*libcc1* - Una biblioteca que permite a GDB utilizar GCC.
 
-*libgcc* Contiene soporte en tiempo de ejecución para gcc.
+*libgcc* - Contiene soporte en tiempo de ejecución para gcc.
 
-*libgcov* Esta biblioteca se vincula a un programa cuando se le indica
+*libgcov* - Esta biblioteca se vincula a un programa cuando se le indica
 a GCC que habilite la generación de perfiles.
 
-*libgomp* Implementación GNU de la API OpenMP para programación
+*libgomp* - Implementación GNU de la API OpenMP para programación
 paralela multiplataforma de memoria compartida en C/C++ y Fortran.
 
-*libhwasan* Biblioteca de ejecución Address Sanitizer asistida por
+*libhwasan* - Biblioteca de ejecución Address Sanitizer asistida por
 hardware
 
-*libitm* Biblioteca de memoria transaccional de GNU
+*libitm* - Biblioteca de memoria transaccional de GNU
 
-*liblsan* Biblioteca de ejecución Leak Sanitizer
+*liblsan* - Biblioteca de ejecución Leak Sanitizer
 
-*liblto_plugin* El complemento LTO de GCC permite a Binutils procesar
+*liblto_plugin* - El complemento LTO de GCC permite a Binutils procesar
 archivos objeto generados por GCC con LTO habilitado****
 
-*libquadmath* API de la biblioteca matemática de precisión cuádruple
+*libquadmath* - API de la biblioteca matemática de precisión cuádruple
 de GCC
 
-*libssp* Contiene rutinas que soportan la función de protección contra
+*libssp* - Contiene rutinas que soportan la función de protección contra
 la destrucción de pila de GCC. Normalmente no se utiliza, ya que Glibc
 también proporciona dichas rutinas
 
-*libstdc++* La biblioteca estándar de C++
+*libstdc++* - La biblioteca estándar de C++
 
-*libstdc++exp* La biblioteca experimental de contratos de C++
+*libstdc++exp* - La biblioteca experimental de contratos de C++
 
-*libstdc++fs* La biblioteca del sistema de archivos ISO/IEC TS
+*libstdc++fs* - La biblioteca del sistema de archivos ISO/IEC TS
 18822:2015
 
-*libsupc++* Proporciona rutinas de soporte para el lenguaje de
+*libsupc++* - Proporciona rutinas de soporte para el lenguaje de
 programación C
 
-*libtsan* La biblioteca de ejecución Thread Sanitizer
+*libtsan* - La biblioteca de ejecución Thread Sanitizer
 
-*libubsan* La biblioteca de ejecución Undefined Behavior Sanitizer
+*libubsan* - La biblioteca de ejecución Undefined Behavior Sanitizer
 
 ---
 &nbsp;
@@ -10292,50 +10283,47 @@ libpanelw.so
 
 ### Descripciones breves
 
-**captoinfo** Convierte una descripción de termcap en una descripción de
+**captoinfo** - Convierte una descripción de termcap en una descripción de
 terminfo
 
-**clear** Limpia la pantalla, si es posible
+**clear** - Limpia la pantalla, si es posible
 
-**infocmp** Compara o imprime descripciones de terminfo
+**infocmp** - Compara o imprime descripciones de terminfo
 
-**infotocap** Convierte una descripción de terminfo en una descripción
-de termcap
+**infotocap** - Convierte una descripción de terminfo en una descripción de termcap
 
-**ncursesw6-config** Proporciona información de configuración para
-ncurses
+**ncursesw6-config** - Proporciona información de configuración para ncurses
 
-**reset** Reinicializa una terminal a sus valores predeterminados
+**reset** - Reinicializa una terminal a sus valores predeterminados
 
-**tabs** Limpia y establece tabulaciones en una terminal
+**tabs** - Limpia y establece tabulaciones en una terminal
 
-**tic** El compilador de descripción de entrada de terminfo que traduce
+**tic** - El compilador de descripción de entrada de terminfo que traduce
 un archivo terminfo del formato fuente al formato binario necesario para
 las rutinas de la biblioteca ncurses \[Un archivo terminfo contiene
 información sobre las capacidades de una terminal específica\]
 
-**toe** Enumera todos los tipos de terminal disponibles, indicando el
+**toe** - Enumera todos los tipos de terminal disponibles, indicando el
 nombre principal y la descripción de cada uno
 
-**tput** Pone a disposición del shell los valores de las capacidades
+**tput** - Pone a disposición del shell los valores de las capacidades
 dependientes de la terminal. También se puede usar para reiniciar o
 inicializar una terminal o informar su nombre completo
 
-**tset** Se puede usar para inicializar terminales
+**tset** - Se puede usar para inicializar terminales
 
-*libncursesw* Contiene funciones para mostrar texto de muchas
+*libncursesw* - Contiene funciones para mostrar texto de muchas
 formas complejas en una pantalla de terminal; un buen ejemplo del uso de
 estas funciones es el menú que se muestra durante el **make menuconfig**
 del kernel.
 
-*libncurses++w* Contiene enlaces de C++ para otras bibliotecas de
-este paquete
+*libncurses++w* - Contiene enlaces de C++ para otras bibliotecas de este paquete
 
-*libformw* Contiene funciones para implementar formularios
+*libformw* - Contiene funciones para implementar formularios
 
-*libmenuw* Contiene funciones para implementar menús
+*libmenuw* - Contiene funciones para implementar menús
 
-*libpanelw* Contiene funciones para implementar paneles
+*libpanelw* - Contiene funciones para implementar paneles
 
 ---
 &nbsp;
@@ -10392,7 +10380,7 @@ Instalar el paquete y su documentación:
 
 ### Descripciones breves
 
-**sed** Filtra y transforma archivos de texto en una sola pasada
+**sed** - Filtra y transforma archivos de texto en una sola pasada
 
 ---
 &nbsp;
@@ -10446,24 +10434,24 @@ y pstree.x11 (enlace a pstree)
 
 ### Descripciones breves
 
-**fuser** Informa de los identificadores de proceso (PID) de los
+**fuser** - Informa de los identificadores de proceso (PID) de los
 procesos que utilizan los archivos o sistemas de archivos
 especificados.
 
-**killall** Detiene los procesos por nombre. Envía una señal a todos los
+**killall** - Detiene los procesos por nombre. Envía una señal a todos los
 procesos que ejecutan cualquiera de los comandos dados.
 
-**peekfd** Examina los descriptores de archivo de un proceso en
+**peekfd** - Examina los descriptores de archivo de un proceso en
 ejecución, dado su PID.
 
-**prtstat** Imprime información sobre un proceso.
+**prtstat** - Imprime información sobre un proceso.
 
-**pslog** Informa sobre la ruta actual de los registros de un
+**pslog** - Informa sobre la ruta actual de los registros de un
 proceso.
 
-**pstree** Muestra los procesos en ejecución como un árbol.
+**pstree** - Muestra los procesos en ejecución como un árbol.
 
-**pstree.x11** Igual que **pstree**, excepto que espera confirmación
+**pstree.x11** - Igual que **pstree**, excepto que espera confirmación
 antes de salir.
 
 ---
@@ -10531,90 +10519,90 @@ preloadable_libintl.so
 
 ### Descripciones breves
 
-**autopoint** Copia los archivos estándar de la infraestructura
+**autopoint** - Copia los archivos estándar de la infraestructura
 Gettext en un paquete fuente.
 
-**envsubst** Sustituye las variables de entorno en cadenas de
+**envsubst** - Sustituye las variables de entorno en cadenas de
 formato de shell.
 
-**gettext** Traduce un mensaje en lenguaje natural al idioma del
+**gettext** - Traduce un mensaje en lenguaje natural al idioma del
 usuario consultando la traducción en un catálogo de mensajes.
 
-**gettext.sh** Sirve principalmente como biblioteca de funciones de
+**gettext.sh** - Sirve principalmente como biblioteca de funciones de
 shell para gettext.
 
-**gettextize** Copia todos los archivos estándar Gettext en el
+**gettextize** - Copia todos los archivos estándar Gettext en el
 directorio de nivel superior de un paquete para comenzar a
 internacionalizarlo.
 
-**msgattrib** Filtra los mensajes de un catálogo de traducción según
+**msgattrib** - Filtra los mensajes de un catálogo de traducción según
 sus atributos y los manipula.
 
-**msgcat** Concatena y fusiona los archivos .po.
+**msgcat** - Concatena y fusiona los archivos .po.
 
-****msgcmp** Compara dos archivos .po para comprobar que ambos
+****msgcmp** - Compara dos archivos .po para comprobar que ambos
 contienen el mismo conjunto de cadenas msgid.
 
-**msgcomm** Busca los mensajes comunes a los archivos .po
+**msgcomm** - Busca los mensajes comunes a los archivos .po
 especificados.
 
-**msgconv** Convierte un catálogo de traducción a una codificación de
+**msgconv** - Convierte un catálogo de traducción a una codificación de
 caracteres diferente.
 
-**msgen** Crea un catálogo de traducción al inglés.
+**msgen** - Crea un catálogo de traducción al inglés.
 
-**msgexec** Aplica un comando a todas las traducciones de un catálogo de
+**msgexec** - Aplica un comando a todas las traducciones de un catálogo de
 traducción.
 
-**msgfilter** Aplica un filtro a todas las traducciones de un catálogo
+**msgfilter** - Aplica un filtro a todas las traducciones de un catálogo
 de traducción.
 
-**msgfmt** Genera un catálogo de mensajes binarios a partir de un
+**msgfmt** - Genera un catálogo de mensajes binarios a partir de un
 catálogo de traducción.
 
-**msggrep** Extrae todos los mensajes de un catálogo de traducción que
+**msggrep** - Extrae todos los mensajes de un catálogo de traducción que
 coinciden con un patrón determinado o pertenecen a algunos archivos
 fuente.
 
-**msginit** Crea un nuevo archivo .po, inicializando la metainformación
+**msginit** - Crea un nuevo archivo .po, inicializando la metainformación
 con valores del entorno del usuario.
 
-**msgmerge** Combina. Dos traducciones sin procesar en un solo
+**msgmerge** - Combina. Dos traducciones sin procesar en un solo
 archivo
 
-**msgunfmt** Descompila un catálogo de mensajes binarios en texto de
+**msgunfmt** - Descompila un catálogo de mensajes binarios en texto de
 traducción sin procesar
 
-**msguniq** Unifica traducciones duplicadas en un catálogo de
+**msguniq** - Unifica traducciones duplicadas en un catálogo de
 traducción
 
-**ngettext** Muestra traducciones al idioma nativo de un mensaje de
+**ngettext** - Muestra traducciones al idioma nativo de un mensaje de
 texto cuya forma gramatical depende de un número
 
-**recode-sr-latin** Recodifica texto serbio del alfabeto
+**recode-sr-latin** - Recodifica texto serbio del alfabeto
 cirílico al latino
 
-**xgettext** Extrae las líneas de mensaje traducibles de los archivos
+**xgettext** - Extrae las líneas de mensaje traducibles de los archivos
 fuente dados para crear la primera plantilla de traducción
 
-*libasprintf* Define la clase autosprintf, que permite usar rutinas de
+*libasprintf* - Define la clase autosprintf, que permite usar rutinas de
 salida con formato C en programas C++, para su uso con las cadenas
 \<string\> y los flujos \<iostream\>.
 
-*libgettextlib* Contiene rutinas comunes utilizadas por los diversos
+*libgettextlib* - Contiene rutinas comunes utilizadas por los diversos
 programas Gettext; estas no están diseñadas para uso general.
 
-*libgettextpo* Se utiliza para escribir programas especializados que
+*libgettextpo* - Se utiliza para escribir programas especializados que
 procesan archivos .po; esta biblioteca se utiliza cuando las
 aplicaciones estándar incluidas con Gettext (como msgcomm, msgcmp,
 msgattrib y msgen) no son suficientes.
 
-*libgettextsrc* Proporciona rutinas comunes utilizadas por los
+*libgettextsrc* - Proporciona rutinas comunes utilizadas por los
 diversos programas Gettext; Estos no están destinados a uso general.
 
-*libtextstyle* Biblioteca de estilos de texto.
+*libtextstyle* - Biblioteca de estilos de texto.
 
-*preloadable_libintl* Una biblioteca, diseñada para ser utilizada
+*preloadable_libintl* - Una biblioteca, diseñada para ser utilizada
 por LD_PRELOAD, que ayuda a libintl a registrar mensajes no
 traducidos.
 
@@ -10671,14 +10659,14 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**bison** Genera, a partir de una serie de reglas, un programa para
+**bison** - Genera, a partir de una serie de reglas, un programa para
 analizar la estructura de archivos de texto. Bison es un reemplazo de
 Yacc (Yet Another Compiler Compiler).
 
-**yacc** Un contenedor para bison, pensado para programas que aún llaman
+**yacc** - Un contenedor para bison, pensado para programas que aún llaman
 a yacc en lugar de bison; llama a bison con la opción -y.
 
-*liby* La biblioteca de Yacc que contiene implementaciones de las
+*liby* - La biblioteca de Yacc que contiene implementaciones de las
 funciones yyerror y main compatibles con Yacc. Esta biblioteca no suele
 ser muy útil, pero POSIX la requiere.
 
@@ -10740,13 +10728,13 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**egrep** Imprime las líneas que coinciden con una expresión regular
+**egrep** - Imprime las líneas que coinciden con una expresión regular
 extendida. Está obsoleto, use grep -E en su lugar.
 
-**fgrep** Imprime líneas que coinciden con una lista de cadenas fijas.
+**fgrep** - Imprime líneas que coinciden con una lista de cadenas fijas.
 Está obsoleto, use grep -F en su lugar.
 
-**grep** Imprime líneas que coinciden con una expresión regular
+**grep** - Imprime líneas que coinciden con una expresión regular
 básica.
 
 ---
@@ -10846,18 +10834,18 @@ está ejecutando):
 
 &nbsp;
 
-### Descripciones breves
+###  -
 
 **bash** Un intérprete de comandos ampliamente utilizado; realiza
 diversos tipos de expansiones y sustituciones en una línea de comandos
 antes de ejecutarla, lo que lo convierte en una herramienta
 poderosa.
 
-**bashbug** Un script de shell que ayuda al usuario a redactar y enviar
+**bashbug** - Un script de shell que ayuda al usuario a redactar y enviar
 por correo informes de errores con formato estándar relacionados con
 bash.
 
-**sh** Un enlace simbólico al programa bash; cuando se invoca como sh,
+**sh** - Un enlace simbólico al programa bash; cuando se invoca como sh,
 bash intenta imitar el comportamiento de inicio de versiones anteriores
 de sh con la mayor fidelidad posible, a la vez que cumple con el
 estándar POSIX.
@@ -10922,13 +10910,14 @@ Eliminar una biblioteca estática inútil:
 
 ### Descripciones breves
 
-**libtool** Proporciona servicios generalizados de soporte para la
+**libtool** - Proporciona servicios generalizados de soporte para la
 creación de bibliotecas.
 
-**libtoolize** Proporciona una forma estándar de añadir soporte para
-**libtool** a un paquete.
+**libtoolize** - Proporciona una forma estándar de añadir soporte para
 
-*libltdl* Oculta las diversas dificultades al abrir bibliotecas
+**libtool** - a un paquete.
+
+*libltdl* - Oculta las diversas dificultades al abrir bibliotecas
 cargadas dinámicamente.
 
 ---
@@ -10996,17 +10985,17 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**gdbm_dump** Vuelca una base de datos de GDBM a un archivo
+**gdbm_dump** - Vuelca una base de datos de GDBM a un archivo
 
-**gdbm_load** Recrea una base de datos de GDBM a partir de un archivo de
+**gdbm_load** - Recrea una base de datos de GDBM a partir de un archivo de
 volcado
 
-**gdbmtool** Prueba y modifica una base de datos de GDBM
+**gdbmtool** - Prueba y modifica una base de datos de GDBM
 
-*libgdbm* Contiene funciones para manipular una base de datos
+*libgdbm* - Contiene funciones para manipular una base de datos
 con hash
 
-*libgdbm_compat* Biblioteca de compatibilidad con funciones de
+*libgdbm_compat* - Biblioteca de compatibilidad con funciones de
 DBM antiguas
 
 ---
@@ -11062,7 +11051,7 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**gperf** Genera un hash perfecto a partir de un conjunto de claves
+**gperf** - Genera un hash perfecto a partir de un conjunto de claves
 
 ---
 &nbsp;
@@ -11125,10 +11114,10 @@ Si lo desea, instale la documentación:
 
 ### Descripciones breves
 
-**xmlwf** Es una utilidad sin validación que comprueba si los documentos
+**xmlwf** - Es una utilidad sin validación que comprueba si los documentos
 XML están correctamente formados.
 
-*libexpat* Contiene funciones API para analizar XML.
+*libexpat* - Contiene funciones API para analizar XML.
 
 ---
 &nbsp;
@@ -11231,25 +11220,25 @@ Mueva un programa a la ubicación correcta:
 
 ### Descripciones breves
 
-**dnsdomainname** Mostrar el nombre de dominio DNS del sistema
+**dnsdomainname** - Mostrar el nombre de dominio DNS del sistema
 
-**ftp** Es el programa de protocolo de transferencia de archivos
+**ftp** - Es el programa de protocolo de transferencia de archivos
 
-**hostname**  Informa o establece el nombre del host
+**hostname** - Informa o establece el nombre del host
 
-**ifconfig**  Administra interfaces de red
+**ifconfig** - Administra interfaces de red
 
-**ping**  Envía paquetes e informes de eco-requisito cuánto tiempo tardan las respuestas
+**ping** - Envía paquetes e informes de eco-requisito cuánto tiempo tardan las respuestas
 
-**ping6**  Una versión de Ping para redes IPv6
+**ping6** - Una versión de Ping para redes IPv6
 
-**talk**  Se usa para chatear con otro usuario
+**talk** - Se usa para chatear con otro usuario
 
-**telnet**  Una interfaz al protocolo de Telnet
+**telnet** - Una interfaz al protocolo de Telnet
 
-**tftp**  Un programa de transferencia de archivos trivial
+**tftp** - Un programa de transferencia de archivos trivial
 
-**traceroute**  Traza la ruta que toman sus paquetes del host en el que está trabajando a otro host en una red,
+**traceroute** - Traza la ruta que toman sus paquetes del host en el que está trabajando a otro host en una red,
 mostrando todos los lúpulos intermedios (puertas de enlace) en la línea
 
 ---
@@ -11309,14 +11298,14 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**less** Un visor o paginador de archivos; Muestra el contenido del
+**less** - Un visor o paginador de archivos; Muestra el contenido del
 archivo dado, permitiendo al usuario desplazarse, encontrar cadenas y
 acceder a las marcas.
 
-**lessecho** Necesario para expandir metacaracteres, como \* y ?, en
+**lessecho** - Necesario para expandir metacaracteres, como \* y ?, en
 nombres de archivo en sistemas Unix.
 
-**lesskey** Se utiliza para especificar las combinaciones de teclas para
+**lesskey** - Se utiliza para especificar las combinaciones de teclas para
 **less**.
 
 ---
@@ -11421,89 +11410,89 @@ zipdetails
 
 ### Descripciones breves
 
-**corelist** Una interfaz de línea de comandos para Module::CoreList.
+**corelist** - Una interfaz de línea de comandos para Module::CoreList.
 
-**cpan** Interactúa con la Red Integral de Archivos de Perl (CPAN) desde
+**cpan** - Interactúa con la Red Integral de Archivos de Perl (CPAN) desde
 la línea de comandos.
 
-**enc2xs** Crea una extensión de Perl para el módulo Encode a partir de
+**enc2xs** - Crea una extensión de Perl para el módulo Encode a partir de
 asignaciones de caracteres Unicode o archivos de codificación Tcl.
 
-**encguess** Adivina el tipo de codificación de uno o varios
+**encguess** - Adivina el tipo de codificación de uno o varios
 archivos.
 
-**h2ph** Convierte archivos de encabezado .h de C a archivos de
+**h2ph** - Convierte archivos de encabezado .h de C a archivos de
 encabezado .ph de Perl.
 
-**h2xs** Convierte archivos de encabezado .h de C a extensiones de
+**h2xs** - Convierte archivos de encabezado .h de C a extensiones de
 Perl.
 
-**instmodsh** Script de shell Para examinar los módulos Perl instalados;
+**instmodsh** - Script de shell Para examinar los módulos Perl instalados;
 puede crear un archivo tar a partir de un módulo instalado.
 
-**json_pp** Convierte datos entre ciertos formatos de entrada y
+**json_pp** - Convierte datos entre ciertos formatos de entrada y
 salida.
 
-**libnetcfg** Puede usarse para configurar el módulo Perl libnet.
+**libnetcfg** - Puede usarse para configurar el módulo Perl libnet.
 
-**perl** Combina algunas de las mejores características de C, sed, awk y
+**perl** - Combina algunas de las mejores características de C, sed, awk y
 sh en un único lenguaje de programación.
 
-**perl5.40.1** Un enlace directo a Perl.
+**perl5.40.1** - Un enlace directo a Perl.
 
-**perlbug** Se usa para generar informes de errores sobre Perl o los
+**perlbug** - Se usa para generar informes de errores sobre Perl o los
 módulos que lo acompañan y enviarlos por correo.
 
-**perldoc** Muestra documentación en formato pod, incrustada en el árbol
+**perldoc** - Muestra documentación en formato pod, incrustada en el árbol
 de instalación de Perl o en un script de Perl.
 
-**perlivp** El procedimiento de verificación de la instalación de Perl.
+**perlivp** - El procedimiento de verificación de la instalación de Perl.
 Se puede usar para verificar que Perl y sus bibliotecas se hayan
 instalado correctamente.
 
-**perlthanks** Se usa para generar mensajes de agradecimiento para los
+**perlthanks** - Se usa para generar mensajes de agradecimiento para los
 desarrolladores de Perl.
 
-**piconv** Una versión en Perl del convertidor de codificación de
+**piconv** - Una versión en Perl del convertidor de codificación de
 caracteres iconv.
 
-**pl2pm** Una herramienta básica para convertir archivos .pl de Perl4 a
+**pl2pm** - Una herramienta básica para convertir archivos .pl de Perl4 a
 módulos .pm de Perl5.
 
-**pod2html** Convierte archivos de formato pod a formato HTML.
+**pod2html** - Convierte archivos de formato pod a formato HTML.
 
-**pod2man** Convierte datos de pod a entrada \*roff formateada.
+**pod2man** - Convierte datos de pod a entrada \*roff formateada.
 
-**pod2text** Convierte datos de pod a texto ASCII formateado.
+**pod2text** - Convierte datos de pod a texto ASCII formateado.
 
-**pod2usage** Imprime mensajes de uso de la documentación de pod
+**pod2usage** - Imprime mensajes de uso de la documentación de pod
 incrustada en archivos.
 
-**podchecker** Comprueba la sintaxis de los archivos de documentación en
+**podchecker** - Comprueba la sintaxis de los archivos de documentación en
 formato pod.
 
-**podselect** Muestra secciones seleccionadas de la documentación de
+**podselect** - Muestra secciones seleccionadas de la documentación de
 pod.
 
-**prove** Herramienta de línea de comandos para ejecutar pruebas con el
+**prove** - Herramienta de línea de comandos para ejecutar pruebas con el
 módulo Test::Harness.
 
-**ptar** Un programa similar a tar escrito en Perl.
+**ptar** - Un programa similar a tar escrito en Perl.
 
-**ptardiff** Un programa en Perl que compara un archivo extraído con uno
+**ptardiff** - Un programa en Perl que compara un archivo extraído con uno
 sin extraer.
 
-**ptargrep** Un programa en Perl que aplica la coincidencia de patrones
+**ptargrep** - Un programa en Perl que aplica la coincidencia de patrones
 al contenido de los archivos en un archivo tar.
 
-**shasum** Imprime o comprueba sumas de comprobación SHA.
+**shasum** - Imprime o comprueba sumas de comprobación SHA.
 
-**splain** Se usa para forzar diagnósticos de advertencia detallados en
+**splain** - Se usa para forzar diagnósticos de advertencia detallados en
 Perl.
 
-**xsubpp** Convierte el código Perl XS en código C.
+**xsubpp** - Convierte el código Perl XS en código C.
 
-**zipdetails** Muestra detalles sobre la estructura interna de un
+**zipdetails** - Muestra detalles sobre la estructura interna de un
 archivo Zip.
 
 ---
@@ -11557,7 +11546,7 @@ Instalar el paquete.
 
 ### Descripciones breves
 
-*Expat*  proporciona la interfaz Perl Expat
+*Expat* -  proporciona la interfaz Perl Expat
 
 ---
 &nbsp;
@@ -11628,18 +11617,18 @@ intltool-prepare, intltool-update e intltoolize****
 
 ### Descripciones breves
 
-**Intltoolize** Prepara un paquete para usar intltool
+**Intltoolize** - Prepara un paquete para usar intltool
 
-**intltool-extract** Genera archivos de encabezado que gettext puede
+**intltool-extract** - Genera archivos de encabezado que gettext puede
 leer
 
-**intltool-merge** Fusiona cadenas traducidas en varios tipos de
+**intltool-merge** - Fusiona cadenas traducidas en varios tipos de
 archivo
 
-**intltool-prepare** Actualiza los archivos pot y los fusiona con los
+**intltool-prepare** - Actualiza los archivos pot y los fusiona con los
 archivos de traducción
 
-**intltool-update** Actualiza los archivos de plantilla po y los fusiona
+**intltool-update** - Actualiza los archivos de plantilla po y los fusiona
 con las traducciones
 
 ---
@@ -11695,32 +11684,32 @@ autoreconf, autoscan, autoupdate e ifnames
 
 ### Descripciones breves
 
-**autoconf** Genera scripts de shell que configuran automáticamente los
+**autoconf** - Genera scripts de shell que configuran automáticamente los
 paquetes de código fuente de software para adaptarse a diversos tipos de
 sistemas tipo Unix. Los scripts de configuración que produce son
 independientes; su ejecución no requiere el programa autoconf.
 
-**autoheader** Una herramienta para crear archivos de plantilla de
+**autoheader** - Una herramienta para crear archivos de plantilla de
 sentencias C#define para que configure los use.
 
-**autom4te** Un contenedor para el procesador de macros M4.
+**autom4te** - Un contenedor para el procesador de macros M4.
 
-**autoreconf** Ejecuta automáticamente **autoconf**, **autoheader**,
+**autoreconf** - Ejecuta automáticamente **autoconf**, **autoheader**,
 **aclocal**, **automake**, **gettextize** y **libtoolize** en el orden
 correcto para ahorrar tiempo al realizar cambios en los archivos de
 plantilla de **autoconf** y **automake**.
 
-**autoscan** Ayuda a crear un archivo configure.in para un paquete de
+**autoscan** - Ayuda a crear un archivo configure.in para un paquete de
 software. Examina los archivos fuente en un árbol de directorios,
 buscando problemas comunes de portabilidad, y crea un archivo
 configure.scan que sirve como archivo configure.in
 preliminar para el paquete.
 
-**autoupdate** Modifica un archivo configure.in que aún llama
+**autoupdate** - Modifica un archivo configure.in que aún llama
 a las macros de **autoconf** por sus nombres antiguos para usar los
 nombres de macro actuales.
 
-**ifnames** Ayuda al escribir archivos configure.in para un
+**ifnames** - Ayuda al escribir archivos configure.in para un
 paquete de software; imprime los identificadores que el paquete usa en
 los condicionales del preprocesador de C. \[Si un paquete ya se ha
 configurado para tener cierta portabilidad, este programa puede ayudar a
@@ -11788,12 +11777,12 @@ automake)
 
 ### Descripciones breves
 
-**aclocal** Genera archivos aclocal.m4 basándose en el
+**aclocal** - Genera archivos aclocal.m4 basándose en el
 contenido de los archivos **configure.in**.
 
-**aclocal-1.17** Un enlace directo a **aclocal**.
+**aclocal-1.17** - Un enlace directo a **aclocal**.
 
-**automake** Una herramienta para generar automáticamente archivos
+**automake** - Una herramienta para generar automáticamente archivos
 **Makefile.in** a partir de archivos **Makefile.am**. \[Para
 crear todos los archivos Makefile.in de un paquete, ejecute este
 programa en el directorio de nivel superior. Al escanear el archivo
@@ -11801,7 +11790,7 @@ programa en el directorio de nivel superior. Al escanear el archivo
 Makefile.am apropiado y genera el archivo **Makefile.in**
 correspondiente.\]
 
-**automake-1.17** Un enlace directo a **automake**
+**automake-1.17** - Un enlace directo a **automake**
 
 ---
 &nbsp;
@@ -11899,23 +11888,23 @@ Si se desea, instalar documentación adicional:
 
 ### Descripciones breves
 
-**c_rehash** es un script de Perl que escanea todos los archivos de un
+**c_rehash** - es un script de Perl que escanea todos los archivos de un
 directorio y añade enlaces simbólicos a sus valores hash. El uso de**
 c_rehash** se considera obsoleto y debería reemplazarse por el comando
 **openssl rehash**.
 
-**openssl** es una herramienta de línea de comandos para usar las
+**openssl** - es una herramienta de línea de comandos para usar las
 diversas funciones criptográficas de la biblioteca de cifrado de OpenSSL
 desde el shell. Se puede utilizar para diversas funciones documentadas
 en *openssl(1)*.
 
-*libcrypto.so* implementa una amplia gama de algoritmos criptográficos
+*libcrypto.so* - implementa una amplia gama de algoritmos criptográficos
 utilizados en diversos estándares de Internet. Los servicios que ofrece
 esta biblioteca son utilizados por las implementaciones de OpenSSL de
 SSL, TLS y S/MIME, y también se han empleado para implementar OpenSSH,
 OpenPGP y otros estándares criptográficos.
 
-*libssl.so* implementa el protocolo de Seguridad de la Capa de
+*libssl.so* - implementa el protocolo de Seguridad de la Capa de
 Transporte (TLS v1). Proporciona una API completa, cuya documentación se
 puede encontrar en *ssl(7)*.
 
@@ -11976,7 +11965,7 @@ Instalar solo Libelf:
 
 ### Descripciones breves
 
-*libelf.so* Contiene funciones de la API para gestionar archivos de
+*libelf.so* - Contiene funciones de la API para gestionar archivos de
 objeto ELF
 
 ---
@@ -12058,7 +12047,7 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-*libffi* Contiene las funciones API de la interfaz de funciones externas
+*libffi* - Contiene las funciones API de la interfaz de funciones externas
 
 ---
 &nbsp;
@@ -12217,21 +12206,21 @@ paquete con los valores del creador original.
 
 ### Descripciones breves
 
-**2to3** es un programa de Python que lee el código fuente de Python 2.x
+**2to3** - Es un programa de Python que lee el código fuente de Python 2.x
 y aplica una serie de correcciones para transformarlo en código válido
 de Python 3.x.
 
-**idle3** es un script contenedor que abre un editor gráfico compatible
+**idle3** - Es un script contenedor que abre un editor gráfico compatible
 con Python. Para que este script se ejecute, debe haber instalado Tk
 antes de Python para que se compile el módulo de Python Tkinter.****
 
-**pip3* *El instalador de paquetes para Python. Puedes usar pip para
+**pip3** - El instalador de paquetes para Python. Puedes usar pip para
 instalar paquetes desde el índice de paquetes de Python y otros
 índices.
 
-**pydoc3** es la herramienta de documentación de Python.
+**pydoc3** - Es la herramienta de documentación de Python.
 
-**python3** es el intérprete de Python, un lenguaje de programación
+**python3** - Es el intérprete de Python, un lenguaje de programación
 interpretado, interactivo y orientado a objetos.
 
 ---
@@ -12342,7 +12331,7 @@ y /usr/lib/python3.13/site- packages/wheel-0.45.1.dist-info
 
 ### Descripciones breves
 
-**wheel** es una utilidad para descomprimir, empaquetar o convertir
+**wheel** - es una utilidad para descomprimir, empaquetar o convertir
 archivos de wheel.
 
 ---
@@ -12469,7 +12458,7 @@ paquete ya se ha probado reconstruyéndose (con la opción
 
 ### Descripciones breves
 
-**ninja** es el sistema de compilación de Ninja
+**ninja** - es el sistema de compilación de Ninja
 
 ---
 &nbsp;
@@ -12528,7 +12517,7 @@ Instala las ruedas desde el directorio dist.
 
 ### Descripciones breves
 
-**meson** Un sistema de compilación de alta productividad
+**meson** - Un sistema de compilación de alta productividad
 
 ---
 &nbsp;
@@ -12594,26 +12583,26 @@ kmod), kmod, lsmod (enlace a kmod), modinfo (enlace a kmod), modprobe
 
 ### Descripciones breves
 
-**depmod** Crea un archivo de dependencias basado en los símbolos que
+**depmod** - Crea un archivo de dependencias basado en los símbolos que
 encuentra en el conjunto de módulos existente. Este archivo de
 dependencia lo utiliza **modprobe** para cargar automáticamente los
 módulos necesarios.
 
-**insmod** Instala un módulo cargable en el kernel en ejecución.
+**insmod** - Instala un módulo cargable en el kernel en ejecución.
 
-**kmod** Carga y descarga módulos del kernel.
+**kmod** - Carga y descarga módulos del kernel.
 
-**lsmod** Enumera los módulos cargados actualmente.
+**lsmod** - Enumera los módulos cargados actualmente.
 
-**modinfo** Examina un archivo de objeto asociado a un módulo del kernel
+**modinfo** - Examina un archivo de objeto asociado a un módulo del kernel
 y muestra cualquier nformación que pueda obtener.
 
-**modprobe** Utiliza un archivo de dependencia, creado por **depmod**,
+**modprobe** - Utiliza un archivo de dependencia, creado por **depmod**,
 para cargar automáticamente los módulos relevantes.
 
-**rmmod** Descarga módulos del kernel en ejecución.
+**rmmod** - Descarga módulos del kernel en ejecución.
 
-*libkmod* Esta biblioteca la utilizan otros programas para
+*libkmod* - Esta biblioteca la utilizan otros programas para
 cargar y descargar módulos del kernel.
 
 ---
@@ -12773,288 +12762,288 @@ users, vdir, wc, who, whoami, and yes
 
 ### Descripciones breves
 
-**\[** Es un comando real, /usr/bin/\[; es sinónimo del comando de
+**\[** - Es un comando real, /usr/bin/\[; es sinónimo del comando de
 prueba.
 
-**Base32** Codifica y decodifica datos según la especificación base32
+**Base32** - Codifica y decodifica datos según la especificación base32
 (RFC 4648).
 
-**base64** Codifica y decodifica datos según la especificación base64
+**base64** - Codifica y decodifica datos según la especificación base64
 (RFC 4648).
 
-**b2sum** Imprime o comprueba sumas de comprobación de BLAKE2 (512
+**b2sum** - Imprime o comprueba sumas de comprobación de BLAKE2 (512
 bits).
 
-**basename** Elimina cualquier ruta y un sufijo dado de un nombre de
+**basename** - Elimina cualquier ruta y un sufijo dado de un nombre de
 archivo.
 
-**basenc** Codifica o decodifica datos mediante varios
+**basenc** - Codifica o decodifica datos mediante varios
 algoritmos.
 
-**cat** Concatena archivos a la salida estándar.****
+**cat** - Concatena archivos a la salida estándar.****
 
-**chcon** Cambia el contexto de seguridad de archivos y
+**chcon** - Cambia el contexto de seguridad de archivos y
 directorios.
 
-**chgrp** Cambia la propiedad del grupo de archivos y
+**chgrp** - Cambia la propiedad del grupo de archivos y
 directorios.
 
-**chmod** Cambia los permisos de cada archivo al modo especificado;
+**chmod** - Cambia los permisos de cada archivo al modo especificado;
 el modo puede ser una representación simbólica de los cambios a realizar
 o un número octal que representa los nuevos permisos.
 
-**chown** Cambia la propiedad del usuario o grupo de archivos y
+**chown** - Cambia la propiedad del usuario o grupo de archivos y
 directorios.
 
-**chroot** Ejecuta un comando con el directorio especificado como el
+**chroot** - Ejecuta un comando con el directorio especificado como el
 directorio /.
 
-**cksum** Imprime la suma de comprobación de redundancia cíclica (CRC) y
+**cksum** - Imprime la suma de comprobación de redundancia cíclica (CRC) y
 el recuento de bytes de cada archivo especificado.****
 
-**comm** Compara dos archivos ordenados, mostrando en tres columnas las
+**comm** - Compara dos archivos ordenados, mostrando en tres columnas las
 líneas únicas y comunes.
 
-**cp** Copia archivos.
+**cp** - Copia archivos.
 
-**csplit** Divide un archivo en varios archivos nuevos, separándolos
+**csplit** - Divide un archivo en varios archivos nuevos, separándolos
 según patrones o números de línea dados, y muestra el recuento de bytes
 de cada archivo.*
 
-**cut** Imprime secciones de líneas, seleccionando las partes según los
+**cut** - Imprime secciones de líneas, seleccionando las partes según los
 campos o posiciones dados.
 
-**date** Muestra la fecha y hora actuales en el formato dado o establece
+**date** - Muestra la fecha y hora actuales en el formato dado o establece
 la fecha y hora del sistema.
 
-**dd** Copia un archivo utilizando el tamaño y el recuento de bloques
+**dd** - Copia un archivo utilizando el tamaño y el recuento de bloques
 dados, y opcionalmente realiza conversiones.
 
-**df** Informa la cantidad de espacio en disco disponible (y utilizado)
+**df** - Informa la cantidad de espacio en disco disponible (y utilizado)
 en todos los sistemas de archivos montados, o solo en los sistemas de
 archivos que contienen los archivos seleccionados.
 
-**dir** Enumera el contenido de cada directorio dado (igual que el
+**dir** - Enumera el contenido de cada directorio dado (igual que el
 comando ls).
 
-**dircolors **Emite comandos para establecer LS_COLOR. Variable de
+**dircolors** - Emite comandos para establecer LS_COLOR. Variable de
 entorno para cambiar el esquema de colores utilizado por ls.
 
-**dirname** Extrae las porciones de directorio del nombre
+**dirname** - Extrae las porciones de directorio del nombre
 especificado.
 
-**du** Informa la cantidad de espacio en disco utilizado por el
+**du** - Informa la cantidad de espacio en disco utilizado por el
 directorio actual, por cada uno de los directorios especificados
 (incluidos todos los subdirectorios) o por cada uno de los archivos
 especificados.
 
-**echo** Muestra las cadenas especificadas.
+**echo** - Muestra las cadenas especificadas.
 
-**env** Ejecuta un comando en un entorno modificado.
+**env** - Ejecuta un comando en un entorno modificado.
 
-**expand** Convierte tabulaciones en espacios.
+**expand** - Convierte tabulaciones en espacios.
 
-**expr** Evalúa expresiones.
+**expr** - Evalúa expresiones.
 
-**factor** Imprime los factores primos de los enteros especificados.
+**factor** - Imprime los factores primos de los enteros especificados.
 
-**false** No realiza ninguna acción, sin éxito. Siempre finaliza con un
+**false** - No realiza ninguna acción, sin éxito. Siempre finaliza con un
 código de estado que indica un fallo.
 
-**fmt** Reformatea los párrafos en los archivos indicados.
+**fmt** - Reformatea los párrafos en los archivos indicados.
 
-**fold** Ajusta las líneas en los archivos indicados.
+**fold** - Ajusta las líneas en los archivos indicados.
 
-**groups** Informa sobre la pertenencia a grupos de un usuario.
+**groups** - Informa sobre la pertenencia a grupos de un usuario.
 
-**head** Imprime las primeras diez líneas (o el número indicado) de cada
+**head** - Imprime las primeras diez líneas (o el número indicado) de cada
 archivo.
 
-**hostid** Informa sobre el identificador numérico (en hexadecimal) del
+**hostid** - Informa sobre el identificador numérico (en hexadecimal) del
 host.
 
-**id** Informa sobre el ID de usuario efectivo, el ID de grupo y la
+**id** - Informa sobre el ID de usuario efectivo, el ID de grupo y la
 pertenencia a grupos del usuario actual o del usuario especificado.
 
-**install** Copia archivos configurando sus modos de permisos y, si es
+**install** - Copia archivos configurando sus modos de permisos y, si es
 posible, su propietario y grupo.
 
-**join** Une las líneas con campos de unión idénticos de dos archivos
+**join** - Une las líneas con campos de unión idénticos de dos archivos
 separados.
 
-**link** Crea un enlace físico (con el nombre indicado) a un
+**link** - Crea un enlace físico (con el nombre indicado) a un
 archivo.
 
-**ln** Crea enlaces físicos o enlaces simbólicos entre archivos.****
+**ln** - Crea enlaces físicos o enlaces simbólicos entre archivos.****
 
-**logname** Informa sobre el nombre de inicio de sesión del usuario
+**logname** - Informa sobre el nombre de inicio de sesión del usuario
 actual.
 
-**ls** Enumera el contenido de cada directorio.****
+**ls** - Enumera el contenido de cada directorio.****
 
-**md5sum** Informa o comprueba las sumas de comprobación del Message
+**md5sum** - Informa o comprueba las sumas de comprobación del Message
 Digest 5 (MD5).
 
-**mkdir** Crea directorios con los nombres dados.
+**mkdir** - Crea directorios con los nombres dados.
 
 **mkfifo** Crea FIFO (First-In, First-Out), \"tuberías con nombre\" en
 el lenguaje UNIX, con los nombres dados.
 
-**mknod** Crea nodos de dispositivo con los nombres dados; un nodo de
+**mknod** - Crea nodos de dispositivo con los nombres dados; un nodo de
 dispositivo es un archivo especial de caracteres, un archivo especial de
 bloques o un FIFO.
 
-**mktemp** Crea archivos temporales de forma segura; se utiliza en
+**mktemp** - Crea archivos temporales de forma segura; se utiliza en
 scripts.
 
-**mv** Mueve o renombra archivos o directorios.
+**mv** - Mueve o renombra archivos o directorios.
 
-**nice** Ejecuta un programa con prioridad de programación
+**nice** - Ejecuta un programa con prioridad de programación
 modificada.
 
-**nl** Numera las líneas de los archivos dados.
+**nl** - Numera las líneas de los archivos dados.
 
-**nohup** Ejecuta un comando inmune a bloqueos, con su salida redirigida
+**nohup** - Ejecuta un comando inmune a bloqueos, con su salida redirigida
 a un archivo de registro.
 
-**nproc** Imprime el número de unidades de procesamiento disponibles
+**nproc** - Imprime el número de unidades de procesamiento disponibles
 para un proceso.
 
-**numfmt** Convierte números a o desde cadenas legibles.
+**numfmt** - Convierte números a o desde cadenas legibles.
 
-**od** Voltea archivos en octal y otros formatos.
+**od** - Voltea archivos en octal y otros formatos.
 
-**paste** Fusiona los archivos dados, uniendo secuencialmente las líneas
+**paste** - Fusiona los archivos dados, uniendo secuencialmente las líneas
 correspondientes, una junto a la otra, separadas por tabulaciones.
 
-**pathchk** Comprueba si los nombres de archivo son válidos o
+**pathchk** - Comprueba si los nombres de archivo son válidos o
 portables.
 
-**pinky** Es un cliente ligero de finger. Reporta información sobre los
+**pinky** - Es un cliente ligero de finger. Reporta información sobre los
 usuarios.
 
-**pr** Pagina y organiza en columnas los archivos para su impresión.
+**pr** - Pagina y organiza en columnas los archivos para su impresión.
 
-**printenv** Imprime el entorno.
+**printenv** - Imprime el entorno.
 
-**printf** Imprime los argumentos según el formato indicado, similar a
+**printf** - Imprime los argumentos según el formato indicado, similar a
 la función printf de C.
 
-**ptx** Genera un índice permutado a partir del contenido de los
+**ptx** - Genera un índice permutado a partir del contenido de los
 archivos, con cada palabra clave en su contexto.
 
-**pwd** Reporta el nombre del directorio de trabajo actual.
+**pwd** - Reporta el nombre del directorio de trabajo actual.
 
-**readlink** Reporta el valor del enlace simbólico.
+**readlink** - Reporta el valor del enlace simbólico.
 
-**realpath** Imprime la ruta resuelta.
+**realpath** - Imprime la ruta resuelta.
 
-**rm** Elimina archivos o directorios.
+**rm** - Elimina archivos o directorios.
 
-**rmdir** Elimina directorios si están vacíos.
+**rmdir** - Elimina directorios si están vacíos.
 
-**runcon** Ejecuta un comando con el contexto de seguridad
+**runcon** - Ejecuta un comando con el contexto de seguridad
 especificado.
 
-**seq** Imprime una secuencia de números dentro de un rango y con un
+**seq** - Imprime una secuencia de números dentro de un rango y con un
 incremento dados.
 
-**sha1sum** Imprime o verifica sumas de comprobación del algoritmo hash
+**sha1sum** - Imprime o verifica sumas de comprobación del algoritmo hash
 seguro 1 (SHA1) de 160 bits.
 
-**sha224sum** Imprime o verifica sumas de comprobación del algoritmo
+**sha224sum** - Imprime o verifica sumas de comprobación del algoritmo
 hash seguro de 224 bits.
 
-**sha256sum** Imprime o verifica sumas de comprobación del algoritmo
+**sha256sum** - Imprime o verifica sumas de comprobación del algoritmo
 hash seguro de 256 bits.
 
-**sha384sum** Imprime o verifica sumas de comprobación del algoritmo
+**sha384sum** - Imprime o verifica sumas de comprobación del algoritmo
 hash seguro de 384 bits.
 
-**sha512sum** Imprime o verifica sumas de comprobación del algoritmo
+**sha512sum** - Imprime o verifica sumas de comprobación del algoritmo
 hash seguro de 512 bits. Sumas de comprobación de algoritmos
 
-**shred** Sobrescribe repetidamente los archivos con patrones complejos,
+**shred** - Sobrescribe repetidamente los archivos con patrones complejos,
 lo que dificulta la recuperación de datos
 
-**shuf** Reordena las líneas de texto
+**shuf** - Reordena las líneas de texto
 
-**sleep** Hace una pausa durante el tiempo especificado
+**sleep** - Hace una pausa durante el tiempo especificado
 
-**sort** Ordena las líneas de los archivos
+**sort** - Ordena las líneas de los archivos
 
-**split** Divide el archivo en fragmentos, por tamaño o por número de
+**split** - Divide el archivo en fragmentos, por tamaño o por número de
 líneas
 
-**stat** Muestra el estado del archivo o del sistema de archivos.
+**stat** - Muestra el estado del archivo o del sistema de archivos.
 
-**stdbuf** Ejecuta comandos con operaciones de almacenamiento en búfer
+**stdbuf** - Ejecuta comandos con operaciones de almacenamiento en búfer
 modificadas para sus flujos estándar.
 
-**stty** Establece o informa la configuración de la línea terminal.
+**stty** - Establece o informa la configuración de la línea terminal.
 
-**sum** Imprime la suma de comprobación y el recuento de bloques de cada
+**sum** - Imprime la suma de comprobación y el recuento de bloques de cada
 archivo.
 
-**sync** Limpia los búferes del sistema de archivos; fuerza la
+**sync** - Limpia los búferes del sistema de archivos; fuerza la
 transferencia de los bloques modificados al disco y actualiza el
 superbloque.
 
-**tac** Concatena los archivos en orden inverso.
+**tac** - Concatena los archivos en orden inverso.
 
-**tail** Imprime las últimas diez líneas (o el número especificado) de
+**tail** - Imprime las últimas diez líneas (o el número especificado) de
 cada archivo.
 
-**tee** Lee desde la entrada estándar mientras escribe tanto en la
+**tee** - Lee desde la entrada estándar mientras escribe tanto en la
 salida estándar como en los archivos.
 
-**test** Compara valores y comprueba los tipos de archivo.
+**test** - Compara valores y comprueba los tipos de archivo.
 
-**timeout** Ejecuta un comando con un límite de tiempo.
+**timeout** - Ejecuta un comando con un límite de tiempo.
 
-**touch** Cambia las marcas de tiempo de los archivos, estableciendo las
+**touch** - Cambia las marcas de tiempo de los archivos, estableciendo las
 horas de acceso y modificación de los archivos a la hora actual; Los
 archivos inexistentes se crean con longitud cero.
 
-**tr** Traduce, comprime y elimina los caracteres de la entrada
+**tr** - Traduce, comprime y elimina los caracteres de la entrada
 estándar.
 
-**true** No realiza ninguna acción correctamente; siempre termina con un
+**true** - No realiza ninguna acción correctamente; siempre termina con un
 código de estado que indica éxito.
 
-**truncate** Comprime o expande un archivo al tamaño especificado.
+**truncate** - Comprime o expande un archivo al tamaño especificado.
 
-**tsort** Realiza una ordenación topológica. Escribe una lista
+**tsort** - Realiza una ordenación topológica. Escribe una lista
 completamente ordenada según el orden parcial de un archivo dado.
 
-**tty** Informa del nombre de archivo del terminal conectado a la
+**tty** - Informa del nombre de archivo del terminal conectado a la
 entrada estándar.
 
-**uname** Informa de la información del sistema.
+**uname** - Informa de la información del sistema.
 
-**unexpand** Convierte espacios en tabulaciones.
+**unexpand** - Convierte espacios en tabulaciones.
 
-**uniq** Descarta todas las líneas idénticas sucesivas excepto una.
+**uniq** - Descarta todas las líneas idénticas sucesivas excepto una.
 
-**unlink** Elimina el archivo dado.
+**unlink** - Elimina el archivo dado.
 
-**users** Informa de los nombres de los usuarios conectados.
+**users** - Informa de los nombres de los usuarios conectados.
 
-**vdir** Es lo mismo que \`ls -l\`.
+**vdir** - Es lo mismo que \`ls -l\`.
 
-**wc** Informa del número de líneas, palabras y bytes de cada archivo
+**wc** - Informa del número de líneas, palabras y bytes de cada archivo
 dado, así como los totales generales cuando se proporciona más de un
 archivo.
 
-**who** Informa de quién ha iniciado sesión.
+**who** - Informa de quién ha iniciado sesión.
 
-**whoami** Informa del nombre de usuario asociado con el ID de usuario
+**whoami** - Informa del nombre de usuario asociado con el ID de usuario
 efectivo actual.
 
-**yes** Emite repetidamente \`y\` o una cadena dada, hasta que se
+**yes** - Emite repetidamente \`y\` o una cadena dada, hasta que se
 elimina.
 
-*libstdbuf* Biblioteca utilizada por \`stdbuf\`.
+*libstdbuf* - Biblioteca utilizada por \`stdbuf\`.
 
 ---
 &nbsp;
@@ -13108,10 +13097,10 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**checkmk** Script de AWK para generar pruebas unitarias de C para usar
+**checkmk** - Script de AWK para generar pruebas unitarias de C para usar
 con el framework de pruebas unitarias Check
 
-*libcheck.so* Contiene funciones que permiten llamar a Check
+*libcheck.so* - Contiene funciones que permiten llamar a Check
 desde un programa de prueba
 
 ---
@@ -13165,15 +13154,15 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**cmp** Compara dos archivos e informa de las diferencias byte a
+**cmp** - Compara dos archivos e informa de las diferencias byte a
 byte
 
-**diff** Compara dos archivos o directorios e informa de las líneas que
+**diff** - Compara dos archivos o directorios e informa de las líneas que
 difieren
 
-**diff3** Compara tres archivos línea a línea
+**diff3** - Compara tres archivos línea a línea
 
-**sdiff** Combina dos archivos y muestra los resultados de forma
+**sdiff** - Combina dos archivos y muestra los resultados de forma
 interactiva
 
 ---
@@ -13262,12 +13251,12 @@ revtwoway.so, rwarray.so y time.so (todas en /usr/lib/gawk)****
 
 ### Descripciones breves
 
-**awk** Enlace a **gawk**
+**awk** - Enlace a **gawk**
 
-**gawk** Un programa para manipular archivos de texto; es la
+**gawk** - Un programa para manipular archivos de texto; es la
 implementación GNU de **awk**
 
-**gawk-5.3.1** Enlace físico a **gawk**
+**gawk-5.3.1** - Enlace físico a **gawk**
 
 ---
 &nbsp;
@@ -13334,18 +13323,18 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**find** Busca archivos que coincidan con los criterios especificados en
+**find** - Busca archivos que coincidan con los criterios especificados en
 los árboles de directorios
 
-**locate** Busca en una base de datos de nombres de archivo e informa de
+**locate** - Busca en una base de datos de nombres de archivo e informa de
 los nombres que contienen una cadena o coinciden con un patrón
 
-**updatedb** Actualiza la base de datos **locate**; escanea todo el
+**updatedb** - Actualiza la base de datos **locate**; escanea todo el
 sistema de archivos (incluidos otros sistemas de archivos montados, a
 menos que se indique lo contrario) y guarda todos los nombres de archivo
 que encuentra en la base de datos
 
-**xargs** Se puede usar para aplicar un comando a una lista de
+**xargs** - Se puede usar para aplicar un comando a una lista de
 archivos
 
 ---
@@ -13414,137 +13403,137 @@ troff
 
 ### Descripciones breves
 
-**addftinfo** Lee un archivo de fuente troff y añade información
+**addftinfo** - Lee un archivo de fuente troff y añade información
 adicional sobre la métrica de la fuente, utilizada por el sistema
 **groff**
 
-**afmtodit** Crea un archivo de fuente para usar con **groff** y
+**afmtodit** - Crea un archivo de fuente para usar con **groff** y
 **grops**
 
-**chem** Preprocesador de Groff para generar diagramas de estructura
+**chem** - Preprocesador de Groff para generar diagramas de estructura
 química
 
-**eqn** Compila descripciones de ecuaciones integradas en archivos de
+**eqn** - Compila descripciones de ecuaciones integradas en archivos de
 entrada de troff en comandos que **troff** entiende.****
 
-**eqn2graph** Convierte una ecuación de troff en una imagen
+**eqn2graph** - Convierte una ecuación de troff en una imagen
 recortada
 
-**gdiffmk** Marca las diferencias entre archivos groff/nroff/troff.****
+**gdiffmk** - Marca las diferencias entre archivos groff/nroff/troff.****
 
-**glilypond** Transforma partituras escritas en el lenguaje lilypond al
+**glilypond** - Transforma partituras escritas en el lenguaje lilypond al
 lenguaje groff
 
-**gperl** Preprocesador para groff, que permite la inserción de código
+**gperl** - Preprocesador para groff, que permite la inserción de código
 Perl en archivos groff
 
-**gpinyin** Preprocesador para groff, que permite la inserción de Pinyin
+**gpinyin** - Preprocesador para groff, que permite la inserción de Pinyin
 (chino mandarín escrito con el alfabeto romano) en archivos groff
 
-**grap2graph** Convierte un archivo de programa grap en una imagen de
+**grap2graph** - Convierte un archivo de programa grap en una imagen de
 mapa de bits recortada (grap es un antiguo lenguaje de programación Unix
 para crear diagramas)
 
-**grn** Un preprocesador de **groff** para archivos gremlin
+**grn** - Un preprocesador de **groff** para archivos gremlin
 
-**grodvi** Un controlador para **groff** que produce archivos de salida
+**grodvi** - Un controlador para **groff** que produce archivos de salida
 en formato TeX dvi
 
-**groff** Una interfaz para el sistema de formato de documentos groff.
+**groff** - Una interfaz para el sistema de formato de documentos groff.
 Normalmente, ejecuta el programa **troff** y un postprocesador adecuado
 para el dispositivo seleccionado
 
-**groffer** Muestra archivos y páginas de manual de **groff** en
+**groffer** - Muestra archivos y páginas de manual de **groff** en
 terminales X y tty
 
-**grog** Lee archivos y determina cuáles de las opciones de **groff**
+**grog** - Lee archivos y determina cuáles de las opciones de **groff**
 -e, -man, -me, -mm, -ms, -p, -s y -t son necesarias para imprimir
 archivos, e informa del comando **groff**, incluyendo dichas
 opciones
 
-**grolbp** Es un controlador de **groff** para impresoras Canon CAPSL
+**grolbp** - Es un controlador de **groff** para impresoras Canon CAPSL
 (impresoras láser de las series LBP-4 y LBP-8)
 
-**grolj4** Es un controlador para **groff** que produce resultados en
+**grolj4** - Es un controlador para **groff** que produce resultados en
 formato PCL5, compatible con impresoras HP LaserJet 4
 
-**gropdf** Traduce los resultados de GNU **troff** a PDF
+**gropdf** - Traduce los resultados de GNU **troff** a PDF
 
-**grops** Traduce los resultados de GNU **troff** a PostScript
+**grops** - Traduce los resultados de GNU **troff** a PostScript
 
-**grotty** Traduce los resultados de GNU **troff** a un formato
+**grotty** - Traduce los resultados de GNU **troff** a un formato
 compatible con dispositivos tipo máquina de escribir
 
-**hpftodit** Crea un archivo de fuentes para usar con **groff -Tlj4** a
+**hpftodit** - Crea un archivo de fuentes para usar con **groff -Tlj4** a
 partir de un archivo de métricas de fuentes con etiquetas HP
 
-**indxbib** Crea un índice invertido para las bases de datos
+**indxbib** - Crea un índice invertido para las bases de datos
 bibliográficas con un archivo específico para usar con **refer**,
 **lookbib** y **lkbib**
 
-**lkbib** Busca en bases de datos bibliográficas referencias que
+**lkbib** - Busca en bases de datos bibliográficas referencias que
 contengan claves específicas e informa de las referencias
 encontradas
 
-**lookbib** Imprime un mensaje en el error estándar (a menos que la
+**lookbib** - Imprime un mensaje en el error estándar (a menos que la
 entrada estándar no sea una terminal), lee una línea con un conjunto de
 palabras clave de la entrada estándar, busca en las bases de datos
 bibliográficas de un archivo especificado referencias que contengan esas
 palabras clave, imprime las referencias encontradas en la salida
 estándar y repite este proceso hasta el final de la entrada
 
-**mmroff** Un preprocesador simple para **groff**
+**mmroff** - Un preprocesador simple para **groff**
 
-**neqn** Formatea ecuaciones para la salida ASCII (Código Estándar
+**neqn** - Formatea ecuaciones para la salida ASCII (Código Estándar
 Americano para el Intercambio de Información)
 
-**nroff** Un script que emula el comando **nroff** usando **groff**
+**nroff** - Un script que emula el comando **nroff** usando **groff**
 
-**pdfmom** Es un contenedor de groff que facilita la producción de
+**pdfmom** - Es un contenedor de groff que facilita la producción de
 documentos PDF a partir de archivos formateados con las macros mom
 
-**pdfroff** Crea documentos PDF con groff
+**pdfroff** - Crea documentos PDF con groff
 
-**pfbtops** Traduce una fuente PostScript en formato .pfb a ASCII
+**pfbtops** - Traduce una fuente PostScript en formato .pfb a ASCII
 
-**pic** Compila descripciones de imágenes incrustadas en archivos de
+**pic** - Compila descripciones de imágenes incrustadas en archivos de
 entrada de troff o TeX en comandos que TeX o **troff** entiende
 
-**pic2graph** Convierte un diagrama PIC en una imagen recortada
+**pic2graph** - Convierte un diagrama PIC en una imagen recortada
 
-**post-grohtml** Traduce la salida de GNU **troff** a HTML
+**post-grohtml** - Traduce la salida de GNU **troff** a HTML
 
-**preconv** Convierte la codificación de los archivos de entrada a un
+**preconv** - Convierte la codificación de los archivos de entrada a un
 formato que GNU **troff** entiende
 
-**pre-grohtml** Traduce la salida de GNU **troff** a HTML
+**pre-grohtml** - Traduce la salida de GNU **troff** a HTML
 
-**refer** Copia el contenido de un archivo a la salida estándar, excepto
+**refer** - Copia el contenido de un archivo a la salida estándar, excepto
 que las líneas entre .\[ y .\] se interpretan como citas, y las líneas
 entre .R1 y .R2 se interpretan como comandos que indican cómo deben
 procesarse las citas
 
-**roff2dvi** Transforma archivos roff al formato DVI
+**roff2dvi** - Transforma archivos roff al formato DVI
 
-**roff2html** Transforma archivos roff al formato HTML
+**roff2html** - Transforma archivos roff al formato HTML
 
-**roff2pdf** Transforma archivos roff a PDF
+**roff2pdf** - Transforma archivos roff a PDF
 
-**roff2ps** Transforma archivos roff a archivos ps
+**roff2ps** - Transforma archivos roff a archivos ps
 
-**roff2text** Transforma archivos roff a archivos de texto
+**roff2text** - Transforma archivos roff a archivos de texto
 
-**roff2x** Transforma archivos roff a otros formatos
+**roff2x** - Transforma archivos roff a otros formatos
 
-**soelim** Lee archivos y reemplaza líneas del formato .so por el
+**soelim** - Lee archivos y reemplaza líneas del formato .so por el
 contenido del archivo mencionado
 
-**tbl** Compila descripciones de tablas incrustadas en archivos de
+**tbl** - Compila descripciones de tablas incrustadas en archivos de
 entrada troff en comandos que **troff** entiende
 
-**tfmtodit** Crea un archivo de fuentes para usar con **groff -Tdvi**
+**tfmtodit** - Crea un archivo de fuentes para usar con **groff -Tdvi**
 
-**troff** Es altamente compatible con **troff** de Unix; normalmente se
+**troff** - Es altamente compatible con **troff** de Unix; normalmente se
 debe invocar con el comando **groff**, que también ejecutará
 preprocesadores y posprocesadores en el orden y con las opciones
 adecuadas
@@ -13657,72 +13646,72 @@ and /boot/grub (when grub- install is first run)
 
 ### Descripciones breves
 
-**grub-bios-setup** Es un programa auxiliar para **grub-install**.
+**grub-bios-setup** - Es un programa auxiliar para **grub-install**.
 
-**grub-editenv** Es una herramienta para editar el bloque de
+**grub-editenv** - Es una herramienta para editar el bloque de
 entorno.
 
-**grub-file** Comprueba si el archivo dado es del tipo especificado.
+**grub-file** - Comprueba si el archivo dado es del tipo especificado.
 
-**grub-fstest** Es una herramienta para depurar el controlador del
+**grub-fstest** - Es una herramienta para depurar el controlador del
 sistema de archivos.
 
-**grub-glue-efi** Une binarios de 32 y 64 bits en un solo archivo (para
+**grub-glue-efi** - Une binarios de 32 y 64 bits en un solo archivo (para
 equipos Apple).
 
-**grub-install** Instala GRUB en la unidad.
+**grub-install** - Instala GRUB en la unidad.
 
-**grub-kbdcomp** Es un script que convierte una distribución xkb en una
+**grub-kbdcomp** - Es un script que convierte una distribución xkb en una
 reconocida por GRUB.
 
-**grub-macbless** Es el bless de estilo Mac para sistemas de archivos
+**grub-macbless** - Es el bless de estilo Mac para sistemas de archivos
 HFS o HFS+ (**bless** es exclusivo de los equipos Apple; permite que un
 dispositivo sea arrancable).
 
-**grub-menulst2cfg** Convierte un GRUB Legacy menu.lst en un grub.cfg
+**grub-menulst2cfg** - Convierte un GRUB Legacy menu.lst en un grub.cfg
 para su uso con GRUB 2.
 
-**grub-mkconfig** Genera un archivo grub.cfg.
+**grub-mkconfig** - Genera un archivo grub.cfg.
 
-**grub-mkimage** Crea una imagen de arranque de GRUB.
+**grub-mkimage** - Crea una imagen de arranque de GRUB.
 
-**grub-mklayout** Genera un archivo de distribución de teclado de
+**grub-mklayout** - Genera un archivo de distribución de teclado de
 GRUB.
 
-**grub-mknetdir** Prepara un directorio de arranque de red de GRUB.
+**grub-mknetdir** - Prepara un directorio de arranque de red de GRUB.
 
-**grub-mkpasswd-pbkdf2** Genera una contraseña PBKDF2 cifrada para su
+**grub-mkpasswd-pbkdf2** - Genera una contraseña PBKDF2 cifrada para su
 uso en el menú de arranque.
 
-**grub-mkrelpath** Convierte una ruta del sistema en una ruta relativa a
+**grub-mkrelpath** - Convierte una ruta del sistema en una ruta relativa a
 su directorio raíz.
 
-**grub-mkrescue** Crea una imagen de arranque de GRUB adecuada para un
+**grub-mkrescue** - Crea una imagen de arranque de GRUB adecuada para un
 disquete, CDROM/DVD o una unidad USB.
 
-**grub-mkstandalone** Genera una imagen independiente.
+**grub-mkstandalone** - Genera una imagen independiente.
 
-**grub-ofpathname** Es un programa auxiliar que imprime la ruta de un
+**grub-ofpathname** - Es un programa auxiliar que imprime la ruta de un
 dispositivo GRUB.
 
-**grub-probe** Sondea la información del dispositivo para una ruta o
+**grub-probe** - Sondea la información del dispositivo para una ruta o
 dispositivo determinado.
 
-**grub-reboot** Establece la entrada de arranque predeterminada de GRUB
+**grub-reboot** - Establece la entrada de arranque predeterminada de GRUB
 solo para el siguiente arranque.
 
-**grub-render-label** Representa el archivo .disk_label de Apple para
+**grub-render-label** - Representa el archivo .disk_label de Apple para
 Macs.
 
-**grub-script-check** Comprueba el script de configuración de GRUB en
+**grub-script-check** - Comprueba el script de configuración de GRUB en
 busca de errores de sintaxis.
 
-**grub-set-default** Establece la entrada de arranque predeterminada de
+**grub-set-default** - Establece la entrada de arranque predeterminada de
 GRUB.
 
-**grub-sparc64-setup** Es un programa auxiliar para grub-setup.****
+**grub-sparc64-setup** - Es un programa auxiliar para grub-setup.****
 
-**grub-syslinux2cfg** Transforma un archivo de configuración de syslinux
+**grub-syslinux2cfg** - Transforma un archivo de configuración de syslinux
 al formato grub.cfg.
 
 ---
@@ -13778,38 +13767,38 @@ zmore y znew
 
 ### Descripciones breves
 
-**gunzip** Descomprime archivos comprimidos
+**gunzip** - Descomprime archivos comprimidos
 
-**gzexe** Crea archivos ejecutables autodescomprimibles
+**gzexe** - Crea archivos ejecutables autodescomprimibles
 
-**gzip** Comprime los archivos proporcionados mediante codificación
+**gzip** - Comprime los archivos proporcionados mediante codificación
 Lempel-Ziv (LZ77
 
-**uncompress** Descomprime archivos comprimidos
+**uncompress** - Descomprime archivos comprimidos
 
-**zcat** Descomprime los archivos comprimidos a la salida estándar
+**zcat** - Descomprime los archivos comprimidos a la salida estándar
 
-**zcmp** Ejecuta **cmp** en archivos comprimidos
+**zcmp** - Ejecuta **cmp** en archivos comprimidos
 
-**zdiff** Ejecuta **diff** en archivos comprimidos
+**zdiff** - Ejecuta **diff** en archivos comprimidos
 
-**zegrep** Ejecuta **egrep** en archivos comprimidos
+**zegrep** - Ejecuta **egrep** en archivos comprimidos
 
-**zfgrep** Ejecuta **fgrep** en archivos comprimidos
+**zfgrep** - Ejecuta **fgrep** en archivos comprimidos
 
-**zforce** Fuerza la extensión **.gz** en todos los archivos
+**zforce** - Fuerza la extensión **.gz** en todos los archivos
 comprimidos con **gzip**, para que gzip no los vuelva a comprimir; esto
 puede ser útil cuando los nombres de archivo se truncaron durante una
 transferencia.
 
-**zgrep** Ejecuta **grep** en archivos comprimidos con gzip.
+**zgrep** - Ejecuta **grep** en archivos comprimidos con gzip.
 
-**zless** Se ejecuta **less** en archivos comprimidos con gzip.
+**zless** - Se ejecuta **less** en archivos comprimidos con gzip.
 
-**zmore** Se ejecuta **more** en archivos comprimidos con gzip.
+**zmore** - Se ejecuta **more** en archivos comprimidos con gzip.
 
-**znew** **Recomprime** archivos del formato comprimido al formato
-**gzip** (de .****z**** a .gz).
+**znew** - **Recomprime** archivos del formato comprimido al formato
+**gzip** (de .*z* a .gz).
 
 ---
 &nbsp;
@@ -14003,73 +13992,73 @@ unicode_start y unicode_stop
 
 ### Descripciones breves
 
-**chvt** Cambia la terminal virtual en primer plano
+**chvt** - Cambia la terminal virtual en primer plano
 
-**deallocvt** Desasigna las terminales virtuales no utilizadas
+**deallocvt** - Desasigna las terminales virtuales no utilizadas
 
-**dumpkeys** Voltea las tablas de traducción del teclado
+**dumpkeys** - Voltea las tablas de traducción del teclado
 
-**fgconsole** Imprime el número de la terminal virtual activa
+**fgconsole** - Imprime el número de la terminal virtual activa
 
-**getkeycodes** Imprime la tabla de mapeo de código de escaneo a código
+**getkeycodes** - Imprime la tabla de mapeo de código de escaneo a código
 de tecla del kernel
 
-**kbdinfo** Obtiene información sobre el estado de una consola
+**kbdinfo** - Obtiene información sobre el estado de una consola
 
-**kbd_mode** Informa o establece el modo del teclado
+**kbd_mode** - Informa o establece el modo del teclado
 
-**kbdrate** Establece las tasas de repetición y retardo del teclado
+**kbdrate** - Establece las tasas de repetición y retardo del teclado
 
-**loadkeys** Carga las tablas de traducción del teclado
+**loadkeys** - Carga las tablas de traducción del teclado
 
-**loadunimap** Carga la tabla de mapeo de Unicode a fuente del
+**loadunimap** - Carga la tabla de mapeo de Unicode a fuente del
 kernel
 
-**mapscrn** Un programa obsoleto solía cargar una tabla de mapeo de
+**mapscrn** - Un programa obsoleto solía cargar una tabla de mapeo de
 caracteres de salida definida por el usuario en el controlador de la
 consola; esto ahora lo realiza **setfont**
 
-**openvt** Inicia un programa en una nueva terminal virtual (VT
+**openvt** - Inicia un programa en una nueva terminal virtual (VT
 
-**psfaddtable** Agrega una tabla de caracteres Unicode a una fuente de
+**psfaddtable** - Agrega una tabla de caracteres Unicode a una fuente de
 consola
 
-**psfgettable** Extrae la tabla de caracteres Unicode incrustada de una
+**psfgettable** - Extrae la tabla de caracteres Unicode incrustada de una
 fuente de consola
 
-**psfstriptable** Elimina la tabla de caracteres Unicode incrustada de
+**psfstriptable** - Elimina la tabla de caracteres Unicode incrustada de
 una fuente de consola
 
-**psfxtable** Administra las tablas de caracteres Unicode para fuentes
+**psfxtable** - Administra las tablas de caracteres Unicode para fuentes
 de consola
 
-**setfont** Modifica las fuentes Enhanced Graphic Adapter (EGA) y Video
+**setfont** - Modifica las fuentes Enhanced Graphic Adapter (EGA) y Video
 Graphics Array (VGA) en la consola
 
-**setkeycodes** Carga las entradas de la tabla de mapeo de código de
+**setkeycodes** - Carga las entradas de la tabla de mapeo de código de
 escaneo a código de tecla del kernel. Esto es útil si hay teclas
 inusuales en el teclado
 
-**setleds** Establece las banderas del teclado y los diodos emisores de
+**setleds** - Establece las banderas del teclado y los diodos emisores de
 luz (LED)
 
-**setmetamode** Define el manejo de metateclas del teclado
+**setmetamode** - Define el manejo de metateclas del teclado
 
-**setvtrgb** Establece el mapa de colores de la consola en todas las
+**setvtrgb** - Establece el mapa de colores de la consola en todas las
 terminales virtuales
 
-**showconsolefont** Muestra la fuente actual de la pantalla de la
+**showconsolefont** - Muestra la fuente actual de la pantalla de la
 consola EGA/VGA
 
-**showkey** Informa los códigos de escaneo, los códigos de tecla y los
+**showkey** - Informa los códigos de escaneo, los códigos de tecla y los
 códigos ASCII de las teclas pulsadas
 
-**unicode_start** Pone el teclado y la consola en modo UNICODE. \[No
+**unicode_start** - Pone el teclado y la consola en modo UNICODE. \[No
 utilice este programa a menos que su archivo de mapa de teclas tenga la
 codificación ISO-8859-1. Para otras codificaciones, esta utilidad
 produce resultados incorrectos\]
 
-**unicode_stop** Revierte el teclado y la consola del modo UNICODE
+**unicode_stop** - Revierte el teclado y la consola del modo UNICODE
 
 ---
 &nbsp;
@@ -14122,7 +14111,7 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-*libpipeline* Esta biblioteca se utiliza para construir
+*libpipeline* - Esta biblioteca se utiliza para construir
 pipelines entre subprocesos de forma segura
 
 ---
@@ -14176,7 +14165,7 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**make** Determina automáticamente qué partes de un paquete deben
+**make** - Determina automáticamente qué partes de un paquete deben
 (re)compilarse y luego ejecuta los comandos correspondientes.
 
 ---
@@ -14231,7 +14220,7 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**patch** Modifica los archivos según un archivo de parche (un archivo
+**patch** - Modifica los archivos según un archivo de parche (un archivo
 de parche suele ser una lista de diferencias creada con el programa
 **diff**. Al aplicar estas diferencias a los archivos originales,
 **patch** crea las versiones parcheadas).
@@ -14307,7 +14296,7 @@ Instalar el paquete:
 
 ### Descripciones breves
 
-**tar** Crea, extrae archivos y lista su contenido en archivos
+**tar** - Crea, extrae archivos y lista su contenido en archivos
 comprimidos, también conocidos como tarballs.
 
 ---
@@ -14396,34 +14385,34 @@ texindex
 
 &nbsp;
 
-### Descripciones breves
+###  -
 
 **info** Se utiliza para leer páginas de información similares a las
 páginas de manual, pero que a menudo profundizan mucho más que
 simplemente explicar todas las opciones disponibles de la línea de
 comandos \[Por ejemplo, compare **man bison** e **info bison**\].
 
-**install-info** Se utiliza para instalar páginas de información;
+**install-info** - Se utiliza para instalar páginas de información;
 actualiza las entradas en el archivo de índice de **información**.
 
-**makeinfo** Traduce los documentos fuente de Texinfo a páginas de
+**makeinfo** - Traduce los documentos fuente de Texinfo a páginas de
 información, texto plano o HTML.
 
-**pdftexi2dvi** Se utiliza para formatear el documento de Texinfo a un
+**pdftexi2dvi** - Se utiliza para formatear el documento de Texinfo a un
 archivo PDF (Portable Document Format).
 
-**pod2texi** Convierte Pod a formato Texinfo.
+**pod2texi** - Convierte Pod a formato Texinfo.
 
-**texi2any** Traduce la documentación fuente de Texinfo a otros
+**texi2any** - Traduce la documentación fuente de Texinfo a otros
 formatos.
 
-**texi2dvi** Se utiliza para formatear el documento Texinfo en un
+**texi2dvi** - Se utiliza para formatear el documento Texinfo en un
 archivo independiente del dispositivo que se pueda imprimir.
 
-**texi2pdf** Se utiliza para formatear el documento Texinfo en un
+**texi2pdf** - Se utiliza para formatear el documento Texinfo en un
 archivo PDF ( Portable Document Format).
 
-**texindex** Se utiliza para ordenar los archivos de índice de
+**texindex** - Se utiliza para ordenar los archivos de índice de
 Texinfo.
 
 ---
@@ -14609,26 +14598,26 @@ el siguiente comando:
 
 ### Descripciones breves
 
-**ex** Inicia **vim** en modo ex
+**ex** - Inicia **vim** en modo ex
 
-**rview** Es una versión restringida de **view**; no se pueden iniciar
+**rview** - Es una versión restringida de **view**; no se pueden iniciar
 comandos de shell ni suspender **view**.
 
-**rvim** Es una versión restringida de **vim**; No se pueden iniciar
+**rvim** - Es una versión restringida de **vim**; No se pueden iniciar
 comandos de shell y **vim** no se puede suspender.
 
-**vi** Enlace a **vim**
+**vi** - Enlace a **vim**
 
-**view** Inicia **vim** en modo de solo lectura.
+**view** - Inicia **vim** en modo de solo lectura.
 
-**vim** Es el editor.
+**vim** - Es el editor.
 
-**vimdiff** Edita dos o tres versiones de un archivo con **vim**
+**vimdiff** - Edita dos o tres versiones de un archivo con **vim**
 y muestra las diferencias.
 
-**vimtutor** Enseña las teclas y comandos básicos de **vim**.
+**vimtutor** - Enseña las teclas y comandos básicos de **vim**.
 
-**xxd** Crea un volcado hexadecimal del archivo dado; también puede
+**xxd** - Crea un volcado hexadecimal del archivo dado; también puede
 realizar la operación inversa, por lo que puede usarse para parches
 binarios.
 
@@ -14897,21 +14886,21 @@ información del hardware.
 
 ### Descripciones breves
 
-**udevadm** Herramienta genérica de administración de udev: controla el
+**udevadm** - Herramienta genérica de administración de udev: controla el
 demonio udevd, proporciona información de la base de datos de Udev,
 supervisa los eventos UE, espera a que finalicen, prueba la
 configuración de Udev y los activa para un dispositivo determinado.
 
-**udevd** Un demonio que detecta los eventos UE en el socket Netlink,
+**udevd** - Un demonio que detecta los eventos UE en el socket Netlink,
 crea dispositivos y ejecuta los programas externos configurados en
 respuesta a estos eventos UE.
 
-**udev-hwdb** Actualiza o consulta la base de datos de hardware.
+**udev-hwdb** - Actualiza o consulta la base de datos de hardware.
 
-*libudev* Una interfaz de biblioteca para la información de
+*libudev* - Una interfaz de biblioteca para la información de
 dispositivos udev**
 
-*/etc/udev* Contiene archivos de configuración de Udev, permisos
+*/etc/udev* - Contiene archivos de configuración de Udev, permisos
 de dispositivos y reglas para la nomenclatura de dispositivos.
 
 ---
@@ -15049,34 +15038,34 @@ lexgrog, man, man-recode, mandb, manpath y whatis
 
 ### Descripciones breves
 
-**accessdb** Vuelca el contenido de la base de datos **whatis** en
+**accessdb** - Vuelca el contenido de la base de datos **whatis** en
 formato legible.
 
-**apropos** Busca en la base de datos **whatis** y muestra descripciones
+**apropos** - Busca en la base de datos **whatis** y muestra descripciones
 breves de los comandos del sistema que contienen una cadena dada.
 
-**catman** Crea o actualiza las páginas de manual preformateadas.
+**catman** - Crea o actualiza las páginas de manual preformateadas.
 
-**lexgrog** Muestra información resumida de una línea sobre una página
+**lexgrog** - Muestra información resumida de una línea sobre una página
 de manual dada.
 
-**man** Formatea y muestra la página de manual solicitada.
+**man** - Formatea y muestra la página de manual solicitada.
 
-**man-recode** Convierte las páginas de manual a otra codificación.
+**man-recode** - Convierte las páginas de manual a otra codificación.
 
-**mandb** Crea o actualiza la base de datos **whatis**.
+**mandb** - Crea o actualiza la base de datos **whatis**.
 
-**manpath** Muestra el contenido de \$MANPATH o (si \$MANPATH no está
+**manpath** - Muestra el contenido de \$MANPATH o (si \$MANPATH no está
 configurado) una ruta de búsqueda adecuada según la configuración de
 man.conf y el entorno del usuario.
 
-**whatis** Busca en la base de datos **whatis** y muestra descripciones
+**whatis** - Busca en la base de datos **whatis** y muestra descripciones
 breves de los comandos del sistema que contienen la palabra clave dada
 como una palabra separada.
 
-*libman* Contiene soporte en tiempo de ejecución para **man**.
+*libman* - Contiene soporte en tiempo de ejecución para **man**.
 
-*libmandb* Contiene soporte en tiempo de ejecución para **man**.
+*libmandb* - Contiene soporte en tiempo de ejecución para **man**.
 
 ---
 &nbsp;
@@ -15154,47 +15143,47 @@ slabtop, sysctl, tload, top, uptime, vmstat, w y watch
 
 ### Descripciones breves
 
-**free** Informa sobre la cantidad de memoria libre y usada (física
+**free** - Informa sobre la cantidad de memoria libre y usada (física
 y de intercambio) en el sistema.
 
-**pgrep** Busca procesos según su nombre y otros atributos.
+**pgrep** - Busca procesos según su nombre y otros atributos.
 
-**pidof** Informa sobre los PID de los programas.
+**pidof** - Informa sobre los PID de los programas.
 
-**pkill** Señaliza los procesos según su nombre y otros atributos.
+**pkill** - Señaliza los procesos según su nombre y otros atributos.
 
-**pmap** Informa sobre el mapa de memoria del proceso.
+**pmap** - Informa sobre el mapa de memoria del proceso.
 
-**ps** Enumera los procesos en ejecución.
+**ps** - Enumera los procesos en ejecución.
 
-**pwdx** Informa del directorio de trabajo actual de un proceso.
+**pwdx** - Informa del directorio de trabajo actual de un proceso.
 
-**slabtop** Muestra información detallada de la caché slab del núcleo en
+**slabtop** - Muestra información detallada de la caché slab del núcleo en
 tiempo real.
 
-**sysctl** Modifica los parámetros del núcleo en tiempo de ejecución.
+**sysctl** - Modifica los parámetros del núcleo en tiempo de ejecución.
 
-**tload** Imprime un gráfico del promedio de carga actual del
+**tload** - Imprime un gráfico del promedio de carga actual del
 sistema.
 
-**top** Muestra una lista de los procesos con mayor uso de la CPU;
+**top** - Muestra una lista de los procesos con mayor uso de la CPU;
 proporciona una visión continua de la actividad del procesador en tiempo
 real.
 
-**uptime** Informa del tiempo de ejecución del sistema, la cantidad de
+**uptime** - Informa del tiempo de ejecución del sistema, la cantidad de
 usuarios conectados y los promedios de carga del sistema****
 
-**vmstat** Informa de las estadísticas de memoria virtual, con
+**vmstat** - Informa de las estadísticas de memoria virtual, con
 información sobre procesos, memoria, paginación, entrada/salida (E/S) de
 bloques, traps y actividad de la CPU.
 
-**w** Muestra qué usuarios han iniciado sesión, dónde y desde cuándo.
+**w** - Muestra qué usuarios han iniciado sesión, dónde y desde cuándo.
 
-**watch** Ejecuta un comando repetidamente, mostrando la primera
+**watch** - Ejecuta un comando repetidamente, mostrando la primera
 pantalla completa de su salida; esto permite al usuario observar cómo
 cambia la salida a lo largo del tiempo.
 
-*libproc-2* Contiene las funciones utilizadas por la mayoría de
+*libproc-2* - Contiene las funciones utilizadas por la mayoría de
 los programas de este paquete.
 
 ---
@@ -15317,307 +15306,307 @@ y libuuid.so
 
 ### Descripciones breves
 
-**addpart** Informa al kernel de Linux sobre nuevas particiones.
+**addpart** - Informa al kernel de Linux sobre nuevas particiones.
 
-**agetty** Abre un puerto TTY, solicita un nombre de usuario y luego
+**agetty** - Abre un puerto TTY, solicita un nombre de usuario y luego
 invoca el programa de inicio de sesión.
 
-**blkdiscard** Descarta sectores en un dispositivo.
+**blkdiscard** - Descarta sectores en un dispositivo.
 
-**blkid** Una utilidad de línea de comandos para localizar e imprimir
+**blkid** - Una utilidad de línea de comandos para localizar e imprimir
 atributos de dispositivos de bloque.
 
-**blkzone** Se utiliza para administrar dispositivos de bloque de
+**blkzone** - Se utiliza para administrar dispositivos de bloque de
 almacenamiento por zonas.
 
-**blockdev** Permite a los usuarios llamar a las IOCTL de dispositivos
+**blockdev** - Permite a los usuarios llamar a las IOCTL de dispositivos
 de bloque desde la línea de comandos.
 
-**cal** Muestra un calendario simple.
+**cal** - Muestra un calendario simple.
 
-**cfdisk** Manipula la tabla de particiones del dispositivo dado.
+**cfdisk** - Manipula la tabla de particiones del dispositivo dado.
 
-**chcpu** Modifica el estado de las CPU.
+**chcpu** - Modifica el estado de las CPU.
 
-**chmem** Configura la memoria.
+**chmem** - Configura la memoria.
 
-**choom** Muestra y ajusta las puntuaciones de OOM-killer, que se
+**choom** - Muestra y ajusta las puntuaciones de OOM-killer, que se
 utilizan para determinar qué proceso eliminar primero cuando Linux se
 queda sin memoria.
 
-**chrt** Manipula los atributos en tiempo real de un proceso.
+**chrt** - Manipula los atributos en tiempo real de un proceso.
 
-**col** Filtra los avances de línea inversos.
+**col** - Filtra los avances de línea inversos.
 
-**colcrt** Filtra la salida nroff para terminales que carecen de algunas
+**colcrt** - Filtra la salida nroff para terminales que carecen de algunas
 capacidades, como la sobrescritura y las medias líneas.
 
-**colrm** Filtra los datos dados. columnas.
+**colrm** - Filtra los datos dados. columnas.
 
-**column** Formatea un archivo dado en varias columnas.
+**column** - Formatea un archivo dado en varias columnas.
 
-**ctrlaltsupr** Establece la función de la combinación de teclas
+**ctrlaltsupr** - Establece la función de la combinación de teclas
 Ctrl+Alt+Supr como restablecimiento completo o parcial.
 
-**delpart** Solicita al kernel de Linux que elimine una partición.
+**delpart** - Solicita al kernel de Linux que elimine una partición.
 
-**dmesg** Vuelca los mensajes de arranque del kernel.
+**dmesg** - Vuelca los mensajes de arranque del kernel.
 
-**eject** Expulsa los medios extraíbles.
+**eject** - Expulsa los medios extraíbles.
 
-**fallocate** Preasigna espacio a un archivo.
+**fallocate** - Preasigna espacio a un archivo.
 
-**fdisk** Manipula la tabla de particiones del dispositivo dado.
+**fdisk** - Manipula la tabla de particiones del dispositivo dado.
 
-**fincore** Cuenta las páginas de contenido de archivo en el núcleo.****
+**fincore** - Cuenta las páginas de contenido de archivo en el núcleo.****
 
-**findfs** Encuentra un sistema de archivos, ya sea por etiqueta o por
+**findfs** - Encuentra un sistema de archivos, ya sea por etiqueta o por
 Identificador Único Universal (UUID).
 
-**findmnt** Es una interfaz de línea de comandos para la biblioteca
+**findmnt** - Es una interfaz de línea de comandos para la biblioteca
 libmount para trabajar con archivos mountinfo, fstab y mtab.
 
-**flock** Adquiere un bloqueo de archivo y luego ejecuta un comando con
+**flock** - Adquiere un bloqueo de archivo y luego ejecuta un comando con
 el bloqueo activado.
 
-**fsck** Se utiliza para verificar y, opcionalmente, reparar sistemas de
+**fsck** - Se utiliza para verificar y, opcionalmente, reparar sistemas de
 archivos.
 
-**fsck.cramfs** Realiza una comprobación de consistencia en el sistema
+**fsck.cramfs** - Realiza una comprobación de consistencia en el sistema
 de archivos Cramfs del dispositivo dado.
 
-**fsck.minix** Realiza una comprobación de consistencia en el sistema de
+**fsck.minix** - Realiza una comprobación de consistencia en el sistema de
 archivos Minix del dispositivo dado.
 
-**fsfreeze** Es una envoltura muy simple para las operaciones del
+**fsfreeze** - Es una envoltura muy simple para las operaciones del
 controlador de kernel ioctl FIFREEZE/FITHAW.
 
-**fstrim** Descarta los bloques no utilizados en un sistema de archivos
+**fstrim** - Descarta los bloques no utilizados en un sistema de archivos
 montado.
 
-**getopt** Analiza las opciones en la línea de comandos dada.
+**getopt** - Analiza las opciones en la línea de comandos dada.
 
-**hardlink** Consolida archivos duplicados mediante la creación de
+**hardlink** - Consolida archivos duplicados mediante la creación de
 enlaces físicos.
 
-**hexdump** Vuelca el archivo dado en hexadecimal, decimal, octal o
+**hexdump** - Vuelca el archivo dado en hexadecimal, decimal, octal o
 ascii.
 
-**hwclock** Lee o configura el reloj de hardware del sistema, también
+**hwclock** - Lee o configura el reloj de hardware del sistema, también
 llamado reloj de tiempo real (RTC) o reloj del sistema básico de entrada
 y salida (BIOS.
 
-**I386** Un enlace simbólico a setarch.
+**I386** - Un enlace simbólico a setarch.
 
-**ionice** Obtiene o establece la clase de programación de E/S y la
+**ionice** - Obtiene o establece la clase de programación de E/S y la
 prioridad de un programa.
 
-**ipcmk** Crea varios recursos IPC.
+**ipcmk** - Crea varios recursos IPC.
 
-**ipcrm** Elimina el recurso de Comunicación entre Procesos (IPC)
+**ipcrm** - Elimina el recurso de Comunicación entre Procesos (IPC)
 especificado.
 
-**ipcs** Proporciona información del estado de IPC.
+**ipcs** - Proporciona información del estado de IPC.
 
-**irqtop** Muestra la información del contador de interrupciones del
+**irqtop** - Muestra la información del contador de interrupciones del
 núcleo en la vista superior (1).
 
-**isosize** Informa del tamaño de un sistema de archivos ISO9660.
+**isosize** - Informa del tamaño de un sistema de archivos ISO9660.
 
-**kill** Envía señales a los procesos.
+**kill** - Envía señales a los procesos.
 
-**last** Muestra qué usuarios iniciaron (y cerraron) la última vez,
+**last** - Muestra qué usuarios iniciaron (y cerraron) la última vez,
 buscando en el archivo /var/log/wtmp. También muestra los arranques,
 apagados y cambios en el nivel de ejecución del sistema.
 
-**lastb** Muestra los intentos fallidos de inicio de sesión, tal como se
+**lastb** - Muestra los intentos fallidos de inicio de sesión, tal como se
 iniciaron en /var/log/btmp.
 
-**ldattach** Añade una disciplina de línea a una línea serie.
+**ldattach** - Añade una disciplina de línea a una línea serie.
 
-**linux32** Un enlace simbólico a setarch.
+**linux32** - Un enlace simbólico a setarch.
 
-**linux64** Un enlace simbólico a setarch.
+**linux64** - Un enlace simbólico a setarch.
 
-**logger** Introduce el mensaje especificado en el registro del
+**logger** - Introduce el mensaje especificado en el registro del
 sistema.
 
-**look** Muestra las líneas que comienzan con la cadena
+**look** - Muestra las líneas que comienzan con la cadena
 especificada.
 
-**losetup** Configura y controla dispositivos de bucle.
+**losetup** - Configura y controla dispositivos de bucle.
 
-**lsblk** Muestra información sobre todos los dispositivos de bloque o
+**lsblk** - Muestra información sobre todos los dispositivos de bloque o
 algunos seleccionados en un formato de árbol.
 
-**lscpu** Imprime información de la arquitectura de la CPU.
+**lscpu** - Imprime información de la arquitectura de la CPU.
 
-**lsfd** Muestra información sobre los archivos abiertos; reemplaza a
+**lsfd** - Muestra información sobre los archivos abiertos; reemplaza a
 lsof.
 
-**lsipc** Imprime información sobre las funciones IPC actualmente
+**lsipc** - Imprime información sobre las funciones IPC actualmente
 empleadas en el sistema.
 
-**lsirq** Muestra información del contador de interrupciones del
+**lsirq** - Muestra información del contador de interrupciones del
 núcleo.
 
-**lslocks** Enumera los bloqueos del sistema local.
+**lslocks** - Enumera los bloqueos del sistema local.
 
-**lslogins** Enumera información sobre usuarios, grupos y cuentas del
+**lslogins** - Enumera información sobre usuarios, grupos y cuentas del
 sistema.
 
-**lsmem** Enumera los rangos de memoria disponible con su estado en
+**lsmem** - Enumera los rangos de memoria disponible con su estado en
 línea.
 
-**lsns** Enumera los espacios de nombres.
+**lsns** - Enumera los espacios de nombres.
 
-**mcookie** Genera cookies mágicas (números hexadecimales aleatorios de
+**mcookie** - Genera cookies mágicas (números hexadecimales aleatorios de
 128 bits) para xauth.
 
-**mesg** Controla si otros usuarios pueden enviar mensajes al terminal
+**mesg** - Controla si otros usuarios pueden enviar mensajes al terminal
 del usuario actual.
 
-**mkfs** Construye un sistema de archivos en un dispositivo (normalmente
+**mkfs** - Construye un sistema de archivos en un dispositivo (normalmente
 una partición del disco duro).
 
-**mkfs.bfs** Crea un sistema de archivos bfs de Santa Cruz Operations
+**mkfs.bfs** - Crea un sistema de archivos bfs de Santa Cruz Operations
 (SCO).
 
-**mkfs.cramfs** Crea un sistema de archivos cramfs.
+**mkfs.cramfs** - Crea un sistema de archivos cramfs.
 
-**mkfs.minix** Crea un sistema de archivos Minix.
+**mkfs.minix** - Crea un sistema de archivos Minix.
 
-**mkswap** Inicializa el dispositivo o archivo dado para usarlo como
+**mkswap** - Inicializa el dispositivo o archivo dado para usarlo como
 área de intercambio.
 
-**more** Un filtro para navegar por el texto pantalla por pantalla.
+**more** - Un filtro para navegar por el texto pantalla por pantalla.
 
-**mount** Conecta el sistema de archivos del dispositivo dado a un
+**mount** - Conecta el sistema de archivos del dispositivo dado a un
 directorio específico en el árbol del sistema de archivos.
 
-**mountpoint** Comprueba si el directorio es un punto de montaje.
+**mountpoint** - Comprueba si el directorio es un punto de montaje.
 
-**namei** Muestra los enlaces simbólicos en las rutas dadas.
+**namei** - Muestra los enlaces simbólicos en las rutas dadas.
 
-**nsenter** Ejecuta un programa con los espacios de nombres de otros
+**nsenter** - Ejecuta un programa con los espacios de nombres de otros
 procesos.
 
-**partx** Informa al núcleo sobre la presencia y numeración de las
+**partx** - Informa al núcleo sobre la presencia y numeración de las
 particiones en disco.
 
-**pivot_root** Convierte el sistema de archivos dado en el nuevo sistema
+**pivot_root** - Convierte el sistema de archivos dado en el nuevo sistema
 de archivos raíz del proceso actual.
 
-**prlimit** Obtiene y establece los límites de recursos de un
+**prlimit** - Obtiene y establece los límites de recursos de un
 proceso.
 
-**readprofile** Lee la información de perfil del núcleo.
+**readprofile** - Lee la información de perfil del núcleo.
 
-**rename** Renombra los archivos dados, reemplazando una cadena dada por
+**rename** - Renombra los archivos dados, reemplazando una cadena dada por
 otra.
 
-**renice** Modifica la prioridad de los procesos en ejecución.
+**renice** - Modifica la prioridad de los procesos en ejecución.
 
-**resizepart** Solicita al núcleo de Linux que redimensione una
+**resizepart** - Solicita al núcleo de Linux que redimensione una
 partición.
 
-**rev** Invierte las líneas de un archivo dado.
+**rev** - Invierte las líneas de un archivo dado.
 
-**rfkill** Herramienta para habilitar y deshabilitar dispositivos
+**rfkill** - Herramienta para habilitar y deshabilitar dispositivos
 inalámbricos.
 
-**rtcwake** Se utiliza para entrar en un estado de suspensión del
+**rtcwake** - Se utiliza para entrar en un estado de suspensión del
 sistema hasta la hora de activación especificada.
 
-**script** Crea un script de una sesión de terminal.
+**script** - Crea un script de una sesión de terminal.
 
-**scriptlive** Reejecuta scripts de sesión usando información de
+**scriptlive** - Reejecuta scripts de sesión usando información de
 tiempo.
 
-**scriptreplay** Reproduce scripts de sesión usando información de
+**scriptreplay** - Reproduce scripts de sesión usando información de
 tiempo.
 
-**setarch** Cambia la arquitectura reportada en un nuevo entorno de
+**setarch** - Cambia la arquitectura reportada en un nuevo entorno de
 programa y establece indicadores de personalidad.
 
-**setsid** Ejecuta el programa dado en una nueva sesión.
+**setsid** - Ejecuta el programa dado en una nueva sesión.
 
-**setterm** Establece los atributos de la terminal.
+**setterm** - Establece los atributos de la terminal.
 
-**sfdisk** Un manipulador de la tabla de particiones de disco.
+**sfdisk** - Un manipulador de la tabla de particiones de disco.
 
-**sulogin** Permite al usuario root iniciar sesión; normalmente lo
+**sulogin** - Permite al usuario root iniciar sesión; normalmente lo
 invoca init cuando el sistema entra en modo monousuario.
 
-**swaplabel** Realiza cambios en el UUID y la etiqueta del área de
+**swaplabel** - Realiza cambios en el UUID y la etiqueta del área de
 intercambio.
 
-**swapoff** Desactiva la paginación y el intercambio de dispositivos y
+**swapoff** - Desactiva la paginación y el intercambio de dispositivos y
 archivos.
 
-**swapon** Habilita la paginación y el intercambio de dispositivos y
+**swapon** - Habilita la paginación y el intercambio de dispositivos y
 archivos, y lista los dispositivos y archivos actualmente en uso.
 
-**switch_root** Cambia a otro sistema de archivos como raíz del árbol de
+**switch_root** - Cambia a otro sistema de archivos como raíz del árbol de
 montaje.
 
-**taskset** Recupera o establece la afinidad de CPU de un proceso.
+**taskset** - Recupera o establece la afinidad de CPU de un proceso.
 
-**uclampset** Manipula los atributos de restricción de utilización del
+**uclampset** - Manipula los atributos de restricción de utilización del
 sistema o de un proceso.
 
-**ul** Un filtro para traducir guiones bajos en secuencias de escape que
+**ul** - Un filtro para traducir guiones bajos en secuencias de escape que
 indican subrayado para la terminal en uso.
 
-**umount** Desconecta un sistema de archivos del árbol de archivos del
+**umount** - Desconecta un sistema de archivos del árbol de archivos del
 sistema.
 
-**uname26** Un enlace simbólico a setarch.
+**uname26** - Un enlace simbólico a setarch.
 
-**unshare** Ejecuta un programa con algunos espacios de nombres no
+**unshare** - Ejecuta un programa con algunos espacios de nombres no
 compartidos con el padre.
 
-**utmpdump** Muestra el contenido del archivo de inicio de sesión dado
+**utmpdump** - Muestra el contenido del archivo de inicio de sesión dado
 en un formato intuitivo.
 
-**uuidd** Un demonio utilizado por la biblioteca UUID para generar UUID
+**uuidd** - Un demonio utilizado por la biblioteca UUID para generar UUID
 basados en tiempo de forma segura y con garantía de unicidad.
 
-**uuidgen** Crea nuevos UUID. Cada nuevo UUID es un número aleatorio que
+**uuidgen** - Crea nuevos UUID. Cada nuevo UUID es un número aleatorio que
 probablemente sea único entre todos los UUID creados, tanto en el
 sistema local como en otros sistemas, en **** el pasado y en el futuro,
 con una probabilidad extremadamente alta (2 UUID son posibles).
 
-**uuidparse** Una utilidad para analizar identificadores únicos.
+**uuidparse** - Una utilidad para analizar identificadores únicos.
 
-**wall** Muestra el contenido de un archivo o, por defecto, su entrada
+**wall** - Muestra el contenido de un archivo o, por defecto, su entrada
 estándar, en las terminales de todos los usuarios conectados.
 
-**wdctl** Muestra el estado del sistema de vigilancia del hardware.
+**wdctl** - Muestra el estado del sistema de vigilancia del hardware.
 
-**whereis** Informa de la ubicación de los archivos binarios, fuente y
+**whereis** - Informa de la ubicación de los archivos binarios, fuente y
 de la página de manual del comando dado.****
 
-**wipefs** Borra la firma del sistema de archivos de un dispositivo.
+**wipefs** - Borra la firma del sistema de archivos de un dispositivo.
 
-**x86_64** Un enlace simbólico a setarch.
+**x86_64** - Un enlace simbólico a setarch.
 
-**zramctl** Un programa para configurar y controlar dispositivos zram
+**zramctl** - Un programa para configurar y controlar dispositivos zram
 (disco RAM comprimido).
 
-**libblkid** Contiene rutinas para la identificación de
+**libblkid** - Contiene rutinas para la identificación de
 dispositivos y la extracción de tokens.
 
-**libfdisk** Contiene rutinas para manipular tablas de
+**libfdisk** - Contiene rutinas para manipular tablas de
 particiones.
 
-**libmount** Contiene rutinas para el montaje y desmontaje de
+**libmount** - Contiene rutinas para el montaje y desmontaje de
 dispositivos de bloque.
 
-**libsmartcols** Contiene rutinas para facilitar la salida de
+**libsmartcols** - Contiene rutinas para facilitar la salida de
 pantalla en formato tabular.
 
-**libuuid** Contiene rutinas para generar identificadores únicos
+**libuuid** - Contiene rutinas para generar identificadores únicos
 para objetos accesibles más allá del sistema local.
 
 ---
@@ -15754,104 +15743,104 @@ y /usr/share/ss
 
 ### Descripciones breves
 
-**badblocks** Busca bloques defectuosos en un dispositivo (normalmente
+**badblocks** - Busca bloques defectuosos en un dispositivo (normalmente
 una partición de disco).
 
-**chattr** Cambia los atributos de los archivos en sistemas de archivos
+**chattr** - Cambia los atributos de los archivos en sistemas de archivos
 *ext{234}*.
 
-**compile_et** Un compilador de tablas de errores; convierte una tabla
+**compile_et** - Un compilador de tablas de errores; convierte una tabla
 de nombres y mensajes de códigos de error en un archivo fuente en C.
 Ideal para usar con la biblioteca *com_err*.
 
-**debugfs** Un depurador de sistemas de archivos. Se puede usar para
+**debugfs** - Un depurador de sistemas de archivos. Se puede usar para
 examinar y cambiar el estado de los sistemas de archivos
 *ext{234}*.
 
-**dumpe2fs** Imprime la información del superbloque y del grupo de
+**dumpe2fs** - Imprime la información del superbloque y del grupo de
 bloques del sistema de archivos presente en un dispositivo.
 
-**e2freefrag** Informa sobre la fragmentación del espacio libre.
+**e2freefrag** - Informa sobre la fragmentación del espacio libre.
 
-**e2fsck** Se usa para comprobar y, opcionalmente, reparar sistemas de
+**e2fsck** - Se usa para comprobar y, opcionalmente, reparar sistemas de
 archivos *ext{234}*.
 
-**e2image** Se usa para guardar datos críticos del sistema de archivos
+**e2image** - Se usa para guardar datos críticos del sistema de archivos
 *ext{234}* en un archivo.
 
-**e2label** Muestra o cambia la etiqueta del sistema de archivos
+**e2label** - Muestra o cambia la etiqueta del sistema de archivos
 *ext{234}* en un dispositivo.
 
-**e2mmpstatus** Comprueba el estado de MMP (Protección de Montaje
+**e2mmpstatus** - Comprueba el estado de MMP (Protección de Montaje
 Múltiple) de un sistema de archivos ext4.
 
-**e2scrub** Comprueba el contenido de un sistema de archivos
+**e2scrub** - Comprueba el contenido de un sistema de archivos
 *ext{234}* montado.
 
-**e2scrub_all** Comprueba si hay errores en todos los sistemas de
+**e2scrub_all** - Comprueba si hay errores en todos los sistemas de
 archivos *ext{234}* montados.
 
-**e2undo** Reproduce el registro de deshacer de un sistema de archivos
+**e2undo** - Reproduce el registro de deshacer de un sistema de archivos
 *ext{234}* encontrado en un dispositivo. \[Esto puede usarse
 para deshacer una operación fallida de un programa E2fsprogs.\].
 
-**e4crypt** Utilidad de cifrado del sistema de archivos *Ext4*.
+**e4crypt** - Utilidad de cifrado del sistema de archivos *Ext4*.
 
-**e4defrag** Desfragmentador en línea para sistemas de archivos
+**e4defrag** - Desfragmentador en línea para sistemas de archivos
 *Ext4*0
 
-**filefrag** Informa sobre el grado de fragmentación de un archivo en
+**filefrag** - Informa sobre el grado de fragmentación de un archivo en
 particular.
 
-**fsck.ext2** Por defecto, verifica los sistemas de archivos ext2 y es
+**fsck.ext2** - Por defecto, verifica los sistemas de archivos ext2 y es
 un enlace duro a **e2fsck**.
 
-**fsck.ext3** Por defecto, verifica los sistemas de archivos ext3 y es
+**fsck.ext3** - Por defecto, verifica los sistemas de archivos ext3 y es
 un enlace duro a **e2fsck**.
 
-**fsck.ext4** Por defecto, verifica los sistemas de archivos ext4 y es
+**fsck.ext4** - Por defecto, verifica los sistemas de archivos ext4 y es
 un enlace duro a **e2fsck**.
 
-**logsave** Guarda la salida de un comando en un archivo de
+**logsave** - Guarda la salida de un comando en un archivo de
 registro.
 
-**lsattr** Enumera los atributos de los archivos en un segundo sistema
+**lsattr** - Enumera los atributos de los archivos en un segundo sistema
 de archivos extendido.
 
-**mk_cmds** Convierte una tabla de nombres de comandos y mensajes de
+**mk_cmds** - Convierte una tabla de nombres de comandos y mensajes de
 ayuda en un archivo fuente en C compatible con la biblioteca del
 subsistema libss.
 
-**mke2fs** Crea un sistema de archivos ext{234} en el dispositivo
+**mke2fs** - Crea un sistema de archivos ext{234} en el dispositivo
 indicado.
 
-**mkfs.ext2** Por defecto, crea sistemas de archivos ext2 y es un enlace
+**mkfs.ext2** - Por defecto, crea sistemas de archivos ext2 y es un enlace
 duro a **mke2fs**.
 
-**mkfs.ext3** Por defecto, crea sistemas de archivos ext3 y es un enlace
+**mkfs.ext3** - Por defecto, crea sistemas de archivos ext3 y es un enlace
 duro a **mke2fs**.
 
-**mkfs.ext4** Por defecto, crea sistemas de archivos ext4 y es un enlace
+**mkfs.ext4** - Por defecto, crea sistemas de archivos ext4 y es un enlace
 duro a **mke2fs**.
 
-**mklost+found** Crea un directorio \"lost+found\" en un sistema de
+**mklost+found** - Crea un directorio \"lost+found\" en un sistema de
 archivos ext{234}. Preasigna bloques de disco a este directorio para
 simplificar la tarea de **e2fsck**.
 
-**resize2fs** Puede usarse para ampliar o reducir el tamaño de los
+**resize2fs** - Puede usarse para ampliar o reducir el tamaño de los
 sistemas de archivos *ext{234}*.
 
-**tune2fs** Ajusta los parámetros configurables del sistema de archivos
+**tune2fs** - Ajusta los parámetros configurables del sistema de archivos
 en sistemas de archivos *ext{234}*.
 
-*libcom_err* La rutina común de visualización de errores.
+*libcom_err* - La rutina común de visualización de errores.
 
-*libe2p* Usada por **dumpe2fs**, **chattr** y **lsattr**.
+*libe2p* - Usada por **dumpe2fs**, **chattr** y **lsattr**.
 
-*libext2fs* Contiene rutinas que permiten a los programas de
+*libext2fs* - Contiene rutinas que permiten a los programas de
 usuario manipular sistemas de archivos *ext{234}*.
 
-*libss* Usada por **debugfs**.
+*libss* - Usada por **debugfs**.
 
 ---
 &nbsp;
@@ -15931,7 +15920,7 @@ Cree un nuevo archivo */etc/syslog.conf* ejecutando lo siguiente:
 
 ### Descripciones breves
 
-**syslogd** Registra los mensajes que los programas del sistema ofrecen
+**syslogd** - Registra los mensajes que los programas del sistema ofrecen
 para su registro. \[Cada mensaje registrado contiene al menos una marca
 de fecha y un nombre de host, y normalmente también el nombre del
 programa, pero esto depende de la confianza que se le indique al demonio
@@ -15988,37 +15977,37 @@ telinit (enlace a init)
 
 ### Descripciones breves
 
-**bootlogd** Registra los mensajes de arranque en un archivo de
+**bootlogd** - Registra los mensajes de arranque en un archivo de
 registro.
 
-**fstab-decode** Ejecuta un comando con argumentos codificados en
+**fstab-decode** - Ejecuta un comando con argumentos codificados en
 fstab.
 
-**halt** Normalmente invoca el **shutdown** con la opción *-h*,
+**halt** - Normalmente invoca el **shutdown** con la opción *-h*,
 pero cuando ya está en el nivel de ejecución 0, le indica al núcleo que
 detenga el sistema; anota en el archivo */var/log/wtmp* que el
 sistema se está apagando.
 
-**init** El primer proceso que se inicia cuando el núcleo ha
+**init** - El primer proceso que se inicia cuando el núcleo ha
 inicializado el hardware; asume el proceso de arranque e inicia todos
 los procesos especificados en su archivo de configuración.
 
-**killall5** Envía una señal a todos los procesos, excepto a los de su
+**killall5** - Envía una señal a todos los procesos, excepto a los de su
 propia sesión. No eliminará su shell principal.
 
-**poweroff** Indica al kernel que detenga el sistema y apague el
+**poweroff** - Indica al kernel que detenga el sistema y apague el
 ordenador (ver **halt**).
 
-**reboot** Indica al kernel que reinicie el sistema (ver **halt**).
+**reboot** - Indica al kernel que reinicie el sistema (ver **halt**).
 
-**runlevel** Informa del nivel de ejecución anterior y actual, como se
+**runlevel** - Informa del nivel de ejecución anterior y actual, como se
 indica en el último registro de nivel de ejecución en
 */run/utmp*.
 
-**shutdown** Detiene el sistema de forma segura, enviando señales a
+**shutdown** - Detiene el sistema de forma segura, enviando señales a
 todos los procesos y notificando a todos los usuarios conectados.
 
-**telinit** Indica a **init** a qué nivel de ejecución cambiar.
+**telinit** - Indica a **init** a qué nivel de ejecución cambiar.
 
 ---
 &nbsp;
@@ -16329,75 +16318,75 @@ template, udev y udev_retry
 
 ### Descripciones breves
 
-**checkfs** Comprueba la integridad de los sistemas de archivos antes de
+**checkfs** - Comprueba la integridad de los sistemas de archivos antes de
 montarlos (con excepción de los sistemas de archivos de registro y
 basados en red).
 
-**cleanfs ** Elimina los archivos que no deben conservarse entre
+**cleanfs** - Elimina los archivos que no deben conservarse entre
 reinicios, como los de */run/* y */var/lock/*; recrea
 */run/utmp* y elimina los archivos */etc/nologin*,
 */fastboot* y */forcefsck* posiblemente presentes.
 
-**console** Carga la tabla de mapas de teclas correcta para la
+**console** - Carga la tabla de mapas de teclas correcta para la
 distribución de teclado deseada. También establece la fuente de la
 pantalla.
 
-**functions** Contiene funciones comunes, como la comprobación de
+**functions** - Contiene funciones comunes, como la comprobación de
 errores y estado, que utilizan varios scripts de arranque.
 
-**halt** Detiene el sistema.
+**halt** - Detiene el sistema.
 
-**ifdown** Detiene un dispositivo de red.
+**ifdown** - Detiene un dispositivo de red.
 
-**ifup** Inicializa un dispositivo de red.
+**ifup** - Inicializa un dispositivo de red.
 
-**localnet** Configura el nombre de host del sistema y el dispositivo de
+**localnet** - Configura el nombre de host del sistema y el dispositivo de
 bucle invertido local.
 
-**modules** Carga los módulos del kernel listados en
+**modules** - Carga los módulos del kernel listados en
 */etc/sysconfig/modules*, utilizando los argumentos que también
 se proporcionan allí.
 
-**mountfs** Monta todos los sistemas de archivos, excepto aquellos que
+**mountfs** - Monta todos los sistemas de archivos, excepto aquellos que
 están marcados como *noauto* o que están basados en red.
 
-**mountvirtfs** Monta sistemas de archivos virtuales del kernel, como
+**mountvirtfs** - Monta sistemas de archivos virtuales del kernel, como
 *proc*.
 
-**network** Configura interfaces de red, como tarjetas de red, y
+**network** - Configura interfaces de red, como tarjetas de red, y
 configura la puerta de enlace predeterminada (cuando corresponda).
 
-**rc** El script de control de nivel de ejecución maestro. Es
+**rc** - El script de control de nivel de ejecución maestro. Es
 responsable de ejecutar todos los demás scripts de arranque uno por uno,
 en una secuencia determinada por los nombres de los enlaces simbólicos a
 esos otros scripts de arranque.
 
-**reboot** Reinicia el sistema.
+**reboot** - Reinicia el sistema.
 
-**sendsignals** Se asegura de que todos los procesos finalicen antes de
+**sendsignals** - Se asegura de que todos los procesos finalicen antes de
 que el sistema se reinicie o se detenga.
 
-**setclock** Reinicia el reloj del sistema a la hora local si el reloj
+**setclock** - Reinicia el reloj del sistema a la hora local si el reloj
 del hardware no está configurado en UTC.
 
-**ipv4-static** Proporciona la funcionalidad necesaria para asignar una
+**ipv4-static** - Proporciona la funcionalidad necesaria para asignar una
 dirección IP estática a una interfaz de red.
 
-**swap** Habilita y deshabilita archivos de intercambio y particiones.
+**swap** - Habilita y deshabilita archivos de intercambio y particiones.
 
-**sysctl** Carga los valores de configuración del sistema desde
+**sysctl** - Carga los valores de configuración del sistema desde
 */etc/sysctl.conf*, si existe dicho archivo, en el kernel en
 ejecución.
 
-**sysklogd** Inicia y detiene los daemons de registro del sistema y del
+**sysklogd** - Inicia y detiene los daemons de registro del sistema y del
 kernel.
 
-**template** Una plantilla para crear scripts de arranque personalizados
+**template** - Una plantilla para crear scripts de arranque personalizados
 para otros daemons.
 
-**udev** Prepara el directorio */dev* e inicia el daemon udev.
+**udev** - Prepara el directorio */dev* e inicia el daemon udev.
 
-**udev_retry** Reintenta los eventos udev fallidos y copia los archivos
+**udev_retry** - Reintenta los eventos udev fallidos y copia los archivos
 de reglas generados desde */run/udev* a */etc/udev/rules*. d si es necesario.
 
 ---
@@ -18605,17 +18594,17 @@ System.map-6.13.4
 
 ### Descripciones breves
 
-*config-6.13.4* Contiene todas las opciones de configuración del
+*config-6.13.4* - Contiene todas las opciones de configuración del
 kernel.
 
-*vmlinuz-6.13.4-lfs-12.3* El motor del sistema Linux. Al encender el
+*vmlinuz-6.13.4-lfs-12.3* - El motor del sistema Linux. Al encender el
 ordenador, el kernel es la primera parte del sistema operativo que se
 carga. Detecta e inicializa todos los componentes del hardware del
 ordenador, los pone a disposición del software como un árbol de archivos
 y convierte una sola CPU en una máquina multitarea capaz de ejecutar
 numerosos programas prácticamente al mismo tiempo.
 
-*System.map-6.13.4* Una lista de direcciones y símbolos. Mapea los
+*System.map-6.13.4* - Una lista de direcciones y símbolos. Mapea los
 puntos de entrada y las direcciones de todas las funciones y estructuras
 de datos en el núcleo.
 
