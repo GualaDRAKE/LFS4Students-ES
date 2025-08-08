@@ -2715,47 +2715,17 @@ También realizan pequeñas modificaciones para facilitar el uso de los
 paquetes. Se necesitarán los siguientes parches para compilar un sistema
 LFS:
 
-• Bzip2 Documentation Patch - 1.6 KB:
+|Bzip2 Documentation Patch - 1.6 KB:|Descargar: https://www.linuxfromscratch.org/patches/lfs/12.3/bzip2-1.0.8-install_docs-1.patch<br>Suma MD5: 6a5ac7e89b791aae556de0f745916f7f|
 
-Descargar:
-https://www.linuxfromscratch.org/patches/lfs/12.3/bzip2-1.0.8-install_docs-1.patch
+|Coreutils Internationalization Fixes Patch - 164 KB:|Descargar: https://www.linuxfromscratch.org/patches/lfs/12.3/coreutils-9.6-i18n-1.patch<br>Suma MD5: 6aee45dd3e05b7658971c321d92f44b7|
 
-Suma MD5: 6a5ac7e89b791aae556de0f745916f7f
+|Expect GCC14 Patch - 7.8 KB:|Descargar: https://www.linuxfromscratch.org/patches/lfs/12.3/expect-5.45.4-gcc14-1.patch<br>Suma MD5: 0b8b5ac411d011263ad40b0664c669f0|
 
-• Coreutils Internationalization Fixes Patch - 164 KB:
+|Glibc FHS Patch - 2.8 KB:|Descargar: https://www.linuxfromscratch.org/patches/lfs/12.3/glibc-2.41-fhs-1.patch<br>Suma MD5: 9a5997c3452909b1769918c759eff8a2|
 
-Descargar:
-https://www.linuxfromscratch.org/patches/lfs/12.3/coreutils-9.6-i18n-1.patch
+|Kbd Backspace/Delete Fix Patch - 12 KB:|Descargar: https://www.linuxfromscratch.org/patches/lfs/12.3/kbd-2.7.1-backspace-1.patch<br>MD5 Suma: f75cca16a38da6caa7d52151f7136895|
 
-Suma MD5: 6aee45dd3e05b7658971c321d92f44b7
-
-• Expect GCC14 Patch - 7.8 KB:
-
-Descargar:
-https://www.linuxfromscratch.org/patches/lfs/12.3/expect-5.45.4-gcc14-1.patch
-
-Suma MD5: 0b8b5ac411d011263ad40b0664c669f0
-
-• Glibc FHS Patch - 2.8 KB:
-
-Descargar:
-https://www.linuxfromscratch.org/patches/lfs/12.3/glibc-2.41-fhs-1.patch
-
-Suma MD5: 9a5997c3452909b1769918c759eff8a2
-
-• Kbd Backspace/Delete Fix Patch - 12 KB:
-
-Descargar:
-https://www.linuxfromscratch.org/patches/lfs/12.3/kbd-2.7.1-backspace-1.patch
-
-MD5 Suma: f75cca16a38da6caa7d52151f7136895
-
-• SysVinit Consolidated Patch- 2.5 KB:
-
-Descarga:
-https://www.linuxfromscratch.org/patches/lfs/12.3/sysvinit-3.14-consolidated-1.patch
-
-Suma MD5: 3af8fd8e13cad481eeeaa48be4247445
+|SysVinit Consolidated Patch- 2.5 KB:|Descarga: https://www.linuxfromscratch.org/patches/lfs/12.3/sysvinit-3.14-consolidated-1.patch<br>Suma MD5: 3af8fd8e13cad481eeeaa48be4247445|
 
 Tamaño total de estos parches: aproximadamente 190.7 KB
 
