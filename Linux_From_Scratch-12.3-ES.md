@@ -3267,26 +3267,17 @@ volver a ella más adelante le ayudará a comprender mejor el proceso.
 
 Primero, definamos algunos términos utilizados en este contexto.
 
-&nbsp;
-
-### La compilación
-
-es la máquina donde compilamos los programas. Tenga en cuenta que esta
+- *La compilación*
+   - Es la máquina donde compilamos los programas. Tenga en cuenta que esta
 máquina también se denomina \"host\".
 
-&nbsp;
-
-### El host
-
-es la máquina/sistema donde se ejecutarán los programas compilados.
+- *El host*
+   - Es la máquina/sistema donde se ejecutarán los programas compilados.
 Tenga en cuenta que este uso de \"host\" no es el mismo que en otras
 secciones.
 
-&nbsp;
-
-### El objetivo
-
-solo se usa para compiladores. Es la máquina para la que el compilador
+- *El objetivo*
+   - Solo se usa para compiladores. Es la máquina para la que el compilador
 produce código. Puede ser diferente tanto de la compilación como del
 host.
 
