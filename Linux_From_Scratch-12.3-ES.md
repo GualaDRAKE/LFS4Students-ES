@@ -1615,7 +1615,7 @@ script que lo ejecute).
 
 • **Diffutils-2.8.1**.
 
-• **Findutils-4.2.3**1.
+• **Findutils-4.2.31**.
 
 • **Gawk-4.0.1** (/usr/bin/awk debe ser un enlace a gawk).
 
@@ -1629,7 +1629,7 @@ alojados.
 
 • **Gzip-1.3.12**.
 
-• **Kernel de Linux-5.4**.
+• **Kernel Linux-5.4**.
 
 El requisito de la versión del kernel se debe a que la especificamos al
 compilar glibc en los capítulos 5 y 8, por lo que las soluciones
@@ -1658,23 +1658,23 @@ Si está compilando un kernel personalizado para el host, asegúrese de que
 CONFIG_UNIX98_PTYS esté establecida en ¨y¨ (de *YES*) en la configuración del
 kernel.
 
-• M4-1.4.10
+• **M4-1.4.10**
 
-• Make-4.0
+• **Make-4.0**
 
-• Patch-2.5.4
+• **Patch-2.5.4**
 
-• Perl-5.8.8
+• **Perl-5.8.8**
 
-• Python-3.4
+• **Python-3.4**
 
-• Sed-4.1.5
+• **Sed-4.1.5**
 
-• Tar-1.22
+• **Tar-1.22**
 
-• Texinfo-5.0
+• **Texinfo-5.0**
 
-• Xz-5.0.0
+• **Xz-5.0.0**
 
 > 📌 **Importante**
 > 
@@ -2000,17 +2000,17 @@ y otra información de arranque. Para minimizar posibles problemas de arranque
 con discos duros grandes, crea esta partición como la primera partición físicaen
 tu primer disco. Un tamaño de partición de 200 megabytes es suficiente.
 
-• /boot/efi: La partición del sistema EFI, necesaria para arrancar el
+• /boot/efi - La partición del sistema EFI, necesaria para arrancar el
 sistema con UEFI. Consulte [la página de
 BLFS](https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/grub-setup.html)
 para obtener más información.
 
-• /home: Muy recomendable. Comparte tu directorio personal y la
+• /home - Muy recomendable. Comparte tu directorio personal y la
 personalización de usuario entre varias distribuciones o compilaciones
 LFS. El tamaño suele ser bastante grande y depende del espacio
 disponible en disco.
 
-• /usr: En LFS, /bin, /lib y /sbin son enlaces simbólicos a sus
+• /usr - En LFS, /bin, /lib y /sbin son enlaces simbólicos a sus
 equivalentes en /usr. Por lo tanto, /usr contiene todos los binarios
 necesarios para el funcionamiento del sistema. Para LFS, normalmente no
 se necesita una partición independiente para /usr. Si la creas de todos
@@ -2023,18 +2023,18 @@ remoto). Sin embargo, debes tener en cuenta que se necesitará un
 initramfs (no incluido en LFS) para arrancar un sistema con una
 partición /usr independiente.
 
-• /opt: Este directorio es especialmente
+• /opt - Este directorio es especialmente
 útil para BLFS, donde se pueden instalar varios paquetes grandes como
 KDE o Texlive sin incrustar los archivos en la jerarquía /usr. Si se
 utiliza, de 5 a 10 gigabytes suele ser suficiente.
 
-• /tmp: Una partición /tmp independiente es poco común, pero útil si se
+• /tmp - Una partición /tmp independiente es poco común, pero útil si se
 configura un cliente ligero. Esta partición, si se utiliza, no suele
 necesitar superar un par de gigabytes. Si tiene suficiente RAM, puede
 montar un tmpfs en /tmp para agilizar el acceso a los archivos
 temporales.
 
-• /usr/src: Esta partición es muy útil para proporcionar una ubicación
+• /usr/src - Esta partición es muy útil para proporcionar una ubicación
 donde almacenar archivos fuente de BLFS y compartirlos entre
 compilaciones de LFS. También se puede utilizar como ubicación para
 compilar paquetes de BLFS. Una partición razonablemente grande de 30 a
