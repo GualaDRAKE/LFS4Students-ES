@@ -13184,7 +13184,7 @@ Primero, asegúrese de que no se instalen archivos innecesarios:
 
 > ```bash
 > sed -i 's/extras//' Makefile.in
-> ``
+> ```
 
 Prepare Gawk para la compilación:
 
@@ -13214,7 +13214,7 @@ Instalar el paquete:
 
 **Significado del comando**:
 
-**rm -f /usr/bin/gawk-5.3.1**
+rm -f /usr/bin/gawk-5.3.1
 
 El sistema de compilación no recreará el enlace físico
 gawk-5.3.1 si ya existe. Elimínelo para garantizar que el enlace físico
