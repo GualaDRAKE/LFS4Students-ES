@@ -346,12 +346,12 @@ paquete en el libro.
 Acceso, que se utilizan para definir permisos de acceso discrecionales
 de granularidad precisa para archivos y directorios.
 
-- **Attr** -
-- Este paquete contiene programas para administrar atributos extendidos en
+- **Attr**
+  - Este paquete contiene programas para administrar atributos extendidos en
 objetos del sistema de archivos.
 
-• **Autoconf** - 
-Este paquete proporciona programas para generar scripts de shell que
+- **Autoconf**
+ - Este paquete proporciona programas para generar scripts de shell que
 pueden configurar automáticamente el código fuente a partir de una
 plantilla de desarrollador. A menudo es necesario reconstruir un paquete
 después de actualizar el procedimiento de compilación.
