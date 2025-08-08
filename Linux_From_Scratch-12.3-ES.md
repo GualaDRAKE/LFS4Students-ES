@@ -2412,11 +2412,11 @@ root para evitar este problema:
 Descargue u obtenga los siguientes paquetes:
 
 |• Acl (2.3.2) - 363 KB:|Página principal: https://savannah.nongnu.org/projects/acl<br>Descarga:<br>https://download.savannah.gnu.org/releases/acl/acl-2.3.2.tar.xz<br>Suma MD5: 590765dee95907dbc3c856f7255bd669|
-|-----|-----|
+|:-----|:-----|
+
 • Attr (2.5.2) - 484 KB:
-Página principal: https://savannah.nongnu.org/projects/attr
-Descarga: https://download.savannah.gnu.org/releases/attr/attr-2.5.2.tar.gz
-Suma MD5: 227043ec2f6ca03c0948df5517f9c927
+Página principal:|https://savannah.nongnu.org/projects/attr<br>Descarga: https://download.savannah.gnu.org/releases/attr/attr-2.5.2.tar.gz<br>Suma MD5: 227043ec2f6ca03c0948df5517f9c927|
+|:-----|:-----|
 
 • Autoconf (2.72) - 1.360 KB:
 Página principal: https://www.gnu.org/software/autoconf/
