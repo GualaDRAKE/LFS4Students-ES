@@ -14383,9 +14383,9 @@ texindex
 
 &nbsp;
 
-###  -
+### Descripciones breves
 
-**info** Se utiliza para leer páginas de información similares a las
+**info** - Se utiliza para leer páginas de información similares a las
 páginas de manual, pero que a menudo profundizan mucho más que
 simplemente explicar todas las opciones disponibles de la línea de
 comandos \[Por ejemplo, compare **man bison** e **info bison**\].
