@@ -957,7 +957,7 @@ aventura con LFS.
 ## 1.2. Novedades desde la última versión
 
 Aquí tienes una lista de los paquetes actualizados desde la última
-versión de LFS. Actualizado a:
+versión de LFS.** Actualizado a**:
 
 • Bash-5.2.37.
 
