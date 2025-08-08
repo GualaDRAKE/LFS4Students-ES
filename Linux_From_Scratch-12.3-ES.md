@@ -2411,9 +2411,12 @@ root para evitar este problema:
 
 Descargue u obtenga los siguientes paquetes:
 
-• Acl (2.3.2) - 363 KB:&nbsp;
+• Acl (2.3.2) - 363 KB:
+&nbsp;
 Página principal: https://savannah.nongnu.org/projects/acl
+&nbsp;
 Descarga: https://download.savannah.gnu.org/releases/acl/acl-2.3.2.tar.xz
+&nbsp;
 Suma MD5: 590765dee95907dbc3c856f7255bd669
 
 • Attr (2.5.2) - 484 KB:
