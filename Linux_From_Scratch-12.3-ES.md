@@ -16056,27 +16056,27 @@ de Linux.
 La mayoría de las personas que utilizan los comandos mencionados a
 continuación no experimentan ninguna dificultad. Sin embargo, es fácil
 cometer un error y dejar el nuevo sistema inutilizable. Por lo tanto,
-antes de ejecutar los comandos de **depuración **(**strip**)****,
+antes de ejecutar los comandos de **depuración** *(strip)*,
 conviene realizar una copia de seguridad del sistema LFS en su estado
 actual.
 
-Un comando de **depuración** o **strip** con la opción
+Un comando de **depuración** *(strip)* con la opción
 *\--strip-unneeded* elimina todos los símbolos de depuración de
 un binario o biblioteca. También elimina todas las entradas de la tabla
 de símbolos que no necesita el enlazador (para bibliotecas estáticas) o
 el enlazador dinámico (para binarios enlazados dinámicamente y
 bibliotecas compartidas).
 
-Los símbolos de **depuracirón** o **strip** de las bibliotecas seleccionadas se
+Los símbolos de **depuracirón** *(strip)* de las bibliotecas seleccionadas se
 comprimen con Zlib y se conservan en archivos separados. Esa información
 de depuración es necesaria para ejecutar pruebas de regresión con
 *valgrind* o *gdb* posteriormente, en BLFS.
 
-Tenga en cuenta que **depurar  o **strip** sobrescribirá el
+Tenga en cuenta que **depurar *(strip)* sobrescribirá el
 archivo binario o de biblioteca que esté procesando. Esto puede bloquear
 los procesos que usan código o datos del archivo. Si el proceso que
 ejecuta strip se ve afectado, el binario o la biblioteca que se está
-desmontando puede destruirse; esto ****puede dejar el sistema
+desmontando puede destruirse; esto puede dejar el sistema
 completamente inutilizable. Para evitar este problema, copiamos algunas
 bibliotecas y binarios en */tmp*, los desmontamos allí y luego
 los reinstalamos con el comando **install**. (La entrada relacionada en
