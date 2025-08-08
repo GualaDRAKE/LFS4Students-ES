@@ -8,7 +8,7 @@
 
 &nbsp;
 
-https://github.com/GualaDRAKE/LFS4Students-ES/blob/main/Images/LinuxFromScratch.png
+![Linux From Scratch](https://github.com/GualaDRAKE/LFS4Students-ES/blob/main/Images/LinuxFromScratch.png?raw=true)
 
 &nbsp;
 
