@@ -465,16 +465,15 @@ partir de un conjunto de claves. Es requerido por Udev.
 utilizan en la mayoría de los scripts de compilación de los paquetes.
 
 - **Groff**
-  - 
-Este paquete proporciona programas para procesar y formatear texto. Una
+  - Este paquete proporciona programas para procesar y formatear texto. Una
 función importante de estos programas es formatear páginas de manual.
 
-- **GRUB** - 
-Este es el Gran Cargador de Arranque Unificado. Es el más flexible de
+- **GRUB**
+  - Este es el Gran Cargador de Arranque Unificado. Es el más flexible de
 los cargadores de arranque disponibles.
 
-- **Gzip** - 
-Este paquete contiene programas para comprimir y descomprimir archivos.
+- **Gzip**
+  - Este paquete contiene programas para comprimir y descomprimir archivos.
 Es necesario para descomprimir muchos paquetes en LFS.
 
 - **Iana-etc**
