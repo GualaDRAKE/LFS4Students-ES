@@ -2420,141 +2420,73 @@ Descargue u obtenga los siguientes paquetes:
 |Autoconf (2.72) - 1.360 KB:|Página principal: https://www.gnu.org/software/autoconf/<br>Descarga: https://ftp.gnu.org/gnu/autoconf/autoconf-2.72.tar.xz<br>Suma MD5: 1be79f7106ab6767f18391c5e22be701|
 |:-----|:-----|
 
-|Automake (1.17) - 1.614 KB:|
-Página principal: https://www.gnu.org/software/automake/
-Descarga: https://ftp.gnu.org/gnu/automake/automake-1.17.tar.xz
-Suma MD5: 7ab3a02318fee6f5bd42adfc369abf10|
+|Automake (1.17) - 1.614 KB:|Página principal: https://www.gnu.org/software/automake/<br>Descarga: https://ftp.gnu.org/gnu/automake/automake-1.17.tar.xz<br>Suma MD5: 7ab3a02318fee6f5bd42adfc369abf10|
 |:-----|:-----|
 
-Bash (5.2.37) - 10.868 KB:
-Página principal: https://www.gnu.org/software/bash/
-Descarga: https://ftp.gnu.org/gnu/bash/bash-5.2.37.tar.gz
-Suma MD5: 9c28f21ff65de72ca329c1779684a972
+Bash (5.2.37) - 10.868 KB:|Página principal: https://www.gnu.org/software/bash/<br>Descarga: https://ftp.gnu.org/gnu/bash/bash-5.2.37.tar.gz<br>Suma MD5: 9c28f21ff65de72ca329c1779684a972|
 |:-----|:-----|
 
-Bc (7.0.3) - 464 KB:
-Página principal: https://git.gavinhoward.com/gavin/bc
-Descarga: https://github.com/gavinhoward/bc/releases/download/7.0.3/bc-7.0.3.tar.xz
-Suma MD5: ad4db5a0eb4fdbb3f6813be4b6b3da74
+|Bc (7.0.3) - 464 KB:|Página principal: https://git.gavinhoward.com/gavin/bc<br>Descarga: https://github.com/gavinhoward/bc/releases/download/7.0.3/bc-7.0.3.tar.xz<br>Suma MD5: ad4db5a0eb4fdbb3f6813be4b6b3da74|
 |:-----|:-----|
 
-Binutils (2.44) - 26.647 KB:
-Página principal: https://www.gnu.org/software/binutils/
-Descarga: https://sourceware.org/pub/binutils/releases/binutils-2.44.tar.xz
-Suma MD5: 49912ce774666a30806141f106124294
+|Binutils (2.44) - 26.647 KB:|Página principal: https://www.gnu.org/software/binutils/<br>Descarga: https://sourceware.org/pub/binutils/releases/binutils-2.44.tar.xz<br>Suma MD5: 49912ce774666a30806141f106124294|
 |:-----|:-----|
 
-Bison (3.8.2) - 2.752 KB:
-Página principal: https://www.gnu.org/software/bison/
-Descarga: https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.xz
-Suma MD5: c28f119f405a2304ff0a7ccdcc629713
+|Bison (3.8.2) - 2.752 KB:|Página principal: https://www.gnu.org/software/bison/<br>Descarga: https://ftp.gnu.org/gnu/bison/bison-3.8.2.tar.xz<br>Suma MD5: c28f119f405a2304ff0a7ccdcc629713|
 |:-----|:-----|
 
-Bzip2 (1.0.8) - 792 KB:
-Descarga: https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
-Suma MD5: 67e051268d0c475ea773822f7500d0e5
+|Bzip2 (1.0.8) - 792 KB:|Descarga: https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz<br>Suma MD5: 67e051268d0c475ea773822f7500d0e5|
 |:-----|:-----|
 
-Check (0.15.2) - 760 KB:
-Página principal: https://libcheck.github.io/check
-Descarga: https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz
-Suma MD5: 50fcafcecde5a380415b12e9c574e0b2
+|Check (0.15.2) - 760 KB:|Página principal: https://libcheck.github.io/check<br>Descarga: https://github.com/libcheck/check/releases/download/0.15.2/check-0.15.2.tar.gz<br>Suma MD5: 50fcafcecde5a380415b12e9c574e0b2|
 |:-----|:-----|
 
-Coreutils (9.6) - 5.991 KB:
-Página principal: https://www.gnu.org/software/coreutils/
-Descarga: https://ftp.gnu.org/gnu/coreutils/coreutils-9.6.tar.xz
-Suma MD5: 0ed6cc983fe02973bc98803155cc1733
+|Coreutils (9.6) - 5.991 KB:|Página principal: https://www.gnu.org/software/coreutils/<br>Descarga: https://ftp.gnu.org/gnu/coreutils/coreutils-9.6.tar.xz<br>Suma MD5: 0ed6cc983fe02973bc98803155cc1733|
 |:-----|:-----|
 
-DejaGNU (1.6.3) - 608 KB:
-Página principal: https://www.gnu.org/software/dejagnu/
-Descarga: https://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.3.tar.gz
-Suma MD5: 68c5208c58236eba447d7d6d1326b821
+|DejaGNU (1.6.3) - 608 KB:|Página principal: https://www.gnu.org/software/dejagnu/<br>Descarga: https://ftp.gnu.org/gnu/dejagnu/dejagnu-1.6.3.tar.gz<br>Suma MD5: 68c5208c58236eba447d7d6d1326b821|
 |:-----|:-----|
 
-Diffutils (3.11) - 1.881 KB:
-Página principal: https://www.gnu.org/software/diffutils/
-Descarga: https://ftp.gnu.org/gnu/diffutils/diffutils-3.11.tar.xz
-Suma MD5: 75ab2bb7b5ac0e3e10cece85bd1780c2
+|Diffutils (3.11) - 1.881 KB:|Página principal: https://www.gnu.org/software/diffutils/<br>Descarga: https://ftp.gnu.org/gnu/diffutils/diffutils-3.11.tar.xz<br>Suma MD5: 75ab2bb7b5ac0e3e10cece85bd1780c2|
 |:-----|:-----|
 
-E2fsprogs (1.47.2) - 9.763 KB:
-Página principal: https://e2fsprogs.sourceforge.net/
-Descarga: https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.2/e2fsprogs-1.47.2.tar.gz
-Suma MD5: 752e5a3ce19aea060d8a203f2fae9baa
+|E2fsprogs (1.47.2) - 9.763 KB:|Página principal: https://e2fsprogs.sourceforge.net/<br>Descarga: https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.2/e2fsprogs-1.47.2.tar.gz<br>Suma MD5: 752e5a3ce19aea060d8a203f2fae9baa|
 |:-----|:-----|
 
-Elfutils (0.192) - 11 635 KB:
-Página principal: https://sourceware.org/elfutils/
-Descarga: https://sourceware.org/ftp/elfutils/0.192/elfutils-0.192.tar.bz2
-Suma MD5: a6bb1efc147302cfc15b5c2b827f186a
+|Elfutils (0.192) - 11 635 KB:Página principal: https://sourceware.org/elfutils/<br>Descarga: https://sourceware.org/ftp/elfutils/0.192/elfutils-0.192.tar.bz2<br>Suma MD5: a6bb1efc147302cfc15b5c2b827f186a|
 |:-----|:-----|
 
-Expat (2.6.4) - 476 KB:
-Página principal: https://libexpat.github.io/
-Descarga: https://prdownloads.sourceforge.net/expat/expat-2.6.4.tar.xz
-Suma MD5: 101fe3e320a2800f36af8cf4045b45c7
+|Expat (2.6.4) - 476 KB:|Página principal: https://libexpat.github.io/<br>Descarga: https://prdownloads.sourceforge.net/expat/expat-2.6.4.tar.xz<br>Suma MD5: 101fe3e320a2800f36af8cf4045b45c7|
 |:-----|:-----|
 
-Expect (5.45.4) - 618 KB:
-Página principal: https://core.tcl.tk/expect/
-Descarga: https://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz
-Suma MD5: 00fce8de158422f5ccd2666512329bd2
+|Expect (5.45.4) - 618 KB:|Página principal: https://core.tcl.tk/expect/<br>Descarga: https://prdownloads.sourceforge.net/expect/expect5.45.4.tar.gz<br>Suma MD5: 00fce8de158422f5ccd2666512329bd2|
 |:-----|:-----|
 
-File (5.46) - 1.283 KB:
-Página principal: https://www.darwinsys.com/file/
-Descarga: https://astron.com/pub/file/file-5.46.tar.gz
-Suma MD5: 459da2d4b534801e2e2861611d823864
+|File (5.46) - 1.283 KB:|Página principal: https://www.darwinsys.com/file/<br>Descarga: https://astron.com/pub/file/file-5.46.tar.gz<br>Suma MD5: 459da2d4b534801e2e2861611d823864|
 |:-----|:-----|
 
-Findutils (4.10.0) - 2.189 KB:
-Página principal: https://www.gnu.org/software/findutils/
-Descarga: https://ftp.gnu.org/gnu/findutils/findutils-4.10.0.tar.xz
-Suma MD5: 870cfd71c07d37ebe56f9f4aaf4ad872
+|Findutils (4.10.0) - 2.189 KB:|Página principal: https://www.gnu.org/software/findutils/<br>Descarga: https://ftp.gnu.org/gnu/findutils/findutils-4.10.0.tar.xz<br>Suma MD5: 870cfd71c07d37ebe56f9f4aaf4ad872|
 |:-----|:-----|
 
-Flex (2.6.4) - 1.386 KB:
-Página principal: https://github.com/westes/flex
-Descarga: https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz
-Suma MD5: 2882e3179748cc9f9c23ec593d6adc8d
+|Flex (2.6.4) - 1.386 KB:|Página principal: https://github.com/westes/flex<br>Descarga: https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz<br>Suma MD5: 2882e3179748cc9f9c23ec593d6adc8d|
 |:-----|:-----|
 
-Flit-core (3.11.0) - 51 KB:
-Página principal: https://pypi.org/project/flit-core/
-Descarga: https://pypi.org/packages/source/f/flit-core/flit_core-3.11.0.tar.gz
-Suma MD5: 6d677b1acef1769c4c7156c7508e0dbd
+|Flit-core (3.11.0) - 51 KB:|Página principal: https://pypi.org/project/flit-core/<br>Descarga: https://pypi.org/packages/source/f/flit-core/flit_core-3.11.0.tar.gz<br>Suma MD5: 6d677b1acef1769c4c7156c7508e0dbd|
 |:-----|:-----|
 
-Gawk (5.3.1) - 3.428 KB:
-Página principal: https://www.gnu.org/software/gawk/
-Descargar: https://ftp.gnu.org/gnu/gawk/gawk-5.3.1.tar.xz
-Suma MD5: 4e9292a06b43694500e0620851762eec
+|Gawk (5.3.1) - 3.428 KB:|Página principal: https://www.gnu.org/software/gawk/<br>Descargar: https://ftp.gnu.org/gnu/gawk/gawk-5.3.1.tar.xz<br>Suma MD5: 4e9292a06b43694500e0620851762eec|
 |:-----|:-----|
 
-GCC (14.2.0) - 90.144 KB:
-Página principal: https://gcc.gnu.org/
-Descargar: https://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz
-Suma MD5: 2268420ba02dc01821960e274711bde0
+|GCC (14.2.0) - 90.144 KB:|Página principal: https://gcc.gnu.org/<br>Descargar: https://ftp.gnu.org/gnu/gcc/gcc-14.2.0/gcc-14.2.0.tar.xz<br>Suma MD5: 2268420ba02dc01821960e274711bde0|
 |:-----|:-----|
 
-GDBM (1.24) - 1.168 KB:
-Página principal: https://www.gnu.org/software/gdbm/
-Descargar: https://ftp.gnu.org/gnu/gdbm/gdbm-1.24.tar.gz
-Suma MD5: c780815649e52317be48331c1773e987
+|GDBM (1.24) - 1.168 KB:|Página principal: https://www.gnu.org/software/gdbm/<br>Descargar: https://ftp.gnu.org/gnu/gdbm/gdbm-1.24.tar.gz<br>Suma MD5: c780815649e52317be48331c1773e987|
 |:-----|:-----|
 
-Gettext (0.24) - 8.120 KB:
-Página principal: https://www.gnu.org/software/gettext/
-Descargar: https://ftp.gnu.org/gnu/gettext/gettext-0.24.tar.xz
-Suma MD5: 87aea3013802a3c60fa3feb5c7164069
+|Gettext (0.24) - 8.120 KB:|Página principal: https://www.gnu.org/software/gettext/<br>Descargar: https://ftp.gnu.org/gnu/gettext/gettext-0.24.tar.xz<br>Suma MD5: 87aea3013802a3c60fa3feb5c7164069|
 |:-----|:-----|
 
-Glibc (2.41) - 18.892 KB:
-Página principal: https://www.gnu.org/software/libc/
-Descargar: https://ftp.gnu.org/gnu/glibc/glibc-2.41.tar.xz
-Suma MD5: 19862601af60f73ac69e067d3e9267d4
+|Glibc (2.41) - 18.892 KB:|Página principal: https://www.gnu.org/software/libc/<br>Descargar: https://ftp.gnu.org/gnu/glibc/glibc-2.41.tar.xz<br>Suma MD5: 19862601af60f73ac69e067d3e9267d4|
 |:-----|:-----|
 > ℹ️ **Nota**
 > 
@@ -2566,129 +2498,67 @@ Suma MD5: 19862601af60f73ac69e067d3e9267d4
 > nuevos. Puede revisar los parches usted mismo e incorporar algunos
 > si los considera importantes.
 
-GMP (6.3.0) - 2.046 KB:
-Página principal: https://www.gnu.org/software/gmp/
-Descarga: https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz
-Suma MD5: 956dc04e864001a9c22429f761f2c283
+|GMP (6.3.0) - 2.046 KB:|Página principal: https://www.gnu.org/software/gmp/<br>Descarga: https://ftp.gnu.org/gnu/gmp/gmp-6.3.0.tar.xz<br>Suma MD5: 956dc04e864001a9c22429f761f2c283|
 |:-----|:-----|
 
-Gperf (3.1) - 1.188 KB:
-Página principal: https://www.gnu.org/software/gperf/
-Descarga: https://ftp.gnu.org/gnu/gperf/gperf-3.1.tar.gz
-Suma MD5: 9e251c0a618ad0824b51117d5d9db87e
+|Gperf (3.1) - 1.188 KB:|Página principal: https://www.gnu.org/software/gperf/<br>Descarga: https://ftp.gnu.org/gnu/gperf/gperf-3.1.tar.gz<br>Suma MD5: 9e251c0a618ad0824b51117d5d9db87e|
 |:-----|:-----|
 
-Grep (3.11) - 1664 KB:
-Página principal: https://www.gnu.org/software/grep/
-Descarga: https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz
-Suma MD5: 7c9bbd74492131245f7cdb291fa142c0
+|Grep (3.11) - 1664 KB:|Página principal: https://www.gnu.org/software/grep/<br>Descarga: https://ftp.gnu.org/gnu/grep/grep-3.11.tar.xz<br>Suma MD5: 7c9bbd74492131245f7cdb291fa142c0|
 |:-----|:-----|
 
-Groff (1.23.0) - 7.259 KB:
-Página principal: https://www.gnu.org/software/groff/
-Descarga: https://ftp.gnu.org/gnu/groff/groff-1.23.0.tar.gz
-Suma MD5: 5e4f40315a22bb8a158748e7d5094c7d
+|Groff (1.23.0) - 7.259 KB:|Página principal: https://www.gnu.org/software/groff/<br>Descarga: https://ftp.gnu.org/gnu/groff/groff-1.23.0.tar.gz<br>Suma MD5: 5e4f40315a22bb8a158748e7d5094c7d|
 |:-----|:-----|
 
-GRUB (2.12) - 6.524 KB:
-Página principal: https://www.gnu.org/software/grub/
-Descargar: https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz
-Suma MD5: 60c564b1bdc39d8e43b3aab4bc0fb140
+|GRUB (2.12) - 6.524 KB:|Página principal: https://www.gnu.org/software/grub/<br>Descargar: https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz<br>Suma MD5: 60c564b1bdc39d8e43b3aab4bc0fb140|
 |:-----|:-----|
 
-Gzip (1.13) - 819 KB:
-Página principal: https://www.gnu.org/software/gzip/
-Descargar: https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.xz
-Suma MD5: d5c9fc9441288817a4a0be2da0249e29
+|Gzip (1.13) - 819 KB:|Página principal: https://www.gnu.org/software/gzip/<br>Descargar: https://ftp.gnu.org/gnu/gzip/gzip-1.13.tar.xz<br>Suma MD5: d5c9fc9441288817a4a0be2da0249e29|
 |:-----|:-----|
 
-Iana-Etc (20250123) - 591 KB:
-Página principal: https://www.iana.org/protocols
-Descargar: https://github.com/Mic92/iana-etc/releases/download/20250123/iana-etc-20250123.tar.gz
-Suma MD5: f8a0ebdc19a5004cf42d8bdcf614fa5d
+|Iana-Etc (20250123) - 591 KB:|Página principal: https://www.iana.org/protocols<br>Descargar: https://github.com/Mic92/iana-etc/releases/download/20250123/iana-etc-20250123.tar.gz<br>Suma MD5: f8a0ebdc19a5004cf42d8bdcf614fa5d|
 |:-----|:-----|
 
-Inetutils (2.6) - 1.724 KB:
-Página principal: https://www.gnu.org/software/inetutils/
-Descarga: https://ftp.gnu.org/gnu/inetutils/inetutils-2.6.tar.xz
-Suma MD5: 401d7d07682a193960bcdecafd03de94
+|Inetutils (2.6) - 1.724 KB:|Página principal: https://www.gnu.org/software/inetutils/<br>Descarga: https://ftp.gnu.org/gnu/inetutils/inetutils-2.6.tar.xz<br>Suma MD5: 401d7d07682a193960bcdecafd03de94|
 |:-----|:-----|
 
-Intltool (0.51.0) - 159 KB:
-Página principal: https://freedesktop.org/wiki/Software/intltool
-Descarga: https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz
-Suma MD5: 12e517cac2b57a0121cda351570f1e63
+|Intltool (0.51.0) - 159 KB:|Página principal: https://freedesktop.org/wiki/Software/intltool<br>Descarga: https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz<br>Suma MD5: 12e517cac2b57a0121cda351570f1e63|
 |:-----|:-----|
 
-IPRoute2 (6.13.0) - 906 KB:
-Página principal: https://www.kernel.org/pub/linux/utils/net/iproute2/
-Descarga: https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.13.0.tar.xz
-Suma MD5: 1603d25120d03feeaba9b360d03ffaec
+|IPRoute2 (6.13.0) - 906 KB:|Página principal: https://www.kernel.org/pub/linux/utils/net/iproute2/<br>Descarga: https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.13.0.tar.xz<br>Suma MD5: 1603d25120d03feeaba9b360d03ffaec|
 |:-----|:-----|
 
-Jinja2 (3.1.5) - 239 KB:
-Página principal: https://jinja.palletsprojects.com/en/3.1.x/
-Descarga: https://pypi.org/packages/source/J/Jinja2/jinja2-3.1.5.tar.gz
-Suma MD5: 083d64f070f6f1b5f75971ae60240785
+|Jinja2 (3.1.5) - 239 KB:|Página principal: https://jinja.palletsprojects.com/en/3.1.x/<br>Descarga: https://pypi.org/packages/source/J/Jinja2/jinja2-3.1.5.tar.gz<br>Suma MD5: 083d64f070f6f1b5f75971ae60240785|
 |:-----|:-----|
 
-Kbd (2.7.1) - 1.438 KB:
-Página principal: https://kbd-project.org/
-Descarga: https://www.kernel.org/pub/linux/utils/kbd/kbd-2.7.1.tar.xz
-Suma MD5: f15673d9f748e58f82fa50cff0d0fd20
+|Kbd (2.7.1) - 1.438 KB:|Página principal: https://kbd-project.org/<br>Descarga: https://www.kernel.org/pub/linux/utils/kbd/kbd-2.7.1.tar.xz<br>Suma MD5: f15673d9f748e58f82fa50cff0d0fd20|
 |:-----|:-----|
 
-Kmod (34) - 331 KB:
-Página principal: https://github.com/kmod-project/kmod
-Descarga: https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.tar.xz
-Suma MD5: 3e6c5c9ad9c7367ab9c3cc4f08dfde62
+|Kmod (34) - 331 KB:|Página principal: https://github.com/kmod-project/kmod<br>Descarga: https://www.kernel.org/pub/linux/utils/kernel/kmod/kmod-34.tar.xz<br>Suma MD5: 3e6c5c9ad9c7367ab9c3cc4f08dfde62|
 |:-----|:-----|
 
-Less (668) - 635 KB:
-Página principal: https://www.greenwoodsoftware.com/less/
-Descarga: https://www.greenwoodsoftware.com/less/less-668.tar.gz
-Suma MD5: d72760386c5f80702890340d2f66c302
+|Less (668) - 635 KB:|Página principal: https://www.greenwoodsoftware.com/less/<br>Descarga: https://www.greenwoodsoftware.com/less/less-668.tar.gz<br>Suma MD5: d72760386c5f80702890340d2f66c302|
 |:-----|:-----|
 
-LFS-Bootscripts (20240825) - 33 KB:
-Descarga: https://www.linuxfromscratch.org/lfs/downloads/12.3/lfs-bootscripts-20240825.tar.xz
-Suma MD5: 7b078c594a77e0f9cd53a0027471c3bc
+|LFS-Bootscripts (20240825) - 33 KB:|Descarga: https://www.linuxfromscratch.org/lfs/downloads/12.3/lfs-bootscripts-20240825.tar.xz<br>Suma MD5: 7b078c594a77e0f9cd53a0027471c3bc|
 |:-----|:-----|
 
-Libcap (2.73) - 191 KB:
-Página principal: https://sites.google.com/site/fullycapable/
-Descarga: https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.73.tar.xz
-Suma MD5: 0e186df9de9b1e925593a96684fe2e32
+|Libcap (2.73) - 191 KB:|Página principal: https://sites.google.com/site/fullycapable/<br>Descarga: https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.73.tar.xz<br>Suma MD5: 0e186df9de9b1e925593a96684fe2e32|
 |:-----|:-----|
 
-Libffi (3.4.7) - 1.362 KB:
-Página principal: https://sourceware.org/libffi/
-Descarga: https://github.com/libffi/libffi/releases/download/v3.4.7/libffi-3.4.7.tar.gz
-Suma MD5: 696a1d483a1174ce8a477575546a5284
+|Libffi (3.4.7) - 1.362 KB:|Página principal: https://sourceware.org/libffi/<br>Descarga: https://github.com/libffi/libffi/releases/download/v3.4.7/libffi-3.4.7.tar.gz<br>Suma MD5: 696a1d483a1174ce8a477575546a5284|
 |:-----|:-----|
 
-Libpipeline (1.5.8) - 1.046 KB:
-Página principal: https://libpipeline.nongnu.org/
-Descarga: https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.8.tar.gz
-Suma MD5: 17ac6969b2015386bcb5d278a08a40b5
+|Libpipeline (1.5.8) - 1.046 KB:|Página principal: https://libpipeline.nongnu.org/<br>Descarga: https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.8.tar.gz<br>Suma MD5: 17ac6969b2015386bcb5d278a08a40b5|
 |:-----|:-----|
 
-Libtool (2.5.4) - 1.033 KB:
-Página principal: https://www.gnu.org/software/libtool/
-Descarga: https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.xz
-Suma MD5: 22e0a29df8af5fdde276ea3a7d351d30
+|Libtool (2.5.4) - 1.033 KB:|Página principal: https://www.gnu.org/software/libtool/<br>Descarga: https://ftp.gnu.org/gnu/libtool/libtool-2.5.4.tar.xz<br>Suma MD5: 22e0a29df8af5fdde276ea3a7d351d30|
 |:-----|:-----|
 
-Libxcrypt (4.4.38) - 612 KB:
-Página principal: https://github.com/besser82/libxcrypt/
-Descarga: https://github.com/besser82/libxcrypt/releases/download/v4.4.38/libxcrypt-4.4.38.tar.xz
-Suma MD5: 1796a5d20098e9dd9e3f576803c83000
+|Libxcrypt (4.4.38) - 612 KB:|Página principal: https://github.com/besser82/libxcrypt/<br>Descarga: https://github.com/besser82/libxcrypt/releases/download/v4.4.38/libxcrypt-4.4.38.tar.xz<br>Suma MD5: 1796a5d20098e9dd9e3f576803c83000|
 |:-----|:-----|
 
-Linux (6.13.4) - 145.015 KB:
-Página principal: https://www.kernel.org/
-Descarga: https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.13.4.tar.xz
-Suma MD5: 13b9e6c29105a34db4647190a43d1810
+|Linux (6.13.4) - 145.015 KB:|Página principal: https://www.kernel.org/<br>Descarga: https://www.kernel.org/pub/linux/kernel/v6.x/linux-6.13.4.tar.xz<br>Suma MD5: 13b9e6c29105a34db4647190a43d1810|
 |:-----|:-----|
 > ℹ️ **Nota**
 > 
@@ -2702,159 +2572,82 @@ Suma MD5: 13b9e6c29105a34db4647190a43d1810
 > ahorrar tiempo o dinero para una posterior actualización de parches
 > dentro de una versión menor.
 
-Lz4 (1.10.0) - 379 KB:
-Página principal: https://lz4.org/
-Descarga: https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz
-Suma MD5: dead9f5f1966d9ae56e1e32761e4e675
+|Lz4 (1.10.0) - 379 KB:|Página principal: https://lz4.org/<br>Descarga: https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz<br>Suma MD5: dead9f5f1966d9ae56e1e32761e4e675|
 |:-----|:-----|
 
-M4 (1.4.19) - 1.617 KB:
-Página principal: https://www.gnu.org/software/m4/
-Descarga: https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz
-Suma MD5: 0d90823e1426f1da2fd872df0311298d
+|M4 (1.4.19) - 1.617 KB:|Página principal: https://www.gnu.org/software/m4/<br>Descarga: https://ftp.gnu.org/gnu/m4/m4-1.4.19.tar.xz<br>Suma MD5: 0d90823e1426f1da2fd872df0311298d|
 |:-----|:-----|
 
-Make (4.4.1) - 2.300 KB:
-Página principal: https://www.gnu.org/software/make/
-Descarga: https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz
-Suma MD5: c8469a3713cbbe04d955d4ae4be23eeb
+|Make (4.4.1) - 2.300 KB:|Página principal: https://www.gnu.org/software/make/<br>Descarga: https://ftp.gnu.org/gnu/make/make-4.4.1.tar.gz<br>Suma MD5: c8469a3713cbbe04d955d4ae4be23eeb|
 |:-----|:-----|
 
-Man-DB (2.13.0) - 2.023 KB:
-Página principal: https://www.nongnu.org/man-db/
-Descarga: https://download.savannah.gnu.org/releases/man-db/man-db-2.13.0.tar.xz
-Suma MD5: 97ab5f9f32914eef2062d867381d8cee
+|Man-DB (2.13.0) - 2.023 KB:|Página principal: https://www.nongnu.org/man-db/<br>Descarga: https://download.savannah.gnu.org/releases/man-db/man-db-2.13.0.tar.xz<br>Suma MD5: 97ab5f9f32914eef2062d867381d8cee|
 |:-----|:-----|
 
-Man-Pages (6.12) - 1.838 KB:
-Página principal: https://www.kernel.org/doc/man-pages/
-Descargar: https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.12.tar.xz
-Suma MD5: 44de430a598605eaba3e36dd43f24298
+|Man-Pages (6.12) - 1.838 KB:|Página principal: https://www.kernel.org/doc/man-pages/<br>Descargar: https://www.kernel.org/pub/linux/docs/man-pages/man-pages-6.12.tar.xz<br>Suma MD5: 44de430a598605eaba3e36dd43f24298|
 |:-----|:-----|
 
-MarkupSafe (3.0.2) - 21 KB:
-Página principal: https://palletsprojects.com/p/markupsafe/
-Descargar: https://pypi.org/packages/source/M/MarkupSafe/markupsafe-3.0.2.tar.gz
-Suma MD5: cb0071711b573b155cc8f86e1de72167
+|MarkupSafe (3.0.2) - 21 KB:|Página principal: https://palletsprojects.com/p/markupsafe/<br>Descargar: https://pypi.org/packages/source/M/MarkupSafe/markupsafe-3.0.2.tar.gz<br>Suma MD5: cb0071711b573b155cc8f86e1de72167|
 |:-----|:-----|
 
-Meson (1.7.0) - 2.241 KB:
-Página principal: https://mesonbuild.com
-Descargar: https://github.com/mesonbuild/meson/releases/download/1.7.0/meson-1.7.0.tar.gz
-Suma MD5: c20f3e5ebbb007352d22f4fd6ceb925c
+|Meson (1.7.0) - 2.241 KB:|Página principal: https://mesonbuild.com<br>Descargar: https://github.com/mesonbuild/meson/releases/download/1.7.0/meson-1.7.0.tar.gz<br>Suma MD5: c20f3e5ebbb007352d22f4fd6ceb925c|
 |:-----|:-----|
 
-MPC (1.3.1) - 756 KB:
-Página principal: https://www.multiprecision.org/
-Descarga: https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz
-Suma MD5: 5c9bc658c9fd0f940e8e3e0f09530c62
+|MPC (1.3.1) - 756 KB:|Página principal: https://www.multiprecision.org/<br>Descarga: https://ftp.gnu.org/gnu/mpc/mpc-1.3.1.tar.gz<br>Suma MD5: 5c9bc658c9fd0f940e8e3e0f09530c62|
 |:-----|:-----|
 
-MPFR (4.2.1) - 1.459 KB:
-Página principal: https://www.mpfr.org/
-Descarga: https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.xz
-Suma MD5: 523c50c6318dde6f9dc523bc0244690a
+|MPFR (4.2.1) - 1.459 KB:|Página principal: https://www.mpfr.org/<br>Descarga: https://ftp.gnu.org/gnu/mpfr/mpfr-4.2.1.tar.xz<br>Suma MD5: 523c50c6318dde6f9dc523bc0244690a|
 |:-----|:-----|
 
-Ncurses (6.5) - 2.156 KB:
-Página principal: https://www.gnu.org/software/ncurses/
-Descarga: https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz
-Suma MD5: ac2d2629296f04c8537ca706b6977687
+|Ncurses (6.5) - 2.156 KB:|Página principal: https://www.gnu.org/software/ncurses/<br>Descarga: https://invisible-mirror.net/archives/ncurses/ncurses-6.5.tar.gz<br>Suma MD5: ac2d2629296f04c8537ca706b6977687|
 |:-----|:-----|
 
-Ninja (1.12.1) - 235 KB:
-Página principal: https://ninja-build.org/
-Descarga: https://github.com/ninja-build/ninja/archive/v1.12.1/ninja-1.12.1.tar.gz
-Suma MD5: 6288992b05e593a391599692e2f7e490
+|Ninja (1.12.1) - 235 KB:|Página principal: https://ninja-build.org/<br>Descarga: https://github.com/ninja-build/ninja/archive/v1.12.1/ninja-1.12.1.tar.gz<br>Suma MD5: 6288992b05e593a391599692e2f7e490|
 |:-----|:-----|
 
-OpenSSL (3.4.1) - 17.917 KB:
-Página principal: https://www.openssl-library.org/
-Descarga: https://github.com/openssl/openssl/releases/download/openssl-3.4.1/openssl-3.4.1.tar.gz
-Suma MD5: fb7a747ac6793a7ad7118eaba45db379
+|OpenSSL (3.4.1) - 17.917 KB:|Página principal: https://www.openssl-library.org/<br>Descarga: https://github.com/openssl/openssl/releases/download/openssl-3.4.1/openssl-3.4.1.tar.gz<br>Suma MD5: fb7a747ac6793a7ad7118eaba45db379|
 |:-----|:-----|
 
-Patch (2.7.6) - 766 KB:
-Página principal: https://savannah.gnu.org/projects/patch/
-Descarga: https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz
-Suma MD5: 78ad9937e4caadcba1526ef1853730d5
+|Patch (2.7.6) - 766 KB:|Página principal: https://savannah.gnu.org/projects/patch/<br>Descarga: https://ftp.gnu.org/gnu/patch/patch-2.7.6.tar.xz<br>Suma MD5: 78ad9937e4caadcba1526ef1853730d5|
 |:-----|:-----|
 
-Perl (5.40.1) - 13.605 KB:
-Página principal: https://www.perl.org/
-Descarga: https://www.cpan.org/src/5.0/perl-5.40.1.tar.xz
-Suma MD5: bab3547a5cdf2302ee0396419d74a42e
+|Perl (5.40.1) - 13.605 KB:|Página principal: https://www.perl.org/<br>Descarga: https://www.cpan.org/src/5.0/perl-5.40.1.tar.xz<br>Suma MD5: bab3547a5cdf2302ee0396419d74a42e|
 |:-----|:-----|
 
-Pkgconf (2.3.0) - 309 KB:
-Página principal: https://github.com/pkgconf/pkgconf
-Descarga: https://distfiles.ariadne.space/pkgconf/pkgconf-2.3.0.tar.xz
-Suma MD5: 833363e77b5bed0131c7bc4cc6f7747b
+|Pkgconf (2.3.0) - 309 KB:|Página principal: https://github.com/pkgconf/pkgconf<br>Descarga: https://distfiles.ariadne.space/pkgconf/pkgconf-2.3.0.tar.xz<br>Suma MD5: 833363e77b5bed0131c7bc4cc6f7747b|
 |:-----|:-----|
 
-Procps (4.0.5) - 1.483 KB:
-Página principal: https://gitlab.com/procps-ng/procps/
-Descarga: https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.5.tar.xz
-Suma MD5: 90803e64f51f192f3325d25c3335d057
+|Procps (4.0.5) - 1.483 KB:|Página principal: https://gitlab.com/procps-ng/procps/<br>Descarga: https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.5.tar.xz<br>Suma MD5: 90803e64f51f192f3325d25c3335d057|
 |:-----|:-----|
 
-Psmisc (23.7) - 423 KB:
-Página principal: https://gitlab.com/psmisc/psmisc
-Descarga: https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz
-Suma MD5: 53eae841735189a896d614cba440eb10
+|Psmisc (23.7) - 423 KB:|Página principal: https://gitlab.com/psmisc/psmisc<br>Descarga: https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz<br>Suma MD5: 53eae841735189a896d614cba440eb10|
 |:-----|:-----|
 
-Python (3.13.2) - 22.091 KB:
-Página principal: https://www.python.org/
-Descarga: https://www.python.org/ftp/python/3.13.2/Python-3.13.2.tar.xz
-Suma MD5: 4c2d9202ab4db02c9d0999b14655dfe5
+|Python (3.13.2) - 22.091 KB:|Página principal: https://www.python.org/<br>Descarga: https://www.python.org/ftp/python/3.13.2/Python-3.13.2.tar.xz<br>Suma MD5: 4c2d9202ab4db02c9d0999b14655dfe5|
 |:-----|:-----|
 
-Python Documentation (3.13.2) - 10.102 KB:
-Descarga: https://www.python.org/ftp/python/doc/3.13.2/python-3.13.2-docs-html.tar.bz2
-Suma MD5: d6aede88f480a018d26b3206f21654ae
+|Python Documentation (3.13.2) - 10.102 KB:|Descarga: https://www.python.org/ftp/python/doc/3.13.2/python-3.13.2-docs-html.tar.bz2<br>Suma MD5: d6aede88f480a018d26b3206f21654ae|
 |:-----|:-----|
 
-Readline (8.2.13) - 2.974 KB:
-Página principal: https://tiswww.case.edu/php/chet/readline/rltop.html
-Descarga: https://ftp.gnu.org/gnu/readline/readline-8.2.13.tar.gz
-Suma MD5: 05080bf3801e6874bb115cd6700b708f
+|Readline (8.2.13) - 2.974 KB:|Página principal: https://tiswww.case.edu/php/chet/readline/rltop.html<br>Descarga: https://ftp.gnu.org/gnu/readline/readline-8.2.13.tar.gz<br>Suma MD5: 05080bf3801e6874bb115cd6700b708f|
 |:-----|:-----|
 
-Sed (4.9) - 1.365 KB:
-Página principal: https://www.gnu.org/software/sed/
-Descarga: https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz
-Suma MD5: 6aac9b2dbafcd5b7a67a8a9bcb8036c3
+|Sed (4.9) - 1.365 KB:|Página principal: https://www.gnu.org/software/sed/<br>Descarga: https://ftp.gnu.org/gnu/sed/sed-4.9.tar.xz<br>Suma MD5: 6aac9b2dbafcd5b7a67a8a9bcb8036c3|
 |:-----|:-----|
 
-Setuptools (75.8.1) - 1.313 KB:
-Página principal: https://pypi.org/project/setuptools/
-Descarga: https://pypi.org/packages/source/s/setuptools/setuptools-75.8.1.tar.gz
-Suma MD5: 7dc3d3f529b76b10e35326e25c676b30
+|Setuptools (75.8.1) - 1.313 KB:|Página principal: https://pypi.org/project/setuptools/<br>Descarga: https://pypi.org/packages/source/s/setuptools/setuptools-75.8.1.tar.gz<br>Suma MD5: 7dc3d3f529b76b10e35326e25c676b30|
 |:-----|:-----|
 
-Shadow (4.17.3) - 2.274 KB:
-Página principal: https://github.com/shadow-maint/shadow/
-Descarga: https://github.com/shadow-maint/shadow/releases/download/4.17.3/shadow-4.17.3.tar.xz
-Suma MD5: 0da190e53ecee76237e4c8f3f39531ed
+|Shadow (4.17.3) - 2.274 KB:|Página principal: https://github.com/shadow-maint/shadow/<br>Descarga: https://github.com/shadow-maint/shadow/releases/download/4.17.3/shadow-4.17.3.tar.xz<br>Suma MD5: 0da190e53ecee76237e4c8f3f39531ed|
 |:-----|:-----|
 
-Sysklogd (2.7.0) - 465 KB:
-Página principal: https://www.infodrom.org/projects/sysklogd/
-Descarga: https://github.com/troglobit/sysklogd/releases/download/v2.7.0/sysklogd-2.7.0.tar.gz
-Suma MD5: 611c0fa5c138eb7a532f3c13bdf11ebc
+|Sysklogd (2.7.0) - 465 KB:|Página principal: https://www.infodrom.org/projects/sysklogd/<br>Descarga: https://github.com/troglobit/sysklogd/releases/download/v2.7.0/sysklogd-2.7.0.tar.gz<br>Suma MD5: 611c0fa5c138eb7a532f3c13bdf11ebc|
 |:-----|:-----|
 
-Systemd (257.3) - 15.847 KB:
-Página principal: Español: https://www.freedesktop.org/wiki/Software/systemd/
-Descargar: https://github.com/systemd/systemd/archive/v257.3/systemd-257.3.tar.gz
-Suma MD5: 8e4fc90c7aead651fa5c50bd1b34abc2
+|Systemd (257.3) - 15.847 KB:|Página principal: Español: https://www.freedesktop.org/wiki/Software/systemd/<br>Descargar: https://github.com/systemd/systemd/archive/v257.3/systemd-257.3.tar.gz<br>Suma MD5: 8e4fc90c7aead651fa5c50bd1b34abc2|
 |:-----|:-----|
 
-Systemd Man Pages (257.3) - 733 KB:
-Página principal: https://www.freedesktop.org/wiki/Software/systemd/
-Descargar: https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-257.3.tar.xz
-Suma MD5: 9b77c3b066723d490cb10aed4fb05696
+|Systemd Man Pages (257.3) - 733 KB:|Página principal: https://www.freedesktop.org/wiki/Software/systemd/<br>Descargar: https://anduin.linuxfromscratch.org/LFS/systemd-man-pages-257.3.tar.xz<br>Suma MD5: 9b77c3b066723d490cb10aed4fb05696|
 |:-----|:-----|
 > ℹ️ **Nota**
 > 
@@ -2862,90 +2655,50 @@ Suma MD5: 9b77c3b066723d490cb10aed4fb05696
 > páginas de manual utilizando el código fuente de systemd. Esto se
 > hace para evitar dependencias innecesarias.
 
-SysVinit (3.14) - 236 KB:
-Página principal: https://savannah.nongnu.org/projects/sysvinit
-Descarga: https://github.com/slicer69/sysvinit/releases/download/3.14/sysvinit-3.14.tar.xz
-Suma MD5: bc6890b975d19dc9db42d0c7364dd092
+|SysVinit (3.14) - 236 KB:|Página principal: https://savannah.nongnu.org/projects/sysvinit<br>Descarga: https://github.com/slicer69/sysvinit/releases/download/3.14/sysvinit-3.14.tar.xz<br>Suma MD5: bc6890b975d19dc9db42d0c7364dd092|
 |:-----|:-----|
 
-Tar (1.35) - 2.263 KB:
-Página principal: https://www.gnu.org/software/tar/
-Descarga: https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz
-Suma MD5: a2d8042658cfd8ea939e6d911eaf4152
+|Tar (1.35) - 2.263 KB:|Página principal: https://www.gnu.org/software/tar/<br>Descarga: https://ftp.gnu.org/gnu/tar/tar-1.35.tar.xz<br>Suma MD5: a2d8042658cfd8ea939e6d911eaf4152|
 |:-----|:-----|
 
-Tcl (8.6.16) - 11.406 KB:
-Página principal: https://tcl.sourceforge.net/
-Descarga: https://downloads.sourceforge.net/tcl/tcl8.6.16-src.tar.gz
-Suma MD5: eaef5d0a27239fb840f04af8ec608242
+|Tcl (8.6.16) - 11.406 KB:|Página principal: https://tcl.sourceforge.net/<br>Descarga: https://downloads.sourceforge.net/tcl/tcl8.6.16-src.tar.gz<br>Suma MD5: eaef5d0a27239fb840f04af8ec608242|
 |:-----|:-----|
 
-Tcl Documentation (8.6.16) - 1.169 KB:
-Descarga: https://downloads.sourceforge.net/tcl/tcl8.6.16-html.tar.gz
-Suma MD5: 750c221bcb6f8737a6791c1fbe98b684
+|Tcl Documentation (8.6.16) - 1.169 KB:|Descarga: https://downloads.sourceforge.net/tcl/tcl8.6.16-html.tar.gz<br>Suma MD5: 750c221bcb6f8737a6791c1fbe98b684|
 |:-----|:-----|
 
-Texinfo (7.2) - 6.259 KB:
-Página principal: https://www.gnu.org/software/texinfo/
-Descargar: https://ftp.gnu.org/gnu/texinfo/texinfo-7.2.tar.xz
-Suma MD5: 11939a7624572814912a18e76c8d8972
+|Texinfo (7.2) - 6.259 KB:|Página principal: https://www.gnu.org/software/texinfo/<br>Descargar: https://ftp.gnu.org/gnu/texinfo/texinfo-7.2.tar.xz<br>Suma MD5: 11939a7624572814912a18e76c8d8972|
 |:-----|:-----|
 
-Time Zone Data (2025a) - 453 KB:
-Página principal: https://www.iana.org/time-zones
-Descargar: https://www.iana.org/time-zones/repository/releases/tzdata2025a.tar.gz
-Suma MD5: 404229390c06b7440f5e48d12c1a3251
+|Time Zone Data (2025a) - 453 KB:|Página principal: https://www.iana.org/time-zones<br>Descargar: https://www.iana.org/time-zones/repository/releases/tzdata2025a.tar.gz<br>Suma MD5: 404229390c06b7440f5e48d12c1a3251|
 |:-----|:-----|
 
-Udev-lfs Tarball (udev-lfs-20230818) - 10 KB:
-Descargar: https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz
-Suma MD5: acd4360d8a5c3ef320b9db88d275dae6
+|Udev-lfs Tarball (udev-lfs-20230818) - 10 KB:|Descargar: https://anduin.linuxfromscratch.org/LFS/udev-lfs-20230818.tar.xz<br>Suma MD5: acd4360d8a5c3ef320b9db88d275dae6|
 |:-----|:-----|
 
-Util-linux (2.40.4) - 8.641 KB:
-Página principal: https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/
-Descarga: https://www.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.4.tar.xz
-Suma MD5: f9cbb1c8315d8ccbeb0ec36d10350304
+|Util-linux (2.40.4) - 8.641 KB:|Página principal: https://git.kernel.org/pub/scm/utils/util-linux/util-linux.git/<br>Descarga: https://www.kernel.org/pub/linux/utils/util-linux/v2.40/util-linux-2.40.4.tar.xz<br>Suma MD5: f9cbb1c8315d8ccbeb0ec36d10350304|
 |:-----|:-----|
 
-Vim (9.1.1166) - 18.077 KB:
-Página principal: https://www.vim.org
-Descarga: https://github.com/vim/vim/archive/v9.1.1166/vim-9.1.1166.tar.gz
-Suma MD5: 718d43ce957ab7c81071793de176c2eb
+|Vim (9.1.1166) - 18.077 KB:|Página principal: https://www.vim.org<br>Descarga: https://github.com/vim/vim/archive/v9.1.1166/vim-9.1.1166.tar.gz<br>Suma MD5: 718d43ce957ab7c81071793de176c2eb|
 |:-----|:-----|
 > ℹ️ **Nota**
 > 
 > La versión de Vim cambia a diario. Para obtener la versión más
 > reciente, visite https://github.com/vim/vim/tags.
 
-Wheel (0.45.1) - 106 KB:
-Página principal: https://pypi.org/project/wheel/
-Descarga: https://pypi.org/packages/source/w/wheel/wheel-0.45.1.tar.gz
-Suma MD5: dddc505d0573d03576c7c6c5a4fe0641
+|Wheel (0.45.1) - 106 KB:|Página principal: https://pypi.org/project/wheel/<br>Descarga: https://pypi.org/packages/source/w/wheel/wheel-0.45.1.tar.gz<br>Suma MD5: dddc505d0573d03576c7c6c5a4fe0641|
 |:-----|:-----|
 
-XML::Parser (2.47) - 276 KB:
-Página principal: https://github.com/chorny/XML-Parser
-Descarga: https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.47.tar.gz
-Suma MD5: 89a8e82cfd2ad948b349c0a69c494463
+|XML::Parser (2.47) - 276 KB:|Página principal: https://github.com/chorny/XML-Parser<br>Descarga: https://cpan.metacpan.org/authors/id/T/TO/TODDR/XML-Parser-2.47.tar.gz<br>Suma MD5: 89a8e82cfd2ad948b349c0a69c494463|
 |:-----|:-----|
 
-Xz Utils (5.6.4) - 1.310 KB:
-Página principal: https://tukaani.org/xz
-Descarga: https://github.com//tukaani-project/xz/releases/download/v5.6.4/xz-5.6.4.tar.xz
-Suma MD5: 4b1cf07d45ec7eb90a01dd3c00311a3e
+|Xz Utils (5.6.4) - 1.310 KB:|Página principal: https://tukaani.org/xz<br>Descarga: https://github.com//tukaani-project/xz/releases/download/v5.6.4/xz-5.6.4.tar.xz<br>Suma MD5: 4b1cf07d45ec7eb90a01dd3c00311a3e|
 |:-----|:-----|
 
-Zlib (1.3.1) - 1.478 KB:
-Página principal: https://zlib.net/
-Descarga: https://zlib.net/fossils/zlib-1.3.1.tar.gz
-Suma MD5: 9855b6d802d7fe5b7bd5b196a2271655
+|Zlib (1.3.1) - 1.478 KB:|Página principal: https://zlib.net/<br>Descarga: https://zlib.net/fossils/zlib-1.3.1.tar.gz<br>Suma MD5: 9855b6d802d7fe5b7bd5b196a2271655|
 |:-----|:-----|
 
-Zstd (1.5.7) - 2.378 KB:
-Página principal: https://facebook.github.io/zstd/
-Descarga: https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
-Suma MD5: 780fc1896922b1bc52a4e90980cdda48
+|Zstd (1.5.7) - 2.378 KB:|Página principal: https://facebook.github.io/zstd/<br>Descarga: https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz<br>Suma MD5: 780fc1896922b1bc52a4e90980cdda48|
 |:-----|:-----|
 
 Tamaño total de estos paquetes: aproximadamente 527 MB
