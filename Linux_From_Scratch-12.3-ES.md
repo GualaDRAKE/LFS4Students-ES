@@ -2453,7 +2453,7 @@ Bash (5.2.37) - 10.868 KB:|Página principal: https://www.gnu.org/software/bash/
 |E2fsprogs (1.47.2) - 9.763 KB:|Página principal: https://e2fsprogs.sourceforge.net/<br>Descarga: https://downloads.sourceforge.net/project/e2fsprogs/e2fsprogs/v1.47.2/e2fsprogs-1.47.2.tar.gz<br>Suma MD5: 752e5a3ce19aea060d8a203f2fae9baa|
 |:-----|:-----|
 
-|Elfutils (0.192) - 11 635 KB:Página principal: https://sourceware.org/elfutils/<br>Descarga: https://sourceware.org/ftp/elfutils/0.192/elfutils-0.192.tar.bz2<br>Suma MD5: a6bb1efc147302cfc15b5c2b827f186a|
+|Elfutils (0.192) - 11 635 KB:|Página principal: https://sourceware.org/elfutils/<br>Descarga: https://sourceware.org/ftp/elfutils/0.192/elfutils-0.192.tar.bz2<br>Suma MD5: a6bb1efc147302cfc15b5c2b827f186a|
 |:-----|:-----|
 
 |Expat (2.6.4) - 476 KB:|Página principal: https://libexpat.github.io/<br>Descarga: https://prdownloads.sourceforge.net/expat/expat-2.6.4.tar.xz<br>Suma MD5: 101fe3e320a2800f36af8cf4045b45c7|
