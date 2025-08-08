@@ -346,8 +346,8 @@ paquete en el libro.
 Acceso, que se utilizan para definir permisos de acceso discrecionales
 de granularidad precisa para archivos y directorios.
 
-• **Attr** - 
-Este paquete contiene programas para administrar atributos extendidos en
+- **Attr** -
+- Este paquete contiene programas para administrar atributos extendidos en
 objetos del sistema de archivos.
 
 • **Autoconf** - 
