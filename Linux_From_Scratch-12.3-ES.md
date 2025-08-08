@@ -243,7 +243,7 @@ LFS).
 
 Antes de crear un sistema LFS, le recomendamos leer estos artículos:
 
-• Manual de desarrollo de software
+• Manual de desarrollo de software:
 
    <https://tldp.org/HOWTO/Software-Building-HOWTO.html>
 
@@ -251,7 +251,7 @@ Esta es una guía completa para crear e instalar paquetes de software
 genéricos de Unix en Linux. Aunque se escribió hace tiempo, ofrece un
 buen resumen de las técnicas básicas para crear e instalar software.
 
-• Guía para principiantes sobre la instalación desde el código fuente
+• Guía para principiantes sobre la instalación desde el código fuente:
 
    <https://moi.vonos.net/linux/beginners-installing-from-source/>
 
@@ -880,7 +880,6 @@ el sistema LFS esté completamente compilado.
 &nbsp;
 
 # Parte I. Introducción
-
 ## Capítulo 1 - Introducción
 
 ## 1.1. Cómo construir un sistema LFS
@@ -936,7 +935,7 @@ mientras se construye LFS. Mientras espera a que se completen las
 compilaciones de paquetes, puede seguir usando su ordenador con
 normalidad.
 
-El [Capítulo 9](#capitulo-9), Configuración del sistema, para comenzar a finalizar la instalación, trata la
+El [Capítulo 9](#capitulo-9) Configuración del sistema, para comenzar a finalizar la instalación, trata la
 configuración básica del sistema.
 
 El [Capítulo 10](#capitulo-10) Haciendo que el sistema LFS sea arrancable crea el kernel y configura el gestor de arranque.
@@ -1657,7 +1656,7 @@ Si está compilando un kernel personalizado para el host, asegúrese de que
 CONFIG_UNIX98_PTYS esté establecida en ¨y¨ (de *YES*) en la configuración del
 kernel.
 
-• **M4-1.4.10**
+• M4-1.4.10
 
 • Make-4.0
 
@@ -2004,12 +2003,12 @@ sistema con UEFI. Consulte [la página de
 BLFS](https://www.linuxfromscratch.org/blfs/view/12.3/postlfs/grub-setup.html)
 para obtener más información.
 
-• /home -- Muy recomendable. Comparte tu directorio personal y la
+• /home: Muy recomendable. Comparte tu directorio personal y la
 personalización de usuario entre varias distribuciones o compilaciones
 LFS. El tamaño suele ser bastante grande y depende del espacio
 disponible en disco.
 
-• /usr -- En LFS, /bin, /lib y /sbin son enlaces simbólicos a sus
+• /usr: En LFS, /bin, /lib y /sbin son enlaces simbólicos a sus
 equivalentes en /usr. Por lo tanto, /usr contiene todos los binarios
 necesarios para el funcionamiento del sistema. Para LFS, normalmente no
 se necesita una partición independiente para /usr. Si la creas de todos
