@@ -361,163 +361,164 @@ después de actualizar el procedimiento de compilación.
 una plantilla. A menudo es necesario reconstruir un paquete después de
 actualizar el procedimiento de compilación.
 
-• **Bash** - 
-Este paquete satisface un requisito básico de LSB para proporcionar una
+- **Bash**
+  - Este paquete satisface un requisito básico de LSB para proporcionar una
 interfaz Bourne Shell al sistema. Se eligió sobre otros paquetes de
 shell debido a su uso común y amplias capacidades.
 
-• **Bc** - 
-Este paquete proporciona un lenguaje de procesamiento numérico de
+- **Bc**
+  - Este paquete proporciona un lenguaje de procesamiento numérico de
 precisión arbitraria. Satisface un requisito para compilar el kernel de
 Linux.
 
-• **Binutils** - 
-Este paquete proporciona un enlazador, un ensamblador y otras
+- **Binutils**
+  - Este paquete proporciona un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto. Los programas de este
 paquete son necesarios para compilar la mayoría de los paquetes en un
 sistema LFS.
 
-• **Bison** - 
-Este paquete contiene la versión GNU de yacc (Yet Another Compiler
+- **Bison**
+  - Este paquete contiene la versión GNU de yacc (Yet Another Compiler
 Compiler), necesaria para compilar varios programas LFS.
 
-• **Bzip2** - 
-Este paquete contiene programas para comprimir y descomprimir archivos.
+- **Bzip2**
+  - Este paquete contiene programas para comprimir y descomprimir archivos.
 Es necesario para descomprimir muchos paquetes LFS.
 
-• **Check** - 
-Este paquete proporciona una herramienta de prueba para otros programas.
+- **Check**
+  - Este paquete proporciona una herramienta de prueba para otros programas.
 
-• **Coreutils** - 
-Este paquete contiene varios programas esenciales para visualizar y
+- **Coreutils**
+  - Este paquete contiene varios programas esenciales para visualizar y
 manipular archivos y directorios. Estos programas son necesarios para la
 gestión de archivos desde la línea de comandos y para los procedimientos
 de instalación de todos los paquetes en LFS.
 
-• **DejaGNU** - 
-Este paquete proporciona un marco para probar otros programas.
+- **DejaGNU**
+  - Este paquete proporciona un marco para probar otros programas.
 
-• **Diffutils** - 
-Este paquete contiene programas que muestran las diferencias entre
+- **Diffutils**
+  - Este paquete contiene programas que muestran las diferencias entre
 archivos o directorios. Estos programas se pueden usar para crear
 parches y también se utilizan en los procedimientos de compilación de
 muchos paquetes.
 
-• **E2fsprogs** - 
-Este paquete proporciona utilidades para gestionar los sistemas de
+- **E2fsprogs**
+  - Este paquete proporciona utilidades para gestionar los sistemas de
 archivos ext2, ext3 y ext4. Estos son los sistemas de archivos más
 comunes y ampliamente probados que Linux soporta.
 
-• **Expat** - 
-Este paquete proporciona una biblioteca de análisis de XML relativamente
+- **Expat**
+  - Este paquete proporciona una biblioteca de análisis de XML relativamente
 pequeña. Es necesaria para el módulo XML::Parser de Perl.
 
-• **Expect** - 
-Este paquete contiene un programa para ejecutar diálogos programados con
+- **Expect**
+  - Este paquete contiene un programa para ejecutar diálogos programados con
 otros programas interactivos. Se utiliza comúnmente para probar otros
 paquetes.
 
-• **File** - 
-Este paquete contiene una utilidad para determinar el tipo de uno o más
+- **File**
+  - Este paquete contiene una utilidad para determinar el tipo de uno o más
 archivos. Algunos paquetes la necesitan en sus scripts de compilación.
 
-• Findutils - 
-Este paquete proporciona programas para buscar archivos en un sistema de
+- **Findutils**
+  - Este paquete proporciona programas para buscar archivos en un sistema de
 archivos. Se utiliza en los scripts de compilación de muchos paquetes.
 
-• **Flex** - 
-Este paquete contiene una utilidad para generar programas que reconocen
+- **Flex**
+  - Este paquete contiene una utilidad para generar programas que reconocen
 patrones en texto. Es l a versión GNU del programa lex (analizador
 léxico). Es necesario para compilar varios paquetes LFS.
 
-• **Gawk** - 
-Este paquete proporciona programas para manipular archivos de texto. Es
+- **Gawk**
+  - Este paquete proporciona programas para manipular archivos de texto. Es
 la versión GNU de awk (Aho-Weinberg-Kernighan). Se utiliza en los
 scripts de compilación de muchos otros paquetes.
 
-• **GCC** - 
-Esta es la Colección de Compiladores GNU. Contiene los compiladores de C
+- **GCC**
+  - Esta es la Colección de Compiladores GNU. Contiene los compiladores de C
 y C++, así como varios otros no compilados por LFS.
 
-• **GDBM** - 
-Este paquete contiene la biblioteca GNU Database Manager. La utiliza
+- **GDBM**
+  - Este paquete contiene la biblioteca GNU Database Manager. La utiliza
 otro paquete de LFS: Man-DB.
 
-• **Gettext** - 
-Este paquete proporciona utilidades y bibliotecas para la
+- **Gettext**
+  - Este paquete proporciona utilidades y bibliotecas para la
 internacionalización y localización de numerosos paquetes.
 
-• **Glibc** - 
-Este paquete contiene la biblioteca principal de C. Los programas de
+- **Glibc**
+  - Este paquete contiene la biblioteca principal de C. Los programas de
 Linux no se ejecutarán sin ella.
 
-• **GMP** - 
-Este paquete proporciona bibliotecas matemáticas que ofrecen funciones
+- **GMP**
+  - Este paquete proporciona bibliotecas matemáticas que ofrecen funciones
 útiles para cálculos aritméticos de precisión arbitraria. Es necesario
 para compilar GCC.
 
-• **Gperf** -  
-Este paquete produce un programa que genera una función hash perfecta a
+- **Gperf**
+  -  Este paquete produce un programa que genera una función hash perfecta a
 partir de un conjunto de claves. Es requerido por Udev.
 
-• **Grep** - 
-Este paquete contiene programas para buscar archivos. Estos programas se
+- **Grep**
+  - Este paquete contiene programas para buscar archivos. Estos programas se
 utilizan en la mayoría de los scripts de compilación de los paquetes.
 
-• **Groff** - 
+- **Groff**
+  - 
 Este paquete proporciona programas para procesar y formatear texto. Una
 función importante de estos programas es formatear páginas de manual.
 
-• **GRUB** - 
+- **GRUB** - 
 Este es el Gran Cargador de Arranque Unificado. Es el más flexible de
 los cargadores de arranque disponibles.
 
-• **Gzip** - 
+- **Gzip** - 
 Este paquete contiene programas para comprimir y descomprimir archivos.
 Es necesario para descomprimir muchos paquetes en LFS.
 
-• **Iana-etc** - 
-Este paquete proporciona datos para servicios y protocolos de red. Es
+- **Iana-etc**
+  - Este paquete proporciona datos para servicios y protocolos de red. Es
 necesario para habilitar capacidades de red adecuadas.
 
-• **Inetutils** - 
-Este paquete proporciona programas para la administración básica de red.
+- **Inetutils**
+  - Este paquete proporciona programas para la administración básica de red.
 
-• **Intltool** - 
-Este paquete proporciona herramientas para extraer cadenas traducibles
+- **Intltool**
+  - Este paquete proporciona herramientas para extraer cadenas traducibles
 de archivos fuente.
 
-• **IProute2** - 
-Este paquete contiene programas para redes IPv4 e IPv6 básicas y
+- **IProute2**
+  - Este paquete contiene programas para redes IPv4 e IPv6 básicas y
 avanzadas. Fue elegido en l ugar del otro paquete de herramientas de red
 común (net-tools) por sus capacidades IPv6.
 
-• **Kbd** - 
-Este paquete produce archivos de tablas de teclas, utilidades de teclado
+- **Kbd**
+  - Este paquete produce archivos de tablas de teclas, utilidades de teclado
 para teclados no estadounidenses y diversas fuentes de consola.
 
-• **Kmod** - 
-Este paquete proporciona los programas necesarios para administrar los
+- **Kmod**
+  - Este paquete proporciona los programas necesarios para administrar los
 módulos del kernel de Linux.
 
-• **Less** - 
-Este paquete contiene un visor de archivos de texto muy útil que permite
+- **Less**
+  - Este paquete contiene un visor de archivos de texto muy útil que permite
 desplazarse hacia arriba o hacia abajo al visualizar un archivo. Muchos
 paquetes lo utilizan para paginar la salida.
 
-• **Libcap** - 
-Este paquete implementa las interfaces de espacio de usuario para las
+- **Libcap**
+  - Este paquete implementa las interfaces de espacio de usuario para las
 capacidades POSIX 1003.1e disponibles en los kernels de Linux.
 
-• **Libelf** - 
-El proyecto elfutils proporciona bibliotecas y herramientas para
+- **Libelf**
+  - El proyecto elfutils proporciona bibliotecas y herramientas para
 archivos ELF y datos DWARF. La mayoría de las utilidades de este paquete
 están disponibles en otros paquetes, pero la biblioteca es necesaria
 para compilar el kernel de Linux con la configuración predeterminada (la
 más eficiente).
 
-• **Libffi** - 
-Este paquete implementa una interfaz de programación portátil de alto
+- **Libffi**
+  - Este paquete implementa una interfaz de programación portátil de alto
 nivel para diversas convenciones de llamada. Algunos programas pueden no
 saber, al compilar, qué argumentos se deben pasar a una función. Por
 ejemplo, a un intérprete se le puede indicar en tiempo de ejecución el
@@ -525,178 +526,178 @@ número y los tipos de argumentos utilizados para llamar a una función
 determinada. Libffi puede utilizarse en estos programas para conectar el
 programa intérprete con el código compilado.
 
-• **Libpipeline** - 
-El paquete Libpipeline proporciona una biblioteca para manipular las
+- **Libpipeline**
+  - El paquete Libpipeline proporciona una biblioteca para manipular las
 canalizaciones de subprocesos de forma flexible y cómoda. Es necesario
 para el paquete Man-DB.
 
-• **Libtool** - 
-Este paquete contiene el script de soporte para bibliotecas genéricas de
+- **Libtool**
+  - Este paquete contiene el script de soporte para bibliotecas genéricas de
 GNU. Consiste en la complejidad del uso de bibliotecas compartidas en
 una interfaz consistente y portátil. Es necesario para las suites de
 pruebas de otros paquetes LFS.
 
-• **Libxcrypt** - 
-Este paquete proporciona la biblioteca libcrypt, necesaria para varios
+- **Libxcrypt**
+  - Este paquete proporciona la biblioteca libcrypt, necesaria para varios
 paquetes (en particular, Shadow) para el hash de contraseñas.
 Reemplaza la implementación obsoleta de libcrypt en Glibc.
 
-• **Linux Kernel** - 
-Este paquete representa el sistema operativo. Representa Linux en el
+- **Linux Kernel**
+  - Este paquete representa el sistema operativo. Representa Linux en el
 entorno GNU/Linux.
 
-• **M4** - 
-Este paquete proporciona un procesador de macros de texto general, útil
+- **M4**
+  - Este paquete proporciona un procesador de macros de texto general, útil
 como herramienta de compilación para otros programas.
 
-• **Make** - 
-Este paquete contiene un programa para dirigir la compilación de
+- **Make**
+  - Este paquete contiene un programa para dirigir la compilación de
 paquetes. Es necesario para casi todos los paquetes de LFS.
 
-• **Man-DB** - 
-Este paquete contiene programas para buscar y visualizar páginas de
+- **Man-DB**
+  - Este paquete contiene programas para buscar y visualizar páginas de
 manual. Se eligió en lugar del paquete man debido a sus superiores
 capacidades de internacionalización. Proporciona el programa man.
 
-• **Man-Pages** - 
-Este paquete proporciona el contenido de las páginas de manual básicas
+- **Man-Pages**
+  - Este paquete proporciona el contenido de las páginas de manual básicas
 de Linux.
 
-• **Meson** - 
-Este paquete proporciona una herramienta de software para automatizar la
+- **Meson**
+  - Este paquete proporciona una herramienta de software para automatizar la
 compilación de software. El objetivo principal de Meson es minimizar el
 tiempo que los desarrolladores de software dedican a configurar un
 sistema de compilación. Es necesario para compilar Systemd, así como
 muchos paquetes BLFS.
 
-• **MPC** - 
-Este paquete proporciona funciones aritméticas para números complejos.
+- **MPC**
+  - Este paquete proporciona funciones aritméticas para números complejos.
 Es requerido por GCC.
 
-• **MPFR** - 
-Este paquete contiene funciones para aritmética de precisión múltiple.
+- **MPFR**
+  - Este paquete contiene funciones para aritmética de precisión múltiple.
 Es requerido por GCC.
 
-• **Ninja** - 
-Este pa quete proporciona un sistema de compilación pequeño enfocado en
+- **Ninja**
+  - Este pa quete proporciona un sistema de compilación pequeño enfocado en
 la velocidad. Está diseñado para que sus archivos de entrada sean
 generados por un sistema de compilación de alto nivel y para ejecutar
 las compilaciones lo más rápido posible. Este paquete es requerido por
 Meson.
 
-• **Ncurses** - 
-Este paquete contiene bibliotecas para la gestión de pantallas de
+- **Ncurses**
+  - Este paquete contiene bibliotecas para la gestión de pantallas de
 caracteres independiente de la terminal. Se utiliza a menudo para
 proporcionar control del cursor en un sistema de menús. Es necesario
 para varios paquetes de LFS.
 
-• **Openssl** - 
-Este paquete proporciona herramientas de gestión y bibliotecas
+- **Openssl**
+  - Este paquete proporciona herramientas de gestión y bibliotecas
 relacionadas con la criptografía. Estas proporcionan funciones
 criptográficas a otros paquetes, incluido el kernel de Linux.
 
-• **Patch** - 
-Este paquete contiene un programa para modificar o crear archivos
+- **Patch**
+  - Este paquete contiene un programa para modificar o crear archivos
 mediante la aplicación de un archivo de parche, normalmente creado por
 el programa diff. Es necesario para el proceso de compilación de varios
 paquetes de LFS.
 
-• Perl - 
-Este paquete es un intérprete para el lenguaje de ejecución PERL. Es
+- **Perl**
+  - Este paquete es un intérprete para el lenguaje de ejecución PERL. Es
 necesario para la instalación y los conjuntos de pruebas de varios
 paquetes de LFS.
 
-• **Pkgconf** - 
-Este paquete contiene un programa que ayuda a configurar los indicadores
+- **Pkgconf**
+  - Este paquete contiene un programa que ayuda a configurar los indicadores
 del compilador y del enlazador para las bibliotecas de desarrollo.
 El programa puede utilizarse como sustituto directo de pkg-config,
 necesario para el sistema de compilación de muchos paquetes. Su
 mantenimiento es más activo y ligeramente más rápido que el del paquete
 Pkg-config original.
 
-• **Procps-NG** - 
-Este paquete contiene programas para la monitorización de procesos.
+- **Procps-NG**
+  - Este paquete contiene programas para la monitorización de procesos.
 Estos programas son útiles para la administración del sistema y también
 los utilizan los scripts de arranque de LFS.
 
-• **Psmisc** - 
-Este paquete produce programas para mostrar información sobre los
+- **Psmisc**
+  - Este paquete produce programas para mostrar información sobre los
 procesos en ejecución. Estos programas son útiles para la administración
 del sistema.
 
-• **Python 3** - 
-Este paquete proporciona un lenguaje interpretado con una filosofía de
+- **Python 3**
+  - Este paquete proporciona un lenguaje interpretado con una filosofía de
 diseño que prioriza la legibilidad del código.
 
-• **Readline** - 
-Este paquete es un conjunto de bibliotecas que ofrecen funciones de
+- **Readline**
+  - Este paquete es un conjunto de bibliotecas que ofrecen funciones de
 edición e historial desde la línea de comandos. Es utilizado por Bash.
 
-• **Sed** - 
-Este paquete permite editar texto sin abrirlo en un editor de texto.
+- **Sed**
+  - Este paquete permite editar texto sin abrirlo en un editor de texto.
 También es necesario para los scripts de configuración de muchos
 paquetes LFS.
 
-• **Shadow** - 
-Este paquete contiene programas para gestionar contraseñas de forma
+- **Shadow**
+  - Este paquete contiene programas para gestionar contraseñas de forma
 segura.
 
-• **Sysklogd** - 
-Este paquete proporciona programas para registrar mensajes del sistema,
+- **Sysklogd**
+  - Este paquete proporciona programas para registrar mensajes del sistema,
 como los emitidos por el núcleo o los procesos demonio cuando se
 producen eventos inusuales.
 
-• **SysVinit** - 
-Este paquete proporciona el programa init, el padre de todos los demás
+- **SysVinit**
+  - Este paquete proporciona el programa init, el padre de todos los demás
 procesos en un sistema Linux en ejecución.
 
-• **Udev** - 
-Este paquete es un administrador de dispositivos. Controla dinámicamente
+- **Udev**
+  - Este paquete es un administrador de dispositivos. Controla dinámicamente
 la propiedad, los permisos, los nombres y los enlaces simbólicos de los
 nodos de dispositivo en el directorio /dev cuando se añaden o eliminan
 dispositivos del sistema.
 
-• **Tar** - 
-Este paquete proporciona funciones de archivado y extracción de
+- **Tar**
+  - Este paquete proporciona funciones de archivado y extracción de
 prácticamente todos los paquetes utilizados en LFS.
 
-• **Tcl** - 
-Este paquete contiene el lenguaje de comandos de herramientas (Tool
+- **Tcl**
+  - Este paquete contiene el lenguaje de comandos de herramientas (Tool
 Command Language) utilizado en numerosas suites de pruebas.
 
-• **Texinfo** - 
-Este paquete proporciona programas para leer, escribir y convertir
+- **Texinfo**
+  - Este paquete proporciona programas para leer, escribir y convertir
 páginas de información. Se utiliza en los procedimientos de instalación
 de numerosos paquetes LFS.
 
-• **Util-linux** - 
-Este paquete contiene diversas utilidades, entre ellas, utilidades para
+- **Util-linux**
+  - Este paquete contiene diversas utilidades, entre ellas, utilidades para
 gestionar sistemas de archivos, consolas, particiones y mensajes.
 
-• **Vim** - 
-Este paquete proporciona un editor. Fue elegido por su compatibilidad
+- **Vim**
+  - Este paquete proporciona un editor. Fue elegido por su compatibilidad
 con el editor clásico vi y su gran cantidad de potentes funciones. El
 editor es una elección muy personal para muchos usuarios. Se puede
 sustituir por cualquier otro editor si se desea.
 
-• **Wheel** - 
-Este paquete proporciona un módulo de Python que es la implementación de
+- **Wheel**
+  - Este paquete proporciona un módulo de Python que es la implementación de
 referencia del estándar de empaquetado wheel de Python.
 
-• **XML::Parser** - 
-Este paquete es un módulo de Perl que interactúa con Expat.
+- **XML::Parser**
+  - Este paquete es un módulo de Perl que interactúa con Expat.
 
-• **XZ Utils** - 
-Este paquete contiene programas para comprimir y descomprimir archivos.
+- **XZ Utils**
+  - Este paquete contiene programas para comprimir y descomprimir archivos.
 Proporciona la mayor compresión disponible y es útil para descomprimir
 paquetes en formato XZ o LZMA.
 
-• **Zlib - 
-Este paquete contiene rutinas de compresión y descompresión utilizadas
+- **Zlib**
+  - Este paquete contiene rutinas de compresión y descompresión utilizadas
 por algunos programas.
 
-• **Zstd** - 
-Este paquete proporciona rutinas de compresión y descompresión
+- **Zstd**
+  - Este paquete proporciona rutinas de compresión y descompresión
 utilizadas por algunos programas. Ofrece altas tasas de compresión y una
 amplia gama de compensaciones entre compresión y velocidad.
 
