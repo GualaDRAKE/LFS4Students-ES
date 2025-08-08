@@ -2942,9 +2942,8 @@ archivo .bashrc ahora:
 
 **Significado de la configuración en .bashrc**:
 
-set +h
-
-El comando **set +h** desactiva la función hash de **bash**. El hash
+- *set +h*
+   - El comando **set +h** desactiva la función hash de **bash**. El hash
 suele ser una función útil: **bash** utiliza una tabla hash para
 recordar la ruta completa de los archivos ejecutables y evitar buscar
 repetidamente en PATH el mismo ejecutable. Sin embargo, las nuevas
@@ -2955,60 +2954,51 @@ compiladas en \$LFS/tools/bin tan pronto como estén disponibles, sin
 recordar una versión anterior del mismo programa proporcionada por la
 distribución del host, en /usr/bin o /bin.
 
-umask 022
-
-Configurando la máscara de usuario como ya explicamos en la Sección 2.6,
+- *umask 022*
+   - Configurando la máscara de usuario como ya explicamos en la Sección 2.6,
 "Configuración de la variable \$LFS y la máscara de usuario".
 
-LFS=/mnt/lfs
+- *LFS=/mnt/lfs*
+   - La variable LFS debe establecerse en el punto de montaje seleccionado.
 
-La variable LFS debe establecerse en el punto de montaje seleccionado.
-
-LC_ALL=POSIX
-
-La variable LC_ALL controla la localización de ciertos programas,
+- *LC_ALL=POSIX-
+   - La variable LC_ALL controla la localización de ciertos programas,
 haciendo que sus mensajes sigan las convenciones de un país específico.
 Establecer LC_ALL en "POSIX" o "C" (ambos son equivalentes) garantiza
 que todo funcione correctamente en el entorno de compilación cruzada.
 
-LFS_TGT=\$(uname -m)-lfs-linux-gnu
-
-La variable LFS_TGT establece una descripción de máquina no
+- *LFS_TGT=\$(uname -m)-lfs-linux-gnu*
+   - La variable LFS_TGT establece una descripción de máquina no
 predeterminada, pero compatible, para usarla al compilar nuestro
 compilador y enlazador cruzados, así como al compilar nuestra cadena de
 herramientas temporal. Para más información, consulte las Notas Técnicas
 de la Cadena de Herramientas.
 
-PATH=/usr/bin
-
-Muchas distribuciones modernas de Linux han fusionado /bin y /usr/bin.
+- *PATH=/usr/bin*
+   - Muchas distribuciones modernas de Linux han fusionado /bin y /usr/bin.
 En este caso, la variable PATH estándar debe establecerse en /usr/bin/
 para el entorno del Capítulo 6. En caso contrario, la siguiente línea
 añade /bin a la ruta.
 
-if \[ ! -L /bin \]; then PATH=/bin:\$PATH; fi
+- *if \[ ! -L /bin \]; then PATH=/bin:\$PATH; fi*
+   - Si /bin no es un enlace simbólico, debe añadirse a la variable PATH.
 
-Si /bin no es un enlace simbólico, debe añadirse a la variable PATH.
-
-PATH=\$LFS/tools/bin:\$PATH
-
-Al colocar \$LFS/tools/bin antes de la variable PATH estándar, el
+- *PATH=\$LFS/tools/bin:\$PATH*
+   - Al colocar \$LFS/tools/bin antes de la variable PATH estándar, el
 compilador cruzado instalado al principio del Capítulo 5 es recogido por
 el shell inmediatamente después de su instalación. Esto, junto con la
 desactivación del hash, limita el riesgo de que se utilice el compilador
 del host en lugar del compilador cruzado.
 
-CONFIG_SITE=\$LFS/usr/share/config.site
-
-En los capítulos 5 y 6, si esta variable no está configurada, los
+- *CONFIG_SITE=\$LFS/usr/share/config.site*
+    - En los capítulos 5 y 6, si esta variable no está configurada, los
 scripts de configuración podrían intentar cargar elementos de
 configuración específicos de algunas distribuciones desde
 /usr/share/config.site en el sistema host. Anótela para evitar una
 posible contaminación desde el host.
 
-export \...
-
-Aunque los comandos anteriores han configurado algunas variables, para
+- *export \...*
+   - Aunque los comandos anteriores han configurado algunas variables, para
 que sean visibles en cualquier subshell, las exportamos.
 
 > 📌 **Importante**
@@ -3730,51 +3720,43 @@ Ahora prepare Binutils para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--prefix=\$LFS/tools
-
-Esto indica al script de configuración que se prepare para instalar los
+- *\--prefix=\$LFS/tools*
+    - Esto indica al script de configuración que se prepare para instalar los
 programas de Binutils en el directorio \$LFS/tools.
 
-\--with-sysroot=\$LFS
-
-Para la compilación cruzada, esto indica al sistema de compilación que
+- *\--with-sysroot=\$LFS*
+   - Para la compilación cruzada, esto indica al sistema de compilación que
 busque en \$LFS las bibliotecas del sistema de destino según sea
 necesario.
 
-\--target=\$LFS_TGT
-
-Dado que la descripción de la máquina en la variable LFS_TGT es
+- *\--target=\$LFS_TGT*
+   - Dado que la descripción de la máquina en la variable LFS_TGT es
 ligeramente diferente del valor devuelto por el script config.guess,
 esta opción indicará al script de configuración que ajuste el sistema de
 compilación de binutil para la creación de un enlazador cruzado.
 
-\--disable-nls
-
-Esto deshabilita la internacionalización, ya que i18n no es necesario
+- *\--disable-nls*
+   - Esto deshabilita la internacionalización, ya que i18n no es necesario
 para las herramientas temporales.
 
-\--enable-gprofng=no
-
-Esto deshabilita la creación de gprofng, que no es necesario para las
+- *\--enable-gprofng=no*
+   - Esto deshabilita la creación de gprofng, que no es necesario para las
 herramientas temporales.
 
-\--disable-werror
-
-Esto evita que la compilación se detenga si hay advertencias del
+- *\--disable-werror*
+   - Esto evita que la compilación se detenga si hay advertencias del
 compilador del host.
 
-\--enable-new-dtags
-
-Esto hace que el enlazador use la etiqueta \"runpath\" para incrustar
+- *\--enable-new-dtags*
+   - Esto hace que el enlazador use la etiqueta \"runpath\" para incrustar
 rutas de búsqueda de bibliotecas en ejecutables y bibliotecas
 compartidas, en lugar de la etiqueta tradicional \"rpath\". Esto
 facilita la depuración de ejecutables enlazados dinámicamente y
 soluciona posibles problemas en el conjunto de pruebas de algunos
 paquetes.
 
-\--enable-default-hash-style=gnu
-
-Por defecto, el enlazador generaría tanto la tabla hash de estilo GNU
+- *\--enable-default-hash-style=gnu*
+   - Por defecto, el enlazador generaría tanto la tabla hash de estilo GNU
 como la tabla hash ELF clásica para bibliotecas compartidas y
 ejecutables enlazados dinámicamente. Las tablas hash solo están
 diseñadas para que un enlazador dinámico realice la búsqueda de
@@ -3889,30 +3871,27 @@ Preparar GCC para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--with-glibc-version=2.41
-
-Esta opción especifica la versión de Glibc que se usará en el Destino.
+- *\--with-glibc-version=2.41*
+   - Esta opción especifica la versión de Glibc que se usará en el Destino.
 No es relevante para la biblioteca libc de la distribución anfitriona,
 ya que todo lo compilado por pass1 de GCC se ejecutará en el entorno
 chroot, que está aislado de la biblioteca libc de la distribución
 anfitriona.
 
-\--with-newlib
-
-Dado que aún no hay una biblioteca C funcional disponible, esto
+- *\--with-newlib*
+   - Dado que aún no hay una biblioteca C funcional disponible, esto
 garantiza que la constante inhibitor_libc se defina al compilar libgcc.
 Esto evita la compilación de código que requiera compatibilidad con
 libc.
 
-\--without-headers
-
-Al crear un compilador cruzado completo, GCC requiere encabezados
+- *\--without-headers*
+   - Al crear un compilador cruzado completo, GCC requiere encabezados
 estándar compatibles con el sistema de destino. Para nuestros
 propósitos, estos encabezados no serán necesarios. Esta opción impide
 que GCC los busque.
 
-\--enable-default-pie y \--enable-default-ssp
-
+- *\--enable-default-pie* y *\--enable-default-ssp*
+   - 
 Estas opciones permiten a GCC compilar programas con algunas
 características de seguridad reforzadas (más información sobre ellas en
 la nota sobre PIE y SSP en el capítulo 8) de forma predeterminada. No
@@ -3920,30 +3899,26 @@ son estrictamente necesarias en esta etapa, ya que el compilador solo
 producirá ejecutables temporales. Pero es más limpio que los paquetes
 temporales sean lo más parecidos posible a los finales.
 
-\--disable-shared
-
-Esta opción obliga a GCC a enlazar sus bibliotecas internas
+- *\--disable-shared*
+   - Esta opción obliga a GCC a enlazar sus bibliotecas internas
 estáticamente. Esto es necesario porque las bibliotecas compartidas
 requieren Glibc, que aún no está instalada en el sistema de destino.
 
-\--disable-multilib
-
-En x86_64, LFS no admite una configuración multilib. Esta opción es
+- *\--disable-multilib*
+   - En x86_64, LFS no admite una configuración multilib. Esta opción es
 inofensiva para x86.
 
-\--disable-threads, \--disable-libatomic, \--disable-libgomp,
-\--disable-libquadmath, \--disable-libssp, \--disable-libvtv,
-\--disable-libstdcxx
-
-Estas opciones deshabilitan la compatibilidad con subprocesos,
+- *\--disable-threads*, *\--disable-libatomic*, *\--disable-libgomp*,
+*\--disable-libquadmath*, *\--disable-libssp*, *\--disable-libvtv*,
+*\--disable-libstdcxx*
+   - Estas opciones deshabilitan la compatibilidad con subprocesos,
 libatomic, libgomp, libquadmath, libssp, libvtv y la biblioteca estándar
 de C++, respectivamente. Estas funciones pueden fallar al compilar un
 compilador cruzado y no son necesarias para la tarea de compilación
 cruzada de la biblioteca temporal libc.
 
-\--enable-languages=c,c++
-
-Esta opción garantiza que solo se compilen los compiladores de C y C++.
+- *\--enable-languages=c,c++*
+   - Esta opción garantiza que solo se compilen los compiladores de C y C++.
 Estos son los únicos lenguajes necesarios ahora.
 
 Compile GCC ejecutando:
@@ -4129,33 +4104,28 @@ A continuación, prepare Glibc para la compilación:
 
 **Significado de Opciones de configuración**:
 
-\--host=\$LFS_TGT, \--build=\$(../scripts/config.guess)
-
-El efecto combinado de estas opciones es que el sistema de compilación
+- *\--host=\$LFS_TGT*, *\--build=\$(../scripts/config.guess)*
+   - El efecto combinado de estas opciones es que el sistema de compilación
 de Glibc se configura para la compilación cruzada, utilizando el
 enlazador cruzado y el compilador cruzado en \$LFS/tools.
 
-\--enable-kernel=5.4
-
-Esto indica a Glibc que compile la biblioteca con compatibilidad con
+- *\--enable-kernel=5.4*
+   - Esto indica a Glibc que compile la biblioteca con compatibilidad con
 kernels Linux 5.4 y posteriores. Las soluciones alternativas para
 kernels anteriores no están habilitadas.
 
-\--with-headers=\$LFS/usr/include
-
-Esto indica a Glibc que se compile automáticamente con las cabeceras
+- *\--with-headers=\$LFS/usr/include*
+   - Esto indica a Glibc que se compile automáticamente con las cabeceras
 instaladas recientemente en el directorio \$LFS/usr/include, para que
 sepa exactamente qué características tiene el kernel y pueda optimizarse
 en consecuencia.
 
-libc_cv_slibdir=/usr/lib
-
-Esto garantiza que la biblioteca se instale en /usr/lib en lugar del
+- *libc_cv_slibdir=/usr/lib*
+   - Esto garantiza que la biblioteca se instale en /usr/lib en lugar del
 directorio predeterminado /lib64 en equipos de 64 bits.
 
-\--disable-nscd
-
-No cree el demonio de caché del servicio de nombres que ya no se
+- *\--disable-nscd*
+   - No cree el demonio de caché del servicio de nombres que ya no se
 utiliza.
 
 Durante esta etapa, podría aparecer la siguiente advertencia:
@@ -4201,9 +4171,8 @@ Instalar el paquete:
 
 **Significado de la opción make install**:
 
-DESTDIR=\$LFS
-
-Casi todos los paquetes utilizan la variable de make DESTDIR para
+- *DESTDIR=\$LFS*
+   - Casi todos los paquetes utilizan la variable de make DESTDIR para
 definir la ubicación donde se debe instalar el paquete. Si no está
 configurada, se establece por defecto en el directorio raíz (/). Aquí
 especificamos que el paquete se instala en \$LFS, que se convertirá en
@@ -4299,19 +4268,16 @@ Prepare Libstdc++ para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--host=\...
-
-Especifica que se debe usar el compilador cruzado que acabamos de
+- *\--host=\...*
+   - Especifica que se debe usar el compilador cruzado que acabamos de
 compilar en lugar del de /usr/bin.
 
-\--disable-libstdcxx-pch
-
-Esta opción impide la instalación de archivos de inclusión
+- *\--disable-libstdcxx-pch*
+   - Esta opción impide la instalación de archivos de inclusión
 precompilados, que no son necesarios en esta etapa.
 
-\--with-gxx-include-dir=/tools/\$LFS_TGT/include/c++/14.2.0
-
-Esto especifica el directorio de instalación de los archivos de
+- *\--with-gxx-include-dir=/tools/\$LFS_TGT/include/c++/14.2.0*
+   - Esto especifica el directorio de instalación de los archivos de
 inclusión. Dado que Libstdc++ es la biblioteca estándar de C++ para LFS,
 este directorio debe coincidir con la ubicación donde el compilador de
 C++ (**\$LFS_TGT-g++**) buscaría los archivos de inclusión estándar de
@@ -4456,44 +4422,36 @@ Preparar Ncurses para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
-\--with-manpage-format=normal
-
-Esto evita que Ncurses instale páginas de manual comprimidas, lo que
+- *\--with-manpage-format=normal*
+   - Esto evita que Ncurses instale páginas de manual comprimidas, lo que
 puede ocurrir si la distribución del host ya las tiene.
 
-\--with-shared
+- *\--with-shared*
+   - Esto hace que Ncurses compile e instale bibliotecas de C compartidas.
 
-Esto hace que Ncurses compile e instale bibliotecas de C compartidas.
+- *\--without-normal*
+   - Esto impide que Ncurses compile e instale bibliotecas de C estáticas.
 
-\--without-normal
+- *\--without-debug*
+   - Esto impide que Ncurses compile e instale bibliotecas de depuración.
 
-Esto impide que Ncurses compile e instale bibliotecas de C estáticas.
-
-\--without-debug
-
-Esto impide que Ncurses compile e instale bibliotecas de depuración.
-
-\--with-cxx-shared
-
-Esto hace que Ncurses compile e instale enlaces de C++ compartidos.
+- *\--with-cxx-shared*
+   - Esto hace que Ncurses compile e instale enlaces de C++ compartidos.
 También impide que compile e instale enlaces de C++ estáticos.
 
-\--without-ada
-
-Esto garantiza que Ncurses no compile compatibilidad con el compilador
+- *\--without-ada*
+   - Esto garantiza que Ncurses no compile compatibilidad con el compilador
 de Ada, que puede estar presente en el host, pero no estará disponible
 una vez que entremos en el entorno **chroot**.
 
-\--disable-stripping
-
-Este modificador evita que el sistema de construcción utilice el
+- *\--disable-stripping*
+   - Este modificador evita que el sistema de construcción utilice el
 programa **strip** del sistema host. Usar herramientas del
 host en programas compilados de forma cruzada puede provocar
 fallos.
 
-AWK=gawk
-
-Esta opción impide que el sistema de compilación use el programa
+- *AWK=gawk*
+   - Esta opción impide que el sistema de compilación use el programa
 **mawk** del host. Algunas versiones de **mawk** pueden provocar que
 este paquete no se compile.
 
@@ -4514,21 +4472,18 @@ Instalar el paquete:
 
 **Significado de las opciones de instalación**:
 
-TIC_PATH=\$(pwd)/build/progs/tic
-
-Necesitamos pasar la ruta del programa tic recién compilado que se
+- *TIC_PATH=\$(pwd)/build/progs/tic*
+   - Necesitamos pasar la ruta del programa tic recién compilado que se
 ejecuta en el equipo de compilación para que la base de datos de la
 terminal pueda crearse sin errores.
 
-ln -sv libncursesw.so \$LFS/usr/lib/libncurses.so
-
-La biblioteca libncurses.so es necesaria para algunos paquetes que
+- *ln -sv libncursesw.so \$LFS/usr/lib/libncurses.so*
+   - La biblioteca libncurses.so es necesaria para algunos paquetes que
 crearemos próximamente. Creamos este enlace simbólico para usar
 libncursesw.so como reemplazo.
 
-sed -e \'s/\^#if.\*XOPEN.\*\$/#if 1/\' \...
-
-El archivo de encabezado curses.h contiene la definición de varias
+- *sed -e \'s/\^#if.\*XOPEN.\*\$/#if 1/\' \...*
+   - El archivo de encabezado curses.h contiene la definición de varias
 estructuras de datos de Ncurses. Con diferentes definiciones de macros
 de preprocesador, se pueden usar dos conjuntos diferentes de
 definiciones de estructuras de datos: la definición de 8 bits es
@@ -4567,9 +4522,8 @@ Preparar Bash para la compilación:
 > 
 **Significado de las opciones de configuración**:
 
-\--without-bash-malloc
-
-Esta opción desactiva el uso de la función de asignación de memoria de
+- *\--without-bash-malloc*
+   - Esta opción desactiva el uso de la función de asignación de memoria de
 Bash (malloc), que se sabe que causa fallos de segmentación. Al
 desactivar esta opción, Bash utilizará las funciones malloc de Glibc,
 que son más estables. Compilar el paquete:
@@ -4621,9 +4575,8 @@ Preparar Coreutils para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--enable-install-program=hostname
-
-Esto permite compilar e instalar el binario hostname; está deshabilitado
+- *\--enable-install-program=hostname*
+   - Esto permite compilar e instalar el binario hostname; está deshabilitado
 por defecto, pero es requerido por el conjunto de pruebas de Perl.
 
 Compilar el paquete:
@@ -4723,9 +4676,8 @@ los siguientes comandos para crear una copia temporal del archivo:
 
 **Significado de la nueva opción de configuración**:
 
-\--disable-\*
-
-El script de configuración intenta usar algunos paquetes de la
+- *\--disable-\**
+   - El script de configuración intenta usar algunos paquetes de la
 distribución del host si existen los archivos de biblioteca
 correspondientes. Puede causar un error de compilación si existe un
 archivo de biblioteca, pero no los archivos de encabezado
@@ -4953,9 +4905,8 @@ Preparar Make para la compilación:
 
 **Significado de la nueva opción de configuración**:
 
-\--without-guile
-
-Aunque se realiza una compilación cruzada, configure intenta usar guile
+- *\--without-guile*
+   - Aunque se realiza una compilación cruzada, configure intenta usar guile
 del host de compilación si lo encuentra. Esto provoca un error en la
 compilación, por lo que esta opción impide su uso. Compilar el paquete:
 
@@ -5198,13 +5149,11 @@ Preparar Binutils para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
-\--enable-shared
+- *\--enable-shared*
+   - Compila libbfd como una biblioteca compartida.
 
-Compila libbfd como una biblioteca compartida.
-
-\--enable-64-bit-bfd
-
-Habilita la compatibilidad con 64 bits (en hosts con tamaños de palabra
+- *\--enable-64-bit-bfd*
+   - Habilita la compatibilidad con 64 bits (en hosts con tamaños de palabra
 más pequeños). Puede que esto no sea necesario en sistemas de 64 bits,
 pero no causa ningún daño.
 
@@ -5316,18 +5265,16 @@ Ahora prepare GCC para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
-\--with-build-sysroot=\$LFS
-
-Normalmente, usar \--host garantiza que se use un compilador cruzado
+- *\--with-build-sysroot=\$LFS*
+   - Normalmente, usar \--host garantiza que se use un compilador cruzado
 para compilar GCC, y que ese compilador sepa que debe buscar las
 cabeceras y bibliotecas en \$LFS. Sin embargo, el sistema de compilación
 de GCC utiliza otras herramientas que desconocen esta ubicación. Esta
 opción es necesaria para que dichas herramientas encuentren los archivos
 necesarios en \$LFS y no en el host.
 
-\--target=\$LFS_TGT
-
-Estamos compilando GCC de forma cruzada, por lo que es imposible
+- *\--target=\$LFS_TGT*
+   - Estamos compilando GCC de forma cruzada, por lo que es imposible
 compilar las bibliotecas de destino (libgcc y libstdc++) con los
 binarios de GCC compilados en este paso; estos binarios no se ejecutarán
 en el host. El sistema de compilación de GCC intentará usar los
@@ -5338,16 +5285,14 @@ compiladores del host puede provocar un error en la compilación. Este
 parámetro garantiza que las bibliotecas se compilen con la versión 1 de
 GCC.
 
-LDFLAGS_FOR_TARGET=\...
-
-Permite que libstdc++ use la versión libgcc que se compila en esta
+- *LDFLAGS_FOR_TARGET=\...*
+   - Permite que libstdc++ use la versión libgcc que se compila en esta
 versión, en lugar de la versión anterior compilada en gcc-pass1. La
 versión anterior no admite correctamente la gestión de excepciones de
 C++ porque se compiló sin compatibilidad con libc.
 
-\--disable-libsanitizer
-
-Desactiva las bibliotecas de ejecución de GCC Sanitizer. No son
+- *\--disable-libsanitizer*
+   - Desactiva las bibliotecas de ejecución de GCC Sanitizer. No son
 necesarias para la instalación temporal. En gcc-pass1, esto estaba
 implícito con \--disable-libstdcxx, y ahora podemos pasarlo
 explícitamente.
@@ -5497,16 +5442,14 @@ Ahora monte los sistemas de archivos virtuales del kernel restantes:
 
 **Significado de las opciones de montaje para devpts**:
 
-gid=5
-
-Esto garantiza que todos los nodos de dispositivo creados por devpts
+- *gid=5*
+   - Esto garantiza que todos los nodos de dispositivo creados por devpts
 pertenezcan al ID de grupo 5. Este es el ID que usaremos más adelante
 para el grupo tty. Usamos el ID de grupo en lugar de un nombre, ya que
 el sistema host podría usar un ID diferente para su grupo tty.
 
-mode=0620
-
-Esto garantiza que todos los nodos de dispositivo creados por devpts
+- *mode=0620*
+   - Esto garantiza que todos los nodos de dispositivo creados por devpts
 tengan el modo 0620 (lectura y escritura por parte del usuario,
 escritura por parte del grupo). Junto con la opción anterior, esto
 garantiza que devpts cree nodos de dispositivo que cumplan con los
@@ -5846,9 +5789,8 @@ compilación:
 
 **Significado de la opción de configuración**:
 
-\--disable-shared
-
-No es necesario instalar ninguna de las bibliotecas compartidas de
+- *\--disable-shared*
+   - No es necesario instalar ninguna de las bibliotecas compartidas de
 Gettext en este momento, por lo que no es necesario compilarlas.
 
 Compilar el paquete:
@@ -5891,9 +5833,8 @@ Preparar Bison para la compilación:
 
 **Significado de la nueva opción de configuración**:
 
-\--docdir=/usr/share/doc/bison-3.8.2
-
-Esto indica al sistema de compilación que instale la documentación de
+- *\--docdir=/usr/share/doc/bison-3.8.2*
+   - Esto indica al sistema de compilación que instale la documentación de
 Bison en un directorio versionado.
 
 Compilar el paquete:
@@ -5944,25 +5885,21 @@ Preparar Perl para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\-des
-
-Esta es una combinación de tres opciones: -d usa valores predeterminados
+- *\-des*
+   - Esta es una combinación de tres opciones: -d usa valores predeterminados
 para todos los elementos; -e garantiza la finalización de todas las
 tareas; -s silencia la salida no esencial.
 
--D vendorprefix=/usr
-
-Esto garantiza que Perl sepa cómo indicar a los paquetes dónde deben
+- *-D vendorprefix=/usr*
+   - Esto garantiza que Perl sepa cómo indicar a los paquetes dónde deben
 instalar sus módulos Perl.
 
--D useshrplib
-
-Construye libperl, necesaria para algunos módulos Perl, como una
+- *-D useshrplib*
+   - Construye libperl, necesaria para algunos módulos Perl, como una
 biblioteca compartida, en l ugar de una biblioteca estática.
 
--D privlib, -D archlib, -D sitelib,\...
-
-Estas opciones definen dónde Perl busca los módulos instalados. Los
+- *-D privlib, -D archlib, -D sitelib,\...*
+   - Estas opciones definen dónde Perl busca los módulos instalados. Los
 editores de LFS optaron por colocarlos en una estructura de directorios
 basada en la versión principal o secundaria de Perl (5.40), lo que
 permite actualizar Perl a versiones de parche más recientes (la versión
@@ -6020,13 +5957,11 @@ Preparar Python para la compilación:
 
 **Significado de la opción de configuración**:
 
-\--enable-shared
+- *\--enable-shared*
+   - Esta opción impide la instalación de bibliotecas estáticas.
 
-Esta opción impide la instalación de bibliotecas estáticas.
-
-\--without-ensurepip
-
-Esta opción deshabilita el instalador de paquetes de Python, que no es
+- *\--without-ensurepip*
+   - Esta opción deshabilita el instalador de paquetes de Python, que no es
 necesario en esta etapa.
 
 Compilar el paquete:
@@ -6136,34 +6071,29 @@ Prepare Util-linux para la compilación:
 
 **Significado de las opciones de configuración**:
 
-ADJTIME_PATH=/var/lib/hwclock/adjtime
-
-Establece la ubicación del archivo que registra la información del reloj
+- *ADJTIME_PATH=/var/lib/hwclock/adjtime*
+   - Establece la ubicación del archivo que registra la información del reloj
 del hardware según el FHS. Esto no es estrictamente necesario para esta
 herramienta temporal, pero evita la creación de un archivo en otra
 ubicación, que no se sobrescribiría ni eliminaría al compilar el paquete
 final de util-linux.
 
-\--libdir=/usr/lib
-
-Esta opción garantiza que los enlaces simbólicos .so apunten
+- *\--libdir=/usr/lib*
+   - Esta opción garantiza que los enlaces simbólicos .so apunten
 directamente al archivo de la biblioteca compartida en el mismo
 directorio (/usr/lib).
 
-\--disable-\*
-
-Estas opciones evitan advertencias sobre la compilación de componentes
+- *\--disable-\**
+   - Estas opciones evitan advertencias sobre la compilación de componentes
 que requieren paquetes que no están en LFS o que aún no están
 instalados.
 
-\--without-python
-
-Esta opción deshabilita el uso de Python. Evita intentar compilar
+- *\--without-python*
+   - Esta opción deshabilita el uso de Python. Evita intentar compilar
 enlaces innecesarios.
 
-runstatedir=/run
-
-Esta opción establece correctamente la ubicación del socket utilizado
+- *runstatedir=/run*
+   - Esta opción establece correctamente la ubicación del socket utilizado
 por **uuidd** y libuuid.
 
 Compilar el paquete:
@@ -6792,16 +6722,14 @@ Instale las páginas de manual ejecutando:
 
 **Significado de las opciones**:
 
--R
-
-Esto impide que **make** configure variables integradas. El sistema de
+- *-R*
+   - Esto impide que **make** configure variables integradas. El sistema de
 compilación de páginas de manual no funciona bien con variables
 integradas, pero actualmente no hay forma de desactivarlas, excepto
 pasando explícitamente *-R* vía línea de comandos.
 
-GIT=false
-
-Esto evita que el sistema de compilación emita muchas líneas de
+- *GIT=false*
+   - Esto evita que el sistema de compilación emita muchas líneas de
 advertencia «*git: command not found*».
 
 &nbsp;
@@ -6914,34 +6842,29 @@ Prepare Glibc para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--disable-werror
-
-Esta opción deshabilita la opción -Werror pasada a GCC. Esto es
+- *\--disable-werror*
+   - Esta opción deshabilita la opción -Werror pasada a GCC. Esto es
 necesario para ejecutar el conjunto de pruebas.
 
-\--enable-kernel=5.4
-
-Esta opción indica al sistema de compilación que esta Glibc puede
+- *\--enable-kernel=5.4*
+   - Esta opción indica al sistema de compilación que esta Glibc puede
 usarse con kernels de hasta la versión 5.4. Esto implica generar
 soluciones alternativas en caso de que no se pueda usar una llamada al
 sistema introducida en una versión posterior.
 
-\--enable-stack-protector=strong
-
-Esta opción aumenta la seguridad del sistema al añadir código adicional
+- *\--enable-stack-protector=strong*
+   - Esta opción aumenta la seguridad del sistema al añadir código adicional
 para detectar desbordamientos de búfer, como ataques de destrucción de
 pila. Tenga en cuenta que Glibc siempre anula explícitamente el valor
 predeterminado de GCC, por lo que esta opción sigue siendo necesaria
 aunque ya hayamos especificado *\--enable-default-ssp* para GCC.
 
-\--disable-nscd
-
-No se compila el demonio de caché del servicio de nombres que ya no se
+- *\--disable-nscd*
+   - No se compila el demonio de caché del servicio de nombres que ya no se
 utiliza.
 
-libc_cv_slibdir=/usr/lib
-
-Esta variable establece la biblioteca correcta para todos los sistemas.
+- *libc_cv_slibdir=/usr/lib*
+   - Esta variable establece la biblioteca correcta para todos los sistemas.
 No queremos que se use lib64.
 
 Compilar el paquete:
@@ -7216,9 +7139,8 @@ Instale y configure los datos de zona horaria con lo siguiente:
 
 **Significado de los comandos zic**:
 
-zic -L /dev/null \...
-
-Esto crea zonas horarias POSIX sin segundos intercalares. Normalmente,
+- *zic -L /dev/null \...*
+   - Esto crea zonas horarias POSIX sin segundos intercalares. Normalmente,
 se incluyen tanto en zoneinfo como en zoneinfo/posix. Es necesario
 incluir las zonas horarias POSIX en zoneinfo; de lo contrario, varias
 suites de pruebas informarán errores. En un sistema embebido, donde el
@@ -7227,18 +7149,15 @@ horarias, se podrían ahorrar 1,9 MB si no se utiliza el directorio
 posix, pero algunas aplicaciones o conjuntos de pruebas podrían producir
 fallos.
 
-zic -L leapseconds \...
-
-Esto crea zonas horarias correctas, incluyendo segundos intercalares. En
+- *zic -L leapseconds \...*
+   - Esto crea zonas horarias correctas, incluyendo segundos intercalares. En
 un sistema embebido, donde el espacio es limitado y no se pretende
 actualizar nunca las zonas horarias ni preocuparse por la hora correcta,
 se podrían ahorrar 1,9 MB si se omite el directorio correcto.
 
-zic \... -p \...
-
-Esto crea el archivo *posixrules*. Usamos Nueva York porque POSIX
-requiere que las reglas del horario de verano se ajusten a las de EE.
-UU.
+- *zic \... -p \...*
+   - Esto crea el archivo *posixrules*. Usamos Nueva York porque POSIX
+requiere que las reglas del horario de verano se ajusten a las de EE.UU.
 
 Una forma de determinar la zona horaria local es ejecutar el siguiente
 script:
@@ -7558,9 +7477,8 @@ Prepare Bzip2 para la compilación con:
 
 **Significado del parámetro make**:
 
--f Makefile-libbz2_so
-
-Esto hará que Bzip2 se compile utilizando un archivo *Makefile*
+- *-f Makefile-libbz2_so*
+   - Esto hará que Bzip2 se compile utilizando un archivo *Makefile*
 diferente, en este caso el archivo *Makefile-libbz2_so*, que crea una
 biblioteca dinámica *libbz2.so* y enlaza las utilidades de Bzip2 con
 ella. Compilar y probar el paquete:
@@ -7994,9 +7912,8 @@ Preparar Readline para la compilación:
 
 **Significado de la nueva opción de configuración**:
 
-\--with-curses
-
-Esta opción indica a Readline que puede encontrar las funciones de la
+- *\--with-curses*
+   - Esta opción indica a Readline que puede encontrar las funciones de la
 biblioteca termcap en la biblioteca curses, no en una biblioteca termcap
 independiente. Esto generará el archivo readline.pc correcto.
 
@@ -8008,9 +7925,8 @@ Compilar el paquete:
 
 **Significado de la opción make**:
 
-*SHLIB_LIBS=\"-lncursesw\"*
-
-Esta opción obliga a Readline a enlazar con la biblioteca *libncursesw*.
+- *SHLIB_LIBS=\"-lncursesw\"*
+   - Esta opción obliga a Readline a enlazar con la biblioteca *libncursesw*.
 Para más información, consulte la sección \"Bibliotecas compartidas\" en
 el archivo *README* del paquete.
 
@@ -8129,22 +8045,18 @@ Preparar Bc para la compilación:
 
 **Significado de las opciones de configuración**:
 
-CC=gcc
+- *CC=gcc*
+   - Este parámetro especifica el compilador a utilizar.
 
-Este parámetro especifica el compilador a utilizar.
-
--G
-
-Omite las partes del conjunto de pruebas que no funcionarán hasta que se
+- *G*
+   - Omite las partes del conjunto de pruebas que no funcionarán hasta que se
 instale el programa bc.
 
--O3
+- *-O3*
+   - Especifica la optimización a utilizar.
 
-Especifica la optimización a utilizar.
-
--r
-
-Habilita el uso de Readline para mejorar la función de edición de líneas
+- *-r*
+   - Habilita el uso de Readline para mejorar la función de edición de líneas
 de bc.
 
 Compila el paquete:
@@ -8292,9 +8204,8 @@ Preparar Tcl para la compilación:
 
 **Significado de los nuevos parámetros de configuración**:
 
-\--disable-rpath
-
-Este parámetro evita la codificación rígida de las rutas de búsqueda de
+- *\--disable-rpath*
+   - Este parámetro evita la codificación rígida de las rutas de búsqueda de
 bibliotecas (rpath) en los archivos binarios ejecutables y las
 bibliotecas compartidas. Este paquete no necesita rpath para la
 instalación en la ubicación estándar, y rpath puede, en ocasiones,
@@ -8455,14 +8366,12 @@ Preparar Expect para la compilación:
 
 **Significado de las opciones de configuración**:
 
-*\--with-tcl=/usr/lib*
-
-Este parámetro es necesario para indicar a Configure dónde se encuentra
+- *\--with-tcl=/usr/lib*
+   - Este parámetro es necesario para indicar a Configure dónde se encuentra
 el script tclConfig.sh.
 
-*\--with-tclinclude=/usr/include*
-
-Esto indica explícitamente a Expect dónde encontrar las cabeceras
+- *\--with-tclinclude=/usr/include*
+   - Esto indica explícitamente a Expect dónde encontrar las cabeceras
 internas de Tcl.
 
 Compilar el paquete:
@@ -8674,18 +8583,15 @@ Preparar Binutils para la compilación:
 
 **Significado de los nuevos parámetros de configuración**:
 
-\--enable-ld=default
-
-Compile el enlazador bfd original e instálelo como ld (el enlazador
+- *\--enable-ld=default*
+   - Compile el enlazador bfd original e instálelo como ld (el enlazador
 predeterminado) y ld.bfd.
 
-\--enable-plugins
+- *\--enable-plugins*
+   - Habilita la compatibilidad con plugins para el enlazador.
 
-Habilita la compatibilidad con plugins para el enlazador.
-
-\--with-system-zlib
-
-Use la biblioteca zlib instalada en lugar de compilar la versión
+- *\--with-system-zlib*
+   - Use la biblioteca zlib instalada en lugar de compilar la versión
 incluida.
 
 Compilar el paquete:
@@ -8871,13 +8777,11 @@ Preparar GMP para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
-\--enable-cxx
+- *\--enable-cxx*
+   - Este parámetro habilita la compatibilidad con C++.
 
-Este parámetro habilita la compatibilidad con C++.
-
-\--docdir=/usr/share/doc/gmp-6.3.0
-
-Esta variable especifica la ubicación correcta de la documentación.
+- *\--docdir=/usr/share/doc/gmp-6.3.0*
+   - Esta variable especifica la ubicación correcta de la documentación.
 
 Compilar el paquete y generar la documentación HTML:
 
@@ -9233,9 +9137,8 @@ Compilar el paquete:
 
 **Significado de la opción make**:
 
-*lib=lib*
-
-Este parámetro establece el directorio de la biblioteca en /usr/lib en
+- *lib=lib*
+   - Este parámetro establece el directorio de la biblioteca en /usr/lib en
 lugar de /usr/lib64 en x86_64. No tiene efecto en x86. Para probar los
 resultados, ejecute:
 
@@ -9304,20 +9207,17 @@ Preparar Libxcrypt para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
- \--enable-hashes=strong,glibc
-
-Construir algoritmos hash robustos recomendados para casos de seguridad
+- *\--enable-hashes=strong,glibc*
+   - Construir algoritmos hash robustos recomendados para casos de seguridad
 y los algoritmos hash proporcionados por libcrypt Glibc tradicional para
 compatibilidad.
 
-\--enable-obsolete-api=no
-
-Desactivar funciones obsoletas de la API. No son necesarios para un
+- *\--enable-obsolete-api=no*
+   - Desactivar funciones obsoletas de la API. No son necesarios para un
 sistema Linux moderno compilado desde el código fuente.
 
-\--disable-failure-tokens
-
-Desactiva la función de token de error. Es necesaria para la
+- *\--disable-failure-tokens*
+   - Desactiva la función de token de error. Es necesaria para la
 compatibilidad con las bibliotecas hash tradicionales de algunas
 plataformas, pero un sistema Linux basado en Glibc no la necesita.
 
@@ -9446,29 +9346,25 @@ Preparar Shadow para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
-**touch /usr/bin/passwd**
-
-El archivo */usr/bin/passwd* debe existir porque su ubicación está
+- **touch /usr/bin/passwd**
+   - El archivo */usr/bin/passwd* debe existir porque su ubicación está
 codificada en algunos programas; si no existe, el script de instalación
 lo creará en el lugar incorrecto.
 
-\--with-{b,yes}crypt
-
-El shell amplía esto a dos opciones: *\--with-bcrypt* y
+- *\--with-{b,yes}crypt*
+   - El shell amplía esto a dos opciones: *\--with-bcrypt* y
 *\--with-yescrypt*. Estas permiten que shadow utilice los algoritmos
 Bcrypt y Yescrypt implementados por Libxcrypt para el hash de
 contraseñas. Estos algoritmos son más seguros (en particular, mucho más
 resistentes a ataques basados en GPU) que los algoritmos SHA
 tradicionales.
 
-\--with-group-name-max-length=32
-
-El nombre de usuario máximo permitido es de 32 caracteres. Mantenga la
+- *\--with-group-name-max-length=32*
+   - El nombre de usuario máximo permitido es de 32 caracteres. Mantenga la
 longitud máxima del nombre de grupo igual.
 
-\--without-libbsd
-
-No utilice la función readpassphrase de libbsd, que no está en LFS.
+- *\--without-libbsd*
+   - No utilice la función readpassphrase de libbsd, que no está en LFS.
 Utilice la copia interna en su lugar.
 
 Compilar el paquete:
@@ -9737,25 +9633,20 @@ sobre cómo compilar todos los lenguajes compatibles con GCC.
 
 **Significado de los nuevos parámetros de configuración**:
 
-LD=ld
-
-Este parámetro hace que el script de configuración utilice el
+- *LD=ld*
+   - Este parámetro hace que el script de configuración utilice el
 programa ld instalado por el paquete Binutils compilado anteriormente en
 este capítulo, en lugar de la versión de compilación cruzada que se
 usaría de otro modo.
 
-\--disable-fixincludes
-
-De forma predeterminada, durante la instalación de GCC, algunos
+- *\--disable-fixincludes*
+   - De forma predeterminada, durante la instalación de GCC, algunos
 encabezados del sistema se \"corregirían\" para su uso con GCC. Esto no
 es necesario en un sistema Linux moderno y podría ser perjudicial si se
-reinstala un paquete después de instalar GCC.
+reinstala un paquete después de instalar GCC. Esta opción impide que GCC \"corrija\" los encabezados.
 
-Esta opción impide que GCC \"corrija\" los encabezados.
-
-\--with-system-zlib
-
-Esta opción indica a GCC que enlace con la copia de la biblioteca
+- *\--with-system-zlib*
+   - Esta opción indica a GCC que enlace con la copia de la biblioteca
 Zlib instalada en el sistema, en lugar de con su propia copia
 interna.
 
@@ -10160,29 +10051,24 @@ Preparar Ncurses para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
-\--with-shared
-
-Esto hace que Ncurses compile e instale bibliotecas de C
+- *\--with-shared*
+   - Esto hace que Ncurses compile e instale bibliotecas de C
 compartidas.
 
-\--without-normal
-
-Esto impide que Ncurses compile e instale bibliotecas de C
+- *\--without-normal*
+   - Esto impide que Ncurses compile e instale bibliotecas de C
 estáticas.
 
-\--without-debug
-
-Esto impide que Ncurses compile e instale bibliotecas de
+- *\--without-debug*
+   - Esto impide que Ncurses compile e instale bibliotecas de
 depuración.
 
-\--with-cxx-shared
-
-Esto hace que Ncurses compile e instale enlaces compartidos de C++.
+- *\--with-cxx-shared*
+   - Esto hace que Ncurses compile e instale enlaces compartidos de C++.
 También impide que compile e instale enlaces estáticos de C++.
 
-\--enable-pc-files
-
-Esta opción genera e instala archivos .pc para pkg-config.
+- *\--enable-pc-files*
+   - Esta opción genera e instala archivos .pc para pkg-config.
 
 Compilar el paquete:
 
@@ -10762,9 +10648,8 @@ Preparar Bash para la compilación:
 
 **Significado de la nueva opción de configuración**:
 
-\--with-installed-readline
-
-Esta opción indica a Bash que use la biblioteca readline ya
+- *\--with-installed-readline
+   - Esta opción indica a Bash que use la biblioteca readline ya
 instalada en el sistema en lugar de usar su propia versión de
 readline.
 
@@ -10948,9 +10833,8 @@ Preparar GDBM para la compilación:
 
 **Significado de la opción de configuración**:
 
-\--enable-libgdbm-compat
-
-Esta opción permite compilar la biblioteca de compatibilidad
+- *\--enable-libgdbm-compat*
+   - Esta opción permite compilar la biblioteca de compatibilidad
 libgdbm. Algunos paquetes fuera de LFS pueden requerir las rutinas DBM
 más antiguas que proporciona.
 
@@ -11156,29 +11040,25 @@ Prepare Inetutils para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--disable-logger
-
-Esta opción impide que Inetutils instale el programa de **registro**,
+- *\--disable-logger*
+   - Esta opción impide que Inetutils instale el programa de **registro**,
 que los scripts utilizan para enviar mensajes al demonio de registro del
 sistema. No lo instale, ya que Util-linux instala una versión más
 reciente.
 
-\--disable-whois
-
-Esta opción deshabilita la creación del cliente **whois** de Inetutils,
+- *\--disable-whois*
+   - Esta opción deshabilita la creación del cliente **whois** de Inetutils,
 que está desactualizado. Las instrucciones para un mejor cliente
 **whois** se encuentran en el manual de BLFS.
 
-\--disable-r
-
-Estos parámetros deshabilitan la creación de programas obsoletos que no
+- *\--disable-r*
+   - Estos parámetros deshabilitan la creación de programas obsoletos que no
 deben usarse debido a problemas de seguridad. Las funciones
 proporcionadas por estos programas pueden proporcionarse mediante el
 paquete openssh del manual de BLFS.
 
-\--disable-servers
-
-Esto deshabilita la instalación de los diversos servidores de red
+- *\--disable-servers*
+   - Esto deshabilita la instalación de los diversos servidores de red
 incluidos en el paquete Inetutils. Estos servidores no se consideran
 adecuados para un sistema LFS básico. Algunos son inseguros por
 naturaleza y solo se consideran seguros en redes confiables. Tenga en
@@ -11263,9 +11143,8 @@ Preparar Less para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--sysconfdir=/etc
-
-Esta opción indica a los programas creados por el paquete que
+- *\--sysconfdir=/etc*
+   - Esta opción indica a los programas creados por el paquete que
 busquen los archivos de configuración en /etc 
 
 Compilar el paquete:
@@ -11357,19 +11236,16 @@ predeterminados que Perl detecta automáticamente:
 
 **Significado de las nuevas opciones de Configure**:
 
--D pager=\"/usr/bin/less -isR\"
+- *-D pager=\"/usr/bin/less -isR\"*
+   - Esto garantiza que se use **less** en lugar de **more**.
 
-Esto garantiza que se use **less** en lugar de **more**.
-
--D man1dir=/usr/share/man/man1 -D man3dir=/usr/share/man/man3
-
-Dado que Groff aún no está instalado, **Configure** no creará
+- *-D man1dir=/usr/share/man/man1 -D man3dir=/usr/share/man/man3*
+   - Dado que Groff aún no está instalado, **Configure** no creará
 páginas de manual para Perl. Estos parámetros anulan este
 comportamiento.
 
--D usethreads
-
-Compile Perl con soporte para hilos.
+- *-D usethreads*
+   - Compile Perl con soporte para hilos.
 
 Compilar el paquete:
 
@@ -12008,9 +11884,8 @@ Prepare Libffi para la compilación:
 
 **Significado de la opción de configuración**:
 
-\--with-gcc-arch=native
-
-Asegúrese de que GCC se optimice para el sistema actual. Si no se
+- *\--with-gcc-arch=native*
+   - Asegúrese de que GCC se optimice para el sistema actual. Si no se
 especifica, se infiere el sistema y el código generado podría ser
 incorrecto. Si el código generado se copiará del sistema nativo a un
 sistema con menor capacidad, utilice este último como parámetro. Para
@@ -12078,14 +11953,12 @@ Preparar Python para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--with-system-expat
-
-Esta opción permite la vinculación con la versión del sistema de
+- *\--with-system-expat*
+   - Esta opción permite la vinculación con la versión del sistema de
 Expat.
 
-\--enable-optimizations
-
-Esta opción permite pasos de optimización extensos, pero que
+- *\--enable-optimizations*
+   - Esta opción permite pasos de optimización extensos, pero que
 requieren mucho tiempo. El intérprete se compila dos veces; las pruebas
 realizadas en la primera compilación se utilizan para mejorar la versión
 final optimizada. Compilar el paquete:
@@ -12185,9 +12058,8 @@ configuración:
 
 **Significado de los comandos de instalación de la documentación**:
 
-\--no-same-owner y \--no-same-permissions
-
-Asegúrese de que los archivos instalados tengan la propiedad y los
+- *\--no-same-owner* y *\--no-same-permissions*
+   - Asegúrese de que los archivos instalados tengan la propiedad y los
 permisos correctos. Sin estas opciones, tar instalará los archivos del
 paquete con los valores del creador original.
 
@@ -12252,33 +12124,27 @@ Instalación del paquete:
 
 **Significado de las opciones y comandos de configuración de pip3**:
 
-**wheel**
+- *wheel**
+   - Este comando compila el archivo wheel para este paquete.****
 
-Este comando compila el archivo wheel para este paquete.****
+- *\-w dist*
+   - Instruye a pip a colocar la rueda creada en el directorio dist.
 
-\-w dist
-
-Instruye a pip a colocar la rueda creada en el directorio dist.
-
-\--no-cache-dir
-
-Evita que pip copie la rueda creada en el directorio
+- *\--no-cache-dir*
+   - Evita que pip copie la rueda creada en el directorio
 /root/.cache/pip.
 
-**install**
+- **install**
+   - Este comando instala el paquete.
 
-Este comando instala el paquete.
-
-\--no-build-isolation, \--no-deps y \--no-index
-
-Estas opciones impiden la obtención de archivos del repositorio de
+- *\--no-build-isolation*, *\--no-deps y \--no-index*
+   - Estas opciones impiden la obtención de archivos del repositorio de
 paquetes en línea (PyPI). Si los paquetes se instalan en el orden
 correcto, pip no necesitará obtener ningún archivo; estas opciones
 ofrecen mayor seguridad en caso de error del usuario.
 
-\--find-links dist
-
-Instruye a pip a buscar archivos wheel en el directorio dist.
+- *\--find-links dist*
+   - Instruye a pip a buscar archivos wheel en el directorio dist.
 
 &nbsp;
 
@@ -12425,20 +12291,20 @@ Construya Ninja con:
 
 **Significado de la opción de compilación**:
 
-\--bootstrap
-
-Este parámetro obliga a Ninja a reconstruirse para el sistema
+- *\--bootstrap*
+   - Este parámetro obliga a Ninja a reconstruirse para el sistema
 actual.
 
-\--verbose
-
-Este parámetro hace que **configure.py** muestre el progreso de la
+- *\--verbose*
+   - Este parámetro hace que **configure.py** muestre el progreso de la
 compilación de Ninja.
 
 Las pruebas del paquete no se pueden ejecutar en el entorno chroot.
 Requieren **cmake**. Sin embargo, la función básica de este
 paquete ya se ha probado reconstruyéndose (con la opción
-**--bootstrap**). Instalar el paquete:
+**--bootstrap**).
+
+Instalar el paquete:
 
 > ```bash
 > install -vm755 ninja /usr/bin/
@@ -12494,13 +12360,11 @@ Instalar el paquete:
 
 **Significado de los parámetros de instalación**:
 
-\-w dist
+- *\-w dist*
+   - Coloca las ruedas creadas en el directorio dist.
 
-Coloca las ruedas creadas en el directorio dist.
-
-\--find-links dist
-
-Instala las ruedas desde el directorio dist.
+- *\--find-links dist*
+   - Instala las ruedas desde el directorio dist.
 
 &nbsp;
 
@@ -12547,9 +12411,8 @@ Preparar Kmod para la compilación:
 
 **Significado de las opciones de configuración**:
 
--D manpages=false
-
-Esta opción deshabilita la generación de páginas de manual, lo que
+- *-D manpages=false*
+   - Esta opción deshabilita la generación de páginas de manual, lo que
 requiere un programa externo.
 
 Compilar el paquete:
@@ -12647,30 +12510,25 @@ Ahora prepare Coreutils para la compilación:
 
 **Significado de los comandos y opciones de configuración**:
 
-**autoreconf -fv**
-
-El parche de internacionalización ha modificado el sistema de
+- **autoreconf -fv**
+   - El parche de internacionalización ha modificado el sistema de
 compilación, por lo que es necesario regenerar los archivos de
 configuración.
-
 Normalmente, usaríamos la opción **-i** para actualizar los
 archivos auxiliares estándar, pero para este paquete no funciona porque
 **configure.ac** especificó una versión antigua de gettext.
 
-**automake -af**
-
-Autoreconf no actualizó los archivos auxiliares de automake debido
+- **automake -af**
+   - Autoreconf no actualizó los archivos auxiliares de automake debido
 a la falta de la opción **-i**. Este comando los actualiza para
 evitar un fallo de compilación.
 
-FORCE_UNSAFE_CONFIGURE=1
-
-Esta variable de entorno permite que el usuario root compile el
+- *FORCE_UNSAFE_CONFIGURE=1*
+   - Esta variable de entorno permite que el usuario root compile el
 paquete.
 
-\--enable-no-install-program=kill,uptime
-
-El propósito de esta opción es evitar que Coreutils instale
+- *\--enable-no-install-program=kill,uptime*
+   - El propósito de esta opción es evitar que Coreutils instale
 programas que serán instalados por o tros paquetes.
 
 Compilar el paquete:
@@ -13214,9 +13072,8 @@ Instalar el paquete:
 
 **Significado del comando**:
 
-rm -f /usr/bin/gawk-5.3.1
-
-El sistema de compilación no recreará el enlace físico
+- **rm -f /usr/bin/gawk-5.3.1**
+   - El sistema de compilación no recreará el enlace físico
 gawk-5.3.1 si ya existe. Elimínelo para garantizar que el enlace físico
 anterior instalado en la Sección 6.9, "Gawk-5.3.1" se actualice
 aquí.*
@@ -13286,9 +13143,8 @@ Preparar Findutils para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--localstatedir
-
-Esta opción mueve la base de datos de localización a
+- *\--localstatedir*
+   - Esta opción mueve la base de datos de localización a
 **/var/lib/locate**, que es la ubicación compatible con FHS.
 
 Compilar el paquete:
@@ -13592,14 +13448,12 @@ Preparar GRUB para la compilación:
 
 **Significado de las nuevas opciones de configuración**:
 
-\--disable-werror
-
-Esto permite que la compilación se complete con las advertencias
+- *\--disable-werror*
+   - Esto permite que la compilación se complete con las advertencias
 introducidas por las versiones más recientes de Flex.
 
-\--disable-efiemu
-
-Esta opción minimiza la compilación al deshabilitar una función y
+- *\--disable-efiemu*
+   - Esta opción minimiza la compilación al deshabilitar una función y
 eliminar algunos programas de prueba innecesarios para LFS.
 
 Compilar el paquete:
@@ -13933,9 +13787,8 @@ Preparar Kbd para la compilación:
 
 **Significado de la opción configure**:
 
-\--disable-vlock
-
-Esta opción impide la compilación de la utilidad vlock porque
+- *\--disable-vlock*
+   - Esta opción impide la compilación de la utilidad vlock porque
 requiere la biblioteca PAM, que no está disponible en el entorno
 chroot.
 
@@ -14251,9 +14104,8 @@ Preparar Tar para la compilación:
 
 **Significado de la opción de configuración**:
 
-FORCE_UNSAFE_CONFIGURE=1
-
-Esto obliga a que la prueba de **mknod** se ejecute como
+- *FORCE_UNSAFE_CONFIGURE=1*
+   - Esto obliga a que la prueba de **mknod** se ejecute como
 **root**. Generalmente se considera peligroso ejecutar esta prueba
 como **root**, pero como se ejecuta en un sistema que solo se ha
 compilado parcialmente, no hay problema en sobrescribirla.
@@ -14347,9 +14199,8 @@ TeX:
 
 **Significado del parámetro make**:
 
-TEXMF=/usr/share/texmf
-
-La variable makefile de TEXMF contiene la ubicación de la raíz del
+- *TEXMF=/usr/share/texmf*
+   - La variable makefile de TEXMF contiene la ubicación de la raíz del
 árbol de TeX si, por ejemplo, se instalará un paquete de TeX
 posteriormente.
 
@@ -14752,32 +14603,27 @@ Prepare Udev para la compilación:
 
 **Significado de las opciones de meson**:
 
-\--buildtype=release
-
-Esta opción anula el tipo de compilación predeterminado (\"debug\"), que
+- *\--buildtype=release*
+   - Esta opción anula el tipo de compilación predeterminado (\"debug\"), que
 produce binarios no optimizados.
 
--D mode=release
-
-Desactiva algunas funciones consideradas experimentales por el
+- *-D mode=release*
+   - Desactiva algunas funciones consideradas experimentales por el
 desarrollador original.
 
--D dev-kvm-mode=0660
-
-La regla predeterminada de udev permitiría a todos los usuarios acceder
+- *-D dev-kvm-mode=0660*
+   - La regla predeterminada de udev permitiría a todos los usuarios acceder
 a */dev/kvm*. Los editores la consideran peligrosa. Esta opción la
 anula.
 
--D link-udev-shared=false
-
-Esta opción impide que udev se enlace a la biblioteca compartida interna
+- *-D link-udev-shared=false*
+   - Esta opción impide que udev se enlace a la biblioteca compartida interna
 de systemd, *libsystemd-shared*. Esta biblioteca está diseñada para ser
 compartida por varios componentes de Systemd y es demasiado compleja
 para una instalación exclusiva de udev.
 
--*D logind=false -D vconsole=false*
-
-Estas opciones evitan la generación de varios archivos de reglas de udev
+- *D logind=false -D vconsole=false*
+   - Estas opciones evitan la generación de varios archivos de reglas de udev
 pertenecientes a otros componentes de Systemd que no instalaremos.
 
 Obtenga la lista de los ayudantes de udev incluidos y guárdela en
@@ -14935,19 +14781,16 @@ Preparar Man-DB para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--disable-setuid
-
-Esto desactiva la asignación de setuid al programa man al usuario
+- *\--disable-setuid*
+   - Esto desactiva la asignación de setuid al programa man al usuario
 man.
 
-\--enable-cache-owner=bin
-
-Esto cambia la propiedad de los archivos de caché del sistema al
+- *\--enable-cache-owner=bin*
+   - Esto cambia la propiedad de los archivos de caché del sistema al
 usuario bin.
 
-\--with-\...
-
-Estos tres parámetros se utilizan para configurar algunos
+- *\--with-\...*
+   - Estos tres parámetros se utilizan para configurar algunos
 programas predeterminados. Lynx es un navegador web basado en texto
 (consulte BLFS para obtener instrucciones de instalación), Vgrind
 convierte el código fuente del programa a la entrada de Groff y Grap es
@@ -14956,9 +14799,8 @@ Los programas Vgrind y Grap normalmente no son necesarios para ver las
 páginas del manual. No forman parte de LFS ni de BLFS, pero debería
 poder instalarlos usted mismo después de finalizar LFS si lo desea.
 
-\--with-systemd\...
-
-Estos parámetros evitan la instalación de directorios y archivos
+- *\--with-systemd\...*
+   - Estos parámetros evitan la instalación de directorios y archivos
 systemd innecesarios.
 
 Compilar el paquete:
@@ -15094,14 +14936,12 @@ Preparar Procps-ng para la compilación:
 
 **Significado de la opción de configuración**:
 
-\--disable-kill
-
-Esta opción deshabilita la compilación del comando **kill**; se
+- *\--disable-kill*
+   - Esta opción deshabilita la compilación del comando **kill**; se
 instalará desde el paquete Util- linux.
 
-\--enable-watch8bit
-
-Esta opción habilita la compatibilidad de ncursesw con el comando
+- *\--enable-watch8bit*
+   - Esta opción habilita la compatibilidad de ncursesw con el comando
 **watch**, de modo que pueda manejar caracteres de 8 bits.
 
 Compilar el paquete:
@@ -15647,14 +15487,12 @@ Preparar E2fsprogs para la compilación:
 
 **Significado de las opciones de configuración**:
 
-\--enable-elf-shlibs
-
-Esto crea las bibliotecas compartidas que utilizan algunos
+- *\--enable-elf-shlibs*
+   - Esto crea las bibliotecas compartidas que utilizan algunos
 programas de este paquete.
 
-\--disable-\
-
-Esto impide compilar e instalar las bibliotecas **libuuid** y
+- *\--disable-\*
+   - Esto impide compilar e instalar las bibliotecas **libuuid** y
 **libblkid**, el demonio **uuidd** y el contenedor **fsck**;
 util-linux instala versiones más recientes. Compilar el paquete:
 
@@ -18222,17 +18060,16 @@ esto se hace mediante una interfaz de menús, por ejemplo:
 
 **Significado de las variables de entorno opcionales de make**:
 
-LANG=<host_LANG_value> LC_ALL=
-
-Esto establece la configuración regional a la utilizada en el host. Esto
+- *LANG=<host_LANG_value> LC_ALL=*
+   - Esto establece la configuración regional a la utilizada en el host. Esto
 puede ser necesario para un correcto dibujo de líneas de la interfaz de
 ncurses de menuconfig en una consola de texto UTF-8 de Linux.
 Si se utiliza, asegúrese de reemplazar *\<host_LANG_value\>* por el
 valor de la variable *\$LANG * de su host. Alternativamente, puede usar
 el valor del host *\$LC_ALL *o* \$LC_CTYPE*.
 
-**make menuconfig**
-Esto inicia una interfaz de ncurses basada en menús. Para otras
+- **make menuconfig**
+   - sto inicia una interfaz de ncurses basada en menús. Para otras
 interfaces (gráficas), escriba **make help**.
 
 > ℹ️ **Nota**
