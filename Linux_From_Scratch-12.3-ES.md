@@ -9295,10 +9295,10 @@ unidireccional de contraseñas.
 Preparar Libxcrypt para la compilación:
 
 > ```bash
-> ./configure --prefix=/usr \
+> ./configure --prefix=/usr                \
 >             --enable-hashes=strong,glibc \
->             --enable-obsolete-api=no \
->             --disable-static \
+>             --enable-obsolete-api=no     \
+>             --disable-static             \
 >             --disable-failure-tokens
 > ```
 
