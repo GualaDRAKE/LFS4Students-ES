@@ -351,13 +351,13 @@ de granularidad precisa para archivos y directorios.
 objetos del sistema de archivos.
 
 - **Autoconf**
- - Este paquete proporciona programas para generar scripts de shell que
+  - Este paquete proporciona programas para generar scripts de shell que
 pueden configurar automáticamente el código fuente a partir de una
 plantilla de desarrollador. A menudo es necesario reconstruir un paquete
 después de actualizar el procedimiento de compilación.
 
-• **Automake** - 
-Este paquete contiene programas para generar archivos Make a partir de
+- **Automake**
+  - Este paquete contiene programas para generar archivos Make a partir de
 una plantilla. A menudo es necesario reconstruir un paquete después de
 actualizar el procedimiento de compilación.
 
