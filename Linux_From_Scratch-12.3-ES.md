@@ -15572,8 +15572,8 @@ basados en tiempo de forma segura y con garantía de unicidad.
 
 **uuidgen** - Crea nuevos UUID. Cada nuevo UUID es un número aleatorio que
 probablemente sea único entre todos los UUID creados, tanto en el
-sistema local como en otros sistemas, en **** el pasado y en el futuro,
-con una probabilidad extremadamente alta (2 UUID son posibles).
+sistema local como en otros sistemas, en el pasado y en el futuro,
+con una probabilidad extremadamente alta (2<sup>128</sup> UUID son posibles).
 
 **uuidparse** - Una utilidad para analizar identificadores únicos.
 
