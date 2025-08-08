@@ -2419,6 +2419,7 @@ Descargue u obtenga los siguientes paquetes:
 
 |• Autoconf (2.72) - 1.360 KB:|Página principal: https://www.gnu.org/software/autoconf/<br>Descarga: https://ftp.gnu.org/gnu/autoconf/autoconf-2.72.tar.xz<br>Suma MD5: 1be79f7106ab6767f18391c5e22be701|
 |:-----|:-----|
+
 • Automake (1.17) - 1.614 KB:
 Página principal: https://www.gnu.org/software/automake/
 Descarga: https://ftp.gnu.org/gnu/automake/automake-1.17.tar.xz
