@@ -4983,8 +4983,8 @@ una vez que entremos en el entorno **chroot**.
 \--disable-stripping
 
 Este modificador evita que el sistema de construcción utilice el
-programa **strip** del sistema anfitrión. Usar herramientas del
-anfitrión en programas compilados de forma cruzada puede provocar
+programa **strip** del sistema host. Usar herramientas del
+host en programas compilados de forma cruzada puede provocar
 fallos.
 
 AWK=gawk
