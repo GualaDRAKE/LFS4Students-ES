@@ -1086,45 +1086,45 @@ Entradas del registro de cambios:
 
 - 02/03/2025.
 
-  - \[bdubbs\] - Actualización a vim-9.1.1166 (Actualización de seguridad). Corrige el problema n.° 5666.
+  - \[bdubbs\] - Actualización a vim-9.1.1166 (Actualización de seguridad). Corrige el problema # 5666.
 
 - 27/02/2025.
 
-  - \[bdubbs\] - Actualización a zstd-1.5.7. Corrige el problema n.° 5652.
+  - \[bdubbs\] - Actualización a zstd-1.5.7. Corrige el problema # 5652.
 
-  - \[bdubbs\] - Actualización a systemd-257.3. Corrige el error n.° 5612.
+  - \[bdubbs\] - Actualización a systemd-257.3. Corrige el error # 5612.
 
-  - \[bdubbs\] - Actualización a shadow-4.17.3. Corrige el error n.° 5660.
+  - \[bdubbs\] - Actualización a shadow-4.17.3. Corrige el error # 5660.
 
-  - \[bdubbs\] - Actualización a setuptools-75.8.1. Corrige el error n.° 5662.
+  - \[bdubbs\] - Actualización a setuptools-75.8.1. Corrige el error # 5662.
 
-  - \[bdubbs\] - Actualización a linux-6.13.4. Corrige el error n.° 5647.
+  - \[bdubbs\] - Actualización a linux-6.13.4. Corrige el error # 5647.
 
-  - \[bdubbs\] - Actualización a kmod-34. Corrige el error n.° 5657.
+  - \[bdubbs\] - Actualización a kmod-34. Corrige el error # 5657.
 
-  - \[bdubbs\] - Actualización a inetutils-2.6. Corrige el error n.° 5656.
+  - \[bdubbs\] - Actualización a inetutils-2.6. Corrige el error # 5656.
 
-  - \[bdubbs\] - Actualización a gettext-0.24. Corrige el error n.° 5661.
+  - \[bdubbs\] - Actualización a gettext-0.24. Corrige el error # 5661.
 
-  - \[bdubbs\] - Actualización a flit_core-3.11.0. Corrige el error n.° 5654.
+  - \[bdubbs\] - Actualización a flit_core-3.11.0. Corrige el error # 5654.
 
 - 24/02/2025.
 
-  - \[bdubbs\] - Actualización a man-pages-6.12. Corrige el problema n.° 5658.
+  - \[bdubbs\] - Actualización a man-pages-6.12. Corrige el problema # 5658.
 
 - 19/02/2025.
 
-  - \[xry111\] - Actualización a vim-9.1.1122 (Actualización de seguridad). Corrige el problema n.° 4500.
+  - \[xry111\] - Actualización a vim-9.1.1122 (Actualización de seguridad). Corrige el problema # 4500.
 
-  - \[xry111\] - Actualización a man-pages-6.11. Corrige el problema n.° 5646.
+  - \[xry111\] - Actualización a man-pages-6.11. Corrige el problema # 5646.
 
 - 13/02/2025.
 
-  - \[bdubbs\] - Actualización a vim-9.1.1106. Corrige el problema n.° 4500.
+  - \[bdubbs\] - Actualización a vim-9.1.1106. Corrige el problema # 4500.
 
-  - \[bdubbs\] - Actualización a diffutils-3.11. Corrige el problema n.° 5639.
+  - \[bdubbs\] - Actualización a diffutils-3.11. Corrige el problema # 5639.
 
-  - \[bdubbs\] - Actualización a libffi-3.4.7. Corrige el problema n.° 5642.
+  - \[bdubbs\] - Actualización a libffi-3.4.7. Corrige el problema # 5642.
 
   - \[bdubbs\] - Actualización a Linux-6.13.2. Corrige el problema #5643.
 
@@ -1158,21 +1158,21 @@ Entradas del registro de cambios:
 
   - \[bdubbs\] - Actualización a perl-5.40.1. Corrige el problema #5630.
 
-  - \[bdubbs\] - Actualización a tcl8.6.16. Corrige el problema n.° 5635.
+  - \[bdubbs\] - Actualización a tcl8.6.16. Corrige el problema # 5635.
 
-  - \[bdubbs\] - Actualización a tzdata2025a. Corrige el problema n.° 5627.
+  - \[bdubbs\] - Actualización a tzdata2025a. Corrige el problema # 5627.
 
-  - \[bdubbs\] - Actualización a xz-5.6.4. Corrige el problema n.° 5633.
+  - \[bdubbs\] - Actualización a xz-5.6.4. Corrige el problema # 5633.
 
 - 15/01/2025.
 
-  - \[bdubbs\] - Actualización a vim-9.1.1016. Corrige el problema n.° 4500.
+  - \[bdubbs\] - Actualización a vim-9.1.1016. Corrige el problema # 4500.
 
-  - \[bdubbs\] - Actualización a iana-etc-20250108. Corrige el problema n.° 5006.
+  - \[bdubbs\] - Actualización a iana-etc-20250108. Corrige el problema # 5006.
 
-  - \[bdubbs\] - Actualización a util-linux-2.40.4. Corrige el problema n.° 5624.
+  - \[bdubbs\] - Actualización a util-linux-2.40.4. Corrige el problema # 5624.
 
-  - \[bdubbs\] - Actualización a sysvinit-3.13. Corrige el problema n.° 5621.
+  - \[bdubbs\] - Actualización a sysvinit-3.13. Corrige el problema # 5621.
 
   - \[bdubbs\] - Actualización a sysklogd-2.7.0. Corrige el problema #5623.
 
@@ -1208,49 +1208,49 @@ Entradas del registro de cambios:
 
 - 15/12/2024.
 
-  - \[bdubbs\] - Actualización a vim-9.1.0927. Corrige el problema n.° 4500.
+  - \[bdubbs\] - Actualización a vim-9.1.0927. Corrige el problema # 4500.
 
-  - \[bdubbs\] - Actualización a iana-etc-20241206. Corrige el problema n.° 5006.
+  - \[bdubbs\] - Actualización a iana-etc-20241206. Corrige el problema # 5006.
 
-  - \[bdubbs\] - Actualización a systemd-257. Corrige el problema n.° 5559.
+  - \[bdubbs\] - Actualización a systemd-257. Corrige el problema # 5559.
 
-  - \[bdubbs\] - Actualización a Python-3.13.1 (Actualización de seguridad). Corrige el problema n.° 5605.
+  - \[bdubbs\] - Actualización a Python-3.13.1 (Actualización de seguridad). Corrige el problema # 5605.
 
-  - \[bdubbs\] - Actualización a libcap-2.73. Corrige el problema n.° 5604.
+  - \[bdubbs\] - Actualización a libcap-2.73. Corrige el problema # 5604.
 
-  - \[bdubbs\] - Actualización a linux-6.12.5. Corrige el problema n.° 5607.
+  - \[bdubbs\] - Actualización a linux-6.12.5. Corrige el problema # 5607.
 
-  - \[bdubbs\] - Actualización a kbd-2.7. Corrige el problema n.° 5608.
+  - \[bdubbs\] - Actualización a kbd-2.7. Corrige el problema # 5608.
 
-  - \[bdubbs\] - Actualización a gettext-0.23. Corrige el problema n.° 5603.
+  - \[bdubbs\] - Actualización a gettext-0.23. Corrige el problema # 5603.
 
 - 01/12/2024.
 
-  - \[bdubbs\] - Actualización a iana-etc-20241122. Corrige el problema n.° 5006.
+  - \[bdubbs\] - Actualización a iana-etc-20241122. Corrige el problema # 5006.
 
-  - \[bdubbs\] - Actualización a file-5.46. Corrige el problema n.° 5601.
+  - \[bdubbs\] - Actualización a file-5.46. Corrige el problema # 5601.
 
-  - \[bdubbs\] - Actualización a iproute2-6.12.0. Corrige el problema n.° 5597.
+  - \[bdubbs\] - Actualización a iproute2-6.12.0. Corrige el problema # 5597.
 
-  - \[bdubbs\] - Actualización a libtool-2.5.4. Corrige el problema n.° 5598.
+  - \[bdubbs\] - Actualización a libtool-2.5.4. Corrige el problema # 5598.
 
-  - \[bdubbs\] - Actualización a linux-6.12.1. Corrige el problema n.° 5586.
+  - \[bdubbs\] - Actualización a linux-6.12.1. Corrige el problema # 5586.
 
-  - \[bdubbs\] - Actualización a setuptools-75.6.0 (módulo de Python). Corrige el problema n.° 5599.
+  - \[bdubbs\] - Actualización a setuptools-75.6.0 (módulo de Python). Corrige el problema # 5599.
 
-  - \[bdubbs\] - Actualización a wheel-0.45.1 (Módulo de Python). Corrige el problema n.° 5600.
+  - \[bdubbs\] - Actualización a wheel-0.45.1 (Módulo de Python). Corrige el problema # 5600.
 
 - 15/11/2024.
 
-  - \[bdubbs\] - Actualización a vim-9.1.0866. Corrige el problema n.° 4500.
+  - \[bdubbs\] - Actualización a vim-9.1.0866. Corrige el problema # 4500.
 
-  - \[bdubbs\] - Actualización a iana-etc-20241024. Corrige el problema n.° 5006.
+  - \[bdubbs\] - Actualización a iana-etc-20241024. Corrige el problema # 5006.
 
-  - \[bdubbs\] - Actualización a wheel-0.45.0 (Módulo de Python). Corrige el problema n.° 5593.
+  - \[bdubbs\] - Actualización a wheel-0.45.0 (Módulo de Python). Corrige el problema # 5593.
 
-  - \[bdubbs\] - Actualización a setuptools-75.5.0 (Módulo de Python). Corrige el problema n.° 5595.
+  - \[bdubbs\] - Actualización a setuptools-75.5.0 (Módulo de Python). Corrige el problema # 5595.
 
-  - \[bdubbs\] - Actualización a linux-6.11.8. Corrige el problema n.° 5582.
+  - \[bdubbs\] - Actualización a linux-6.11.8. Corrige el problema # 5582.
 
   - \[bdubbs\] - Actualización a libcap-2.72. Corrige el problema #5594.
 
@@ -1268,39 +1268,41 @@ Entradas del registro de cambios:
 
   - \[bdubbs\] - Actualización a libcap-2.71. Corrige el problema #5584.
 
-  - \[bdubbs\] - Actualización a setuptools-75.3.0. Corrige el problema n.° 5585.
+  - \[bdubbs\] - Actualización a setuptools-75.3.0. Corrige el problema # 5585.
 
-  -  \[bdubbs\] - Actualización a flit_core-3.10.0. Corrige el problema n.° 5587.
+  -  \[bdubbs\] - Actualización a flit_core-3.10.0. Corrige el problema # 5587.
 
 - 25/10/2024.
 
-  - \[bdubbs\] - Actualización a iana-etc-20241015. Corrige el problema n.° 5006.
+  - \[bdubbs\] - Actualización a iana-etc-20241015. Corrige el problema # 5006.
 
-  - \[bdubbs\] - Actualización a vim-9.1.0813. Corrige el problema n.° 4500.
+  - \[bdubbs\] - Actualización a vim-9.1.0813. Corrige el problema # 4500.
 
-  - \[bdubbs\] - Actualización a xz-5.6.3. Corrige el problema n.° 5572.
+  - \[bdubbs\] - Actualización a xz-5.6.3. Corrige el problema # 5572.
 
-  - \[bdubbs\] - Actualización a sysvinit-3.11. Corrige el problema n.° 5581.
+  - \[bdubbs\] - Actualización a sysvinit-3.11. Corrige el problema # 5581.
 
-  - \[bdubbs\] - Actualización a setuptools-75.2.0. Corrige el problema n.° 5577.
+  - \[bdubbs\] - Actualización a setuptools-75.2.0. Corrige el problema # 5577.
 
-  - \[bdubbs\] - Actualización a Python3-3.13.0. Corrige el problema n.° 5575.
+  - \[bdubbs\] - Actualización a Python3-3.13.0. Corrige el problema # 5575.
 
-  - \[bdubbs\] - Actualización a openssl-3.4.0. Corrige el error n.° 5582.
+  - \[bdubbs\] - Actualización a openssl-3.4.0. Corrige el error # 5582.
 
-  - \[bdubbs\] - Actualización a meson-1.6.0. Corrige el error n.° 5580.
+  - \[bdubbs\] - Actualización a meson-1.6.0. Corrige el error # 5580.
 
-  - \[bdubbs\] - Actualización a markupsafe-3.0.2. Corrige el error n.° 5576.
+  - \[bdubbs\] - Actualización a markupsafe-3.0.2. Corrige el error # 5576.
 
-  - \[bdubbs\] - Actualización a linux-6.11.5. Corrige el error n.° 5574.
+  - \[bdubbs\] - Actualización a linux-6.11.5. Corrige el error # 5574.
 
-  - \[bdubbs\] - Actualización a less-668. Corrige el error n.° 5578.
+  - \[bdubbs\] - Actualización a less-668. Corrige el error # 5578.
 
-  - \[bdubbs\] - Actualización a elfutils-0.192. Corrige el error n.° 5579.
+  - \[bdubbs\] - Actualización a elfutils-0.192. Corrige el error # 5579.
 
 - 03/10/2024.
 
-  - \[bdubbs\] - Retorno a tcl8.6.15. • 01/10/2024
+  - \[bdubbs\] - Retorno a tcl8.6.15.
+
+- • 01/10/2024
 
   - \[bdubbs\] - Actualización a Python3-3.12.7. Corrige el problema #5571.
 
@@ -1318,45 +1320,45 @@ Entradas del registro de cambios:
 
 - 20/09/2024.
 
-  - \[bdubbs\] - Actualización a vim-9.1.0738. Corrige el problema n.° 4500.
+  - \[bdubbs\] - Actualización a vim-9.1.0738. Corrige el problema # 4500.
 
-  - \[bdubbs\] - Actualización a texinfo-7.1.1. Corrige el problema n.° 5558.
+  - \[bdubbs\] - Actualización a texinfo-7.1.1. Corrige el problema # 5558.
 
-  - \[bdubbs\] - Actualización a tcl8.6.15. Corrige el problema n.° 5562.
+  - \[bdubbs\] - Actualización a tcl8.6.15. Corrige el problema # 5562.
 
-  - \[bdubbs\] - Actualización a sysklogd-2.6.2. Corrige el problema n.° 5557.
+  - \[bdubbs\] - Actualización a sysklogd-2.6.2. Corrige el problema # 5557.
 
-  - \[bdubbs\] - Actualización a setuptools-75.1.0. Corrige el problema n.° 5560.
+  - \[bdubbs\] - Actualización a setuptools-75.1.0. Corrige el problema # 5560.
 
-  - \[bdubbs\] - Actualización a meson-1.5.2. Corrige el problema n.° 5566.
+  - \[bdubbs\] - Actualización a meson-1.5.2. Corrige el problema # 5566.
 
-  - \[bdubbs\] - Actualización a iana-etc-20240912. Corrige el problema n.° 5006.
+  - \[bdubbs\] - Actualización a iana-etc-20240912. Corrige el problema # 5006.
 
-  - \[bdubbs\] - Actualización a gawk-5.3.1. Corrige el error n.° 5564.
+  - \[bdubbs\] - Actualización a gawk-5.3.1. Corrige el error # 5564.
 
-  - \[bdubbs\] - Actualización a bc-7.0.2. Corrige el error n.° 5563.
+  - \[bdubbs\] - Actualización a bc-7.0.2. Corrige el error # 5563.
 
 - 07/09/2024.
 
-  - \[bdubbs\] - Actualización a tzdata-2024b. Corrige el error n.° 5554.
+  - \[bdubbs\] - Actualización a tzdata-2024b. Corrige el error # 5554.
 
-  - \[bdubbs\] - Actualización a systemd-256.5. Corrige el error n.° 5551.
+  - \[bdubbs\] - Actualización a systemd-256.5. Corrige el error # 5551.
 
-  - \[bdubbs\] - Actualización a setuptools-74.1.2. Corrige el error n.° 5546.
+  - \[bdubbs\] - Actualización a setuptools-74.1.2. Corrige el error # 5546.
 
-  - \[bdubbs\] - Actualización a python3-3.12.6. Corrige el error n.° 5555.
+  - \[bdubbs\] - Actualización a python3-3.12.6. Corrige el error # 5555.
 
-  - \[bdubbs\] - Actualización a openssl-3.3.2. Corrige el error n.° 5552.
+  - \[bdubbs\] - Actualización a openssl-3.3.2. Corrige el error # 5552.
 
-  - \[bdubbs\] - Actualización a man-db-2.13.0. Corrige el error n.° 5550.
+  - \[bdubbs\] - Actualización a man-db-2.13.0. Corrige el error # 5550.
 
-  - \[bdubbs\] - Actualización a linux-6.10.8. Corrige el error n.° 5545.
+  - \[bdubbs\] - Actualización a linux-6.10.8. Corrige el error # 5545.
 
-  - \[bdubbs\] - Actualización a libpipeline-1.5.8. Corrige el error n.° 5548.
+  - \[bdubbs\] - Actualización a libpipeline-1.5.8. Corrige el error # 5548.
 
-  - \[bdubbs\] - Actualización a expat-2.6.3. Corrige el error n.° 5553.
+  - \[bdubbs\] - Actualización a expat-2.6.3. Corrige el error # 5553.
 
-  - \[bdubbs\] - Actualización a bc-7.0.1. Corrige el error n.° 5547.
+  - \[bdubbs\] - Actualización a bc-7.0.1. Corrige el error # 5547.
 
 - 01/09/2024.
 
