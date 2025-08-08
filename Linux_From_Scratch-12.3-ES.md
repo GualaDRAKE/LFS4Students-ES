@@ -2828,30 +2828,25 @@ agregar el nuevo usuario:
 > useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 > ```
 
-Esto significan las opciones de la línea de comandos:
+**Significado de las opciones de la línea de comandos**:
 
--s /bin/bash
-
-Esto convierte a **bash** en el shell predeterminado para el usuario
+- *-s /bin/bash*
+   - Esto convierte a **bash** en el shell predeterminado para el usuario
 lfs.
 
--g lfs
+- *-g lfs*
+   - Esta opción agrega el usuario lfs al grupo lfs.
 
-Esta opción agrega el usuario lfs al grupo lfs.
+- *-m*
+   - Esto crea un directorio personal para lfs.
 
--m
-
-Esto crea un directorio personal para lfs.
-
--k /dev/null
-
-Este parámetro evita la posible copia de archivos desde un directorio
+- *-k /dev/null*
+   - Este parámetro evita la posible copia de archivos desde un directorio
 esqueleto (el predeterminado es /etc/skel) al cambiar la ubicación de
 entrada al dispositivo nulo especial.
 
-lfs
-
-Este es el nombre del nuevo usuario.
+- *lfs*
+   - Este es el nombre del nuevo usuario.
 
 Si desea iniciar sesión como lfs o cambiar a lfs desde un usuario no
 root (a diferencia de cambiar al usuario lfs cuando se inicia sesión
