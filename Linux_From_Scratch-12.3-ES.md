@@ -3679,7 +3679,7 @@ compilación dedicado:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 > ℹ️ **Nota**
@@ -3827,7 +3827,7 @@ compilación dedicado:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Preparar GCC para la compilación:
@@ -4066,7 +4066,7 @@ La documentación de Glibc recomienda compilar Glibc en un directorio de compila
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Asegúrese de que las utilidades ldconfig y sln estén instaladas en /usr/sbin:
@@ -4236,7 +4236,7 @@ introdúzcalo:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Prepare Libstdc++ para la compilación:
@@ -5114,7 +5114,7 @@ Crear de nuevo un directorio de compilación independiente:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Preparar Binutils para la compilación:
@@ -5219,7 +5219,7 @@ Cree de nuevo un directorio de compilación independiente:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Antes de comenzar a compilar GCC, recuerde deshabilitar cualquier
@@ -6805,7 +6805,7 @@ compilación dedicado:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Asegúrese de que las utilidades **ldconfig** y **sln** se instalen en
@@ -8418,7 +8418,7 @@ de compilación dedicado:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Preparar DejaGNU para la compilación:
@@ -8549,7 +8549,7 @@ directorio de compilación dedicado:
 
 > ```bash
 > mkdir -v build
-> cd build
+> cd       build
 > ```
 
 Preparar Binutils para la compilación:
