@@ -3656,9 +3656,9 @@ compilar.
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-|**Tiempo de compilación aproximado**:|1 SBU|
+|Tiempo de compilación aproximado|1 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|677 GB|
+|Espacio en disco requerido|677 GB|
 
 &nbsp;
 
@@ -3778,7 +3778,7 @@ Los detalles de este paquete se encuentran en la Sección 8.20.2,
 El paquete GCC contiene la colección de compiladores GNU, que incluye
 los compiladores de C y C++.
 
-|**Tiempo de compilación aproximado**:|3,2 SBU|
+|Tiempo de compilación aproximado|3,2 SBU|
 |---------------------------------|-------|
 |**Espacio en disco requerid**o:|4,8 GB|
 
@@ -3953,9 +3953,9 @@ Los detalles de este paquete se encuentran en la Sección 8.29.2,
 Las cabeceras de la API de Linux (en linux-6.13.4.tar.xz) exponen la API
 del kernel para que Glibc los use.
 
-|**Tiempo de compilación aproximad**o:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|1,61 GB|
+|Espacio en disco requerido|1,61 GB|
 
 &nbsp;
 
@@ -4023,9 +4023,9 @@ proporciona las rutinas básicas para asignar memoria, buscar
 directorios, abrir y cerrar archivos, leer y escribir archivos, manejar
 cadenas, buscar patrones, realizar operaciones aritméticas, etc.
 
-|**Tiempo de compilación aproximado**:|1,4 SBU|
+|Tiempo de compilación aproximado|1,4 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|850 MB|
+|Espacio en disco requerido|850 MB|
 
 &nbsp;
 
@@ -4217,9 +4217,9 @@ código C++ (parte de GCC está escrita en C++), pero tuvimos que posponer
 su instalación al compilar gcc-pass1 porque Libstdc++ depende de Glibc,
 que aún no estaba disponible en el directorio de destino.
 
-|**Tiempo de compilación aproximado**:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|850 MB|
+|Espacio en disco requerido|850 MB|
 
 &nbsp;
 
@@ -4330,9 +4330,9 @@ descrito en la Sección 4.4, \"Configuración del entorno\".
 
 El paquete M4 contiene un procesador de macros.
 
-|**Tiempo de compilación aproximado**:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|32 MB|
+|Espacio en disco requerido|32 MB|
 
 &nbsp;
 
@@ -4369,9 +4369,9 @@ Los detalles de este paquete se encuentran en la Sección 8.13.2, "Contenido de 
 El paquete Ncurses contiene bibliotecas para la gestión de pantallas de
 caracteres independiente de la terminal.
 
-|**Tiempo de compilación aproximado**:|0,4 SBU|
+|Tiempo de compilación aproximado|0,4 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|53 MB|
+|Espacio en disco requerido|53 MB|
 
 &nbsp;
 
@@ -4489,9 +4489,9 @@ Los detalles de este paquete se encuentran en la Sección 8.30.2, "Contenido de 
 
 El paquete Bash contiene Bourne-Again Shell.
 
-|**Tiempo de compilación aproximado**:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|68 MB|
+|Espacio en disco requerido|68 MB|
 
 &nbsp;
 
@@ -4541,9 +4541,9 @@ Los detalles de este paquete se encuentran en la Sección 8.36.2, "Contenido de 
 El paquete Coreutils contiene las utilidades básicas que necesita
 cualquier sistema operativo.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|181 MB|
+|Espacio en disco requerido|181 MB|
 
 &nbsp;
 
@@ -4599,9 +4599,9 @@ Los detalles de este paquete se encuentran en la Sección 8.58.2, "Contenido de 
 El paquete Diffutils contiene programas que muestran las diferencias
 entre archivos o directorios.
 
-|**Tiempo de compilación aproximado**:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|35 MB|
+|Espacio en disco requerido|35 MB|
 
 &nbsp;
 
@@ -4637,9 +4637,9 @@ Los detalles de este paquete se encuentran en la Sección 8.60.2, "Contenido de 
 
 El paquete File contiene una utilidad para determinar el tipo de uno o más archivos.
 
-|**Tiempo de compilación aproximado**:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|42 MB|
+|Espacio en disco requerido|42 MB|
 
 &nbsp;
 
@@ -4711,9 +4711,9 @@ que la base de datos se haya actualizado recientemente). Findutils
 también incluye el programa xargs, que permite ejecutar un comando
 específico en cada archivo seleccionado en una búsqueda.
 
-|*Tiempo de compilación aproximado*:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|*Espacio en disco requerido*:|48 MB|
+|Espacio en disco requerido|48 MB|
 
 &nbsp;
 
@@ -4750,9 +4750,9 @@ Los detalles de este paquete se encuentran en la Sección 8.62.2, "Contenido de 
 
 El paquete Gawk contiene programas para manipular archivos de texto.
 
-|**Tiempo de compilación aproximado**:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|47 MB|
+|Espacio en disco requerido|47 MB|
 
 &nbsp;
 
@@ -4795,9 +4795,9 @@ Los detalles de este paquete se encuentran en la Sección 8.61.2, "Contenido de 
 El paquete Grep contiene programas para buscar en el contenido de los
 archivos.
 
-|**Tiempo de compilación aproximado**:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerido**:|27 MB|
+|Espacio en disco requerido|27 MB|
 
 &nbsp;
 
@@ -4833,9 +4833,9 @@ Los detalles de este paquete se encuentran en la Sección 8.35.2, "Contenido de 
 
 El paquete Gzip contiene programas para comprimir y descomprimir archivos.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|11 MB|
+|Espacio en disco requerido|11 MB|
 
 &nbsp;
 
@@ -4872,9 +4872,9 @@ El paquete Make contiene un programa para controlar la generación de
 ejecutables y otros archivos no fuente de un paquete a partir de los
 archivos fuente.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|15 MB|
+|Espacio en disco requerido|15 MB|
 
 &nbsp;
 
@@ -4919,9 +4919,9 @@ El paquete Parche contiene un programa para modificar o crear archivos
 mediante la aplicación de un archivo de parche, generalmente creado por
 el programa diff.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|12 MB|
+|Espacio en disco requerido|12 MB|
 
 &nbsp;
 
@@ -4958,9 +4958,9 @@ Los detalles de este paquete se encuentran en la Sección 8.70.2,
 
 El paquete Sed contiene un editor de flujos.
 
-|Tiempo de compilación aproximado:|0.1 SBU|
+|Tiempo de compilación aproximado|0.1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|21 MB|
+|Espacio en disco requerido|21 MB|
 
 &nbsp;
 
@@ -5000,9 +5000,9 @@ manipulaciones de archivos. Tar se puede usar en archivos creados
 previamente para extraer archivos, almacenar archivos adicionales o
 actualizar o listar archivos ya almacenados.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|42 MB|
+|Espacio en disco requerido|42 MB|
 
 &nbsp;
 
@@ -5042,9 +5042,9 @@ Ofrece funciones para los formatos de compresión lzma y xz, que son más
 recientes. Comprimir archivos de texto con xz ofrece un mejor porcentaje
 de compresión que con los comandos tradicionales gzip o bzip2.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|21 MB|
+|Espacio en disco requerido|21 MB|
 
 &nbsp;
 
@@ -5091,9 +5091,9 @@ Los detalles de este paquete se encuentran en la Sección 8.8.2,
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-|Tiempo de compilación aproximado:|0,4 SBU|
+|Tiempo de compilación aproximado|0,4 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|539 MB|
+|Espacio en disco requerido|539 MB|
 
 &nbsp;
 
@@ -5173,9 +5173,9 @@ Los detalles de este paquete se encuentran en la Sección 8.20.2,
 El paquete GCC contiene la colección de compiladores GNU, que incluye
 los compiladores de C y C++.
 
-|Tiempo de compilación aproximado:|4,1 SBU|
+|Tiempo de compilación aproximado|4,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|5,5 GB|
+|Espacio en disco requerido|5,5 GB|
 
 &nbsp;
 
@@ -5757,9 +5757,9 @@ localización. Estas permiten compilar programas con NLS (Soporte de
 Lenguaje Nativo), lo que les permite mostrar mensajes en el idioma
 nativo del usuario.
 
-|Tiempo de compilación aproximado:|1,3 SBU|
+|Tiempo de compilación aproximado|1,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|349 MB|
+|Espacio en disco requerido|349 MB|
 
 &nbsp;
 
@@ -5802,9 +5802,9 @@ Los detalles de este paquete se encuentran en la Sección 8.33.2,
 
 El paquete Bison contiene un generador de analizadores sintácticos.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|58 MB|
+|Espacio en disco requerido|58 MB|
 
 &nbsp;
 
@@ -5846,9 +5846,9 @@ Los detalles sobre este paquete se encuentran en la Sección 8.34.2,
 
 El paquete Perl contiene el Lenguaje Práctico de Extracción e Informes.
 
-|Tiempo de compilación aproximado:|0,6 SBU|
+|Tiempo de compilación aproximado|0,6 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|285 MB|
+|Espacio en disco requerido|285 MB|
 
 &nbsp;
 
@@ -5919,9 +5919,9 @@ creación de prototipos de programas grandes y el desarrollo de
 aplicaciones completas. Python es un lenguaje de programación
 interpretado.
 
-|Tiempo de compilación aproximado:|0,5 SBU|
+|Tiempo de compilación aproximado|0,5 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|634 MB|
+|Espacio en disco requerido|634 MB|
 
 &nbsp;
 
@@ -5983,9 +5983,9 @@ Los detalles sobre este paquete se encuentran en la Sección 8.51.2,
 El paquete Texinfo contiene programas para leer, escribir y convertir
 páginas de información.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|152 MB|
+|Espacio en disco requerido|152 MB|
 
 &nbsp;
 
@@ -6020,9 +6020,9 @@ Los detalles de este paquete se encuentran en la Sección 8.72.2,
 
 El paquete Util-linux contiene diversas utilidades.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|182 MB|
+|Espacio en disco requerido|182 MB|
 
 &nbsp;
 
@@ -6685,9 +6685,9 @@ Finalmente, el nuevo sistema debe ser arrancable mediante la Sección
 
 El paquete de páginas de manual contiene más de 2400 páginas de manual.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|52 MB|
+|Espacio en disco requerido|52 MB|
 
 &nbsp;
 
@@ -6741,9 +6741,9 @@ configuración significativos.
 El paquete Iana-Etc proporciona datos para servicios y protocolos de
 red.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|4,8 MB|
+|Espacio en disco requerido|4,8 MB|
 
 &nbsp;
 
@@ -6783,9 +6783,9 @@ proporciona las rutinas básicas para asignar memoria, buscar
 directorios, abrir y cerrar archivos, leer y escribir archivos, manejar
 cadenas, comparar patrones, realizar operaciones aritméticas, etc.
 
-|Tiempo de compilación aproximado:|12 SBU|
+|Tiempo de compilación aproximado|12 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|3,2 GB|
+|Espacio en disco requerido|3,2 GB|
 
 &nbsp;
 
@@ -7365,9 +7365,9 @@ Unix. Estas funciones ahora se encuentran en *libc*.
 El paquete Zlib contiene rutinas de compresión y descompresión
 utilizadas por algunos programas.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|6,4 GB|
+|Espacio en disco requerido|6,4 GB|
 
 &nbsp;
 
@@ -7426,9 +7426,9 @@ El paquete Bzip2 contiene programas para comprimir y descomprimir
 archivos. Comprimir archivos de texto con **bzip2** ofrece un porcentaje
 de compresión mucho mejor que con el gzip tradicional.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|7,2 MB|
+|Espacio en disco requerido|7,2 MB|
 
 &nbsp;
 
@@ -7557,9 +7557,9 @@ Ofrece funciones para los formatos de compresión lzma y xz, que son más
 recientes. Comprimir archivos de texto con xz ofrece un mejor porcentaje
 de compresión que con los comandos tradicionales gzip o bzip2.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|21 MB|
+|Espacio en disco requerido|21 MB|
 
 &nbsp;
 
@@ -7673,9 +7673,9 @@ decodificador extremadamente rápido, con una velocidad de varios GB/s
 por núcleo. Lz4 es compatible con Zstandard para que ambos algoritmos
 puedan comprimir los datos más rápidamente.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|4,2MB|
+|Espacio en disco requerido|4,2MB|
 
 &nbsp;
 
@@ -7733,9 +7733,9 @@ altas tasas de compresión. Ofrece una amplia gama de ventajas y
 desventajas entre compresión y velocidad, además de estar respaldado por
 un decodificador muy rápido.
 
-|Tiempo de compilación aproximado:|0,4 SBU|
+|Tiempo de compilación aproximado|0,4 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|85 MB|
+|Espacio en disco requerido|85 MB|
 
 &nbsp;
 
@@ -7801,9 +7801,9 @@ mediante el algoritmo ZSTD.
 El paquete Archivo contiene una utilidad para determinar el tipo de uno
 o más archivos.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|19 MB|
+|Espacio en disco requerido|19 MB|
 
 &nbsp;
 
@@ -7860,9 +7860,9 @@ utilizadas por el programa Archivo.
 El paquete Readline es un conjunto de bibliotecas que ofrecen funciones
 de edición e historial desde la línea de comandos.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|16 MB|
+|Espacio en disco requerido|16 MB|
 
 &nbsp;
 
@@ -7955,9 +7955,9 @@ texto introducido en una sesión interactiva de un programa.
 
 El paquete M4 contiene un procesador de macros.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|49 MB|
+|Espacio en disco requerido|49 MB|
 
 &nbsp;
 
@@ -8015,9 +8015,9 @@ procesador de macros por sí mismo.
 El paquete Bc contiene un lenguaje de procesamiento numérico de
 precisión arbitraria.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|7,8 MB
+|Espacio en disco requerido|7,8 MB
 
 &nbsp;
 
@@ -8086,9 +8086,9 @@ Instala el paquete:
 El paquete Flex contiene una utilidad para generar programas que
 reconocen patrones en texto.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|33 MB|
+|Espacio en disco requerido|33 MB|
 
 &nbsp;
 
@@ -8164,9 +8164,9 @@ El paquete Tcl contiene el Lenguaje de Comandos de Herramientas, un
 lenguaje de scripting robusto y de propósito general. El paquete Expect
 está escrito en Tcl (se pronuncia \"cosquillas\").
 
-|Tiempo de compilación aproximado:|3,1 SBU|
+|Tiempo de compilación aproximado|3,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|91 MB|
+|Espacio en disco requerido|91 MB|
 
 &nbsp;
 
@@ -8305,9 +8305,9 @@ mismas aplicaciones, así como para facilitar todo tipo de tareas que
 resultan extremadamente difíciles con cualquier otro sistema. El
 framework DejaGnu está escrito en Expect.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|3,9 MB|
+|Espacio en disco requerido|3,9 MB|
 
 &nbsp;
 
@@ -8405,9 +8405,9 @@ El paquete DejaGnu contiene un marco de trabajo para ejecutar conjuntos
 de pruebas en herramientas GNU. Está escrito en expect, que a su vez
 utiliza Tcl (lenguaje de comandos de herramientas).
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|6,9 MB|
+|Espacio en disco requerido|6,9 MB|
 
 &nbsp;
 
@@ -8469,9 +8469,9 @@ herramienta para pasar la ruta de inclusión y/o las rutas de biblioteca
 a las herramientas de compilación durante las fases de configuración y
 creación de la instalación de paquetes.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|4,7 MB|
+|Espacio en disco requerido|4,7 MB|
 
 &nbsp;
 
@@ -8536,9 +8536,9 @@ frameworks.
 El paquete Binutils contiene un enlazador, un ensamblador y otras
 herramientas para gestionar archivos objeto.
 
-|Tiempo de compilación aproximado:|1,6 SBU|
+|Tiempo de compilación aproximado|1,6 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|819 MB|
+|Espacio en disco requerido|819 MB|
 
 &nbsp;
 
@@ -8725,9 +8725,9 @@ utilizando un desempaquetador (unwinder) simple..
 El paquete GMP contiene bibliotecas matemáticas. Estas ofrecen funciones
 útiles para cálculos aritméticos de precisión arbitraria.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|54 MB|
+|Espacio en disco requerido|54 MB|
 
 &nbsp;
 
@@ -8836,9 +8836,9 @@ Instale el paquete y su documentación:
 El paquete MPFR contiene funciones para cálculos matemáticos de
 precisión múltiple.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|43 MB|
+|Espacio en disco requerido|43 MB|
 
 &nbsp;
 
@@ -8902,9 +8902,9 @@ El paquete MPC contiene una biblioteca para la aritmética de números
 complejos con precisión arbitrariamente alta y redondeo correcto del
 resultado.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|22 MB|
+|Espacio en disco requerido|22 MB|
 
 &nbsp;
 
@@ -8960,9 +8960,9 @@ Instalar el paquete y su documentación:
 El paquete Attr contiene utilidades para administrar los atributos
 extendidos de los objetos del sistema de archivos.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|4,1 MB|
+|Espacio en disco requerido|4,1 MB|
 
 &nbsp;
 
@@ -9029,9 +9029,9 @@ El paquete Acl contiene utilidades para administrar las Listas de
 Control de Acceso (ACL), que se usan para definir permisos
 discrecionales detallados de acceso a archivos y directorios.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|6,5 MB|
+|Espacio en disco requerido|6,5 MB|
 
 &nbsp;
 
@@ -9101,9 +9101,9 @@ capacidades POSIX 1003.1e disponibles en los kernels de Linux.
 Estas capacidades dividen el privilegio root en un conjunto de
 privilegios distintos.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|3,0 MB|
+|Espacio en disco requerido|3,0 MB|
 
 &nbsp;
 
@@ -9173,9 +9173,9 @@ POSIX para las llamadas al sistema asociadas con la biblioteca pthread
 El paquete Libxcrypt contiene una biblioteca moderna para el hash
 unidireccional de contraseñas.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|12 MB|
+|Espacio en disco requerido|12 MB|
 
 &nbsp;
 
@@ -9266,9 +9266,9 @@ Instala el paquete:
 El paquete Shadow contiene programas para gestionar contraseñas de forma
 segura.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|114 MB|
+|Espacio en disco requerido|114 MB|
 
 &nbsp;
 
@@ -9568,9 +9568,9 @@ usuarios y grupos
 El paquete GCC contiene la colección de compiladores GNU, que
 incluye los compiladores de C y C++.
 
-|Tiempo de compilación aproximado:|46 SBU|
+|Tiempo de compilación aproximado|46 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|6,3 GB|
+|Espacio en disco requerido|6,3 GB|
 
 &nbsp;
 
@@ -10014,9 +10014,9 @@ programación C
 El paquete Ncurses contiene bibliotecas para la gestión de pantallas
 de caracteres independiente de la terminal
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|46 MB|
+|Espacio en disco requerido|46 MB|
 
 &nbsp;
 
@@ -10203,9 +10203,9 @@ del kernel.
 
 El paquete Sed contiene un editor de flujos.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|30 MB|
+|Espacio en disco requerido|30 MB|
 
 &nbsp;
 
@@ -10261,9 +10261,9 @@ Instalar el paquete y su documentación:
 El paquete Psmisc contiene programas para mostrar información sobre
 los procesos en ejecución.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|6,7 MB|
+|Espacio en disco requerido|6,7 MB|
 
 &nbsp;
 
@@ -10335,9 +10335,9 @@ y localización. Estas permiten compilar programas con NLS (Soporte de
 Lenguaje Nativo), lo que les permite mostrar mensajes en el idioma
 nativo del usuario.
 
-|Tiempo de compilación aproximado:|1,7 SBU|
+|Tiempo de compilación aproximado|1,7 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|290 MB|
+|Espacio en disco requerido|290 MB|
 
 &nbsp;
 
@@ -10485,9 +10485,9 @@ traducidos.
 El paquete Bison contiene un generador de analizadores
 sintácticos.
 
-|Tiempo de compilación aproximado:|2,1 SBU|
+|Tiempo de compilación aproximado|2,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|62 MB|
+|Espacio en disco requerido|62 MB|
 
 &nbsp;
 
@@ -10549,9 +10549,9 @@ ser muy útil, pero POSIX la requiere.
 El paquete Grep contiene programas para buscar en el contenido de
 los archivos.
 
-|Tiempo de compilación aproximado:|0,4 SBU|
+|Tiempo de compilación aproximado|0,4 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|39 MB|
+|Espacio en disco requerido|39 MB|
 
 &nbsp;
 
@@ -10615,9 +10615,9 @@ básica.
 
 El paquete Bash contiene Bourne-Again Shell.
 
-|Tiempo de compilación aproximado:|1,4 SBU|
+|Tiempo de compilación aproximado|1,4 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|53 MB|
+|Espacio en disco requerido|53 MB|
 
 &nbsp;
 
@@ -10729,9 +10729,9 @@ El paquete Libtool contiene el script de soporte para bibliotecas
 genéricas de GNU. Simplifica el uso de bibliotecas compartidas con una
 interfaz consistente y portátil.
 
-|Tiempo de compilación aproximado:|0,6 SBU|
+|Tiempo de compilación aproximado|0,6 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|44 MB|
+|Espacio en disco requerido|44 MB|
 
 &nbsp;
 
@@ -10801,9 +10801,9 @@ funciona como el dbm estándar de UNIX. La biblioteca proporciona
 primitivas para almacenar pares clave/datos, buscar y recuperar datos
 por su clave, y eliminar una clave junto con sus datos.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|13 MB|
+|Espacio en disco requerido|13 MB|
 
 &nbsp;
 
@@ -10875,9 +10875,9 @@ DBM antiguas
 Gperf genera una función hash perfecta a partir de un conjunto de
 claves.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|6,1 MB|
+|Espacio en disco requerido|6,1 MB|
 
 &nbsp;
 
@@ -10930,9 +10930,9 @@ Instalar el paquete:
 El paquete Expat contiene una biblioteca de C orientada a flujos para
 analizar XML.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|14 MB|
+|Espacio en disco requerido|14 MB|
 
 &nbsp;
 
@@ -10995,9 +10995,9 @@ XML están correctamente formados.
 
 El paquete Inetutils contiene programas para redes básicas.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|35 MB|
+|Espacio en disco requerido|35 MB|
 
 &nbsp;
 
@@ -11113,9 +11113,9 @@ mostrando todos los lúpulos intermedios (puertas de enlace) en la línea
 
 El paquete Less contiene un visor de archivos de texto.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|14 MB|
+|Espacio en disco requerido|14 MB|
 
 &nbsp;
 
@@ -11180,9 +11180,9 @@ nombres de archivo en sistemas Unix.
 El paquete Perl contiene el Lenguaje Práctico de Extracción e
 Informes.
 
-|Tiempo de compilación aproximado:|1,3 SBU|
+|Tiempo de compilación aproximado|1,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|245 MB|
+|Espacio en disco requerido|245 MB|
 
 &nbsp;
 
@@ -11364,9 +11364,9 @@ archivo Zip.
 El módulo XML::Parser es una interfaz de Perl para el analizador XML
 Expat de James Clark.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|2,4 MB|
+|Espacio en disco requerido|2,4 MB|
 
 &nbsp;
 
@@ -11417,9 +11417,9 @@ Instalar el paquete.
 Intltool es una herramienta de internacionalización que se utiliza
 para extraer cadenas traducibles de archivos fuente.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|1,5 MB|
+|Espacio en disco requerido|1,5 MB|
 
 &nbsp;
 
@@ -11500,9 +11500,9 @@ con las traducciones
 El paquete Autoconf contiene programas para generar scripts de shell
 que configuran automáticamente el código fuente.
 
-|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 0,4 SBU con pruebas)|
+|Tiempo de compilación aproximado|0,1 SBU<br> (aproximadamente 0,4 SBU con pruebas)|
 |---------------------------------|-------|
-|Espacio en disco requerido:|25 MB|
+|Espacio en disco requerido|25 MB|
 
 &nbsp;
 
@@ -11586,9 +11586,9 @@ lagunas en un archivo configure.in generado por
 El paquete Automake contiene programas para generar archivos
 Makefile para usar con Autoconf.
 
-|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 1,1 SBU con pruebas)|
+|Tiempo de compilación aproximado|0,1 SBU<br> (aproximadamente 1,1 SBU con pruebas)|
 |---------------------------------|-------|
-|Espacio en disco requerido:|121 MB|
+|Espacio en disco requerido|121 MB|
 
 &nbsp;
 
@@ -11663,9 +11663,9 @@ relacionadas con la criptografía. Estas son útiles para proporcionar
 funciones criptográficas a otros paquetes, como OpenSSH, aplicaciones de
 correo electrónico y navegadores web (para acceder a sitios HTTPS).
 
-|Tiempo de compilación aproximado:|1,8 SBU|
+|Tiempo de compilación aproximado|1,8 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|920 MB|
+|Espacio en disco requerido|920 MB|
 
 &nbsp;
 
@@ -11777,9 +11777,9 @@ puede encontrar en *ssl(7)*.
 Libelf es una biblioteca para gestionar archivos ELF (formato ejecutable
 y enlazable).
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|135 MB|
+|Espacio en disco requerido|135 MB|
 
 &nbsp;
 
@@ -11844,9 +11844,9 @@ programa escrito en un lenguaje llame a un programa escrito en otro.
 Específicamente, Libffi puede servir de puente entre un intérprete como
 Perl o Python y subrutinas de biblioteca compartida escritas en C o C++.
 
-|Tiempo de compilación aproximado:|1,7 SBU|
+|Tiempo de compilación aproximado|1,7 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|11 MB|
+|Espacio en disco requerido|11 MB|
 
 &nbsp;
 
@@ -11920,9 +11920,9 @@ la creación de prototipos de programas grandes y el desarrollo de
 aplicaciones completas. Python es un lenguaje de programación
 interpretado.
 
-|Tiempo de compilación aproximado:|2,1 SBU|
+|Tiempo de compilación aproximado|2,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|501 MB|
+|Espacio en disco requerido|501 MB|
 
 &nbsp;
 
@@ -12088,9 +12088,9 @@ interpretado, interactivo y orientado a objetos.
 Flit-core es la parte de Flit (una herramienta de empaquetado para
 módulos Python simples) que permite compilar distribuciones.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|1,0 MB|
+|Espacio en disco requerido|1,0 MB|
 
 &nbsp;
 
@@ -12149,9 +12149,9 @@ packages/flit_core-3.11.0.dist-info
 Wheel es una biblioteca de Python que constituye la implementación
 de referencia del estándar de empaquetado Wheel de Python.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|1,6 MB|
+|Espacio en disco requerido|1,6 MB|
 
 &nbsp;
 
@@ -12193,9 +12193,9 @@ archivos de wheel.
 Setuptools es una herramienta que se utiliza para descargar,
 compilar, instalar, actualizar y desinstalar paquetes de Python.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|26 MB|
+|Espacio en disco requerido|26 MB|
 
 &nbsp;
 
@@ -12232,9 +12232,9 @@ Instalación del paquete:
 Ninja es un sistema de compilación pequeño enfocado en la
 velocidad.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|37 MB|
+|Espacio en disco requerido|37 MB|
 
 &nbsp;
 
@@ -12319,9 +12319,9 @@ Instalar el paquete:
 Meson es un sistema de compilación de código abierto diseñado para
 ser extremadamente rápido y lo más intuitivo posible.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|44 MB|
+|Espacio en disco requerido|44 MB|
 
 &nbsp;
 
@@ -12376,9 +12376,9 @@ Instalar el paquete:
 El paquete Kmod contiene bibliotecas y utilidades para cargar
 módulos del kernel.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|11 MB|
+|Espacio en disco requerido|11 MB|
 
 &nbsp;
 
@@ -12461,9 +12461,9 @@ cargar y descargar módulos del kernel.
 El paquete Coreutils contiene las utilidades básicas necesarias para
 cualquier sistema operativo.
 
-|Tiempo de compilación aproximado:|1,2 SBU|
+|Tiempo de compilación aproximado|1,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|182 MB|
+|Espacio en disco requerido|182 MB|
 
 &nbsp;
 
@@ -12895,9 +12895,9 @@ elimina.
 
 Check es un framework de pruebas unitarias para C
 
-|Tiempo de compilación aproximado:|0,1 SBU<br> (aproximadamente 2,1 SBU con pruebas)|
+|Tiempo de compilación aproximado|0,1 SBU<br> (aproximadamente 2,1 SBU con pruebas)|
 |---------------------------------|-------|
-|Espacio en disco requerido:|11 MB|
+|Espacio en disco requerido|11 MB|
 
 &nbsp;
 
@@ -12954,9 +12954,9 @@ desde un programa de prueba
 El paquete Diffutils contiene programas que muestran las diferencias
 entre archivos o directorios.
 
-|Tiempo de compilación aproximado:|0,4 SBU|
+|Tiempo de compilación aproximado|0,4 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|50 MB|
+|Espacio en disco requerido|50 MB|
 
 &nbsp;
 
@@ -13016,9 +13016,9 @@ interactiva
 El paquete Gawk contiene programas para manipular archivos de
 texto.
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|43 MB|
+|Espacio en disco requerido|43 MB|
 
 &nbsp;
 
@@ -13113,9 +13113,9 @@ que la base de datos se haya actualizado recientemente). Findutils
 también incluye el programa **xargs**, que permite ejecutar un comando
 específico en cada archivo seleccionado en una búsqueda.
 
-|Tiempo de compilación aproximado:|0,7 SBU|
+|Tiempo de compilación aproximado|0,7 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|63 MB|
+|Espacio en disco requerido|63 MB|
 
 &nbsp;
 
@@ -13186,9 +13186,9 @@ archivos
 El paquete Groff contiene programas para procesar y formatear texto
 e imágenes
 
-|Tiempo de compilación aproximado:|0,2 SBU|
+|Tiempo de compilación aproximado|0,2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|108 MB|
+|Espacio en disco requerido|108 MB|
 
 &nbsp;
 
@@ -13387,9 +13387,9 @@ adecuadas
 El paquete GRUB contiene el cargador de arranque unificado
 GRand.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|166 MB|
+|Espacio en disco requerido|166 MB|
 
 &nbsp;
 
@@ -13561,9 +13561,9 @@ al formato grub.cfg.
 El paquete Gzip contiene programas para comprimir y descomprimir
 archivos.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|21 MB|
+|Espacio en disco requerido|21 MB|
 
 &nbsp;
 
@@ -13647,9 +13647,9 @@ transferencia.
 El paquete IPRoute2 contiene programas para redes básicas y
 avanzadas basadas en IPV4.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|17 MB|
+|Espacio en disco requerido|17 MB|
 
 &nbsp;
 
@@ -13735,9 +13735,9 @@ lnstat), ss y tc
 El paquete Kbd contiene archivos de tabla de teclas, fuentes de
 consola y utilidades de teclado.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|34 MB|
+|Espacio en disco requerido|34 MB|
 
 &nbsp;
 
@@ -13906,9 +13906,9 @@ produce resultados incorrectos\]
 El paquete Libpipeline contiene una biblioteca para manipular
 pipelines de subprocesos de forma flexible y práctica
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|11 MB|
+|Espacio en disco requerido|11 MB|
 
 &nbsp;
 
@@ -13961,9 +13961,9 @@ El paquete Make contiene un programa para controlar la generación de
 ejecutables y otros archivos no fuente de un paquete a partir de los
 archivos fuente.
 
-|Tiempo de compilación aproximado:|0,7 SBU|
+|Tiempo de compilación aproximado|0,7 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|13 MB|
+|Espacio en disco requerido|13 MB|
 
 ## 8.69.1. Instalación de Make
 
@@ -14015,9 +14015,9 @@ El paquete de parches contiene un programa para modificar o crear
 archivos mediante la aplicación de un archivo de parche, generalmente
 creado por el programa **diff**.
 
-|Tiempo de compilación aproximado:|0.2 SBU|
+|Tiempo de compilación aproximado|0.2 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|12 MB|
+|Espacio en disco requerido|12 MB|
 
 &nbsp;
 
@@ -14073,9 +14073,9 @@ manipulaciones de archivos. Tar se puede usar en archivos previamente
 creados para extraer archivos, almacenar archivos adicionales,
 actualizar o listar archivos ya almacenados.
 
-|Tiempo de compilación aproximado:|0,6 SBU|
+|Tiempo de compilación aproximado|0,6 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|43 MB|
+|Espacio en disco requerido|43 MB|
 
 &nbsp;
 
@@ -14144,9 +14144,9 @@ comprimidos, también conocidos como tarballs.
 El paquete Texinfo contiene programas para leer, escribir y
 convertir páginas de información.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|160 MB|
+|Espacio en disco requerido|160 MB|
 
 &nbsp;
 
@@ -14258,9 +14258,9 @@ Texinfo.
 
 El paquete Vim contiene un potente editor de texto.
 
-|Tiempo de compilación aproximado:|3,4 SBU|
+|Tiempo de compilación aproximado|3,4 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|251 MB|
+|Espacio en disco requerido|251 MB|
 
 > 💡 **Alternativas a Vim**
 > 
@@ -14465,9 +14465,9 @@ binarios.
 MarkupSafe es un módulo de Python que implementa una cadena segura
 de marcado XML/HTML/XHTML.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:| 500 KB|
+|Espacio en disco requerido| 500 KB|
 
 &nbsp;
 
@@ -14503,9 +14503,9 @@ Instale el paquete:
 ***Jinja2 es un módulo de Python que implementa un lenguaje de
 plantillas Python simple.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|2,5 MB|
+|Espacio en disco requerido|2,5 MB|
 
 &nbsp;
 
@@ -14539,9 +14539,9 @@ Instalación del paquete:
 El paquete Udev contiene programas para la creación dinámica de nodos de
 dispositivos.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|161 MB|
+|Espacio en disco requerido|161 MB|
 
 &nbsp;
 
@@ -14742,9 +14742,9 @@ de dispositivos y reglas para la nomenclatura de dispositivos.
 El paquete Man-DB contiene programas para buscar y visualizar
 páginas de manual.
 
-|Tiempo de compilación aproximado:|0,3 SBU|
+|Tiempo de compilación aproximado|0,3 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|44 MB|
+|Espacio en disco requerido|44 MB|
 
 &nbsp;
 
@@ -14902,9 +14902,9 @@ como una palabra separada.
 El paquete Procps-ng contiene programas para monitorizar
 procesos.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|28 MB|
+|Espacio en disco requerido|28 MB|
 
 &nbsp;
 
@@ -15020,9 +15020,9 @@ El paquete Util-linux contiene diversas utilidades. Entre ellas, se
 encuentran utilidades para gestionar sistemas de archivos, consolas,
 particiones y mensajes.
 
-|Tiempo de compilación aproximado:|0,5 SBU|
+|Tiempo de compilación aproximado|0,5 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|316 MB|
+|Espacio en disco requerido|316 MB|
 
 &nbsp;
 
@@ -15443,9 +15443,9 @@ El paquete E2fsprogs contiene las utilidades para gestionar el
 sistema de archivos ext2. También es compatible con los sistemas de
 archivos con registro en diario ext3 y ext4.
 
-|Tiempo de compilación aproximado:|2,4 SBU en un disco duro<br> 0,5 SBU en un SSD|
+|Tiempo de compilación aproximado|2,4 SBU en un disco duro<br> 0,5 SBU en un SSD|
 |---------------------------------|-------|
-|Espacio en disco requerido:|99 MB|
+|Espacio en disco requerido|99 MB|
 
 &nbsp;
 
@@ -15674,9 +15674,9 @@ El paquete Sysklogd contiene programas para registrar mensajes del
 sistema, como los que emite el núcleo cuando ocurren eventos
 inusuales.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|4,1 MB|
+|Espacio en disco requerido|4,1 MB|
 
 &nbsp;
 
@@ -15757,9 +15757,9 @@ de registro\].
 El paquete SysVinit contiene programas para controlar el inicio, la
 ejecución y el apagado del sistema.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|2,9 MB|
+|Espacio en disco requerido|2,9 MB|
 
 &nbsp;
 
@@ -16111,9 +16111,9 @@ iniciar/detener el sistema LFS al arrancar/apagar. Los archivos de
 configuración y los procedimientos necesarios para personalizar el
 proceso de arranque se describen en las siguientes secciones.
 
-|Tiempo de compilación aproximado:|0,1 SBU|
+|Tiempo de compilación aproximado|0,1 SBU|
 |---------------------------------|-------|
-|Espacio en disco requerido:|244 KB|
+|Espacio en disco requerido|244 KB|
 
 &nbsp;
 
@@ -17987,9 +17987,9 @@ devuelve una salida no vacía; la opción es compatible.
 
 El paquete Linux contiene el kernel de Linux.
 
-|Tiempo de compilación aproximado:|0,4 - 32 SBU<br>(normalmente unas 2,5|
+|Tiempo de compilación aproximado|0,4 - 32 SBU<br>(normalmente unas 2,5|
 |---------------------------------|-------|
-|Espacio en disco requerido:|1,7 - 14 GB<br>(normalmente unos 2,3 GB)|
+|Espacio en disco requerido|1,7 - 14 GB<br>(normalmente unos 2,3 GB)|
 
 &nbsp;
 
