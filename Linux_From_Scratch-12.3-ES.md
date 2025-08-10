@@ -3780,7 +3780,7 @@ los compiladores de C y C++.
 
 |Tiempo de compilación aproximado|3,2 SBU|
 |---------------------------------|-------|
-|**Espacio en disco requerid**o:|4,8 GB|
+|Espacio en disco requerido|4,8 GB|
 
 &nbsp;
 
