@@ -7684,7 +7684,7 @@ puedan comprimir los datos más rápidamente.
 Compilando el paquete:
 
 > ```bash
-> make BUILD_STATIC=no *PREFIX*=/usr
+> make BUILD_STATIC=no PREFIX=/usr
 > ```bash
 
 Para probar los resultados, ejecute:
