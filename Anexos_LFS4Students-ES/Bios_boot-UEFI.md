@@ -256,14 +256,14 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 ### Versión compacta visual tipo “tabla de referencia rápida”
 |Partición      |FS recomendado        |Uso típico                             |Riesgos / Consideraciones                        |
 |:------------- |:-------------------- |:------------------------------------- |:----------------------------------------------- |
-|/boot          |ext2~ext4             |Arranque del sistema, kernel           |Espacio fijo, requiere montaje                   |
-|/              |ext4/Btrfs/XFS        |Sistema raíz, programas                |FS complejo puede ser difícil de recuperar       |
-|/home          |ext4/Btrfs/XFS        |Datos de usuario                       |Planificar espacio, snapshots si Btrfs           |
-|/var           |ext4/XFS              |Logs, bases de datos, caches           |Crecimiento grande posible                       |
-|/tmp           |tmpfs/ext4            |Archivos temporales                    |tmpfs usa RAM, ext4 persiste                     |
+|/boot          |ext2 ~ ext4           |Arranque del sistema, kernel           |Espacio fijo, requiere montaje                   |
+|/              |ext4 ~ Btrfs ~ XFS    |Sistema raíz, programas                |FS complejo puede ser difícil de recuperar       |
+|/home          |ext4 ~ Btrfs ~ XFS    |Datos de usuario                       |Planificar espacio, snapshots si Btrfs           |
+|/var           |ext4 ~ XFS            |Logs, bases de datos, caches           |Crecimiento grande posible                       |
+|/tmp           |tmpfs ~ ext4          |Archivos temporales                    |tmpfs usa RAM, ext4 persiste                     |
 |/boot/efi      |FAT32                 |EFI System Partition (UEFI)<br>Multi-OS|No permisos UNIX, corrupción impide arranque     |
 |swap           |Swap FS               |Memoria virtual, suspender RAM         |No guarda datos permanentes                      |
-|Multi-OS datos |NTFS/exFAT            |Compartir con Windows                  |Sin permisos UNIX completos                      |
+|Multi-OS datos |NTFS ~ exFAT          |Compartir con Windows                  |Sin permisos UNIX completos                      |
 
 
 
