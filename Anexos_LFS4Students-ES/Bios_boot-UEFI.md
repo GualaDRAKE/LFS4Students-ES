@@ -254,22 +254,20 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 - EFI/UEFI (/boot/efi): FAT32 obligatorio, compatibilidad ante todo.
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
-┌───────────────┬───────────────┬───────────────────────────────┬───────────────────────────────┐
 │ Partición     │ FS recomendado│ Uso típico                     │ Riesgos / Consideraciones      │
-├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
-│ /boot         │ ext2 / ext4   │ Arranque del sistema, kernel   │ Espacio fijo, requiere montaje│
-├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
-│ /             │ ext4 / Btrfs  │ Sistema raíz, programas        │ FS complejo puede ser difícil │
+|:--------------|:--------------|:-------------------------------|--------------------------------|
+│ /boot         │ ext2 / ext4   │Arranque del sistema, kernel<br>│ Espacio fijo, requiere montaje<br>│
+│ /             │ ext4 / Btrfs  │ Sistema raíz, programas        │ FS complejo puede ser difícil<br>│
 │               │ / XFS         │                                 │ de recuperar                  │
 ├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
-│ /home         │ ext4 / Btrfs  │ Datos de usuario               │ Planificar espacio, snapshots │
+│ /home         │ ext4 / Btrfs  │ Datos de usuario               │ Planificar espacio, snapshots<br>│
 │               │ / XFS         │                                 │ si Btrfs                      │
 ├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
 │ /var          │ ext4 / XFS    │ Logs, bases de datos, caches   │ Crecimiento grande posible    │
 ├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
 │ /tmp          │ tmpfs / ext4  │ Archivos temporales             │ tmpfs usa RAM, ext4 persiste  │
 ├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
-│ /boot/efi     │ FAT32         │ EFI System Partition (UEFI)    │ No permisos UNIX, corrupción  │
+│ /boot/efi     │ FAT32         │ EFI System Partition (UEFI)    │ No permisos UNIX, corrupción<br>│
 │               │               │ Multi-OS                       │ impide arranque               │
 ├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
 │ swap          │ Swap FS       │ Memoria virtual, suspender RAM │ No guarda datos permanentes   │
