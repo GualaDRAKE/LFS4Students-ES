@@ -115,6 +115,129 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 - Sin formato, reservada para `core.img` de GRUB cuando no cabe en el MBR.
 - No es `/boot` ni `/boot/efi`.
 
+## 1️⃣ Qué es MBR y GPT
+- MBR (Master Boot Record)
+- Edad: Muy antiguo, desde 1983.
+
+**Qué hace**:
+- Primer sector del disco (sector 0, 512 B).
+
+**Contiene**:
+- Código de arranque inicial (bootloader primario).
+- Tabla de particiones (hasta 4 particiones primarias).
+
+**Limitaciones**:
+- Máx. 2 TB por disco (porque usa 32 bits para direcciones de bloque).
+- Máx. 4 particiones primarias (o 3 primarias + 1 extendida).
+- Sin redundancia: si se corrompe el MBR, el disco puede quedar inaccesible.
+
+### GPT (GUID Partition Table)
+**Edad**: Introducido con UEFI (finales de los 90s, adoptado ampliamente en 2005+).
+
+**Qué hace**:
+- Parte de la especificación UEFI.
+- Cada disco tiene una tabla de particiones con GUID (identificador único global).
+
+**Soporta**:
+- Discos gigantes (hasta 9.4 ZB teóricos).
+- Hasta 128 particiones por defecto en Windows.
+
+**Redundancia**: tiene tabla primaria y copia de seguridad al final del disco.
+- Checksums para detectar corrupción.
+
+**Limitación**:
+- Para arrancar desde un disco GPT, necesitas UEFI, no BIOS tradicional.
+
+## 2️⃣ BIOS Boot Partition (~1 MB)
+**Qué es**:
+- Una pequeña partición que permite a un sistema con BIOS tradicional arrancar desde un disco GPT.
+- Contiene el core del bootloader (por ejemplo GRUB) necesario para saltar del BIOS al sistema operativo.
+
+**Tamaño**: Muy pequeño (~1 MB), porque solo guarda código, no archivos grandes.
+
+**Por qué existe**:
+- BIOS tradicional no entiende GPT, así que necesita un lugar donde colocar el bootloader que pueda leer antes de transferir el control al sistema operativo.
+
+## Diagrama conceptual sencillo para visualizar MBR vs GPT vs GPT+BIOS Boot Partition.
+1️⃣ Disco con MBR (BIOS tradicional)
+┌───────────────────────────────┐
+│ Sector 0: MBR                 │  <- Código de arranque + Tabla de particiones
+├───────────────────────────────┤
+│ Partición 1                    │
+├───────────────────────────────┤
+│ Partición 2                    │
+├───────────────────────────────┤
+│ Partición 3                    │
+├───────────────────────────────┤
+│ Partición 4 (o extendida)     │
+└───────────────────────────────┘
+Notas:
+- Max 2 TB por disco
+- Max 4 particiones primarias
+- Compatible con BIOS clásico
+
+--------------------------------------------------
+
+2️⃣ Disco con GPT (UEFI)
+┌───────────────────────────────┐
+│ Sector 0: Protective MBR      │  <- Evita que herramientas antiguas vean disco vacío
+├───────────────────────────────┤
+│ Tabla de particiones GPT      │
+├───────────────────────────────┤
+│ Partición 1 (EFI System)      │
+├───────────────────────────────┤
+│ Partición 2                   │
+├───────────────────────────────┤
+│ Partición 3                   │
+├───────────────────────────────┤
+│ Partición 4                   │
+├───────────────────────────────┤
+│ Backup GPT (final del disco)  │
+└───────────────────────────────┘
+Notas:
+- Necesario UEFI para arrancar
+- Soporta discos enormes y muchas particiones
+- Redundante y seguro
+
+--------------------------------------------------
+
+3️⃣ Disco GPT con BIOS Boot Partition (GPT + BIOS)
+┌───────────────────────────────┐
+│ Sector 0: Protective MBR      │
+├───────────────────────────────┤
+│ BIOS Boot Partition (~1 MB)   │  <- Contiene bootloader para BIOS
+├───────────────────────────────┤
+│ Partición 1                   │
+├───────────────────────────────┤
+│ Partición 2                   │
+├───────────────────────────────┤
+│ Backup GPT (final del disco)  │
+└───────────────────────────────┘
+Notas:
+- Permite arrancar GPT desde BIOS antiguo
+- Partición muy pequeña, solo para bootloader
+- Combina ventajas de GPT con compatibilidad BIOS
+
+### 💡 Interpretación rápida para principiantes:
+- MBR: todo en un solo sector, simple y limitado.
+- GPT: moderno, seguro, con respaldo, necesita UEFI.
+- GPT + BIOS Boot Partition: pequeño “truco” para que BIOS clásico pueda arrancar un disco GPT.
+
+## 3️⃣ Cuándo usar MBR, GPT o combinación
+
+| Caso                              | Recomendación             | Explicación                                                                       |
+| --------------------------------- | ------------------------- | --------------------------------------------------------------------------------- |
+| Disco < 2 TB, BIOS clásico        | MBR                       | Simplicidad, compatibilidad máxima.                                               |
+| Disco > 2 TB o UEFI               | GPT                       | Necesario para aprovechar tamaño y nuevas características.                        |
+| Necesitas arrancar GPT desde BIOS | GPT + BIOS Boot Partition | GPT + pequeña partición de 1 MB para bootloader (GRUB, etc.) que BIOS pueda usar. |
+| Compatibilidad con antiguos OS    | MBR                       | Algunos sistemas antiguos no entienden GPT.                                       |
+
+✅ Resumen práctico:
+
+- MBR: viejo, simple, compatible.
+- GPT: moderno, seguro, para discos grandes.
+- GPT+MBR (o mejor dicho, GPT con BIOS Boot Partition): puente para arrancar GPT en sistemas BIOS antiguos.
+
 ---
 
 # 6. Ventajas y desventajas
@@ -123,6 +246,98 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 | `/boot` como directorio | Simplicidad. Sin montaje extra. | No funciona con FS incompatibles para el bootloader. Problemas con cifrado total. |
 | `/boot` como partición | Compatible con FS complejos o cifrados. Menos riesgo de corrupción. | Espacio fijo. Montaje extra para actualizar kernel. |
 | `/boot/efi` (ESP) | Obligatorio en UEFI. Multi-OS. | FAT32 sin permisos UNIX ni enlaces. Si se corrompe, el equipo no arranca. |
+
+## Listado resumido de tipos de partición y sistemas de archivos típicos
+Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventajas, incluyendo típicas recomendaciones tanto para Linux y otros sistemas o usos. Tomando como ejemplo el formato de **/boot** en LFS que recomiendo **ext2**, se puede ampliar así:
+| Partición / Directorio       | FS típico / recomendado                       | Ventajas                                                                               | Desventajas                                                                                         |
+| ---------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `/boot` (partición separada) | **ext2** (clásico), ext3/ext4 también válidos | Simplicidad, confiable, sin journaling (ext2) → menor riesgo de corrupción en arranque | Espacio fijo, no aprovecha journaling de FS moderno (ext2), requiere montaje para actualizar kernel |
+| `/` (root)                   | **ext4**, Btrfs, XFS                          | Ext4: estable, rápido; Btrfs: snapshots y checksums; XFS: grandes volúmenes            | Btrfs y XFS más complejos de recuperar; ext4 limitado a 1 archivo <16 TB                            |
+| `/home`                      | **ext4**, Btrfs, XFS                          | Separación de datos de usuario → facilita reinstalación del OS; snapshots si Btrfs     | Necesita planificación de espacio; FS complejo aumenta riesgo de corrupción si se corta energía     |
+| `/var`                       | **ext4**, XFS                                 | Archivos que cambian mucho (logs, DB, caches) → FS robusto y rápido                    | Puede crecer mucho; cuidado con el límite de espacio                                                |
+| `/tmp`                       | **tmpfs** (RAM) o ext4                        | tmpfs: muy rápido, borrado al reiniciar; ext4: persistente                             | tmpfs usa RAM → cuidado con memoria; ext4 persistente puede acumular basura                         |
+| `/boot/efi` (ESP)            | **FAT32**                                     | Obligatorio en UEFI, compatible con múltiples OS                                       | No soporta permisos UNIX, sin enlaces simbólicos; corrupción impide arranque                        |
+| Swap                         | Swap FS (partición dedicada)                  | Permite suspender RAM, mejora estabilidad                                              | No almacena datos permanentes; usar demasiado reduce vida de SSD                                    |
+| Datos multi-OS               | NTFS (Windows), exFAT                         | Compatible con Windows y Linux                                                         | No soporta permisos UNIX completos, menor integridad en Linux                                       |
+
+## 💡 Regla general:
+
+- Particiones de arranque (/boot): FS simple y confiable, ext2/ext4 sin complicaciones.
+- Partición raíz (/): FS moderno y robusto, ext4 es estándar, Btrfs o XFS si quieres features avanzadas.
+- Particiones de usuario (/home) y datos: elegir FS según tamaño, features y backup.
+- EFI/UEFI (/boot/efi): FAT32 obligatorio, compatibilidad ante todo.
+
+### Versión compacta visual tipo “tabla de referencia rápida”
+┌───────────────┬───────────────┬───────────────────────────────┬───────────────────────────────┐
+│ Partición     │ FS recomendado│ Uso típico                     │ Riesgos / Consideraciones      │
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ /boot         │ ext2 / ext4   │ Arranque del sistema, kernel   │ Espacio fijo, requiere montaje│
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ /             │ ext4 / Btrfs  │ Sistema raíz, programas        │ FS complejo puede ser difícil │
+│               │ / XFS         │                                 │ de recuperar                  │
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ /home         │ ext4 / Btrfs  │ Datos de usuario               │ Planificar espacio, snapshots │
+│               │ / XFS         │                                 │ si Btrfs                      │
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ /var          │ ext4 / XFS    │ Logs, bases de datos, caches   │ Crecimiento grande posible    │
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ /tmp          │ tmpfs / ext4  │ Archivos temporales             │ tmpfs usa RAM, ext4 persiste  │
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ /boot/efi     │ FAT32         │ EFI System Partition (UEFI)    │ No permisos UNIX, corrupción  │
+│               │               │ Multi-OS                       │ impide arranque               │
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ swap          │ Swap FS       │ Memoria virtual, suspender RAM │ No guarda datos permanentes   │
+├───────────────┼───────────────┼───────────────────────────────┼───────────────────────────────┤
+│ Multi-OS datos│ NTFS / exFAT  │ Compartir con Windows           │ Sin permisos UNIX completos   │
+└───────────────┴───────────────┴───────────────────────────────┴───────────────────────────────┘
+
+## 💡 Tips rápidos:
+- /boot → FS simple y seguro, no journaling (ext2) si quieres máxima fiabilidad para el arranque.
+- /boot/efi → FAT32 obligatorio para UEFI.
+- /, /home, /var → elegir FS según tamaño, estabilidad y funcionalidades que quieras (ext4: seguro, Btrfs: avanzado).
+- swap → usar según RAM disponible y necesidades de suspensión.
+- Multi-OS → NTFS/exFAT solo si compartes con Windows; cuidado con permisos.
+
+### Esquema visual tipo disco
+Un esquema visual tipo disco, mostrando particiones y su FS recomendado.
+
+          ┌───────────────────────────────┐
+          │           /boot/efi           │  FAT32
+          │ (EFI System Partition, UEFI) │
+          └───────────────────────────────┘
+          ┌───────────────────────────────┐
+          │           /boot               │  ext2 / ext4
+          │ (Kernel y arranque)           │
+          └───────────────────────────────┘
+          ┌───────────────────────────────┐
+          │            /                  │  ext4 / Btrfs / XFS
+          │ (Sistema raíz, programas)     │
+          └───────────────────────────────┘
+          ┌───────────────────────────────┐
+          │           /home               │  ext4 / Btrfs / XFS
+          │ (Datos de usuario)            │
+          └───────────────────────────────┘
+          ┌───────────────────────────────┐
+          │           /var                │  ext4 / XFS
+          │ (Logs, bases de datos, caches)│
+          └───────────────────────────────┘
+          ┌───────────────────────────────┐
+          │           /tmp                │  tmpfs / ext4
+          │ (Archivos temporales)         │
+          └───────────────────────────────┘
+          ┌───────────────────────────────┐
+          │           swap                │  Swap FS
+          │ (Memoria virtual)             │
+          └───────────────────────────────┘
+          ┌───────────────────────────────┐
+          │    Multi-OS / Datos externos  │  NTFS / exFAT
+          │ (Compartir con Windows)       │
+          └───────────────────────────────┘
+
+💡 Interpretación rápida:
+**Arriba**: Particiones de arranque y EFI (pequeñas, críticas).
+**Centro**: Sistema raíz y datos de usuario, aquí van la mayoría de archivos.
+**Abajo**: Swap y particiones multi-OS o de datos externos, útiles pero menos críticas.
 
 ---
 
