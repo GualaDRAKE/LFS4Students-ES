@@ -254,10 +254,10 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 - EFI/UEFI (/boot/efi): FAT32 obligatorio, compatibilidad ante todo.
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
-│ Partición     │ FS recomendado│ Uso típico                     │ Riesgos \/ Consideraciones      │
+│               │               │                                │                                │
 |:--------------|:--------------|:-------------------------------|:-------------------------------|
-│\/boot          │ ext2\/ext4     │Arranque del sistema, kernel    │Espacio fijo, requiere montaje│
-│\/              │ext4\/Btrfs\/XFS │Sistema raíz, programas         │FS complejo puede ser difícil de recuperar│
+│               │               │                                │                                │
+│               │               │                                │                                │
 
 
 
