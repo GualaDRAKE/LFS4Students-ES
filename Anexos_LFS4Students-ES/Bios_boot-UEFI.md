@@ -295,16 +295,16 @@ C --> F[Fin]
 
 ```mermaid
 flowchart TD
-    A[Encendido del equipo] --> B[BIOS POST<br>(Power-On Self Test)]
-    B --> C[BIOS localiza dispositivo de arranque]
-    C --> D[Lee MBR<br>(512 bytes, incluye tabla de particiones y código de arranque)]
-    D --> E[Código MBR carga<br>Stage 1 de GRUB/LILO]
-    E --> F[Stage 1 carga Stage 1.5<br>(si existe, ej. en BIOS Boot Partition)]
-    F --> G[Stage 2 de GRUB<br>lee /boot]
-    G --> H[Selecciona y carga kernel + initramfs]
-    H --> I[Kernel inicializa hardware]
-    I --> J[Kernel monta root filesystem]
-    J --> K[Inicio de proceso init/systemd]
+    A["Encendido del equipo"] --> B["BIOS POST\n(Power-On Self Test)"]
+    B --> C["BIOS localiza dispositivo de arranque"]
+    C --> D["Lee MBR\n(512 bytes, incluye tabla de particiones y código de arranque)"]
+    D --> E["Código MBR carga\nStage 1 de GRUB/LILO"]
+    E --> F["Stage 1 carga Stage 1.5\n(si existe, ej. en BIOS Boot Partition)"]
+    F --> G["Stage 2 de GRUB\nlee /boot"]
+    G --> H["Selecciona y carga kernel + initramfs"]
+    H --> I["Kernel inicializa hardware"]
+    I --> J["Kernel monta root filesystem"]
+    J --> K["Inicio de proceso init/systemd"]
 ```
 
 🖥️ Arranque UEFI Boot
