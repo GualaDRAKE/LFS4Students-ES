@@ -448,6 +448,17 @@ Incluye **línea de tiempo**, **ventajas y desventajas**, **función de cada par
 
 ### Arranque BIOS Boot
 
+```mermaid
+flowchart TD
+A[Inicio] --> B{¿Está logueado?}
+B -->|Sí| C[Página Principal]
+B -->|No| D[Pantalla de Login]
+D --> E[Verificar Credenciales]
+E -->|Correctas| C
+E -->|Incorrectas| D
+C --> F[Fin]
+```
+
 ```
 flowchart TD
     A[Encendido del equipo] --> B[BIOS POST<br>(Power-On Self Test)]
