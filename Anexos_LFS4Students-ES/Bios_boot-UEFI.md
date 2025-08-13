@@ -298,7 +298,7 @@ flowchart TD
 🖥️ Arranque UEFI Boot
 ```mermaid
 flowchart TD
-    A["Encendido del equipo"] --> B["UEFI POST\n(Power-On Self Test)"]
+    A["Encendido del equipo"] --> B["UEFI POST (Power-On Self Test)"]
     B --> C["UEFI lee NVRAM para localizar entrada de arranque"]
     C --> D["Accede a EFI System Partition (/boot/efi en Linux)"]
     D --> E["Lee y ejecuta archivo .EFI (GRUB EFI, systemd-boot, etc.)"]
