@@ -158,19 +158,15 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 **Por qué existe**:
 - BIOS tradicional no entiende GPT, así que necesita un lugar donde colocar el bootloader que pueda leer antes de transferir el control al sistema operativo.
 
-## Diagrama conceptual sencillo para visualizar MBR vs GPT vs GPT+BIOS Boot Partition.
+## Diagrama conceptual sencillo para visualizar MBR vs GPT vs GPT+BIOS Boot Partition
 1️⃣ Disco con MBR (BIOS tradicional)
-┌───────────────────────────────┐
 │ Sector 0: MBR                 │  <- Código de arranque + Tabla de particiones
-├───────────────────────────────┤
-│ Partición 1                    │
-├───────────────────────────────┤
-│ Partición 2                    │
-├───────────────────────────────┤
-│ Partición 3                    │
-├───────────────────────────────┤
+|:------------------------------|
+│ Partición 1                   │
+│ Partición 2                   │
+│ Partición 3                   │
 │ Partición 4 (o extendida)     │
-└───────────────────────────────┘
+
 Notas:
 - Max 2 TB por disco
 - Max 4 particiones primarias
