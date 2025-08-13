@@ -447,7 +447,7 @@ Incluye **línea de tiempo**, **ventajas y desventajas**, **función de cada par
 
 ### Arranque BIOS Boot
 
-```
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["BIOS POST<br>(Power-On Self Test)"]
     B --> C["BIOS localiza dispositivo de arranque"]
@@ -462,7 +462,7 @@ flowchart TD
 ```
 
 Arranque UEFI Boot
-```
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["UEFI POST<br>(Power-On Self Test)"]
     B --> C["UEFI lee NVRAM<br>para localizar entrada de arranque"]
@@ -614,7 +614,7 @@ Incluye **línea de tiempo**, **ventajas y desventajas**, **función de cada par
 
 ### Arranque BIOS Boot
 
-```
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["BIOS POST<br>(Power-On Self Test)"]
     B --> C["BIOS localiza dispositivo de arranque"]
@@ -628,8 +628,8 @@ flowchart TD
     J --> K["Inicio de proceso init/systemd"]
 ```
 
-Arranque UEFI Boot
-```
+### Arranque UEFI Boot
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["UEFI POST<br>(Power-On Self Test)"]
     B --> C["UEFI lee NVRAM<br>para localizar entrada de arranque"]
@@ -680,7 +680,7 @@ ChatGPT dijo:
 Aquí tienes los diagramas de flujo en estilo Markdown para subirlos a GitHub, separados en BIOS Boot y UEFI Boot, usando sintaxis Mermaid para que se vean como diagramas renderizados.
 ## Diagrama de Flujo – BIOS Boot
 
-```
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["BIOS realiza POST (Power-On Self Test)"]
     B --> C["Inicializa hardware básico"]
@@ -692,8 +692,8 @@ flowchart TD
     H --> I["Kernel inicia el sistema operativo"]
 ```
 
-Diagrama de Flujo – UEFI Boot
-```
+### Diagrama de Flujo – UEFI Boot
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["UEFI inicializa hardware básico"]
     B --> C["Ejecuta POST (Power-On Self Test)"]
@@ -715,8 +715,8 @@ ChatGPT dijo:
 Perfecto, aquí tienes los diagramas de flujo en estilo Markdown para GitHub, primero separados (BIOS y UEFI) y luego uno unificado comparativo.
 He usado mermaid porque GitHub lo soporta directamente en sus vistas de Markdown.
 
-1️⃣ Diagrama de flujo – BIOS Boot
-```
+### 1️⃣ Diagrama de flujo – BIOS Boot
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["POST - Power On Self Test"]
     B --> C["Buscar dispositivo de arranque"]
@@ -727,8 +727,8 @@ flowchart TD
     G --> H["Kernel inicializa el sistema operativo"]
 ```
 
-2️⃣ Diagrama de flujo – UEFI Boot
-```
+### 2️⃣ Diagrama de flujo – UEFI Boot
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B[POST - Power On Self Test"]
     B --> C["UEFI Firmware carga drivers y servicios"]
@@ -739,8 +739,8 @@ flowchart TD
     G --> H["Kernel inicializa el sistema operativo"]
 ```
 
-3️⃣ Diagrama comparativo BIOS vs UEFI
-```
+### 3️⃣ Diagrama comparativo BIOS vs UEFI
+```mermaid
 flowchart LR
     subgraph BIOS
         A1["Encendido"] --> B1["POST"]
@@ -770,9 +770,8 @@ Si
 ChatGPT dijo:
 Aquí tienes los diagramas de flujo para BIOS Boot y UEFI Boot en formato Markdown compatibles con GitHub usando Mermaid.
 
-## Diagrama de flujo: Arranque con BIOS (Legacy Boot)
-
-```
+### Diagrama de flujo: Arranque con BIOS (Legacy Boot)
+```mermaid
 flowchart TD
     A["Encendido del PC"] --> B["POST - Power On Self Test"]
     B --> C["Detecta dispositivos de arranque"]
@@ -784,8 +783,9 @@ flowchart TD
     H --> I["Inicia proceso init / systemd"]
     I --> J["Sistema operativo en ejecución"]
 ```
-Diagrama de flujo: Arranque con UEFI
-```
+
+### Diagrama de flujo: Arranque con UEFI
+```mermaid
 flowchart TD
     A["Encendido del PC"] --> B["UEFI POST"]
     B --> C["UEFI busca y lee la NVRAM para encontrar dispositivos de arranque"]
@@ -807,8 +807,8 @@ Si
 ChatGPT dijo:
 Aquí tienes los dos diagramas de flujo en Markdown usando sintaxis Mermaid, listos para subir a GitHub y renderizarse correctamente.
 
-Flujo de arranque BIOS (Legacy Boot)
-```
+### Flujo de arranque BIOS (Legacy Boot)
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["BIOS: POST (Power-On Self Test)"]
     B --> C["BIOS busca dispositivo de arranque"]
@@ -819,8 +819,8 @@ flowchart TD
     G --> H["Se inicia el sistema operativo"]
 ```
 
-Flujo de arranque UEFI
-```
+### Flujo de arranque UEFI
+```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B[UEFI inicializa hardware"]
     B --> C["UEFI ejecuta diagnósticos y configuración"]
