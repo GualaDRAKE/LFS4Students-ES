@@ -271,7 +271,7 @@ No hay un estándar formal único que dicte que los sistemas operativos deben us
 - A nivel técnico / programación, se usa “directory” o “directorio”.
 - A nivel usuario / interfaz gráfica, “carpeta” (folder) es una convención empírica, basada en la metáfora de oficina, y cada sistema la adopta como le conviene.
 
-### Historia setrás de la lógica técnica del concepto “directorios”
+### Historia detrás de la lógica técnica del concepto “directorios”
 
 El término “directorio” (directory en inglés) proviene de la informática temprana, cuando los sistemas de archivos empezaron a organizar información de manera jerárquica:
 
