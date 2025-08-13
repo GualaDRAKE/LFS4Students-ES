@@ -282,9 +282,9 @@ Estos diagramas muestran el flujo básico de arranque en sistemas **BIOS** y **U
 
 ## 🖥️ Arranque BIOS Boot
 
-````mermaid
+```mermaid
 flowchart TD
-    A[Encendido del equipo] --> B[BIOS POST (Power-On Self Test)]
+    A[Encendido del equipo] --> B[BIOS POST<br>(Power-On Self Test)]
     B --> C[BIOS localiza dispositivo de arranque]
     C --> D[Lee MBR<br>(512 bytes, incluye tabla de particiones y código de arranque)]
     D --> E[Código MBR carga<br>Stage 1 de GRUB/LILO]
