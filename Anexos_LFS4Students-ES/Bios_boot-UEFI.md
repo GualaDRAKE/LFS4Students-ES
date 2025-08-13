@@ -254,10 +254,16 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 - EFI/UEFI (/boot/efi): FAT32 obligatorio, compatibilidad ante todo.
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
-│               │               │                                │                                │
-|:--------------|:--------------|:-------------------------------|:-------------------------------|
-│               │               │                                │                                │
-│               │               │                                │                                │
+| Partición / Directorio       | FS típico / recomendado                       | Ventajas                                                                               | Desventajas                                                                                         |
+| ---------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `/boot` (partición separada) | **ext2** (clásico), ext3/ext4 también válidos | Simplicidad, confiable, sin journaling (ext2) → menor riesgo de corrupción en arranque | Espacio fijo, no aprovecha journaling de FS moderno (ext2), requiere montaje para actualizar kernel |
+| `/` (root)                   | **ext4**, Btrfs, XFS                          | Ext4: estable, rápido; Btrfs: snapshots y checksums; XFS: grandes volúmenes            | Btrfs y XFS más complejos de recuperar; ext4 limitado a 1 archivo <16 TB                            |
+| `/home`                      | **ext4**, Btrfs, XFS                          | Separación de datos de usuario → facilita reinstalación del OS; snapshots si Btrfs     | Necesita planificación de espacio; FS complejo aumenta riesgo de corrupción si se corta energía     |
+| `/var`                       | **ext4**, XFS                                 | Archivos que cambian mucho (logs, DB, caches) → FS robusto y rápido                    | Puede crecer mucho; cuidado con el límite de espacio                                                |
+| `/tmp`                       | **tmpfs** (RAM) o ext4                        | tmpfs: muy rápido, borrado al reiniciar; ext4: persistente                             | tmpfs usa RAM → cuidado con memoria; ext4 persistente puede acumular basura                         |
+| `/boot/efi` (ESP)            | **FAT32**                                     | Obligatorio en UEFI, compatible con múltiples OS                                       | No soporta permisos UNIX, sin enlaces simbólicos; corrupción impide arranque                        |
+| Swap                         | Swap FS (partición dedicada)                  | Permite suspender RAM, mejora estabilidad                                              | No almacena datos permanentes; usar demasiado reduce vida de SSD                                    |
+| Datos multi-OS               | NTFS (Windows), exFAT                         | Compatible con Windows y Linux                                                         | No soporta permisos UNIX completos, menor integridad en Linux                                       |
 
 
 
