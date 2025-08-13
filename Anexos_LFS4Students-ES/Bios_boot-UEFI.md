@@ -212,15 +212,14 @@ Notas:
 
 ## 3️⃣ Cuándo usar MBR, GPT o combinación
 
-| Caso                              | Recomendación             | Explicación                                                                       |
-| --------------------------------- | ------------------------- | --------------------------------------------------------------------------------- |
-| Disco < 2 TB, BIOS clásico        | MBR                       | Simplicidad, compatibilidad máxima.                                               |
-| Disco > 2 TB o UEFI               | GPT                       | Necesario para aprovechar tamaño y nuevas características.                        |
-| Necesitas arrancar GPT desde BIOS | GPT + BIOS Boot Partition | GPT + pequeña partición de 1 MB para bootloader (GRUB, etc.) que BIOS pueda usar. |
-| Compatibilidad con antiguos OS    | MBR                       | Algunos sistemas antiguos no entienden GPT.                                       |
+| Caso                               | Recomendación             | Explicación                                                                       |
+| ---------------------------------- | ------------------------- | --------------------------------------------------------------------------------- |
+| Disco < 2 TB, BIOS clásico         | MBR                       | Simplicidad, compatibilidad máxima.                                               |
+| Disco > 2 TB o UEFI                | GPT                       | Necesario para aprovechar tamaño y nuevas características.                        |
+| Necesitas arrancar GPT desde BIOS  | GPT + BIOS Boot Partition | GPT + pequeña partición de 1 MB para bootloader (GRUB, etc.) que BIOS pueda usar. |
+| Compatibilidad con antiguos OS     | MBR                       | Algunos sistemas antiguos no entienden GPT.                                       |
 
-✅ Resumen práctico:
-
+### ✅ Resumen práctico:
 - MBR: viejo, simple, compatible.
 - GPT: moderno, seguro, para discos grandes.
 - GPT+MBR (o mejor dicho, GPT con BIOS Boot Partition): puente para arrancar GPT en sistemas BIOS antiguos.
