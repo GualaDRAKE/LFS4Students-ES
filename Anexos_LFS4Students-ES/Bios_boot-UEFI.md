@@ -159,7 +159,8 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 - BIOS tradicional no entiende GPT, así que necesita un lugar donde colocar el bootloader que pueda leer antes de transferir el control al sistema operativo.
 
 ## Diagrama conceptual sencillo para visualizar MBR vs GPT vs GPT+BIOS Boot Partition
-1️⃣ Disco con MBR (BIOS tradicional)
+
+### 1️⃣ Disco con MBR (BIOS tradicional)
 │ Sector 0: MBR                 │  <- Código de arranque + Tabla de particiones
 |:------------------------------|
 │ Partición 1                   │
@@ -174,42 +175,32 @@ Notas:
 
 --------------------------------------------------
 
-2️⃣ Disco con GPT (UEFI)
-┌───────────────────────────────┐
+### 2️⃣ Disco con GPT (UEFI)
 │ Sector 0: Protective MBR      │  <- Evita que herramientas antiguas vean disco vacío
-├───────────────────────────────┤
+|:------------------------------|
 │ Tabla de particiones GPT      │
-├───────────────────────────────┤
 │ Partición 1 (EFI System)      │
-├───────────────────────────────┤
 │ Partición 2                   │
-├───────────────────────────────┤
 │ Partición 3                   │
-├───────────────────────────────┤
 │ Partición 4                   │
-├───────────────────────────────┤
 │ Backup GPT (final del disco)  │
-└───────────────────────────────┘
-Notas:
+
+**Notas**:
 - Necesario UEFI para arrancar
 - Soporta discos enormes y muchas particiones
 - Redundante y seguro
 
 --------------------------------------------------
 
-3️⃣ Disco GPT con BIOS Boot Partition (GPT + BIOS)
-┌───────────────────────────────┐
+### 3️⃣ Disco GPT con BIOS Boot Partition (GPT + BIOS)
 │ Sector 0: Protective MBR      │
-├───────────────────────────────┤
+|:------------------------------|
 │ BIOS Boot Partition (~1 MB)   │  <- Contiene bootloader para BIOS
-├───────────────────────────────┤
 │ Partición 1                   │
-├───────────────────────────────┤
 │ Partición 2                   │
-├───────────────────────────────┤
 │ Backup GPT (final del disco)  │
-└───────────────────────────────┘
-Notas:
+
+**Notas**:
 - Permite arrancar GPT desde BIOS antiguo
 - Partición muy pequeña, solo para bootloader
 - Combina ventajas de GPT con compatibilidad BIOS
