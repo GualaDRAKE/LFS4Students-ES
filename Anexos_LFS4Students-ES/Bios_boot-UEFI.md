@@ -684,7 +684,7 @@ Aquí tienes los diagramas de flujo en estilo Markdown para subirlos a GitHub, s
 flowchart TD
     A["Encendido del equipo"] --> B["BIOS realiza POST (Power-On Self Test)"]
     B --> C["Inicializa hardware básico"]
-    C --> D["Busca dispositivo de arranque según orden de prioridad]"
+    C --> D["Busca dispositivo de arranque según orden de prioridad"]
     D --> E["Lee el primer sector del dispositivo (MBR)"]
     E --> F["Ejecuta el código del MBR"]
     F --> G["MBR carga el Bootloader (ej: GRUB)"]
@@ -730,7 +730,7 @@ flowchart TD
 ### 2️⃣ Diagrama de flujo – UEFI Boot
 ```mermaid
 flowchart TD
-    A["Encendido del equipo"] --> B[POST - Power On Self Test"]
+    A["Encendido del equipo"] --> B["POST - Power On Self Test"]
     B --> C["UEFI Firmware carga drivers y servicios"]
     C --> D["Buscar partición EFI - FAT32"]
     D --> E["Cargar archivo .efi del bootloader"]
@@ -822,7 +822,7 @@ flowchart TD
 ### Flujo de arranque UEFI
 ```mermaid
 flowchart TD
-    A["Encendido del equipo"] --> B[UEFI inicializa hardware"]
+    A["Encendido del equipo"] --> B["UEFI inicializa hardware"]
     B --> C["UEFI ejecuta diagnósticos y configuración"]
     C --> D["UEFI busca el archivo de arranque en la partición EFI"]
     D --> E["Lee el archivo EFI (Ej. GRUB.efi, Windows Boot Manager)"]
