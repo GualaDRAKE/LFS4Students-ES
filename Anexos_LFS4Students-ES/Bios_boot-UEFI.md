@@ -255,7 +255,7 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
 |Partición      |FS recomendado        |Uso típico                            |Riesgos / Consideraciones                        |
-| ------------- | -------------------- | ------------------------------------ | ----------------------------------------------- |
+|:------------- |:-------------------- |:------------------------------------ |:----------------------------------------------- |
 |/boot          |ext2/ext4             |Arranque del sistema                  |Espacio fijo, requiere montaje                   |
 |/              |ext4/Btrfs/XFS        |kernel, Sistema raíz, programas       |FS complejo puede ser difícil de recuperar       |
 |/home          |ext4/Btrfs/XFS        |Datos de usuario                      |Planificar espacio, snapshots si Btrfs           |
