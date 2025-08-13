@@ -283,12 +283,12 @@ Estos diagramas muestran el flujo básico de arranque en sistemas **BIOS** y **U
 ## 🖥️ Arranque BIOS Boot
 ```mermaid
 flowchart TD
-    A["Encendido del equipo"] --> B["BIOS POST\n(Power-On Self Test)"]
+    A["Encendido del equipo"] --> B["BIOS POST\\n(Power-On Self Test)"]
     B --> C["BIOS localiza dispositivo de arranque"]
-    C --> D["Lee MBR\n(512 bytes, incluye tabla de particiones y código de arranque)"]
-    D --> E["Código MBR carga\nStage 1 de GRUB/LILO"]
-    E --> F["Stage 1 carga Stage 1.5\n(si existe, ej. en BIOS Boot Partition)"]
-    F --> G["Stage 2 de GRUB\nlee /boot"]
+    C --> D["Lee MBR\\n(512 bytes, incluye tabla de particiones y código de arranque)"]
+    D --> E["Código MBR carga\\nStage 1 de GRUB/LILO"]
+    E --> F["Stage 1 carga Stage 1.5\\n(si existe, ej. en BIOS Boot Partition)"]
+    F --> G["Stage 2 de GRUB\\nlee /boot"]
     G --> H["Selecciona y carga kernel + initramfs"]
     H --> I["Kernel inicializa hardware"]
     I --> J["Kernel monta root filesystem"]
@@ -298,11 +298,11 @@ flowchart TD
 🖥️ Arranque UEFI Boot
 ```mermaid
 flowchart TD
-    A["Encendido del equipo"] --> B["UEFI POST (Power-On Self Test)"]
+    A["Encendido del equipo"] --> B["UEFI POST\\n(Power-On Self Test)"]
     B --> C["UEFI lee NVRAM para localizar entrada de arranque"]
-    C --> D["Accede a EFI System Partition (/boot/efi en Linux)"]
-    D --> E["Lee y ejecuta archivo .EFI (GRUB EFI, systemd-boot, etc.)"]
-    E --> F["GRUB lee /boot (dentro del FS raíz o partición /boot)"]
+    C --> D["Accede a EFI System Partition\\n(/boot/efi en Linux)"]
+    D --> E["Lee y ejecuta archivo .EFI\\n(GRUB EFI, systemd-boot, etc.)"]
+    E --> F["GRUB lee /boot\\n(dentro del FS raíz o partición /boot)"]
     F --> G["Selecciona y carga kernel + initramfs"]
     G --> H["Kernel inicializa hardware"]
     H --> I["Kernel monta root filesystem"]
