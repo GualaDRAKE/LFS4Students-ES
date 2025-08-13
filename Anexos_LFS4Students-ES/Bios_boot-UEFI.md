@@ -255,9 +255,9 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
 │ Partición     │ FS recomendado│ Uso típico                     │ Riesgos / Consideraciones      │
-|:--------------|:--------------|:-------------------------------|--------------------------------|
-│ /boot<br>/    │ ext2 / ext4 <br> ext4 / Btrfs <br> / XFS  │Arranque del sistema, kernel<br>Sistema raíz, programas │ Espacio fijo, requiere montaje<br>FS complejo puede ser difícil<br>de recuperar│
-│ /home         │ ext4 / Btrfs <br> / XFS│ Datos de usuario               │ Planificar espacio, snapshots<br>si Btrfs│
+|:--------------|:--------------|:-------------------------------|:-------------------------------|
+│ /boot<br> /   │ ext2 / ext4 <br> ext4 / Btrfs <br> / XFS  │Arranque del sistema, kernel<br>Sistema raíz, programas │ Espacio fijo, requiere montaje<br>FS complejo puede ser difícil<br>de recuperar│
+│ /home         │ ext4 / Btrfs <br> / XFS│ Datos de usuario      │ Planificar espacio, snapshots<br>si Btrfs│
 │ /var          │ ext4 / XFS    │ Logs, bases de datos, caches   │ Crecimiento grande posible    │
 │ /tmp          │ tmpfs / ext4  │ Archivos temporales             │ tmpfs usa RAM, ext4 persiste  │
 │ /boot/efi     │ FAT32         │ EFI System Partition (UEFI) <br> Multi-OS│ No permisos UNIX, corrupción<br>impide arranque│
