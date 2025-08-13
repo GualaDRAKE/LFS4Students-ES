@@ -281,18 +281,6 @@ Estos diagramas muestran el flujo básico de arranque en sistemas **BIOS** y **U
 ---
 
 ## 🖥️ Arranque BIOS Boot
-
-```mermaid
-flowchart TD
-A[Inicio] --> B{¿Está logueado?}
-B -->|Sí| C[Página Principal]
-B -->|No| D[Pantalla de Login]
-D --> E[Verificar Credenciales]
-E -->|Correctas| C
-E -->|Incorrectas| D
-C --> F[Fin]
-```
-
 ```mermaid
 flowchart TD
     A["Encendido del equipo"] --> B["BIOS POST\n(Power-On Self Test)"]
@@ -308,7 +296,7 @@ flowchart TD
 ```
 
 🖥️ Arranque UEFI Boot
-```
+```mermaid
 flowchart TD
     A[Encendido del equipo] --> B[UEFI POST (Power-On Self Test)]
     B --> C[UEFI lee NVRAM para localizar entrada de arranque]
