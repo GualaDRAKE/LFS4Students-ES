@@ -254,7 +254,7 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 - EFI/UEFI (/boot/efi): FAT32 obligatorio, compatibilidad ante todo.
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
-| Partición / Directorio       | FS típico / recomendado                       | Ventajas                                                                               | Desventajas                                                                                         |
+|                              |                                               |                                                                                        |                                                                                                     |
 | ---------------------------- | --------------------------------------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | `/boot` (partición separada) | **ext2** (clásico), ext3/ext4 también válidos | Simplicidad, confiable, sin journaling (ext2) → menor riesgo de corrupción en arranque | Espacio fijo, no aprovecha journaling de FS moderno (ext2), requiere montaje para actualizar kernel |
 | `/` (root)                   | **ext4**, Btrfs, XFS                          | Ext4: estable, rápido; Btrfs: snapshots y checksums; XFS: grandes volúmenes            | Btrfs y XFS más complejos de recuperar; ext4 limitado a 1 archivo <16 TB                            |
