@@ -15,7 +15,7 @@ qué ocurre desde que encendemos el equipo hasta que el sistema operativo está 
 Este documento está diseñado para llenar ese vacío y explicar de manera clara, completa y progresiva todo lo que LFS asume que ya sabemos.  
 Además, incluye diagramas visuales y ejemplos pensados para que incluso quien nunca haya instalado Linux pueda comprender el proceso.
 
-A lo largo de los **9 apartados** encontrarás:
+### A lo largo de los **9 apartados** encontrarás:
 
 1. **Introducción** (este capítulo)  
    - Contexto general sobre BIOS y UEFI.  
@@ -229,12 +229,64 @@ flowchart LR
 ---
 
 ## 9. Anexo – Explicación sencilla para principiantes
-Piensa en Linux como una casa bien organizada:
 
+En Linux, al igual que en macOS y Windows, hablamos de directorios desde un punto de vista técnico o de programación. Pero en la interfaz gráfica de usuario (GUI), Apple utiliza el término “carpetas” (folders en inglés), igual que Windows.
+
+Así que, de forma práctica:
+- Terminal o programación: directorios (directories).
+- Interfaz gráfica / Finder: carpetas (folders).
+
+Esto significa que si abres la Terminal en macOS, navegarás usando rutas de directorio como `/Users/usuario/Documents`, mientras que en Finder de  macOS y en el Esporador de Archivos de Windows, visualmente verás “Documentos” como una carpeta.
+
+### Piensa en Linux como una casa bien organizada:
 - **/boot**: Es el cuarto donde guardas lo que necesitas para arrancar (arranque del sistema).
 - **/boot/efi**: Es como el vestíbulo del edificio, por donde entras si tienes una llave UEFI.
-- **/home/usuario**: Tu habitación personal (donde van tus documentos, música, fotos).
+- **/home/usuario**: Tu habitación personal (donde van tus documentos en diveras categoríastales como, Vidéo/Música, Imágenes, Descargas, etc).
 
 **Regla de oro**:
-No guardes cosas en /boot o /boot/efi salvo que sepas exactamente lo que haces.
-Tus archivos deben ir en /home.
+- No guardes cosas en `/boot` o `/boot/efi` salvo que sepas exactamente lo que haces.
+- Tus archivos deben ir en /home.
+
+### Datos Anecdóticos - ¿Directorios o Carpetas?
+
+No hay un estándar formal único que dicte que los sistemas operativos deben usar “carpetas” o “directorios” en su interfaz gráfica, pero sí hay algunas normas y tradiciones históricas que guían la terminología:
+
+1- **POSIX** (Portable Operating System Interface)
+- Define cómo se deben manejar archivos y directorios a nivel de sistema.
+- Habla exclusivamente de “directories”.
+- Esto aplica a Linux, macOS (que es Unix-based) y otros sistemas compatibles con POSIX.
+- No dicta la terminología de la GUI.
+
+2- Convención de interfaces gráficas - **GUI**
+- Apple adoptó “folders” en el Finder, siguiendo la metáfora física de carpetas para organizar documentos.
+- Microsoft hizo lo mismo con Windows.
+- Esta terminología se basa en metáforas visuales y usabilidad, no en un estándar técnico formal.
+
+3- Estándares de **Interoperabilidad/ISO**
+- ISO/IEC 9945 (POSIX) solo habla de directorios a nivel de sistema, no de cómo mostrarlos en GUI.
+- No existe un estándar ISO que obligue a usar “folder” vs “directory” en un escritorio gráfico.
+
+### ✅ Conclusión:
+
+- A nivel técnico / programación, se usa “directory” o “directorio”.
+- A nivel usuario / interfaz gráfica, “carpeta” (folder) es una convención empírica, basada en la metáfora de oficina, y cada sistema la adopta como le conviene.
+
+### Historia setrás de la lógica técnica del concepto “directorios”
+
+El término “directorio” (directory en inglés) proviene de la informática temprana, cuando los sistemas de archivos empezaron a organizar información de manera jerárquica:
+
+1- Metáfora técnica vs física
+- Mientras “folder” viene de la metáfora física de una carpeta de oficina que contiene papeles, “directory” viene de la idea de “directorio de referencias”.
+- Un directorio no necesariamente contiene los archivos físicamente; más bien apunta o referencia a ellos. Es un mapa que indica dónde se encuentra cada archivo en el almacenamiento.
+
+2- Origen histórico
+- En los primeros sistemas Unix y Multics (años 60-70), un “directory” era un listado estructurado de nombres de archivos y sus ubicaciones en disco.
+- Su función era dirigir al sistema hacia los bloques de datos correctos, de ahí “directory” → “directorio” (literalmente “que dirige”).
+
+3- Implicación técnica
+- Un directorio puede contener archivos y otros directorios (subdirectorios), formando una estructura jerárquica en árbol.
+- No importa si el usuario lo ve como una carpeta; para el sistema, es más un registro organizado de punteros.
+
+### En resumen:
+- Folder (carpeta): metáfora visual para el usuario, física y concreta.
+- Directory (directorio): concepto técnico, abstracto, orientado a organización y referencias dentro del sistema de archivos.
