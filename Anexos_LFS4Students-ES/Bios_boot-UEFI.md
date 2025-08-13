@@ -447,43 +447,32 @@ Incluye **línea de tiempo**, **ventajas y desventajas**, **función de cada par
 
 ### Arranque BIOS Boot
 
-```mermaid
-flowchart TD
-A[Inicio] --> B{¿Está logueado?}
-B -->|Sí| C[Página Principal]
-B -->|No| D[Pantalla de Login]
-D --> E[Verificar Credenciales]
-E -->|Correctas| C
-E -->|Incorrectas| D
-C --> F[Fin]
-```
-
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[BIOS POST<br>(Power-On Self Test)]
-    B --> C[BIOS localiza dispositivo de arranque]
-    C --> D[Lee MBR<br>(512 bytes, incluye tabla de particiones y código de arranque)]
-    D --> E[Código MBR carga<br>Stage 1 de GRUB/LILO]
-    E --> F[Stage 1 carga Stage 1.5<br>(si existe, ej. en BIOS Boot Partition)]
-    F --> G[Stage 2 de GRUB<br>lee /boot]
-    G --> H[Selecciona y carga kernel + initramfs]
-    H --> I[Kernel inicializa hardware]
-    I --> J[Kernel monta root filesystem]
-    J --> K[Inicio de proceso init/systemd]
+    A["Encendido del equipo"] --> B["BIOS POST<br>(Power-On Self Test)"]
+    B --> C["BIOS localiza dispositivo de arranque"]
+    C --> D["Lee MBR<br>(512 bytes, incluye tabla de particiones y código de arranque)"]
+    D --> E["Código MBR carga<br>Stage 1 de GRUB/LILO"]
+    E --> F["Stage 1 carga Stage 1.5<br>(si existe, ej. en BIOS Boot Partition)"]
+    F --> G["Stage 2 de GRUB<br>lee /boot"]
+    G --> H["Selecciona y carga kernel + initramfs"]
+    H --> I["Kernel inicializa hardware"]
+    I --> J["Kernel monta root filesystem"]
+    J --> K["Inicio de proceso init/systemd"]
 ```
 
 Arranque UEFI Boot
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[UEFI POST<br>(Power-On Self Test)]
-    B --> C[UEFI lee NVRAM<br>para localizar entrada de arranque]
-    C --> D[Accede a EFI System Partition<br>(/boot/efi en Linux)]
-    D --> E[Lee y ejecuta archivo .EFI<br>(GRUB EFI, systemd-boot, etc.)]
-    E --> F[GRUB lee /boot<br>(dentro del FS raíz o partición /boot)]
-    F --> G[Selecciona y carga kernel + initramfs]
-    G --> H[Kernel inicializa hardware]
-    H --> I[Kernel monta root filesystem]
-    I --> J[Inicio de proceso init/systemd]
+    A["Encendido del equipo"] --> B["UEFI POST<br>(Power-On Self Test)"]
+    B --> C["UEFI lee NVRAM<br>para localizar entrada de arranque"]
+    C --> D["Accede a EFI System Partition<br>(/boot/efi en Linux)"]
+    D --> E["Lee y ejecuta archivo .EFI<br>(GRUB EFI, systemd-boot, etc.)"]
+    E --> F["GRUB lee /boot<br>(dentro del FS raíz o partición /boot)"]
+    F --> G["Selecciona y carga kernel + initramfs"]
+    G --> H["Kernel inicializa hardware"]
+    H --> I["Kernel monta root filesystem"]
+    I --> J["Inicio de proceso init/systemd"]
 ```
 
 📌 Notas finales:
@@ -627,30 +616,30 @@ Incluye **línea de tiempo**, **ventajas y desventajas**, **función de cada par
 
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[BIOS POST<br>(Power-On Self Test)]
-    B --> C[BIOS localiza dispositivo de arranque]
-    C --> D[Lee MBR<br>(512 bytes, incluye tabla de particiones y código de arranque)]
-    D --> E[Código MBR carga<br>Stage 1 de GRUB/LILO]
-    E --> F[Stage 1 carga Stage 1.5<br>(si existe, ej. en BIOS Boot Partition)]
-    F --> G[Stage 2 de GRUB<br>lee /boot]
-    G --> H[Selecciona y carga kernel + initramfs]
-    H --> I[Kernel inicializa hardware]
-    I --> J[Kernel monta root filesystem]
-    J --> K[Inicio de proceso init/systemd]
+    A["Encendido del equipo"] --> B["BIOS POST<br>(Power-On Self Test)"]
+    B --> C["BIOS localiza dispositivo de arranque"]
+    C --> D["Lee MBR<br>(512 bytes, incluye tabla de particiones y código de arranque)"]
+    D --> E["Código MBR carga<br>Stage 1 de GRUB/LILO"]
+    E --> F["Stage 1 carga Stage 1.5<br>(si existe, ej. en BIOS Boot Partition)"]
+    F --> G["Stage 2 de GRUB<br>lee /boot"]
+    G --> H["Selecciona y carga kernel + initramfs"]
+    H --> I["Kernel inicializa hardware"]
+    I --> J["Kernel monta root filesystem"]
+    J --> K["Inicio de proceso init/systemd"]
 ```
 
 Arranque UEFI Boot
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[UEFI POST<br>(Power-On Self Test)]
-    B --> C[UEFI lee NVRAM<br>para localizar entrada de arranque]
-    C --> D[Accede a EFI System Partition<br>(/boot/efi en Linux)]
-    D --> E[Lee y ejecuta archivo .EFI<br>(GRUB EFI, systemd-boot, etc.)]
-    E --> F[GRUB lee /boot<br>(dentro del FS raíz o partición /boot)]
-    F --> G[Selecciona y carga kernel + initramfs]
-    G --> H[Kernel inicializa hardware]
-    H --> I[Kernel monta root filesystem]
-    I --> J[Inicio de proceso init/systemd]
+    A["Encendido del equipo"] --> B["UEFI POST<br>(Power-On Self Test)"]
+    B --> C["UEFI lee NVRAM<br>para localizar entrada de arranque"]
+    C --> D["Accede a EFI System Partition<br>(/boot/efi en Linux)"]
+    D --> E["Lee y ejecuta archivo .EFI<br>(GRUB EFI, systemd-boot, etc.)"]
+    E --> F["GRUB lee /boot<br>(dentro del FS raíz o partición /boot)"]
+    F --> G["Selecciona y carga kernel + initramfs"]
+    G --> H["Kernel inicializa hardware"]
+    H --> I["Kernel monta root filesystem"]
+    I --> J["Inicio de proceso init/systemd"]
 ```
 
 📊 Comparativa rápida: BIOS vs UEFI
@@ -693,26 +682,26 @@ Aquí tienes los diagramas de flujo en estilo Markdown para subirlos a GitHub, s
 
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[BIOS realiza POST (Power-On Self Test)]
-    B --> C[Inicializa hardware básico]
-    C --> D[Busca dispositivo de arranque según orden de prioridad]
-    D --> E[Lee el primer sector del dispositivo (MBR)]
-    E --> F[Ejecuta el código del MBR]
-    F --> G[MBR carga el Bootloader (ej: GRUB)]
-    G --> H[Bootloader carga el kernel y el initramfs]
-    H --> I[Kernel inicia el sistema operativo]
+    A["Encendido del equipo"] --> B["BIOS realiza POST (Power-On Self Test)"]
+    B --> C["Inicializa hardware básico"]
+    C --> D["Busca dispositivo de arranque según orden de prioridad]"
+    D --> E["Lee el primer sector del dispositivo (MBR)"]
+    E --> F["Ejecuta el código del MBR"]
+    F --> G["MBR carga el Bootloader (ej: GRUB)"]
+    G --> H["Bootloader carga el kernel y el initramfs"]
+    H --> I["Kernel inicia el sistema operativo"]
 ```
 
 Diagrama de Flujo – UEFI Boot
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[UEFI inicializa hardware básico]
-    B --> C[Ejecuta POST (Power-On Self Test)]
-    C --> D[Carga drivers UEFI necesarios]
-    D --> E[Busca archivo EFI en la partición EFI (ESP)]
-    E --> F[Carga el Boot Manager configurado (ej: GRUB EFI)]
-    F --> G[Bootloader carga el kernel y el initramfs]
-    G --> H[Kernel inicia el sistema operativo]
+    A["Encendido del equipo"] --> B["UEFI inicializa hardware básico"]
+    B --> C["Ejecuta POST (Power-On Self Test)"]
+    C --> D["Carga drivers UEFI necesarios"]
+    D --> E["Busca archivo EFI en la partición EFI (ESP)"]
+    E --> F["Carga el Boot Manager configurado (ej: GRUB EFI)"]
+    F --> G["Bootloader carga el kernel y el initramfs"]
+    G --> H["Kernel inicia el sistema operativo"]
 ```
 
 Si quieres, puedo también **unificar ambos en un solo diagrama comparativo** para que en GitHub se vea más claro cómo se diferencian.
@@ -729,46 +718,46 @@ He usado mermaid porque GitHub lo soporta directamente en sus vistas de Markdown
 1️⃣ Diagrama de flujo – BIOS Boot
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[POST - Power On Self Test]
-    B --> C[Buscar dispositivo de arranque]
-    C --> D[Leer sector MBR - 512 bytes]
-    D --> E[Cargar y ejecutar código del MBR]
-    E --> F[Localizar y cargar bootloader (Ej: GRUB Stage 1)]
-    F --> G[Bootloader carga el kernel]
-    G --> H[Kernel inicializa el sistema operativo]
+    A["Encendido del equipo"] --> B["POST - Power On Self Test"]
+    B --> C["Buscar dispositivo de arranque"]
+    C --> D["Leer sector MBR - 512 bytes"]
+    D --> E["Cargar y ejecutar código del MBR"]
+    E --> F["Localizar y cargar bootloader (Ej: GRUB Stage 1)"]
+    F --> G["Bootloader carga el kernel"]
+    G --> H["Kernel inicializa el sistema operativo"]
 ```
 
 2️⃣ Diagrama de flujo – UEFI Boot
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[POST - Power On Self Test]
-    B --> C[UEFI Firmware carga drivers y servicios]
-    C --> D[Buscar partición EFI - FAT32]
-    D --> E[Cargar archivo .efi del bootloader]
-    E --> F[Ejecutar bootloader (Ej: GRUB EFI, systemd-boot)]
-    F --> G[Bootloader carga el kernel]
-    G --> H[Kernel inicializa el sistema operativo]
+    A["Encendido del equipo"] --> B[POST - Power On Self Test"]
+    B --> C["UEFI Firmware carga drivers y servicios"]
+    C --> D["Buscar partición EFI - FAT32"]
+    D --> E["Cargar archivo .efi del bootloader"]
+    E --> F["Ejecutar bootloader (Ej: GRUB EFI, systemd-boot)"]
+    F --> G["Bootloader carga el kernel"]
+    G --> H["Kernel inicializa el sistema operativo"]
 ```
 
 3️⃣ Diagrama comparativo BIOS vs UEFI
 ```
 flowchart LR
     subgraph BIOS
-        A1[Encendido] --> B1[POST]
-        B1 --> C1[Buscar dispositivo de arranque]
-        C1 --> D1[Leer MBR (512 bytes)]
-        D1 --> E1[Cargar bootloader (Stage 1)]
-        E1 --> F1[Bootloader carga kernel]
-        F1 --> G1[Kernel inicializa SO]
+        A1["Encendido"] --> B1["POST"]
+        B1 --> C1["Buscar dispositivo de arranque"]
+        C1 --> D1["Leer MBR (512 bytes)"]
+        D1 --> E1["Cargar bootloader (Stage 1)"]
+        E1 --> F1["Bootloader carga kernel"]
+        F1 --> G1["Kernel inicializa SO"]
     end
 
     subgraph UEFI
-        A2[Encendido] --> B2[POST]
-        B2 --> C2[UEFI carga drivers y servicios]
-        C2 --> D2[Buscar partición EFI]
-        D2 --> E2[Cargar archivo .efi del bootloader]
-        E2 --> F2[Bootloader carga kernel]
-        F2 --> G2[Kernel inicializa SO]
+        A2["Encendido"] --> B2["POST"]
+        B2 --> C2["UEFI carga drivers y servicios"]
+        C2 --> D2["Buscar partición EFI"]
+        D2 --> E2["Cargar archivo .efi del bootloader"]
+        E2 --> F2["Bootloader carga kernel"]
+        F2 --> G2["Kernel inicializa SO"]
     end
 ```
 
@@ -785,28 +774,28 @@ Aquí tienes los diagramas de flujo para BIOS Boot y UEFI Boot en formato Markdo
 
 ```
 flowchart TD
-    A[Encendido del PC] --> B[POST - Power On Self Test]
-    B --> C[Detecta dispositivos de arranque]
-    C --> D[Lee el MBR (Master Boot Record)]
-    D --> E[Carga el Bootloader en RAM]
-    E --> F[Bootloader carga el Kernel]
-    F --> G[Kernel inicializa drivers y hardware]
-    G --> H[Kernel monta el sistema de archivos raíz]
-    H --> I[Inicia proceso init / systemd]
-    I --> J[Sistema operativo en ejecución]
+    A["Encendido del PC"] --> B["POST - Power On Self Test"]
+    B --> C["Detecta dispositivos de arranque"]
+    C --> D["Lee el MBR (Master Boot Record)"]
+    D --> E["Carga el Bootloader en RAM"]
+    E --> F["Bootloader carga el Kernel"]
+    F --> G["Kernel inicializa drivers y hardware"]
+    G --> H["Kernel monta el sistema de archivos raíz"]
+    H --> I["Inicia proceso init / systemd"]
+    I --> J["Sistema operativo en ejecución"]
 ```
 Diagrama de flujo: Arranque con UEFI
 ```
 flowchart TD
-    A[Encendido del PC] --> B[UEFI POST]
-    B --> C[UEFI busca y lee la NVRAM para encontrar dispositivos de arranque]
-    C --> D[Localiza el archivo EFI en la partición EFI (ESP)]
-    D --> E[Carga el gestor de arranque EFI (Ej: GRUB, systemd-boot)]
-    E --> F[Gestor de arranque carga el Kernel y el initramfs]
-    F --> G[Kernel inicializa drivers y hardware]
-    G --> H[Kernel monta el sistema de archivos raíz]
-    H --> I[Inicia proceso init / systemd]
-    I --> J[Sistema operativo en ejecución]
+    A["Encendido del PC"] --> B["UEFI POST"]
+    B --> C["UEFI busca y lee la NVRAM para encontrar dispositivos de arranque"]
+    C --> D["Localiza el archivo EFI en la partición EFI (ESP)"]
+    D --> E["Carga el gestor de arranque EFI (Ej: GRUB, systemd-boot)"]
+    E --> F["Gestor de arranque carga el Kernel y el initramfs"]
+    F --> G["Kernel inicializa drivers y hardware"]
+    G --> H["Kernel monta el sistema de archivos raíz"]
+    H --> I["Inicia proceso init / systemd"]
+    I --> J["Sistema operativo en ejecución"]
 ```
 
 Si quieres, puedo también hacerte **un solo diagrama combinado** donde se comparen BIOS y UEFI en paralelo para que en GitHub se vea en una sola vista.  
@@ -821,25 +810,25 @@ Aquí tienes los dos diagramas de flujo en Markdown usando sintaxis Mermaid, lis
 Flujo de arranque BIOS (Legacy Boot)
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[BIOS: POST (Power-On Self Test)]
-    B --> C[BIOS busca dispositivo de arranque]
-    C --> D[Lee el MBR (Master Boot Record) del disco]
-    D --> E[Ejecuta el cargador de arranque (Ej. GRUB)]
-    E --> F[Cargador carga el kernel en memoria]
-    F --> G[Kernel inicializa hardware y monta el sistema raíz]
-    G --> H[Se inicia el sistema operativo]
+    A["Encendido del equipo"] --> B["BIOS: POST (Power-On Self Test)"]
+    B --> C["BIOS busca dispositivo de arranque"]
+    C --> D["Lee el MBR (Master Boot Record) del disco"]
+    D --> E["Ejecuta el cargador de arranque (Ej. GRUB)"]
+    E --> F["Cargador carga el kernel en memoria"]
+    F --> G["Kernel inicializa hardware y monta el sistema raíz"]
+    G --> H["Se inicia el sistema operativo"]
 ```
 
 Flujo de arranque UEFI
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[UEFI inicializa hardware]
-    B --> C[UEFI ejecuta diagnósticos y configuración]
-    C --> D[UEFI busca el archivo de arranque en la partición EFI]
-    D --> E[Lee el archivo EFI (Ej. GRUB.efi, Windows Boot Manager)]
-    E --> F[Cargador EFI carga el kernel en memoria]
-    F --> G[Kernel inicializa hardware y monta el sistema raíz]
-    G --> H[Se inicia el sistema operativo]
+    A["Encendido del equipo"] --> B[UEFI inicializa hardware"]
+    B --> C["UEFI ejecuta diagnósticos y configuración"]
+    C --> D["UEFI busca el archivo de arranque en la partición EFI"]
+    D --> E["Lee el archivo EFI (Ej. GRUB.efi, Windows Boot Manager)"]
+    E --> F["Cargador EFI carga el kernel en memoria"]
+    F --> G["Kernel inicializa hardware y monta el sistema raíz"]
+    G --> H["Se inicia el sistema operativo"]
 ```
 
 ---
@@ -889,13 +878,6 @@ Así que, aunque al principio parezca raro no poner todo en “C:”, esta estru
 ---
 
 ¿Quieres que te prepare una mini-guía para que puedas ver dónde y cómo guardar tus archivos en Linux para no perderte?
-
-
-
-
-
-
-
 
 Dijiste:
 si
