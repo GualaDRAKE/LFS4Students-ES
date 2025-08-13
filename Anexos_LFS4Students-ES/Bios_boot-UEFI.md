@@ -310,11 +310,11 @@ flowchart TD
 🖥️ Arranque UEFI Boot
 ```
 flowchart TD
-    A[Encendido del equipo] --> B[UEFI POST<br>(Power-On Self Test)]
-    B --> C[UEFI lee NVRAM<br>para localizar entrada de arranque]
-    C --> D[Accede a EFI System Partition<br>(/boot/efi en Linux)]
-    D --> E[Lee y ejecuta archivo .EFI<br>(GRUB EFI, systemd-boot, etc.)]
-    E --> F[GRUB lee /boot<br>(dentro del FS raíz o partición /boot)]
+    A[Encendido del equipo] --> B[UEFI POST (Power-On Self Test)]
+    B --> C[UEFI lee NVRAM para localizar entrada de arranque]
+    C --> D[Accede a EFI System Partition (/boot/efi en Linux)]
+    D --> E[Lee y ejecuta archivo .EFI (GRUB EFI, systemd-boot, etc.)]
+    E --> F[GRUB lee /boot (dentro del FS raíz o partición /boot)]
     F --> G[Selecciona y carga kernel + initramfs]
     G --> H[Kernel inicializa hardware]
     H --> I[Kernel monta root filesystem]
