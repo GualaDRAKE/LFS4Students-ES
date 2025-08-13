@@ -338,7 +338,7 @@ Incluye **línea de tiempo**, **ventajas y desventajas**, **función de cada par
 ## 📜 Línea de tiempo resumida
 
 | Año aprox. | Hito | Detalle técnico |
-|------------|------|----------------|
+|------------------|------|----------------|
 | **1991–1994** | Linux inicial + LILO | El cargador **LILO** cargaba el kernel directamente desde el MBR o una partición activa. `/boot` era un **directorio** en `/`. |
 | **1999** | GRUB (Legacy) | Se recomienda **partición `/boot`** en sistemas donde el BIOS o el cargador no soportan leer todo el disco o FS complejos (RAID, LVM…). |
 | **2005–2010** | GRUB2 | Más soporte de FS, GPT y módulos. `/boot` como partición empieza a ser opcional. |
