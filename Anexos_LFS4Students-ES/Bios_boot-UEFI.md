@@ -254,22 +254,22 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 - EFI/UEFI (/boot/efi): FAT32 obligatorio, compatibilidad ante todo.
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
-|Partición                     |FS recomendado                                 |Uso típico                            |Riesgos / Consideraciones                        |
-| ---------------------------- | --------------------------------------------- | ------------------------------------ | ----------------------------------------------- |
-|                              |                                               |                                      |                                                 |
-| `/` (root)                   | **ext4**, Btrfs, XFS                          | Ext4: estable, rápido; Btrfs: snapshots y checksums; XFS: grandes volúmenes            | Btrfs y XFS más complejos de recuperar; ext4 limitado a 1 archivo <16 TB                            |
-| `/home`                      | **ext4**, Btrfs, XFS                          | Separación de datos de usuario → facilita reinstalación del OS; snapshots si Btrfs     | Necesita planificación de espacio; FS complejo aumenta riesgo de corrupción si se corta energía     |
-| `/var`                       | **ext4**, XFS                                 | Archivos que cambian mucho (logs, DB, caches) → FS robusto y rápido                    | Puede crecer mucho; cuidado con el límite de espacio                                                |
-| `/tmp`                       | **tmpfs** (RAM) o ext4                        | tmpfs: muy rápido, borrado al reiniciar; ext4: persistente                             | tmpfs usa RAM → cuidado con memoria; ext4 persistente puede acumular basura                         |
-| `/boot/efi` (ESP)            | **FAT32**                                     | Obligatorio en UEFI, compatible con múltiples OS                                       | No soporta permisos UNIX, sin enlaces simbólicos; corrupción impide arranque                        |
-| Swap                         | Swap FS (partición dedicada)                  | Permite suspender RAM, mejora estabilidad                                              | No almacena datos permanentes; usar demasiado reduce vida de SSD                                    |
-| Datos multi-OS               | NTFS (Windows), exFAT                         | Compatible con Windows y Linux                                                         | No soporta permisos UNIX completos, menor integridad en Linux                                       |
+|Partición      |FS recomendado        |Uso típico                            |Riesgos / Consideraciones                        |
+| ------------- | -------------------- | ------------------------------------ | ----------------------------------------------- |
+|/boot          |ext2/ext4             |Arranque del sistema                  |Espacio fijo, requiere montaje                   |
+|/              |ext4/Btrfs/XFS        |kernel, Sistema raíz, programas       |FS complejo puede ser difícil de recuperar       |
+|/home          |ext4/Btrfs/XFS        |Datos de usuario                      |Planificar espacio, snapshots si Btrfs           |
+|/var           |ext4/XFS              |Logs, bases de datos, caches          |Crecimiento grande posible                       |
+|/tmp           |tmpfs/ext4            |Archivos temporales                   |tmpfs usa RAM, ext4 persiste                     |
+|/boot/efi      |FAT32                 |EFI System Partition (UEFI) Multi-OS  |No permisos UNIX, corrupción impide arranque     |
+|swap           |Swap FS               |Memoria virtual, suspender RAM        |No guarda datos permanentes                      |
+|Multi-OS datos |NTFS/exFAT            |Compartir con Windows                 |Sin permisos UNIX completos                      |
 
 
 
 │ Partición     │ FS recomendado│ Uso típico                     │ Riesgos / Consideraciones      │
 |:--------------|:--------------|:-------------------------------|:-------------------------------|
-│ /boot<br> /   │ ext2 / ext4 <br> ext4 / Btrfs <br> / XFS  │Arranque del sistema, kernel<br>Sistema raíz, programas │ Espacio fijo, requiere montaje<br>FS complejo puede ser difícil<br>de recuperar│
+│ /boot<br> /   │ ext2 / ext4 <br> ext4 / Btrfs <br> / XFS  │Arranque del sistema, kernel Sistema raíz, programas │ Espacio fijo, requiere montaje<br>FS complejo puede ser difícil<br>de recuperar│
 │ /home         │ ext4 / Btrfs <br> / XFS│ Datos de usuario      │ Planificar espacio, snapshots<br>si Btrfs│
 │ /var          │ ext4 / XFS    │ Logs, bases de datos, caches   │ Crecimiento grande posible    │
 │ /tmp          │ tmpfs / ext4  │ Archivos temporales             │ tmpfs usa RAM, ext4 persiste  │
