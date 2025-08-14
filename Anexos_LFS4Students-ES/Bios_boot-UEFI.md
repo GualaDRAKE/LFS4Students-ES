@@ -343,7 +343,7 @@ flowchart TD
 ### Comparativo Arranque BIOS vs UEFI
 ```mermaid
 flowchart TD
-    subgraph UEFI
+    subgraph ArranqueUEFI
         A(["💡 Encendido del equipo"]) --> B(["🖥 UEFI POST"])
         B --> C(["📋 UEFI lee NVRAM (entradas de arranque)"])
         C --> D(["💽 Accede a ESP (/boot/efi)"])
@@ -353,7 +353,7 @@ flowchart TD
         G --> H(["💾 Kernel monta / (root filesystem)"])
         H --> I(["🛠 Ejecuta init/systemd"])
     end
-    subgraph BIOS
+    subgraph ArranqueBIOS
         A(["💡 Encendido del equipo"]) --> B(["🖥 BIOS POST"])
         B --> C(["🔍 Busca dispositivo de arranque"])
         C --> D(["📦 Lee MBR (512 bytes)"])
