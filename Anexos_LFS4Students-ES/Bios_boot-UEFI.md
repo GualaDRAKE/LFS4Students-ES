@@ -113,8 +113,8 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 - Sin formato, reservada para `core.img` de GRUB cuando no cabe en el MBR.
 - No es `/boot` ni `/boot/efi`.
 
-## 1️⃣ Qué es MBR y GPT
-- MBR (Master Boot Record)
+## 🔎 Qué es MBR y GPT
+### **MBR**: (**M**aster **B**oot **R**ecord)
 - Edad: Muy antiguo, desde 1983.
 
 **Qué hace**:
@@ -129,7 +129,7 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 - Máx. 4 particiones primarias (o 3 primarias + 1 extendida).
 - Sin redundancia: si se corrompe el MBR, el disco puede quedar inaccesible.
 
-### GPT (GUID Partition Table)
+### **GPT** (**G**UID **P**artition **T**able)
 **Edad**: Introducido con UEFI (finales de los 90s, adoptado ampliamente en 2005+).
 
 **Qué hace**:
@@ -146,19 +146,20 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 **Limitación**:
 - Para arrancar desde un disco GPT, necesitas UEFI, no BIOS tradicional.
 
-## 2️⃣ BIOS Boot Partition (~1 MB)
+### BIOS Boot Partition (~1 MB)
 **Qué es**:
 - Una pequeña partición que permite a un sistema con BIOS tradicional arrancar desde un disco GPT.
 - Contiene el core del bootloader (por ejemplo GRUB) necesario para saltar del BIOS al sistema operativo.
 
-**Tamaño**: Muy pequeño (~1 MB), porque solo guarda código, no archivos grandes.
+**Tamaño**:
+- Muy pequeño (~1 MB), porque solo guarda código, no archivos grandes.
 
 **Por qué existe**:
 - BIOS tradicional no entiende GPT, así que necesita un lugar donde colocar el bootloader que pueda leer antes de transferir el control al sistema operativo.
 
 ## Diagrama conceptual sencillo para visualizar MBR vs GPT vs GPT+BIOS Boot Partition
 
-### 1️⃣ Disco con MBR (BIOS tradicional)
+### 💿 Disco con MBR (BIOS tradicional)
 │ Sector 0: MBR                 │  <- Código de arranque + Tabla de particiones
 |:------------------------------|
 │ Partición 1                   │
@@ -173,7 +174,7 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 
 --------------------------------------------------
 
-### 2️⃣ Disco con GPT (UEFI)
+### 💿 Disco con GPT (UEFI)
 │ Sector 0: Protective MBR      │  <- Evita que herramientas antiguas vean disco vacío
 |:------------------------------|
 │ Tabla de particiones GPT      │
@@ -190,7 +191,7 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 
 --------------------------------------------------
 
-### 3️⃣ Disco GPT con BIOS Boot Partition (GPT + BIOS)
+### 💿 Disco GPT con BIOS Boot Partition (GPT + BIOS)
 │ Sector 0: Protective MBR      │
 |:------------------------------|
 │ BIOS Boot Partition (~1 MB)   │  <- Contiene bootloader para BIOS
@@ -208,7 +209,7 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 - **GPT**: moderno, seguro, con respaldo, necesita UEFI.
 - **GPT + BIOS Boot** Partition: pequeño “truco” para que BIOS clásico pueda arrancar un disco GPT.
 
-## 3️⃣ Cuándo usar MBR, GPT o su combinación
+## 📕 Cuándo usar MBR, GPT o su combinación
 
 | Caso                               | Recomendación             | Explicación                                                                       |
 | ---------------------------------- | ------------------------- | --------------------------------------------------------------------------------- |
