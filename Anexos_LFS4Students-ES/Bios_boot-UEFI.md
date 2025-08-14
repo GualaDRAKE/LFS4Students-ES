@@ -1,17 +1,15 @@
 # Arranque de Linux: `/boot` y `/boot/efi`
-Este documento busca explicar al usuario de **LiNUX** —que no solo quiere instalar y usar alguna Distribución de Linux—, sino que además quiere aprender qué es, unificadamente, **UN SISTEMA OPERATIVO GNU/LiNUX**, y qué mejor forme de lograr aquello que siguiendo el libro **Linux From Scratch (LFS)** por lo tanto, en LFS4Students-ES iniciamos explicando todo lo que LFS da por sabido sobre las directorios (carpetas en el mundo Windows) y particiones involucradas en el arranque.
+Este documento busca explicar al usuario de **LiNUX** —que no solo quiere instalar y usar alguna Distribución de Linux—, sino que además quiere aprender qué es, unificadamente, **UN SISTEMA OPERATIVO GNU/LiNUX**, y qué mejor formA de lograr aquello que siguiendo el libro **Linux From Scratch (LFS)**, por lo tanto, en los **Anexos** de **LFS4Students-ES** intentaremos ir explicando todo lo que LFS da por sabido, por ejeplo trataremos cosas tales como los directorios (carpetas en el mundo Windows y Mac-OS) y su manejo, las particiones involucradas en el arranque y en el sistema de archivos y más.
 
-Se incluye algo de contexto histórico más las diferencias entre BIOS y UEFI, explicación técnica y visual, así como buenas prácticas.
+En pro de una mejor comprensión se incluye algo de contexto histórico más las diferencias entre el clásico BIOS y el moderno UEFI, siempre apelando a explicación técnica y visual y, a las buenas prácticas.
 
 ---
 
 # Contenido
-Cuando construimos Linux desde cero —como propone el libro **Linux From Scratch (LFS)**—, hay muchas partes del proceso que el manual da por conocidas.  
-Entre ellas, uno de los temas más críticos y menos explicados en detalle para el principiante es **el arranque del sistema**:  
-qué ocurre desde que encendemos el equipo hasta que el sistema operativo está listo, qué papel cumplen las carpetas y particiones especiales como `/boot` y `/boot/efi`, y por qué existen diferentes formas de hacerlo según el hardware.
+Cuando construimos Linux desde cero —como propone el libro **Linux From Scratch (LFS)**—, hay muchas partes del proceso que el manual da por conocidas, entre ellas, uno de los temas más críticos y menos explicados en detalle, es **el proceso de arranque del sistema**, por loq ue a continuación veremos qué ocurre desde que encendemos el equipo, hasta que el sistema operativo está listo para que el usuario cumpla con sus objetivos, también se verán temas no tan obvios y casi anecdóticos, como qué papel cumplen los directorios (carpetas) y particiones especiales como `/boot` y `/boot/efi`, o por qué existen diferentes formas de hacerlo según el hardware.
 
-Este documento está diseñado para llenar ese vacío y explicar de manera clara, completa y progresiva todo lo que LFS asume que ya sabemos.  
-Además, incluye diagramas visuales y ejemplos pensados para que incluso quien nunca haya instalado Linux pueda comprender el proceso.
+Este documento está diseñado para llenar ese vacío y explicar de manera clara, completa y progresiva todo lo que **LFS** asume que ya sabemos.  
+Además, se incluyen diagramas visuales y ejemplos pensados para que incluso quien nunca haya instalado Linux pueda comprender el proceso.
 
 ## A lo largo de los **9 apartados** encontrarás:
 ### 1. **Introducción**  
@@ -168,7 +166,7 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 │ Partición 3                   │
 │ Partición 4 (o extendida)     │
 
-Notas:
+**Notas**:
 - Max 2 TB por disco
 - Max 4 particiones primarias
 - Compatible con BIOS clásico
@@ -210,7 +208,7 @@ Notas:
 - GPT: moderno, seguro, con respaldo, necesita UEFI.
 - GPT + BIOS Boot Partition: pequeño “truco” para que BIOS clásico pueda arrancar un disco GPT.
 
-## 3️⃣ Cuándo usar MBR, GPT o combinación
+## 3️⃣ Cuándo usar MBR, GPT o su combinación
 
 | Caso                               | Recomendación             | Explicación                                                                       |
 | ---------------------------------- | ------------------------- | --------------------------------------------------------------------------------- |
@@ -255,7 +253,7 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 
 ### Versión compacta visual tipo “tabla de referencia rápida”
 |Partición      |FS recomendado       |Uso típico                             |Riesgos / Consideraciones                        |
-|:------------- |:------------------- |:------------------------------------- |:----------------------------------------------- |
+| ------------- | ------------------- | ------------------------------------- | ----------------------------------------------- |
 |/boot          |ext2, ext4           |Arranque del sistema, kernel           |Espacio fijo, requiere montaje                   |
 |/              |ext4, Btrfs, XFS     |Sistema raíz, programas                |FS complejo puede ser difícil de recuperar       |
 |/home          |ext4, Btrfs, XFS     |Datos de usuario                       |Planificar espacio, snapshots (nativo en Btrfs)  |
@@ -272,12 +270,12 @@ Como en todo rubro de cosas y situaciones, siempre tenemos ventajas y desventaja
 - swap → usar según RAM disponible y necesidades de suspensión.
 - Multi-OS → NTFS/exFAT solo si compartes con Windows; cuidado con permisos.
 
-### Esquema visual tipo disco
-Un esquema visual tipo disco, mostrando particiones y su FS recomendado.
+### Esquema visual clásico
+El siguiente esquema visual muestra el orden clásico de particiones y su FS (File System) recomendado.
 
           ┌───────────────────────────────┐
           │           /boot/efi           │  FAT32
-          │ (EFI System Partition, UEFI) │
+          │ (EFI System Partition, UEFI)  │
           └───────────────────────────────┘
           ┌───────────────────────────────┐
           │           /boot               │  ext2 / ext4
@@ -308,9 +306,12 @@ Un esquema visual tipo disco, mostrando particiones y su FS recomendado.
           │ (Compartir con Windows)       │
           └───────────────────────────────┘
 
-💡 Interpretación rápida:
+💡 Interpretació rápidan del esquema:
+
 **Arriba**: Particiones de arranque y EFI (pequeñas, críticas).
+
 **Centro**: Sistema raíz y datos de usuario, aquí van la mayoría de archivos.
+
 **Abajo**: Swap y particiones multi-OS o de datos externos, útiles pero menos críticas.
 
 ---
