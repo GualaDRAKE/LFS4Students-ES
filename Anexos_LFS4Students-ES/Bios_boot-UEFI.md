@@ -368,10 +368,10 @@ flowchart TD
 ## Descripción breve pero clara de cada paso que aparece en los diagramas (BIOS vs UEFI).
 ### 🔹 Pasos comunes en BIOS vs UEFI
 1. 💡 Encendido del equipo
-  + El botón de encendido activa la fuente de poder, energiza la placa base y despierta el firmware (BIOS o UEFI).
+    + El botón de encendido activa la fuente de poder, energiza la placa base y despierta el firmware (BIOS o UEFI).
 2. 🖥 POST (Power-On Self Test)
-  + Revisión rápida del hardware esencial: CPU, RAM, GPU, teclado, etc.
-  + Si algo crítico falla, el arranque se detiene.
+    + Revisión rápida del hardware esencial: CPU, RAM, GPU, teclado, etc.
+    + Si algo crítico falla, el arranque se detiene.
 
 ### 🔹 Pasos en BIOS
 - 3. 🔍 Buscar dispositivo de arranque
