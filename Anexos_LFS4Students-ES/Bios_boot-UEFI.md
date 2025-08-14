@@ -343,7 +343,7 @@ flowchart TD
 
 ### Comparativo BIOS vs UEFI
 ```mermaid
-flowchart LR
+flowchart TD
     subgraph BIOS
         A1(["💡 Encendido"]) --> B1(["🖥 POST"])
         B1 --> C1(["🔍 Buscar dispositivo de arranque"])
