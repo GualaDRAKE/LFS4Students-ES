@@ -315,53 +315,28 @@ Un esquema visual tipo disco, mostrando particiones y su FS recomendado.
 
 ---
 
-# 7. Diagramas de flujo (versión visual para principiantes)
-### Arranque BIOS
-```mermaid
-flowchart TD
-    A(["💡 Encendido del equipo"]) --> B(["🖥 BIOS POST"])
-    B --> C(["🔍 Busca dispositivo de arranque"])
-    C --> D(["📦 Lee MBR (512 bytes)"])
-    D --> E(["🚀 Carga bootloader (Stage 1)"])
-    E --> F(["📂 Bootloader carga kernel + initramfs desde /boot"])
-    F --> G(["⚙️ Kernel inicializa hardware"])
-    G --> H(["💾 Kernel monta / (root filesystem)"])
-    H --> I(["🛠 Ejecuta init/systemd"])
-```
-### Arranque UEFI
-```mermaid
-flowchart TD
-    A(["💡 Encendido del equipo"]) --> B(["🖥 UEFI POST"])
-    B --> C(["📋 UEFI lee NVRAM (entradas de arranque)"])
-    C --> D(["💽 Accede a ESP (/boot/efi)"])
-    D --> E(["🚀 Ejecuta archivo .EFI (bootloader)"])
-    E --> F(["📂 Bootloader carga kernel + initramfs desde /boot"])
-    F --> G(["⚙️ Kernel inicializa hardware"])
-    G --> H(["💾 Kernel monta / (root filesystem)"])
-    H --> I(["🛠 Ejecuta init/systemd"])
-```
-### Comparativo Arranque BIOS vs UEFI
+### 7. Comparativo Arranque BIOS vs UEFI
 ```mermaid
 flowchart TD
     subgraph ArranqueUEFI
-        A1(["💡 Encendido del equipo"]) --> B1(["🖥 UEFI POST"])
-        B1 --> C1(["📋 UEFI lee NVRAM (entradas de arranque)"])
-        C1 --> D1(["💽 Accede a ESP (/boot/efi)"])
-        D1 --> E1(["🚀 Ejecuta archivo .EFI (bootloader)"])
-        E1 --> F1(["📂 Bootloader carga kernel + initramfs desde /boot"])
-        F1 --> G1(["⚙️ Kernel inicializa hardware"])
-        G1 --> H1(["💾 Kernel monta / (root filesystem)"])
-        H1 --> I1(["🛠 Ejecuta init/systemd"])
-    end
-    subgraph ArranqueBIOS
-        A2(["💡 Encendido del equipo"]) --> B2(["🖥 BIOS POST"])
-        B2 --> C2(["🔍 Busca dispositivo de arranque"])
-        C2 --> D2(["📦 Lee MBR (512 bytes)"])
-        D2 --> E2(["🚀 Carga bootloader (Stage 1)"])
+        A2(["💡 Encendido del equipo"]) --> B2(["🖥 UEFI POST"])
+        B2 --> C2(["📋 UEFI lee NVRAM (entradas de arranque)"])
+        C2 --> D2(["💽 Accede a ESP (/boot/efi)"])
+        D2 --> E2(["🚀 Ejecuta archivo .EFI (bootloader)"])
         E2 --> F2(["📂 Bootloader carga kernel + initramfs desde /boot"])
         F2 --> G2(["⚙️ Kernel inicializa hardware"])
         G2 --> H2(["💾 Kernel monta / (root filesystem)"])
         H2 --> I2(["🛠 Ejecuta init/systemd"])
+    end
+    subgraph ArranqueBIOS
+        A1(["💡 Encendido del equipo"]) --> B1(["🖥 BIOS POST"])
+        B1 --> C1(["🔍 Busca dispositivo de arranque"])
+        C1 --> D1(["📦 Lee MBR (512 bytes)"])
+        D1 --> E1(["🚀 Carga bootloader (Stage 1)"])
+        E1 --> F1(["📂 Bootloader carga kernel + initramfs desde /boot"])
+        F1 --> G1(["⚙️ Kernel inicializa hardware"])
+        G1 --> H1(["💾 Kernel monta / (root filesystem)"])
+        H1 --> I1(["🛠 Ejecuta init/systemd"])
     end
 ```
 
