@@ -342,7 +342,7 @@ flowchart TD
 ```
 ### Comparativo Arranque BIOS vs UEFI
 ```mermaid
-flowchart TD
+flowchart LR
     subgraph ArranqueUEFI
         A(["💡 Encendido del equipo"]) --> B(["🖥 UEFI POST"])
         B --> C(["📋 UEFI lee NVRAM (entradas de arranque)"])
