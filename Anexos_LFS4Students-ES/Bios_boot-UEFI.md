@@ -315,7 +315,31 @@ Un esquema visual tipo disco, mostrando particiones y su FS recomendado.
 
 ---
 
-### 7. Comparativo Arranque BIOS vs UEFI
+### 7. Procesos desde Encendido hasta que el sistema operativo está Listo para trabajar
+## Comparativo breve Arranque BIOS vs UEFI
+El siguiente diagrama muestra el 'Arranque parcial', desde encendido → POST → bootloader → carga kernel. No incluyen lo que pasa después (initramfs, montaje /, systemd, etc.).
+
+```mermaid
+flowchart TD
+    subgraph UEFI
+        A2(["💡 Encendido"]) --> B2(["🖥 POST"])
+        B2 --> C2(["📋 Leer NVRAM"])
+        C2 --> D2(["💽 Acceder ESP (/boot/efi)"])
+        D2 --> E2(["🚀 Bootloader EFI"])
+        E2 --> F2(["📂 Cargar kernel"])
+    end
+    subgraph BIOS
+        A1(["💡 Encendido"]) --> B1(["🖥 POST"])
+        B1 --> C1(["🔍 Buscar dispositivo de arranque"])
+        C1 --> D1(["📦 Leer MBR"])
+        D1 --> E1(["🚀 Bootloader (Stage 1)"])
+        E1 --> F1(["📂 Cargar kernel"])
+    end
+```
+
+## Comparativo detallado Arranque BIOS vs UEFI
+El siguiente diagrama muestra el 'Arranque completo', desde encendido → POST → bootloader → carga kernel → inicialización de hardware → montaje del root filesystem → ejecución de init/systemd.
+
 ```mermaid
 flowchart TD
     subgraph ArranqueUEFI
@@ -340,24 +364,39 @@ flowchart TD
     end
 ```
 
-### Comparativo BIOS vs UEFI
-```mermaid
-flowchart TD
-    subgraph UEFI
-        A2(["💡 Encendido"]) --> B2(["🖥 POST"])
-        B2 --> C2(["📋 Leer NVRAM"])
-        C2 --> D2(["💽 Acceder ESP (/boot/efi)"])
-        D2 --> E2(["🚀 Bootloader EFI"])
-        E2 --> F2(["📂 Cargar kernel"])
-    end
-    subgraph BIOS
-        A1(["💡 Encendido"]) --> B1(["🖥 POST"])
-        B1 --> C1(["🔍 Buscar dispositivo de arranque"])
-        C1 --> D1(["📦 Leer MBR"])
-        D1 --> E1(["🚀 Bootloader (Stage 1)"])
-        E1 --> F1(["📂 Cargar kernel"])
-    end
-```
+## Descripción breve pero clara de cada paso que aparecen en los diagramas (BIOS vs UEFI).
+### 🔹 Pasos comunes en BIOS vs UEFI
+- 1. 💡 Encendido del equipo
+El botón de encendido activa la fuente de poder, energiza la placa base y despierta el firmware (BIOS o UEFI).
+- 2. 🖥 POST (Power-On Self Test)
+Revisión rápida del hardware esencial: CPU, RAM, GPU, teclado, etc.
+Si algo crítico falla, el arranque se detiene.
+
+### 🔹 Pasos en BIOS
+- 3. 🔍 Buscar dispositivo de arranque
+  - Sigue el orden de la lista configurada en BIOS para encontrar el primer disco, USB o medio arrancable.
+
+- 4. 📦 Leer MBR
+  - Lee los primeros 512 bytes del disco, que contienen la tabla de particiones y el código de arranque inicial.
+
+- 5. 🚀 Bootloader (Stage 1)
+  - Ese pequeño código carga un bootloader más completo (Stage 2) desde el disco.
+
+- 6. 📂 Cargar kernel
+  - El bootloader completo localiza y carga el kernel (y initramfs) en memoria para comenzar la ejecución.
+
+### 🔹 Pasos en UEFI
+- 3. 📋 Leer NVRAM
+  - La UEFI guarda en memoria no volátil (NVRAM) la lista de dispositivos y rutas de arranque (boot entries). Aquí decide qué archivo EFI lanzar primero.
+
+- 4. 💽 Acceder ESP (/boot/efi)
+  - Monta la EFI System Partition, una partición FAT32 obligatoria en UEFI que guarda los bootloaders (.EFI).
+
+- 5. 🚀 Bootloader EFI
+  - Ejecuta el archivo .EFI elegido (por ejemplo, GRUB, systemd-boot, Windows Boot Manager).
+
+- 6. 📂 Cargar kernel
+  - El bootloader localiza el kernel del SO (y el initramfs si existe) y los coloca en memoria para que el kernel empiece a ejecutarse.
 
 ---
 
