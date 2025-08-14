@@ -49,11 +49,11 @@ Además, se incluyen diagramas visuales y ejemplos pensados para que incluso qui
      formato de la ESP, límites del MBR, capacidades de GPT, requisitos para GRUB, etc.  
    - Información útil para evitar errores en instalaciones avanzadas.
 
-### 9. **Anexo – Explicación sencilla para principiantes**  
+### 9. **Anexo – Directorios VS Carpetas ~ Orígenes**  
    - Una analogía doméstica para que cualquier persona entienda qué es `/boot`, `/boot/efi` y `/home`.  
    - Consejos prácticos para no romper el arranque por accidente.
 
-### **En resumen:**  
+### **Resumen:**  
 Este documento te guiará desde lo más básico (qué es `/boot`) hasta lo más técnico (limitaciones de GPT, estructura de la ESP), con ejemplos y diagramas para que puedas instalar y arrancar Linux con confianza, incluso en configuraciones avanzadas.
 
 ---
@@ -204,9 +204,9 @@ Para entender la estructura de `/boot` y `/boot/efi`, es importante conocer la e
 - Combina ventajas de GPT con compatibilidad BIOS
 
 ### 💡 Interpretación rápida para principiantes:
-- MBR: todo en un solo sector, simple y limitado.
-- GPT: moderno, seguro, con respaldo, necesita UEFI.
-- GPT + BIOS Boot Partition: pequeño “truco” para que BIOS clásico pueda arrancar un disco GPT.
+- **MBR**: todo en un solo sector, simple y limitado.
+- **GPT**: moderno, seguro, con respaldo, necesita UEFI.
+- **GPT + BIOS Boot** Partition: pequeño “truco” para que BIOS clásico pueda arrancar un disco GPT.
 
 ## 3️⃣ Cuándo usar MBR, GPT o su combinación
 
