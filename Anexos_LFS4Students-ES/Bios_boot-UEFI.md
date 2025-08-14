@@ -11,7 +11,7 @@ Cuando construimos Linux desde cero —como propone el libro **Linux From Scratc
 Este documento está diseñado para llenar ese vacío y explicar de manera clara, completa y progresiva todo lo que **LFS** asume que ya sabemos.  
 Además, se incluyen diagramas visuales y ejemplos pensados para que incluso quien nunca haya instalado Linux pueda comprender el proceso.
 
-## A lo largo de los **9 apartados** encontrarás:
+## A lo largo de los **9 apartados + 1** encontrarás:
 ### 1. **Introducción**  
    - Contexto general sobre BIOS y UEFI.  
    - La finalidad del documento: dar al novato las bases que LFS omite.
@@ -52,6 +52,8 @@ Además, se incluyen diagramas visuales y ejemplos pensados para que incluso qui
 ### 9. **Anexo – Directorios VS Carpetas ~ Orígenes**  
    - Una analogía doméstica para que cualquier persona entienda qué es `/boot`, `/boot/efi` y `/home`.  
    - Consejos prácticos para no romper el arranque por accidente.
+
+### 10. **FiN** ~ Palabras al cierre
 
 ### **Resumen:**  
 Este documento te guiará desde lo más básico (qué es `/boot`) hasta lo más técnico (limitaciones de GPT, estructura de la ESP), con ejemplos y diagramas para que puedas instalar y arrancar Linux con confianza, incluso en configuraciones avanzadas.
@@ -469,3 +471,6 @@ El término “directorio” (directory en inglés) proviene de la informática 
 ### Resumen:
 - Folder (carpeta): metáfora visual para el usuario, física y concreta.
 - Directory (directorio): concepto técnico, abstracto, orientado a organización y referencias dentro del sistema de archivos.
+
+# 10. **FiN** ~ Palabras al cierre
+# **¡Que TUX los acompañe!**
