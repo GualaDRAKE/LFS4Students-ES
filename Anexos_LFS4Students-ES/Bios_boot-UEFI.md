@@ -340,6 +340,30 @@ flowchart TD
     G --> H(["💾 Kernel monta / (root filesystem)"])
     H --> I(["🛠 Ejecuta init/systemd"])
 ```
+### Comparativo Arranque BIOS vs UEFI
+```mermaid
+flowchart TD
+    subgraph UEFI
+        A(["💡 Encendido del equipo"]) --> B(["🖥 UEFI POST"])
+        B --> C(["📋 UEFI lee NVRAM (entradas de arranque)"])
+        C --> D(["💽 Accede a ESP (/boot/efi)"])
+        D --> E(["🚀 Ejecuta archivo .EFI (bootloader)"])
+        E --> F(["📂 Bootloader carga kernel + initramfs desde /boot"])
+        F --> G(["⚙️ Kernel inicializa hardware"])
+        G --> H(["💾 Kernel monta / (root filesystem)"])
+        H --> I(["🛠 Ejecuta init/systemd"])
+    end
+    subgraph BIOS
+        A(["💡 Encendido del equipo"]) --> B(["🖥 BIOS POST"])
+        B --> C(["🔍 Busca dispositivo de arranque"])
+        C --> D(["📦 Lee MBR (512 bytes)"])
+        D --> E(["🚀 Carga bootloader (Stage 1)"])
+        E --> F(["📂 Bootloader carga kernel + initramfs desde /boot"])
+        F --> G(["⚙️ Kernel inicializa hardware"])
+        G --> H(["💾 Kernel monta / (root filesystem)"])
+        H --> I(["🛠 Ejecuta init/systemd"])
+    end
+```
 
 ### Comparativo BIOS vs UEFI
 ```mermaid
