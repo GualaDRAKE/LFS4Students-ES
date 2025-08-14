@@ -327,16 +327,6 @@ flowchart TD
     F --> G(["⚙️ Kernel inicializa hardware"])
     G --> H(["💾 Kernel monta / (root filesystem)"])
     H --> I(["🛠 Ejecuta init/systemd"])
-
-    style A fill:#f4f4f4,stroke:#333,stroke-width:1px
-    style B fill:#ffebcc,stroke:#333,stroke-width:1px
-    style C fill:#ffebcc,stroke:#333,stroke-width:1px
-    style D fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style E fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style F fill:#d9ffd9,stroke:#333,stroke-width:1px
-    style G fill:#d9ffd9,stroke:#333,stroke-width:1px
-    style H fill:#d9ffd9,stroke:#333,stroke-width:1px
-    style I fill:#e0ccff,stroke:#333,stroke-width:1px
 ```
 ### Arranque UEFI
 ```mermaid
