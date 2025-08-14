@@ -473,4 +473,4 @@ El término “directorio” (directory en inglés) proviene de la informática 
 - Directory (directorio): concepto técnico, abstracto, orientado a organización y referencias dentro del sistema de archivos.
 
 # 10. **FiN** ~ Palabras al cierre
-# **¡Que TUX los acompañe!**
+## **¡Que TUX los acompañe!**
