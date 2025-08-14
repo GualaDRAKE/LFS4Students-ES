@@ -1,5 +1,5 @@
 # Arranque de Linux: `/boot` y `/boot/efi`
-Este documento busca explicar al usuario de **LiNUX** —que no solo quiere instalar y usar alguna Distribución de Linux, sino que además quiere aprender qué es, unificadamente, **UN SISTEMA OPERATIVO GNU/LiNUX, y qué mejor forme de lograr aquello que siguiendo el libro **Linux From Scratch (LFS)**— por lo tanto, en LFS4Students-ES iniciamos explicando todo lo que LFS da por sabido sobre las directorios (carpetas en el mundo Windows) y particiones involucradas en el arranque.
+Este documento busca explicar al usuario de **LiNUX** —que no solo quiere instalar y usar alguna Distribución de Linux, sino que además quiere aprender qué es, unificadamente, **UN SISTEMA OPERATIVO GNU/LiNUX**, y qué mejor forme de lograr aquello que siguiendo el libro **Linux From Scratch (LFS)**— por lo tanto, en LFS4Students-ES iniciamos explicando todo lo que LFS da por sabido sobre las directorios (carpetas en el mundo Windows) y particiones involucradas en el arranque.
 
 Se incluye algo de contexto histórico más las diferencias entre BIOS y UEFI, explicación técnica y visual, así como buenas prácticas.
 
