@@ -342,7 +342,7 @@ El siguiente diagrama muestra el 'Arranque completo', desde encendido → POST �
 
 ```mermaid
 flowchart TD
-    subgraph ArranqueUEFI
+    subgraph UEFI
         A2(["💡 Encendido del equipo"]) --> B2(["🖥 UEFI POST"])
         B2 --> C2(["📋 UEFI lee NVRAM (entradas de arranque)"])
         C2 --> D2(["💽 Accede a ESP (/boot/efi)"])
@@ -352,7 +352,7 @@ flowchart TD
         G2 --> H2(["💾 Kernel monta / (root filesystem)"])
         H2 --> I2(["🛠 Ejecuta init/systemd"])
     end
-    subgraph ArranqueBIOS
+    subgraph BIOS
         A1(["💡 Encendido del equipo"]) --> B1(["🖥 BIOS POST"])
         B1 --> C1(["🔍 Busca dispositivo de arranque"])
         C1 --> D1(["📦 Lee MBR (512 bytes)"])
