@@ -374,62 +374,61 @@ flowchart TD
     + Si algo crítico falla, el arranque se detiene.
 
 ### 🔹 Pasos en BIOS
-- 3. 🔍 Buscar dispositivo de arranque
-  - Sigue el orden de la lista configurada en BIOS para encontrar el primer disco, USB o medio arrancable.
+3. 🔍 Buscar dispositivo de arranque
+    + Sigue el orden de la lista configurada en BIOS para encontrar el primer disco, USB o medio arrancable.
 
-- 4. 📦 Leer MBR
-  - Lee los primeros 512 bytes del disco, que contienen la tabla de particiones y el código de arranque inicial.
+4. 📦 Leer MBR
+    + Lee los primeros 512 bytes del disco, que contienen la tabla de particiones y el código de arranque inicial.
 
-- 5. 🚀 Bootloader (Stage 1)
-  - Ese pequeño código carga un bootloader más completo (Stage 2) desde el disco.
+5. 🚀 Bootloader (Stage 1)
+    + Ese pequeño código carga un bootloader más completo (Stage 2) desde el disco.
 
-- 6. 📂 Cargar kernel
-  - El bootloader completo localiza y carga el kernel (y initramfs) en memoria para comenzar la ejecución.
+6. 📂 Cargar kernel
+    + El bootloader completo localiza y carga el kernel (y initramfs) en memoria para comenzar la ejecución.
 
 ### 🔹 Pasos en UEFI
-- 3. 📋 Leer NVRAM
-  - La UEFI guarda en memoria no volátil (NVRAM) la lista de dispositivos y rutas de arranque (boot entries). Aquí decide qué archivo EFI lanzar primero.
+3. 📋 Leer NVRAM
+    + La UEFI guarda en memoria no volátil (NVRAM) la lista de dispositivos y rutas de arranque (boot entries). Aquí decide qué archivo EFI lanzar primero.
 
-- 4. 💽 Acceder ESP (/boot/efi)
-  - Monta la EFI System Partition, una partición FAT32 obligatoria en UEFI que guarda los bootloaders (.EFI).
+4. 💽 Acceder ESP (/boot/efi)
+    + Monta la EFI System Partition, una partición FAT32 obligatoria en UEFI que guarda los bootloaders (.EFI).
 
-- 5. 🚀 Bootloader EFI
-  - Ejecuta el archivo .EFI elegido (por ejemplo, GRUB, systemd-boot, Windows Boot Manager).
+5. 🚀 Bootloader EFI
+    + Ejecuta el archivo .EFI elegido (por ejemplo, GRUB, systemd-boot, Windows Boot Manager).
 
-- 6. 📂 Cargar kernel
-  - El bootloader localiza el kernel del SO (y el initramfs si existe) y los coloca en memoria para que el kernel empiece a ejecutarse.
-
----
-
-# 8. Notas técnicas
-- La ESP debe ser FAT32 para garantizar compatibilidad con firmware UEFI.
-- MBR está limitado a discos ≤ 2 TB.
-- GPT soporta discos muy grandes (> 9.4 ZB).
-- En GPT + BIOS se requiere BIOS Boot Partition (~1 MB).
-- En UEFI, las rutas de cargadores están registradas en NVRAM.
+6. 📂 Cargar kernel
+    + El bootloader localiza el kernel del SO (y el initramfs si existe) y los coloca en memoria para que el kernel empiece a ejecutarse.
 
 ---
 
-# 9. Anexo – Explicación sencilla para principiantes
+# 8. Notas técnicas a destacar:
+- La **ESP** debe ser FAT32 para garantizar compatibilidad con firmware UEFI.
+- **MBR** está limitado a discos ≤ 2 TB.
+- **GPT** soporta discos muy grandes (> 9.4 ZB).
+- En **GPT + BIOS** se requiere BIOS Boot Partition (~1 MB).
+- En **UEFI**, las rutas de cargadores están registradas en NVRAM.
+
+---
+
+# 9. Anexo – **Directorios** VS **Carpetas** ~ Orígenes
 En Linux, al igual que en macOS y Windows, hablamos de directorios desde un punto de vista técnico o de programación. Pero en la interfaz gráfica de usuario (GUI), Apple utiliza el término “carpetas” (folders en inglés), igual que Windows.
 
 ### Así que, de forma práctica:
-- Terminal o programación: directorios (directories).
-- Interfaz gráfica / Finder: carpetas (folders).
+- Terminal LiNUX o en programación clásica: Directorios (directories).
+- Explorador de archivos en Windows / Finder en Mac-OS: Carpetas (folders).
 
-Esto significa que si abres la Terminal en macOS, navegarás usando rutas de directorio como `/Users/usuario/Documents`, mientras que en Finder de  macOS y en el Esporador de Archivos de Windows, visualmente verás “Documentos” como una carpeta.
+Esto significa que si abres la Terminal en macOS, navegarás usando rutas de directorio como `/Users/usuario/Documents`, mientras que en Finder de macOS y en el Esporador de Archivos de Windows, visualmente verás “Documentos” como una ”Carpeta”.
 
-### Piensa en Linux como una casa bien organizada:
-- **/boot**: Es el cuarto donde guardas lo que necesitas para arrancar (arranque del sistema).
-- **/boot/efi**: Es como el vestíbulo del edificio, por donde entras si tienes una llave UEFI.
-- **/home/usuario**: Tu habitación personal (donde van tus documentos en diveras categoríastales como, Vidéo/Música, Imágenes, Descargas, etc).
+### Piensa en Linux como una Oficina bien organizada:
+- **/boot**: Es la sala de recepción particular donde ubicas lo que necesitas para iniciar la atención a clientes (arranque del sistema).
+- **/boot/efi**: Es la entrada del personal (solo entras si tienes una llave UEFI).
+- **/home/usuario**: Tu puesto de trabajo u oficina personal (donde guardas tus documentos en cajoneras categorízadas como, Público, Video, Música, Imágenes, Descargas, etc).
 
 ### **Regla de oro**:
 - No guardes cosas en `/boot` o `/boot/efi` salvo que sepas exactamente lo que haces.
-- Tus archivos deben ir en /home.
+- Tus archivos deben ir en tu cuenta de usuario dentro de **/home**.
 
 ## Datos Anecdóticos - ¿Directorios o Carpetas?
-
 No hay un estándar formal único que dicte que los sistemas operativos deben usar “carpetas” o “directorios” en su interfaz gráfica, pero sí hay algunas normas y tradiciones históricas que guían la terminología:
 
 ### 1- **POSIX** (Portable Operating System Interface)
@@ -438,22 +437,20 @@ No hay un estándar formal único que dicte que los sistemas operativos deben us
 - Esto aplica a Linux, macOS (que es Unix-based) y otros sistemas compatibles con POSIX.
 - No dicta la terminología de la GUI.
 
-### 2- Convención de interfaces gráficas - **GUI**
+### 2- Convención de Interfaces Gráficas de Usuario - **GUI**
 - Apple adoptó “folders” en el Finder, siguiendo la metáfora física de carpetas para organizar documentos.
 - Microsoft hizo lo mismo con Windows.
-- Esta terminología se basa en metáforas visuales y usabilidad, no en un estándar técnico formal.
+- Esta terminología se basa en metáforas visuales y usabilidad empírica, no en un estándar técnico formal.
 
-### 3- Estándares de **Interoperabilidad/ISO**
+### 3- Estándares de **Interoperabilidad** ~ **ISO**
 - ISO/IEC 9945 (POSIX) solo habla de directorios a nivel de sistema, no de cómo mostrarlos en GUI.
 - No existe un estándar ISO que obligue a usar “folder” vs “directory” en un escritorio gráfico.
 
 ## ✅ Conclusión:
-
 - A nivel técnico / programación, se usa “directory” o “directorio”.
 - A nivel usuario / interfaz gráfica, “carpeta” (folder) es una convención empírica, basada en la metáfora de oficina, y cada sistema la adopta como le conviene.
 
 ### Historia detrás de la lógica técnica del concepto “directorios”
-
 El término “directorio” (directory en inglés) proviene de la informática temprana, cuando los sistemas de archivos empezaron a organizar información de manera jerárquica:
 
 ### 1- Metáfora técnica vs física
