@@ -339,16 +339,6 @@ flowchart TD
     F --> G(["⚙️ Kernel inicializa hardware"])
     G --> H(["💾 Kernel monta / (root filesystem)"])
     H --> I(["🛠 Ejecuta init/systemd"])
-
-    style A fill:#f4f4f4,stroke:#333,stroke-width:1px
-    style B fill:#ffebcc,stroke:#333,stroke-width:1px
-    style C fill:#ffebcc,stroke:#333,stroke-width:1px
-    style D fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style E fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style F fill:#d9ffd9,stroke:#333,stroke-width:1px
-    style G fill:#d9ffd9,stroke:#333,stroke-width:1px
-    style H fill:#d9ffd9,stroke:#333,stroke-width:1px
-    style I fill:#e0ccff,stroke:#333,stroke-width:1px
 ```
 
 ### Comparativo BIOS vs UEFI
@@ -369,20 +359,6 @@ flowchart LR
         D2 --> E2(["🚀 Bootloader EFI"])
         E2 --> F2(["📂 Cargar kernel"])
     end
-
-    style A1 fill:#f4f4f4,stroke:#333,stroke-width:1px
-    style B1 fill:#ffebcc,stroke:#333,stroke-width:1px
-    style C1 fill:#ffebcc,stroke:#333,stroke-width:1px
-    style D1 fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style E1 fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style F1 fill:#d9ffd9,stroke:#333,stroke-width:1px
-
-    style A2 fill:#f4f4f4,stroke:#333,stroke-width:1px
-    style B2 fill:#ffebcc,stroke:#333,stroke-width:1px
-    style C2 fill:#ffebcc,stroke:#333,stroke-width:1px
-    style D2 fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style E2 fill:#d9e8ff,stroke:#333,stroke-width:1px
-    style F2 fill:#d9ffd9,stroke:#333,stroke-width:1px
 ```
 
 ---
